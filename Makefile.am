@@ -11,6 +11,7 @@ Gamesdir = $(datadir)/applications
 
 INCLUDES = -I.. -I$(srcdir)/..		\
 	$(GNOME_GAMES_CFLAGS)		\
+	-I$(top_srcdir)/libgames-support           \
 	-DDATADIR=\""$(datadir)"\"		   \
 	-DGNOMELOCALEDIR=\""$(datadir)/locale"\" \
 	-DG_DISABLE_DEPRECATED -DGDK_DISABLE_DEPRECATED \
@@ -23,6 +24,7 @@ glines_SOURCES = 	\
 
 glines_LDADD =		\
 	$(GNOME_GAMES_LIBS) \
+	$(top_srcdir)/libgames-support/libgames-support.la \
 	$(INTLLIBS)
 
 pixmap_DATA = ball.png classic.png dots.png pulse.png gumball.png 

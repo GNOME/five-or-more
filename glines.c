@@ -24,6 +24,8 @@
 #include <libgnomeui/gnome-window-icon.h>
 #include <gconf/gconf-client.h>
 
+#include "games-frame.h"
+
 #include "glines.h"
 
 GtkWidget *bah_window = NULL;
@@ -112,22 +114,6 @@ help_cb (GtkWidget * widget, gpointer data)
 
   gnome_help_display (NULL, &help_entry);
 #endif
-}
-
-GtkWidget *
-bold_frame (gchar * title)
-{
-	gchar *markup;
-	GtkWidget * frame;
-	
-	markup = g_strdup_printf ("<span weight=\"bold\">%s</span>", title);
-	frame = gtk_frame_new (markup);
-	g_free (markup);
-	gtk_frame_set_shadow_type (GTK_FRAME (frame), GTK_SHADOW_NONE);
-	gtk_label_set_use_markup (GTK_LABEL (gtk_frame_get_label_widget(GTK_FRAME(frame))), TRUE);
-	gtk_misc_set_alignment (GTK_MISC (gtk_frame_get_label_widget(GTK_FRAME(frame))), 0, 0.5);
-  
-	return frame;
 }
 
 void
@@ -1024,8 +1010,9 @@ pref_dialog_response (GtkDialog *dialog, gint response, gpointer data)
 
 game_props_callback (GtkWidget *widget, void *data)
 {
-	GtkWidget *w, *menu, *omenu, *l, *hb, *hb1, *frame, *fv, *cb;
+	GtkWidget *w, *menu, *omenu, *l, *hb, *hb1, *fv, *cb;
 	GtkWidget *button;
+	GtkWidget *frame;
 	GtkWidget *space_label;
 	GtkWidget *table;
 
@@ -1043,12 +1030,14 @@ game_props_callback (GtkWidget *widget, void *data)
 			g_signal_connect (G_OBJECT (pref_dialog), "delete_event",
 					  G_CALLBACK (gtk_widget_hide), NULL);
 
-			frame = bold_frame (_("Themes"));
-			gtk_container_set_border_width (GTK_CONTAINER (frame), 12);
+			frame = games_frame_new (_("Themes"));
 			table = gtk_table_new (2, 2, FALSE);
 			gtk_container_set_border_width (GTK_CONTAINER (table), 0);
 			gtk_table_set_row_spacings (GTK_TABLE (table), 6);
 			gtk_table_set_col_spacings (GTK_TABLE (table), 6);
+			gtk_container_add (GTK_CONTAINER(frame), table);
+			gtk_box_pack_start (GTK_BOX(GTK_DIALOG(pref_dialog)->vbox), frame, 
+					    FALSE, FALSE, 0);
 
 			l = gtk_label_new (_("Ball image"));
 			gtk_misc_set_alignment (GTK_MISC (l), 0, 0.5);
@@ -1077,30 +1066,13 @@ game_props_callback (GtkWidget *widget, void *data)
 
 			gtk_table_attach_defaults (GTK_TABLE (table), w, 1, 2, 1, 2);
 
-			hb = gtk_hbox_new (FALSE, FALSE);
-			gtk_container_set_border_width (GTK_CONTAINER (hb), 6);
 
+			frame = games_frame_new (_("General"));
 			fv = gtk_vbox_new (FALSE, FALSE);
 			gtk_box_set_spacing (GTK_BOX (fv), 6);
-			gtk_container_add (GTK_CONTAINER(frame), hb);
-			space_label = gtk_label_new ("    ");
-			gtk_box_pack_start (GTK_BOX(hb), space_label, FALSE, FALSE, 0);
-			gtk_box_pack_start (GTK_BOX(hb), table, FALSE, FALSE, 0);
+			gtk_container_add (GTK_CONTAINER(frame), fv);
 			gtk_box_pack_start (GTK_BOX(GTK_DIALOG(pref_dialog)->vbox), frame, 
 					    FALSE, FALSE, 0);
-
-			frame = bold_frame (_("General"));
-			gtk_container_set_border_width (GTK_CONTAINER (frame), 12);
-
-			hb = gtk_hbox_new (FALSE, FALSE);
-			gtk_container_set_border_width (GTK_CONTAINER (hb), 6);
-
-			fv = gtk_vbox_new (FALSE, FALSE);
-			gtk_box_set_spacing (GTK_BOX (fv), 6);
-			gtk_container_add (GTK_CONTAINER(frame), hb);
-			space_label = gtk_label_new ("    ");
-			gtk_box_pack_start (GTK_BOX(hb), space_label, FALSE, FALSE, 0);
-			gtk_box_pack_start (GTK_BOX(hb), fv, FALSE, FALSE, 0);
 
 			fast_moves_toggle_button = 
 				gtk_check_button_new_with_label ( _("Use fast moves") );
@@ -1115,8 +1087,6 @@ game_props_callback (GtkWidget *widget, void *data)
 
 			gtk_container_add (GTK_CONTAINER(fv), fast_moves_toggle_button);
 
-			gtk_box_pack_start (GTK_BOX(GTK_DIALOG(pref_dialog)->vbox), frame, 
-					    FALSE, FALSE, 0);
 			gtk_widget_show_all (pref_dialog);
 		}
 	
@@ -1415,9 +1385,9 @@ main (int argc, char *argv [])
 	GtkWidget *vbox, *hbox;
 	GnomeClient *client;
 	
-	gnome_score_init("glines");
+	gnome_score_init ("glines");
 
-	srand(time(NULL));
+	srand (time (NULL));
 	
 	bindtextdomain (GETTEXT_PACKAGE, GNOMELOCALEDIR);
 	bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
@@ -1442,23 +1412,23 @@ main (int argc, char *argv [])
 			  G_CALLBACK (client_die), NULL);
 
 	if (GNOME_CLIENT_RESTARTED (client))
-		restart();  
+		restart ();  
 	else
-		reset_game();
+		reset_game ();
 
-	app = gnome_app_new("glines", _("Glines"));
+	app = gnome_app_new ("glines", _("Glines"));
 
-	gtk_window_set_policy(GTK_WINDOW(app), FALSE, FALSE, TRUE);
-	g_signal_connect (G_OBJECT(app), "delete_event",
+	gtk_window_set_policy (GTK_WINDOW (app), FALSE, FALSE, TRUE);
+	g_signal_connect (G_OBJECT (app), "delete_event",
 	                  G_CALLBACK (game_quit_callback), NULL);
 	g_signal_connect (G_OBJECT (app), "configure_event",
 			  G_CALLBACK (configure_event_callback), NULL);
 
-	appbar = gnome_appbar_new(FALSE, TRUE, GNOME_PREFERENCES_USER);
-	gnome_app_set_statusbar(GNOME_APP (app), GTK_WIDGET(appbar));  
+	appbar = gnome_appbar_new (FALSE, TRUE, GNOME_PREFERENCES_USER);
+	gnome_app_set_statusbar (GNOME_APP (app), GTK_WIDGET(appbar));  
 
-	gnome_appbar_set_status(GNOME_APPBAR (appbar),
-	                        _("Welcome to Glines!"));
+	gnome_appbar_set_status (GNOME_APPBAR (appbar),
+				 _("Welcome to Glines!"));
 
 	gnome_app_create_menus(GNOME_APP(app), mainmenu);
 
@@ -1469,7 +1439,9 @@ main (int argc, char *argv [])
 	gnome_app_set_contents (GNOME_APP (app), vbox);
 
 	hbox = gtk_hbox_new(FALSE, 0);
-	frame = bold_frame (_("Next Balls"));
+	frame = games_frame_new (_("Next Balls"));
+	gtk_container_set_border_width (GTK_CONTAINER (frame), 0);
+	games_frame_set (GAMES_FRAME (frame), 0);
 
 	draw_area = gtk_drawing_area_new ();
 	next_draw_area = gtk_drawing_area_new ();
@@ -1480,26 +1452,23 @@ main (int argc, char *argv [])
 	gtk_box_pack_start (GTK_BOX (hbox), frame, FALSE, FALSE, 0);
 	gtk_container_add (GTK_CONTAINER (frame), next_draw_area);
 	gtk_frame_set_label_align (GTK_FRAME (frame), 0, 0);
-	gtk_widget_show(frame);
 
-	frame = bold_frame (_("Score"));
-	gtk_frame_set_label_align (GTK_FRAME (frame), 0, 0);
-	scorelabel = gtk_label_new("");
+	frame = games_frame_new (_("Score"));
+	gtk_container_set_border_width (GTK_CONTAINER (frame), 0);
+
+	scorelabel = gtk_label_new ("");
 	gtk_container_add (GTK_CONTAINER (frame), scorelabel);
 
 	gtk_box_pack_end (GTK_BOX (hbox), frame, 0, 0, 0);
-	gtk_widget_show (scorelabel);
-	gtk_widget_show (frame);
 
-	gtk_widget_show (hbox);
 	gtk_box_pack_start_defaults (GTK_BOX (vbox), draw_area);
 
 	gtk_widget_set_events (draw_area, gtk_widget_get_events(draw_area) |GDK_BUTTON_PRESS_MASK);
 
-	gtk_widget_realize(draw_area);
+	gtk_widget_realize (draw_area);
 
         init_config ();
-	load_properties();
+	load_properties ();
 
 	g_signal_connect (G_OBJECT(draw_area), "button_press_event",
 			  G_CALLBACK (button_press_event), NULL);
@@ -1509,28 +1478,21 @@ main (int argc, char *argv [])
 	g_signal_connect (G_OBJECT (next_draw_area), "expose_event",
 			  G_CALLBACK (preview_expose_event), NULL);
 
-	gtk_widget_realize(next_draw_area);
+	gtk_widget_realize (next_draw_area);
 
 	update_score_state ();
 
-	gtk_widget_show(draw_area);
-	gtk_widget_show(next_draw_area);
+	hbox = gtk_hbox_new (0,3);
+	gtk_box_pack_start (GTK_BOX (vbox), hbox, 0, 0, 0);
 
-	hbox = gtk_hbox_new(0,3);
-	gtk_box_pack_start(GTK_BOX(vbox), hbox, 0, 0, 0);
-
-	gtk_widget_show(hbox);
-
-	gtk_widget_show (vbox);
-	
 	/*gnome_app_set_contents (GNOME_APP (app), vbox);*/
 
-	gtk_widget_show (app);
+	gtk_widget_show_all (app);
 		
-	start_game();
+	start_game ();
 	
 	/* Enter the event loop */
 	gtk_main ();
 
-	return(0);
+	return (0);
 }
