@@ -1,3 +1,10 @@
+2001-12-04  Kevin Vandersloot <kfv101@psu.edu>
+
+	* glines.c: When starting a new game flash a simple message
+	indicating how to score this game since I could never
+	figure out how this game worked - Thanks Iain for showing
+	me how :)
+
 2001-08-18  Matthias Warkus  <mawarkus@gnome.org>
 
 	* glines.png: New icon by Timothy Musson, added by permission of

@@ -133,6 +133,7 @@ start_game(void)
 {
 	char string[20];
 
+	gnome_appbar_set_status(GNOME_APPBAR(appbar), _("Match five balls of the same color in a row to score!"));
 	draw_field(draw_area,0);
 	draw_all_balls(draw_area, -1);
 	gtk_widget_draw(draw_area, NULL);
