@@ -1246,6 +1246,7 @@ game_props_callback (GtkWidget *widget, void *data)
 	GtkWidget *w, *omenu, *l, *fv;
 	GtkWidget *frame;
 	GtkWidget *table;
+	GtkWidget *vbox;
 
 	if (! pref_dialog)
 		{
@@ -1261,16 +1262,25 @@ game_props_callback (GtkWidget *widget, void *data)
 			g_signal_connect (G_OBJECT (pref_dialog), "delete_event",
 					  G_CALLBACK (gtk_widget_hide), NULL);
 
+			gtk_window_set_resizable (GTK_WINDOW (pref_dialog), FALSE);
+			gtk_container_set_border_width (GTK_CONTAINER (pref_dialog), 5);
+			gtk_box_set_spacing (GTK_BOX (GTK_DIALOG (pref_dialog)->vbox), 2);
+
+			vbox = gtk_vbox_new (FALSE, 18);
+			gtk_container_set_border_width (GTK_CONTAINER (vbox), 5);
+			gtk_box_pack_start (GTK_BOX (GTK_DIALOG (pref_dialog)->vbox), vbox, 
+					    FALSE, FALSE, 0);
+
 			frame = games_frame_new (_("Themes"));
 			table = gtk_table_new (2, 2, FALSE);
 			gtk_container_set_border_width (GTK_CONTAINER (table), 0);
 			gtk_table_set_row_spacings (GTK_TABLE (table), 6);
 			gtk_table_set_col_spacings (GTK_TABLE (table), 6);
 			gtk_container_add (GTK_CONTAINER (frame), table);
-			gtk_box_pack_start (GTK_BOX (GTK_DIALOG (pref_dialog)->vbox), frame, 
+			gtk_box_pack_start (GTK_BOX (vbox), frame, 
 					    FALSE, FALSE, 0);
 
-			l = gtk_label_new (_("Ball image"));
+			l = gtk_label_new_with_mnemonic (_("_Ball image:"));
 			gtk_misc_set_alignment (GTK_MISC (l), 0, 0.5);
 			gtk_table_attach_defaults (GTK_TABLE (table), l, 0, 1, 0, 1);
 	    
@@ -1278,9 +1288,10 @@ game_props_callback (GtkWidget *widget, void *data)
 			g_signal_connect (G_OBJECT (omenu), "changed",
 					  G_CALLBACK (set_selection), NULL);
 			gtk_table_attach_defaults (GTK_TABLE (table), omenu, 1, 2, 0, 1);
+			gtk_label_set_mnemonic_widget (GTK_LABEL (l), omenu);
 
 
-			l = gtk_label_new (_("Background color"));
+			l = gtk_label_new_with_mnemonic (_("B_ackground color:"));
 			gtk_misc_set_alignment (GTK_MISC (l), 0, 0.5);
 			gtk_table_attach_defaults (GTK_TABLE (table), l, 0, 1, 1, 2);
 	    
@@ -1292,17 +1303,18 @@ game_props_callback (GtkWidget *widget, void *data)
 			}
 
 			gtk_table_attach_defaults (GTK_TABLE (table), w, 1, 2, 1, 2);
+			gtk_label_set_mnemonic_widget (GTK_LABEL (l), w);
 
 
 			frame = games_frame_new (_("General"));
 			fv = gtk_vbox_new (FALSE, FALSE);
 			gtk_box_set_spacing (GTK_BOX (fv), 6);
 			gtk_container_add (GTK_CONTAINER (frame), fv);
-			gtk_box_pack_start (GTK_BOX (GTK_DIALOG (pref_dialog)->vbox), frame, 
+			gtk_box_pack_start (GTK_BOX (vbox), frame, 
 					    FALSE, FALSE, 0);
 
 			fast_moves_toggle_button = 
-				gtk_check_button_new_with_label ( _("Use fast moves") );
+				gtk_check_button_new_with_mnemonic ( _("_Use fast moves") );
 			if (move_timeout == 10) 
 				{
 					gtk_toggle_button_set_active 

@@ -47,7 +47,7 @@ if GCONF_SCHEMAS_INSTALL
 	GCONF_CONFIG_SOURCE=$(GCONF_SCHEMA_CONFIG_SOURCE) $(GCONFTOOL) --makefile-install-rule $(top_builddir)/glines/$(schema_DATA)
 endif
 	-$(mkinstalldirs) $(DESTDIR)$(scoredir)
-	touch $(DESTDIR)$(scoredir)/glines.scores
+	-touch $(DESTDIR)$(scoredir)/glines.scores
 	-chown $(scores_user):$(scores_group) $(DESTDIR)$(scoredir)/glines.scores
 	-chmod 664 $(DESTDIR)$(scoredir)/glines.scores
 	-if test "x$(setgid)" = "xtrue"; then chgrp $(scores_group) $(DESTDIR)$(bindir)/glines && chmod 2555 $(DESTDIR)$(bindir)/glines ; fi

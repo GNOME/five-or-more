@@ -1,3 +1,11 @@
+2005-03-23  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* glines.c: Patches from Dennis Cranston
+	<dennis_cranston@yahoo.com> to make the game more HIG compliant.
+
+	* Makefile.am (DISTCLEANFILES): Make sure installation doesn't
+	fail if touch can't access the scores directory.
+
 2005-03-17  Richard Hoelscher  <rah@rahga.com>
 
 	* glines.c (create_menus): Use GtkUIManager API for menus.
