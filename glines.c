@@ -40,6 +40,7 @@
 #include "games-frame.h"
 #include "games-files.h"
 #include "games-gridframe.h"
+#include "games-preimage.h"
 #include "glines.h"
 
 #define KEY_DIR "/apps/glines"
@@ -61,8 +62,8 @@ static GtkWidget *app, *appbar, *pref_dialog;
 GtkWidget *preview_widgets[3];
 field_props field[FIELDSIZE * FIELDSIZE];
 
-/* The unscaled pixbuf as read from file. Cached here to save file reads. */
-GdkPixbuf *raw_pixbuf = NULL;
+/* Pre-rendering image data prepared from file. */
+GamesPreimage *ball_preimage = NULL;
 /* The tile images with balls rendered on them. */
 GdkPixmap *ball_pixmap = NULL;
 /* The balls rendered to a size appropriate for the preview. */
@@ -115,10 +116,10 @@ GnomeUIInfo mainmenu[];
 
 static void 
 load_image (gchar *fname,
-	    GdkPixbuf **pixbuf)
+	    GamesPreimage **preimage)
 {
 	gchar *tmp, *fn = NULL;
-	GdkPixbuf *image;
+	GamesPreimage *tmp_preimage;
 
 	tmp = g_build_filename ("glines", fname, NULL);
 	
@@ -153,14 +154,14 @@ load_image (gchar *fname,
 		exit (1);
 	}
 
-	image = gdk_pixbuf_new_from_file (fn, NULL);
+	tmp_preimage = games_preimage_new_from_uri (fn, NULL);
 	g_free( fn );
 
 
-	if (*pixbuf)
-		g_object_unref (*pixbuf);
+	if (*preimage)
+		g_object_unref (*preimage);
 
-	*pixbuf = image;
+	*preimage = tmp_preimage;
 }
 
 static void
@@ -175,9 +176,8 @@ refresh_pixmaps (void)
 	if (!ball_pixmap)
 		return;
 
-	ball_pixbuf = gdk_pixbuf_scale_simple (raw_pixbuf, 4*boxsize, 
-					       7*boxsize, 
-					       GDK_INTERP_BILINEAR);
+	ball_pixbuf = games_preimage_render (ball_preimage, 4*boxsize, 
+					     7*boxsize, NULL);
 
 	gc = gdk_gc_new (ball_pixmap);
 	gdk_gc_set_foreground (gc, &backgnd.color);
@@ -214,9 +214,8 @@ refresh_preview_pixmaps (void)
 		for (i=0; i<7; i++)
 			g_object_unref (preview_pixmaps[i]);
 
-	scaled = gdk_pixbuf_scale_simple (raw_pixbuf, 4*preview_width, 
-					  7*preview_height, 
-					  GDK_INTERP_BILINEAR);
+	scaled = games_preimage_render (ball_preimage, 4*preview_width, 
+				        7*preview_height, NULL);
 
 	for (i=0; i<7; i++) {
 		preview_pixmaps[i] = gdk_pixmap_new (widget->window,
@@ -1055,7 +1054,7 @@ bg_color_callback (GtkWidget *widget, gpointer data)
 static void
 load_theme ()
 {
-	load_image (ball_filename, &raw_pixbuf);
+	load_image (ball_filename, &ball_preimage);
 	refresh_pixmaps ();
 	refresh_preview_pixmaps ();
 }
