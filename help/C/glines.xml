@@ -3,12 +3,12 @@
              "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd"
 [
   <!ENTITY legal SYSTEM "legal.xml">
-  <!ENTITY appversion "2.4">
-  <!ENTITY manrevision "2.4">
+  <!ENTITY appversion "2.6">
+  <!ENTITY manrevision "2.6">
   <!ENTITY date "March 2002">
   <!ENTITY app "<application>Glines</application>">
   <!ENTITY appname "Glines">
-  <!ENTITY version "2.4">
+  <!ENTITY version "2.6">
 ]>
 <!-- 
       (Do not remove this comment block.)
@@ -430,7 +430,8 @@
 
   <para>
    You can select different ball styles and background colors in the
-   Themes section. 
+   Themes section. If you find it difficult distinguishing the colours, 
+   try the shapes theme.
   </para>
   <para>
    You can speed up the movement of the balls by checking the Use fast
