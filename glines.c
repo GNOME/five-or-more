@@ -49,6 +49,8 @@
 #define KEY_SAVED_SCORE "/apps/glines/saved/score"
 #define KEY_SAVED_FIELD "/apps/glines/saved/field"
 #define KEY_SAVED_PREVIEW "/apps/glines/saved/preview"
+#define KEY_WIDTH "/apps/glines/saved/width"
+#define KEY_HEIGHT "/apps/glines/saved/height"
 
 #define NCOLORS 7
 
@@ -78,6 +80,12 @@ int inmove = 0;
 int score = 0;
 
 int boxsize;
+
+/* The width and height of the main window. */
+#define MIN_WIDTH  190
+#define MIN_HEIGHT 240
+int width;
+int height;
 
 int preview_height = 0;
 int preview_width = 0;
@@ -1096,6 +1104,15 @@ game_props_callback (GtkWidget *widget, void *data)
 }
 
 static int
+window_resize_cb (GtkWidget * widget, GdkEventConfigure * event, void * data)
+{
+	gconf_client_set_int (conf_client, KEY_WIDTH, event->width, NULL);
+	gconf_client_set_int (conf_client, KEY_HEIGHT, event->height, NULL);
+
+	return FALSE;
+}
+
+static int
 game_quit_callback (GtkWidget *widget, void *data)
 {
 	if (animate_id)
@@ -1342,9 +1359,11 @@ move_timeout_changed_cb (GConfClient *client,
 }
 
 static void
-init_config (void)
+init_config (int argc, char ** argv)
 {
 	conf_client = gconf_client_get_default ();
+
+        gconf_init (argc, argv, NULL);
 
 	gconf_client_add_dir (conf_client,
 			      KEY_DIR,
@@ -1362,6 +1381,15 @@ init_config (void)
 				 KEY_BACKGROUND_COLOR,
 				 bg_color_changed_cb,
 				 NULL, NULL, NULL);
+
+	/* These are here because they are only loaded once. */
+	width = gconf_client_get_int (conf_client,
+				      KEY_WIDTH, NULL);
+	width = MAX (width, MIN_WIDTH);
+       
+	height = gconf_client_get_int (conf_client,
+				       KEY_HEIGHT, NULL);
+	height = MAX (height, MIN_HEIGHT);
 }
 
 int
@@ -1388,9 +1416,7 @@ main (int argc, char *argv [])
 			    GNOME_PARAM_POPT_TABLE, NULL,
 			    GNOME_PARAM_APP_DATADIR, DATADIR, NULL);
 
-        gconf_init (argc, argv, NULL);
-        gconf_client_add_dir (gconf_client_get_default (), KEY_DIR,
-                              GCONF_CLIENT_PRELOAD_NONE, NULL);
+        init_config (argc, argv);
 
 	gnome_window_icon_set_default_from_file (GNOME_ICONDIR"/glines.png");
 	client = gnome_master_client ();
@@ -1406,9 +1432,13 @@ main (int argc, char *argv [])
 		reset_game ();
 
 	app = gnome_app_new ("glines", _("Lines"));
+	gtk_window_set_default_size (GTK_WINDOW (app), width, height);
+	gtk_widget_set_size_request (GTK_WIDGET (app), MIN_WIDTH, MIN_HEIGHT);
 
 	g_signal_connect (G_OBJECT (app), "delete_event",
 	                  G_CALLBACK (game_quit_callback), NULL);
+	g_signal_connect (G_OBJECT (app), "configure_event",
+	                  G_CALLBACK (window_resize_cb), NULL);
 
 	appbar = gnome_appbar_new (FALSE, TRUE, GNOME_PREFERENCES_USER);
 	gnome_app_set_statusbar (GNOME_APP (app), GTK_WIDGET(appbar));  
@@ -1440,8 +1470,6 @@ main (int argc, char *argv [])
 
 	for (i=0; i<3; i++) {
 		preview_widgets[i] = gtk_drawing_area_new ();
-		gtk_widget_set_size_request (GTK_WIDGET (preview_widgets[i]),
-					     boxsize, boxsize);
 		gtk_box_pack_start_defaults (GTK_BOX (preview_hbox),
 					     preview_widgets[i]);
 		/* So we have a window at configure time since we 
@@ -1462,8 +1490,6 @@ main (int argc, char *argv [])
 
 
 	draw_area = gtk_drawing_area_new ();
-	gtk_widget_set_size_request (GTK_WIDGET (draw_area),
-				     boxsize * FIELDSIZE, boxsize * FIELDSIZE);
 	g_signal_connect (G_OBJECT(draw_area), "button_press_event",
 			  G_CALLBACK (button_press_event), NULL);
 	g_signal_connect (G_OBJECT (draw_area), "configure_event",
@@ -1476,16 +1502,12 @@ main (int argc, char *argv [])
 
 	gtk_widget_set_events (draw_area, gtk_widget_get_events(draw_area) |GDK_BUTTON_PRESS_MASK);
 
-
-        init_config ();
-	load_properties ();
-
 	update_score_state ();
 
 	hbox = gtk_hbox_new (0,3);
 	gtk_box_pack_start (GTK_BOX (vbox), hbox, 0, 0, 0);
 
-	/*gnome_app_set_contents (GNOME_APP (app), vbox);*/
+	load_properties ();
 
 	gtk_widget_show_all (app);
 		

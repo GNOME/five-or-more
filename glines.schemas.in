@@ -38,6 +38,30 @@
       </schema>
 
       <schema>
+      <key>/schemas/apps/glines/saved/width</key>
+      <applyto>/apps/glines/saved/width</applyto>
+      <owner>glines</owner>
+      <type>int</type>
+      <default>380</default>
+      <locale name="C">
+        <short>Window width</short>
+        <long>The width of the main window.</long>
+      </locale>
+      </schema>
+
+      <schema>
+      <key>/schemas/apps/glines/saved/height</key>
+      <applyto>/apps/glines/saved/height</applyto>
+      <owner>glines</owner>
+      <type>int</type>
+      <default>485</default>
+      <locale name="C">
+        <short>Window height</short>
+        <long>The height of the main window.</long>
+      </locale>
+      </schema>
+
+      <schema>
       <key>/schemas/apps/glines/saved/score</key>
       <applyto>/apps/glines/saved/score</applyto>
       <owner>glines</owner>
