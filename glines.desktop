@@ -1,10 +1,12 @@
 [Desktop Entry]
 Name=Glines
 Name[fi]=Glines
+Name[ja]=Glines
 Name[no]=Glines
 Comment=Gnome color lines
 Comment[hu]=Color lines játék GNOME alá
 Comment[fi]=Värilliset rivit
+Comment[ja]=GNOMEÈÇ¥«¥é¡¼¥é¥¤¥ó¥²¡¼¥à
 Comment[no]=Gnome fargelinjer
 Exec=glines
 Icon=glines.xpm
