@@ -1,3 +1,9 @@
+2003-07-28  Callum McKenzie <callum@physics.otago.ac.nz>
+
+	* classic.png: Improved the alpha blending with the
+	background. Unfortunately the balls are still clipped at the top,
+	bottom and sides.
+
 2003-07-27  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* glines.c: Compiler warning fixes.
