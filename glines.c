@@ -1005,19 +1005,20 @@ game_quit_callback (GtkWidget *widget, void *data)
 	if (ask_me) {
 
 	 box = gtk_message_dialog_new (GTK_WINDOW (app),
-				       GTK_DIALOG_MODAL | GTK_DIALOG_DESTROY_WITH_PARENT,
-				       GTK_MESSAGE_QUESTION,
-				       GTK_BUTTONS_NONE,
-				       (_("Do you really want to quit?")));
+			  GTK_DIALOG_MODAL | GTK_DIALOG_DESTROY_WITH_PARENT,
+			  GTK_MESSAGE_QUESTION,
+			  GTK_BUTTONS_NONE,
+			  (_("Are you sure you want to quit Glines?")));
+
 	 gtk_dialog_add_buttons (GTK_DIALOG (box),
-				 GTK_STOCK_NO, GTK_RESPONSE_NO,
-				 GTK_STOCK_YES, GTK_RESPONSE_YES,
+				 GTK_STOCK_CANCEL, GTK_RESPONSE_REJECT,
+				 GTK_STOCK_QUIT, GTK_RESPONSE_ACCEPT,
 				 NULL);
 					
 	 gtk_widget_show (box);
 	 response = gtk_dialog_run (GTK_DIALOG (box));
 	 
-	 if (response == GTK_RESPONSE_YES)
+	 if (response == GTK_RESPONSE_ACCEPT)
 	 {
 		 gtk_widget_destroy (app);
 		 gtk_main_quit ();
