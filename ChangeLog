@@ -1,3 +1,7 @@
+2002-11-11  Ross Burton  <ross@burtonini.com>
+
+	* glines.png: New icon contributed by Timothy Musson.
+
 2002-09-20  Ross Burton  <ross@burtonini.com>
 
 	* help/C/glines.xml: Fix paths to the images, closing #93386.
