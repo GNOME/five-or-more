@@ -292,6 +292,7 @@ button_press_event (GtkWidget *widget, GdkEvent *event)
 
 	/* XXX Ezt megkapja */
 
+	if(inmove) return TRUE;
 	gtk_widget_get_pointer (widget, &x, &y);
 	fx = x / BOXSIZE;
 	fy = y / BOXSIZE;
