@@ -1,7 +1,7 @@
 scoredir=$(localstatedir)/games
 pixmapdir = $(datadir)/pixmaps/glines
 icondir = $(datadir)/pixmaps
-Gamesdir = $(datadir)/gnome/apps/Games
+Gamesdir = $(datadir)/applications
 
 INCLUDES = -I.. -I$(srcdir)/..		\
 	$(GNOME_GAMES_CFLAGS)		\

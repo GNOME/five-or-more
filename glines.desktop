@@ -37,3 +37,4 @@ Exec=glines
 Icon=glines.png
 Terminal=0
 Type=Application
+Categories=Application;Game;
