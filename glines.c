@@ -1358,7 +1358,7 @@ main (int argc, char *argv [])
 	else
 		reset_game ();
 
-	app = gnome_app_new ("glines", _("Glines"));
+	app = gnome_app_new ("glines", _("Lines"));
 
 	gtk_window_set_resizable (GTK_WINDOW (app), FALSE);
 	g_signal_connect (G_OBJECT (app), "delete_event",

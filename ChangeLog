@@ -1,4 +1,11 @@
+2003-07-10  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* glines.c (main): Dropped the g from the title to match the
+	desktop entry.
+
 2003-07-09  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* glines.desktop.in: Update name to fit HIG (bug 116916).
 
 	* glines.c: Fix a race condition where the animation callback may be
 	called after the main drawing area is destroyed. Based mostly on
