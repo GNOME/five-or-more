@@ -97,7 +97,7 @@ load_image (gchar *fname,
 	    GdkPixbuf **pixbuf)
 {
 	gchar *tmp, *fn = NULL;
-	GdkPixbuf *image;
+	GdkPixbuf *image, *scaled;
 
 	tmp = g_build_filename ("glines", fname, NULL);
 	
@@ -122,10 +122,15 @@ load_image (gchar *fname,
 	image = gdk_pixbuf_new_from_file (fn, NULL);
 	g_free( fn );
 
+	/* Notice the hard-coded sizes. */
+	scaled = gdk_pixbuf_scale_simple (image, 128, 224, 
+					  GDK_INTERP_BILINEAR);
+	g_object_unref (image);
+
 	if (*pixbuf)
 		g_object_unref (*pixbuf);
 
-	*pixbuf = image;
+	*pixbuf = scaled;
 }
 
 static void

@@ -1,3 +1,9 @@
+2004-01-02  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* glines.c (load_image): Rescale graphics to fit. The graphics now
+	just have to fit a 4x7 grid. This means that we now support SVG
+	properly.
+
 2003-12-28  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* glines.c: Fix attempts to do an expose event before the
