@@ -856,7 +856,9 @@ set_backgnd_color (gchar *str)
 		backgnd.name = g_strdup (str) ;
 	}
 
-	gdk_color_parse (backgnd.name, &backgnd.color);
+	if (!gdk_color_parse (backgnd.name, &backgnd.color)) {
+		gdk_color_parse ("#000000", &backgnd.color);
+	}
 
 	colormap = gtk_widget_get_colormap (draw_area);
 	gdk_colormap_alloc_color (colormap, &backgnd.color, FALSE, TRUE);
