@@ -26,10 +26,6 @@ void draw_ball(GtkWidget *widget, int x, int y);
 
 int find_route(void);
 
-static gint button_press_event (GtkWidget *widget, GdkEvent *event);
-
-static gint expose_event (GtkWidget *widget, GdkEventExpose *event, gpointer gp);
-
 void set_inmove(int i);
 
 void init_preview(void);
