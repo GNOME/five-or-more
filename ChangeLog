@@ -1,3 +1,7 @@
+2002-02-27 Edgar Luna <kheb@gnulinux.org.mx>
+
+	* glines.c: Fix about dialog warning.
+
 2002-02-17  Chris Lyttle  <chris@wilddev.net>
 
 	* help/C/glines.xml: updated for new template.

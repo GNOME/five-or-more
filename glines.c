@@ -723,7 +723,7 @@ game_about_callback (GtkWidget *widget, void *data)
 			(const char **)documenters,
 			strcmp (translator_credits, "translator_credits") != 0 ? translator_credits : NULL,
 		        NULL);
-	gnome_dialog_set_parent(about), GTK_WINDOW(app);
+	gtk_window_set_transient_for (GTK_WINDOW (about), GTK_WINDOW(app));
 	gtk_widget_show (about);
 	return TRUE;
 }       
