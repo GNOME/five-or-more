@@ -1,0 +1,8 @@
+[Desktop Entry]
+_Name=Glines
+_Comment=Gnome color lines
+Exec=glines
+Icon=glines.png
+Terminal=0
+Type=Application
+Categories=Application;Game;
