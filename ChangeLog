@@ -1,3 +1,7 @@
+2005-01-03  Richard Hoelscher  <rah@rahga.com>
+
+	* glines.c (load_image): Preimage API update, uri -> file. 
+
 2004-12-20  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* glines.c: Patch from Marco Colombo to remove more hard-coded

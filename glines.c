@@ -155,7 +155,7 @@ load_image (gchar *fname,
 		}
 	}
 
-	tmp_preimage = games_preimage_new_from_uri (fn, NULL);
+	tmp_preimage = games_preimage_new_from_file (fn, NULL);
 	g_free( fn );
 
 
