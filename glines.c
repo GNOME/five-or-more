@@ -512,7 +512,7 @@ field_expose_event (GtkWidget *widget, GdkEventExpose *event, gpointer gp)
 
 	y_start = event->area.y / BOXSIZE;
 	y_end = y_start + event->area.height / BOXSIZE;
-	
+
 	draw_grid ();
 
         gc = gdk_gc_new (draw_area->window);
@@ -1334,8 +1334,6 @@ main (int argc, char *argv [])
 	gtk_window_set_resizable (GTK_WINDOW (app), FALSE);
 	g_signal_connect (G_OBJECT (app), "delete_event",
 	                  G_CALLBACK (game_quit_callback), NULL);
-	g_signal_connect (G_OBJECT (app), "configure_event",
-			  G_CALLBACK (configure_event_callback), NULL);
 
 	appbar = gnome_appbar_new (FALSE, TRUE, GNOME_PREFERENCES_USER);
 	gnome_app_set_statusbar (GNOME_APP (app), GTK_WIDGET(appbar));  
@@ -1385,13 +1383,14 @@ main (int argc, char *argv [])
 
 	g_signal_connect (G_OBJECT(draw_area), "button_press_event",
 			  G_CALLBACK (button_press_event), NULL);
+	g_signal_connect (G_OBJECT (draw_area), "configure_event",
+			  G_CALLBACK (configure_event_callback), NULL);
 	g_signal_connect (G_OBJECT (draw_area), "expose_event",
 			  G_CALLBACK (field_expose_event), NULL);
 
 	g_signal_connect (G_OBJECT (next_draw_area), "expose_event",
 			  G_CALLBACK (preview_expose_event), NULL);
 
-	gtk_widget_realize (next_draw_area); 
 
 	update_score_state ();
 

@@ -1,3 +1,9 @@
+2003-12-28  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* glines.c: Fix attempts to do an expose event before the
+	configure event. Remember to connect the configure and expose
+	signals to the same widget.
+
 2003-12-17  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* glines.c (fill_menu): Adapt to the new gobject API for
