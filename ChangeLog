@@ -1,3 +1,8 @@
+2003-06-07  William Jon McCann  <mccann@jhu.edu>
+
+	* glines.c: Use pixbufs for ball images.  Use grid lines instead
+	of background pixmaps.  HIG fixes for preferences dialog.
+
 2003-06-06  William Jon McCann  <mccann@jhu.edu>
 
 	* Makefile.am (schema_in_files): 

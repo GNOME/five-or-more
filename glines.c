@@ -32,10 +32,9 @@ GtkWidget *draw_area;
 static GtkWidget *app, *vb, *appbar, *pref_dialog;
 GtkWidget *next_draw_area; /* XXX Shouldn't be this much externls! */
 field_props field[FIELDSIZE*FIELDSIZE];
-GdkPixmap *box_pixmap = NULL;
-GdkPixmap *ball_pixmap = NULL;
-GdkBitmap *box_mask = NULL;
-GdkBitmap *ball_mask = NULL;
+GdkPixbuf *box_pixbuf = NULL;
+GdkPixbuf *ball_pixbuf = NULL;
+GdkPixmap *surface;
 
 GtkWidget *fast_moves_toggle_button = NULL;
 
@@ -52,6 +51,14 @@ char * box_filename;
 GtkWidget *scorelabel;
 scoretable sctab[] = {{5, 10}, {6, 12}, {7, 18}, {8, 28}, {9, 42}, {10, 82}, {11, 108}, {12, 138}, {13, 172}, {14, 210}, {0,0}};
 
+static struct {
+  GdkColor color ;
+  gchar *name ;
+  gint set;
+} backgnd = {
+	{0, 0, 0, 0}, NULL, 0
+};
+
 /* predeclare the menus */
 
 GnomeUIInfo gamemenu[];
@@ -61,8 +68,7 @@ GnomeUIInfo mainmenu[];
 
 static void 
 load_image (gchar *fname,
-GdkPixmap **pixmap,
-GdkPixmap **mask)
+	    GdkPixbuf **pixbuf)
 {
 	char *tmp, *fn;
         GdkColor bgcolor;
@@ -75,7 +81,7 @@ GdkPixmap **mask)
 	g_free( tmp );
 
 	if (!g_file_test (fn, G_FILE_TEST_EXISTS)) {
-		char *message = g_strdup_printf (_("Glines couldn't find pixmap file:\n%s\n\n"
+		char *message = g_strdup_printf (_("Glines couldn't find image file:\n%s\n\n"
 			"Please check your Glines installation"), fn);
 		GtkWidget *w = gtk_message_dialog_new (GTK_WINDOW (app),
 						       GTK_DIALOG_MODAL | GTK_DIALOG_DESTROY_WITH_PARENT,
@@ -91,14 +97,10 @@ GdkPixmap **mask)
 	image = gdk_pixbuf_new_from_file (fn, NULL);
 	g_free( fn );
 
-	if (*pixmap)
-		gdk_drawable_unref (*pixmap);
-	if (*mask)
-		gdk_drawable_unref (*mask);
+	if (*pixbuf)
+		gdk_pixbuf_unref (*pixbuf);
 
-	gdk_pixbuf_render_pixmap_and_mask (image, pixmap, mask, 127);
-
-	gdk_pixbuf_unref (image);
+	*pixbuf = image;
 }
 
 static void
@@ -147,7 +149,7 @@ reset_game(void)
 {
 	int i;
 
-	for(i=0; i < 81; i++)
+	for(i=0; i < FIELDSIZE*FIELDSIZE; i++)
 	{
 		field[i].color = 0;
 		field[i].phase = 0;
@@ -165,8 +167,7 @@ start_game(void)
 	char string[20];
 
 	gnome_appbar_set_status(GNOME_APPBAR(appbar), _("Match five balls of the same color in a row to score!"));
-	draw_all_balls(draw_area, -1);
-	draw_preview();	
+	refresh_screen ();
 	active = -1;
 	target = -1;
 	inmove = -1;
@@ -267,10 +268,10 @@ int
 init_new_balls(int num, int prev)
 {
 	int i, j = -1;
-
+	gfloat num_boxes = FIELDSIZE * FIELDSIZE;
 	for(i = 0; i < num;)
 	{
-		j = (int) (81.0*rand()/(RAND_MAX+1.0));
+		j = (int) (num_boxes*rand()/(RAND_MAX+1.0));
 		if(field[j].color == 0)
 		{
 			field[j].color = (prev == -1)?(1 + (int) (7.0*rand()/(RAND_MAX+1.0))):preview[prev]; 
@@ -463,26 +464,57 @@ preview_expose_event (GtkWidget *widget, GdkEventExpose *event, gpointer gp)
 	GdkGC *gc;
 	int i;
 
+        gc = gdk_gc_new (widget->window);
 	for (i = 0; i < 3; i++) {
 		/* Draw the box */
-		gdk_draw_drawable(widget->window,
-				  widget->style->fg_gc[GTK_WIDGET_STATE (widget)],
-				  box_pixmap, 0, 0,
-				  i * BOXSIZE, 0, BOXSIZE, BOXSIZE);
-
+		/*
+		 * I think it looks much cleaner without the background box
+		gdk_gc_set_foreground (gc, &backgnd.color);
+		gdk_draw_rectangle (widget->window, gc, TRUE,
+				    i * BOXSIZE+1, 1,
+				    BOXSIZE-1, BOXSIZE-1);
+		*/
 		/* Draw the ball */
-		gc = widget->style->fg_gc[GTK_STATE_NORMAL];
-		gdk_gc_set_clip_mask (gc, ball_mask);
-		gdk_gc_set_clip_origin (gc, 5 + i * BOXSIZE,
-					5 - (preview[i] - 1) * BALLSIZE);
-		gdk_draw_drawable(widget->window, gc, ball_pixmap,
-				  0, (preview[i] - 1) * BALLSIZE,
-				  5 + i * BOXSIZE, 5, BALLSIZE, BALLSIZE);
-		gdk_gc_set_clip_mask (gc, NULL);
+		gdk_draw_pixbuf (widget->window, gc, ball_pixbuf,
+				 0, (preview[i] - 1) * BALLSIZE,
+				 5 + i * BOXSIZE, 5, BALLSIZE, BALLSIZE,
+				 GDK_RGB_DITHER_NORMAL, 0, 0);
 	}
+        gdk_gc_unref (gc);
 
 	return FALSE;
 }
+
+static void
+draw_grid (void)
+{
+        GdkColormap *cmap;
+        GdkGC *gc;
+        GdkColor color;
+        gint x, y;
+
+        if (!gdk_color_parse ("#525F6C", &color)) {
+                return;
+        }
+
+        cmap = gtk_widget_get_colormap (draw_area);
+
+        gc = gdk_gc_new (draw_area->window);
+
+        gdk_color_alloc (cmap, &color);
+        gdk_gc_set_foreground (gc, &color);
+
+        for (x = BOXSIZE; x < FIELDSIZE*BOXSIZE; x = x + BOXSIZE) {
+                gdk_draw_line (surface, gc, x, 0, x, FIELDSIZE*BOXSIZE);
+        }
+        for (y = BOXSIZE; y < FIELDSIZE*BOXSIZE; y = y + BOXSIZE) {
+                gdk_draw_line (surface, gc, 0, y, FIELDSIZE*BOXSIZE, y);
+        }
+
+        gdk_gc_unref (gc);
+}
+
+
 
 /* Redraw a part of the field */
 static gint
@@ -492,20 +524,25 @@ field_expose_event (GtkWidget *widget, GdkEventExpose *event, gpointer gp)
 	guint x_start, x_end, y_start, y_end, i, j, idx;
 
 	x_start = event->area.x / BOXSIZE;
-	x_end = x_start + event->area.width / BOXSIZE + 1;
+	x_end = x_start + event->area.width / BOXSIZE;
 
 	y_start = event->area.y / BOXSIZE;
-	y_end = y_start + event->area.height / BOXSIZE + 1;
+	y_end = y_start + event->area.height / BOXSIZE;
+	
+	draw_grid ();
 
-	for (i = y_start; i <= y_end; i++) {
-		for (j = x_start; j <= x_end; j++) {
+        gc = gdk_gc_new (draw_area->window);
+
+	for (i = y_start; i < y_end; i++) {
+		for (j = x_start; j < x_end; j++) {
 			idx = j + i * FIELDSIZE;
 
 			/* Draw the box */
-			gdk_draw_drawable(widget->window,
-					  widget->style->fg_gc[GTK_WIDGET_STATE (widget)],
-					  box_pixmap, 0, 0,
-					  j * BOXSIZE, i * BOXSIZE, BOXSIZE, BOXSIZE);
+			gdk_gc_set_foreground (gc, &backgnd.color);
+			gdk_draw_rectangle (surface, 
+					    gc,
+					    TRUE, j * BOXSIZE+1, i * BOXSIZE+1,
+					    BOXSIZE-1, BOXSIZE-1);
 
 			/* Draw the ball */
 			if (field[idx].color != 0) {
@@ -515,19 +552,20 @@ field_expose_event (GtkWidget *widget, GdkEventExpose *event, gpointer gp)
 				int y = idx / FIELDSIZE;
 
 				phase = ABS(ABS(3-phase)-3);
-				gc = widget->style->fg_gc[GTK_STATE_NORMAL];
-				gdk_gc_set_clip_mask (gc, ball_mask);
-				gdk_gc_set_clip_origin (gc, 5 + x * BOXSIZE - phase * BALLSIZE,
-							5 + y * BOXSIZE - (color - 1) * BALLSIZE);
-				gdk_draw_drawable(widget->window, gc, ball_pixmap,
-						  phase * BALLSIZE,
-						  (color - 1) * BALLSIZE,
-						  5 + x * BOXSIZE, 5 + y * BOXSIZE,
-						  BALLSIZE, BALLSIZE);
-				gdk_gc_set_clip_mask (gc, NULL);
+				/*gc = widget->style->fg_gc[GTK_STATE_NORMAL];*/
+
+				gdk_draw_pixbuf(surface, gc, ball_pixbuf,
+						phase * BALLSIZE, (color - 1) * BALLSIZE,
+						5 + x * BOXSIZE, 5 + y * BOXSIZE,
+						BALLSIZE, BALLSIZE,
+						GDK_RGB_DITHER_NORMAL, 0, 0);
 			}
 		}
 	}
+        gdk_gc_unref (gc);
+
+	gdk_window_set_back_pixmap (widget->window, surface, 0);
+	gdk_window_clear (widget->window);
 
 	return FALSE;
 }
@@ -818,12 +856,67 @@ game_about_callback (GtkWidget *widget, void *data)
 	return TRUE;
 }       
 
+void
+set_backgnd_color (gchar *str)
+{
+	GdkColormap *colormap;
+	GtkStyle *widget_style, *temp_style;
+
+	if (!str)
+		str = g_strdup ("#000000");
+
+	if (str != backgnd.name) {
+		g_free (backgnd.name) ;
+		backgnd.name = g_strdup (str) ;
+	}
+
+	gdk_color_parse (backgnd.name, &backgnd.color);
+
+	colormap = gtk_widget_get_colormap (draw_area);
+	gdk_color_alloc (colormap, &backgnd.color);
+	widget_style = gtk_widget_get_style (draw_area);
+	temp_style = gtk_style_copy (widget_style);
+	temp_style->bg[0] = backgnd.color;
+	temp_style->bg[1] = backgnd.color;
+	temp_style->bg[2] = backgnd.color;
+	temp_style->bg[3] = backgnd.color;
+	temp_style->bg[4] = backgnd.color;
+	gtk_widget_set_style (draw_area, temp_style);
+}
+
+void
+bg_color_changed_cb (GConfClient *client,
+		      guint cnxn_id,
+		      GConfEntry *entry,
+		      gpointer user_data)
+{
+	gchar *color;
+
+	color = gconf_client_get_string (gconf_client_get_default (),
+					 "/apps/glines/table/background_color", NULL);
+	set_backgnd_color (color);
+}
+
+void
+bg_color_callback (GtkWidget *widget, gpointer data)
+{
+	static char *tmp = "";
+	guint8 r, g, b, a;
+
+	gnome_color_picker_get_i8 (GNOME_COLOR_PICKER (widget),
+				   &r, &g, &b, &a);
+
+	tmp = g_strdup_printf ("#%02x%02x%02x", r, g, b);
+
+	gconf_client_set_string (gconf_client_get_default (),
+				 "/apps/glines/table/background_color", tmp, NULL);
+}
 
 static void
 load_theme ()
 {
-	load_image(box_filename, &box_pixmap, &box_mask);
-	load_image(ball_filename, &ball_pixmap, &ball_mask);
+	load_image(box_filename, &box_pixbuf);
+	load_image(ball_filename, &ball_pixbuf);
 }
 
 static void
@@ -923,7 +1016,7 @@ pref_dialog_response (GtkDialog *dialog, gint response, gpointer data)
 
 game_props_callback (GtkWidget *widget, void *data)
 {
-	GtkWidget *menu1, *omenu1, *menu, *omenu, *l, *hb, *hb1, *frame, *fv, *cb;
+	GtkWidget *w, *menu, *omenu, *l, *hb, *hb1, *frame, *fv, *cb;
 	GtkWidget *button;
 	GtkWidget *space_label;
 	GtkWidget *table;
@@ -960,15 +1053,21 @@ game_props_callback (GtkWidget *widget, void *data)
 			gtk_table_attach_defaults (GTK_TABLE (table), omenu, 1, 2, 0, 1);
 
 
-			l = gtk_label_new (_("Background image"));
+			l = gtk_label_new (_("Background color"));
 			gtk_misc_set_alignment (GTK_MISC (l), 0, 0.5);
 			gtk_table_attach_defaults (GTK_TABLE (table), l, 0, 1, 1, 2);
 	    
-			omenu1 = gtk_option_menu_new ();
-			menu1 = gtk_menu_new ();
-			fill_menu (menu1, ".xpm", TRUE);
-			gtk_option_menu_set_menu (GTK_OPTION_MENU (omenu1), menu1);
-			gtk_table_attach_defaults (GTK_TABLE (table), omenu1, 1, 2, 1, 2);
+			{
+				int ur,ug,ub ;
+				
+				w  = gnome_color_picker_new();
+				sscanf (backgnd.name, "#%02x%02x%02x", &ur,&ug,&ub);
+				gnome_color_picker_set_i8 (GNOME_COLOR_PICKER(w), ur, ug, ub, 0);
+				g_signal_connect (G_OBJECT(w), "color_set",
+						  G_CALLBACK (bg_color_callback), &backgnd.name);
+			}
+
+			gtk_table_attach_defaults (GTK_TABLE (table), w, 1, 2, 1, 2);
 
 			hb = gtk_hbox_new (FALSE, FALSE);
 			gtk_container_set_border_width (GTK_CONTAINER (hb), 6);
@@ -1024,6 +1123,30 @@ game_quit_callback (GtkWidget *widget, void *data)
 {
 	gtk_main_quit ();
 	return FALSE;
+}
+
+static int
+configure_event_callback (GtkWidget *widget, GdkEventConfigure *event)
+{
+	if (surface)
+		{
+			gint old_w, old_h;
+			
+			gdk_drawable_get_size (surface, &old_w, &old_h);
+			if (old_w == event->width && old_h == event->height)
+				return TRUE;
+			g_object_unref (surface);
+		}
+
+	surface = gdk_pixmap_new (draw_area->window, event->width,
+				  event->height,
+				  gdk_drawable_get_visual
+				  (draw_area->window)->depth);
+	gdk_draw_rectangle (surface, 
+			    widget->style->fg_gc[GTK_WIDGET_STATE (widget)],
+			    TRUE, 0, 0, -1, -1);
+
+	refresh_screen ();
 }
 
 static int
@@ -1085,6 +1208,13 @@ load_properties (void)
 	move_timeout = gconf_client_get_int (gconf_client_get_default (),
 					     "/apps/glines/preferences/move_timeout",
 					     NULL);
+
+	gchar *buf = gconf_client_get_string (gconf_client_get_default (),
+					      "/apps/glines/table/background_color",
+					      NULL);
+	set_backgnd_color (buf);
+	g_free (buf);
+
 	if (move_timeout <= 0)
 		move_timeout = 100;
 
@@ -1178,6 +1308,13 @@ GnomeUIInfo mainmenu[] = {
   gnome_client_get_previous_id (client)) == 0))
 #endif /* GNOME_CLIENT_RESTARTED */
 
+void
+refresh_screen (void)
+{
+	draw_all_balls (draw_area, -1);
+	draw_preview ();
+}
+
 static void
 ball_theme_changed_cb (GConfClient *client,
                        guint cnxn_id,
@@ -1197,8 +1334,7 @@ ball_theme_changed_cb (GConfClient *client,
 		g_free (theme_tmp);
   
 	load_theme ();
-	draw_all_balls (draw_area, -1);
-	draw_preview ();
+	refresh_screen ();
 
 	//FIXME apply in the prefs dialog GUI
 }
@@ -1222,8 +1358,7 @@ box_theme_changed_cb (GConfClient *client,
 		g_free (theme_tmp);
   
 	load_theme ();
-	draw_all_balls (draw_area, -1);
-	draw_preview ();
+	refresh_screen ();
 
 	//FIXME apply in the prefs dialog GUI
 }
@@ -1266,6 +1401,10 @@ init_config (void)
 	gconf_client_notify_add (conf_client,
 				 "/apps/glines/preferences/move_timeout",
 				 move_timeout_changed_cb,
+				 NULL, NULL, NULL);
+	gconf_client_notify_add (conf_client,
+				 "/apps/glines/table/background_color",
+				 bg_color_changed_cb,
 				 NULL, NULL, NULL);
 }
 
@@ -1312,6 +1451,8 @@ main (int argc, char *argv [])
 	gtk_window_set_policy(GTK_WINDOW(app), FALSE, FALSE, TRUE);
 	g_signal_connect (G_OBJECT(app), "delete_event",
 	                  G_CALLBACK (game_quit_callback), NULL);
+	g_signal_connect (G_OBJECT (app), "configure_event",
+			  G_CALLBACK (configure_event_callback), NULL);
 
 	appbar = gnome_appbar_new(FALSE, TRUE, GNOME_PREFERENCES_USER);
 	gnome_app_set_statusbar(GNOME_APP (app), GTK_WIDGET(appbar));  
@@ -1327,30 +1468,31 @@ main (int argc, char *argv [])
 
 	gnome_app_set_contents (GNOME_APP (app), vbox);
 
-	hbox = gtk_hbox_new(TRUE, 0);
+	hbox = gtk_hbox_new(FALSE, 0);
 	frame = bold_frame (_("Next Balls"));
 
-	draw_area = gtk_drawing_area_new();
-	next_draw_area = gtk_drawing_area_new();
+	draw_area = gtk_drawing_area_new ();
+	next_draw_area = gtk_drawing_area_new ();
 
-	gtk_widget_set_usize(draw_area, BOXSIZE*9, BOXSIZE*9);
-	gtk_widget_set_usize(next_draw_area, BOXSIZE*3, BOXSIZE);
-	gtk_box_pack_start_defaults(GTK_BOX(vbox), hbox);
-	gtk_box_pack_start(GTK_BOX(hbox), frame, TRUE, FALSE, 0);
+	gtk_widget_set_usize (draw_area, BOXSIZE*9, BOXSIZE*9);
+	gtk_widget_set_usize (next_draw_area, BOXSIZE*3, BOXSIZE);
+	gtk_box_pack_start (GTK_BOX (vbox), hbox, FALSE, FALSE, 0);
+	gtk_box_pack_start (GTK_BOX (hbox), frame, FALSE, FALSE, 0);
 	gtk_container_add (GTK_CONTAINER (frame), next_draw_area);
-	gtk_frame_set_label_align(GTK_FRAME(frame), 0.5, 0);
+	gtk_frame_set_label_align (GTK_FRAME (frame), 0, 0);
 	gtk_widget_show(frame);
 
 	frame = bold_frame (_("Score"));
+	gtk_frame_set_label_align (GTK_FRAME (frame), 0, 0);
 	scorelabel = gtk_label_new("");
 	gtk_container_add (GTK_CONTAINER (frame), scorelabel);
 
-	gtk_box_pack_end(GTK_BOX(hbox), frame, 0, 0, 0);
-	gtk_widget_show(scorelabel);
-	gtk_widget_show(frame);
+	gtk_box_pack_end (GTK_BOX (hbox), frame, 0, 0, 0);
+	gtk_widget_show (scorelabel);
+	gtk_widget_show (frame);
 
-	gtk_widget_show(hbox);
-	gtk_box_pack_start_defaults(GTK_BOX(vbox), draw_area);
+	gtk_widget_show (hbox);
+	gtk_box_pack_start_defaults (GTK_BOX (vbox), draw_area);
 
 	gtk_widget_set_events (draw_area, gtk_widget_get_events(draw_area) |GDK_BUTTON_PRESS_MASK);
 
