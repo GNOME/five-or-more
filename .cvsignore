@@ -1,0 +1,7 @@
+Makefile
+.deps
+_libs
+.libs
+glines
+glines.o
+Makefile.in

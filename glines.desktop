@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Glines
+Comment=Gnome color lines
+Comment[hu]=Color lines játék GNOME alá
+Exec=glines
+Icon=glines.xpm
+Terminal=0
+Type=Application
