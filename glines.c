@@ -1,4 +1,4 @@
-/*
+/* -*- mode:C; tab-width:8; c-basic-offset:8; indent-tabs-mode:true -*-
  * Color lines for gnome
  * (c) 1999 Free Software Foundation
  * Authors: Robert Szokovacs <szo@appaloosacorp.hu>
@@ -22,6 +22,7 @@
 #include <gdk-pixbuf/gdk-pixbuf.h>
 
 #include <libgnomeui/gnome-window-icon.h>
+#include <gconf/gconf-client.h>
 
 #include "glines.h"
 
@@ -35,11 +36,14 @@ GdkPixmap *box_pixmap = NULL;
 GdkPixmap *ball_pixmap = NULL;
 GdkBitmap *box_mask = NULL;
 GdkBitmap *ball_mask = NULL;
+
+GtkWidget *fast_moves_toggle_button = NULL;
+
 int active = -1;
 int target = -1;
 int inmove = 0;
 int score = 0;
-int ask_me = 0;
+
 int move_timeout = 100;
 int preview[3];
 int response;
@@ -105,6 +109,22 @@ help_cb (GtkWidget * widget, gpointer data)
 
   gnome_help_display (NULL, &help_entry);
 #endif
+}
+
+GtkWidget *
+bold_frame (gchar * title)
+{
+	gchar *markup;
+	GtkWidget * frame;
+	
+	markup = g_strdup_printf ("<span weight=\"bold\">%s</span>", title);
+	frame = gtk_frame_new (markup);
+	g_free (markup);
+	gtk_frame_set_shadow_type (GTK_FRAME (frame), GTK_SHADOW_NONE);
+	gtk_label_set_use_markup (GTK_LABEL (gtk_frame_get_label_widget(GTK_FRAME(frame))), TRUE);
+	gtk_misc_set_alignment (GTK_MISC (gtk_frame_get_label_widget(GTK_FRAME(frame))), 0, 0.5);
+  
+	return frame;
 }
 
 void
@@ -807,46 +827,19 @@ load_theme ()
 }
 
 static void
-glines_cancel (GtkWidget *widget, void *data)
-{
-	gtk_widget_destroy (pref_dialog);
-	pref_dialog = 0;
-}
-
-static void 
-load_theme_cb(void)
-{
-  gnome_config_set_string ("/glines/Table/BallTheme",
-                                     ball_filename);
-  gnome_config_set_string ("/glines/Table/BoxTheme",
-                                     box_filename);
-  gnome_config_set_int ("/glines/Prefs/AskMe",
-                                     ask_me);
-  gnome_config_set_int ("/glines/Prefs/MoveTimeout",
-                                     move_timeout);
-  gnome_config_sync();
-
-  load_theme();
-  draw_all_balls(draw_area, -1);
-  draw_preview();
-  glines_cancel(0,0);
-}
-
-
-static void
 set_selection (GtkWidget *widget, char *data)
 {
-	if(ball_filename)
-		g_free(ball_filename);
-	ball_filename = g_strdup(data);
+	gconf_client_set_string (gconf_client_get_default (),
+				 "/apps/glines/table/ball_theme",
+				 data, NULL);
 }
 
 static void
 set_selection1 (GtkWidget *widget, char *data)
 {
-        if(box_filename)
-		g_free(box_filename);
-	box_filename = g_strdup(data);
+	gconf_client_set_string (gconf_client_get_default (),
+				 "/apps/glines/table/box_theme",
+				 data, NULL);
 }
 
 static void
@@ -861,7 +854,7 @@ fill_menu (GtkWidget *menu, char * mtype, gboolean bg)
 	struct dirent *e;
 	char *dname = gnome_program_locate_file (NULL, GNOME_FILE_DOMAIN_APP_PIXMAP, ("glines"), FALSE, NULL);
 	DIR *dir;
-        int itemno = 0;
+	int itemno = 0;
 	
 	dir = opendir (dname);
 
@@ -881,199 +874,175 @@ fill_menu (GtkWidget *menu, char * mtype, gboolean bg)
 		gtk_widget_show (GTK_WIDGET(item));
 		gtk_menu_shell_append (GTK_MENU_SHELL(menu), GTK_WIDGET(item));
 		if(bg)
-		g_signal_connect (G_OBJECT(item), "activate",
-				  G_CALLBACK (set_selection1), s);
+			g_signal_connect (G_OBJECT(item), "activate",
+					  G_CALLBACK (set_selection1), s);
 		else
-		g_signal_connect (G_OBJECT(item), "activate",
-				  G_CALLBACK (set_selection), s);
+			g_signal_connect (G_OBJECT(item), "activate",
+					  G_CALLBACK (set_selection), s);
 		g_signal_connect (G_OBJECT(item), "destroy",
 				  G_CALLBACK (free_str), s);
 
-	        if (bg){
-	        if (!strcmp(box_filename, s))
-		  gtk_menu_set_active(GTK_MENU(menu), itemno);
+		if (bg){
+			if (!strcmp(box_filename, s))
+				gtk_menu_set_active(GTK_MENU(menu), itemno);
 		}
-	        else {
-	        if (!strcmp(ball_filename, s))
-		  gtk_menu_set_active(GTK_MENU(menu), itemno);
+		else {
+			if (!strcmp(ball_filename, s))
+				gtk_menu_set_active(GTK_MENU(menu), itemno);
 		}
 			  
-	        itemno++;
+		itemno++;
 	}
 	closedir (dir);
 }
 
 static void
-set_selection_def (GtkWidget *widget, gpointer *data)
+set_fast_moves_callback (GtkWidget *widget, gpointer *data)
 {
-  ask_me = GTK_TOGGLE_BUTTON (widget)->active;
+	gboolean is_on = gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (widget));
+	gint timeout = is_on ? 10 : 100;
+	gconf_client_set_int (gconf_client_get_default (),
+			      "/apps/glines/preferences/move_timeout",
+			      timeout, NULL);
 }
 
 static void
-set_fast_moves (GtkWidget *widget, gpointer *data)
+pref_dialog_response (GtkDialog *dialog, gint response, gpointer data)
 {
- 	move_timeout = GTK_TOGGLE_BUTTON (widget)->active ? 10 : 100;
+	switch (response)
+		{
+		case GTK_RESPONSE_HELP:
+			help_cb (NULL, NULL);
+			break;
+		case GTK_RESPONSE_CLOSE:
+		default:
+			gtk_widget_hide (GTK_WIDGET (dialog));
+			break;
+		}      
 }
 
 game_props_callback (GtkWidget *widget, void *data)
 {
-	GtkWidget *menu1, *omenu1, *menu, *omenu, *l, *hb, *hb1, *f, *fv, *cb;
+	GtkWidget *menu1, *omenu1, *menu, *omenu, *l, *hb, *hb1, *frame, *fv, *cb;
 	GtkWidget *button;
+	GtkWidget *space_label;
+	GtkWidget *table;
 
-	if (pref_dialog)
-		return;
-	
-	pref_dialog = gtk_dialog_new_with_buttons (_("Preferences"),
-						   GTK_WINDOW (app),
-						   GTK_DIALOG_DESTROY_WITH_PARENT,
-						   GTK_STOCK_CANCEL,
-						   GTK_RESPONSE_CANCEL,
-						   GTK_STOCK_OK,
-						   GTK_RESPONSE_OK,
-						   GTK_STOCK_HELP,
-						   GTK_RESPONSE_HELP,
-						   NULL);
+	if (! pref_dialog)
+		{
+			pref_dialog = gtk_dialog_new_with_buttons (_("Glines Preferences"),
+								   GTK_WINDOW (app),
+								   GTK_DIALOG_DESTROY_WITH_PARENT,
+								   GTK_STOCK_CLOSE,
+								   GTK_RESPONSE_CLOSE,
+								   NULL);
 			
-	g_signal_connect (G_OBJECT(pref_dialog), "delete_event",
-			  G_CALLBACK (glines_cancel), NULL);
+			g_signal_connect (G_OBJECT(pref_dialog), "response",
+					  G_CALLBACK (pref_dialog_response), NULL);
+			g_signal_connect (G_OBJECT (pref_dialog), "delete_event",
+					  G_CALLBACK (gtk_widget_hide), NULL);
 
-	omenu = gtk_option_menu_new ();
-	menu = gtk_menu_new ();
-	fill_menu (menu,".png",FALSE);
-	gtk_widget_show (omenu);
-	gtk_option_menu_set_menu (GTK_OPTION_MENU(omenu), menu);
+			frame = bold_frame (_("Themes"));
+			gtk_container_set_border_width (GTK_CONTAINER (frame), 12);
+			table = gtk_table_new (2, 2, FALSE);
+			gtk_container_set_border_width (GTK_CONTAINER (table), 0);
+			gtk_table_set_row_spacings (GTK_TABLE (table), 6);
+			gtk_table_set_col_spacings (GTK_TABLE (table), 6);
 
-	omenu1 = gtk_option_menu_new ();
-	menu1 = gtk_menu_new ();
-	fill_menu (menu1,".xpm",TRUE);
-	gtk_option_menu_set_menu (GTK_OPTION_MENU(omenu1), menu1);
-
-	f = gtk_frame_new (_ ("Theme"));
-	gtk_container_set_border_width (GTK_CONTAINER (f), 5);
-
-	hb = gtk_hbox_new (FALSE, FALSE);
-	
-	l = gtk_label_new (_("Select theme:"));
+			l = gtk_label_new (_("Ball image"));
+			gtk_misc_set_alignment (GTK_MISC (l), 0, 0.5);
+			gtk_table_attach_defaults (GTK_TABLE (table), l, 0, 1, 0, 1);
 	    
-	gtk_box_pack_start_defaults (GTK_BOX(hb), l);
-	gtk_container_add (GTK_CONTAINER(hb), omenu);
+			omenu = gtk_option_menu_new ();
+			menu = gtk_menu_new ();
+			fill_menu (menu, ".png", FALSE);
+			gtk_option_menu_set_menu (GTK_OPTION_MENU (omenu), menu);
+			gtk_table_attach_defaults (GTK_TABLE (table), omenu, 1, 2, 0, 1);
 
-	fv = gtk_vbox_new (0, 5);
-	gtk_container_set_border_width (GTK_CONTAINER (fv), 5);
-	
-	gtk_box_pack_start_defaults (GTK_BOX(fv), hb);
-	hb1 = gtk_hbox_new (FALSE, FALSE);
-	gtk_widget_show (hb1);
 
-	l = gtk_label_new (_("Select background:"));
+			l = gtk_label_new (_("Background image"));
+			gtk_misc_set_alignment (GTK_MISC (l), 0, 0.5);
+			gtk_table_attach_defaults (GTK_TABLE (table), l, 0, 1, 1, 2);
 	    
-	gtk_box_pack_start_defaults (GTK_BOX(hb1), l);
-	gtk_container_add (GTK_CONTAINER(hb1), omenu1);
+			omenu1 = gtk_option_menu_new ();
+			menu1 = gtk_menu_new ();
+			fill_menu (menu1, ".xpm", TRUE);
+			gtk_option_menu_set_menu (GTK_OPTION_MENU (omenu1), menu1);
+			gtk_table_attach_defaults (GTK_TABLE (table), omenu1, 1, 2, 1, 2);
 
+			hb = gtk_hbox_new (FALSE, FALSE);
+			gtk_container_set_border_width (GTK_CONTAINER (hb), 6);
 
-	gtk_container_add (GTK_CONTAINER(fv), hb1);
+			fv = gtk_vbox_new (FALSE, FALSE);
+			gtk_box_set_spacing (GTK_BOX (fv), 6);
+			gtk_container_add (GTK_CONTAINER(frame), hb);
+			space_label = gtk_label_new ("    ");
+			gtk_box_pack_start (GTK_BOX(hb), space_label, FALSE, FALSE, 0);
+			gtk_box_pack_start (GTK_BOX(hb), table, FALSE, FALSE, 0);
+			gtk_box_pack_start (GTK_BOX(GTK_DIALOG(pref_dialog)->vbox), frame, 
+					    FALSE, FALSE, 0);
 
-	cb = gtk_check_button_new_with_label ( _("Fast moves") );
-	if (move_timeout == 10) {
-	        gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (cb), TRUE);
-	}
-	g_signal_connect (G_OBJECT(cb), "clicked", 
-			  G_CALLBACK (set_fast_moves), NULL);
+			frame = bold_frame (_("General"));
+			gtk_container_set_border_width (GTK_CONTAINER (frame), 12);
 
-	gtk_container_add (GTK_CONTAINER(fv), cb);
+			hb = gtk_hbox_new (FALSE, FALSE);
+			gtk_container_set_border_width (GTK_CONTAINER (hb), 6);
 
-	cb = gtk_check_button_new_with_label ( _("Ask confirmation when quitting") );
-	if (ask_me) 
-	 {
-	   gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (cb),
-	                                   TRUE);
-	 }
-        g_signal_connect (G_OBJECT(cb), "clicked", 
-			  G_CALLBACK (set_selection_def), NULL);
+			fv = gtk_vbox_new (FALSE, FALSE);
+			gtk_box_set_spacing (GTK_BOX (fv), 6);
+			gtk_container_add (GTK_CONTAINER(frame), hb);
+			space_label = gtk_label_new ("    ");
+			gtk_box_pack_start (GTK_BOX(hb), space_label, FALSE, FALSE, 0);
+			gtk_box_pack_start (GTK_BOX(hb), fv, FALSE, FALSE, 0);
 
-	gtk_container_add (GTK_CONTAINER(fv), cb);
+			fast_moves_toggle_button = 
+				gtk_check_button_new_with_label ( _("Use fast moves") );
+			if (move_timeout == 10) 
+				{
+					gtk_toggle_button_set_active 
+						(GTK_TOGGLE_BUTTON (fast_moves_toggle_button),
+						 TRUE);
+				}
+			g_signal_connect (G_OBJECT(fast_moves_toggle_button), "clicked", 
+					  G_CALLBACK (set_fast_moves_callback), NULL);
 
-	gtk_box_pack_start_defaults (GTK_BOX(GTK_DIALOG(pref_dialog)->vbox), f);
-	gtk_container_add (GTK_CONTAINER (f), fv);
-	
-        gtk_widget_show_all (pref_dialog);
-	response = gtk_dialog_run (GTK_DIALOG (pref_dialog));
-	
-	switch (response) {
-	case GTK_RESPONSE_OK:
-		load_theme_cb ();
-		break;
-	case GTK_RESPONSE_CANCEL:
-		glines_cancel (NULL, NULL);
-		break;
-	case GTK_RESPONSE_HELP:
-		help_cb (NULL, NULL);
-		break;
-	default:
-		break;
-	};
-	
-	
+			gtk_container_add (GTK_CONTAINER(fv), fast_moves_toggle_button);
+
+			gtk_box_pack_start (GTK_BOX(GTK_DIALOG(pref_dialog)->vbox), frame, 
+					    FALSE, FALSE, 0);
+		}
+	if (pref_dialog && !GTK_WIDGET_VISIBLE (pref_dialog))
+		{
+			gtk_widget_show_all (GTK_WINDOW (pref_dialog));
+			gtk_window_present (GTK_WINDOW (pref_dialog));
+		}
+
 }
 
 static int
 game_quit_callback (GtkWidget *widget, void *data)
 {
-	GtkWidget *box;
-
-	if (ask_me) {
-
-	 box = gtk_message_dialog_new (GTK_WINDOW (app),
-			  GTK_DIALOG_MODAL | GTK_DIALOG_DESTROY_WITH_PARENT,
-			  GTK_MESSAGE_QUESTION,
-			  GTK_BUTTONS_NONE,
-			  (_("Are you sure you want to quit Glines?")));
-
-	 gtk_dialog_add_buttons (GTK_DIALOG (box),
-				 GTK_STOCK_CANCEL, GTK_RESPONSE_REJECT,
-				 GTK_STOCK_QUIT, GTK_RESPONSE_ACCEPT,
-				 NULL);
-					
-	 gtk_widget_show (box);
-	 response = gtk_dialog_run (GTK_DIALOG (box));
-	 
-	 if (response == GTK_RESPONSE_ACCEPT)
-	 {
-		 gtk_widget_destroy (app);
-		 gtk_main_quit ();
-	 }
-	 else
-	 {
-		 gtk_widget_hide (box);
-		 return TRUE;
-	 }
-	}
 	gtk_main_quit ();
 	return FALSE;
-
 }
 
 static int
 save_state (GnomeClient *client,
-		gint phase,
-		GnomeSaveStyle save_style,
-		gint shutdown,
-		GnomeInteractStyle interact_style,
-		gint fast,
-		gpointer client_data)
+	    gint phase,
+	    GnomeSaveStyle save_style,
+	    gint shutdown,
+	    GnomeInteractStyle interact_style,
+	    gint fast,
+	    gpointer client_data)
 {
 	const gchar *prefix= gnome_client_get_config_prefix (client);
 	gchar *argv[]= { "rm", "-r", NULL };
 	gchar *buf;
 	int i;
 
-	gnome_config_push_prefix (prefix);
-	gnome_config_set_int ("Glines/Score", score);
+	gconf_client_set_int (gconf_client_get_default (),
+                              "/apps/glines/saved/score", score, NULL);
 
-	gnome_config_set_string ("Glines/BallTheme", ball_filename);
-
-	gnome_config_set_string ("Glines/BoxTheme", box_filename);
-	
 	buf = g_malloc(FIELDSIZE * FIELDSIZE * 4 + 1);
 	for(i = 0; i < FIELDSIZE * FIELDSIZE; i++)
 	{
@@ -1083,31 +1052,43 @@ save_state (GnomeClient *client,
 		buf[i*4 + 3] = field[i].active + 'h';
 	}
 	buf[FIELDSIZE * FIELDSIZE * 4] = '\0';
-	gnome_config_set_string ("Glines/Field", buf);
+	gconf_client_set_string (gconf_client_get_default (),
+                                 "/apps/glines/saved/field", buf, NULL);
 	for(i = 0; i < 3; i++)
 		buf[i] = preview[i] + 'h';
 	buf[3] = '\0';
-	gnome_config_set_string ("Glines/Preview", buf);
+	gconf_client_set_string (gconf_client_get_default (),
+                                 "/apps/glines/saved/preview", buf, NULL);
 	g_free(buf);
 
-	gnome_config_pop_prefix ();
-	gnome_config_sync();
-
-/*	argv[2]= gnome_config_get_real_path (prefix);
-	gnome_client_set_discard_command (client, 3, argv);
-*/
+	/*	argv[2]= gnome_config_get_real_path (prefix);
+		gnome_client_set_discard_command (client, 3, argv);
+	*/
 	return TRUE;
 }
 
 static void
 load_properties (void)
 {
-  ball_filename  = gnome_config_get_string ("/glines/Table/BallTheme=pulse.png");
-  box_filename  = gnome_config_get_string ("/glines/Table/BoxTheme=gray.xpm");
-  ask_me = gnome_config_get_int ("/glines/Prefs/AskMe=0");
-  move_timeout = gnome_config_get_int ("/glines/Prefs/MoveTimeout=100");
+	ball_filename = gconf_client_get_string (gconf_client_get_default (),
+						 "/apps/glines/table/ball_theme",
+						 NULL);
+	if (! ball_filename)
+		ball_filename = g_strdup ("pulse.png");
 
-  load_theme();
+	box_filename = gconf_client_get_string (gconf_client_get_default (),
+						"/apps/glines/table/box_theme", 
+						NULL);
+	if (! box_filename)
+		box_filename = g_strdup ("gray.xpm");
+  
+	move_timeout = gconf_client_get_int (gconf_client_get_default (),
+					     "/apps/glines/preferences/move_timeout",
+					     NULL);
+	if (move_timeout <= 0)
+		move_timeout = 100;
+
+	load_theme();
 }
 
 
@@ -1117,9 +1098,11 @@ restart (void)
 	gchar *buf;
 	int i;
 
-	score = gnome_config_get_int_with_default ("Glines/Score", 0);
+	score = gconf_client_get_int (gconf_client_get_default (),
+                                      "/apps/glines/saved/score", NULL);
 
-	buf = gnome_config_get_string_with_default ("Glines/Field", NULL);
+	buf = gconf_client_get_string (gconf_client_get_default (),
+                                       "/apps/glines/saved/field", NULL);
 	if(buf)
 	{
 		for(i = 0; i < FIELDSIZE * FIELDSIZE; i++)
@@ -1131,7 +1114,8 @@ restart (void)
 		}
 		g_free(buf);
 	}
-	buf = gnome_config_get_string_with_default ("Glines/Preview", NULL);
+	buf = gconf_client_get_string (gconf_client_get_default (),
+                                       "/apps/glines/saved/preview", NULL);
 	if(buf)
 	{
 		for(i = 0; i < 3; i++)
@@ -1193,7 +1177,98 @@ GnomeUIInfo mainmenu[] = {
  (strcmp (gnome_client_get_id (client), \
   gnome_client_get_previous_id (client)) == 0))
 #endif /* GNOME_CLIENT_RESTARTED */
-   
+
+static void
+ball_theme_changed_cb (GConfClient *client,
+                       guint cnxn_id,
+                       GConfEntry *entry,
+                       gpointer user_data)
+{
+	gchar *theme_tmp = NULL;
+
+	theme_tmp = gconf_client_get_string (gconf_client_get_default (),
+					     "/apps/glines/table/ball_theme", NULL);
+	if (strcmp (theme_tmp, ball_filename) != 0)
+		{
+			g_free (ball_filename);
+			ball_filename = theme_tmp;
+		} 
+	else
+		g_free (theme_tmp);
+  
+	load_theme ();
+	draw_all_balls (draw_area, -1);
+	draw_preview ();
+
+	//FIXME apply in the prefs dialog GUI
+}
+
+static void
+box_theme_changed_cb (GConfClient *client,
+                      guint cnxn_id,
+                      GConfEntry *entry,
+                      gpointer user_data)
+{
+	gchar *theme_tmp = NULL;
+
+	theme_tmp = gconf_client_get_string (gconf_client_get_default (),
+					     "/apps/glines/table/box_theme", NULL);
+	if (strcmp (theme_tmp, box_filename) != 0)
+		{
+			g_free (box_filename);
+			box_filename = theme_tmp;
+		} 
+	else 
+		g_free (theme_tmp);
+  
+	load_theme ();
+	draw_all_balls (draw_area, -1);
+	draw_preview ();
+
+	//FIXME apply in the prefs dialog GUI
+}
+
+static void
+move_timeout_changed_cb (GConfClient *client,
+			 guint cnxn_id,
+			 GConfEntry *entry,
+			 gpointer user_data)
+{
+	gint timeout_tmp;
+
+	timeout_tmp = gconf_client_get_int (gconf_client_get_default (),
+					    "/apps/glines/preferences/move_timeout", NULL);
+	if ((timeout_tmp != move_timeout)
+	    && (timeout_tmp > 0)
+	    && (timeout_tmp <= 1000))
+		move_timeout = timeout_tmp;
+  
+	//FIXME apply in the prefs dialog GUI
+}
+
+static void
+init_config (void)
+{
+	GConfClient *conf_client = gconf_client_get_default ();
+
+	gconf_client_add_dir (conf_client,
+			      "/apps/glines",
+			      GCONF_CLIENT_PRELOAD_ONELEVEL,
+			      NULL);
+	gconf_client_notify_add (conf_client,
+				 "/apps/glines/table/ball_theme",
+				 ball_theme_changed_cb,
+				 NULL, NULL, NULL);
+	gconf_client_notify_add (conf_client,
+				 "/apps/glines/table/box_theme",
+				 box_theme_changed_cb,
+				 NULL, NULL, NULL);
+	gconf_client_notify_add (conf_client,
+				 "/apps/glines/preferences/move_timeout",
+				 move_timeout_changed_cb,
+				 NULL, NULL, NULL);
+}
+
 int
 main (int argc, char *argv [])
 {
@@ -1210,30 +1285,27 @@ main (int argc, char *argv [])
 	textdomain (GETTEXT_PACKAGE);
 
 	gnome_program_init ("glines", VERSION,
-			      LIBGNOMEUI_MODULE,
-			      argc, argv,
-			      GNOME_PARAM_POPT_TABLE, NULL,
-			      GNOME_PARAM_APP_DATADIR, DATADIR, NULL);
+			    LIBGNOMEUI_MODULE,
+			    argc, argv,
+			    GNOME_PARAM_POPT_TABLE, NULL,
+			    GNOME_PARAM_APP_DATADIR, DATADIR, NULL);
+
+        gconf_init (argc, argv, NULL);
+        gconf_client_add_dir (gconf_client_get_default (), "/apps/glines",
+                              GCONF_CLIENT_PRELOAD_NONE, NULL);
+
 	gnome_window_icon_set_default_from_file (GNOME_ICONDIR"/glines.png");
 	client = gnome_master_client ();
 
 	g_signal_connect (G_OBJECT (client), "save_yourself",
-	                    G_CALLBACK (save_state), argv[0]);
+			  G_CALLBACK (save_state), argv[0]);
 	g_signal_connect (G_OBJECT (client), "die",
-                            G_CALLBACK (client_die), NULL);
+			  G_CALLBACK (client_die), NULL);
 
 	if (GNOME_CLIENT_RESTARTED (client))
-          {
-	    gnome_config_push_prefix(gnome_client_get_config_prefix (client));
-	    
-	    restart();  
-	    
-	    gnome_config_pop_prefix ();
-          }
+		restart();  
 	else
-	{
 		reset_game();
-	}
 
 	app = gnome_app_new("glines", _("Glines"));
 
@@ -1256,7 +1328,7 @@ main (int argc, char *argv [])
 	gnome_app_set_contents (GNOME_APP (app), vbox);
 
 	hbox = gtk_hbox_new(TRUE, 0);
-	frame = gtk_frame_new(_("Next Balls"));
+	frame = bold_frame (_("Next Balls"));
 
 	draw_area = gtk_drawing_area_new();
 	next_draw_area = gtk_drawing_area_new();
@@ -1269,9 +1341,10 @@ main (int argc, char *argv [])
 	gtk_frame_set_label_align(GTK_FRAME(frame), 0.5, 0);
 	gtk_widget_show(frame);
 
-	frame = gtk_frame_new(_("Score"));
+	frame = bold_frame (_("Score"));
 	scorelabel = gtk_label_new("");
 	gtk_container_add (GTK_CONTAINER (frame), scorelabel);
+
 	gtk_box_pack_end(GTK_BOX(hbox), frame, 0, 0, 0);
 	gtk_widget_show(scorelabel);
 	gtk_widget_show(frame);
@@ -1283,6 +1356,7 @@ main (int argc, char *argv [])
 
 	gtk_widget_realize(draw_area);
 
+        init_config ();
 	load_properties();
 
 	g_signal_connect (G_OBJECT(draw_area), "button_press_event",
@@ -1318,4 +1392,3 @@ main (int argc, char *argv [])
 
 	return(0);
 }
-

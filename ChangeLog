@@ -1,3 +1,10 @@
+2003-06-06  William Jon McCann  <mccann@jhu.edu>
+
+	* Makefile.am (schema_in_files): 
+	* glines.schemas.in: Added gconf schemas.
+
+	* glines.c: Glines now uses gconf.  HIG fixes for pref dialog.
+
 2003-05-31  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* Makefile.am (install-data-local): Implement setgid modifications
