@@ -32,6 +32,8 @@ void draw_field(GtkWidget *widget, gint redraw);
 
 static gint expose_event (GtkWidget *widget, GdkEventExpose *event, gpointer gp);
 
+void set_inmove(int i);
+
 void init_preview(void);
 
 void draw_preview(void);

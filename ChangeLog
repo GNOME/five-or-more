@@ -1,3 +1,8 @@
+2000-12-16  Ross Arnold  <rossa@inet.net.nz>
+
+	* glines.c, glines.h: Added a preference to optionally increase 
+		ball movement speed. 
+
 2000-10-09  Szabolcs BAN <shooby@gnome.hu>
 
 	* Corrected some spelling mistakes in user-guide.sgml. Thanks to Andras Timar (timar_a@freemail.hu)

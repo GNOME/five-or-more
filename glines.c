@@ -42,6 +42,7 @@ int target = -1;
 int inmove = 0;
 int score = 0;
 int ask_me = 0;
+int move_timeout = 100;
 int preview[3];
 char * ball_filename;
 char * box_filename;
@@ -99,6 +100,20 @@ help_cb (GtkWidget * widget, gpointer data)
   gnome_help_display (NULL, &help_entry);
 }
 
+void
+set_inmove(int i)
+{
+ 	static int timeou = -1;
+ 	int ms;
+ 	
+ 	if (inmove != i) {
+ 	        inmove = i;
+ 	        ms = (inmove?move_timeout:100);
+ 	        if(timeou != -1) gtk_timeout_remove(timeou);
+ 	        timeou = gtk_timeout_add(ms, animate, (gpointer)draw_area);
+ 	}
+}
+
 
 void
 reset_game(void)
@@ -120,7 +135,6 @@ reset_game(void)
 void
 start_game(void)
 {
-	static int timeou = -1;
 	char string[20];
 
 	draw_field(draw_area,0);
@@ -129,13 +143,13 @@ start_game(void)
 	draw_preview();	
 	active = -1;
 	target = -1;
-	inmove = 0;
+	inmove = -1;
 	snprintf(string, 19, "%d", score);
 	gtk_label_set_text(GTK_LABEL(scorelabel), string);
-	if(timeou != -1) gtk_timeout_remove(timeou);
-	timeou = gtk_timeout_add(100, animate, (gpointer)draw_area);
+	set_inmove(0);
 }
 
+ 
 void
 reset_pathsearch(void)
 {
@@ -376,7 +390,7 @@ button_press_event (GtkWidget *widget, GdkEvent *event)
 			{
 				/* We found a route to the new position */
 
-				inmove = 1;
+				set_inmove(1);
 			}
 			else
 			{
@@ -613,7 +627,7 @@ animate(gpointer gp)
 			newactive = active + 9;
 		else
 		{
-			inmove = 0;
+			set_inmove (0);
 		}
 		draw_box(widget, backpixmap, x, y, 1);
 		x = newactive%9;
@@ -626,7 +640,7 @@ animate(gpointer gp)
 		if(newactive == target)
 		{
 			target = -1;
-			inmove = 0;
+			set_inmove (0);
 			active = -1;
 			field[newactive].phase = 0;
 			field[newactive].active = 0;
@@ -724,6 +738,8 @@ load_theme_cb()
                                      box_filename);
   gnome_config_set_int ("/glines/Prefs/AskMe",
                                      ask_me);
+  gnome_config_set_int ("/glines/Prefs/MoveTimeout",
+                                     move_timeout);
   gnome_config_sync();
 
   load_theme();
@@ -815,6 +831,12 @@ set_selection_def (GtkWidget *widget, gpointer *data)
   ask_me = GTK_TOGGLE_BUTTON (widget)->active;
 }
 
+static void
+set_fast_moves (GtkWidget *widget, gpointer *data)
+{
+ 	move_timeout = GTK_TOGGLE_BUTTON (widget)->active ? 10 : 100;
+}
+
 game_props_callback (GtkWidget *widget, void *data)
 {
 	GtkWidget *menu1, *omenu1, *menu, *omenu, *l, *hb, *hb1, *f, *fv, *cb;
@@ -872,6 +894,15 @@ game_props_callback (GtkWidget *widget, void *data)
 
 
 	gtk_container_add (GTK_CONTAINER(fv), hb1);
+
+	cb = gtk_check_button_new_with_label ( _("Fast moves") );
+	if (move_timeout == 10) {
+	        gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (cb), TRUE);
+	}
+	gtk_signal_connect (GTK_OBJECT(cb), "clicked", (GtkSignalFunc)set_fast_moves, NULL);
+        gtk_widget_show (cb);
+
+	gtk_container_add (GTK_CONTAINER(fv), cb);
 
 	cb = gtk_check_button_new_with_label ( _("Ask confirmation when quitting") );
 	if (ask_me) 
@@ -988,6 +1019,7 @@ load_properties ()
 
   ask_me = gnome_config_get_int ("/glines/Prefs/AskMe=0");
 
+  move_timeout = gnome_config_get_int ("/glines/Prefs/MoveTimeout=100");
 
   load_theme();
 }
