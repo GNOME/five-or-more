@@ -827,6 +827,7 @@ game_props_callback (GtkWidget *widget, void *data)
 			GNOME_STOCK_BUTTON_OK, GNOME_STOCK_BUTTON_CANCEL,
 			GNOME_STOCK_BUTTON_HELP,
 			NULL);
+        gnome_dialog_set_default(GNOME_DIALOG (pref_dialog), 0);
 	gnome_dialog_set_parent (GNOME_DIALOG (pref_dialog), GTK_WINDOW (app));
 	gtk_signal_connect (GTK_OBJECT(pref_dialog), "delete_event",
 			    GTK_SIGNAL_FUNC (glines_cancel), NULL);
@@ -979,7 +980,7 @@ load_properties ()
 {
   char buf[256];
 
-  g_snprintf (buf, 256, "/glines/Table/BallTheme=ball.png");
+  g_snprintf (buf, 256, "/glines/Table/BallTheme=pulse.png");
   ball_filename  = gnome_config_get_string (buf);
 
   g_snprintf (buf, 256, "/glines/Table/BoxTheme=gray.xpm");
