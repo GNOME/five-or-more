@@ -62,7 +62,7 @@ GdkPixmap *surface = NULL;
 
 GtkWidget *fast_moves_toggle_button = NULL;
 
-GList * theme_list = NULL;
+GamesFileList * theme_file_list = NULL;
 
 int active = -1;
 int target = -1;
@@ -903,32 +903,31 @@ load_theme ()
 static void
 set_selection (GtkWidget *widget, char *data)
 {
-	GList * entry;
+	gchar *entry;
 
-	entry = g_list_nth (theme_list,
+	entry = games_file_list_get_nth (theme_file_list,
 			    gtk_combo_box_get_active (GTK_COMBO_BOX (widget)));
 	gconf_client_set_string (conf_client,
 				 KEY_BALL_THEME,
-				 entry->data, NULL);
+				 entry, NULL);
 }
 
 static GtkWidget * 
 fill_menu (void)
 {
-	/* FIXME: this abuses the knowledge that a GamesFileList is really
-	 * a GList, but this is going to change. */
-
 	gchar *dname = gnome_program_locate_file (NULL, GNOME_FILE_DOMAIN_APP_PIXMAP,
 						  ("glines"), FALSE, NULL);
 
-	games_file_list_free ((GamesFileList *)theme_list);
+	if (theme_file_list)
+		g_object_unref (theme_file_list);
 
-	theme_list = (GList *) games_file_list_new_images (dname, NULL);
+	theme_file_list = games_file_list_new_images (dname, NULL);
 	g_free (dname);
-	games_file_list_transform_basename ((GamesFileList *) theme_list);
-	theme_list = g_list_sort (theme_list, (GCompareFunc) g_utf8_collate);  
+	games_file_list_transform_basename (theme_file_list);
 
-	return games_file_list_create_widget ((GamesFileList *) theme_list, ball_filename);
+	return games_file_list_create_widget (theme_file_list, ball_filename,
+					      GAMES_FILE_LIST_REMOVE_EXTENSION |
+					      GAMES_FILE_LIST_REPLACE_UNDERSCORES);
 }
 
 static void

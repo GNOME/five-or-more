@@ -1,3 +1,9 @@
+2003-12-17  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* glines.c (fill_menu): Adapt to the new gobject API for
+	games_file_list. Removed any dependence on the internals of
+	games_file_list.
+
 2003-12-04  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* glines.c (fill_menu): Rework to use the new libgames-support API.
