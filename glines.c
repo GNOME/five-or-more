@@ -146,7 +146,7 @@ start_game(void)
 	active = -1;
 	target = -1;
 	inmove = -1;
-	snprintf(string, 19, "%d", score);
+	g_snprintf(string, 19, "%d", score);
 	gtk_label_set_text(GTK_LABEL(scorelabel), string);
 	set_inmove(0);
 }
@@ -611,7 +611,7 @@ check_goal(GtkWidget *widget, int num, int is_score)
 		{
 			char string[20];
 			score += addscore(count+1);
-			snprintf(string, 19, "%d", score);
+			g_snprintf(string, 19, "%d", score);
 			gtk_label_set_text(GTK_LABEL(scorelabel), string);
 		}
 

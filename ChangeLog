@@ -1,3 +1,8 @@
+2002-07-14  Ross Burton  <ross@burtonini.com>
+
+	* glines.c: Use g_snprintf() instead of snprintf() so that the
+	OSF/1 compiler is happy (fixes #87800).
+
 2002-06-19  Ross Burton  <ross@burtonini.com>
 
 	* glines.c (main): Use the correct icon filename for the window
