@@ -1,3 +1,14 @@
+2002-04-23  Bastien Nocera  <hadess@hadess.net>
+
+	* glines.c: (start_game), (draw_preview), (draw_all_balls),
+	(draw_box), (draw_ball), (deactivate), (preview_expose_event),
+	(field_expose_event), (kill_tagged), (animate), (load_theme_cb),
+	(main):
+	* glines.h: Remove the backing pixmaps,
+	Use gtk_widget_queue_draw_area() instead of gtk_widget_draw()
+	Move all drawing to the expose handler(s)
+	Patch by jorgen.viksell@telia.com (Jörgen Viksell)
+
 2002-04-15  Bastien Nocera  <hadess@hadess.net>
 
 	* ChangeLog:

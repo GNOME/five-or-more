@@ -20,15 +20,13 @@ typedef struct
 	int active;
 } field_props;
 
-void draw_box(GtkWidget *widget, GdkPixmap *bpm, int x, int y, int redraw);
+void draw_box(GtkWidget *widget, int x, int y);
 
-void draw_ball(GtkWidget *widget, GdkPixmap *bpm, int x, int y, int color, int phase, int redraw);
+void draw_ball(GtkWidget *widget, int x, int y);
 
 int find_route(void);
 
 static gint button_press_event (GtkWidget *widget, GdkEvent *event);
-
-void draw_field(GtkWidget *widget, gint redraw);
 
 static gint expose_event (GtkWidget *widget, GdkEventExpose *event, gpointer gp);
 
