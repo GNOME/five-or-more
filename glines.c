@@ -658,7 +658,7 @@ addscore (int num)
 	
 
 static int
-check_goal (GtkWidget *widget, int num, int is_score)
+check_goal (GtkWidget *widget, int num)
 {
 	int count = 0;
 	int subcount = 0;
@@ -760,14 +760,12 @@ check_goal (GtkWidget *widget, int num, int is_score)
 	
 	if (count >= 4)
 	{
+		char string[20];
+
 		kill_tagged (widget, count);
-		if (is_score)
-		{
-			char string[20];
-			score += addscore (count+1);
-			g_snprintf (string, 19, "%d", score);
-			gtk_label_set_text (GTK_LABEL (scorelabel), string);
-		}
+		score += addscore (count+1);
+		g_snprintf (string, 19, "%d", score);
+		gtk_label_set_text (GTK_LABEL (scorelabel), string);
 
 		subcount = 1;
 	}
@@ -817,14 +815,14 @@ animate (gpointer gp)
 			field[newactive].active = 0;
 			draw_box (widget, x, y);
 			reset_pathsearch ();
-			if (!check_goal (widget, newactive, 1))
+			if (!check_goal (widget, newactive))
 			{
 				for (x = 0; x < 3; x++)
 				{
 					int tmp = init_new_balls (1, x);
 					draw_box (widget, tmp % FIELDSIZE,
 						   tmp / FIELDSIZE);
-					check_goal (widget, tmp, 0);
+					check_goal (widget, tmp);
 					if (check_gameover () == -1)
 						return FALSE;
 				}

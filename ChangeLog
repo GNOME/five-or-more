@@ -1,5 +1,8 @@
 2004-01-09  Callum McKenzie  <callum@physics.otago.ac.nz>
 
+	* glines.c (check_goal): Make sure we don't miss "accidental"
+	completions. Fixes bug #130291.
+
 	* Makefile.am (pixmap_DATA): Added shapes.svg; a colour-blind
 	friendly theme.
 
