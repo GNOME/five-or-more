@@ -4,10 +4,6 @@
  * Authors: Robert Szokovacs <szo@appaloosacorp.hu>
  *          Szabolcs Ban <shooby@gnome.hu>
  */
-#define G_DISABLE_DEPRECATED
-#define GDK_DISABLE_DEPRECATED
-#define GTK_DISABLE_DEPRECATED
-#define GNOME_DISABLE_DEPRECATED
 
 #include <unistd.h>
 #include <stdio.h>

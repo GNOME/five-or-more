@@ -1,5 +1,11 @@
 2002-01-02  Josh Barrow  <drleary@mac.com>
 
+	* Makefile.am:
+	* glines.c:
+	Moved *_DISABLE_DEPRECATED to the Makefile.am
+
+2002-01-02  Josh Barrow  <drleary@mac.com>
+
 	* glines.c: (load_image), (draw_box), (draw_ball), (expose_event),
 	(game_maybe_quit), (game_about_callback), (load_theme_cb),
 	(fill_menu), (game_props_callback), (game_quit_callback),
