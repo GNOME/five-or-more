@@ -4,6 +4,13 @@
 	necessary includes (and convert some from "" -> <>). Inspired by
 	bug #172376 from Marco Colombo.
 
+	* glines.c:
+	* glines.h: Move non-externed variable declarations out of the
+	header.
+
+	* glines.c: Evil code to rearrange the main layout table when the
+	game size changes so that the preview doesn't get too big.
+
 2005-03-31  Richard Hoelscher  <rah@rahga.com>
 
 	* glines.c (fullscreen_callback): Leave setting of the fullscreen

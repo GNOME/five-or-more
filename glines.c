@@ -54,6 +54,26 @@
 #define MAXFIELDSIZE 30
 #define DEFAULT_GAME_SIZE MEDIUM
 
+enum {
+	UNSET = 0,
+	SMALL = 1,
+	MEDIUM,
+	LARGE,
+	MAX_SIZE,
+};
+
+/* Keep these in sync with the enum above. */
+const
+gint field_sizes[MAX_SIZE][4] = {{-1, -1, -1, -1}, /* This is a dummy entry. */
+                                 { 7,  7, 5, 3},   /* SMALL */
+                                 {9,  9, 7, 3},   /* MEDIUM */
+                                 {20, 15, 7, 7}};  /* LARGE */
+
+const
+gchar *scorenames[]  = {N_("Small"),
+                        N_("Medium"),
+                        N_("Large")};
+
 gint hfieldsize;
 gint vfieldsize;
 gint ncolors;
@@ -72,6 +92,12 @@ GtkWidget *menubar;
 GtkWidget *scoreitem;
 GtkAction *fullscreen_action;
 GtkAction *leavefullscreen_action;
+
+/* These keep track of what we put in the main table so we
+ * can reshuffle them when we change the field size. */
+GtkWidget *table;
+GtkWidget *top_pane;
+GtkWidget *bottom_pane;
 
 field_props field[MAXFIELDSIZE * MAXFIELDSIZE];
 
@@ -186,6 +212,29 @@ load_image (gchar *fname,
 		g_object_unref (*preimage);
 
 	*preimage = tmp_preimage;
+}
+
+/* The main table has to be layed out differently depending on the
+   size of the playing area we choose. Otherwise the preview window
+   gets too large. */
+static void relay_table (void)
+{
+	gint breakpt;
+	GValue value = { 0 };
+
+	breakpt = 100/(1 + vfieldsize);
+
+	g_value_init (&value, G_TYPE_INT);
+	g_value_set_int (&value, breakpt);
+
+	gtk_container_child_set_property (GTK_CONTAINER (table),
+					  bottom_pane,
+					  "top-attach",
+					  &value);
+	gtk_container_child_set_property (GTK_CONTAINER (table),
+					  top_pane,
+					  "bottom-attach",
+					  &value);
 }
 
 static void
@@ -1259,6 +1308,7 @@ size_changed_cb (GConfClient *client,
 
 	if (size_tmp != game_size) {
 		set_sizes (size_tmp);
+		relay_table ();
 		reset_game ();
 		start_game ();
 	}
@@ -1813,7 +1863,7 @@ int
 main (int argc, char *argv [])
 {
 	GtkWidget *label;
-	GtkWidget *vbox, *table, *hbox;
+	GtkWidget *vbox, *hbox;
 	GtkWidget *preview_hbox;
 	GnomeClient *client;
 	int i;
@@ -1867,12 +1917,13 @@ main (int argc, char *argv [])
 	create_menus ();
 	gtk_box_pack_start (GTK_BOX (vbox), menubar, FALSE, FALSE, 0);
 
- 	table = gtk_table_new (11, 1, TRUE);
+ 	table = gtk_table_new (100, 1, TRUE);
 	gtk_box_pack_start_defaults (GTK_BOX (vbox), table);
 
 	hbox = gtk_hbox_new(FALSE, 0);
 
-	gtk_table_attach_defaults (GTK_TABLE (table), hbox, 0, 1, 0, 1);
+	gtk_table_attach_defaults (GTK_TABLE (table), hbox, 0, 1, 0, 10);
+	top_pane = hbox;
 	label = gtk_label_new (g_strdup_printf ("<span weight=\"bold\">%s</span>", _("Next:")));
 	gtk_label_set_use_markup (GTK_LABEL (label), TRUE);
 	gtk_box_pack_start (GTK_BOX (hbox), label, FALSE, FALSE, 5);
@@ -1917,7 +1968,10 @@ main (int argc, char *argv [])
 	gridframe = games_grid_frame_new (hfieldsize, vfieldsize);
 	games_grid_frame_set_padding (GAMES_GRID_FRAME(gridframe), 1, 1);
 	gtk_container_add (GTK_CONTAINER (gridframe), draw_area);
-	gtk_table_attach_defaults (GTK_TABLE (table), gridframe, 0, 1, 1, 11);
+	gtk_table_attach_defaults (GTK_TABLE (table), gridframe, 0, 1, 10, 100);
+	bottom_pane = gridframe;
+
+	relay_table ();
 
 	gtk_widget_set_events (draw_area, gtk_widget_get_events(draw_area) |GDK_BUTTON_PRESS_MASK|GDK_KEY_PRESS_MASK);
 

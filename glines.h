@@ -3,26 +3,6 @@
 
 #define STEPSIZE 4
 
-enum {
-	UNSET = 0,
-	SMALL = 1,
-	MEDIUM,
-	LARGE,
-	MAX_SIZE,
-};
-
-/* Keep these in sync with the enum above. */
-const
-gint field_sizes[MAX_SIZE][4] = {{-1, -1, -1, -1}, /* This is a dummy entry. */
-                                 { 7,  7, 5, 3},   /* SMALL */
-                                 {9,  9, 7, 3},   /* MEDIUM */
-                                 {20, 15, 7, 7}};  /* LARGE */
-
-const
-gchar *scorenames[]  = {N_("Small"),
-                        N_("Medium"),
-                        N_("Large")};
-
 typedef struct
 {
 	int num;
