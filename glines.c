@@ -296,6 +296,7 @@ button_press_event (GtkWidget *widget, GdkEvent *event)
 	gtk_widget_get_pointer (widget, &x, &y);
 	fx = x / BOXSIZE;
 	fy = y / BOXSIZE;
+        gnome_appbar_set_status(GNOME_APPBAR(appbar), _(""));
 	if(field[fx + fy*9].color == 0)
 	{
 		/* Clicked on an empty field */
