@@ -1009,16 +1009,9 @@ save_state (GnomeClient *client,
 static void
 load_properties (void)
 {
-  char buf[256];
-
-  g_snprintf (buf, 256, "/glines/Table/BallTheme=pulse.png");
-  ball_filename  = gnome_config_get_string (buf);
-
-  g_snprintf (buf, 256, "/glines/Table/BoxTheme=gray.xpm");
-  box_filename  = gnome_config_get_string (buf);
-
+  ball_filename  = gnome_config_get_string ("/glines/Table/BallTheme=pulse.png");
+  box_filename  = gnome_config_get_string ("/glines/Table/BoxTheme=gray.xpm");
   ask_me = gnome_config_get_int ("/glines/Prefs/AskMe=0");
-
   move_timeout = gnome_config_get_int ("/glines/Prefs/MoveTimeout=100");
 
   load_theme();
