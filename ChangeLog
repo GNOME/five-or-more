@@ -1,3 +1,7 @@
+2003-06-09  William Jon McCann  <mccann@jhu.edu>
+
+	* glines.c: Removed separator from dialogs as in HIG.
+
 2003-06-08  William Jon McCann  <mccann@jhu.edu>
 
 	* dots.png: Replaced with snazzier images.

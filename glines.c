@@ -89,6 +89,7 @@ load_image (gchar *fname,
 						       GTK_BUTTONS_OK,
 						       message,
 						       NULL);
+		gtk_dialog_set_has_separator (GTK_DIALOG (w), FALSE);
 		gtk_dialog_run (GTK_DIALOG (w));	
 		g_free (message);
 		exit (1);
@@ -1036,7 +1037,7 @@ game_props_callback (GtkWidget *widget, void *data)
 								   GTK_STOCK_CLOSE,
 								   GTK_RESPONSE_CLOSE,
 								   NULL);
-			
+			gtk_dialog_set_has_separator (GTK_DIALOG (pref_dialog), FALSE);
 			g_signal_connect (G_OBJECT(pref_dialog), "response",
 					  G_CALLBACK (pref_dialog_response), NULL);
 			g_signal_connect (G_OBJECT (pref_dialog), "delete_event",
