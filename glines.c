@@ -1163,8 +1163,11 @@ main (int argc, char *argv [])
 	bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
 	textdomain (GETTEXT_PACKAGE);
 
-	gnome_program_init ("glines", VERSION, LIBGNOMEUI_MODULE,
-			    argc, argv, GNOME_PARAM_POPT_TABLE, NULL, NULL);
+	gnome_program_init ("glines", VERSION,
+			      LIBGNOMEUI_MODULE,
+			      argc, argv,
+			      GNOME_PARAM_POPT_TABLE, NULL,
+			      GNOME_PARAM_APP_DATADIR, DATADIR, NULL);
 	gnome_window_icon_set_default_from_file (GNOME_ICONDIR"/glines.xpm");
 	client = gnome_master_client ();
 
