@@ -1,6 +1,6 @@
 [Desktop Entry]
 Encoding=UTF-8
-_Name=Lines
+_Name=Five or More
 _Comment=Remove colored balls from the board by forming lines
 Exec=glines
 Icon=glines.png

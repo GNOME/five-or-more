@@ -1,3 +1,8 @@
+2004-04-25  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* glines.c: 
+	* glines.desktop.in: Rename to "Five or More".
+
 2004-03-03  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* help/C/glines.xml:	

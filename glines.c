@@ -140,8 +140,8 @@ load_image (gchar *fname,
 				break;
 		}
 
-		message = g_strdup_printf (_("Glines couldn't find image file:\n%s\n\n"
-					     "Please check your Glines installation"), fn);
+		message = g_strdup_printf (_("Five or More could not find image file:\n%s\n\n"
+					     "Please check Five or More is installed correctly."), fn);
 		w = gtk_message_dialog_new (GTK_WINDOW (app),
 					    GTK_DIALOG_MODAL | GTK_DIALOG_DESTROY_WITH_PARENT,
 					    GTK_MESSAGE_ERROR,
@@ -357,7 +357,7 @@ show_scores (gint pos)
 {
 	GtkWidget *dialog;
 
-	dialog = gnome_scores_display (_("Glines"), "glines", NULL, pos);
+	dialog = gnome_scores_display (_("Five or More"), "glines", NULL, pos);
 	if (dialog != NULL) {
 		gtk_window_set_transient_for (GTK_WINDOW (dialog),
 					      GTK_WINDOW (app));
@@ -894,7 +894,7 @@ game_about_callback (GtkWidget *widget, void *data)
 	   }
    }
    					        
-	about = gnome_about_new (_("Glines"), VERSION,
+	about = gnome_about_new (_("Five or More"), VERSION,
 			"Copyright \xc2\xa9 1997-2004 Free Software "
 			"Foundation, Inc.",
 			_("GNOME port of the once-popular Color Lines game"),
@@ -1034,7 +1034,7 @@ game_props_callback (GtkWidget *widget, void *data)
 
 	if (! pref_dialog)
 		{
-			pref_dialog = gtk_dialog_new_with_buttons (_("Glines Preferences"),
+			pref_dialog = gtk_dialog_new_with_buttons (_("Five or More Preferences"),
 								   GTK_WINDOW (app),
 								   GTK_DIALOG_DESTROY_WITH_PARENT,
 								   GTK_STOCK_CLOSE,
@@ -1433,7 +1433,7 @@ main (int argc, char *argv [])
 	else
 		reset_game ();
 
-	app = gnome_app_new ("glines", _("Lines"));
+	app = gnome_app_new ("glines", _("Five or More"));
 	gtk_window_set_default_size (GTK_WINDOW (app), width, height);
 	gtk_widget_set_size_request (GTK_WIDGET (app), MIN_WIDTH, MIN_HEIGHT);
 
@@ -1444,9 +1444,6 @@ main (int argc, char *argv [])
 
 	appbar = gnome_appbar_new (FALSE, TRUE, GNOME_PREFERENCES_USER);
 	gnome_app_set_statusbar (GNOME_APP (app), GTK_WIDGET(appbar));  
-
-	gnome_appbar_set_status (GNOME_APPBAR (appbar),
-				 _("Welcome to Glines!"));
 
 	gnome_app_create_menus(GNOME_APP(app), mainmenu);
 
