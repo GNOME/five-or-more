@@ -5,6 +5,10 @@
  *          Szabolcs Ban <shooby@gnome.hu>
  */
 
+#ifdef HAVE_CONFIG_H
+#include <config.h>
+#endif
+
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -12,7 +16,6 @@
 #include <math.h>
 #include <dirent.h>
 
-#include <config.h>
 #include <gnome.h>
 #include <gtk/gtk.h>
 
