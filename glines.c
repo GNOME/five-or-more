@@ -166,28 +166,14 @@ load_image (gchar *fname,
 static void
 refresh_pixmaps (void)
 {
-	static GdkGC * grid_gc = NULL;
 	GdkGC * gc;
-        GdkColormap *cmap;
-        GdkColor color;
 	GdkPixbuf *ball_pixbuf;
-	gint i;
 
 	/* Since we get called both by configure and after loading an image.
 	 * it is possible the pixmaps aren't initialised. If they aren't
 	 * we don't do anything. */
-
 	if (!ball_pixmap)
 		return;
-
-	if (!grid_gc) {
-		grid_gc = gdk_gc_new (draw_area->window);
-
-		gdk_color_parse ("#525F6C", &color);
-		cmap = gtk_widget_get_colormap (draw_area);
-		gdk_colormap_alloc_color (cmap, &color, FALSE, TRUE);
-		gdk_gc_set_foreground (grid_gc, &color);
-	}
 
 	ball_pixbuf = gdk_pixbuf_scale_simple (raw_pixbuf, 4*boxsize, 
 					       7*boxsize, 
@@ -197,19 +183,12 @@ refresh_pixmaps (void)
 	gdk_gc_set_foreground (gc, &backgnd.color);
 
 	gdk_draw_rectangle (ball_pixmap, gc, TRUE, 0, 0, 4*boxsize, 7*boxsize);
-	for (i=0; i<4; i++) 
-		gdk_draw_line (ball_pixmap, grid_gc, i*boxsize, 0, i*boxsize,
-			       7*boxsize);
-	for (i=0; i<7; i++)
-		gdk_draw_line (ball_pixmap, grid_gc, 0, i*boxsize, 4*boxsize,
-			       i*boxsize);
 
 	gdk_draw_pixbuf (ball_pixmap, gc,
 			 ball_pixbuf, 0, 0, 0, 0, boxsize*4, boxsize*7,
 			 GDK_RGB_DITHER_NORMAL, 0, 0);
+
 	gdk_draw_rectangle (blank_pixmap, gc, TRUE, 0, 0, boxsize, boxsize);
-	gdk_draw_line (blank_pixmap, grid_gc, 0, 0, 0, boxsize);
-	gdk_draw_line (blank_pixmap, grid_gc, 0, 0, boxsize, 0);
 
 	g_object_unref (ball_pixbuf);
 	g_object_unref (gc);
@@ -277,7 +256,6 @@ set_inmove (int i)
  	}
 }
 
-
 static void
 reset_game (void)
 {
@@ -318,7 +296,6 @@ start_game (void)
 	set_inmove (0);
 }
 
- 
 static void
 reset_pathsearch (void)
 {
@@ -594,11 +571,42 @@ button_press_event (GtkWidget *widget, GdkEvent *event)
 	return TRUE;
 }
 
+static void
+draw_grid (void)
+{
+	static GdkGC *grid_gc;
+	guint w, h;
+	guint i;
+
+	w = draw_area->allocation.width;
+	h = draw_area->allocation.height;
+
+	if (!grid_gc) {
+		GdkColormap *cmap;
+		GdkColor color;
+
+		grid_gc = gdk_gc_new (draw_area->window);
+
+		gdk_color_parse ("#525F6C", &color);
+		cmap = gtk_widget_get_colormap (draw_area);
+		gdk_colormap_alloc_color (cmap, &color, FALSE, TRUE);
+		gdk_gc_set_foreground (grid_gc, &color);
+	}
+
+	for (i = boxsize; i < w; i = i + boxsize)
+		gdk_draw_line (draw_area->window, grid_gc, i, 0, i, h);
+
+	for (i = boxsize; i < h; i = i + boxsize)
+		gdk_draw_line (draw_area->window, grid_gc, 0, i, w, i);
+
+	gdk_draw_rectangle (draw_area->window, grid_gc, FALSE, 0, 0, w - 1, h - 1);
+}
+
 /* Redraw a part of the field */
 static gint
 field_expose_event (GtkWidget *widget, GdkEventExpose *event, gpointer gp)
 {
-	GdkWindow * window = widget->window;
+	GdkWindow *window = widget->window;
 	GdkGC *gc;
 	guint x_start, x_end, y_start, y_end, i, j, idx;
 
@@ -640,6 +648,8 @@ field_expose_event (GtkWidget *widget, GdkEventExpose *event, gpointer gp)
 		}
 	}
         g_object_unref (gc);
+
+	draw_grid ();
 
 	return FALSE;
 }

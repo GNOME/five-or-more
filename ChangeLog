@@ -1,3 +1,8 @@
+2004-07-08  Paolo Borelli  <pborelli@katamail.com>
+
+	* glines.c: rework grid drawing so that right and
+	bottom borders are shown.
+
 2004-06-07  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* glines.c: Rework line-detection code so multiple balls
