@@ -1295,7 +1295,7 @@ ball_theme_changed_cb (GConfClient *client,
 			g_free (theme_tmp);
 	}
 	
-	//FIXME apply in the prefs dialog GUI
+	/* FIXME apply in the prefs dialog GUI */
 }
 
 static void
@@ -1312,7 +1312,7 @@ move_timeout_changed_cb (GConfClient *client,
 	if (timeout_tmp != move_timeout)
 		move_timeout = timeout_tmp;
   
-	//FIXME apply in the prefs dialog GUI
+	/* FIXME apply in the prefs dialog GUI */
 }
 
 static void

@@ -1,3 +1,9 @@
+Wed Aug 27 15:10:24 2003  Jonathan Blandford  <jrb@redhat.com>
+
+	* glines.c (move_timeout_changed_cb): If we compile with -ansi, we
+	need to use ansi-compatible comments.
+	(ball_theme_changed_cb): Ditto
+
 2003-08-09  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* glines.c (main): More gconf defenses.
