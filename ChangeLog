@@ -1,3 +1,8 @@
+2004-06-07  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* glines.c: Rework line-detection code so multiple balls
+	can be dropped before checking. Fixes bug #142072.
+
 2004-04-25  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* glines.c: 

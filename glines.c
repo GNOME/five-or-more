@@ -393,18 +393,29 @@ game_over (void)
 	return;
 }
 
+static int spaces_left (void)
+{
+	int i,j;
+
+	j = 0;
+
+	for (i=0; i<FIELDSIZE*FIELDSIZE; i++) {
+		if (field[i].color == 0)
+			j++;
+	}
+
+	return j;
+}
+
 static int
 check_gameover (void)
 {
-	int i = 0;
-	while ((i < FIELDSIZE * FIELDSIZE) && field[i].color != 0)
-		i++;
-	if (i == FIELDSIZE * FIELDSIZE)
-	{
-		game_over ();
-		return -1;
-	}
-	return i;
+	if (spaces_left ()> 0)
+		return 1;
+
+	game_over ();
+
+	return -1;
 }
 
 int
@@ -633,62 +644,66 @@ field_expose_event (GtkWidget *widget, GdkEventExpose *event, gpointer gp)
 	return FALSE;
 }
 
-static void
-kill_tagged(GtkWidget *widget, int num)
-{
-	int i;
-
-	for (i = 0; i <= num; i++)
-		{
-			field[field[i].pathsearch].color = 0;
-			field[field[i].pathsearch].phase = 0;
-			field[field[i].pathsearch].active = 0;
-			draw_box (widget, field[i].pathsearch % 9,
-				  field[i].pathsearch / 9);
-		}
-}
-
 static int
 addscore (int num)
 {
+	gchar string[20];
 	int i = 0;
-	
+	int retval;
+
 	while ((sctab[i].num != num) && (sctab[i].num != 0))
 		i++;
 	if (sctab[i].num == 0)
-		return 10 + (int) pow ((double)2.0, (double)(num - 5));
-	return (sctab[i].score);
+		retval = 10 + (int) pow ((double)2.0, (double)(num - 5));
+	else
+		retval = sctab[i].score;
+
+	score += retval;
+	g_snprintf (string, 19, "%d", score);
+	gtk_label_set_text (GTK_LABEL (scorelabel), string);		
+
+	return retval;
 }
 	
 
-static int
-check_goal (GtkWidget *widget, int num)
+static void tag_list (int * list, int len)
 {
-	int count = 0;
+	int i;
+
+	for (i=0; i<len; i++)
+		field[list[i]].tag = 1;
+}
+
+static int
+find_lines (int num)
+{
+	int count = 1;
 	int subcount = 0;
 	int x = num%9;
 	int y = num/9;
-
-	field[0].pathsearch = num;
+	int list[FIELDSIZE];
 
 	/* Horizontal */
 
 	x++;
 	while ((x <= FIELDSIZE - 1) && (field[x + y*9].color == field[num].color))
 	{
+		list[subcount] = x + y*9;
 		subcount++;
-		field[count + subcount].pathsearch = x + y*9;
 		x++;
 	}
 	x = num % 9 - 1;
 	while ((x >= 0) && (field[x + y*9].color == field[num].color))
 	{
+		list[subcount] = x + y*9;
 		subcount++;
-		field[count + subcount].pathsearch = x + y*9;
 		x--;
 	}
-	if (subcount >= 4)
-		count +=subcount;
+	if (subcount >= 4) {
+		field[num].tag = 1;
+		tag_list (list, subcount);
+		count += subcount;
+	}
 	subcount = 0;
 
 	/* Vertical */
@@ -697,19 +712,22 @@ check_goal (GtkWidget *widget, int num)
 	y++;
 	while ((y <= FIELDSIZE - 1) && (field[x + y*9].color == field[num].color))
 	{
+		list[subcount] = x + y*9;
 		subcount++;
-		field[count + subcount].pathsearch = x + y*9;
 		y++;
 	}
 	y = num / 9 - 1;
 	while ((y >= 0) && (field[x + y*9].color == field[num].color))
 	{
+		list[subcount] = x + y*9;
 		subcount++;
-		field[count + subcount].pathsearch = x + y*9;
 		y--;
 	}
-	if (subcount >= 4)
-		count +=subcount;
+	if (subcount >= 4) {
+		field[num].tag = 1;
+		tag_list (list, subcount);
+		count += subcount;
+	}
 	subcount = 0;
 	
 	/* Diagonal ++*/
@@ -718,8 +736,8 @@ check_goal (GtkWidget *widget, int num)
 	y = num/9 + 1;
 	while ((y <= FIELDSIZE - 1) && (x <= FIELDSIZE - 1) && (field[x + y*9].color == field[num].color))
 	{
+		list[subcount] = x + y*9;
 		subcount++;
-		field[count + subcount].pathsearch = x + y*9;
 		y++;
 		x++;
 	}
@@ -727,13 +745,16 @@ check_goal (GtkWidget *widget, int num)
 	y = num / 9 - 1;
 	while ((y >= 0) && (x >= 0) && (field[x + y*9].color == field[num].color))
 	{
+		list[subcount] = x + y*9;
 		subcount++;
-		field[count + subcount].pathsearch = x + y*9;
 		y--;
 		x--;
 	}
-	if (subcount >= 4)
+	if (subcount >= 4) {
+		field[num].tag = 1;
+		tag_list (list, subcount);
 		count +=subcount;
+	}
 	subcount = 0;
 
 	/* Diagonal +-*/
@@ -742,8 +763,8 @@ check_goal (GtkWidget *widget, int num)
 	y = num / 9 - 1;
 	while ((y >= 0) && (x <= FIELDSIZE - 1) && (field[x + y*9].color == field[num].color))
 	{
+		list[subcount] = x + y*9;
 		subcount++;
-		field[count + subcount].pathsearch = x + y*9;
 		y--;
 		x++;
 	}
@@ -751,30 +772,64 @@ check_goal (GtkWidget *widget, int num)
 	y = num / 9 + 1;
 	while ((y <= FIELDSIZE - 1) && (x >= 0) && (field[x + y*9].color == field[num].color))
 	{
+		list[subcount] = x + y*9;
 		subcount++;
-		field[count + subcount].pathsearch = x + y*9;
 		y++;
 		x--;
 	}
-	if (subcount >= 4)
+	if (subcount >= 4) {
+		field[num].tag = 1;
+		tag_list (list, subcount);
 		count +=subcount;
-	subcount = 0;
+	}
 
-	/* Finish */
-	
-	if (count >= 4)
+	return count;
+}
+
+static void clear_tags (void)
+{
+	int i;
+
+	for (i=0; i<FIELDSIZE*FIELDSIZE; i++)
+		field[i].tag = 0;
+}
+
+static int kill_tags (GtkWidget * widget)
+{
+	int i,j;
+
+	j = 0;
+	for (i = 0; i <FIELDSIZE*FIELDSIZE; i++) {
+		if (field[i].tag == 1) {
+			j++;
+			field[i].color = 0;
+			field[i].phase = 0;
+			field[i].active = 0;
+			draw_box (widget, i % 9, i / 9);
+		}
+	}
+
+	return j;
+}
+
+static gboolean check_goal (GtkWidget * w, int target)
+{
+	gboolean lines_cleared;
+	int count;
+
+	clear_tags ();
+
+	count = find_lines (target);
+	lines_cleared = count >= 5;
+
+	if (lines_cleared)
 	{
-		char string[20];
-
-		kill_tagged (widget, count);
-		score += addscore (count+1);
-		g_snprintf (string, 19, "%d", score);
-		gtk_label_set_text (GTK_LABEL (scorelabel), string);
-
-		subcount = 1;
+		kill_tags (w);
+		addscore (count);
 	}
 	reset_pathsearch ();
-	return subcount;
+
+	return lines_cleared;
 }
 
 gint
@@ -821,15 +876,27 @@ animate (gpointer gp)
 			reset_pathsearch ();
 			if (!check_goal (widget, newactive))
 			{
-				for (x = 0; x < 3; x++)
+				gboolean fullline;
+				int balls[3];
+				int spaces;
+
+				clear_tags ();
+				fullline = FALSE;
+				spaces = spaces_left ();
+				if (spaces > 3)
+					spaces = 3;
+				for (x = 0; x < spaces; x++)
 				{
 					int tmp = init_new_balls (1, x);
 					draw_box (widget, tmp % FIELDSIZE,
 						   tmp / FIELDSIZE);
-					check_goal (widget, tmp);
-					if (check_gameover () == -1)
-						return FALSE;
+					balls[x] = tmp;
+					fullline = (find_lines (balls[x]) >= 5) || fullline;
 				}
+				if (fullline) 
+					addscore (kill_tags (widget));
+				if (check_gameover () == -1)
+					return FALSE;
 				init_preview ();
 				draw_preview ();
 			}

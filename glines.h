@@ -16,6 +16,7 @@ typedef struct
 	int pathsearch;
 	int phase;
 	int active;
+	int tag;
 } field_props;
 
 void draw_box(GtkWidget *widget, int x, int y);
