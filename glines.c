@@ -1317,7 +1317,6 @@ set_fast_moves_callback (GtkWidget *widget, gpointer *data)
 static void
 set_fullscreen_actions (gboolean is_fullscreen)
 {
-	/* We need to set sensitivity, else we don't get the shortcut key */
 	gtk_action_set_sensitive (leavefullscreen_action, is_fullscreen);
 	gtk_action_set_visible (leavefullscreen_action, is_fullscreen);
 
@@ -1326,27 +1325,22 @@ set_fullscreen_actions (gboolean is_fullscreen)
 }
 
 static void
-fullscreen_callback (GtkToggleAction *action)
+fullscreen_callback (GtkAction *action)
 {
-	gboolean is_fullscreen;
-	is_fullscreen = (GTK_ACTION (action) == fullscreen_action);
-
-	set_fullscreen_actions (is_fullscreen);
-
-	if (is_fullscreen)
+	if (action == fullscreen_action)
 		gtk_window_fullscreen (GTK_WINDOW (app));
 	else
 		gtk_window_unfullscreen (GTK_WINDOW (app));
 }
 
-/* Just in case something else takes us to/from fullscreen. */
 static void
 window_state_callback (GtkWidget *widget, GdkEventWindowState *event)
 {
 	if (!(event->changed_mask & GDK_WINDOW_STATE_FULLSCREEN))
 		return;
 
-	set_fullscreen_actions (event->new_window_state & GDK_WINDOW_STATE_FULLSCREEN);
+	set_fullscreen_actions (event->new_window_state & 
+				GDK_WINDOW_STATE_FULLSCREEN);
 }
 
 static void
