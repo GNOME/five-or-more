@@ -1,3 +1,11 @@
+2001-06-11  Juan Pablo Mendoza <pablo_juan@yahoo.com>
+
+	Apply part of a patch from drk@sgi.com
+
+	* glines.c: (load_properties): Add void in the declaration.
+	  (main): Correct the call to load_properties(), Remove c++ style
+	  comment.
+
 2001-05-30  Juan Pablo Mendoza <pablo_juan@yahoo.com>
 
 	* glines.c (game_props_callback) Connect dialog to close signal

@@ -1007,7 +1007,7 @@ save_state (GnomeClient *client,
 }
 
 static void
-load_properties ()
+load_properties (void)
 {
   char buf[256];
 
@@ -1192,7 +1192,7 @@ main (int argc, char *argv [])
 
 	gtk_widget_realize(draw_area);
 
-	load_properties(client);
+	load_properties();
 
 	backpixmap = gdk_pixmap_new(draw_area->window,
 			BOXSIZE*FIELDSIZE,
@@ -1223,7 +1223,7 @@ main (int argc, char *argv [])
 
 	gtk_widget_show (vbox);
 	
-	//gnome_app_set_contents (GNOME_APP (app), vbox);
+	/*gnome_app_set_contents (GNOME_APP (app), vbox);*/
 
 	gtk_widget_show (app);
 		
