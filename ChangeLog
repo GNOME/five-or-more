@@ -1,3 +1,9 @@
+2003-11-27  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* glines.c: Remove old pref dialog help code that is no longer
+	used. Use the shared code for finding the theme files (also strip
+	the suffixes from the theme names).
+
 2003-11-19  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* Makefile.am (CLEANFILES): Clean up the schema files.

@@ -32,13 +32,13 @@
 #include <string.h>
 #include <time.h>
 #include <math.h>
-#include <dirent.h>
 #include <gnome.h>
 #include <gtk/gtk.h>
 #include <gdk-pixbuf/gdk-pixbuf.h>
 #include <libgnomeui/gnome-window-icon.h>
 #include <gconf/gconf-client.h>
 #include "games-frame.h"
+#include "games-files.h"
 #include "glines.h"
 
 #define KEY_DIR "/apps/glines"
@@ -96,11 +96,11 @@ static void
 load_image (gchar *fname,
 	    GdkPixbuf **pixbuf)
 {
-	gchar *tmp, *fn;
+	gchar *tmp, *fn = NULL;
 	GdkPixbuf *image;
-    
-	tmp = g_build_filename ("glines", fname, NULL);
 
+	tmp = g_build_filename ("glines", fname, NULL);
+	
 	fn = gnome_program_locate_file (NULL, GNOME_FILE_DOMAIN_APP_PIXMAP, (tmp), FALSE, NULL);
 	g_free (tmp);
 
@@ -126,16 +126,6 @@ load_image (gchar *fname,
 		g_object_unref (*pixbuf);
 
 	*pixbuf = image;
-}
-
-static void
-help_cb (GtkWidget * widget, gpointer data)
-{
-#if 0
-  GnomeHelpMenuEntry help_entry = { "glines", "user-guide/usage.html#PREFERENCES-DIALOGBOX" };
-
-  gnome_help_display (NULL, &help_entry);
-#endif
 }
 
 static void
@@ -923,11 +913,12 @@ set_selection (GtkWidget *widget, char *data)
 }
 
 static void
-fill_menu (GtkWidget *menu, char * mtype, gboolean bg)
+fill_menu (GtkWidget *menu)
 {
-	struct dirent *e;
-	DIR *dir;
-	int itemno = 0;
+	gchar * shortname;
+	gchar * dot;
+	int itemno;
+	GList * item;
 	gchar *dname = gnome_program_locate_file (NULL, GNOME_FILE_DOMAIN_APP_PIXMAP,
 						  ("glines"), FALSE, NULL);
 
@@ -935,31 +926,26 @@ fill_menu (GtkWidget *menu, char * mtype, gboolean bg)
 		g_list_foreach (theme_list, (GFunc) g_free, NULL);
 		g_list_free (theme_list);
 	}
-	theme_list = NULL;
-		
-	dir = opendir (dname);
+
+	theme_list = g_list_sort (games_get_file_list_basename ("*.png", dname, NULL),
+				  (GCompareFunc) g_utf8_collate);  
 	g_free (dname);
 
-	if (!dir)
-		return;
-	
-	while ((e = readdir (dir)) != NULL){
-		gchar *s = g_strdup (e->d_name);
-
-		if (! g_strrstr (e->d_name, mtype)) {
-			g_free (s);
-			continue;
-		}
-
-		gtk_combo_box_append_text (GTK_COMBO_BOX (menu), s);
-		theme_list = g_list_append (theme_list, s);
-
-		if (! strcmp (ball_filename, s))
+	item = theme_list;
+	itemno = 0;
+	while (item) {
+		/* Strip the suffix for display purposes. */
+		shortname = g_strdup ((gchar *) item->data);
+		if ((dot = g_utf8_strrchr (shortname, -1, '.')))
+			*dot = '\0';
+		
+		gtk_combo_box_append_text (GTK_COMBO_BOX (menu), shortname);
+		if (! g_utf8_collate (ball_filename, shortname))
 			gtk_combo_box_set_active (GTK_COMBO_BOX (menu), itemno);
-			  
+		
 		itemno++;
+		item = g_list_next (item);
 	}
-	closedir (dir);
 }
 
 static void
@@ -975,16 +961,7 @@ set_fast_moves_callback (GtkWidget *widget, gpointer *data)
 static void
 pref_dialog_response (GtkDialog *dialog, gint response, gpointer data)
 {
-	switch (response)
-		{
-		case GTK_RESPONSE_HELP:
-			help_cb (NULL, NULL);
-			break;
-		case GTK_RESPONSE_CLOSE:
-		default:
-			gtk_widget_hide (GTK_WIDGET (dialog));
-			break;
-		}      
+	gtk_widget_hide (GTK_WIDGET (dialog));
 }
 
 static void
@@ -1024,7 +1001,7 @@ game_props_callback (GtkWidget *widget, void *data)
 			omenu = gtk_combo_box_new_text ();
 			g_signal_connect (G_OBJECT (omenu), "changed",
 					  G_CALLBACK (set_selection), NULL);
-			fill_menu (omenu, ".png", FALSE);
+			fill_menu (omenu);
 			gtk_table_attach_defaults (GTK_TABLE (table), omenu, 1, 2, 0, 1);
 
 
