@@ -20,12 +20,16 @@ glines_LDADD =		\
 	$(GNOMEUI_LIBS)		\
 	$(INTLLIBS)
 
-pixmap_DATA = ball.xpm box.xpm
+pixmap_DATA = ball.png classic.png dots.png pulse.png \
+		black.xpm gray.xpm woody.xpm
+
 EXTRA_DIST = glines.desktop $(pixmap_DATA) $(icon_DATA)
 
 icon_DATA = glines.xpm
 
 Games_DATA = glines.desktop
+
+SUBDIRS = help
 
 install-data-local:
 	-$(mkinstalldirs) $(DESTDIR)$(scoredir)

@@ -28,7 +28,7 @@ int find_route(void);
 
 static gint button_press_event (GtkWidget *widget, GdkEvent *event);
 
-void draw_field(GtkWidget *widget);
+void draw_field(GtkWidget *widget, gint redraw);
 
 static gint expose_event (GtkWidget *widget, GdkEventExpose *event, gpointer gp);
 

@@ -2,7 +2,7 @@
  * Color lines for gnome
  * (c) 1999 Free Software Foundation
  * Authors: Robert Szokovacs <szo@appaloosacorp.hu>
- *          Shooby Ban <bansz@szif.hu>
+ *          Szabolcs Ban <shooby@gnome.hu>
  */
 
 #include <unistd.h>
@@ -10,16 +10,21 @@
 #include <stdlib.h>
 #include <time.h>
 #include <math.h>
+#include <dirent.h>
 
 #include <config.h>
 #include <gnome.h>
+
 #include <gdk_imlib.h>
+
 #include <libgnomeui/gnome-window-icon.h>
 
 #include "glines.h"
 
+GtkWidget *bah_window = NULL;
+
 GtkWidget *draw_area;
-static GtkWidget *app, *vb, *appbar;
+static GtkWidget *app, *vb, *appbar, *pref_dialog;
 GtkWidget *next_draw_area; /* XXX Shouldn't be this much externls! */
 GdkPixmap *backpixmap = NULL;
 GdkPixmap *next_backpixmap = NULL;
@@ -33,8 +38,51 @@ int target = -1;
 int inmove = 0;
 int score = 0;
 int preview[3];
+char * ball_filename;
+char * box_filename;
 GtkWidget *scorelabel;
 scoretable sctab[] = {{5, 10}, {6, 12}, {7, 18}, {8, 28}, {9, 42}, {10, 82}, {11, 108}, {12, 138}, {13, 172}, {14, 210}, {0,0}};
+
+static void 
+load_image (gchar *fname,
+GdkPixmap **pixmap,
+GdkPixmap **mask)
+{
+	char *tmp, *fn;
+        GdkColor bgcolor;
+	GdkImlibImage *image;
+        GdkImage *tmpimage;
+	GdkVisual *visual;
+    
+	tmp = g_strconcat ( "glines/", fname, NULL);
+
+	fn = gnome_unconditional_pixmap_file ( tmp );
+	g_free( tmp );
+
+	if (!g_file_exists (fn)) {
+		printf (_("Could not find the \'%s\' theme for Glines\n"), fn);
+		exit (1);
+	}
+
+	if (!image)
+		gdk_imlib_destroy_image (image);
+
+	image = gdk_imlib_load_image (fn);
+	g_free( fn );
+
+	visual = gdk_imlib_get_visual ();
+	gdk_imlib_render (image, image->rgb_width, image->rgb_height);
+
+	if (!*pixmap)
+		gdk_imlib_free_pixmap (*pixmap);
+	if (!*mask)
+		gdk_imlib_free_pixmap (*mask);
+
+	*pixmap = gdk_imlib_move_image (image);
+        *mask = gdk_imlib_move_mask (image);
+
+	gdk_imlib_destroy_image (image);
+}
 
 void
 reset_game(void)
@@ -59,7 +107,7 @@ start_game(void)
 	static int timeou = -1;
 	char string[20];
 
-	draw_field(draw_area);
+	draw_field(draw_area,0);
 	draw_all_balls(draw_area, -1);
 	gtk_widget_draw(draw_area, NULL);
 	draw_preview();	
@@ -296,7 +344,7 @@ button_press_event (GtkWidget *widget, GdkEvent *event)
 	gtk_widget_get_pointer (widget, &x, &y);
 	fx = x / BOXSIZE;
 	fy = y / BOXSIZE;
-        gnome_appbar_set_status(GNOME_APPBAR(appbar), _(""));
+        gnome_appbar_set_status(GNOME_APPBAR(appbar), "");
 	if(field[fx + fy*9].color == 0)
 	{
 		/* Clicked on an empty field */
@@ -316,8 +364,8 @@ button_press_event (GtkWidget *widget, GdkEvent *event)
 			}
 			else
 			{
-				/* Can't go there! */
-				gnome_appbar_set_status(GNOME_APPBAR(appbar), _("Can't go there!"));
+				/* Can't move there! */
+				gnome_appbar_set_status(GNOME_APPBAR(appbar), _("Can't move there!"));
 				reset_pathsearch();
 				target = -1;
 			}
@@ -355,14 +403,14 @@ button_press_event (GtkWidget *widget, GdkEvent *event)
 }
 
 void
-draw_field(GtkWidget *widget)
+draw_field(GtkWidget *widget, gint redraw)
 {
 	int i, j;
 
 	for(i=0; i<9; i++)
 		for(j=0; j<9; j++)
 		{
-			draw_box(widget, backpixmap, i, j, 0);
+			draw_box(widget, backpixmap, i, j, redraw);
 		}
 }
 
@@ -621,13 +669,13 @@ game_about_callback (GtkWidget *widget, void *data)
 {
     GtkWidget *about;
     const gchar *authors[] = {
-		            "Robert Szokovacs <szo@appaloosacorp.hu>",
-			    "Szabolcs Ban <bansz@szif.hu>",
+		            _("Robert Szokovacs <szo@appaloosacorp.hu>"),
+			    _("Szabolcs Ban <shooby@gnome.hu>"),
 			    NULL
 			    };
 					        
 	about = gnome_about_new (_("Glines"), VERSION,
-			"(C) 1997-1998 the Free Software Foundation",
+			_("(C) 1997-1998 the Free Software Foundation"),
 			  (const char **)authors,
 		       _("Gnome port of the once-popular Color Lines game"),
 			"glines.xpm");
@@ -636,6 +684,174 @@ game_about_callback (GtkWidget *widget, void *data)
 	return TRUE;
 }       
 
+
+static void
+load_theme ()
+{
+	load_image(box_filename, &box_pixmap, &box_mask);
+	load_image(ball_filename, &ball_pixmap, &ball_mask);
+}
+
+static void
+glines_cancel (GtkWidget *widget, void *data)
+{
+	gtk_widget_destroy (pref_dialog);
+	pref_dialog = 0;
+}
+
+static void 
+load_theme_cb()
+{
+  load_theme();
+  draw_field(draw_area,1);
+  draw_all_balls(draw_area, -1);
+  draw_preview();
+  glines_cancel(0,0);
+}
+
+
+static void
+set_selection (GtkWidget *widget, void *data)
+{
+	if(!ball_filename)
+		g_free(ball_filename);
+	ball_filename = strdup(data);
+	if(!data)
+		free (data);
+}
+
+static void
+set_selection1 (GtkWidget *widget, void *data)
+{
+        if(!box_filename)
+		g_free(box_filename);
+	box_filename = strdup(data);
+	if(!data)
+		free (data);
+}
+
+static void
+free_str (GtkWidget *widget, void *data)
+{
+	if(!data)
+		free (data);
+}
+
+static void
+fill_menu (GtkWidget *menu, char * mtype, gboolean bg)
+{
+	struct dirent *e;
+	char *dname = gnome_unconditional_pixmap_file ("glines");
+	DIR *dir;
+        int itemno = 0;
+	
+	dir = opendir (dname);
+
+	if (!dir)
+		return;
+	
+	while ((e = readdir (dir)) != NULL){
+		GtkWidget *item;
+		char *s = strdup (e->d_name);
+
+		if (!strstr (e->d_name, mtype)) {
+			free (s);
+			continue;
+		}
+			
+		item = gtk_menu_item_new_with_label (s);
+		gtk_widget_show (GTK_WIDGET(item));
+		gtk_menu_append (GTK_MENU(menu), GTK_WIDGET(item));
+		if(bg)
+		gtk_signal_connect (GTK_OBJECT(item), "activate",
+				    GTK_SIGNAL_FUNC (set_selection1), s);
+		else
+		gtk_signal_connect (GTK_OBJECT(item), "activate",
+				    GTK_SIGNAL_FUNC (set_selection), s);
+		gtk_signal_connect (GTK_OBJECT(item), "destroy",
+				    GTK_SIGNAL_FUNC (free_str), s);
+	  
+	        if (bg){
+	        if (!strcmp(box_filename, s))
+		  gtk_menu_set_active(GTK_MENU(menu), itemno);
+		}
+	        else {
+	        if (!strcmp(ball_filename, s))
+		  gtk_menu_set_active(GTK_MENU(menu), itemno);
+		}
+			  
+	        itemno++;
+	}
+	closedir (dir);
+}
+
+game_props_callback (GtkWidget *widget, void *data)
+{
+	GtkWidget *menu1, *omenu1, *menu, *omenu, *l, *hb, *hb1, *f, *fv;
+	GtkWidget *button;
+
+	if (pref_dialog)
+		return;
+	
+	pref_dialog = gnome_dialog_new (_("Preferences"),
+			GNOME_STOCK_BUTTON_OK, GNOME_STOCK_BUTTON_CANCEL,
+			NULL);
+	gnome_dialog_set_parent (GNOME_DIALOG (pref_dialog), GTK_WINDOW (app));
+	gtk_signal_connect (GTK_OBJECT(pref_dialog), "delete_event",
+			    GTK_SIGNAL_FUNC (glines_cancel), NULL);
+
+	omenu = gtk_option_menu_new ();
+	menu = gtk_menu_new ();
+	fill_menu (menu,".png",FALSE);
+	gtk_widget_show (omenu);
+	gtk_option_menu_set_menu (GTK_OPTION_MENU(omenu), menu);
+
+	omenu1 = gtk_option_menu_new ();
+	menu1 = gtk_menu_new ();
+	fill_menu (menu1,".xpm",TRUE);
+	gtk_widget_show (omenu1);
+	gtk_option_menu_set_menu (GTK_OPTION_MENU(omenu1), menu1);
+
+	f = gtk_frame_new (_ ("Theme"));
+	gtk_container_border_width (GTK_CONTAINER (f), 5);
+
+	hb = gtk_hbox_new (FALSE, FALSE);
+	gtk_widget_show (hb);
+	
+	l = gtk_label_new (_("Select theme:"));
+	gtk_widget_show (l);
+	    
+	gtk_box_pack_start_defaults (GTK_BOX(hb), l);
+	gtk_container_add (GTK_CONTAINER(hb), omenu);
+
+	fv = gtk_vbox_new (0, 5);
+	gtk_container_border_width (GTK_CONTAINER (fv), 5);
+	gtk_widget_show (fv);
+	
+	gtk_box_pack_start_defaults (GTK_BOX(fv), hb);
+	hb1 = gtk_hbox_new (FALSE, FALSE);
+	gtk_widget_show (hb1);
+
+	l = gtk_label_new (_("Select background:"));
+	gtk_widget_show (l);
+	    
+	gtk_box_pack_start_defaults (GTK_BOX(hb1), l);
+	gtk_container_add (GTK_CONTAINER(hb1), omenu1);
+
+
+	gtk_container_add (GTK_CONTAINER(fv), hb1);
+	gtk_box_pack_start_defaults (GTK_BOX(GNOME_DIALOG(pref_dialog)->vbox), f);
+	gtk_container_add (GTK_CONTAINER (f), fv);
+	
+	gtk_widget_show (f);
+	
+	gnome_dialog_button_connect (GNOME_DIALOG (pref_dialog), 0,
+			GTK_SIGNAL_FUNC (load_theme_cb), NULL);
+	gnome_dialog_button_connect (GNOME_DIALOG (pref_dialog), 1,
+			GTK_SIGNAL_FUNC (glines_cancel), (gpointer)1);
+
+        gtk_widget_show (pref_dialog);
+}
 
 static int
 game_quit_callback (GtkWidget *widget, void *data)
@@ -754,15 +970,23 @@ GnomeUIInfo gamemenu[] = {
 	GNOMEUIINFO_END
 };
 
-GnomeUIInfo helpmenu[] = {
-	GNOMEUIINFO_MENU_ABOUT_ITEM(game_about_callback, NULL),
+GnomeUIInfo settingsmenu[] = {
+        GNOMEUIINFO_MENU_PREFERENCES_ITEM(game_props_callback, NULL),
 
+	GNOMEUIINFO_END
+};
+
+
+GnomeUIInfo helpmenu[] = {
+        GNOMEUIINFO_HELP("glines"),
+	GNOMEUIINFO_MENU_ABOUT_ITEM(game_about_callback, NULL),
 	GNOMEUIINFO_END
 };
 
 GnomeUIInfo mainmenu[] = {
   	GNOMEUIINFO_MENU_GAME_TREE(gamemenu),
-		GNOMEUIINFO_MENU_HELP_TREE(helpmenu),
+	GNOMEUIINFO_MENU_SETTINGS_TREE(settingsmenu),
+	GNOMEUIINFO_MENU_HELP_TREE(helpmenu),
 	GNOMEUIINFO_END
 };
 
@@ -799,13 +1023,13 @@ main (int argc, char *argv [])
                             GTK_SIGNAL_FUNC (client_die), NULL);
 
 	if (GNOME_CLIENT_RESTARTED (client))
-  {
+          {
 	    gnome_config_push_prefix(gnome_client_get_config_prefix (client));
 	    
 	    restart();  
 	    
 	    gnome_config_pop_prefix ();
-  }
+          }
 	else
 	{
 		reset_game();
@@ -858,8 +1082,9 @@ main (int argc, char *argv [])
 	gtk_widget_set_events (draw_area, gtk_widget_get_events(draw_area) |GDK_BUTTON_PRESS_MASK);
 
 	gtk_widget_realize(draw_area);
-	box_pixmap  = gdk_pixmap_create_from_xpm(draw_area->window, &box_mask,  NULL, gnome_unconditional_pixmap_file("glines/box.xpm"));
-	ball_pixmap = gdk_pixmap_create_from_xpm(draw_area->window, &ball_mask, NULL, gnome_unconditional_pixmap_file("glines/ball.xpm"));
+	box_filename = strdup("gray.xpm");
+	ball_filename = strdup("ball.png");
+	load_theme();
 
 	backpixmap = gdk_pixmap_new(draw_area->window,
 			BOXSIZE*FIELDSIZE,
