@@ -190,6 +190,18 @@ draw_preview(void)
 	}
 }
 
+void
+show_scores (gint pos)
+{
+	GtkWidget *dialog;
+
+	dialog = gnome_scores_display (_("Glines"), "glines", NULL, pos);
+	if (dialog != NULL) {
+		gtk_window_set_transient_for (GTK_WINDOW(dialog), GTK_WINDOW(app));
+		gtk_window_set_modal (GTK_WINDOW(dialog), TRUE);
+	}
+}
+
 void update_score_state ()
 {
         gchar **names = NULL;
@@ -215,7 +227,7 @@ game_over(void)
 
 	gnome_appbar_set_status(GNOME_APPBAR(appbar), _("Game Over!"));
 	pos = gnome_score_log(score, NULL, TRUE);
-	gnome_scores_display(_("Glines"), "glines", NULL, pos); 
+	show_scores(pos);
 	update_score_state ();
 	return;
 }
@@ -713,7 +725,7 @@ animate(gpointer gp)
 
 	return TRUE;
 }
-	
+
 static void
 game_new_callback (GtkWidget *widget, void *data)
 {
@@ -724,7 +736,7 @@ game_new_callback (GtkWidget *widget, void *data)
 static void
 game_top_ten_callback(GtkWidget *widget, gpointer data)
 {
-        gnome_scores_display (_("Glines"), "glines", NULL, 0);
+	show_scores (0);
 }
 
 static void
@@ -740,7 +752,7 @@ game_maybe_quit (GtkWidget *widget, int button)
 static int
 game_about_callback (GtkWidget *widget, void *data)
 {
-    GtkWidget *about;
+    static GtkWidget *about = NULL;
     GdkPixbuf *pixbuf = NULL;
     const gchar *authors[] = {
 		            _("Robert Szokovacs <szo@appaloosacorp.hu>"),
@@ -754,6 +766,10 @@ game_about_callback (GtkWidget *widget, void *data)
    /* Translator credits */
    gchar *translator_credits = _("translator_credits");
 
+   if (about != NULL) {
+        gtk_window_present (GTK_WINDOW(about));
+        return;
+   }
    {
 	   char *filename = NULL;
 
@@ -775,6 +791,8 @@ game_about_callback (GtkWidget *widget, void *data)
 			strcmp (translator_credits, "translator_credits") != 0 ? translator_credits : NULL,
 		        pixbuf);
 	gtk_window_set_transient_for (GTK_WINDOW (about), GTK_WINDOW(app));
+	g_signal_connect (G_OBJECT(about), "destroy",
+		G_CALLBACK(gtk_widget_destroyed), &about);
 	gtk_widget_show (about);
 	return TRUE;
 }       
