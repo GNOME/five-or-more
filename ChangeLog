@@ -1,3 +1,7 @@
+2001-12-04  Duarte Loreto <happyguy_pt@hotmail.com>
+
+        * glines.desktop: Added Portuguese (pt) translation.
+
 2001-12-04  Kevin Vandersloot <kfv101@psu.edu>
 
 	* glines.c: When starting a new game flash a simple message
