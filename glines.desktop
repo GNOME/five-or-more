@@ -1,7 +1,9 @@
 [Desktop Entry]
 Name=Glines
+Name[no]=Glines
 Comment=Gnome color lines
 Comment[hu]=Color lines játék GNOME alá
+Comment[no]=Gnome fargelinjer
 Exec=glines
 Icon=glines.xpm
 Terminal=0
