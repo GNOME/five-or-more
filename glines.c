@@ -39,6 +39,7 @@
 #include <gconf/gconf-client.h>
 #include "games-frame.h"
 #include "games-files.h"
+#include "games-gridframe.h"
 #include "glines.h"
 
 #define KEY_DIR "/apps/glines"
@@ -55,10 +56,17 @@ GConfClient *conf_client = NULL;
 
 GtkWidget *draw_area;
 static GtkWidget *app, *appbar, *pref_dialog;
-GtkWidget *next_draw_area; /* XXX Shouldn't be this much externls! */
+GtkWidget *preview_widgets[3];
 field_props field[FIELDSIZE * FIELDSIZE];
-GdkPixbuf *ball_pixbuf = NULL;
-GdkPixmap *surface = NULL;
+
+/* The unscaled pixbuf as read from file. Cached here to save file reads. */
+GdkPixbuf *raw_pixbuf = NULL;
+/* The tile images with balls rendered on them. */
+GdkPixmap *ball_pixmap = NULL;
+/* The balls rendered to a size appropriate for the preview. */
+GdkPixmap *preview_pixmaps[7] = { NULL, NULL, NULL, NULL, NULL, NULL, NULL };
+/* A pixmap of a blank tile. */
+GdkPixmap *blank_pixmap = NULL;
 
 GtkWidget *fast_moves_toggle_button = NULL;
 
@@ -68,6 +76,11 @@ int active = -1;
 int target = -1;
 int inmove = 0;
 int score = 0;
+
+int boxsize;
+
+int preview_height = 0;
+int preview_width = 0;
 
 int move_timeout = 100;
 int animate_id = 0;
@@ -97,7 +110,7 @@ load_image (gchar *fname,
 	    GdkPixbuf **pixbuf)
 {
 	gchar *tmp, *fn = NULL;
-	GdkPixbuf *image, *scaled;
+	GdkPixbuf *image;
 
 	tmp = g_build_filename ("glines", fname, NULL);
 	
@@ -136,15 +149,105 @@ load_image (gchar *fname,
 	image = gdk_pixbuf_new_from_file (fn, NULL);
 	g_free( fn );
 
-	/* Notice the hard-coded sizes. */
-	scaled = gdk_pixbuf_scale_simple (image, 128, 224, 
-					  GDK_INTERP_BILINEAR);
-	g_object_unref (image);
 
 	if (*pixbuf)
 		g_object_unref (*pixbuf);
 
-	*pixbuf = scaled;
+	*pixbuf = image;
+}
+
+static void
+refresh_pixmaps (void)
+{
+	static GdkGC * grid_gc = NULL;
+	GdkGC * gc;
+        GdkColormap *cmap;
+        GdkColor color;
+	GdkPixbuf *ball_pixbuf;
+	gint i;
+
+	/* Since we get called both by configure and after loading an image.
+	 * it is possible the pixmaps aren't initialised. If they aren't
+	 * we don't do anything. */
+
+	if (!ball_pixmap)
+		return;
+
+	if (!grid_gc) {
+		grid_gc = gdk_gc_new (draw_area->window);
+
+		gdk_color_parse ("#525F6C", &color);
+		cmap = gtk_widget_get_colormap (draw_area);
+		gdk_colormap_alloc_color (cmap, &color, FALSE, TRUE);
+		gdk_gc_set_foreground (grid_gc, &color);
+	}
+
+	ball_pixbuf = gdk_pixbuf_scale_simple (raw_pixbuf, 4*boxsize, 
+					       7*boxsize, 
+					       GDK_INTERP_BILINEAR);
+
+	gc = gdk_gc_new (ball_pixmap);
+	gdk_gc_set_foreground (gc, &backgnd.color);
+
+	gdk_draw_rectangle (ball_pixmap, gc, TRUE, 0, 0, 4*boxsize, 7*boxsize);
+	for (i=0; i<4; i++) 
+		gdk_draw_line (ball_pixmap, grid_gc, i*boxsize, 0, i*boxsize,
+			       7*boxsize);
+	for (i=0; i<7; i++)
+		gdk_draw_line (ball_pixmap, grid_gc, 0, i*boxsize, 4*boxsize,
+			       i*boxsize);
+
+	gdk_draw_pixbuf (ball_pixmap, gc,
+			 ball_pixbuf, 0, 0, 0, 0, boxsize*4, boxsize*7,
+			 GDK_RGB_DITHER_NORMAL, 0, 0);
+	gdk_draw_rectangle (blank_pixmap, gc, TRUE, 0, 0, boxsize, boxsize);
+	gdk_draw_line (blank_pixmap, grid_gc, 0, 0, 0, boxsize);
+	gdk_draw_line (blank_pixmap, grid_gc, 0, 0, boxsize, 0);
+
+	g_object_unref (ball_pixbuf);
+	g_object_unref (gc);
+}
+
+static void
+refresh_preview_pixmaps (void)
+{
+	int i;
+	GdkPixbuf * scaled;
+	GtkWidget * widget = preview_widgets[0];
+
+	/* Like the refresh_pixmaps() function, we may be called before
+	 * the window is ready. */
+	if (preview_height == 0)
+		return;
+
+	/* We create pixmaps for each of the ball colours and then
+	 * set them as the background for each widget in the preview array.
+	 * This code assumes that each preview window is identical. */
+
+	if (preview_pixmaps[0])
+		for (i=0; i<7; i++)
+			g_object_unref (preview_pixmaps[i]);
+
+	scaled = gdk_pixbuf_scale_simple (raw_pixbuf, 4*preview_width, 
+					  7*preview_height, 
+					  GDK_INTERP_BILINEAR);
+
+	for (i=0; i<7; i++) {
+		preview_pixmaps[i] = gdk_pixmap_new (widget->window,
+						     preview_width, 
+						     preview_height, -1);
+		gdk_draw_rectangle (preview_pixmaps[i], 
+				    widget->style->bg_gc[GTK_STATE_NORMAL],
+				    TRUE, 0, 0, preview_width, preview_height);
+
+		gdk_draw_pixbuf (preview_pixmaps[i], widget->style->white_gc, 
+				 scaled, 0, i*preview_height, 0, 0, 
+				 preview_width, preview_height,
+				 GDK_RGB_DITHER_NORMAL, 0, 0);
+	}
+
+	g_object_unref (scaled);
+
 }
 
 static void
@@ -232,7 +335,14 @@ init_preview (void)
 void
 draw_preview (void)
 {
-	gtk_widget_queue_draw (next_draw_area);
+	int i;
+
+	for (i=0; i<3; i++) {
+		gdk_window_set_back_pixmap (preview_widgets[i]->window,
+					    preview_pixmaps[preview[i]-1],
+					    FALSE);
+		gdk_window_clear (preview_widgets[i]->window);
+	}
 }
 
 static void
@@ -310,15 +420,8 @@ init_new_balls (int num, int prev)
 void
 draw_box (GtkWidget *widget, int x, int y)
 {
-	gtk_widget_queue_draw_area (widget, x * BOXSIZE, y * BOXSIZE,
-				    BOXSIZE, BOXSIZE);
-}
-
-void
-draw_ball (GtkWidget *widget, int x, int y)
-{
-	gtk_widget_queue_draw_area (widget, x * BOXSIZE, y * BOXSIZE,
-				    BOXSIZE, BOXSIZE);
+	gtk_widget_queue_draw_area (widget, x * boxsize, y * boxsize,
+				    boxsize, boxsize);
 }
 
 static int
@@ -394,7 +497,7 @@ deactivate (GtkWidget *widget, int x, int y)
 {
 	field[active].active = 0;
 	field[active].phase = 0; 
-	draw_ball(widget, x, y);
+	draw_box (widget, x, y);
 	active = -1;
 }
 
@@ -408,8 +511,8 @@ button_press_event (GtkWidget *widget, GdkEvent *event)
 
 	if(inmove) return TRUE;
 	gtk_widget_get_pointer (widget, &x, &y);
-	fx = x / BOXSIZE;
-	fy = y / BOXSIZE;
+	fx = x / boxsize;
+	fy = y / boxsize;
         gnome_appbar_set_status(GNOME_APPBAR(appbar), "");
 	if(field[fx + fy*9].color == 0)
 	{
@@ -468,107 +571,52 @@ button_press_event (GtkWidget *widget, GdkEvent *event)
 	return TRUE;
 }
 
-/* Redraw the whole preview */
-static gint
-preview_expose_event (GtkWidget *widget, GdkEventExpose *event, gpointer gp)
-{
-	GdkGC *gc;
-	gint i;
-
-        gc = gdk_gc_new (widget->window);
-	for (i = 0; i < 3; i++) {
-		/* Draw the ball */
-		gdk_draw_pixbuf (widget->window, gc, ball_pixbuf,
-				 0, (preview[i] - 1) * BALLSIZE,
-				 5 + i * BOXSIZE, 5, BALLSIZE, BALLSIZE,
-				 GDK_RGB_DITHER_NORMAL, 0, 0);
-	}
-        g_object_unref (gc);
-
-	return FALSE;
-}
-
-static void
-draw_grid (void)
-{
-        GdkColormap *cmap;
-        GdkGC *gc;
-        GdkColor color;
-        gint x, y;
-
-        if (!gdk_color_parse ("#525F6C", &color)) {
-                return;
-        }
-
-        cmap = gtk_widget_get_colormap (draw_area);
-
-        gc = gdk_gc_new (draw_area->window);
-
-	gdk_colormap_alloc_color (cmap, &color, FALSE, TRUE);
-        gdk_gc_set_foreground (gc, &color);
-
-        for (x = BOXSIZE; x < FIELDSIZE*BOXSIZE; x = x + BOXSIZE) {
-                gdk_draw_line (surface, gc, x, 0, x, FIELDSIZE*BOXSIZE);
-        }
-        for (y = BOXSIZE; y < FIELDSIZE*BOXSIZE; y = y + BOXSIZE) {
-                gdk_draw_line (surface, gc, 0, y, FIELDSIZE*BOXSIZE, y);
-        }
-
-        g_object_unref (gc);
-}
-
-
-
 /* Redraw a part of the field */
 static gint
 field_expose_event (GtkWidget *widget, GdkEventExpose *event, gpointer gp)
 {
+	GdkWindow * window = widget->window;
 	GdkGC *gc;
 	guint x_start, x_end, y_start, y_end, i, j, idx;
 
-	x_start = event->area.x / BOXSIZE;
-	x_end = x_start + event->area.width / BOXSIZE;
+	x_start = event->area.x / boxsize;
+	x_end = x_start + event->area.width / boxsize + 1;
 
-	y_start = event->area.y / BOXSIZE;
-	y_end = y_start + event->area.height / BOXSIZE;
-
-	draw_grid ();
+	y_start = event->area.y / boxsize;
+	y_end = y_start + event->area.height / boxsize + 1;
 
         gc = gdk_gc_new (draw_area->window);
 
 	for (i = y_start; i < y_end; i++) {
 		for (j = x_start; j < x_end; j++) {
+			int x, y, phase, color;
+
 			idx = j + i * FIELDSIZE;
+			x = idx % FIELDSIZE;
+			y = idx / FIELDSIZE;
 
-			/* Draw the box */
-			gdk_gc_set_foreground (gc, &backgnd.color);
-			gdk_draw_rectangle (surface, 
-					    gc,
-					    TRUE, j * BOXSIZE+1, i * BOXSIZE+1,
-					    BOXSIZE-1, BOXSIZE-1);
-
-			/* Draw the ball */
 			if (field[idx].color != 0) {
-				int phase = field[idx].phase;
-				int color = field[idx].color;
-				int x = idx % FIELDSIZE;
-				int y = idx / FIELDSIZE;
+				phase = field[idx].phase;
+				color = field[idx].color - 1;
 
 				phase = ABS(ABS(3-phase)-3);
-				/*gc = widget->style->fg_gc[GTK_STATE_NORMAL];*/
 
-				gdk_draw_pixbuf(surface, gc, ball_pixbuf,
-						phase * BALLSIZE, (color - 1) * BALLSIZE,
-						5 + x * BOXSIZE, 5 + y * BOXSIZE,
-						BALLSIZE, BALLSIZE,
-						GDK_RGB_DITHER_NORMAL, 0, 0);
+				gdk_draw_drawable (window, gc, ball_pixmap,
+						   phase * boxsize, 
+						   color * boxsize,
+						   x * boxsize, 
+						   y * boxsize,
+						   boxsize, boxsize);
+			} else {
+				gdk_draw_drawable (window, gc, blank_pixmap,
+						   0, 0,
+						   x * boxsize, 
+						   y * boxsize,
+						   boxsize, boxsize);
 			}
 		}
 	}
         g_object_unref (gc);
-
-	gdk_window_set_back_pixmap (widget->window, surface, 0);
-	gdk_window_clear (widget->window);
 
 	return FALSE;
 }
@@ -759,14 +807,14 @@ animate (gpointer gp)
 			active = -1;
 			field[newactive].phase = 0;
 			field[newactive].active = 0;
-			draw_ball (widget, x, y);
+			draw_box (widget, x, y);
 			reset_pathsearch ();
 			if (!check_goal (widget, newactive, 1))
 			{
 				for (x = 0; x < 3; x++)
 				{
 					int tmp = init_new_balls (1, x);
-					draw_ball (widget, tmp % FIELDSIZE,
+					draw_box (widget, tmp % FIELDSIZE,
 						   tmp / FIELDSIZE);
 					check_goal (widget, tmp, 0);
 					if (check_gameover () == -1)
@@ -784,7 +832,7 @@ animate (gpointer gp)
 	field[active].phase++;
 	if(field[active].phase >= 4)
 		field[active].phase = 0;
-	draw_ball (widget, x, y);
+	draw_box (widget, x, y);
 
 	return TRUE;
 }
@@ -916,7 +964,9 @@ bg_color_callback (GtkWidget *widget, gpointer data)
 static void
 load_theme ()
 {
-	load_image (ball_filename, &ball_pixbuf);
+	load_image (ball_filename, &raw_pixbuf);
+	refresh_pixmaps ();
+	refresh_preview_pixmaps ();
 }
 
 static void
@@ -1055,27 +1105,40 @@ game_quit_callback (GtkWidget *widget, void *data)
 }
 
 static int
+preview_configure_cb (GtkWidget * widget, GdkEventConfigure * event)
+{
+	preview_width = event->width;
+	preview_height = event->height;
+
+	refresh_preview_pixmaps ();
+
+	draw_preview ();
+
+	return TRUE;
+}
+
+static int
 configure_event_callback (GtkWidget *widget, GdkEventConfigure *event)
 {
-	if (surface)
-		{
-			gint old_w, old_h;
-			
-			gdk_drawable_get_size (surface, &old_w, &old_h);
-			if (old_w == event->width && old_h == event->height)
-				return TRUE;
-			g_object_unref (surface);
-		}
+	int xboxsize, yboxsize;
 
-	surface = gdk_pixmap_new (draw_area->window, event->width,
-				  event->height,
-				  gdk_drawable_get_visual
-				  (draw_area->window)->depth);
-	gdk_draw_rectangle (surface, 
-			    widget->style->fg_gc[GTK_WIDGET_STATE (widget)],
-			    TRUE, 0, 0, -1, -1);
+	if (ball_pixmap) 
+		g_object_unref (ball_pixmap);
+
+	if (blank_pixmap)
+		g_object_unref (blank_pixmap);
+
+	xboxsize = event->width/FIELDSIZE;
+	yboxsize = event->height/FIELDSIZE;
+	boxsize = MIN (xboxsize, yboxsize);
+
+	ball_pixmap = gdk_pixmap_new (draw_area->window, boxsize*4, boxsize*7,
+				      -1);
+	blank_pixmap = gdk_pixmap_new (draw_area->window, boxsize, boxsize, -1);
+	refresh_pixmaps ();
 
 	refresh_screen ();
+
 	return TRUE;
 }
 
@@ -1143,15 +1206,6 @@ load_properties (void)
 	load_theme ();
 }
 
-static gint clamp_int (gint input, gint low, gint high)
-{
-	if (input < low)
-		input = low;
-	if (input > high)
-		input = high;
-	return input;
-}
-
 static void
 restart (void)
 {
@@ -1173,10 +1227,10 @@ restart (void)
 	{
 		for(i = 0; i < FIELDSIZE * FIELDSIZE; i++)
 		{
-			field[i].color = clamp_int (buf[i*4] - 'h', 1, NCOLORS);
-			field[i].pathsearch = clamp_int (buf[i*4 + 1] - 'h', -1, FIELDSIZE*FIELDSIZE);
-			field[i].phase = clamp_int (buf[i*4 + 2] - 'h', 0, 3);
-			field[i].active = clamp_int (buf[i*4 + 3] - 'h', -1, 1);
+			field[i].color = CLAMP (buf[i*4] - 'h', 1, NCOLORS);
+			field[i].pathsearch = CLAMP (buf[i*4 + 1] - 'h', -1, FIELDSIZE*FIELDSIZE);
+			field[i].phase = CLAMP (buf[i*4 + 2] - 'h', 0, 3);
+			field[i].active = CLAMP (buf[i*4 + 3] - 'h', -1, 1);
 		}
 		g_free(buf);
 	}
@@ -1185,7 +1239,7 @@ restart (void)
 	if(buf)
 	{
 		for(i = 0; i < 3; i++)
-			preview[i] = clamp_int (buf[i] - 'h', 1, NCOLORS);
+			preview[i] = CLAMP (buf[i] - 'h', 1, NCOLORS);
 		g_free(buf);
 	}
 }
@@ -1280,7 +1334,7 @@ move_timeout_changed_cb (GConfClient *client,
 
 	timeout_tmp = gconf_client_get_int (client,
 					    KEY_MOVE_TIMEOUT, NULL);
-	timeout_tmp = clamp_int (timeout_tmp, 1, 1000);
+	timeout_tmp = CLAMP (timeout_tmp, 1, 1000);
 	if (timeout_tmp != move_timeout)
 		move_timeout = timeout_tmp;
   
@@ -1314,8 +1368,11 @@ int
 main (int argc, char *argv [])
 {
 	GtkWidget *frame;   
+	GtkWidget *gridframe;
 	GtkWidget *vbox, *hbox;
+	GtkWidget *preview_hbox;
 	GnomeClient *client;
+	int i;
 	
 	gnome_score_init ("glines");
 
@@ -1350,7 +1407,6 @@ main (int argc, char *argv [])
 
 	app = gnome_app_new ("glines", _("Lines"));
 
-	gtk_window_set_resizable (GTK_WINDOW (app), FALSE);
 	g_signal_connect (G_OBJECT (app), "delete_event",
 	                  G_CALLBACK (game_quit_callback), NULL);
 
@@ -1369,21 +1425,31 @@ main (int argc, char *argv [])
 	gnome_app_set_contents (GNOME_APP (app), vbox);
 
 	hbox = gtk_hbox_new(FALSE, 0);
-	frame = games_frame_new (_("Next Balls"));
-	gtk_container_set_border_width (GTK_CONTAINER (frame), 0);
-	games_frame_set (GAMES_FRAME (frame), 0);
-
-	draw_area = gtk_drawing_area_new ();
-	next_draw_area = gtk_drawing_area_new ();
-
-	gtk_widget_set_size_request (GTK_WIDGET (draw_area),
-				     BOXSIZE * 9, BOXSIZE * 9);
-	gtk_widget_set_size_request (GTK_WIDGET (next_draw_area),
-				     BOXSIZE * 3, BOXSIZE);
 	gtk_box_pack_start (GTK_BOX (vbox), hbox, FALSE, FALSE, 0);
-	gtk_box_pack_start (GTK_BOX (hbox), frame, FALSE, FALSE, 0);
-	gtk_container_add (GTK_CONTAINER (frame), next_draw_area);
+	frame = gtk_aspect_frame_new (_("Next Balls"), 0.5, 0.5, 3.0, FALSE);
+	gtk_container_set_border_width (GTK_CONTAINER (frame), 0);
+	gtk_frame_set_shadow_type (GTK_FRAME (frame), GTK_SHADOW_NONE);
 	gtk_frame_set_label_align (GTK_FRAME (frame), 0, 0);
+	gtk_box_pack_start (GTK_BOX (hbox), frame, FALSE, FALSE, 0);
+
+	preview_hbox = gtk_hbox_new (TRUE, 0);
+	gtk_container_add (GTK_CONTAINER (frame), preview_hbox);
+
+	boxsize = BOXSIZE;
+
+	for (i=0; i<3; i++) {
+		preview_widgets[i] = gtk_drawing_area_new ();
+		gtk_widget_set_size_request (GTK_WIDGET (preview_widgets[i]),
+					     boxsize, boxsize);
+		gtk_box_pack_start_defaults (GTK_BOX (preview_hbox),
+					     preview_widgets[i]);
+		/* So we have a window at configure time since we 
+		 * only hook into one of the configure events. */
+		/* Yes, this is an evil hack. */
+		gtk_widget_realize (preview_widgets[i]);
+	}
+	g_signal_connect (G_OBJECT (preview_widgets[0]), "configure_event",
+			  G_CALLBACK (preview_configure_cb), NULL);
 
 	frame = games_frame_new (_("Score"));
 	gtk_container_set_border_width (GTK_CONTAINER (frame), 0);
@@ -1393,23 +1459,25 @@ main (int argc, char *argv [])
 
 	gtk_box_pack_end (GTK_BOX (hbox), frame, 0, 0, 0);
 
-	gtk_box_pack_start_defaults (GTK_BOX (vbox), draw_area);
 
-	gtk_widget_set_events (draw_area, gtk_widget_get_events(draw_area) |GDK_BUTTON_PRESS_MASK);
-
-        init_config ();
-	load_properties ();
-
+	draw_area = gtk_drawing_area_new ();
+	gtk_widget_set_size_request (GTK_WIDGET (draw_area),
+				     boxsize * FIELDSIZE, boxsize * FIELDSIZE);
 	g_signal_connect (G_OBJECT(draw_area), "button_press_event",
 			  G_CALLBACK (button_press_event), NULL);
 	g_signal_connect (G_OBJECT (draw_area), "configure_event",
 			  G_CALLBACK (configure_event_callback), NULL);
 	g_signal_connect (G_OBJECT (draw_area), "expose_event",
 			  G_CALLBACK (field_expose_event), NULL);
+	gridframe = games_grid_frame_new (FIELDSIZE, FIELDSIZE);
+	gtk_container_add (GTK_CONTAINER (gridframe), draw_area);
+	gtk_box_pack_start_defaults (GTK_BOX (vbox), gridframe);
 
-	g_signal_connect (G_OBJECT (next_draw_area), "expose_event",
-			  G_CALLBACK (preview_expose_event), NULL);
+	gtk_widget_set_events (draw_area, gtk_widget_get_events(draw_area) |GDK_BUTTON_PRESS_MASK);
 
+
+        init_config ();
+	load_properties ();
 
 	update_score_state ();
 

@@ -1,4 +1,23 @@
+2004-01-06  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* glines.schemas.in: Set balls.svg to be the new default since it
+	shows off the resizing routines to the best advantage.
+
+	* glines.c: The resizing work is basically finished. The window
+	size isn't remembered yet and there is an expose bug when a window
+	is dragged quickly across it. Aside from that it works well.
+
+2004-01-05  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* glines.c: More resizing work and switch over to using the
+	GamesGridFrame widget to save having to account for offsets in all
+	the drawing functions.
+
 2004-01-04  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* glines.c: Replaced the home-grown clamp function with
+	glibs. Also started to rework the code to handle a resizeable
+	window.
 
 	* help/C/glines.xml: Updated the theme-creation section.
 

@@ -6,7 +6,7 @@
       <applyto>/apps/glines/preferences/ball_theme</applyto>
       <owner>glines</owner>
       <type>string</type>
-      <default>pulse.png</default>
+      <default>balls.svg</default>
       <locale name="C">
         <short>Ball style</short>
         <long>Ball style.  The filename of the images to use for the balls.</long>
