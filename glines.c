@@ -16,7 +16,7 @@
 #include <config.h>
 #include <gnome.h>
 
-#include <gdk_imlib.h>
+#include <gdk-pixbuf/gdk-pixbuf.h>
 
 #include <libgnomeui/gnome-window-icon.h>
 
@@ -56,7 +56,7 @@ GdkPixmap **mask)
 {
 	char *tmp, *fn;
         GdkColor bgcolor;
-	GdkImlibImage *image;
+	GdkPixbuf *image;
         GdkImage *tmpimage;
     
 	tmp = g_strconcat ( "glines/", fname, NULL);
@@ -73,20 +73,17 @@ GdkPixmap **mask)
 		exit (1);
 	}
 
-	image = gdk_imlib_load_image (fn);
+	image = gdk_pixbuf_new_from_file (fn);
 	g_free( fn );
 
-	gdk_imlib_render (image, image->rgb_width, image->rgb_height);
-
 	if (*pixmap)
-		gdk_imlib_free_pixmap (*pixmap);
+		gdk_pixmap_unref (*pixmap);
 	if (*mask)
-		gdk_imlib_free_pixmap (*mask);
+		gdk_pixmap_unref (*mask);
 
-	*pixmap = gdk_imlib_move_image (image);
-        *mask = gdk_imlib_move_mask (image);
+	gdk_pixbuf_render_pixmap_and_mask (image, pixmap, mask, 127);
 
-	gdk_imlib_destroy_image (image);
+	gdk_pixbuf_unref (image);
 }
 
 static void

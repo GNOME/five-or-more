@@ -1,3 +1,7 @@
+2001-07-06  Juan Pablo Mendoza <pablo_juan@yahoo.com>
+
+	* glines.c: Sayonara imlib.
+
 2001-07-05  Juan Pablo Mendoza <pablo_juan@yahoo.com>
 
 	* glines.c (load_image): Fix typo.

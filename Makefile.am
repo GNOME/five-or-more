@@ -6,8 +6,8 @@ Gamesdir = $(datadir)/gnome/apps/Games
 INCLUDES = -I.. -I$(srcdir)/..		\
 	-DGNOMELOCALEDIR=\""$(datadir)/locale"\" \
 	-I$(includedir)			\
-	$(GNOME_INCLUDEDIR)
-
+	$(GNOME_INCLUDEDIR) $(GDK_PIXBUF_CFLAGS)
+	
 bin_PROGRAMS = glines
 
 glines_SOURCES = 	\
@@ -16,6 +16,7 @@ glines_SOURCES = 	\
 glines_LDADD =		\
 	$(GNOME_LIBDIR)         \
 	$(GNOMEUI_LIBS)		\
+	$(GDK_PIXBUF_LIBS) \
 	$(INTLLIBS)
 
 pixmap_DATA = ball.png classic.png dots.png pulse.png \
