@@ -1,5 +1,7 @@
 2003-06-08  William Jon McCann  <mccann@jhu.edu>
 
+	* dots.png: Replaced with snazzier images.
+	
 	* Makefile.am (pixmap_DATA): Added new gumball theme from
 	bug #105921.  Don't install unused background pixmaps.
 
