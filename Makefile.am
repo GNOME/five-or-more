@@ -37,4 +37,4 @@ install-data-local:
 	touch $(DESTDIR)$(scoredir)/glines.scores
 	-chown games.games $(DESTDIR)$(scoredir)/glines.scores
 	-chmod 664 $(DESTDIR)$(scoredir)/glines.scores
-	-chgrp games $(DESTDIR)$(bindir)/glines && chmod 2111 $(DESTDIR)$(bindir)/glines
+	-chgrp games $(DESTDIR)$(bindir)/glines && chmod 2555 $(DESTDIR)$(bindir)/glines
