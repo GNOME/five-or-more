@@ -25,9 +25,6 @@
 
 #include "glines.h"
 
-#undef VERSION
-#define VERSION "1.9.0"
-
 GtkWidget *bah_window = NULL;
 
 GtkWidget *draw_area;
