@@ -876,7 +876,7 @@ game_about_callback (GtkWidget *widget, void *data)
                            NULL
                           };
    /* Translator credits */
-   gchar *translator_credits = _("translator_credits");
+   gchar *translator_credits = _("translator-credits");
 
    if (about != NULL) {
         gtk_window_present (GTK_WINDOW(about));
@@ -901,7 +901,7 @@ game_about_callback (GtkWidget *widget, void *data)
 			_("GNOME port of the once-popular Color Lines game"),
 			(const char **)authors,
 			(const char **)documenters,
-			strcmp (translator_credits, "translator_credits") != 0 ? translator_credits : NULL,
+			strcmp (translator_credits, "translator-credits") != 0 ? translator_credits : NULL,
 		        pixbuf);
 	
 	if (pixbuf != NULL)

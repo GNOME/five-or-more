@@ -1,3 +1,8 @@
+2004-02-11  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* glines.c (game_about_callback): translator_credits ->
+	translator-credits.
+
 2004-01-29  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* shapes.svg: Updates from Richard Hoelscher.
