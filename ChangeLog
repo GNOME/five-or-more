@@ -1,3 +1,8 @@
+2004-12-20  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* glines.c: Patch from Marco Colombo to remove more hard-coded
+	constants. Another step towards feature request #83532.
+
 2004-12-13  Callum McKenzie  <callum@physics.otago.ac.nz>
 
         * glines.c: Some code cleanups. This includes some unnecessary 

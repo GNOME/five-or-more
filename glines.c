@@ -54,6 +54,7 @@
 #define KEY_HEIGHT "/apps/glines/saved/height"
 
 #define NCOLORS 7
+#define NPIECES 3
 #define HFIELDSIZE 9
 #define VFIELDSIZE 9
 
@@ -61,7 +62,7 @@ GConfClient *conf_client = NULL;
 
 GtkWidget *draw_area;
 static GtkWidget *app, *appbar, *pref_dialog;
-GtkWidget *preview_widgets[3];
+GtkWidget *preview_widgets[NPIECES];
 field_props field[HFIELDSIZE * VFIELDSIZE];
 
 /* Pre-rendering image data prepared from file. */
@@ -98,7 +99,7 @@ int preview_width = 0;
 
 int move_timeout = 100;
 int animate_id = 0;
-int preview[3];
+int preview[NPIECES];
 int response;
 char * ball_filename;
 GtkWidget *scorelabel;
@@ -325,9 +326,9 @@ init_preview (void)
 {
 	int i;
 
-	for (i = 0; i < 3; i++)
+	for (i = 0; i < NPIECES; i++)
 	{
-		preview[i] = 1 + (int) (7.0 * rand () / (RAND_MAX + 1.0));
+		preview[i] = 1 + (int) ((double)NCOLORS * rand () / (RAND_MAX + 1.0));
 	}
 }
 
@@ -336,7 +337,7 @@ draw_preview (void)
 {
 	int i;
 
-	for (i=0; i<3; i++) {
+	for (i=0; i<NPIECES; i++) {
 		gdk_window_set_back_pixmap (preview_widgets[i]->window,
 					    preview_pixmaps[preview[i]-1],
 					    FALSE);
@@ -431,7 +432,7 @@ init_new_balls (int num, int prev)
 		j = (int) (num_boxes * rand ()/(RAND_MAX + 1.0));
 		if (field[j].color == 0)
 		{
-			field[j].color = (prev == -1) ? (1 + (int) (7.0*rand()/(RAND_MAX+1.0))):preview[prev]; 
+			field[j].color = (prev == -1) ? (1 + (int) ((double)NCOLORS*rand()/(RAND_MAX+1.0))):preview[prev]; 
 			i++;
 		}
 	}
@@ -1031,14 +1032,14 @@ animate (gpointer gp)
 			if (!check_goal (widget, newactive))
 			{
 				gboolean fullline;
-				int balls[3];
+				int balls[NPIECES];
 				int spaces;
 
 				clear_tags ();
 				fullline = FALSE;
 				spaces = spaces_left ();
-				if (spaces > 3)
-					spaces = 3;
+				if (spaces > NPIECES)
+					spaces = NPIECES;
 				for (x = 0; x < spaces; x++)
 				{
 					int tmp = init_new_balls (1, x);
@@ -1396,9 +1397,9 @@ save_state (GnomeClient *client,
 	buf[HFIELDSIZE * VFIELDSIZE * 4] = '\0';
 	gconf_client_set_string (conf_client,
                                  KEY_SAVED_FIELD, buf, NULL);
-	for(i = 0; i < 3; i++)
+	for(i = 0; i < NPIECES; i++)
 		buf[i] = preview[i] + 'h';
-	buf[3] = '\0';
+	buf[NPIECES] = '\0';
 	gconf_client_set_string (conf_client,
                                  KEY_SAVED_PREVIEW, buf, NULL);
 	g_free(buf);
@@ -1466,7 +1467,7 @@ restart (void)
                                        KEY_SAVED_PREVIEW, NULL);
 	if(buf)
 	{
-		for(i = 0; i < 3; i++)
+		for(i = 0; i < NPIECES; i++)
 			preview[i] = CLAMP (buf[i] - 'h', 1, NCOLORS);
 		g_free(buf);
 	}
@@ -1673,14 +1674,14 @@ main (int argc, char *argv [])
 	alignment = gtk_alignment_new (0, 0.5, 0.3, 1);
 	gtk_box_pack_start (GTK_BOX (hbox), alignment, TRUE, TRUE, 0);
 
-	gridframe = games_grid_frame_new (3, 1);
+	gridframe = games_grid_frame_new (NPIECES, 1);
 	gtk_container_add (GTK_CONTAINER (alignment), gridframe);
 	
 	preview_hbox = gtk_hbox_new (FALSE, 0);
 	gtk_container_add (GTK_CONTAINER (gridframe), 
 			   preview_hbox);
 
-	for (i=0; i<3; i++) {
+	for (i=0; i<NPIECES; i++) {
 		preview_widgets[i] = gtk_drawing_area_new ();
 		gtk_box_pack_start (GTK_BOX (preview_hbox),
 				    preview_widgets[i], TRUE, TRUE, 0);
