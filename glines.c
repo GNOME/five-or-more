@@ -143,7 +143,6 @@ draw_all_balls (GtkWidget *widget)
 void
 set_inmove (int i)
 {
- 	static int timeou = -1;
  	int ms;
  	
  	if (inmove != i) {
