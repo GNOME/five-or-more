@@ -6,8 +6,8 @@
   <!ENTITY appversion "2.8">
   <!ENTITY manrevision "2.8">
   <!ENTITY date "September 2004">
-  <!ENTITY app "<application>Glines</application>">
-  <!ENTITY appname "Glines">
+  <!ENTITY app "<application>Five or More</application>">
+  <!ENTITY appname "Five or More">
   <!ENTITY version "2.8">
 ]>
 <!-- 
@@ -109,7 +109,7 @@
 </articleinfo>
 
   <indexterm zone="index"> 
-    <primary>Glines</primary> 
+    <primary>Five or More</primary> 
   </indexterm> 
 
  <!-- ============= Document Body ============================= -->
@@ -119,7 +119,7 @@
   <title>Introduction</title>
 
   <para> 
-   <application>Glines</application>, is the Gnome port of the once
+   <application>Five or More</application>, is the Gnome port of the once
    popular Windows game called <application>Color Lines</application>
    The game's objective is to align as often as possible five balls or more
    of the same color causing them to disappear, play as long as possible, and
@@ -128,18 +128,18 @@
   </para>
 
   <para>
-   To run <application>Glines</application>, select
-   <guimenuitem>Glines</guimenuitem> from the
+   To run <application>Five or More</application>, select
+   <guimenuitem>Five or More</guimenuitem> from the
    <guisubmenu>Games</guisubmenu> submenu of the <guimenu>Main
    Menu</guimenu>, or type <command>glines</command> on the
    command line. 
   </para>
 
   <para>
-   <application>Glines</application> is included in the
+   <application>Five or More</application> is included in the
    <filename>GNOME-games</filename> package, which is part of the
    GNOME desktop environment. This document describes version
-   &version; of <application>Glines</application>.
+   &version; of <application>Five or More</application>.
   </para>
 
  </sect1>
@@ -149,9 +149,9 @@
  <!-- This section should describe basic usage of the application. -->
 
   <sect1 id="usage">
-    <title>Playing Glines</title>
+    <title>Playing Five or More</title>
     <para>
-      <application>Glines</application> is easy to play. At startup, you find
+      <application>Five or More</application> is easy to play. At startup, you find
       yourself with five balls randomly positioned on the board. Each turn,
       you are allowed to move one ball. You can move it up or down, left
       or right, or any combination of the previously mentioned directions,
@@ -168,24 +168,24 @@
   <sect2 id="mainwin">
    <title>Basic usage</title>
    <para>
-    Starting <application>Glines</application> presents you with the
+    Starting <application>Five or More</application> presents you with the
     <interface>game board</interface>, which is nine squares on a
     side.  A new game starts as you launch the application. What it 
     looks like is shown in <xref linkend="mainwindow-fig" />.
 
     <!-- ==== Figure ==== -->
 	<figure id="mainwindow-fig">
-	  <title>Glines Main Window</title>
+	  <title>Five or More Main Window</title>
 	  <screenshot>
     <mediaobject>
      <imageobject>
       <imagedata fileref="figures/glines-startgame" format="PNG" srccredit="emese" />
      </imageobject>
      <textobject>
-      <phrase>Glines Main Window</phrase>
+      <phrase>Five or More Main Window</phrase>
      </textobject>
      <caption>
-      <para>Glines Main Window</para>
+      <para>Five or More Main Window</para>
      </caption>
     </mediaobject>
 </screenshot>
@@ -227,7 +227,7 @@
     <sect2 id="rules"> 
       <title>Basic Rules</title>
       <para>
-        A game of <application>Glines</application> begins with five
+        A game of <application>Five or More</application> begins with five
         balls of random colors on the board.
       </para>
       <para>
@@ -251,7 +251,7 @@
       
     <!-- ====  Table 1.  ==== -->
     <table id="glines-table1">
-     <title>Scoring in Glines</title>
+     <title>Scoring in Five or More</title>
       <tgroup cols="2" align="center">
        <thead>
         <row>
@@ -394,7 +394,7 @@
          <para>
           <guimenuitem>About</guimenuitem>&mdash; shows
           basic information about
-          <application>Glines</application>, such as
+          <application>Five or More</application>, such as
           the author's name and the application version number.
          </para>
         </listitem>
@@ -408,7 +408,7 @@
   <sect2 id="settings">
   <title>How to set preferences</title>
   <para>
-   You can configure <application>Glines</application> by clicking on 
+   You can configure <application>Five or More</application> by clicking on 
    <guimenuitem>Preferences</guimenuitem> in the applications 
    <guimenu>Settings</guimenu> menu. The following 
    <interface>dialogbox</interface> will show up:
@@ -440,7 +440,7 @@
   <para>
    Any changes you make are instantly applied. Furthermore your
    preferences are remembered for the next time you run
-   <application>Glines</application>.
+   <application>Five or More</application>.
   </para>
 </sect2>
  </sect1>
@@ -474,7 +474,7 @@
  <sect1 id="authors">
   <title>Authors</title>
   <para>
-   <application>Glines</application> was written by Róbert
+   <application>Five or More</application> was written by Róbert
    Szókovács (<email>szo@appaloosacorp.hu</email>) and Szabolcs Bán
    (<email>shooby@gnome.hu</email>). Please send all comments,
    suggestions, and bug reports to the <ulink
