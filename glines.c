@@ -330,6 +330,13 @@ draw_preview (void)
 }
 
 static void
+game_new_callback (GtkWidget *widget, void *data)
+{
+	reset_game ();
+ 	start_game ();
+}
+
+static void
 show_scores (gint pos)
 {
 	GtkWidget *dialog;
@@ -339,6 +346,8 @@ show_scores (gint pos)
 		gtk_window_set_transient_for (GTK_WINDOW (dialog),
 					      GTK_WINDOW (app));
 		gtk_window_set_modal (GTK_WINDOW (dialog), TRUE);
+		g_signal_connect (G_OBJECT (dialog), "unmap", 
+				  G_CALLBACK (game_new_callback), NULL);
 	}
 }
 
@@ -922,13 +931,6 @@ animate (gpointer gp)
 	draw_box (widget, x, y);
 
 	return TRUE;
-}
-
-static void
-game_new_callback (GtkWidget *widget, void *data)
-{
-	reset_game ();
- 	start_game ();
 }
 
 static void
