@@ -1,0 +1,503 @@
+<!DOCTYPE Article PUBLIC "-//GNOME//DTD DocBook PNG Variant V1.1//EN"[
+      <!ENTITY version "1.2.0">
+]>
+
+<!-- =============Document Header ============================= -->
+
+<article id="index"> 
+
+ <artheader>
+  <title>Glines</title>
+  <copyright>
+   <year>2000</year>
+   <holder>Emese Kovacs</holder>
+  </copyright>
+
+  <copyright>
+   <year>2001</year>
+   <holder>Fabrizio Stefani (traduzione italiana)</holder>
+  </copyright>
+
+  <!-- do not put authorname in the header except in copyright - use
+  section "authors" below -->
+
+  <legalnotice>
+   <para>
+    È permesso copiare, distribuire e/o modificare questo documento 
+    secondo i termini della <citetitle>GNU Free Documentation
+    License</citetitle>, Versione 1.1 o qualsiasi altra versione
+    successiva pubblicata dalla Free Software Foundation, senza
+    Sezioni non modificabili, senza nessun Testo Copertina e senza nessun
+    Testo di retro copertina. È possibile ottenere una copia della
+    <citetitle>GNU Free Documentation License</citetitle> dalla Free
+    Software Foundation visitando <ulink url="http://www.fsf.org/"
+    type="http">il loro sito web</ulink> oppure scrivendo a:
+    <address>
+     Free Software Foundation, Inc.
+     <street>59 Temple Place</street> - Suite 330
+     <city>Boston</city>, <state>MA</state> <postcode>02111-1307</postcode>
+     <country>USA</country>
+    </address>
+   </para>
+  </legalnotice>
+
+  <!-- this is version of manual, not application --> <releaseinfo>
+  Questa è la versione 1.0 del manuale di Glines.
+  </releaseinfo>
+
+ </artheader>
+
+ <!-- ============= Document Body ============================= -->
+
+ <!-- ============= Introduction ============================== -->
+ <sect1 id="intro">
+  <title>Introduzione</title>
+
+  <para> 
+   <application>Glines</application>, è la trasposizione per Gnome
+   del (un tempo) famoso  gioco <application>Color Lines</application> 
+   per Windows. Lo scopo del gioco è di allineare, tutte le volte che
+   è possibile, cinque o più biglie dello stesso colore (facendole così
+   sparire) e continuare a giocare il più a lungo possibile per diventare
+   il numero 1 nella classifica dei migliori punteggi.
+  </para>
+
+  <para>
+   Per lanciare <application>Glines</application>, selezionare
+  <guimenuitem>Glines</guimenuitem> dal sottomenu
+   <guisubmenu>Giochi</guisubmenu> del <guimenu>Menu
+   principale</guimenu>, oppure battere <command>glines</command>
+   sulla riga di comando. 
+  </para>
+
+  <para>
+   <application>Glines</application> è incluso nel pacchetto
+   <filename>GNOME-games</filename>, che fa parte del desktop GNOME.
+   Questo documento descrive la versione &version; di
+   <application>Glines</application>.
+  </para>
+
+ </sect1>
+
+
+ <!-- ================ Usage ================================ -->
+ <!-- This section should describe basic usage of the application. -->
+
+  <sect1 id="usage">
+    <title>Giocare a Glines</title>
+    <para>
+      <application>Glines</application> è un gioco semplice. All'inizio
+      vi ritroverete con cinque biglie disposte a caso sulla tavola; ad ogni
+      turno vi è consentito di muoverne una. Potete muoverla in su o in giù,
+      a sinistra o a destra, o in qualsiasi combinazione delle suddette 
+      direzioni, di un qualunque numero di caselle. Dopo che avete mosso il
+      computer piazzerà tre nuove biglie, di nuovo a caso. Potete vedere i
+      colori delle biglie che verranno aggiunte nel riquadro in alto a
+      sinistra della finestra. Quando riuscite ad allineare cinque biglie
+      dello stesso colore esse scompaiono lasciando un po' di spazio vuoto
+      per continuare a giocare.
+    </para>
+
+
+  <!-- ========= Basic Usage =========================== -->
+  <sect2 id="mainwin">
+   <title>Uso fondamentale</title>
+   <para>
+    Lanciato <application>Glines</application> vedrete la
+    <interface>tavola di gioco</interface>, che è di nove caselle per lato.
+    All'avvio del programma inizia una nuova partita. Vedrete qualcosa come
+    nella seguente <xref linkend="mainwindow-fig">.
+
+    <!-- ==== Figure ==== -->
+    <figure id="mainwindow-fig">
+     <title>Glines: Finestra principale</title>
+     <screenshot>
+      <screeninfo>Glines: Finestra principale</screeninfo>
+      <graphic fileref="figs/glines-new-game" format="png" srccredit="emese kovacs">
+      </graphic>
+     </screenshot>
+    </figure>
+    <!-- ==== End of Figure ==== -->
+   </para>
+
+   <para>
+    Proseguendo a giocare la tavola si riempirà sempre di più (a meno che 
+    non siate veramente bravi) e far scomparire le biglie diventerà sempre 
+    più difficile... Il gioco finisce quando la tavola è piena di biglie.
+    <!-- ==== Figure ==== -->
+    <figure id="gameover-fig">
+     <title>Fine gioco!</title>
+     <screenshot>
+      <screeninfo>Fine gioco!</screeninfo>
+      <graphic fileref="figs/glines-game-over" format="png" srccredit="emese kovacs">
+      </graphic>
+     </screenshot>
+    </figure>
+    <!-- ==== End of Figure ==== -->
+   </para>
+  </sect2>
+
+
+  <!-- ========= Rulez =========================== -->
+
+    <sect2 id="rules"> 
+      <title>Regole fondamentali</title>
+      <para>
+        Una partita a <application>Glines</application> incomincia con
+	cinque biglie di colore casuale disposte sulla tavola.
+      </para>
+      <para>
+       Per fare una mossa cliccate su una delle biglie. Una biglia è attiva
+       quando inizia a ruotare (o a fare qualcos'altro, a seconda del tema
+       che si è scelto, ma non anticipiamo...). Potete quindi scelgiere la
+       sua destinazione cliccando su una casella vuota. Se il percorso verso
+       tale destinazione è libero, la biglia attivata rotolerà fino a lì.
+       Se la casella di destinazione è occupata da un'altra biglia allora
+       non si muoverà nessuna biglia e la selezione verrà trasferita 
+       all'ultima biglia cliccata. Se il percorso non è libero (le biglie
+       non possono saltare sopra ad altre biglie!) il programma vi avvertirà
+       con un messaggio nella barra di stato (in fondo alla finestra) e la
+       biglia cliccata rimane attiva. 
+      </para>
+      <para>
+       Totalizzate dei punti ogni volta che fate sparire delle biglie.
+       Il punteggio è mostrato nell'angolo superiore destro della finestra.
+       La quantità di punti guadagnati dipende dal numero di biglie che siete
+       risciti ad allineare (vedere la Tabella 1).
+      </para>
+      
+    <!-- ====  Table 1.  ==== -->
+    <table>
+     <title>Punteggi di Glines</title>
+      <tgroup cols=2 align=center>
+      <thead>
+      <row>
+       <entry>Numero di biglie</entry>
+       <entry>Punteggio relativo</entry>
+      </row>      
+     </thead>      
+     <tbody> 
+      <row>
+       <entry>5</entry>
+       <entry>10</entry>
+      </row>
+      <row>
+       <entry>6</entry>
+       <entry>12</entry>
+      </row>
+      <row>
+       <entry>7</entry>
+       <entry>18</entry>
+      </row>
+      <row>
+       <entry>8</entry>
+       <entry>28</entry>
+      </row>
+      <row>
+       <entry>9</entry>
+       <entry>42</entry>
+      </row>
+      <row>
+       <entry>10</entry>
+       <entry>82</entry>
+      </row>
+      <row>
+       <entry>11</entry>
+       <entry>108</entry>
+      </row>
+      <row>
+       <entry>12</entry>
+       <entry>138</entry>
+      </row>
+     <row>
+       <entry>13</entry>
+       <entry>172</entry>
+      </row>
+     <row>
+       <entry>14</entry>
+       <entry>210</entry>
+      </row>
+     </tbody>
+     </tgroup> 
+    </table>
+
+
+   <!-- ==== End of Table ==== -->
+
+
+    </sect2>
+
+
+  <!-- ========= Menus =========================== -->
+  <sect2 id="menubar">
+   <title>Menu</title>
+   <para>
+    La barra dei menu, situata sopra alla <interface>tavola di
+    gioco</interface>, contiene i seguenti menu:
+   </para>
+
+   <variablelist>
+    <varlistentry>
+     <term><guimenu>Gioco</guimenu></term>
+     <listitem>
+      <para>
+       Questo menu comprende tre voci:
+      <itemizedlist>	
+	<listitem>
+	  <para>
+            <menuchoice> 
+	       <shortcut><keysym>Ctrl-N</keysym></shortcut>
+               <guimenuitem>Nuovo gioco</guimenuitem>
+	    </menuchoice>
+           </para>
+         </listitem>     
+       
+	<listitem>
+	  <para>
+            <menuchoice>
+               <guimenuitem>Punteggi...</guimenuitem>
+            </menuchoice>
+        </para>
+       </listitem>
+
+       	<listitem>
+	<para>
+          <menuchoice>
+            <shortcut><keysym>Ctrl-Q</keysym></shortcut>
+            <guimenuitem>Esci</guimenuitem>
+          </menuchoice>
+        </para>
+       </listitem>
+     </itemizedlist>
+      </para>
+     </listitem>
+    </varlistentry>
+
+	<varlistentry>
+	  <term><guimenu>Opzioni</guimenu></term>
+	  <listitem>
+	    <para>
+              Il menu <guimenu>Opzioni</guimenu> contiene solo una voce:
+              <itemizedlist>
+		<listitem>
+		  <para>
+                   <guimenuitem>Preferenze</guimenuitem>
+                    che richiama la finestra di dialogo Preferenze.
+                  </para>
+		</listitem>
+	      </itemizedlist>
+            </para>
+	  </listitem>
+	</varlistentry>
+
+    <varlistentry>
+     <term><guimenu>Aiuto</guimenu></term>
+     <listitem>
+      <para>
+       Questo menu contiene:
+       <itemizedlist>
+        <listitem>
+         <para>
+          <guimenuitem>Manuale di Glines</guimenuitem>&mdash;
+          mostra questo manuale.
+         </para>
+        </listitem>
+        <listitem>
+         <para>
+          <guimenuitem>Giocare a Glines</guimenuitem>&mdash;
+	  mostra la sezione del manuale che spiega come si gioca.
+         </para>
+        </listitem>
+        <listitem>
+         <para>
+          <guimenuitem>Creare nuovi temi</guimenuitem>&mdash;
+	  mostra dettagliatamente come si creano nuovi temi per glines.
+         </para>
+        </listitem>
+        <listitem>
+         <para>
+          <guimenuitem>Bug noti</guimenuitem>&mdash;
+	  elenca i bug noti del programma e le funzionalità richieste
+	  dagli utenti.
+         </para>
+         </listitem>
+         <listitem>
+         <para>
+          <guimenuitem>Autori e bug reports</guimenuitem>&mdash;
+	  fornisce gli estremi degli autori e la spiegazione di come
+	  effettuare rapporti di malfunzionamento (bug reports).
+         </para>
+        </listitem>
+
+        <listitem>
+         <para>
+          <guimenuitem>Informazioni su...</guimenuitem>&mdash; 
+	  mostra le informazioni principali riguardanti
+          <application>Glines</application>, come i nomi degli autori
+          e il numero di versione dell'applicazione.
+         </para>
+        </listitem>
+       </itemizedlist>
+
+      </para>
+     </listitem>
+    </varlistentry>
+   </variablelist>
+  </sect2>
+
+  <sect2 id="settings">
+  <title>Come impostare le preferenze</title>
+  <para>
+  Potete configurare <application>Glines</application> selezionate
+  <guimenuitem>Preferenze</guimenuitem> nel menu <guimenu>Opzioni</guimenu>.
+  Verrà mostrata la seguente <interface>finestra di dialogo</interface>:
+</para>
+ <!-- ==== Figure ==== -->
+    <figure id="preferences-dialogbox">
+     <title>Preferenze</title>
+     <screenshot>
+      <screeninfo>Preferenze</screeninfo>
+      <graphic fileref="figs/glines-preferences" format="png" srccredit="emese kovacs">
+      </graphic>
+     </screenshot>
+    </figure>
+<para>
+ In <application>Glines</application> è possibile scegliere fra diversi stili
+ di biglie e diverse immagini di sfondo. Semplicemente cliccate sui menu a
+ discesa e scegliete quelli che vi piacciono di più. 
+</para>
+<para>
+ Odiate quei programmi che vi chiedono conferma alla chiusura?
+ Bene, la casella di spunta "Chiedi conferma in uscita" vi permette di
+ disabilitare tale richiesta.
+</para>
+<para>
+ <application>Glines</application> nella versione 1.9 e successive gestiscono
+ le sessioni in modo da memorizzare le vostre impostazioni preferite quando
+ uscite dal programma o quando chiudete il desktop.
+</para>
+ <caution>
+ <title>Attenzione!</title>
+ <para>
+  Fate attenzione però, il gioco in corso non verrà salvato!!! 
+ </para>
+</caution>
+
+
+    <!-- ==== End of Figure ==== -->
+</sect2>
+ </sect1>
+<sect1 id="themes">
+    <title>Come creare nuovi temi</title>
+    <para>Alcune informazioni su come creare delle skin per glines.</para>
+</sect1>
+
+
+
+
+
+ <!-- ============= Bugs ================================== -->
+ <!-- This section should describe known bugs and limitations of
+      the program if there are any - please be frank and list all
+      problems you know of -->
+ <sect1 id="bugs">
+  <title>Limitazioni e Bug noti</title>
+  <para>
+   Questa applicazione non ha nessun bug conosciuto.
+  </para>
+ </sect1>
+
+
+<!-- ============= Authors ================================ -->
+
+ <sect1 id="authors">
+  <title>Autori</title>
+  <para>
+   <application>Glines</application> è stato scritto da Robert Szokovacs
+   (<email>szo@appaloosacorp.hu</email>) e da Szabolcs BAN
+   (<email>shooby@gnome.hu</email>).  Per maggiori informazioni su
+   <application>Glines</application>, visitate la <ulink
+   url="http://projects.gnome.hu/glines/" type="http">pagina Web di 
+   Glines</ulink>.  Per favore inviate commenti, suggerimenti e rapporti 
+   sui bug allo <ulink url="http://bugs.gnome.org" type="http">GNOME bug 
+   tracking database</ulink>. (istruzioni su come sottoporre i rapporti 
+   sui bug possono essere trovate 
+   <ulink url="http://bugs.gnome.org/Reporting.html" type="http">
+   on-line</ulink>). Se usate GNOME 1.1 o successivo, per sottoporre i
+   rapporti sui bug potete anche usare il <application>Bug Report 
+   Tool</application> (<command>bug-buddy</command>), rintracciabile nel
+   sottomenu <guisubmenu>Utilities</guisubmenu> del <guimenu>Menu 
+   principale</guimenu>.
+  </para>
+
+  <para> Questo manuale è stato scritto da Emese Kovacs
+   (<email>emese@gnome.hu</email>). Inviare commenti e suggerimenti
+   riguardanti questo manuale allo <ulink url="http://www.gnome.org/gdp"
+   type="http">GNOME Documentation Project</ulink>, spedendo una email a 
+   <email>docs@gnome.org</email>. Potete anche mandare i vostri commenti
+   online usando la<ulink url="http://www.gnome.org/gdp/doctable/"
+   type="http">GNOME Documentation Status Table</ulink>.
+  </para>
+
+  <para>
+   Traduzione italiana di Fabrizio Stefani (<email>fstef@it.gnome.org</email>).
+   Inviare commenti e suggerimenti riguardanti questa traduzione al suddetto
+   indirizzo di posta elettronica.
+  </para>
+
+ </sect1>
+
+
+ <!-- ============= Application License ============================= -->
+
+ <sect1 id="license">
+  <title>Licenza</title>
+  <para>
+   Questo programma è software libero; è possibile ridistribuirlo e/o
+   modificarlo rispettando i termini della <citetitle>GNU General Public
+   License</citetitle> pubblicata dalla Free Software Foundation;
+   nella versione 2 o (a vostra scelta) qualsiasi altra versione
+   successiva.
+  </para>
+  <para>
+   Questo programma è distribuito nella speranza che sia utile, ma SENZA
+   NESSUNA GARANZIA; senza neppure l'implicita garanzia di COMMERCIABILITÀ
+   o UTILIZZABILITÀ PER UN PARTICOLARE SCOPO. Per maggiori dettagli
+   vedere la <citetitle>Licenza pubblica generica GNU</citetitle>.
+  </para>
+
+  <para>
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the <citetitle>GNU General Public
+   License</citetitle> as published by the Free Software Foundation;
+   either version 2 of the License, or (at your option) any later
+   version.
+  </para>
+  <para>
+   This program is distributed in the hope that it will be useful, but
+   WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   <citetitle>GNU General Public License</citetitle> for more details.
+  </para>
+
+  <para>
+   Una copia della <citetitle>Licenza pubblica generica GNU</citetitle> 
+   (GNU General Public License) è inclusa nell'appendice della
+   <citetitle>Guida utente di GNOME</citetitle>.
+   È possibile anche ottenere una copia della <citetitle>Licenza pubblica
+   generica GNU</citetitle> dalla Free Software Foundation visitando <ulink 
+   url="http://www.fsf.org" type="http">il loro sito Web</ulink> o scrivendo
+   alla:
+   <address>
+    Free Software Foundation, Inc.
+    <street>59 Temple Place</street> - Suite 330
+    <city>Boston</city>, <state>MA</state> <postcode>02111-1307</postcode>
+    <country>USA</country>
+   </address>
+  </para>
+ </sect1>
+</article>
+
+
+
+

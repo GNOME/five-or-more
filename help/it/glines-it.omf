@@ -1,0 +1,14 @@
+<?xml version="1.0" standalone="no"?>
+<omf>
+  <resource>
+    <title>
+      Manuale di Glines
+    </title>
+    <subject>
+      <category>GNOME|Games</category>
+    </subject>
+    <format mime="text/sgml"/>
+    <identifier url="glines.sgml"/>
+    <language code="it"/>
+  </resource>
+</omf>
