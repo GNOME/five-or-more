@@ -58,7 +58,7 @@ static GtkWidget *app, *appbar, *pref_dialog;
 GtkWidget *next_draw_area; /* XXX Shouldn't be this much externls! */
 field_props field[FIELDSIZE * FIELDSIZE];
 GdkPixbuf *ball_pixbuf = NULL;
-GdkPixmap *surface;
+GdkPixmap *surface = NULL;
 
 GtkWidget *fast_moves_toggle_button = NULL;
 
@@ -1427,8 +1427,6 @@ main (int argc, char *argv [])
 
 	gtk_widget_set_events (draw_area, gtk_widget_get_events(draw_area) |GDK_BUTTON_PRESS_MASK);
 
-	gtk_widget_realize (draw_area);
-
         init_config ();
 	load_properties ();
 
@@ -1440,7 +1438,7 @@ main (int argc, char *argv [])
 	g_signal_connect (G_OBJECT (next_draw_area), "expose_event",
 			  G_CALLBACK (preview_expose_event), NULL);
 
-	gtk_widget_realize (next_draw_area);
+	gtk_widget_realize (next_draw_area); 
 
 	update_score_state ();
 

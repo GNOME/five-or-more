@@ -1,6 +1,7 @@
 2003-10-19  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* glines.c: Replace deprecated functions.
+	(main): Remove the explicit realize for the main board.
 
 Wed Aug 27 15:10:24 2003  Jonathan Blandford  <jrb@redhat.com>
 
