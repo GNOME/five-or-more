@@ -3,8 +3,6 @@ pixmapdir = $(datadir)/pixmaps/glines
 icondir = $(datadir)/pixmaps
 Gamesdir = $(datadir)/gnome/apps/Games
 
-#SUBDIRS = help
-
 INCLUDES = -I.. -I$(srcdir)/..		\
 	-DGNOMELOCALEDIR=\""$(datadir)/locale"\" \
 	-I$(includedir)			\
@@ -28,8 +26,6 @@ EXTRA_DIST = glines.desktop $(pixmap_DATA) $(icon_DATA)
 icon_DATA = glines.xpm
 
 Games_DATA = glines.desktop
-
-SUBDIRS = help
 
 install-data-local:
 	-$(mkinstalldirs) $(DESTDIR)$(scoredir)
