@@ -1,3 +1,11 @@
+2005-03-24  Dennis Cranston <dennis_cranston@yahoo.com>
+ 
+ 	* glines.c:  Use Header capitalization for category titles.
+ 	
+2005-03-28  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* glines.c: Fullscreen patch from Marco Colombo.
+
 2005-03-24  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* glines.h: 

@@ -73,6 +73,7 @@ static GtkWidget *app, *appbar, *pref_dialog, *gridframe;
 GtkWidget *preview_widgets[MAXNPIECES];
 GtkWidget *menubar;
 GtkWidget *scoreitem;
+GtkToggleAction *fullscreenaction;
 
 field_props field[MAXFIELDSIZE * MAXFIELDSIZE];
 
@@ -1312,6 +1313,26 @@ set_fast_moves_callback (GtkWidget *widget, gpointer *data)
 }
 
 static void
+fullscreen_callback (GtkToggleAction *action)
+{
+	if (gtk_toggle_action_get_active (action))
+		gtk_window_fullscreen (GTK_WINDOW (app));
+	else
+		gtk_window_unfullscreen (GTK_WINDOW (app));
+}
+
+/* Just in case something else takes us to/from fullscreen. */
+static void
+window_state_callback (GtkWidget *widget, GdkEventWindowState *event)
+{
+	if (!(event->changed_mask & GDK_WINDOW_STATE_FULLSCREEN))
+		return;
+    
+	gtk_toggle_action_set_active (fullscreenaction,
+				      event->new_window_state & GDK_WINDOW_STATE_FULLSCREEN);
+}
+
+static void
 pref_dialog_response (GtkDialog *dialog, gint response, gpointer data)
 {
 	gtk_widget_hide (GTK_WIDGET (dialog));
@@ -1384,7 +1405,7 @@ game_props_callback (void)
 			gtk_label_set_mnemonic_widget (GTK_LABEL (l), w);
 
 
-			frame = games_frame_new (_("Field size"));
+			frame = games_frame_new (_("Field Size"));
 			fv = gtk_vbox_new (FALSE, FALSE);
 			gtk_box_set_spacing (GTK_BOX (fv), 6);
 			gtk_container_add (GTK_CONTAINER (frame), fv);
@@ -1629,6 +1650,10 @@ const GtkActionEntry actions[] = {
 	{ "About", GTK_STOCK_ABOUT, NULL, NULL, NULL, G_CALLBACK (game_about_callback) }
 };
 
+const GtkToggleActionEntry toggle_actions[] = {
+	{ "Fullscreen", NULL, N_("_Fullscreen"), "F11", NULL, G_CALLBACK (fullscreen_callback) }
+};
+
 const char *ui_description = 
 "<ui>"
 "  <menubar name='MainMenu'>"
@@ -1640,6 +1665,7 @@ const char *ui_description =
 "      <menuitem action='Quit'/>"
 "    </menu>"
 "    <menu action='SettingsMenu'>"
+"      <menuitem action='Fullscreen'/>"
 "      <menuitem action='Preferences'/>"
 "    </menu>"
 "    <menu action='HelpMenu'>"
@@ -1659,6 +1685,11 @@ static void create_menus ()
 	gtk_action_group_set_translation_domain (action_group, GETTEXT_PACKAGE);
 	gtk_action_group_add_actions (action_group, actions, 
 				      G_N_ELEMENTS (actions), NULL);
+	gtk_action_group_add_toggle_actions (action_group, toggle_actions,
+					     G_N_ELEMENTS (toggle_actions), NULL);
+
+	fullscreenaction = GTK_TOGGLE_ACTION (gtk_action_group_get_action (action_group, "Fullscreen"));
+
 	ui_manager = gtk_ui_manager_new ();
 	gtk_ui_manager_insert_action_group (ui_manager, action_group, 0);
 	gtk_ui_manager_add_ui_from_string (ui_manager, ui_description, -1, NULL);
@@ -1816,6 +1847,8 @@ main (int argc, char *argv [])
 	                  G_CALLBACK (game_quit_callback), NULL);
 	g_signal_connect (G_OBJECT (app), "configure_event",
 	                  G_CALLBACK (window_resize_cb), NULL);
+	g_signal_connect (G_OBJECT (app), "window_state_event",
+			  G_CALLBACK (window_state_callback), NULL);
 
 	appbar = gnome_appbar_new (FALSE, TRUE, GNOME_PREFERENCES_USER);
 	gnome_app_set_statusbar (GNOME_APP (app), GTK_WIDGET(appbar));  
