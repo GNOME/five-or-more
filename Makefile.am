@@ -25,8 +25,7 @@ glines_LDADD =		\
 	$(GNOME_GAMES_LIBS) \
 	$(INTLLIBS)
 
-pixmap_DATA = ball.png classic.png dots.png pulse.png \
-		black.xpm gray.xpm woody.xpm
+pixmap_DATA = ball.png classic.png dots.png pulse.png gumball.png 
 
 EXTRA_DIST = glines.desktop.in $(pixmap_DATA) $(icon_DATA)
 

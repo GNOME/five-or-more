@@ -1,3 +1,8 @@
+2003-06-08  William Jon McCann  <mccann@jhu.edu>
+
+	* Makefile.am (pixmap_DATA): Added new gumball theme from
+	bug #105921.  Don't install unused background pixmaps.
+
 2003-06-08  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* glines.c (reset_game): Fixups to remove warnings and to make it
