@@ -104,15 +104,29 @@ load_image (gchar *fname,
 	fn = gnome_program_locate_file (NULL, GNOME_FILE_DOMAIN_APP_PIXMAP, (tmp), FALSE, NULL);
 	g_free (tmp);
 
-	if (!g_file_test (fn, G_FILE_TEST_EXISTS)) {
-		char *message = g_strdup_printf (_("Glines couldn't find image file:\n%s\n\n"
-						   "Please check your Glines installation"), fn);
-		GtkWidget *w = gtk_message_dialog_new (GTK_WINDOW (app),
-						       GTK_DIALOG_MODAL | GTK_DIALOG_DESTROY_WITH_PARENT,
-						       GTK_MESSAGE_ERROR,
-						       GTK_BUTTONS_OK,
-						       message,
-						       NULL);
+
+	/* Just think of this as an if statement, but we want to use break. */
+	while (!g_file_test (fn, G_FILE_TEST_EXISTS)) {
+		char * message;
+		GtkWidget * w;
+
+		/* ball.png was replaced with balls.svg. */
+		if (g_utf8_collate (fname, "ball.png") == 0) {
+			tmp = g_build_filename ("glines", "balls.svg", NULL);
+			fn = gnome_program_locate_file (NULL, GNOME_FILE_DOMAIN_APP_PIXMAP, (tmp), FALSE, NULL);
+			g_free (tmp);
+			if (g_file_test (fn, G_FILE_TEST_EXISTS))
+				break;
+		}
+
+		message = g_strdup_printf (_("Glines couldn't find image file:\n%s\n\n"
+					     "Please check your Glines installation"), fn);
+		w = gtk_message_dialog_new (GTK_WINDOW (app),
+					    GTK_DIALOG_MODAL | GTK_DIALOG_DESTROY_WITH_PARENT,
+					    GTK_MESSAGE_ERROR,
+					    GTK_BUTTONS_OK,
+					    message,
+					    NULL);
 		gtk_dialog_set_has_separator (GTK_DIALOG (w), FALSE);
 		gtk_dialog_run (GTK_DIALOG (w));	
 		g_free (message);

@@ -1,6 +1,8 @@
 2004-01-03  Callum McKenzie  <callum@physics.otago.ac.nz>
 
-	* Makefile.am (pixmap_DATA): Add balls.svg to the distribution.
+	* glines.c (load_image): 	
+	* Makefile.am (pixmap_DATA): Replace ball.png with
+	balls.svg. Include a bit of logic to make the transition painless.
 
 2004-01-02  Callum McKenzie  <callum@physics.otago.ac.nz>
 
