@@ -39,6 +39,6 @@ CLEANFILES = $(Games_DATA)
 install-data-local:
 	-$(mkinstalldirs) $(DESTDIR)$(scoredir)
 	touch $(DESTDIR)$(scoredir)/glines.scores
-	-chown games.games $(DESTDIR)$(scoredir)/glines.scores
+	-chown $(scores_user).$(scores_group) $(DESTDIR)$(scoredir)/glines.scores
 	-chmod 664 $(DESTDIR)$(scoredir)/glines.scores
-	-chgrp games $(DESTDIR)$(bindir)/glines && chmod 2555 $(DESTDIR)$(bindir)/glines
+	-if test "x$(setgid)" = "xtrue"; then chgrp $(scores_group) $(DESTDIR)$(bindir)/glines && chmod 2555 $(DESTDIR)$(bindir)/glines ; fi
