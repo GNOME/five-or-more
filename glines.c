@@ -804,8 +804,8 @@ game_about_callback (GtkWidget *widget, void *data)
     static GtkWidget *about = NULL;
     GdkPixbuf *pixbuf = NULL;
     const gchar *authors[] = {
-		            _("Robert Szokovacs <szo@appaloosacorp.hu>"),
-			    _("Szabolcs Ban <shooby@gnome.hu>"),
+		            "Robert Szokovacs <szo@appaloosacorp.hu>",
+			    "Szabolcs B\xc3\xa1n <shooby@gnome.hu>",
 			    NULL
 			    };
     
@@ -833,7 +833,8 @@ game_about_callback (GtkWidget *widget, void *data)
    }
    					        
 	about = gnome_about_new (_("Glines"), VERSION,
-			_("(C) 1997-2000 the Free Software Foundation"),
+			"Copyright \xc2\xa9 1997-2003 Free Software "
+			"Foundation, Inc.",
 			_("GNOME port of the once-popular Color Lines game"),
 			(const char **)authors,
 			(const char **)documenters,
