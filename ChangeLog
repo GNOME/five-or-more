@@ -1,3 +1,11 @@
+2002-01-02  Josh Barrow  <drleary@mac.com>
+
+	* glines.c: (load_image), (draw_box), (draw_ball), (expose_event),
+	(game_maybe_quit), (game_about_callback), (load_theme_cb),
+	(fill_menu), (game_props_callback), (game_quit_callback),
+	(save_state), (main):
+	Ported to use non-deprecated functions.
+
 2001-12-19  Seth Nickell  <snickell@stanford.edu>
 
 	* Makefile.am:

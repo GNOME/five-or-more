@@ -4,7 +4,10 @@
  * Authors: Robert Szokovacs <szo@appaloosacorp.hu>
  *          Szabolcs Ban <shooby@gnome.hu>
  */
-
+#define G_DISABLE_DEPRECATED
+#define GDK_DISABLE_DEPRECATED
+#define GTK_DISABLE_DEPRECATED
+#define GNOME_DISABLE_DEPRECATED
 
 #include <unistd.h>
 #include <stdio.h>
@@ -15,6 +18,7 @@
 
 #include <config.h>
 #include <gnome.h>
+#include <gtk/gtk.h>
 
 #include <gdk-pixbuf/gdk-pixbuf.h>
 
@@ -44,6 +48,7 @@ int score = 0;
 int ask_me = 0;
 int move_timeout = 100;
 int preview[3];
+int response;
 char * ball_filename;
 char * box_filename;
 GtkWidget *scorelabel;
@@ -61,14 +66,19 @@ GdkPixmap **mask)
     
 	tmp = g_strconcat ( "glines/", fname, NULL);
 
-	fn = gnome_unconditional_pixmap_file ( tmp );
+	fn = gnome_program_locate_file (NULL, GNOME_FILE_DOMAIN_PIXMAP, (tmp), FALSE, NULL);
 	g_free( tmp );
 
-	if (!g_file_exists (fn)) {
+	if (!g_file_test (fn, G_FILE_TEST_EXISTS)) {
 		char *message = g_strdup_printf (_("Glines couldn't find pixmap file:\n%s\n\n"
 			"Please check your Glines installation"), fn);
-		GtkWidget *w = gnome_error_dialog (message);
-		gnome_dialog_run_and_close (GNOME_DIALOG(w));
+		GtkWidget *w = gtk_message_dialog_new (GTK_WINDOW (app),
+						       GTK_DIALOG_MODAL | GTK_DIALOG_DESTROY_WITH_PARENT,
+						       GTK_MESSAGE_ERROR,
+						       GTK_BUTTONS_OK,
+						       message,
+						       NULL);
+		gtk_dialog_run (GTK_DIALOG (w));	
 		g_free (message);
 		exit (1);
 	}
@@ -77,9 +87,9 @@ GdkPixmap **mask)
 	g_free( fn );
 
 	if (*pixmap)
-		gdk_pixmap_unref (*pixmap);
+		gdk_drawable_unref (*pixmap);
 	if (*mask)
-		gdk_pixmap_unref (*mask);
+		gdk_drawable_unref (*mask);
 
 	gdk_pixbuf_render_pixmap_and_mask (image, pixmap, mask, 127);
 
@@ -243,7 +253,7 @@ draw_all_balls(GtkWidget *widget, int coord)
 void
 draw_box(GtkWidget *widget, GdkPixmap *bpm, int x, int y, int redraw)
 {
-	gdk_draw_pixmap(bpm, widget->style->fg_gc[GTK_WIDGET_STATE (widget)], box_pixmap,
+	gdk_draw_drawable(bpm, widget->style->fg_gc[GTK_WIDGET_STATE (widget)], box_pixmap,
 			0, 0, x*BOXSIZE, y*BOXSIZE, BOXSIZE, BOXSIZE);
 	if(redraw)
 	{
@@ -267,7 +277,7 @@ draw_ball(GtkWidget *widget, GdkPixmap *bpm, int x, int y, int color, int phase,
 	gc = widget->style->fg_gc[GTK_STATE_NORMAL];
 	gdk_gc_set_clip_mask (gc, ball_mask);
 	gdk_gc_set_clip_origin (gc, 5 + x*BOXSIZE - phase*BALLSIZE, 5 + y*BOXSIZE - (color - 1)*BALLSIZE);
-	gdk_draw_pixmap(bpm, gc, ball_pixmap,
+	gdk_draw_drawable(bpm, gc, ball_pixmap,
 			phase*BALLSIZE, (color - 1)*BALLSIZE, 5 + x*BOXSIZE, 5 + y*BOXSIZE, BALLSIZE, BALLSIZE);
 	gdk_gc_set_clip_mask (gc, NULL);
 	if(redraw == 1)
@@ -446,7 +456,7 @@ static gint
 expose_event (GtkWidget *widget, GdkEventExpose *event, gpointer gp)
 {
 	GdkPixmap *bpm = (GdkPixmap *)gp;		
-	gdk_draw_pixmap(widget->window,
+	gdk_draw_drawable(widget->window,
 			widget->style->fg_gc[GTK_WIDGET_STATE (widget)],
 			bpm,
 			event->area.x, event->area.y,
@@ -684,7 +694,7 @@ game_top_ten_callback(GtkWidget *widget, gpointer data)
 static void
 game_maybe_quit (GtkWidget *widget, int button)
 {
- 	if (button == 0) {
+ 	if (button == GTK_RESPONSE_YES) {
  	 	gtk_widget_destroy (app);
  	 	gtk_main_quit ();
  	}
@@ -714,7 +724,7 @@ game_about_callback (GtkWidget *widget, void *data)
 			(const char **)documenters,
                         (const char *)translator_credits,
 		        NULL);
-	gnome_dialog_set_parent(GNOME_DIALOG(about), GTK_WINDOW(app));
+	gnome_dialog_set_parent(about), GTK_WINDOW(app);
 	gtk_widget_show (about);
 	return TRUE;
 }       
@@ -735,7 +745,7 @@ glines_cancel (GtkWidget *widget, void *data)
 }
 
 static void 
-load_theme_cb()
+load_theme_cb(void)
 {
   gnome_config_set_string ("/glines/Table/BallTheme",
                                      ball_filename);
@@ -781,7 +791,7 @@ static void
 fill_menu (GtkWidget *menu, char * mtype, gboolean bg)
 {
 	struct dirent *e;
-	char *dname = gnome_unconditional_pixmap_file ("glines");
+	char *dname = gnome_program_locate_file (NULL, GNOME_FILE_DOMAIN_PIXMAP, ("glines"), FALSE, NULL);
 	DIR *dir;
         int itemno = 0;
 	
@@ -801,15 +811,15 @@ fill_menu (GtkWidget *menu, char * mtype, gboolean bg)
 			
 		item = gtk_menu_item_new_with_label (s);
 		gtk_widget_show (GTK_WIDGET(item));
-		gtk_menu_append (GTK_MENU(menu), GTK_WIDGET(item));
+		gtk_menu_shell_append (GTK_MENU_SHELL(menu), GTK_WIDGET(item));
 		if(bg)
-		gtk_signal_connect (GTK_OBJECT(item), "activate",
-				    GTK_SIGNAL_FUNC (set_selection1), s);
+		g_signal_connect (G_OBJECT(item), "activate",
+				  G_CALLBACK (set_selection1), s);
 		else
-		gtk_signal_connect (GTK_OBJECT(item), "activate",
-				    GTK_SIGNAL_FUNC (set_selection), s);
-		gtk_signal_connect (GTK_OBJECT(item), "destroy",
-				    GTK_SIGNAL_FUNC (free_str), s);
+		g_signal_connect (G_OBJECT(item), "activate",
+				  G_CALLBACK (set_selection), s);
+		g_signal_connect (G_OBJECT(item), "destroy",
+				  G_CALLBACK (free_str), s);
 
 	        if (bg){
 	        if (!strcmp(box_filename, s))
@@ -845,14 +855,19 @@ game_props_callback (GtkWidget *widget, void *data)
 	if (pref_dialog)
 		return;
 	
-	pref_dialog = gnome_dialog_new (_("Preferences"),
-			GNOME_STOCK_BUTTON_OK, GNOME_STOCK_BUTTON_CANCEL,
-			GNOME_STOCK_BUTTON_HELP,
-			NULL);
-        gnome_dialog_set_default(GNOME_DIALOG (pref_dialog), 0);
-	gnome_dialog_set_parent (GNOME_DIALOG (pref_dialog), GTK_WINDOW (app));
-	gtk_signal_connect (GTK_OBJECT(pref_dialog), "close",
-			    GTK_SIGNAL_FUNC (glines_cancel), NULL);
+	pref_dialog = gtk_dialog_new_with_buttons (_("Preferences"),
+						   GTK_WINDOW (app),
+						   GTK_DIALOG_DESTROY_WITH_PARENT,
+						   GTK_STOCK_CANCEL,
+						   GTK_RESPONSE_CANCEL,
+						   GTK_STOCK_OK,
+						   GTK_RESPONSE_OK,
+						   GTK_STOCK_HELP,
+						   GTK_RESPONSE_HELP,
+						   NULL);
+			
+	g_signal_connect (G_OBJECT(pref_dialog), "delete_event",
+			  G_CALLBACK (glines_cancel), NULL);
 
 	omenu = gtk_option_menu_new ();
 	menu = gtk_menu_new ();
@@ -863,31 +878,26 @@ game_props_callback (GtkWidget *widget, void *data)
 	omenu1 = gtk_option_menu_new ();
 	menu1 = gtk_menu_new ();
 	fill_menu (menu1,".xpm",TRUE);
-	gtk_widget_show (omenu1);
 	gtk_option_menu_set_menu (GTK_OPTION_MENU(omenu1), menu1);
 
 	f = gtk_frame_new (_ ("Theme"));
-	gtk_container_border_width (GTK_CONTAINER (f), 5);
+	gtk_container_set_border_width (GTK_CONTAINER (f), 5);
 
 	hb = gtk_hbox_new (FALSE, FALSE);
-	gtk_widget_show (hb);
 	
 	l = gtk_label_new (_("Select theme:"));
-	gtk_widget_show (l);
 	    
 	gtk_box_pack_start_defaults (GTK_BOX(hb), l);
 	gtk_container_add (GTK_CONTAINER(hb), omenu);
 
 	fv = gtk_vbox_new (0, 5);
-	gtk_container_border_width (GTK_CONTAINER (fv), 5);
-	gtk_widget_show (fv);
+	gtk_container_set_border_width (GTK_CONTAINER (fv), 5);
 	
 	gtk_box_pack_start_defaults (GTK_BOX(fv), hb);
 	hb1 = gtk_hbox_new (FALSE, FALSE);
 	gtk_widget_show (hb1);
 
 	l = gtk_label_new (_("Select background:"));
-	gtk_widget_show (l);
 	    
 	gtk_box_pack_start_defaults (GTK_BOX(hb1), l);
 	gtk_container_add (GTK_CONTAINER(hb1), omenu1);
@@ -899,8 +909,8 @@ game_props_callback (GtkWidget *widget, void *data)
 	if (move_timeout == 10) {
 	        gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (cb), TRUE);
 	}
-	gtk_signal_connect (GTK_OBJECT(cb), "clicked", (GtkSignalFunc)set_fast_moves, NULL);
-        gtk_widget_show (cb);
+	g_signal_connect (G_OBJECT(cb), "clicked", 
+			  G_CALLBACK (set_fast_moves), NULL);
 
 	gtk_container_add (GTK_CONTAINER(fv), cb);
 
@@ -910,24 +920,32 @@ game_props_callback (GtkWidget *widget, void *data)
 	   gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (cb),
 	                                   TRUE);
 	 }
-        gtk_signal_connect (GTK_OBJECT(cb), "clicked", (GtkSignalFunc)set_selection_def, NULL);
-	gtk_widget_show (cb);
+        g_signal_connect (G_OBJECT(cb), "clicked", 
+			  G_CALLBACK (set_selection_def), NULL);
 
 	gtk_container_add (GTK_CONTAINER(fv), cb);
 
-	gtk_box_pack_start_defaults (GTK_BOX(GNOME_DIALOG(pref_dialog)->vbox), f);
+	gtk_box_pack_start_defaults (GTK_BOX(GTK_DIALOG(pref_dialog)->vbox), f);
 	gtk_container_add (GTK_CONTAINER (f), fv);
 	
-	gtk_widget_show (f);
+        gtk_widget_show_all (pref_dialog);
+	response = gtk_dialog_run (GTK_DIALOG (pref_dialog));
 	
-	gnome_dialog_button_connect (GNOME_DIALOG (pref_dialog), 0,
-			GTK_SIGNAL_FUNC (load_theme_cb), NULL);
-	gnome_dialog_button_connect (GNOME_DIALOG (pref_dialog), 1,
-			GTK_SIGNAL_FUNC (glines_cancel), (gpointer)1);
-	gnome_dialog_button_connect (GNOME_DIALOG (pref_dialog), 2,
-			GTK_SIGNAL_FUNC (help_cb), NULL);
-
-        gtk_widget_show (pref_dialog);
+	switch (response) {
+	case GTK_RESPONSE_OK:
+		load_theme_cb ();
+		break;
+	case GTK_RESPONSE_CANCEL:
+		glines_cancel (NULL, NULL);
+		break;
+	case GTK_RESPONSE_HELP:
+		help_cb (NULL, NULL);
+		break;
+	default:
+		break;
+	};
+	
+	
 }
 
 static int
@@ -937,25 +955,29 @@ game_quit_callback (GtkWidget *widget, void *data)
 
 	if (ask_me) {
 
-	 box = gnome_message_box_new (_("Do you really want to quit?"),
-	                             GNOME_MESSAGE_BOX_QUESTION,
-	                             GNOME_STOCK_BUTTON_YES,
-	                             GNOME_STOCK_BUTTON_NO,
-	                             NULL);
-	 gnome_dialog_set_parent (GNOME_DIALOG(box), GTK_WINDOW(app));
-	 gnome_dialog_set_default (GNOME_DIALOG (box), 0);
-	 gtk_window_set_modal (GTK_WINDOW (box), TRUE);  
-	 gtk_signal_connect (GTK_OBJECT (box), "clicked",
-	                   (GtkSignalFunc)game_maybe_quit, NULL);
+	 box = gtk_message_dialog_new (GTK_WINDOW (app),
+				       GTK_DIALOG_MODAL | GTK_DIALOG_DESTROY_WITH_PARENT,
+				       GTK_MESSAGE_QUESTION,
+				       GTK_BUTTONS_NONE,
+				       (_("Do you really want to quit?")));
+	 gtk_dialog_add_buttons (GTK_DIALOG (box),
+				 GTK_STOCK_NO, GTK_RESPONSE_NO,
+				 GTK_STOCK_YES, GTK_RESPONSE_YES,
+				 NULL);
+					
 	 gtk_widget_show (box);
-
-	} 
-	else 
-	{ 
-	 gtk_widget_destroy (app);
-	 gtk_main_quit ();                               
+	 response = gtk_dialog_run (GTK_DIALOG (box));
+	 
+	 if (response == GTK_RESPONSE_YES)
+	 {
+		 gtk_widget_destroy (app);
+		 gtk_main_quit ();
+	 }
+	 else
+	 {
+		 gtk_widget_hide (box);
+	 }
 	}
-
  	return TRUE;
 
 }
@@ -969,7 +991,7 @@ save_state (GnomeClient *client,
 		gint fast,
 		gpointer client_data)
 {
-	gchar *prefix= gnome_client_get_config_prefix (client);
+	const gchar *prefix= gnome_client_get_config_prefix (client);
 	gchar *argv[]= { "rm", "-r", NULL };
 	gchar *buf;
 	int i;
@@ -1116,14 +1138,15 @@ main (int argc, char *argv [])
 	bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
 	textdomain (GETTEXT_PACKAGE);
 
-	gnome_init ("glines", VERSION, argc, argv);
+	gnome_program_init ("glines", VERSION, LIBGNOMEUI_MODULE,
+			    argc, argv, GNOME_PARAM_POPT_TABLE, NULL, NULL);
 	gnome_window_icon_set_default_from_file (GNOME_ICONDIR"/glines.xpm");
 	client = gnome_master_client ();
 
-	gtk_signal_connect (GTK_OBJECT (client), "save_yourself",
-	                    GTK_SIGNAL_FUNC (save_state), argv[0]);
-	gtk_signal_connect (GTK_OBJECT (client), "die",
-                            GTK_SIGNAL_FUNC (client_die), NULL);
+	g_signal_connect (G_OBJECT (client), "save_yourself",
+	                    G_CALLBACK (save_state), argv[0]);
+	g_signal_connect (G_OBJECT (client), "die",
+                            G_CALLBACK (client_die), NULL);
 
 	if (GNOME_CLIENT_RESTARTED (client))
           {
@@ -1141,8 +1164,8 @@ main (int argc, char *argv [])
 	app = gnome_app_new("glines", _("Glines"));
 
 	gtk_window_set_policy(GTK_WINDOW(app), FALSE, FALSE, TRUE);
-	gtk_signal_connect (GTK_OBJECT(app), "delete_event",
-	                    (GtkSignalFunc)game_quit_callback, NULL);
+	g_signal_connect (G_OBJECT(app), "delete_event",
+	                  G_CALLBACK (game_quit_callback), NULL);
 
 	appbar = gnome_appbar_new(FALSE, TRUE, GNOME_PREFERENCES_USER);
 	gnome_app_set_statusbar(GNOME_APP (app), GTK_WIDGET(appbar));  
@@ -1198,12 +1221,12 @@ main (int argc, char *argv [])
 			BOXSIZE,
 			-1);
 
-	gtk_signal_connect (GTK_OBJECT(draw_area), "button_press_event",
-			GTK_SIGNAL_FUNC (button_press_event), NULL);                
-	gtk_signal_connect (GTK_OBJECT (draw_area), "expose_event",
-			GTK_SIGNAL_FUNC (expose_event), backpixmap);
-	gtk_signal_connect (GTK_OBJECT (next_draw_area), "expose_event",
-			GTK_SIGNAL_FUNC (expose_event), next_backpixmap);
+	g_signal_connect (G_OBJECT(draw_area), "button_press_event",
+			  G_CALLBACK (button_press_event), NULL);                
+	g_signal_connect (G_OBJECT (draw_area), "expose_event",
+			  G_CALLBACK (expose_event), backpixmap);
+	g_signal_connect (G_OBJECT (next_draw_area), "expose_event",
+			  G_CALLBACK (expose_event), next_backpixmap);
 
 	gtk_widget_realize(next_draw_area);
 
