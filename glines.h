@@ -2,7 +2,6 @@
 #define glines_h
 
 #define STEPSIZE 4
-#define FIELDSIZE 9
 
 typedef struct
 {

@@ -1,3 +1,21 @@
+2004-12-13  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+        * glines.c: Some code cleanups. This includes some unnecessary 
+	arithmetic that may have been the source of Marco's corruption
+	bug. Removed another cryptic Hungarian comment, the issue in 
+	question has been fixed.
+	
+	* glines.c:	
+	* glines.h: Patch from Marco Colombo <m.colombo@ed.ac.uk> to
+	decouple the width and height of the grid. A first step towards
+	feature request #83532.
+
+2004-12-07  Richard Hoelscher  <rah@rahga.com>
+ 
+ 	* glines.c (field_expose_event): Keyboard cursor now black or 
+ 	white, depending on average value of background color RGB channels.
+ 	(refresh_pixmaps): When theme refuses to render, use a blank pixbuf.
+ 
 2004-11-30  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* glines.c (main): Alan Horkan's incredibly complicated patch to

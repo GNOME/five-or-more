@@ -54,13 +54,15 @@
 #define KEY_HEIGHT "/apps/glines/saved/height"
 
 #define NCOLORS 7
+#define HFIELDSIZE 9
+#define VFIELDSIZE 9
 
 GConfClient *conf_client = NULL;
 
 GtkWidget *draw_area;
 static GtkWidget *app, *appbar, *pref_dialog;
 GtkWidget *preview_widgets[3];
-field_props field[FIELDSIZE * FIELDSIZE];
+field_props field[HFIELDSIZE * VFIELDSIZE];
 
 /* Pre-rendering image data prepared from file. */
 GamesPreimage *ball_preimage = NULL;
@@ -79,8 +81,8 @@ int active = -1;
 int target = -1;
 int inmove = 0;
 int score = 0;
-int cursor_x = FIELDSIZE / 2;
-int cursor_y = FIELDSIZE / 2;
+int cursor_x = HFIELDSIZE / 2;
+int cursor_y = VFIELDSIZE / 2;
 gboolean show_cursor = FALSE;
 
 int boxsize;
@@ -166,7 +168,7 @@ static void
 refresh_pixmaps (void)
 {
 	GdkGC * gc;
-	GdkPixbuf *ball_pixbuf;
+	GdkPixbuf *ball_pixbuf = NULL;
 
 	/* Since we get called both by configure and after loading an image.
 	 * it is possible the pixmaps aren't initialised. If they aren't
@@ -174,8 +176,16 @@ refresh_pixmaps (void)
 	if (!ball_pixmap)
 		return;
 
-	ball_pixbuf = games_preimage_render (ball_preimage, 4*boxsize, 
-					     7*boxsize, NULL);
+	if (ball_preimage)
+		ball_pixbuf = games_preimage_render (ball_preimage, 4*boxsize, 
+						     7*boxsize, NULL);
+
+        if (!ball_pixbuf) {
+		ball_pixbuf = gdk_pixbuf_new (GDK_COLORSPACE_RGB, TRUE, 8,
+					      4*boxsize, 7*boxsize);
+		gdk_pixbuf_fill (ball_pixbuf, 0x00000000);
+		/* FIXME : Warning for image loading failure */
+	}
 
 	gc = gdk_gc_new (ball_pixmap);
 	gdk_gc_set_foreground (gc, &backgnd.color);
@@ -196,7 +206,7 @@ static void
 refresh_preview_pixmaps (void)
 {
 	int i;
-	GdkPixbuf * scaled;
+	GdkPixbuf * scaled = NULL;
 	GtkWidget * widget = preview_widgets[0];
 
 	/* Like the refresh_pixmaps() function, we may be called before
@@ -212,8 +222,16 @@ refresh_preview_pixmaps (void)
 		for (i=0; i<7; i++)
 			g_object_unref (preview_pixmaps[i]);
 
-	scaled = games_preimage_render (ball_preimage, 4*preview_width, 
-				        7*preview_height, NULL);
+	if (ball_preimage)
+		scaled = games_preimage_render (ball_preimage, 4*preview_width, 
+						7*preview_height, NULL);
+
+	if (!scaled) {
+		scaled = gdk_pixbuf_new (GDK_COLORSPACE_RGB, TRUE, 8,
+					 4*preview_width, 7*preview_height);
+		gdk_pixbuf_fill (scaled, 0x00000000);
+	}
+
 
 	for (i=0; i<7; i++) {
 		preview_pixmaps[i] = gdk_pixmap_new (widget->window,
@@ -258,7 +276,7 @@ reset_game (void)
 {
 	int i;
 
-	for(i=0; i < FIELDSIZE * FIELDSIZE; i++)
+	for(i=0; i < HFIELDSIZE * VFIELDSIZE; i++)
 	{
 		field[i].color = 0;
 		field[i].phase = 0;
@@ -298,7 +316,7 @@ reset_pathsearch (void)
 {
 	int i;
 
-	for(i = 0; i < FIELDSIZE * FIELDSIZE; i++)
+	for(i = 0; i < HFIELDSIZE * VFIELDSIZE; i++)
 		field[i].pathsearch = -1;
 }
 
@@ -384,7 +402,7 @@ static int spaces_left (void)
 
 	j = 0;
 
-	for (i=0; i<FIELDSIZE*FIELDSIZE; i++) {
+	for (i=0; i<HFIELDSIZE*VFIELDSIZE; i++) {
 		if (field[i].color == 0)
 			j++;
 	}
@@ -407,7 +425,7 @@ int
 init_new_balls (int num, int prev)
 {
 	int i, j = -1;
-	gfloat num_boxes = FIELDSIZE * FIELDSIZE;
+	gfloat num_boxes = HFIELDSIZE * VFIELDSIZE;
 	for (i = 0; i < num;)
 	{
 		j = (int) (num_boxes * rand ()/(RAND_MAX + 1.0));
@@ -435,18 +453,18 @@ route (int num)
 
 	if (field[target].pathsearch == num)
 		return 1;
-	for (i = 0; i < FIELDSIZE*FIELDSIZE; i++)
+	for (i = 0; i < HFIELDSIZE*VFIELDSIZE; i++)
 	{
 		if (field[i].pathsearch == num)
 		{
 			flag = 1;	
-			if ((i/9 > 0) && (field[i - 9].pathsearch == -1) && (field[i - 9].color == 0))
-				field[i - 9].pathsearch = num+1;
-			if ((i/9 < FIELDSIZE - 1) && (field[i + 9].pathsearch == -1) && (field[i + 9].color == 0))
-				field[i + 9].pathsearch = num+1;
-			if ((i%9 > 0) && (field[i - 1].pathsearch == -1) && (field[i - 1].color == 0))
+			if ((i/HFIELDSIZE > 0) && (field[i - HFIELDSIZE].pathsearch == -1) && (field[i - HFIELDSIZE].color == 0))
+				field[i - HFIELDSIZE].pathsearch = num+1;
+			if ((i/HFIELDSIZE < VFIELDSIZE - 1) && (field[i + HFIELDSIZE].pathsearch == -1) && (field[i + HFIELDSIZE].color == 0))
+				field[i + HFIELDSIZE].pathsearch = num+1;
+			if ((i%HFIELDSIZE > 0) && (field[i - 1].pathsearch == -1) && (field[i - 1].color == 0))
 				field[i - 1].pathsearch = num+1;
-			if ((i%9 < FIELDSIZE - 1) && (field[i + 1].pathsearch == -1) && (field[i + 1].color == 0))
+			if ((i%HFIELDSIZE < HFIELDSIZE - 1) && (field[i + 1].pathsearch == -1) && (field[i + 1].color == 0))
 			{
 				field[i + 1].pathsearch = num+1;
 			}
@@ -461,18 +479,18 @@ fix_route (int num, int pos)
 {
 	int i;
 
-	for (i = 0; i< FIELDSIZE*FIELDSIZE; i++)
+	for (i = 0; i< HFIELDSIZE*VFIELDSIZE; i++)
 		if ((i != pos) && (field[i].pathsearch == num))
 			field[i].pathsearch = -1;
 	if (num < 2)
 		return;
-	if ((pos/9 > 0) && (field[pos - 9].pathsearch == num - 1))
-		fix_route(num - 1, pos - 9);	
-	if ((pos%9 > 0) && (field[pos - 1].pathsearch == num - 1))
+	if ((pos/HFIELDSIZE > 0) && (field[pos - HFIELDSIZE].pathsearch == num - 1))
+		fix_route(num - 1, pos - HFIELDSIZE);	
+	if ((pos%HFIELDSIZE > 0) && (field[pos - 1].pathsearch == num - 1))
 		fix_route(num - 1, pos - 1);	
-	if ((pos/9 < FIELDSIZE - 1) && (field[pos + 9].pathsearch == num - 1))
-		fix_route(num - 1, pos + 9);	
-	if ((pos%9 < FIELDSIZE - 1) && (field[pos + 1].pathsearch == num - 1))
+	if ((pos/HFIELDSIZE < VFIELDSIZE - 1) && (field[pos + HFIELDSIZE].pathsearch == num - 1))
+		fix_route(num - 1, pos + HFIELDSIZE);	
+	if ((pos%HFIELDSIZE < HFIELDSIZE - 1) && (field[pos + 1].pathsearch == num - 1))
 		fix_route(num - 1, pos + 1);	
 }
 	
@@ -509,7 +527,7 @@ static void cell_clicked (GtkWidget *widget, int fx, int fy)
 	int x, y;
 
         gnome_appbar_set_status(GNOME_APPBAR(appbar), "");
-	if(field[fx + fy*9].color == 0)
+	if(field[fx + fy*HFIELDSIZE].color == 0)
 	{
 		/* Clicked on an empty field */
 
@@ -519,7 +537,7 @@ static void cell_clicked (GtkWidget *widget, int fx, int fy)
 			 * already in move. Therefore we should begin
 			 * the moving sequence */
 
-			target = fx + fy*9;
+			target = fx + fy*HFIELDSIZE;
 			if(find_route())
 			{
 				/* We found a route to the new position */
@@ -539,7 +557,7 @@ static void cell_clicked (GtkWidget *widget, int fx, int fy)
 	{
 		/* Clicked on a ball */
 
-		if((fx + fy*9) == active)
+		if((fx + fy*HFIELDSIZE) == active)
 		{
 			/* It's active, so let's deactivate it! */
 
@@ -553,12 +571,12 @@ static void cell_clicked (GtkWidget *widget, int fx, int fy)
 			{
 				/* There is an other active ball, we should deactivate it first! */
 
-				x = active%9;
-				y = active/9;
+				x = active%HFIELDSIZE;
+				y = active/HFIELDSIZE;
 				deactivate(widget, x, y);
 			}
 
-			active = fx + fy*9;
+			active = fx + fy*HFIELDSIZE;
 			field[active].active = 1;
 		}
 	}
@@ -610,13 +628,13 @@ move_cursor (int dx, int dy)
 	cursor_x = cursor_x + dx;
 	if (cursor_x < 0)
 		cursor_x = 0;
-	if (cursor_x >= FIELDSIZE)
-		cursor_x = FIELDSIZE - 1;
+	if (cursor_x >= HFIELDSIZE)
+		cursor_x = HFIELDSIZE - 1;
 	cursor_y = cursor_y + dy;
 	if (cursor_y < 0)
 		cursor_y = 0;
-	if (cursor_y >= FIELDSIZE)
-		cursor_y = FIELDSIZE - 1;
+	if (cursor_y >= VFIELDSIZE)
+		cursor_y = VFIELDSIZE - 1;
 
 	if (cursor_x == old_x && cursor_y == old_y)
 		return;
@@ -727,11 +745,9 @@ field_expose_event (GtkWidget *widget, GdkEventExpose *event, gpointer gp)
 
 	for (i = y_start; i < y_end; i++) {
 		for (j = x_start; j < x_end; j++) {
-			int x, y, phase, color;
+			int phase, color;
 
-			idx = j + i * FIELDSIZE;
-			x = idx % FIELDSIZE;
-			y = idx / FIELDSIZE;
+			idx = j + i * HFIELDSIZE;
 
 			if (field[idx].color != 0) {
 				phase = field[idx].phase;
@@ -742,14 +758,14 @@ field_expose_event (GtkWidget *widget, GdkEventExpose *event, gpointer gp)
 				gdk_draw_drawable (window, gc, ball_pixmap,
 						   phase * boxsize, 
 						   color * boxsize,
-						   x * boxsize, 
-						   y * boxsize,
+						   j * boxsize, 
+						   i * boxsize,
 						   boxsize, boxsize);
 			} else {
 				gdk_draw_drawable (window, gc, blank_pixmap,
 						   0, 0,
-						   x * boxsize, 
-						   y * boxsize,
+						   j * boxsize, 
+						   i * boxsize,
 						   boxsize, boxsize);
 			}
 		}
@@ -761,7 +777,11 @@ field_expose_event (GtkWidget *widget, GdkEventExpose *event, gpointer gp)
 		GdkColormap *cmap;
 		GdkColor color;
 
-		gdk_color_parse ("#FFFFFF", &color);
+		if ( ((backgnd.color.red + backgnd.color.green + backgnd.color.blue) / 3) > (G_MAXUINT16 / 2))
+			gdk_color_parse ("#000000", &color);
+		else
+			gdk_color_parse ("#FFFFFF", &color);
+
 		cmap = gtk_widget_get_colormap (widget);
 		gdk_colormap_alloc_color (cmap, &color, FALSE, TRUE);
 		gdk_gc_set_foreground (gc, &color);
@@ -813,23 +833,23 @@ find_lines (int num)
 {
 	int count = 1;
 	int subcount = 0;
-	int x = num%9;
-	int y = num/9;
-	int list[FIELDSIZE];
+	int x = num%HFIELDSIZE;
+	int y = num/HFIELDSIZE;
+	int list[HFIELDSIZE];
 
 	/* Horizontal */
 
 	x++;
-	while ((x <= FIELDSIZE - 1) && (field[x + y*9].color == field[num].color))
+	while ((x <= HFIELDSIZE - 1) && (field[x + y*HFIELDSIZE].color == field[num].color))
 	{
-		list[subcount] = x + y*9;
+		list[subcount] = x + y*HFIELDSIZE;
 		subcount++;
 		x++;
 	}
-	x = num % 9 - 1;
-	while ((x >= 0) && (field[x + y*9].color == field[num].color))
+	x = num % HFIELDSIZE - 1;
+	while ((x >= 0) && (field[x + y*HFIELDSIZE].color == field[num].color))
 	{
-		list[subcount] = x + y*9;
+		list[subcount] = x + y*HFIELDSIZE;
 		subcount++;
 		x--;
 	}
@@ -842,18 +862,18 @@ find_lines (int num)
 
 	/* Vertical */
 
-	x = num%9;
+	x = num%HFIELDSIZE;
 	y++;
-	while ((y <= FIELDSIZE - 1) && (field[x + y*9].color == field[num].color))
+	while ((y <= VFIELDSIZE - 1) && (field[x + y*HFIELDSIZE].color == field[num].color))
 	{
-		list[subcount] = x + y*9;
+		list[subcount] = x + y*HFIELDSIZE;
 		subcount++;
 		y++;
 	}
-	y = num / 9 - 1;
-	while ((y >= 0) && (field[x + y*9].color == field[num].color))
+	y = num / HFIELDSIZE - 1;
+	while ((y >= 0) && (field[x + y*HFIELDSIZE].color == field[num].color))
 	{
-		list[subcount] = x + y*9;
+		list[subcount] = x + y*HFIELDSIZE;
 		subcount++;
 		y--;
 	}
@@ -866,20 +886,20 @@ find_lines (int num)
 	
 	/* Diagonal ++*/
 	
-	x = num%9 + 1;
-	y = num/9 + 1;
-	while ((y <= FIELDSIZE - 1) && (x <= FIELDSIZE - 1) && (field[x + y*9].color == field[num].color))
+	x = num%HFIELDSIZE + 1;
+	y = num/HFIELDSIZE + 1;
+	while ((y <= VFIELDSIZE - 1) && (x <= HFIELDSIZE - 1) && (field[x + y*HFIELDSIZE].color == field[num].color))
 	{
-		list[subcount] = x + y*9;
+		list[subcount] = x + y*HFIELDSIZE;
 		subcount++;
 		y++;
 		x++;
 	}
-	x = num % 9 - 1;
-	y = num / 9 - 1;
-	while ((y >= 0) && (x >= 0) && (field[x + y*9].color == field[num].color))
+	x = num % HFIELDSIZE - 1;
+	y = num / HFIELDSIZE - 1;
+	while ((y >= 0) && (x >= 0) && (field[x + y*HFIELDSIZE].color == field[num].color))
 	{
-		list[subcount] = x + y*9;
+		list[subcount] = x + y*HFIELDSIZE;
 		subcount++;
 		y--;
 		x--;
@@ -893,20 +913,20 @@ find_lines (int num)
 
 	/* Diagonal +-*/
 	
-	x = num % 9 + 1;
-	y = num / 9 - 1;
-	while ((y >= 0) && (x <= FIELDSIZE - 1) && (field[x + y*9].color == field[num].color))
+	x = num % HFIELDSIZE + 1;
+	y = num / HFIELDSIZE - 1;
+	while ((y >= 0) && (x <= HFIELDSIZE - 1) && (field[x + y*HFIELDSIZE].color == field[num].color))
 	{
-		list[subcount] = x + y*9;
+		list[subcount] = x + y*HFIELDSIZE;
 		subcount++;
 		y--;
 		x++;
 	}
-	x = num % 9 - 1;
-	y = num / 9 + 1;
-	while ((y <= FIELDSIZE - 1) && (x >= 0) && (field[x + y*9].color == field[num].color))
+	x = num % HFIELDSIZE - 1;
+	y = num / HFIELDSIZE + 1;
+	while ((y <= VFIELDSIZE - 1) && (x >= 0) && (field[x + y*HFIELDSIZE].color == field[num].color))
 	{
-		list[subcount] = x + y*9;
+		list[subcount] = x + y*HFIELDSIZE;
 		subcount++;
 		y++;
 		x--;
@@ -924,7 +944,7 @@ static void clear_tags (void)
 {
 	int i;
 
-	for (i=0; i<FIELDSIZE*FIELDSIZE; i++)
+	for (i=0; i<HFIELDSIZE*VFIELDSIZE; i++)
 		field[i].tag = 0;
 }
 
@@ -933,13 +953,13 @@ static int kill_tags (GtkWidget * widget)
 	int i,j;
 
 	j = 0;
-	for (i = 0; i <FIELDSIZE*FIELDSIZE; i++) {
+	for (i = 0; i <HFIELDSIZE*VFIELDSIZE; i++) {
 		if (field[i].tag == 1) {
 			j++;
 			field[i].color = 0;
 			field[i].phase = 0;
 			field[i].active = 0;
-			draw_box (widget, i % 9, i / 9);
+			draw_box (widget, i % HFIELDSIZE, i / HFIELDSIZE);
 		}
 	}
 
@@ -972,28 +992,28 @@ animate (gpointer gp)
 	GtkWidget *widget = GTK_WIDGET (gp);
 	int x, y;
 	int newactive = 0;
-	/* FIXME nem 9 hanem FIELDSIZE! */
-	x = active % 9;
-	y = active / 9;
+
+	x = active % HFIELDSIZE;
+	y = active / HFIELDSIZE;
 
 	if (active == -1) return TRUE;
 	if (inmove != 0)
 	{
 		if ((x > 0) && (field[active - 1].pathsearch == field[active].pathsearch+1))
 			newactive = active - 1;
-		else if ((x < 8) && (field[active + 1].pathsearch == field[active].pathsearch+1))
+		else if ((x < HFIELDSIZE - 1) && (field[active + 1].pathsearch == field[active].pathsearch+1))
 			newactive = active + 1;
-		else if ((y > 0) && (field[active - 9].pathsearch == field[active].pathsearch+1))
-			newactive = active - 9;
-		else if ((y < 8) && (field[active + 9].pathsearch == field[active].pathsearch+1))
-			newactive = active + 9;
+		else if ((y > 0) && (field[active - HFIELDSIZE].pathsearch == field[active].pathsearch+1))
+			newactive = active - HFIELDSIZE;
+		else if ((y < VFIELDSIZE - 1) && (field[active + HFIELDSIZE].pathsearch == field[active].pathsearch+1))
+			newactive = active + HFIELDSIZE;
 		else
 		{
 			set_inmove (0);
 		}
 		draw_box (widget, x, y);
-		x = newactive % 9;
-		y = newactive / 9;
+		x = newactive % HFIELDSIZE;
+		y = newactive / HFIELDSIZE;
 		field[newactive].phase = field[active].phase;
 		field[newactive].color = field[active].color;
 		field[active].phase = 0;
@@ -1022,8 +1042,8 @@ animate (gpointer gp)
 				for (x = 0; x < spaces; x++)
 				{
 					int tmp = init_new_balls (1, x);
-					draw_box (widget, tmp % FIELDSIZE,
-						   tmp / FIELDSIZE);
+					draw_box (widget, tmp % HFIELDSIZE,
+						   tmp / HFIELDSIZE);
 					balls[x] = tmp;
 					fullline = (find_lines (balls[x]) >= 5) || fullline;
 				}
@@ -1339,8 +1359,7 @@ configure_event_callback (GtkWidget *widget, GdkEventConfigure *event)
 	if (blank_pixmap)
 		g_object_unref (blank_pixmap);
 
-	boxsize = (event->width - 1)/FIELDSIZE;
-
+	boxsize = (event->width - 1)/HFIELDSIZE;
 	ball_pixmap = gdk_pixmap_new (draw_area->window, boxsize*4, boxsize*7,
 				      -1);
 	blank_pixmap = gdk_pixmap_new (draw_area->window, boxsize, boxsize, -1);
@@ -1366,15 +1385,15 @@ save_state (GnomeClient *client,
 	gconf_client_set_int (conf_client,
                               KEY_SAVED_SCORE, score, NULL);
 
-	buf = g_malloc (FIELDSIZE * FIELDSIZE * 4 + 1);
-	for (i = 0; i < FIELDSIZE * FIELDSIZE; i++)
+	buf = g_malloc (HFIELDSIZE * VFIELDSIZE * 4 + 1);
+	for (i = 0; i < HFIELDSIZE * VFIELDSIZE; i++)
 	{
 		buf[i*4] = field[i].color + 'h';
 		buf[i*4 + 1] = field[i].pathsearch + 'h';
 		buf[i*4 + 2] = field[i].phase + 'h';
 		buf[i*4 + 3] = field[i].active + 'h';
 	}
-	buf[FIELDSIZE * FIELDSIZE * 4] = '\0';
+	buf[HFIELDSIZE * VFIELDSIZE * 4] = '\0';
 	gconf_client_set_string (conf_client,
                                  KEY_SAVED_FIELD, buf, NULL);
 	for(i = 0; i < 3; i++)
@@ -1434,10 +1453,10 @@ restart (void)
                                        KEY_SAVED_FIELD, NULL);
 	if(buf)
 	{
-		for(i = 0; i < FIELDSIZE * FIELDSIZE; i++)
+		for(i = 0; i < HFIELDSIZE * VFIELDSIZE; i++)
 		{
 			field[i].color = CLAMP (buf[i*4] - 'h', 1, NCOLORS);
-			field[i].pathsearch = CLAMP (buf[i*4 + 1] - 'h', -1, FIELDSIZE*FIELDSIZE);
+			field[i].pathsearch = CLAMP (buf[i*4 + 1] - 'h', -1, HFIELDSIZE*VFIELDSIZE);
 			field[i].phase = CLAMP (buf[i*4 + 2] - 'h', 0, 3);
 			field[i].active = CLAMP (buf[i*4 + 3] - 'h', -1, 1);
 		}
@@ -1690,7 +1709,7 @@ main (int argc, char *argv [])
 			  G_CALLBACK (configure_event_callback), NULL);
 	g_signal_connect (G_OBJECT (draw_area), "expose_event",
 			  G_CALLBACK (field_expose_event), NULL);
-	gridframe = games_grid_frame_new (FIELDSIZE, FIELDSIZE);
+	gridframe = games_grid_frame_new (HFIELDSIZE, VFIELDSIZE);
 	games_grid_frame_set_padding (GAMES_GRID_FRAME(gridframe), 1, 1);
 	gtk_container_add (GTK_CONTAINER (gridframe), draw_area);
 	gtk_table_attach_defaults (GTK_TABLE (table), gridframe, 0, 1, 1, 10);
