@@ -14,6 +14,7 @@
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <time.h>
 #include <math.h>
 #include <dirent.h>
@@ -136,7 +137,7 @@ reset_game (void)
 {
 	int i;
 
-	for(i=0; i < FIELDSIZE*FIELDSIZE; i++)
+	for(i=0; i < FIELDSIZE * FIELDSIZE; i++)
 	{
 		field[i].color = 0;
 		field[i].phase = 0;
@@ -144,8 +145,8 @@ reset_game (void)
 		field[i].pathsearch = -1;
 	}
 	score = 0;
-	init_preview();
-	init_new_balls(5, -1);
+	init_preview ();
+	init_new_balls (5, -1);
 }
 
 static void
@@ -160,14 +161,15 @@ start_game (void)
 {
 	char string[20];
 
-	gnome_appbar_set_status(GNOME_APPBAR(appbar), _("Match five balls of the same color in a row to score!"));
+	gnome_appbar_set_status (GNOME_APPBAR (appbar),
+				 _("Match five balls of the same color in a row to score!"));
 	refresh_screen ();
 	active = -1;
 	target = -1;
 	inmove = -1;
-	g_snprintf(string, 19, "%d", score);
-	gtk_label_set_text(GTK_LABEL(scorelabel), string);
-	set_inmove(0);
+	g_snprintf (string, 19, "%d", score);
+	gtk_label_set_text (GTK_LABEL (scorelabel), string);
+	set_inmove (0);
 }
 
  
@@ -176,7 +178,7 @@ reset_pathsearch (void)
 {
 	int i;
 
-	for(i = 0; i < FIELDSIZE*FIELDSIZE; i++)
+	for(i = 0; i < FIELDSIZE * FIELDSIZE; i++)
 		field[i].pathsearch = -1;
 }
 
@@ -185,9 +187,9 @@ init_preview (void)
 {
 	int i;
 
-	for(i = 0; i < 3; i++)
+	for (i = 0; i < 3; i++)
 	{
-		preview[i] = 1 + (int) (7.0*rand()/(RAND_MAX+1.0));
+		preview[i] = 1 + (int) (7.0 * rand () / (RAND_MAX + 1.0));
 	}
 }
 
@@ -198,7 +200,7 @@ draw_preview (void)
 
 	for(i = 0; i < 3; i++)
 	{
-		draw_ball(next_draw_area, i, 0);
+		draw_ball (next_draw_area, i, 0);
 	}
 }
 
@@ -209,8 +211,9 @@ show_scores (gint pos)
 
 	dialog = gnome_scores_display (_("Glines"), "glines", NULL, pos);
 	if (dialog != NULL) {
-		gtk_window_set_transient_for (GTK_WINDOW(dialog), GTK_WINDOW(app));
-		gtk_window_set_modal (GTK_WINDOW(dialog), TRUE);
+		gtk_window_set_transient_for (GTK_WINDOW (dialog),
+					      GTK_WINDOW (app));
+		gtk_window_set_modal (GTK_WINDOW (dialog), TRUE);
 	}
 }
 
@@ -222,12 +225,13 @@ update_score_state ()
         time_t *scoretimes = NULL;
 	gint top;
 
-	top = gnome_score_get_notable("glines", NULL, &names, &scores, &scoretimes);
+	top = gnome_score_get_notable ("glines", NULL, &names,
+				       &scores, &scoretimes);
 	if (top > 0) {
 		gtk_widget_set_sensitive (gamemenu[2].widget, TRUE);
-		g_strfreev(names);
-		g_free(scores);
-		g_free(scoretimes);
+		g_strfreev (names);
+		g_free (scores);
+		g_free (scoretimes);
 	} else {
 		gtk_widget_set_sensitive (gamemenu[2].widget, FALSE);
 	}
@@ -238,9 +242,9 @@ game_over (void)
 {
 	int pos;
 
-	gnome_appbar_set_status(GNOME_APPBAR(appbar), _("Game Over!"));
-	pos = gnome_score_log(score, NULL, TRUE);
-	show_scores(pos);
+	gnome_appbar_set_status (GNOME_APPBAR (appbar), _("Game Over!"));
+	pos = gnome_score_log (score, NULL, TRUE);
+	show_scores (pos);
 	update_score_state ();
 	return;
 }
@@ -249,11 +253,11 @@ static int
 check_gameover (void)
 {
 	int i = 0;
-	while((i < FIELDSIZE*FIELDSIZE) && field[i].color != 0)
+	while ((i < FIELDSIZE * FIELDSIZE) && field[i].color != 0)
 		i++;
-	if(i == FIELDSIZE*FIELDSIZE)
+	if (i == FIELDSIZE * FIELDSIZE)
 	{
-		game_over();
+		game_over ();
 		return -1;
 	}
 	return i;
@@ -264,12 +268,12 @@ init_new_balls (int num, int prev)
 {
 	int i, j = -1;
 	gfloat num_boxes = FIELDSIZE * FIELDSIZE;
-	for(i = 0; i < num;)
+	for (i = 0; i < num;)
 	{
-		j = (int) (num_boxes*rand()/(RAND_MAX+1.0));
-		if(field[j].color == 0)
+		j = (int) (num_boxes * rand ()/(RAND_MAX + 1.0));
+		if (field[j].color == 0)
 		{
-			field[j].color = (prev == -1)?(1 + (int) (7.0*rand()/(RAND_MAX+1.0))):preview[prev]; 
+			field[j].color = (prev == -1) ? (1 + (int) (7.0*rand()/(RAND_MAX+1.0))):preview[prev]; 
 			i++;
 		}
 	}
