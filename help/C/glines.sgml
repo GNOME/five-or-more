@@ -103,7 +103,7 @@
      <title>Glines Main Window</title>
      <screenshot>
       <screeninfo>Glines Main Window</screeninfo>
-      <graphic fileref="figs/glines-startgame" format="png" srccredit="bansz">
+      <graphic fileref="figs/glines-new-game" format="png" srccredit="emese kovacs">
       </graphic>
      </screenshot>
     </figure>
@@ -117,7 +117,7 @@ As the game progresses, the board gets more and more crowded (unless you are rea
      <title>Game Over!</title>
      <screenshot>
       <screeninfo>Game Over!</screeninfo>
-      <graphic fileref="figs/glines-gameover" format="png" srccredit="emese kovacs">
+      <graphic fileref="figs/glines-game-over" format="png" srccredit="emese kovacs">
       </graphic>
      </screenshot>
     </figure>
@@ -257,7 +257,7 @@ As the game progresses, the board gets more and more crowded (unless you are rea
 		<listitem>
 		  <para>
                    <guimenuitem>Preferences</guimenuitem>
-                    , which brings up the preferences dialog box.
+                    which brings up the preferences dialog box.
                   </para>
 		</listitem>
 	      </itemizedlist>
@@ -285,8 +285,20 @@ As the game progresses, the board gets more and more crowded (unless you are rea
         </listitem>
         <listitem>
          <para>
-          <guimenuitem>Authors and bug reporting</guimenuitem>&mdash;
-          provides the authors' contact and information on how to submit bug reports.
+          <guimenuitem>Creating New Themes</guimenuitem>&mdash;
+          shows details about creating new themes for glines.
+         </para>
+        </listitem>
+        <listitem>
+         <para>
+          <guimenuitem>Known Bugs</guimenuitem>&mdash;
+         lists the application's known bugs and features on the whishlist. 
+         </para>
+         </listitem>
+         <listitem>
+         <para>
+          <guimenuitem>Authors and Bug Reporting</guimenuitem>&mdash;
+          provides the authors' contact and information on how to submit bug reports.           
          </para>
         </listitem>
 
@@ -317,7 +329,7 @@ As the game progresses, the board gets more and more crowded (unless you are rea
      <title>Preferences</title>
      <screenshot>
       <screeninfo>Preferences</screeninfo>
-      <graphic fileref="figs/preferences" format="png" srccredit="emese kovacs">
+      <graphic fileref="figs/glines-preferences" format="png" srccredit="emese kovacs">
       </graphic>
      </screenshot>
     </figure>
@@ -360,10 +372,7 @@ Be careful though, the game itself is not saved!!!
  <sect1 id="bugs">
   <title>Known Bugs and Limitations</title>
   <para>
-   This application has no known bugs. 
-  </para>
-    <para>
-The ability to save the state of the current game or load an old game is missing. Patches are always welcome.   
+   This application has no known bugs.
   </para>
  </sect1>
 
