@@ -25,7 +25,7 @@ glines_LDADD =		\
 	../libgames-support/libgames-support.la \
 	$(INTLLIBS)
 
-pixmap_DATA = classic.png dots.png pulse.png gumball.png balls.svg
+pixmap_DATA = classic.png dots.png pulse.png gumball.png balls.svg shapes.svg
 
 EXTRA_DIST = 			\
 	glines.desktop.in	\

@@ -1,3 +1,8 @@
+2004-01-09  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* Makefile.am (pixmap_DATA): Added shapes.svg; a colour-blind
+	friendly theme.
+
 2004-01-08  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* glines.schemas.in:
