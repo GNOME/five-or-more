@@ -972,9 +972,11 @@ game_quit_callback (GtkWidget *widget, void *data)
 	 else
 	 {
 		 gtk_widget_hide (box);
+		 return TRUE;
 	 }
 	}
- 	return TRUE;
+	gtk_main_quit ();
+	return FALSE;
 
 }
 

@@ -1,3 +1,9 @@
+2002-01-08  Josh Barrow  <drleary@mac.com>
+
+	* glines.c: (game_quit_callback):
+	Commit patch from Markus Bertheau <twanger@bluetwanger.de>
+	to actually make this thing quit.
+
 2002-01-02  Josh Barrow  <drleary@mac.com>
 
 	* Makefile.am:
