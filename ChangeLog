@@ -1,3 +1,8 @@
+2004-02-11  Richard Hoelscher  <rah@rahga.com>
+
+	* glines.c (bg_color_callback): Set saving background color as
+	a 12-digit hex triplet. Bug #134179.
+
 2004-02-11  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* glines.c (game_about_callback): translator_credits ->

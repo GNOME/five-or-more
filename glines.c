@@ -966,7 +966,7 @@ bg_color_callback (GtkWidget *widget, gpointer data)
 
 	gtk_color_button_get_color (GTK_COLOR_BUTTON (widget), &c);
 
-	tmp = g_strdup_printf ("#%02x%02x%02x", c.red, c.green, c.blue);
+	tmp = g_strdup_printf ("#%04x%04x%04x", c.red, c.green, c.blue);
 
 	gconf_client_set_string (conf_client,
 				 KEY_BACKGROUND_COLOR, tmp, NULL);
