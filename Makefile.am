@@ -29,7 +29,12 @@ glines_LDADD =		\
 
 pixmap_DATA = ball.png classic.png dots.png pulse.png gumball.png 
 
-EXTRA_DIST = glines.desktop.in $(pixmap_DATA) $(icon_DATA)
+EXTRA_DIST = 			\
+	glines.desktop.in	\
+	$(pixmap_DATA)		\
+	$(icon_DATA)		\
+	$(schema_in_files)
+
 
 icon_DATA = glines.png
 
