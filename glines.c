@@ -851,7 +851,7 @@ game_props_callback (GtkWidget *widget, void *data)
 			NULL);
         gnome_dialog_set_default(GNOME_DIALOG (pref_dialog), 0);
 	gnome_dialog_set_parent (GNOME_DIALOG (pref_dialog), GTK_WINDOW (app));
-	gtk_signal_connect (GTK_OBJECT(pref_dialog), "delete_event",
+	gtk_signal_connect (GTK_OBJECT(pref_dialog), "close",
 			    GTK_SIGNAL_FUNC (glines_cancel), NULL);
 
 	omenu = gtk_option_menu_new ();

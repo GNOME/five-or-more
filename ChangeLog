@@ -1,3 +1,8 @@
+2001-05-30  Juan Pablo Mendoza <pablo_juan@yahoo.com>
+
+	* glines.c (game_props_callback) Connect dialog to close signal
+	  instead of delete_event.
+
 2000-12-16  Ross Arnold  <rossa@inet.net.nz>
 
 	* glines.c, glines.h: Added a preference to optionally increase 
