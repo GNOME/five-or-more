@@ -1,4 +1,6 @@
-/* -*- mode:C; tab-width:8; c-basic-offset:8; indent-tabs-mode:true -*-
+/* -*- mode:C; indent-tabs-mode:t; tab-width:8; c-basic-offset:8; -*- */
+
+/*
  * Color lines for gnome
  * (c) 1999 Free Software Foundation
  * Authors: Robert Szokovacs <szo@appaloosacorp.hu>

@@ -1,3 +1,7 @@
+2003-06-13  William Jon McCann  <mccann@jhu.edu>
+
+	* glines.c: Make emacs mode line consistent with others.
+
 2003-06-11  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* glines.c: i18n fixes from Christian Neumair (bug #114875).
