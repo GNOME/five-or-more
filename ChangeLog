@@ -1,3 +1,8 @@
+2004-02-14  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* glines.c (load_image): Removed the _has_separator calls from message
+	dialogs.
+
 2004-02-11  Richard Hoelscher  <rah@rahga.com>
 
 	* glines.c (bg_color_callback): Set saving background color as

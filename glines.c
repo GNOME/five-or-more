@@ -148,7 +148,6 @@ load_image (gchar *fname,
 					    GTK_BUTTONS_OK,
 					    message,
 					    NULL);
-		gtk_dialog_set_has_separator (GTK_DIALOG (w), FALSE);
 		gtk_dialog_run (GTK_DIALOG (w));	
 		g_free (message);
 		exit (1);
