@@ -118,7 +118,7 @@ load_image (gchar *fname,
 	g_free( fn );
 
 	if (*pixbuf)
-		gdk_pixbuf_unref (*pixbuf);
+		g_object_unref (*pixbuf);
 
 	*pixbuf = image;
 }
@@ -131,6 +131,12 @@ help_cb (GtkWidget * widget, gpointer data)
 
   gnome_help_display (NULL, &help_entry);
 #endif
+}
+
+static void
+draw_all_balls (GtkWidget *widget)
+{
+        gdk_window_invalidate_rect (widget->window, NULL, FALSE);
 }
 
 void
@@ -168,7 +174,7 @@ reset_game (void)
 static void
 refresh_screen (void)
 {
-	draw_all_balls (draw_area, -1);
+	draw_all_balls (draw_area);
 	draw_preview ();
 }
 
@@ -212,12 +218,7 @@ init_preview (void)
 void
 draw_preview (void)
 {
-	int i;
-
-	for(i = 0; i < 3; i++)
-	{
-		draw_ball (next_draw_area, i, 0);
-	}
+	gtk_widget_queue_draw (next_draw_area);
 }
 
 static void
@@ -243,14 +244,10 @@ update_score_state ()
 
 	top = gnome_score_get_notable ("glines", NULL, &names,
 				       &scores, &scoretimes);
-	if (top > 0) {
-		gtk_widget_set_sensitive (gamemenu[2].widget, TRUE);
-		g_strfreev (names);
-		g_free (scores);
-		g_free (scoretimes);
-	} else {
-		gtk_widget_set_sensitive (gamemenu[2].widget, FALSE);
-	}
+	gtk_widget_set_sensitive (gamemenu[2].widget, top > 0);
+	g_strfreev (names);
+	g_free (scores);
+	g_free (scoretimes);
 }
 
 static void
@@ -294,19 +291,6 @@ init_new_balls (int num, int prev)
 		}
 	}
 	return j;
-}
-
-void
-draw_all_balls (GtkWidget *widget, int coord)
-{
-	if (coord != -1)
-	{
-		draw_ball (widget, coord % FIELDSIZE, coord / FIELDSIZE);
-		return;
-	}
-
-        /* Redraw the whole field */
-        gdk_window_invalidate_rect (widget->window, NULL, FALSE);
 }
 
 void
@@ -479,14 +463,6 @@ preview_expose_event (GtkWidget *widget, GdkEventExpose *event, gpointer gp)
 
         gc = gdk_gc_new (widget->window);
 	for (i = 0; i < 3; i++) {
-		/* Draw the box */
-		/*
-		 * I think it looks much cleaner without the background box
-		gdk_gc_set_foreground (gc, &backgnd.color);
-		gdk_draw_rectangle (widget->window, gc, TRUE,
-				    i * BOXSIZE+1, 1,
-				    BOXSIZE-1, BOXSIZE-1);
-		*/
 		/* Draw the ball */
 		gdk_draw_pixbuf (widget->window, gc, ball_pixbuf,
 				 0, (preview[i] - 1) * BALLSIZE,
@@ -776,7 +752,8 @@ animate (gpointer gp)
 				for (x = 0; x < 3; x++)
 				{
 					int tmp = init_new_balls (1, x);
-					draw_all_balls (widget, tmp);
+					draw_ball (widget, tmp % FIELDSIZE,
+						   tmp / FIELDSIZE);
 					check_goal (widget, tmp, 0);
 					if (check_gameover () == -1)
 						return FALSE;

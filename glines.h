@@ -32,8 +32,6 @@ void init_preview(void);
 
 void draw_preview(void);
 
-void draw_all_balls(GtkWidget *widget, int coord);
-
 int init_new_balls(int num, int prev);
 
 gint animate(gpointer gp);

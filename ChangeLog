@@ -1,3 +1,9 @@
+2003-06-21  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* glines.h: 
+	* glines.c: Cleanups and code improvements, mostly from Jorgen
+	Viksell.
+
 2003-06-20  William Jon McCann  <mccann@jhu.edu>
 
 	* glines.schemas.in: Added background_color.  Fixed typo.
