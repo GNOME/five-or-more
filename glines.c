@@ -1395,9 +1395,9 @@ init_config (int argc, char ** argv)
 int
 main (int argc, char *argv [])
 {
-	GtkWidget *frame;   
-	GtkWidget *gridframe;
-	GtkWidget *vbox, *hbox;
+	GtkWidget *alignment;   
+	GtkWidget *gridframe, *label;
+	GtkWidget *vbox, *table, *hbox;
 	GtkWidget *preview_hbox;
 	GnomeClient *client;
 	int i;
@@ -1450,44 +1450,47 @@ main (int argc, char *argv [])
 
 	gnome_app_install_menu_hints(GNOME_APP (app), mainmenu);
   
- 	vbox = gtk_vbox_new (FALSE, 0);
-
+	vbox = gtk_vbox_new (FALSE, 0);
 	gnome_app_set_contents (GNOME_APP (app), vbox);
 
+ 	table = gtk_table_new (10, 1, TRUE);
+	gtk_box_pack_start_defaults (GTK_BOX (vbox), table);
+
 	hbox = gtk_hbox_new(FALSE, 0);
-	gtk_box_pack_start (GTK_BOX (vbox), hbox, FALSE, FALSE, 0);
-	frame = gtk_aspect_frame_new (g_strdup_printf ("<span weight=\"bold\">%s</span>", _("Next Balls")), 0.5, 0.5, 3.0, FALSE);
-	gtk_label_set_use_markup (GTK_LABEL (GTK_FRAME(frame)->label_widget), TRUE);
-	gtk_container_set_border_width (GTK_CONTAINER (frame), 0);
-	gtk_frame_set_shadow_type (GTK_FRAME (frame), GTK_SHADOW_NONE);
-	gtk_frame_set_label_align (GTK_FRAME (frame), 0, 0);
-	gtk_box_pack_start (GTK_BOX (hbox), frame, FALSE, FALSE, 0);
+	gtk_table_attach_defaults (GTK_TABLE (table), hbox, 0, 1, 0, 1);
+	label = gtk_label_new (g_strdup_printf ("<span weight=\"bold\">%s</span>", _("Next Balls:")));
+	gtk_label_set_use_markup (GTK_LABEL (label), TRUE);
+	gtk_box_pack_start (GTK_BOX (hbox), label, FALSE, FALSE, 5);
 
-	preview_hbox = gtk_hbox_new (TRUE, 0);
-	gtk_container_add (GTK_CONTAINER (frame), preview_hbox);
+	alignment = gtk_alignment_new (0, 0.5, 0.3, 1);
+	gtk_box_pack_start (GTK_BOX (hbox), alignment, TRUE, TRUE, 0);
 
-	boxsize = BOXSIZE;
+	gridframe = games_grid_frame_new (3, 1);
+	gtk_container_add (GTK_CONTAINER (alignment), gridframe);
+	
+	preview_hbox = gtk_hbox_new (FALSE, 0);
+	gtk_container_add (GTK_CONTAINER (gridframe), 
+			   preview_hbox);
 
 	for (i=0; i<3; i++) {
 		preview_widgets[i] = gtk_drawing_area_new ();
-		gtk_box_pack_start_defaults (GTK_BOX (preview_hbox),
-					     preview_widgets[i]);
-		/* So we have a window at configure time since we 
-		 * only hook into one of the configure events. */
+		gtk_box_pack_start (GTK_BOX (preview_hbox),
+				    preview_widgets[i], TRUE, TRUE, 0);
+		/* So we have all the windows at configure time since
+		 * we only hook into one of the configure events. */
 		/* Yes, this is an evil hack. */
 		gtk_widget_realize (preview_widgets[i]);
 	}
 	g_signal_connect (G_OBJECT (preview_widgets[0]), "configure_event",
 			  G_CALLBACK (preview_configure_cb), NULL);
 
-	frame = games_frame_new (_("Score"));
-	gtk_container_set_border_width (GTK_CONTAINER (frame), 0);
-
 	scorelabel = gtk_label_new ("");
-	gtk_container_add (GTK_CONTAINER (frame), scorelabel);
 
-	gtk_box_pack_end (GTK_BOX (hbox), frame, 0, 0, 0);
+	gtk_box_pack_end (GTK_BOX (hbox), scorelabel, FALSE, FALSE, 5);
 
+	label = gtk_label_new (g_strdup_printf ("<span weight=\"bold\">%s</span>", _("Score:")));
+	gtk_label_set_use_markup (GTK_LABEL (label), TRUE);
+	gtk_box_pack_end (GTK_BOX (hbox), label, FALSE, FALSE, 5);
 
 	draw_area = gtk_drawing_area_new ();
 	g_signal_connect (G_OBJECT(draw_area), "button_press_event",
@@ -1498,7 +1501,7 @@ main (int argc, char *argv [])
 			  G_CALLBACK (field_expose_event), NULL);
 	gridframe = games_grid_frame_new (FIELDSIZE, FIELDSIZE);
 	gtk_container_add (GTK_CONTAINER (gridframe), draw_area);
-	gtk_box_pack_start_defaults (GTK_BOX (vbox), gridframe);
+	gtk_table_attach_defaults (GTK_TABLE (table), gridframe, 0, 1, 1, 10);
 
 	gtk_widget_set_events (draw_area, gtk_widget_get_events(draw_area) |GDK_BUTTON_PRESS_MASK);
 

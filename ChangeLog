@@ -1,3 +1,11 @@
+2004-01-08  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* glines.schemas.in:
+	* glines.h:
+	* glines.c: Remember the window size. Removed some unused
+	code. Reworked the layout of the "Next balls" and "Score" 
+	section.
+
 2004-01-07  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* glines.c: Minor bug fixes fom previous work: "Next Balls" is
