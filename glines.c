@@ -26,23 +26,17 @@
 #include <config.h>
 #endif
 
-#include <unistd.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
 #include <math.h>
 #include <gnome.h>
-#include <gtk/gtk.h>
 #include <gdk-pixbuf/gdk-pixbuf.h>
 #include <libgnomeui/gnome-window-icon.h>
 #include <gconf/gconf-client.h>
 #include <games-scores-dialog.h>
-#include "games-frame.h"
-#include "games-files.h"
-#include "games-gridframe.h"
-#include "games-preimage.h"
-#include "games-stock.h"
+#include <games-frame.h>
+#include <games-files.h>
+#include <games-gridframe.h>
+#include <games-preimage.h>
+#include <games-stock.h>
 #include "glines.h"
 
 #define KEY_DIR "/apps/glines"
@@ -66,6 +60,8 @@ gint ncolors;
 gint npieces;
 gint game_size = UNSET;
 gboolean pref_dialog_done = FALSE;
+
+GRand *rgen;
 
 GConfClient *conf_client = NULL;
 
@@ -378,7 +374,7 @@ init_preview (void)
 
 	for (i = 0; i < npieces; i++)
 	{
-		preview[i] = 1 + (int) ((double)ncolors * rand () / (RAND_MAX + 1.0));
+		preview[i] = g_rand_int_range (rgen, 1, ncolors+1);
 	}
 }
 
@@ -505,10 +501,12 @@ init_new_balls (int num, int prev)
 	gfloat num_boxes = hfieldsize * vfieldsize;
 	for (i = 0; i < num;)
 	{
-		j = (int) (num_boxes * rand ()/(RAND_MAX + 1.0));
+		j = g_rand_int_range (rgen, 0, num_boxes);
 		if (field[j].color == 0)
 		{
-			field[j].color = (prev == -1) ? (1 + (int) ((double)ncolors*rand()/(RAND_MAX+1.0))):preview[prev]; 
+			field[j].color = (prev == -1) ? 
+				g_rand_int_range (rgen, 1, ncolors+1) :
+				preview[prev]; 
 			i++;
 		}
 	}
@@ -1709,7 +1707,7 @@ static void create_menus ()
 	scoreitem = gtk_ui_manager_get_widget (ui_manager, 
 					       "/MainMenu/GameMenu/Scores");
 	menubar = gtk_ui_manager_get_widget (ui_manager, "/MainMenu");
-};
+}
 
 #ifndef GNOME_CLIENT_RESTARTED
 #define GNOME_CLIENT_RESTARTED(client) \
@@ -1822,7 +1820,7 @@ main (int argc, char *argv [])
 	
 	gnome_score_init ("glines");
 
-	srand (time (NULL));
+	rgen = g_rand_new ();
 	
 	bindtextdomain (GETTEXT_PACKAGE, GNOMELOCALEDIR);
 	bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
