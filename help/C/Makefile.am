@@ -5,7 +5,7 @@ figs = \
 docname = glines
 lang = C
 omffile = glines-C.omf
-entities = 
+entities = legal.xml
 include $(top_srcdir)/xmldocs.make
 dist-hook: app-dist-hook
 
