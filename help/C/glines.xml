@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+             "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd"
+[
+  <!ENTITY version "2.0">
+]>
+<!-- This doc is based on the GDP template from GNOME 1.2
+     Its syntax and DTD has been updated to validate with xmllint.
+     The content needs to be updated (it basically needs to be finished)
+     edited and indexed.
+   -->
+<!-- =============Document Header ============================= -->
+
+<article id="index"> 
+
+ <articleinfo>
+  <title>Glines</title>
+  <copyright>
+   <year>2000-2002</year>
+   <holder>Emese Kovács</holder>
+  </copyright>
+
+  <!-- translators: uncomment this:
+
+  <copyright>
+   <year>2000</year>
+   <holder>ME-THE-TRANSLATOR (Latin translation)</holder>
+  </copyright>
+
+   -->
+
+  <!-- do not put authorname in the header except in copyright - use
+  section "authors" below -->
+
+  <legalnotice>
+   <para>
+    Permission is granted to copy, distribute and/or modify this
+    document under the terms of the <citetitle>GNU Free Documentation
+    License</citetitle>, Version 1.1 or any later version published
+    by the Free Software Foundation with no Invariant Sections, no
+    Front-Cover Texts, and no Back-Cover Texts. You may obtain a copy
+    of the <citetitle>GNU Free Documentation License</citetitle> from
+    the Free Software Foundation by visiting 
+    <ulink url="http://www.fsf.org" type="http">their Web site</ulink> 
+    or by writing to
+    <address>
+     Free Software Foundation, Inc.
+     <street>59 Temple Place</street> - Suite 330
+     <city>Boston</city>, <state>MA</state> <postcode>02111-1307</postcode>
+     <country>USA</country>
+    </address>
+   </para>
+  </legalnotice>
+
+  <!-- this is version of manual, not application --> 
+  <releaseinfo>
+  This is version &version; of the Glines manual.
+  </releaseinfo>
+
+ </articleinfo>
+
+ <!-- ============= Document Body ============================= -->
+
+ <!-- ============= Introduction ============================== -->
+ <sect1 id="intro">
+  <title>Introduction</title>
+
+  <para> 
+   <application>Glines</application>, is the Gnome port of the once 
+   popular Windows game called <application>Color Lines</application>.
+   The game's objective is to align as often as possible five balls or more 
+   of the same color causing them to disappear, play as long as possible, and 
+   be #1 in the High Scores. 
+   
+  </para>
+
+  <para>
+   To run <application>Glines</application>, select
+   <guimenuitem>Glines</guimenuitem> from the
+   <guisubmenu>Games</guisubmenu> submenu of the <guimenu>Main
+   Menu</guimenu>, or type <command>glines</command> on the
+   command line. 
+  </para>
+
+  <para>
+   <application>Glines</application> is included in the
+   <filename>GNOME-games</filename> package, which is part of the
+   GNOME desktop environment. This document describes version
+   &version; of <application>Glines</application>.
+  </para>
+
+ </sect1>
+
+
+ <!-- ================ Usage ================================ -->
+ <!-- This section should describe basic usage of the application. -->
+
+  <sect1 id="usage">
+    <title>Playing Glines</title>
+    <para>
+      <application>Glines</application> is easy to play. At startup, you find
+      yourself with five balls randomly positioned on the board. Each turn, 
+      you are allowed to move one ball. You can move it up or down, left 
+      or right, or any combination of the previously mentioned directions,
+      any number of squares. After your move, the computer drops three balls,
+      again at random positions. You can preview the color of the balls to be
+      dropped in the upper right corner of the application's window. 
+      If you manage to align five balls of the same color, they disappear,
+      leaving you some more room to continue playing.
+    </para>
+
+
+  <!-- ========= Basic Usage =========================== -->
+  <sect2 id="mainwin">
+   <title>Basic usage</title>
+   <para>
+    Starting <application>Glines</application> presents you with the
+    <interface>game board</interface>, which is nine squares on a
+    side.  A new game starts as you launch the application. What it 
+    looks like is shown in <xref linkend="mainwindow-fig" />.
+
+    <!-- ==== Figure ==== -->
+    <mediaobject id="mainwindow-fig">
+     <imageobject>
+      <imagedata fileref="figures/glines-new-game" format="PNG" srccredit="emese" />
+     </imageobject>
+     <textobject>
+      <phrase>Glines Main Window</phrase>
+     </textobject>
+     <caption>
+      <para>Glines Main Window</para>
+     </caption>
+    </mediaobject>
+     <!-- ==== End of Figure ==== -->
+
+   </para>
+
+   <para>
+     As the game progresses, the board gets more and more crowded 
+     (unless you are really good...) and making balls disappear gets harder
+     and harder&hellip; The game is over, when the board is full. 
+   
+   <!-- ==== Figure ==== -->
+   
+    <mediaobject id="gameover-fig">
+     <imageobject>
+      <imagedata fileref="figures/glines-game-over" format="PNG" srccredit="emese kovacs" />
+     </imageobject>
+     <textobject>
+      <phrase>Game Over!</phrase>
+     </textobject>
+     <caption>
+      <para>Game Over!</para>
+     </caption>
+    </mediaobject>
+   
+   <!-- ==== End of Figure ==== -->
+   
+   </para>
+  </sect2>
+
+
+  <!-- ========= Rulez =========================== -->
+
+    <sect2 id="rules"> 
+      <title>Basic Rules</title>
+      <para>
+        A game of <application>Glines</application> begins with five
+        balls of random colors on the board.
+      </para>
+      <para>
+        To make a move, click on one of the balls. A ball is activated when it 
+	starts rotating (or doing something else depending on the theme, but 
+	let us not anticipate&hellip;). You can then select its destination by 
+	clicking an empty square. If the path to the destination is clear, 
+	the activated ball rolls there. If the destination square is occupied 
+	by another ball, no ball will be moved and the selection will be 
+	transferred to the latter ball. If the path is not clear (your ball 
+	cannot jump over already laid down balls!) the application prints a 
+	warning in the status bar (bottom of the window) and the original 
+	ball remains active.
+      </para>
+      <para>
+        As balls disappear, you get points, your score is shown in the upper 
+	right corner of the application window. The amount of point you get 
+	depends on the number of balls you managed to align (see 
+	<xref linkend="glines-table1" />).
+      </para>
+      
+    <!-- ====  Table 1.  ==== -->
+    <table id="glines-table1">
+     <title>Scoring in Glines</title>
+      <tgroup cols="2" align="center">
+       <thead>
+        <row>
+         <entry>Number of balls</entry>
+         <entry>Score given</entry>
+        </row>
+       </thead>
+       <tbody>
+       <row>
+        <entry>5</entry>
+        <entry>10</entry>
+       </row>
+       <row>
+        <entry>6</entry>
+        <entry>12</entry>
+       </row>
+       <row>
+        <entry>7</entry>
+        <entry>18</entry>
+       </row>
+       <row>
+        <entry>8</entry>
+        <entry>28</entry>
+       </row>
+       <row>
+        <entry>9</entry>
+        <entry>42</entry>
+       </row>
+       <row>
+        <entry>10</entry>
+        <entry>82</entry>
+       </row>
+       <row>
+        <entry>11</entry>
+        <entry>108</entry>
+       </row>
+       <row>
+        <entry>12</entry>
+        <entry>138</entry>
+       </row>
+      <row>
+        <entry>13</entry>
+        <entry>172</entry>
+      </row>
+      <row>
+        <entry>14</entry>
+        <entry>210</entry>
+       </row>
+      </tbody>
+     </tgroup> 
+    </table>
+
+
+   <!-- ==== End of Table ==== -->
+
+
+    </sect2>
+
+
+  <!-- ========= Menus =========================== -->
+  <sect2 id="menubar">
+   <title>Menus</title>
+   <para>
+    The menu bar, located at the top of the <interface>game 
+    board</interface>, contains the following menus:
+   </para>
+
+   <variablelist>
+    <varlistentry>
+     <term><guimenu>Game</guimenu></term>
+     <listitem>
+      <para>
+       This menu contains three items:
+      <itemizedlist>	
+	<listitem>
+	  <para>
+            <menuchoice> 
+	       <shortcut><keysym>Ctrl-N</keysym></shortcut>
+               <guimenuitem>New Game</guimenuitem>
+	    </menuchoice>
+           </para>
+         </listitem>     
+       
+	<listitem>
+	  <para>
+            <menuchoice>
+               <guimenuitem>Scores...</guimenuitem>
+            </menuchoice>
+        </para>
+       </listitem>
+
+       	<listitem>
+	<para>
+          <menuchoice>
+            <shortcut><keysym>Ctrl-Q</keysym></shortcut>
+            <guimenuitem>Exit</guimenuitem>
+          </menuchoice>
+        </para>
+       </listitem>
+     </itemizedlist>
+      </para>
+     </listitem>
+    </varlistentry>
+
+	<varlistentry>
+	  <term><guimenu>Settings</guimenu></term>
+	  <listitem>
+	    <para>
+              The <guimenu>Settings</guimenu> menu contains only one item:
+              <itemizedlist>
+		<listitem>
+		  <para>
+                   <guimenuitem>Preferences</guimenuitem>
+                    which brings up the preferences dialog box.
+                  </para>
+		</listitem>
+	      </itemizedlist>
+            </para>
+	  </listitem>
+	</varlistentry>
+
+    <varlistentry>
+     <term><guimenu>Help</guimenu></term>
+     <listitem>
+      <para>
+       This menu contains:
+       <itemizedlist>
+        <listitem>
+         <para>
+          <guimenuitem>Glines Manual</guimenuitem>&mdash;
+          shows this manual.
+         </para>
+        </listitem>
+        <listitem>
+         <para>
+          <guimenuitem>Playing Glines</guimenuitem>&mdash;
+          shows the section of the manual dealing with how to play Glines.
+         </para>
+        </listitem>
+        <listitem>
+         <para>
+          <guimenuitem>Creating New Themes</guimenuitem>&mdash;
+          shows details about creating new themes for glines.
+         </para>
+        </listitem>
+        <listitem>
+         <para>
+          <guimenuitem>Known Bugs</guimenuitem>&mdash;
+         lists the application's known bugs and features on the whishlist. 
+         </para>
+         </listitem>
+         <listitem>
+         <para>
+          <guimenuitem>Authors and Bug Reporting</guimenuitem>&mdash;
+          provides the authors' contact and information on how to submit bug
+	  reports.           
+         </para>
+        </listitem>
+
+        <listitem>
+         <para>
+          <guimenuitem>About</guimenuitem>&mdash; shows
+          basic information about
+          <application>Glines</application>, such as
+          the author's name and the application version number.
+         </para>
+        </listitem>
+       </itemizedlist>
+
+      </para>
+     </listitem>
+    </varlistentry>
+   </variablelist>
+  </sect2>
+  <sect2 id="settings">
+  <title>How to set preferences</title>
+  <para>
+   You can configure <application>Glines</application> by clicking on 
+   <guimenuitem>Preferences</guimenuitem> in the applications 
+   <guimenu>Settings</guimenu> menu. The following 
+   <interface>dialogbox</interface> will show up:
+  </para>
+ <!-- ==== Figure ==== -->
+    <mediaobject id="preferences-dialogbox">
+     <imageobject>
+      <imagedata fileref="figures/glines-preferences" format="PNG" srccredit="emese" />
+     </imageobject>
+     <textobject>
+      <phrase>Preferences</phrase>
+     </textobject>
+     <caption>
+      <para>Preferences</para>
+     </caption>
+    </mediaobject>
+    
+    <!-- ==== End of Figure ==== -->
+
+  <para>
+   You can select different ball styles and background images for 
+   <application>Glines</application>. Just click on the drop down menus and 
+   choose your favorite look. 
+  </para>
+  <para>
+   Ever been teased by an application asking you if you really want to quit?
+   Well, the checkbox labelled "Ask confirmation when quitting" can help you 
+   disable this feature.
+  </para>
+  <para>
+   <application>Glines</application> version 1.9 and higher has now session 
+   management support, which allows it to remember your favorite settings 
+   when you quit the application or when you log out from your desktop. 
+  </para>
+  <caution>
+   <title>Warning!</title>
+   <para>
+    Be careful though, the game itself is not saved!!!
+   </para>
+  </caution>
+</sect2>
+ </sect1>
+  <sect1 id="themes">
+    <title>How to create new themes</title>
+    <para>Some info about creating skins to glines.</para>
+  </sect1>
+
+ <!-- ============= Bugs ================================== -->
+ <!-- This section should describe known bugs and limitations of
+      the program if there are any - please be frank and list all
+      problems you know of -->
+ <sect1 id="bugs">
+  <title>Known Bugs and Limitations</title>
+  <para>
+   This application has no known bugs.
+  </para>
+ </sect1>
+
+
+<!-- ============= Authors ================================ -->
+
+ <sect1 id="authors">
+  <title>Authors</title>
+  <para>
+   <application>Glines</application> was written by Róbert Szókovács
+   (<email>szo@appaloosacorp.hu</email>) and Szabolcs Bán
+   (<email>shooby@gnome.hu</email>). To find more information about
+   <application>Glines</application>, please visit the <ulink
+   url="http://projects.gnome.hu/glines/" type="http">Glines Web
+   page</ulink>.  Please send all comments, suggestions, and bug reports to
+   the <ulink url="http://bugs.gnome.org" type="http">GNOME bug tracking
+   database</ulink>. (Instructions for submitting bug reports can be found
+   <ulink url="http://bugs.gnome.org/Reporting.html" type="http">
+   on-line</ulink>.) If you are using GNOME 1.1 or later, you can also use
+   <application>Bug Report Tool</application>
+   (<command>bug-buddy</command>), available in the
+   <guisubmenu>Utilities</guisubmenu> submenu of <guimenu>Main
+   Menu</guimenu>, for submitting bug reports.
+  </para>
+
+  <para> This manual was written by Emese Kovács
+   (<email>emese@gnome.hu</email>). Please send all comments and suggestions
+   regarding this manual to the <ulink url="http://www.gnome.org/gdp"
+   type="http">GNOME Documentation Project</ulink> by sending an email to
+   <email>docs@gnome.org</email>. You can also add your comments online by
+   using the <ulink url="http://www.gnome.org/gdp/doctable/"
+   type="http">GNOME Documentation Status Table</ulink>.
+  </para>
+
+  <!-- For translations: uncomment this:
+
+  <para>
+   Latin translation was done by ME
+   (<email>MYNAME@MYADDRESS</email>). Please send all  comments  and
+   suggestions regarding this translation to SOMEWHERE.
+  </para>
+
+  -->
+
+ </sect1>
+
+
+ <!-- ============= Application License ============================= -->
+
+ <sect1 id="license">
+  <title>License</title>
+  <para>
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the <citetitle>GNU General Public
+   License</citetitle> as published by the Free Software Foundation;
+   either version 2 of the License, or (at your option) any later
+   version.
+  </para>
+  <para>
+   This program is distributed in the hope that it will be useful, but
+   WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   <citetitle>GNU General Public License</citetitle> for more details.
+  </para>
+  <para>
+   A copy of the <citetitle>GNU General Public License</citetitle> is
+   included as an appendix to the <citetitle>GNOME Users
+   Guide</citetitle>.  You may also obtain a copy of the
+   <citetitle>GNU General Public License</citetitle> from the Free
+   Software Foundation by visiting 
+   <ulink url="http://www.fsf.org" type="http">their Web site</ulink> or 
+   by writing to
+   <address>
+    Free Software Foundation, Inc.
+    <street>59 Temple Place</street> - Suite 330
+    <city>Boston</city>, <state>MA</state> <postcode>02111-1307</postcode>
+    <country>USA</country>
+   </address>
+  </para>
+ </sect1>
+</article>
