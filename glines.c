@@ -14,6 +14,7 @@
 #include <config.h>
 #include <gnome.h>
 #include <gdk_imlib.h>
+#include <libgnomeui/gnome-window-icon.h>
 
 #include "glines.h"
 
@@ -787,7 +788,7 @@ main (int argc, char *argv [])
 	gnome_score_init("glines");
 
 	gnome_init ("glines", VERSION, argc, argv);
-
+	gnome_window_icon_set_default_from_file (GNOME_ICONDIR"/glines.xpm");
 	client = gnome_master_client ();
 
 	gtk_signal_connect (GTK_OBJECT (client), "save_yourself",  
