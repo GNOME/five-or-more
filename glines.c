@@ -127,31 +127,26 @@ load_image (gchar *fname,
 	g_free (tmp);
 
 
-	/* Just think of this as an if statement, but we want to use break. */
-	while (!g_file_test (fn, G_FILE_TEST_EXISTS)) {
+	if (!g_file_test (fn, G_FILE_TEST_EXISTS)) {
 		char * message;
 		GtkWidget * w;
-
-		/* ball.png was replaced with balls.svg. */
-		if (g_utf8_collate (fname, "ball.png") == 0) {
-			tmp = g_build_filename ("glines", "balls.svg", NULL);
-			fn = gnome_program_locate_file (NULL, GNOME_FILE_DOMAIN_APP_PIXMAP, (tmp), FALSE, NULL);
-			g_free (tmp);
-			if (g_file_test (fn, G_FILE_TEST_EXISTS))
-				break;
+		
+		tmp = g_build_filename ("glines", "balls.svg", NULL);
+		fn = gnome_program_locate_file (NULL, GNOME_FILE_DOMAIN_APP_PIXMAP, (tmp), FALSE, NULL);
+		g_free (tmp);
+		if (!g_file_test (fn, G_FILE_TEST_EXISTS)) {
+			message = g_strdup_printf (_("Five or More could not find image file:\n%s\n\n"
+						     "Please check Five or More is installed correctly."), fn);
+			w = gtk_message_dialog_new (GTK_WINDOW (app),
+						    GTK_DIALOG_MODAL | GTK_DIALOG_DESTROY_WITH_PARENT,
+						    GTK_MESSAGE_ERROR,
+						    GTK_BUTTONS_OK,
+						    message,
+						    NULL);
+			gtk_dialog_run (GTK_DIALOG (w));	
+			g_free (message);
+			exit (1);
 		}
-
-		message = g_strdup_printf (_("Five or More could not find image file:\n%s\n\n"
-					     "Please check Five or More is installed correctly."), fn);
-		w = gtk_message_dialog_new (GTK_WINDOW (app),
-					    GTK_DIALOG_MODAL | GTK_DIALOG_DESTROY_WITH_PARENT,
-					    GTK_MESSAGE_ERROR,
-					    GTK_BUTTONS_OK,
-					    message,
-					    NULL);
-		gtk_dialog_run (GTK_DIALOG (w));	
-		g_free (message);
-		exit (1);
 	}
 
 	tmp_preimage = games_preimage_new_from_uri (fn, NULL);

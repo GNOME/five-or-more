@@ -1,3 +1,9 @@
+2004-11-16  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* glines.c (load_image): Fall back to the default if the theme is
+	not found. Put up the error dialog only if that fails. Bug
+	#158409.
+
 2004-10-13  Richard Hoelscher  <rah@rahga.com>
 
 	* glines.c: Use games_preimage in place of gdk_pixbuf loading and
