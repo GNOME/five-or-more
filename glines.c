@@ -704,6 +704,7 @@ static int
 game_about_callback (GtkWidget *widget, void *data)
 {
     GtkWidget *about;
+    GdkPixbuf *pixbuf = NULL;
     const gchar *authors[] = {
 		            _("Robert Szokovacs <szo@appaloosacorp.hu>"),
 			    _("Szabolcs Ban <shooby@gnome.hu>"),
@@ -715,6 +716,19 @@ game_about_callback (GtkWidget *widget, void *data)
                           };
    /* Translator credits */
    gchar *translator_credits = _("translator_credits");
+
+   {
+	   char *filename = NULL;
+
+	   filename = gnome_program_locate_file (NULL,
+			   GNOME_FILE_DOMAIN_PIXMAP,  ("glines.png"),
+			   TRUE, NULL);
+	   if (filename != NULL)
+	   {
+		   pixbuf = gdk_pixbuf_new_from_file(filename, NULL);
+		   g_free (filename);
+	   }
+   }
    					        
 	about = gnome_about_new (_("Glines"), VERSION,
 			_("(C) 1997-2000 the Free Software Foundation"),
@@ -722,7 +736,7 @@ game_about_callback (GtkWidget *widget, void *data)
 			(const char **)authors,
 			(const char **)documenters,
 			strcmp (translator_credits, "translator_credits") != 0 ? translator_credits : NULL,
-		        NULL);
+		        pixbuf);
 	gtk_window_set_transient_for (GTK_WINDOW (about), GTK_WINDOW(app));
 	gtk_widget_show (about);
 	return TRUE;
