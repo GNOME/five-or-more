@@ -1,5 +1,13 @@
 2001-06-26  Juan Pablo Mendoza <pablo_juan@yahoo.com>
 
+	* glines.c (load_image): Remove more useless code. Use a dialog
+	  instead of a printf if we can't find the images. Also fix a ugly
+	  check.
+	  (set_selection), (set_selection1), (free_str), (fill_menu): This
+	  stuff was doing some really nasty things.
+
+2001-06-26  Juan Pablo Mendoza <pablo_juan@yahoo.com>
+
 	* glines.c (load_properties): Remove pointless code.
 
 2001-06-11  Juan Pablo Mendoza <pablo_juan@yahoo.com>

@@ -58,7 +58,6 @@ GdkPixmap **mask)
         GdkColor bgcolor;
 	GdkImlibImage *image;
         GdkImage *tmpimage;
-	GdkVisual *visual;
     
 	tmp = g_strconcat ( "glines/", fname, NULL);
 
@@ -66,22 +65,22 @@ GdkPixmap **mask)
 	g_free( tmp );
 
 	if (!g_file_exists (fn)) {
-		printf (_("Could not find the \'%s\' theme for Glines\n"), fn);
+		char *message = g_strdup_printf (_("Glines Couldn't find pixmap file:\n%s\n\n"
+			"Please check you Glines instalation"), fn);
+		GtkWidget *w = gnome_error_dialog (message);
+		gnome_dialog_run_and_close (GNOME_DIALOG(w));
+		g_free (message);
 		exit (1);
 	}
-
-	if (!image)
-		gdk_imlib_destroy_image (image);
 
 	image = gdk_imlib_load_image (fn);
 	g_free( fn );
 
-	visual = gdk_imlib_get_visual ();
 	gdk_imlib_render (image, image->rgb_width, image->rgb_height);
 
-	if (!*pixmap)
+	if (*pixmap)
 		gdk_imlib_free_pixmap (*pixmap);
-	if (!*mask)
+	if (*mask)
 		gdk_imlib_free_pixmap (*mask);
 
 	*pixmap = gdk_imlib_move_image (image);
@@ -751,30 +750,25 @@ load_theme_cb()
 
 
 static void
-set_selection (GtkWidget *widget, void *data)
+set_selection (GtkWidget *widget, char *data)
 {
-	if(!ball_filename)
+	if(ball_filename)
 		g_free(ball_filename);
-	ball_filename = strdup(data);
-	if(!data)
-		free (data);
+	ball_filename = g_strdup(data);
 }
 
 static void
-set_selection1 (GtkWidget *widget, void *data)
+set_selection1 (GtkWidget *widget, char *data)
 {
-        if(!box_filename)
+        if(box_filename)
 		g_free(box_filename);
-	box_filename = strdup(data);
-	if(!data)
-		free (data);
+	box_filename = g_strdup(data);
 }
 
 static void
-free_str (GtkWidget *widget, void *data)
+free_str (GtkWidget *widget, char *data)
 {
-	if(!data)
-		free (data);
+	g_free (data);
 }
 
 static void
@@ -792,10 +786,10 @@ fill_menu (GtkWidget *menu, char * mtype, gboolean bg)
 	
 	while ((e = readdir (dir)) != NULL){
 		GtkWidget *item;
-		char *s = strdup (e->d_name);
+		char *s = g_strdup (e->d_name);
 
 		if (!strstr (e->d_name, mtype)) {
-			free (s);
+			g_free (s);
 			continue;
 		}
 			
@@ -810,7 +804,7 @@ fill_menu (GtkWidget *menu, char * mtype, gboolean bg)
 				    GTK_SIGNAL_FUNC (set_selection), s);
 		gtk_signal_connect (GTK_OBJECT(item), "destroy",
 				    GTK_SIGNAL_FUNC (free_str), s);
-	  
+
 	        if (bg){
 	        if (!strcmp(box_filename, s))
 		  gtk_menu_set_active(GTK_MENU(menu), itemno);
