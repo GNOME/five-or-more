@@ -2,7 +2,7 @@ figs = \
 	figures/glines-gameover.png	\
 	figures/preferences.png		\
 	figures/glines-startgame.png
-docname = glines 
+docname = glines
 lang = C
 omffile = glines-C.omf
 sgml_ents = 
