@@ -1,3 +1,7 @@
+2003-08-09  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* glines.c (main): More gconf defenses.
+
 2003-08-04  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* glines.c: Defensive programming against bad gconf data.

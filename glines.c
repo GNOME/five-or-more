@@ -49,6 +49,8 @@
 #define KEY_SAVED_FIELD "/apps/glines/saved/field"
 #define KEY_SAVED_PREVIEW "/apps/glines/saved/preview"
 
+#define NCOLORS 7
+
 GConfClient *conf_client = NULL;
 
 GtkWidget *draw_area;
@@ -1169,6 +1171,14 @@ load_properties (void)
 	load_theme ();
 }
 
+static gint clamp_int (gint input, gint low, gint high)
+{
+	if (input < low)
+		input = low;
+	if (input > high)
+		input = high;
+	return input;
+}
 
 static void
 restart (void)
@@ -1176,19 +1186,25 @@ restart (void)
 	gchar *buf;
 	int i;
 
+	/* This isn't really a good idea, but if we're going to
+	 * restore the game the score has to be stored somewhere
+	 * and without some sort of restricted-access storage the
+	 * user will always be able to change it. */
 	score = gconf_client_get_int (conf_client,
                                       KEY_SAVED_SCORE, NULL);
-
+	if (score < 0)
+		score = 0;
+	
 	buf = gconf_client_get_string (conf_client,
                                        KEY_SAVED_FIELD, NULL);
 	if(buf)
 	{
 		for(i = 0; i < FIELDSIZE * FIELDSIZE; i++)
 		{
-			field[i].color = buf[i*4] - 'h';
-			field[i].pathsearch = buf[i*4 + 1] - 'h';
-			field[i].phase = buf[i*4 + 2] - 'h';
-			field[i].active = buf[i*4 + 3] - 'h';
+			field[i].color = clamp_int (buf[i*4] - 'h', 1, NCOLORS);
+			field[i].pathsearch = clamp_int (buf[i*4 + 1] - 'h', -1, FIELDSIZE*FIELDSIZE);
+			field[i].phase = clamp_int (buf[i*4 + 2] - 'h', 0, 3);
+			field[i].active = clamp_int (buf[i*4 + 3] - 'h', -1, 1);
 		}
 		g_free(buf);
 	}
@@ -1197,7 +1213,7 @@ restart (void)
 	if(buf)
 	{
 		for(i = 0; i < 3; i++)
-			preview[i] = buf[i] - 'h';
+			preview[i] = clamp_int (buf[i] - 'h', 1, NCOLORS);
 		g_free(buf);
 	}
 }
@@ -1266,17 +1282,19 @@ ball_theme_changed_cb (GConfClient *client,
 
 	theme_tmp = gconf_client_get_string (client,
 					     KEY_BALL_THEME, NULL);
-	if (strcmp (theme_tmp, ball_filename) != 0)
-		{
-			g_free (ball_filename);
-			ball_filename = theme_tmp;
-		} 
-	else
-		g_free (theme_tmp);
-  
-	load_theme ();
-	refresh_screen ();
 
+	if (theme_tmp) {
+		if (strcmp (theme_tmp, ball_filename) != 0)
+			{
+				g_free (ball_filename);
+				ball_filename = theme_tmp;
+				load_theme ();
+				refresh_screen ();
+			} 
+		else
+			g_free (theme_tmp);
+	}
+	
 	//FIXME apply in the prefs dialog GUI
 }
 
@@ -1290,9 +1308,8 @@ move_timeout_changed_cb (GConfClient *client,
 
 	timeout_tmp = gconf_client_get_int (client,
 					    KEY_MOVE_TIMEOUT, NULL);
-	if ((timeout_tmp != move_timeout)
-	    && (timeout_tmp > 0)
-	    && (timeout_tmp <= 1000))
+	timeout_tmp = clamp_int (timeout_tmp, 1, 1000);
+	if (timeout_tmp != move_timeout)
 		move_timeout = timeout_tmp;
   
 	//FIXME apply in the prefs dialog GUI
