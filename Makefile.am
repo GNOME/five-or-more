@@ -32,6 +32,8 @@ Games_in_files = glines.desktop.in
 Games_DATA = $(Games_in_files:.desktop.in=.desktop)
 @INTLTOOL_DESKTOP_RULE@
 
+CLEANFILES = $(Games_DATA)
+
 install-data-local:
 	-$(mkinstalldirs) $(DESTDIR)$(scoredir)
 	touch $(DESTDIR)$(scoredir)/glines.scores
