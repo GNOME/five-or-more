@@ -1033,15 +1033,10 @@ game_props_callback (GtkWidget *widget, void *data)
 			gtk_table_attach_defaults (GTK_TABLE (table), l, 0, 1, 1, 2);
 	    
 			{
-				guint r,g,b;
-				GdkColor u;
-				
 				w  = gtk_color_button_new ();
-				sscanf (backgnd.name, "#%02x%02x%02x", &r, &g, &b);
-				u.red = r; u.green = g; u.blue = b;
-				gtk_color_button_set_color (GTK_COLOR_BUTTON (w), &u);
+				gtk_color_button_set_color (GTK_COLOR_BUTTON (w), &backgnd.color);
 				g_signal_connect (G_OBJECT (w), "color_set",
-						  G_CALLBACK (bg_color_callback), &backgnd.name);
+						  G_CALLBACK (bg_color_callback), NULL);
 			}
 
 			gtk_table_attach_defaults (GTK_TABLE (table), w, 1, 2, 1, 2);
