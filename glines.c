@@ -347,7 +347,7 @@ show_scores (gint pos, gboolean new_game)
 					      GTK_WINDOW (app));
 		gtk_window_set_modal (GTK_WINDOW (dialog), TRUE);
 		if (new_game)
-			g_signal_connect (G_OBJECT (dialog), "unmap", 
+			g_signal_connect (G_OBJECT (dialog), "destroy", 
 					  G_CALLBACK (game_new_callback), 
 					  NULL);
 	}

@@ -2,6 +2,8 @@
 
 	* glines.c: Use the new games_gridframe_set_padding API to get the
 	borders right. Also simplify the code. Fixes bug #154982.
+	(show_scores): Switch unmap -> destroy since unmap wasn't working
+	for sme people.
 
 2004-10-09  Callum McKenzie  <callum@physics.otago.ac.nz>
 
