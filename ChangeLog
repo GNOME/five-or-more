@@ -1,3 +1,8 @@
+2002-11-10  Tim Musson <trmusson@ihug.co.nz>
+
+	* glines.c: (field_expose_event): redraw more squares after expose
+	events (fixes #97314)
+
 2002-11-11  Ross Burton  <ross@burtonini.com>
 
 	* glines.png: New icon contributed by Timothy Musson.

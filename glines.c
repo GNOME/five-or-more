@@ -468,8 +468,8 @@ field_expose_event (GtkWidget *widget, GdkEventExpose *event, gpointer gp)
 	y_start = event->area.y / BOXSIZE;
 	y_end = y_start + event->area.height / BOXSIZE + 1;
 
-	for (i = y_start; i < y_end; i++) {
-		for (j = x_start; j < x_end; j++) {
+	for (i = y_start; i <= y_end; i++) {
+		for (j = x_start; j <= x_end; j++) {
 			idx = j + i * FIELDSIZE;
 
 			/* Draw the box */
