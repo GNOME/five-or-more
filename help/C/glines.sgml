@@ -86,7 +86,7 @@
   <sect1 id="usage">
     <title>Playing Glines</title>
     <para>
-      <application>Glines</application> is easy to play. At startup, you find yourself with five balls randomly positionned on the board. Each turn, you are allowed to move one ball. You can move it up or down, left or right, or any combination of the previously mentionned directions, any number of squares. After your move, the computer drops three balls, again at random positions. You can preview the color of the balls to be dropped in the upper right corner of the application's window. If you manage to align five balls of the same color, they disappear, leaving you some more space to continue playing.
+      <application>Glines</application> is easy to play. At startup, you find yourself with five balls randomly positioned on the board. Each turn, you are allowed to move one ball. You can move it up or down, left or right, or any combination of the previously mentioned directions, any number of squares. After your move, the computer drops three balls, again at random positions. You can preview the color of the balls to be dropped in the upper right corner of the application's window. If you manage to align five balls of the same color, they disappear, leaving you some more space to continue playing.
     </para>
 
 
@@ -111,7 +111,7 @@
    </para>
 
 <para>
-As the game progresses, the board gets more and more crowded (unless you are really good...) and making balls disappear gets harder and harder... The game is over, when the bord is full. 
+As the game progresses, the board gets more and more crowded (unless you are really good...) and making balls disappear gets harder and harder... The game is over, when the board is full. 
     <!-- ==== Figure ==== -->
     <figure id="gameover-fig">
      <title>Game Over!</title>
@@ -135,7 +135,7 @@ As the game progresses, the board gets more and more crowded (unless you are rea
         balls of random colors on the board.
       </para>
       <para>
-        To make a move, click on one of the balls. A ball is activated when it starts rotating (or doing something else depending on the theme, but let us not anticipate...). You can then select its destination by clicking an empty square. If the path to the destination is clear, the activated ball rolls there. If the destination square is occupied by another ball, no ball will be moved and the selection will be transferred to the latter ball. If the path is not clear (your ball cannot jump over already laid down balls!) the application prints a warning in the status bar (bottom of the window) and the original ball reamains active.
+        To make a move, click on one of the balls. A ball is activated when it starts rotating (or doing something else depending on the theme, but let us not anticipate...). You can then select its destination by clicking an empty square. If the path to the destination is clear, the activated ball rolls there. If the destination square is occupied by another ball, no ball will be moved and the selection will be transferred to the latter ball. If the path is not clear (your ball cannot jump over already laid down balls!) the application prints a warning in the status bar (bottom of the window) and the original ball remains active.
       </para>
       <para>
         As balls disappear, you get points, your score is shown in the upper right corner of the application window. The amount of point you get depends on the number of balls you managed to align (see Table 1).
