@@ -19,6 +19,6 @@ Comment[lt]=Gnome spalvotas lines þaidimas
 Comment[no]=Gnome fargelinjer
 Comment[sv]=Gnome färglinjer
 Exec=glines
-Icon=glines.xpm
+Icon=glines.png
 Terminal=0
 Type=Application

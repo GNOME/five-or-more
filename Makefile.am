@@ -23,7 +23,7 @@ pixmap_DATA = ball.png classic.png dots.png pulse.png \
 
 EXTRA_DIST = glines.desktop $(pixmap_DATA) $(icon_DATA)
 
-icon_DATA = glines.xpm
+icon_DATA = glines.png
 
 Games_DATA = glines.desktop
 

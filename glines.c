@@ -5,6 +5,7 @@
  *          Szabolcs Ban <shooby@gnome.hu>
  */
 
+
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -20,6 +21,9 @@
 #include <libgnomeui/gnome-window-icon.h>
 
 #include "glines.h"
+
+#undef VERSION
+#define VERSION "1.9.0"
 
 GtkWidget *bah_window = NULL;
 
@@ -37,6 +41,7 @@ int active = -1;
 int target = -1;
 int inmove = 0;
 int score = 0;
+int ask_me = 0;
 int preview[3];
 char * ball_filename;
 char * box_filename;
@@ -83,6 +88,17 @@ GdkPixmap **mask)
 
 	gdk_imlib_destroy_image (image);
 }
+
+static void
+help_cb (GtkWidget * widget, gpointer data)
+{
+
+
+  GnomeHelpMenuEntry help_entry = { "glines", "user-guide/usage.html#PREFERENCES-DIALOGBOX" };
+
+  gnome_help_display (NULL, &help_entry);
+}
+
 
 void
 reset_game(void)
@@ -675,10 +691,10 @@ game_about_callback (GtkWidget *widget, void *data)
 			    };
 					        
 	about = gnome_about_new (_("Glines"), VERSION,
-			_("(C) 1997-1998 the Free Software Foundation"),
+			_("(C) 1997-2000 the Free Software Foundation"),
 			  (const char **)authors,
 		       _("Gnome port of the once-popular Color Lines game"),
-			"glines.xpm");
+			"glines.png");
 	gnome_dialog_set_parent(GNOME_DIALOG(about), GTK_WINDOW(app));
 	gtk_widget_show (about);
 	return TRUE;
@@ -702,6 +718,14 @@ glines_cancel (GtkWidget *widget, void *data)
 static void 
 load_theme_cb()
 {
+  gnome_config_set_string ("/glines/Table/BallTheme",
+                                     ball_filename);
+  gnome_config_set_string ("/glines/Table/BoxTheme",
+                                     box_filename);
+  gnome_config_set_int ("/glines/Prefs/AskMe",
+                                     ask_me);
+  gnome_config_sync();
+
   load_theme();
   draw_field(draw_area,1);
   draw_all_balls(draw_area, -1);
@@ -785,9 +809,15 @@ fill_menu (GtkWidget *menu, char * mtype, gboolean bg)
 	closedir (dir);
 }
 
+static void
+set_selection_def (GtkWidget *widget, gpointer *data)
+{
+  ask_me = GTK_TOGGLE_BUTTON (widget)->active;
+}
+
 game_props_callback (GtkWidget *widget, void *data)
 {
-	GtkWidget *menu1, *omenu1, *menu, *omenu, *l, *hb, *hb1, *f, *fv;
+	GtkWidget *menu1, *omenu1, *menu, *omenu, *l, *hb, *hb1, *f, *fv, *cb;
 	GtkWidget *button;
 
 	if (pref_dialog)
@@ -795,6 +825,7 @@ game_props_callback (GtkWidget *widget, void *data)
 	
 	pref_dialog = gnome_dialog_new (_("Preferences"),
 			GNOME_STOCK_BUTTON_OK, GNOME_STOCK_BUTTON_CANCEL,
+			GNOME_STOCK_BUTTON_HELP,
 			NULL);
 	gnome_dialog_set_parent (GNOME_DIALOG (pref_dialog), GTK_WINDOW (app));
 	gtk_signal_connect (GTK_OBJECT(pref_dialog), "delete_event",
@@ -840,6 +871,18 @@ game_props_callback (GtkWidget *widget, void *data)
 
 
 	gtk_container_add (GTK_CONTAINER(fv), hb1);
+
+	cb = gtk_check_button_new_with_label ( _("Ask confirmation when quitting") );
+	if (ask_me) 
+	 {
+	   gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (cb),
+	                                   TRUE);
+	 }
+        gtk_signal_connect (GTK_OBJECT(cb), "clicked", (GtkSignalFunc)set_selection_def, NULL);
+	gtk_widget_show (cb);
+
+	gtk_container_add (GTK_CONTAINER(fv), cb);
+
 	gtk_box_pack_start_defaults (GTK_BOX(GNOME_DIALOG(pref_dialog)->vbox), f);
 	gtk_container_add (GTK_CONTAINER (f), fv);
 	
@@ -849,6 +892,8 @@ game_props_callback (GtkWidget *widget, void *data)
 			GTK_SIGNAL_FUNC (load_theme_cb), NULL);
 	gnome_dialog_button_connect (GNOME_DIALOG (pref_dialog), 1,
 			GTK_SIGNAL_FUNC (glines_cancel), (gpointer)1);
+	gnome_dialog_button_connect (GNOME_DIALOG (pref_dialog), 2,
+			GTK_SIGNAL_FUNC (help_cb), NULL);
 
         gtk_widget_show (pref_dialog);
 }
@@ -856,19 +901,28 @@ game_props_callback (GtkWidget *widget, void *data)
 static int
 game_quit_callback (GtkWidget *widget, void *data)
 {
-		GtkWidget *box;
+	GtkWidget *box;
 
-	box = gnome_message_box_new (_("Do you really want to quit?"),
+	if (ask_me) {
+
+	 box = gnome_message_box_new (_("Do you really want to quit?"),
 	                             GNOME_MESSAGE_BOX_QUESTION,
 	                             GNOME_STOCK_BUTTON_YES,
 	                             GNOME_STOCK_BUTTON_NO,
 	                             NULL);
-	gnome_dialog_set_parent (GNOME_DIALOG(box), GTK_WINDOW(app));
-	gnome_dialog_set_default (GNOME_DIALOG (box), 0);
-	gtk_window_set_modal (GTK_WINDOW (box), TRUE);  
-	gtk_signal_connect (GTK_OBJECT (box), "clicked",
+	 gnome_dialog_set_parent (GNOME_DIALOG(box), GTK_WINDOW(app));
+	 gnome_dialog_set_default (GNOME_DIALOG (box), 0);
+	 gtk_window_set_modal (GTK_WINDOW (box), TRUE);  
+	 gtk_signal_connect (GTK_OBJECT (box), "clicked",
 	                   (GtkSignalFunc)game_maybe_quit, NULL);
-	gtk_widget_show (box);
+	 gtk_widget_show (box);
+
+	} 
+	else 
+	{ 
+	 gtk_widget_destroy (app);
+	 gtk_main_quit ();                               
+	}
 
  	return TRUE;
 
@@ -890,6 +944,10 @@ save_state (GnomeClient *client,
 
 	gnome_config_push_prefix (prefix);
 	gnome_config_set_int ("Glines/Score", score);
+
+	gnome_config_set_string ("Glines/BallTheme", ball_filename);
+
+	gnome_config_set_string ("Glines/BoxTheme", box_filename);
 	
 	buf = g_malloc(FIELDSIZE * FIELDSIZE * 4 + 1);
 	for(i = 0; i < FIELDSIZE * FIELDSIZE; i++)
@@ -910,11 +968,29 @@ save_state (GnomeClient *client,
 	gnome_config_pop_prefix ();
 	gnome_config_sync();
 
-	argv[2]= gnome_config_get_real_path (prefix);
+/*	argv[2]= gnome_config_get_real_path (prefix);
 	gnome_client_set_discard_command (client, 3, argv);
-
+*/
 	return TRUE;
 }
+
+static void
+load_properties ()
+{
+  char buf[256];
+
+  g_snprintf (buf, 256, "/glines/Table/BallTheme=ball.png");
+  ball_filename  = gnome_config_get_string (buf);
+
+  g_snprintf (buf, 256, "/glines/Table/BoxTheme=gray.xpm");
+  box_filename  = gnome_config_get_string (buf);
+
+  ask_me = gnome_config_get_int ("/glines/Prefs/AskMe=0");
+
+
+  load_theme();
+}
+
 
 static void
 restart (void)
@@ -1017,7 +1093,7 @@ main (int argc, char *argv [])
 	gnome_window_icon_set_default_from_file (GNOME_ICONDIR"/glines.xpm");
 	client = gnome_master_client ();
 
-	gtk_signal_connect (GTK_OBJECT (client), "save_yourself",  
+	gtk_signal_connect (GTK_OBJECT (client), "save_yourself",
 	                    GTK_SIGNAL_FUNC (save_state), argv[0]);
 	gtk_signal_connect (GTK_OBJECT (client), "die",
                             GTK_SIGNAL_FUNC (client_die), NULL);
@@ -1082,9 +1158,8 @@ main (int argc, char *argv [])
 	gtk_widget_set_events (draw_area, gtk_widget_get_events(draw_area) |GDK_BUTTON_PRESS_MASK);
 
 	gtk_widget_realize(draw_area);
-	box_filename = strdup("gray.xpm");
-	ball_filename = strdup("ball.png");
-	load_theme();
+
+	load_properties(client);
 
 	backpixmap = gdk_pixmap_new(draw_area->window,
 			BOXSIZE*FIELDSIZE,
