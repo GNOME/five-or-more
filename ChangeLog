@@ -1,3 +1,9 @@
+2004-01-21  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* glines.c (button_press_event): Ignore double and triple
+	clicks. Just like for Mahjongg. Richard Hoelscher pointed this out
+	in bug #132010.
+
 2004-01-20  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* balls.svg: Reworked version from Richard Hoelscher. Smaller file

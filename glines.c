@@ -518,6 +518,11 @@ button_press_event (GtkWidget *widget, GdkEvent *event)
 	/* XXX Ezt megkapja */
 
 	if(inmove) return TRUE;
+
+	/* Ignore the 2BUTTON and 3BUTTON events. */
+	if (event->type != GDK_BUTTON_PRESS)
+		return TRUE;
+	
 	gtk_widget_get_pointer (widget, &x, &y);
 	fx = x / boxsize;
 	fy = y / boxsize;
