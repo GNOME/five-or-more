@@ -1,3 +1,11 @@
+2003-06-19  William Jon McCann  <mccann@jhu.edu>
+
+	* glines.c: #define gconf key names.
+	Stop leaking gconf clients.
+	* glines.schemas.in: Changed gconf table sub-directory
+	to preferences.  There is no need to have both.  I think
+	this is ok since we haven't released this yet.
+	
 2003-06-18  William Jon McCann  <mccann@jhu.edu>
 
 	* glines.c: Include string.h.

@@ -5,6 +5,21 @@
  * (c) 1999 Free Software Foundation
  * Authors: Robert Szokovacs <szo@appaloosacorp.hu>
  *          Szabolcs Ban <shooby@gnome.hu>
+ *
+ * This game is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2, or (at your option)
+ * any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307
+ * USA
  */
 
 #ifdef HAVE_CONFIG_H
@@ -18,25 +33,28 @@
 #include <time.h>
 #include <math.h>
 #include <dirent.h>
-
 #include <gnome.h>
 #include <gtk/gtk.h>
-
 #include <gdk-pixbuf/gdk-pixbuf.h>
-
 #include <libgnomeui/gnome-window-icon.h>
 #include <gconf/gconf-client.h>
-
 #include "games-frame.h"
-
 #include "glines.h"
 
-GtkWidget *bah_window = NULL;
+#define KEY_DIR "/apps/glines"
+#define KEY_BACKGROUND_COLOR "/apps/glines/preferences/background_color"
+#define KEY_BALL_THEME "/apps/glines/preferences/ball_theme"
+#define KEY_MOVE_TIMEOUT "/apps/glines/preferences/move_timeout"
+#define KEY_SAVED_SCORE "/apps/glines/saved/score"
+#define KEY_SAVED_FIELD "/apps/glines/saved/field"
+#define KEY_SAVED_PREVIEW "/apps/glines/saved/preview"
+
+GConfClient *conf_client = NULL;
 
 GtkWidget *draw_area;
 static GtkWidget *app, *appbar, *pref_dialog;
 GtkWidget *next_draw_area; /* XXX Shouldn't be this much externls! */
-field_props field[FIELDSIZE*FIELDSIZE];
+field_props field[FIELDSIZE * FIELDSIZE];
 GdkPixbuf *ball_pixbuf = NULL;
 GdkPixmap *surface;
 
@@ -882,8 +900,8 @@ bg_color_changed_cb (GConfClient *client,
 {
 	gchar *color;
 
-	color = gconf_client_get_string (gconf_client_get_default (),
-					 "/apps/glines/table/background_color", NULL);
+	color = gconf_client_get_string (client,
+					 KEY_BACKGROUND_COLOR, NULL);
 	set_backgnd_color (color);
 }
 
@@ -898,8 +916,8 @@ bg_color_callback (GtkWidget *widget, gpointer data)
 
 	tmp = g_strdup_printf ("#%02x%02x%02x", r, g, b);
 
-	gconf_client_set_string (gconf_client_get_default (),
-				 "/apps/glines/table/background_color", tmp, NULL);
+	gconf_client_set_string (conf_client,
+				 KEY_BACKGROUND_COLOR, tmp, NULL);
 }
 
 static void
@@ -911,8 +929,8 @@ load_theme ()
 static void
 set_selection (GtkWidget *widget, char *data)
 {
-	gconf_client_set_string (gconf_client_get_default (),
-				 "/apps/glines/table/ball_theme",
+	gconf_client_set_string (conf_client,
+				 KEY_BALL_THEME,
 				 data, NULL);
 }
 
@@ -967,8 +985,8 @@ set_fast_moves_callback (GtkWidget *widget, gpointer *data)
 {
 	gboolean is_on = gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (widget));
 	gint timeout = is_on ? 10 : 100;
-	gconf_client_set_int (gconf_client_get_default (),
-			      "/apps/glines/preferences/move_timeout",
+	gconf_client_set_int (conf_client,
+			      KEY_MOVE_TIMEOUT,
 			      timeout, NULL);
 }
 
@@ -1003,7 +1021,7 @@ game_props_callback (GtkWidget *widget, void *data)
 								   GTK_RESPONSE_CLOSE,
 								   NULL);
 			gtk_dialog_set_has_separator (GTK_DIALOG (pref_dialog), FALSE);
-			g_signal_connect (G_OBJECT(pref_dialog), "response",
+			g_signal_connect (G_OBJECT (pref_dialog), "response",
 					  G_CALLBACK (pref_dialog_response), NULL);
 			g_signal_connect (G_OBJECT (pref_dialog), "delete_event",
 					  G_CALLBACK (gtk_widget_hide), NULL);
@@ -1115,8 +1133,8 @@ save_state (GnomeClient *client,
 	gchar *buf;
 	int i;
 
-	gconf_client_set_int (gconf_client_get_default (),
-                              "/apps/glines/saved/score", score, NULL);
+	gconf_client_set_int (conf_client,
+                              KEY_SAVED_SCORE, score, NULL);
 
 	buf = g_malloc (FIELDSIZE * FIELDSIZE * 4 + 1);
 	for (i = 0; i < FIELDSIZE * FIELDSIZE; i++)
@@ -1127,13 +1145,13 @@ save_state (GnomeClient *client,
 		buf[i*4 + 3] = field[i].active + 'h';
 	}
 	buf[FIELDSIZE * FIELDSIZE * 4] = '\0';
-	gconf_client_set_string (gconf_client_get_default (),
-                                 "/apps/glines/saved/field", buf, NULL);
+	gconf_client_set_string (conf_client,
+                                 KEY_SAVED_FIELD, buf, NULL);
 	for(i = 0; i < 3; i++)
 		buf[i] = preview[i] + 'h';
 	buf[3] = '\0';
-	gconf_client_set_string (gconf_client_get_default (),
-                                 "/apps/glines/saved/preview", buf, NULL);
+	gconf_client_set_string (conf_client,
+                                 KEY_SAVED_PREVIEW, buf, NULL);
 	g_free(buf);
 
 	return TRUE;
@@ -1144,18 +1162,18 @@ load_properties (void)
 {
 	gchar * buf;
 	
-	ball_filename = gconf_client_get_string (gconf_client_get_default (),
-						 "/apps/glines/table/ball_theme",
+	ball_filename = gconf_client_get_string (conf_client,
+						 KEY_BALL_THEME,
 						 NULL);
 	if (! ball_filename)
 		ball_filename = g_strdup ("pulse.png");
 
-	move_timeout = gconf_client_get_int (gconf_client_get_default (),
-					     "/apps/glines/preferences/move_timeout",
+	move_timeout = gconf_client_get_int (conf_client,
+					     KEY_MOVE_TIMEOUT,
 					     NULL);
 
-	buf = gconf_client_get_string (gconf_client_get_default (),
-				       "/apps/glines/table/background_color",
+	buf = gconf_client_get_string (conf_client,
+				       KEY_BACKGROUND_COLOR,
 				       NULL);
 	set_backgnd_color (buf);
 	g_free (buf);
@@ -1173,11 +1191,11 @@ restart (void)
 	gchar *buf;
 	int i;
 
-	score = gconf_client_get_int (gconf_client_get_default (),
-                                      "/apps/glines/saved/score", NULL);
+	score = gconf_client_get_int (conf_client,
+                                      KEY_SAVED_SCORE, NULL);
 
-	buf = gconf_client_get_string (gconf_client_get_default (),
-                                       "/apps/glines/saved/field", NULL);
+	buf = gconf_client_get_string (conf_client,
+                                       KEY_SAVED_FIELD, NULL);
 	if(buf)
 	{
 		for(i = 0; i < FIELDSIZE * FIELDSIZE; i++)
@@ -1189,8 +1207,8 @@ restart (void)
 		}
 		g_free(buf);
 	}
-	buf = gconf_client_get_string (gconf_client_get_default (),
-                                       "/apps/glines/saved/preview", NULL);
+	buf = gconf_client_get_string (conf_client,
+                                       KEY_SAVED_PREVIEW, NULL);
 	if(buf)
 	{
 		for(i = 0; i < 3; i++)
@@ -1261,8 +1279,8 @@ ball_theme_changed_cb (GConfClient *client,
 {
 	gchar *theme_tmp = NULL;
 
-	theme_tmp = gconf_client_get_string (gconf_client_get_default (),
-					     "/apps/glines/table/ball_theme", NULL);
+	theme_tmp = gconf_client_get_string (client,
+					     KEY_BALL_THEME, NULL);
 	if (strcmp (theme_tmp, ball_filename) != 0)
 		{
 			g_free (ball_filename);
@@ -1285,8 +1303,8 @@ move_timeout_changed_cb (GConfClient *client,
 {
 	gint timeout_tmp;
 
-	timeout_tmp = gconf_client_get_int (gconf_client_get_default (),
-					    "/apps/glines/preferences/move_timeout", NULL);
+	timeout_tmp = gconf_client_get_int (client,
+					    KEY_MOVE_TIMEOUT, NULL);
 	if ((timeout_tmp != move_timeout)
 	    && (timeout_tmp > 0)
 	    && (timeout_tmp <= 1000))
@@ -1298,22 +1316,22 @@ move_timeout_changed_cb (GConfClient *client,
 static void
 init_config (void)
 {
-	GConfClient *conf_client = gconf_client_get_default ();
+	conf_client = gconf_client_get_default ();
 
 	gconf_client_add_dir (conf_client,
-			      "/apps/glines",
+			      KEY_DIR,
 			      GCONF_CLIENT_PRELOAD_ONELEVEL,
 			      NULL);
 	gconf_client_notify_add (conf_client,
-				 "/apps/glines/table/ball_theme",
+				 KEY_BALL_THEME,
 				 ball_theme_changed_cb,
 				 NULL, NULL, NULL);
 	gconf_client_notify_add (conf_client,
-				 "/apps/glines/preferences/move_timeout",
+				 KEY_MOVE_TIMEOUT,
 				 move_timeout_changed_cb,
 				 NULL, NULL, NULL);
 	gconf_client_notify_add (conf_client,
-				 "/apps/glines/table/background_color",
+				 KEY_BACKGROUND_COLOR,
 				 bg_color_changed_cb,
 				 NULL, NULL, NULL);
 }
@@ -1340,7 +1358,7 @@ main (int argc, char *argv [])
 			    GNOME_PARAM_APP_DATADIR, DATADIR, NULL);
 
         gconf_init (argc, argv, NULL);
-        gconf_client_add_dir (gconf_client_get_default (), "/apps/glines",
+        gconf_client_add_dir (gconf_client_get_default (), KEY_DIR,
                               GCONF_CLIENT_PRELOAD_NONE, NULL);
 
 	gnome_window_icon_set_default_from_file (GNOME_ICONDIR"/glines.png");
@@ -1435,6 +1453,8 @@ main (int argc, char *argv [])
 	
 	/* Enter the event loop */
 	gtk_main ();
+
+	g_object_unref (conf_client);
 
 	return (0);
 }

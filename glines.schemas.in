@@ -2,8 +2,8 @@
 
   <schemalist>
       <schema>
-      <key>/schemas/apps/glines/table/ball_theme</key>
-      <applyto>/apps/gnect/table/ball_theme</applyto>
+      <key>/schemas/apps/glines/preferences/ball_theme</key>
+      <applyto>/apps/gnect/preferences/ball_theme</applyto>
       <owner>glines</owner>
       <type>string</type>
       <default>pulse.png</default>
@@ -14,8 +14,8 @@
       </schema>
 
       <schema>
-      <key>/schemas/apps/glines/table/box_theme</key>
-      <applyto>/apps/glines/table/box_theme</applyto>
+      <key>/schemas/apps/glines/preferences/box_theme</key>
+      <applyto>/apps/glines/preferences/box_theme</applyto>
       <owner>glines</owner>
       <type>string</type>
       <default>gray.xpm</default>
