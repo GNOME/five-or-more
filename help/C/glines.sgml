@@ -103,7 +103,7 @@
      <title>Glines Main Window</title>
      <screenshot>
       <screeninfo>Glines Main Window</screeninfo>
-      <graphic fileref="user-guide-images/glines-startgame" format="png" srccredit="bansz">
+      <graphic fileref="figs/glines-startgame" format="png" srccredit="bansz">
       </graphic>
      </screenshot>
     </figure>
@@ -117,7 +117,7 @@ As the game progresses, the board gets more and more crowded (unless you are rea
      <title>Game Over!</title>
      <screenshot>
       <screeninfo>Game Over!</screeninfo>
-      <graphic fileref="user-guide-images/glines-gameover" format="png" srccredit="emese kovacs">
+      <graphic fileref="figs/glines-gameover" format="png" srccredit="emese kovacs">
       </graphic>
      </screenshot>
     </figure>
@@ -317,7 +317,7 @@ As the game progresses, the board gets more and more crowded (unless you are rea
      <title>Preferences</title>
      <screenshot>
       <screeninfo>Preferences</screeninfo>
-      <graphic fileref="user-guide-images/preferences" format="png" srccredit="emese kovacs">
+      <graphic fileref="figs/preferences" format="png" srccredit="emese kovacs">
       </graphic>
      </screenshot>
     </figure>

@@ -34,23 +34,23 @@ user-guide.rtf: user-guide.sgml
 ## have to have the docbook tools.
 dist-hook:
 	mkdir $(distdir)/user-guide
-	mkdir $(distdir)/user-guide-images
+	mkdir $(distdir)/figs
 	mkdir $(distdir)/user-guide/stylesheet-images
 	-cp user-guide/*.html user-guide/*.css $(distdir)/user-guide
-	-cp user-guide-images/*.png $(distdir)/user-guide-images
+	-cp figs/*.png $(distdir)/figs
 	-cp user-guide/stylesheet-images/*.gif $(distdir)/user-guide/stylesheet-images
 	-cp user-guide/stylesheet-images/*.png $(distdir)/user-guide/stylesheet-images
 
 install-data-local:
-	$(mkinstalldirs) $(DESTDIR)$(glines_helpdir)/user-guide/user-guide-images
+	$(mkinstalldirs) $(DESTDIR)$(glines_helpdir)/user-guide/figs
 	$(mkinstalldirs) $(DESTDIR)$(glines_helpdir)/user-guide/stylesheet-images
 	-for file in $(srcdir)/user-guide/*.html $(srcdir)/user-guide/*.css; do \
 	  basefile=`basename $$file`; \
 	  $(INSTALL_DATA) $$file $(DESTDIR)$(glines_helpdir)/user-guide/$$basefile; \
 	done
-	-for file in $(srcdir)/user-guide-images/*.png; do \
+	-for file in $(srcdir)/figs/*.png; do \
 	  basefile=`basename $$file`; \
-	  $(INSTALL_DATA) $$file $(DESTDIR)$(glines_helpdir)/user-guide/user-guide-images/$$basefile; \
+	  $(INSTALL_DATA) $$file $(DESTDIR)$(glines_helpdir)/user-guide/figs/$$basefile; \
 	done
 	-for file in $(srcdir)/user-guide/stylesheet-images/*.png $(srcdir)/user-guide/stylesheet-images/*.gif; do \
 	  basefile=`basename $$file`; \
