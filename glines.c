@@ -162,6 +162,13 @@ reset_game(void)
 }
 
 void
+refresh_screen (void)
+{
+	draw_all_balls (draw_area, -1);
+	draw_preview ();
+}
+
+void
 start_game(void)
 {
 	char string[20];
@@ -1109,13 +1116,10 @@ game_props_callback (GtkWidget *widget, void *data)
 
 			gtk_box_pack_start (GTK_BOX(GTK_DIALOG(pref_dialog)->vbox), frame, 
 					    FALSE, FALSE, 0);
+			gtk_widget_show_all (pref_dialog);
 		}
-	if (pref_dialog && !GTK_WIDGET_VISIBLE (pref_dialog))
-		{
-			gtk_widget_show_all (GTK_WINDOW (pref_dialog));
-			gtk_window_present (GTK_WINDOW (pref_dialog));
-		}
-
+	
+	gtk_window_present (GTK_WINDOW (pref_dialog));
 }
 
 static int
@@ -1193,6 +1197,8 @@ save_state (GnomeClient *client,
 static void
 load_properties (void)
 {
+	gchar * buf;
+	
 	ball_filename = gconf_client_get_string (gconf_client_get_default (),
 						 "/apps/glines/table/ball_theme",
 						 NULL);
@@ -1209,9 +1215,9 @@ load_properties (void)
 					     "/apps/glines/preferences/move_timeout",
 					     NULL);
 
-	gchar *buf = gconf_client_get_string (gconf_client_get_default (),
-					      "/apps/glines/table/background_color",
-					      NULL);
+	buf = gconf_client_get_string (gconf_client_get_default (),
+				       "/apps/glines/table/background_color",
+				       NULL);
 	set_backgnd_color (buf);
 	g_free (buf);
 
@@ -1307,13 +1313,6 @@ GnomeUIInfo mainmenu[] = {
  (strcmp (gnome_client_get_id (client), \
   gnome_client_get_previous_id (client)) == 0))
 #endif /* GNOME_CLIENT_RESTARTED */
-
-void
-refresh_screen (void)
-{
-	draw_all_balls (draw_area, -1);
-	draw_preview ();
-}
 
 static void
 ball_theme_changed_cb (GConfClient *client,

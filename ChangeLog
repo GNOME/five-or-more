@@ -1,3 +1,8 @@
+2003-06-08  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* glines.c (reset_game): Fixups to remove warnings and to make it
+	ANSI C compatible.
+
 2003-06-07  William Jon McCann  <mccann@jhu.edu>
 
 	* glines.c: Use pixbufs for ball images.  Use grid lines instead
