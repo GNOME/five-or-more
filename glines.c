@@ -63,7 +63,7 @@ GdkPixmap **mask)
     
 	tmp = g_strconcat ( "glines/", fname, NULL);
 
-	fn = gnome_program_locate_file (NULL, GNOME_FILE_DOMAIN_PIXMAP, (tmp), FALSE, NULL);
+	fn = gnome_program_locate_file (NULL, GNOME_FILE_DOMAIN_APP_PIXMAP, (tmp), FALSE, NULL);
 	g_free( tmp );
 
 	if (!g_file_test (fn, G_FILE_TEST_EXISTS)) {
@@ -732,7 +732,7 @@ game_about_callback (GtkWidget *widget, void *data)
 	   char *filename = NULL;
 
 	   filename = gnome_program_locate_file (NULL,
-			   GNOME_FILE_DOMAIN_PIXMAP,  ("glines.png"),
+			   GNOME_FILE_DOMAIN_APP_PIXMAP,  ("glines.png"),
 			   TRUE, NULL);
 	   if (filename != NULL)
 	   {
@@ -814,7 +814,7 @@ static void
 fill_menu (GtkWidget *menu, char * mtype, gboolean bg)
 {
 	struct dirent *e;
-	char *dname = gnome_program_locate_file (NULL, GNOME_FILE_DOMAIN_PIXMAP, ("glines"), FALSE, NULL);
+	char *dname = gnome_program_locate_file (NULL, GNOME_FILE_DOMAIN_APP_PIXMAP, ("glines"), FALSE, NULL);
 	DIR *dir;
         int itemno = 0;
 	
