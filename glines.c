@@ -73,7 +73,7 @@ GdkPixmap **mask)
 		exit (1);
 	}
 
-	image = gdk_pixbuf_new_from_file (fn);
+	image = gdk_pixbuf_new_from_file (fn, NULL);
 	g_free( fn );
 
 	if (*pixmap)
@@ -89,11 +89,11 @@ GdkPixmap **mask)
 static void
 help_cb (GtkWidget * widget, gpointer data)
 {
-
-
+#if 0
   GnomeHelpMenuEntry help_entry = { "glines", "user-guide/usage.html#PREFERENCES-DIALOGBOX" };
 
   gnome_help_display (NULL, &help_entry);
+#endif
 }
 
 void
@@ -699,12 +699,20 @@ game_about_callback (GtkWidget *widget, void *data)
 			    _("Szabolcs Ban <shooby@gnome.hu>"),
 			    NULL
 			    };
-					        
+    
+   gchar *documenters[] = {
+                           NULL
+                          };
+   /* Translator credits */
+   gchar *translator_credits = _("");
+   					        
 	about = gnome_about_new (_("Glines"), VERSION,
 			_("(C) 1997-2000 the Free Software Foundation"),
-			  (const char **)authors,
-		       _("Gnome port of the once-popular Color Lines game"),
-			"glines.png");
+			_("Gnome port of the once-popular Color Lines game"),
+			(const char **)authors,
+			(const char **)documenters,
+                        (const char *)translator_credits,
+		        NULL);
 	gnome_dialog_set_parent(GNOME_DIALOG(about), GTK_WINDOW(app));
 	gtk_widget_show (about);
 	return TRUE;
