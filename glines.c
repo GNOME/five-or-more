@@ -926,17 +926,17 @@ static void
 fill_menu (GtkWidget *menu, char * mtype, gboolean bg)
 {
 	struct dirent *e;
+	DIR *dir;
+	int itemno = 0;
 	gchar *dname = gnome_program_locate_file (NULL, GNOME_FILE_DOMAIN_APP_PIXMAP,
 						  ("glines"), FALSE, NULL);
+
 	if (theme_list) {
 		g_list_foreach (theme_list, (GFunc) g_free, NULL);
 		g_list_free (theme_list);
 	}
 	theme_list = NULL;
-	
-	DIR *dir;
-	int itemno = 0;
-	
+		
 	dir = opendir (dname);
 	g_free (dname);
 

@@ -1,4 +1,9 @@
-2003-10-29  Callum McKenzie  <callum@localhost.localdomain>
+2003-11-07  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* glines.c (fill_menu): Patch from Kaushal Kumar to fix C89
+	compilation. Bug #126338.
+
+2003-10-29  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* Makefile.am: Removed *_DISABLE_DEPRECATED.
 
