@@ -66,6 +66,7 @@ int inmove = 0;
 int score = 0;
 
 int move_timeout = 100;
+int animate_id = 0;
 int preview[3];
 int response;
 char * ball_filename;
@@ -148,8 +149,9 @@ set_inmove (int i)
  	if (inmove != i) {
  	        inmove = i;
  	        ms = (inmove?move_timeout:100);
- 	        if(timeou != -1) gtk_timeout_remove(timeou);
- 	        timeou = gtk_timeout_add(ms, animate, (gpointer)draw_area);
+		if (animate_id)
+			g_source_remove (animate_id);
+		animate_id = g_timeout_add (ms, animate, draw_area);
  	}
 }
 
@@ -1071,6 +1073,8 @@ game_props_callback (GtkWidget *widget, void *data)
 static int
 game_quit_callback (GtkWidget *widget, void *data)
 {
+	if (animate_id)
+		g_source_remove (animate_id);
 	gtk_main_quit ();
 	return FALSE;
 }

@@ -1,3 +1,9 @@
+2003-07-09  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* glines.c: Fix a race condition where the animation callback may be
+	called after the main drawing area is destroyed. Based mostly on
+	Jörgen Viksell's <jorgen.viksell@telia.com> patch. Fixes bug 117019.
+
 2003-07-06  Steve Chaplin  <stevech1097@yahoo.com.au>
 
 	* glines.c (fill_menu): Add 'g_free (dname);' to fix a
