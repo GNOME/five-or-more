@@ -51,6 +51,13 @@ char * box_filename;
 GtkWidget *scorelabel;
 scoretable sctab[] = {{5, 10}, {6, 12}, {7, 18}, {8, 28}, {9, 42}, {10, 82}, {11, 108}, {12, 138}, {13, 172}, {14, 210}, {0,0}};
 
+/* predeclare the menus */
+
+GnomeUIInfo gamemenu[];
+GnomeUIInfo settingsmenu[];
+GnomeUIInfo helpmenu[];
+GnomeUIInfo mainmenu[];
+
 static void 
 load_image (gchar *fname,
 GdkPixmap **pixmap,
@@ -183,6 +190,24 @@ draw_preview(void)
 	}
 }
 
+void update_score_state ()
+{
+        gchar **names = NULL;
+        gfloat *scores = NULL;
+        time_t *scoretimes = NULL;
+	gint top;
+
+	top = gnome_score_get_notable("glines", NULL, &names, &scores, &scoretimes);
+	if (top > 0) {
+		gtk_widget_set_sensitive (gamemenu[2].widget, TRUE);
+		g_strfreev(names);
+		g_free(scores);
+		g_free(scoretimes);
+	} else {
+		gtk_widget_set_sensitive (gamemenu[2].widget, FALSE);
+	}
+}
+
 void
 game_over(void)
 {
@@ -191,6 +216,7 @@ game_over(void)
 	gnome_appbar_set_status(GNOME_APPBAR(appbar), _("Game Over!"));
 	pos = gnome_score_log(score, NULL, TRUE);
 	gnome_scores_display(_("Glines"), "glines", NULL, pos); 
+	update_score_state ();
 	return;
 }
 
@@ -1248,6 +1274,8 @@ main (int argc, char *argv [])
 			  G_CALLBACK (preview_expose_event), NULL);
 
 	gtk_widget_realize(next_draw_area);
+
+	update_score_state ();
 
 	gtk_widget_show(draw_area);
 	gtk_widget_show(next_draw_area);
