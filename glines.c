@@ -37,7 +37,6 @@ GtkWidget *draw_area;
 static GtkWidget *app, *appbar, *pref_dialog;
 GtkWidget *next_draw_area; /* XXX Shouldn't be this much externls! */
 field_props field[FIELDSIZE*FIELDSIZE];
-GdkPixbuf *box_pixbuf = NULL;
 GdkPixbuf *ball_pixbuf = NULL;
 GdkPixmap *surface;
 
@@ -52,7 +51,6 @@ int move_timeout = 100;
 int preview[3];
 int response;
 char * ball_filename;
-char * box_filename;
 GtkWidget *scorelabel;
 scoretable sctab[] = {{5, 10}, {6, 12}, {7, 18}, {8, 28}, {9, 42}, {10, 82}, {11, 108}, {12, 138}, {13, 172}, {14, 210}, {0,0}};
 
@@ -907,8 +905,7 @@ bg_color_callback (GtkWidget *widget, gpointer data)
 static void
 load_theme ()
 {
-	load_image(box_filename, &box_pixbuf);
-	load_image(ball_filename, &ball_pixbuf);
+	load_image (ball_filename, &ball_pixbuf);
 }
 
 static void
@@ -916,14 +913,6 @@ set_selection (GtkWidget *widget, char *data)
 {
 	gconf_client_set_string (gconf_client_get_default (),
 				 "/apps/glines/table/ball_theme",
-				 data, NULL);
-}
-
-static void
-set_selection1 (GtkWidget *widget, char *data)
-{
-	gconf_client_set_string (gconf_client_get_default (),
-				 "/apps/glines/table/box_theme",
 				 data, NULL);
 }
 
@@ -959,23 +948,14 @@ fill_menu (GtkWidget *menu, char * mtype, gboolean bg)
 		item = gtk_menu_item_new_with_label (s);
 		gtk_widget_show (GTK_WIDGET(item));
 		gtk_menu_shell_append (GTK_MENU_SHELL (menu), GTK_WIDGET (item));
-		if(bg)
-			g_signal_connect (G_OBJECT (item), "activate",
-					  G_CALLBACK (set_selection1), s);
-		else
-			g_signal_connect (G_OBJECT (item), "activate",
-					  G_CALLBACK (set_selection), s);
+
+		g_signal_connect (G_OBJECT (item), "activate",
+				  G_CALLBACK (set_selection), s);
 		g_signal_connect (G_OBJECT (item), "destroy",
 				  G_CALLBACK (free_str), s);
 
-		if (bg){
-			if (!strcmp(box_filename, s))
-				gtk_menu_set_active (GTK_MENU (menu), itemno);
-		}
-		else {
-			if (!strcmp(ball_filename, s))
-				gtk_menu_set_active (GTK_MENU (menu), itemno);
-		}
+		if (! strcmp (ball_filename, s))
+			gtk_menu_set_active (GTK_MENU (menu), itemno);
 			  
 		itemno++;
 	}
@@ -1033,8 +1013,8 @@ game_props_callback (GtkWidget *widget, void *data)
 			gtk_container_set_border_width (GTK_CONTAINER (table), 0);
 			gtk_table_set_row_spacings (GTK_TABLE (table), 6);
 			gtk_table_set_col_spacings (GTK_TABLE (table), 6);
-			gtk_container_add (GTK_CONTAINER(frame), table);
-			gtk_box_pack_start (GTK_BOX(GTK_DIALOG(pref_dialog)->vbox), frame, 
+			gtk_container_add (GTK_CONTAINER (frame), table);
+			gtk_box_pack_start (GTK_BOX (GTK_DIALOG (pref_dialog)->vbox), frame, 
 					    FALSE, FALSE, 0);
 
 			l = gtk_label_new (_("Ball image"));
@@ -1053,12 +1033,12 @@ game_props_callback (GtkWidget *widget, void *data)
 			gtk_table_attach_defaults (GTK_TABLE (table), l, 0, 1, 1, 2);
 	    
 			{
-				int ur,ug,ub ;
+				int ur, ug, ub;
 				
-				w  = gnome_color_picker_new();
-				sscanf (backgnd.name, "#%02x%02x%02x", &ur,&ug,&ub);
-				gnome_color_picker_set_i8 (GNOME_COLOR_PICKER(w), ur, ug, ub, 0);
-				g_signal_connect (G_OBJECT(w), "color_set",
+				w  = gnome_color_picker_new ();
+				sscanf (backgnd.name, "#%02x%02x%02x", &ur, &ug, &ub);
+				gnome_color_picker_set_i8 (GNOME_COLOR_PICKER (w), ur, ug, ub, 0);
+				g_signal_connect (G_OBJECT (w), "color_set",
 						  G_CALLBACK (bg_color_callback), &backgnd.name);
 			}
 
@@ -1068,8 +1048,8 @@ game_props_callback (GtkWidget *widget, void *data)
 			frame = games_frame_new (_("General"));
 			fv = gtk_vbox_new (FALSE, FALSE);
 			gtk_box_set_spacing (GTK_BOX (fv), 6);
-			gtk_container_add (GTK_CONTAINER(frame), fv);
-			gtk_box_pack_start (GTK_BOX(GTK_DIALOG(pref_dialog)->vbox), frame, 
+			gtk_container_add (GTK_CONTAINER (frame), fv);
+			gtk_box_pack_start (GTK_BOX (GTK_DIALOG (pref_dialog)->vbox), frame, 
 					    FALSE, FALSE, 0);
 
 			fast_moves_toggle_button = 
@@ -1080,10 +1060,10 @@ game_props_callback (GtkWidget *widget, void *data)
 						(GTK_TOGGLE_BUTTON (fast_moves_toggle_button),
 						 TRUE);
 				}
-			g_signal_connect (G_OBJECT(fast_moves_toggle_button), "clicked", 
+			g_signal_connect (G_OBJECT (fast_moves_toggle_button), "clicked", 
 					  G_CALLBACK (set_fast_moves_callback), NULL);
 
-			gtk_container_add (GTK_CONTAINER(fv), fast_moves_toggle_button);
+			gtk_container_add (GTK_CONTAINER (fv), fast_moves_toggle_button);
 
 			gtk_widget_show_all (pref_dialog);
 		}
@@ -1170,12 +1150,6 @@ load_properties (void)
 	if (! ball_filename)
 		ball_filename = g_strdup ("pulse.png");
 
-	box_filename = gconf_client_get_string (gconf_client_get_default (),
-						"/apps/glines/table/box_theme", 
-						NULL);
-	if (! box_filename)
-		box_filename = g_strdup ("gray.xpm");
-  
 	move_timeout = gconf_client_get_int (gconf_client_get_default (),
 					     "/apps/glines/preferences/move_timeout",
 					     NULL);
@@ -1189,7 +1163,7 @@ load_properties (void)
 	if (move_timeout <= 0)
 		move_timeout = 100;
 
-	load_theme();
+	load_theme ();
 }
 
 
@@ -1304,30 +1278,6 @@ ball_theme_changed_cb (GConfClient *client,
 }
 
 static void
-box_theme_changed_cb (GConfClient *client,
-                      guint cnxn_id,
-                      GConfEntry *entry,
-                      gpointer user_data)
-{
-	gchar *theme_tmp = NULL;
-
-	theme_tmp = gconf_client_get_string (gconf_client_get_default (),
-					     "/apps/glines/table/box_theme", NULL);
-	if (strcmp (theme_tmp, box_filename) != 0)
-		{
-			g_free (box_filename);
-			box_filename = theme_tmp;
-		} 
-	else 
-		g_free (theme_tmp);
-  
-	load_theme ();
-	refresh_screen ();
-
-	//FIXME apply in the prefs dialog GUI
-}
-
-static void
 move_timeout_changed_cb (GConfClient *client,
 			 guint cnxn_id,
 			 GConfEntry *entry,
@@ -1357,10 +1307,6 @@ init_config (void)
 	gconf_client_notify_add (conf_client,
 				 "/apps/glines/table/ball_theme",
 				 ball_theme_changed_cb,
-				 NULL, NULL, NULL);
-	gconf_client_notify_add (conf_client,
-				 "/apps/glines/table/box_theme",
-				 box_theme_changed_cb,
 				 NULL, NULL, NULL);
 	gconf_client_notify_add (conf_client,
 				 "/apps/glines/preferences/move_timeout",
