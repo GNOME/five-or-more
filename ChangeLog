@@ -1,3 +1,9 @@
+2005-03-30  Richard Hoelscher  <rah@rahga.com>
+
+	* glines.c: Use games-stock in menu items.
+	(main): Call games-stock-init().
+	(set_fullscreen_actions): New, seperate Fullscreen/Leave items.
+
 2005-03-24  Dennis Cranston <dennis_cranston@yahoo.com>
  
  	* glines.c:  Use Header capitalization for category titles.

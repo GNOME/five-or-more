@@ -42,6 +42,7 @@
 #include "games-files.h"
 #include "games-gridframe.h"
 #include "games-preimage.h"
+#include "games-stock.h"
 #include "glines.h"
 
 #define KEY_DIR "/apps/glines"
@@ -73,7 +74,8 @@ static GtkWidget *app, *appbar, *pref_dialog, *gridframe;
 GtkWidget *preview_widgets[MAXNPIECES];
 GtkWidget *menubar;
 GtkWidget *scoreitem;
-GtkToggleAction *fullscreenaction;
+GtkAction *fullscreen_action;
+GtkAction *leavefullscreen_action;
 
 field_props field[MAXFIELDSIZE * MAXFIELDSIZE];
 
@@ -1313,9 +1315,25 @@ set_fast_moves_callback (GtkWidget *widget, gpointer *data)
 }
 
 static void
+set_fullscreen_actions (gboolean is_fullscreen)
+{
+	/* We need to set sensitivity, else we don't get the shortcut key */
+	gtk_action_set_sensitive (leavefullscreen_action, is_fullscreen);
+	gtk_action_set_visible (leavefullscreen_action, is_fullscreen);
+
+	gtk_action_set_sensitive (fullscreen_action, !is_fullscreen);
+	gtk_action_set_visible (fullscreen_action, !is_fullscreen);
+}
+
+static void
 fullscreen_callback (GtkToggleAction *action)
 {
-	if (gtk_toggle_action_get_active (action))
+	gboolean is_fullscreen;
+	is_fullscreen = (GTK_ACTION (action) == fullscreen_action);
+
+	set_fullscreen_actions (is_fullscreen);
+
+	if (is_fullscreen)
 		gtk_window_fullscreen (GTK_WINDOW (app));
 	else
 		gtk_window_unfullscreen (GTK_WINDOW (app));
@@ -1327,9 +1345,8 @@ window_state_callback (GtkWidget *widget, GdkEventWindowState *event)
 {
 	if (!(event->changed_mask & GDK_WINDOW_STATE_FULLSCREEN))
 		return;
-    
-	gtk_toggle_action_set_active (fullscreenaction,
-				      event->new_window_state & GDK_WINDOW_STATE_FULLSCREEN);
+
+	set_fullscreen_actions (event->new_window_state & GDK_WINDOW_STATE_FULLSCREEN);
 }
 
 static void
@@ -1642,16 +1659,14 @@ const GtkActionEntry actions[] = {
 	{ "GameMenu", NULL, N_("_Game") },
 	{ "SettingsMenu", NULL, N_("_Settings") }, 
 	{ "HelpMenu", NULL, N_("_Help") },
-	{ "NewGame", GTK_STOCK_NEW, N_("_New Game"), "<control>N", NULL, G_CALLBACK (game_new_callback) },
-	{ "Scores", NULL, N_("_Scores..."), NULL, NULL, G_CALLBACK (game_top_ten_callback) },
+	{ "NewGame", GAMES_STOCK_NEW_GAME, NULL, NULL, NULL, G_CALLBACK (game_new_callback) },
+	{ "Scores", GAMES_STOCK_SCORES, NULL, NULL, NULL, G_CALLBACK (game_top_ten_callback) },
 	{ "Quit", GTK_STOCK_QUIT, NULL, NULL, NULL, G_CALLBACK (game_quit_callback) },
 	{ "Preferences", GTK_STOCK_PREFERENCES, NULL, NULL, NULL, G_CALLBACK (game_props_callback) },
-	{ "Contents", GTK_STOCK_HELP, N_("_Contents"), "F1", NULL, G_CALLBACK (game_help_callback) },
-	{ "About", GTK_STOCK_ABOUT, NULL, NULL, NULL, G_CALLBACK (game_about_callback) }
-};
-
-const GtkToggleActionEntry toggle_actions[] = {
-	{ "Fullscreen", NULL, N_("_Fullscreen"), "F11", NULL, G_CALLBACK (fullscreen_callback) }
+	{ "Contents", GAMES_STOCK_CONTENTS, NULL, NULL, NULL, G_CALLBACK (game_help_callback) },
+	{ "About", GTK_STOCK_ABOUT, NULL, NULL, NULL, G_CALLBACK (game_about_callback) },
+	{ "Fullscreen", GAMES_STOCK_FULLSCREEN, NULL, NULL, NULL, G_CALLBACK (fullscreen_callback) },
+	{ "LeaveFullscreen", GAMES_STOCK_LEAVE_FULLSCREEN, NULL, NULL, NULL, G_CALLBACK (fullscreen_callback) }
 };
 
 const char *ui_description = 
@@ -1666,6 +1681,7 @@ const char *ui_description =
 "    </menu>"
 "    <menu action='SettingsMenu'>"
 "      <menuitem action='Fullscreen'/>"
+"      <menuitem action='LeaveFullscreen'/>"
 "      <menuitem action='Preferences'/>"
 "    </menu>"
 "    <menu action='HelpMenu'>"
@@ -1685,11 +1701,11 @@ static void create_menus ()
 	gtk_action_group_set_translation_domain (action_group, GETTEXT_PACKAGE);
 	gtk_action_group_add_actions (action_group, actions, 
 				      G_N_ELEMENTS (actions), NULL);
-	gtk_action_group_add_toggle_actions (action_group, toggle_actions,
-					     G_N_ELEMENTS (toggle_actions), NULL);
 
-	fullscreenaction = GTK_TOGGLE_ACTION (gtk_action_group_get_action (action_group, "Fullscreen"));
-
+	fullscreen_action = gtk_action_group_get_action (action_group, "Fullscreen");
+	leavefullscreen_action = gtk_action_group_get_action (action_group, "LeaveFullscreen");
+	set_fullscreen_actions (FALSE);
+	
 	ui_manager = gtk_ui_manager_new ();
 	gtk_ui_manager_insert_action_group (ui_manager, action_group, 0);
 	gtk_ui_manager_add_ui_from_string (ui_manager, ui_description, -1, NULL);
@@ -1825,7 +1841,7 @@ main (int argc, char *argv [])
 			    GNOME_PARAM_APP_DATADIR, DATADIR, NULL);
 
         init_config (argc, argv);
-
+	games_stock_init ();
 	gnome_window_icon_set_default_from_file (GNOME_ICONDIR"/glines.png");
 	client = gnome_master_client ();
 
