@@ -1168,7 +1168,7 @@ main (int argc, char *argv [])
 			      argc, argv,
 			      GNOME_PARAM_POPT_TABLE, NULL,
 			      GNOME_PARAM_APP_DATADIR, DATADIR, NULL);
-	gnome_window_icon_set_default_from_file (GNOME_ICONDIR"/glines.xpm");
+	gnome_window_icon_set_default_from_file (GNOME_ICONDIR"/glines.png");
 	client = gnome_master_client ();
 
 	g_signal_connect (G_OBJECT (client), "save_yourself",

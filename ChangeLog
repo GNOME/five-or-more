@@ -1,3 +1,8 @@
+2002-06-19  Ross Burton  <ross@burtonini.com>
+
+	* glines.c (main): Use the correct icon filename for the window
+	icon.
+
 2002-06-02  Ross Burton  <ross@burtonini.com>
 
 	* glines.c: use application pixmap path, instead of libgnome
