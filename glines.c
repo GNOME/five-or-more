@@ -62,6 +62,8 @@ GdkPixmap *surface;
 
 GtkWidget *fast_moves_toggle_button = NULL;
 
+GList * theme_list = NULL;
+
 int active = -1;
 int target = -1;
 int inmove = 0;
@@ -892,12 +894,11 @@ static void
 bg_color_callback (GtkWidget *widget, gpointer data)
 {
 	static char *tmp = "";
-	guint8 r, g, b, a;
+	GdkColor c;
 
-	gnome_color_picker_get_i8 (GNOME_COLOR_PICKER (widget),
-				   &r, &g, &b, &a);
+	gtk_color_button_get_color (GTK_COLOR_BUTTON (widget), &c);
 
-	tmp = g_strdup_printf ("#%02x%02x%02x", r, g, b);
+	tmp = g_strdup_printf ("#%02x%02x%02x", c.red, c.green, c.blue);
 
 	gconf_client_set_string (conf_client,
 				 KEY_BACKGROUND_COLOR, tmp, NULL);
@@ -912,15 +913,13 @@ load_theme ()
 static void
 set_selection (GtkWidget *widget, char *data)
 {
+	GList * entry;
+
+	entry = g_list_nth (theme_list,
+			    gtk_combo_box_get_active (GTK_COMBO_BOX (widget)));
 	gconf_client_set_string (conf_client,
 				 KEY_BALL_THEME,
-				 data, NULL);
-}
-
-static void
-free_str (GtkWidget *widget, char *data)
-{
-	g_free (data);
+				 entry->data, NULL);
 }
 
 static void
@@ -929,6 +928,12 @@ fill_menu (GtkWidget *menu, char * mtype, gboolean bg)
 	struct dirent *e;
 	gchar *dname = gnome_program_locate_file (NULL, GNOME_FILE_DOMAIN_APP_PIXMAP,
 						  ("glines"), FALSE, NULL);
+	if (theme_list) {
+		g_list_foreach (theme_list, (GFunc) g_free, NULL);
+		g_list_free (theme_list);
+	}
+	theme_list = NULL;
+	
 	DIR *dir;
 	int itemno = 0;
 	
@@ -939,25 +944,18 @@ fill_menu (GtkWidget *menu, char * mtype, gboolean bg)
 		return;
 	
 	while ((e = readdir (dir)) != NULL){
-		GtkWidget *item;
 		gchar *s = g_strdup (e->d_name);
 
 		if (! g_strrstr (e->d_name, mtype)) {
 			g_free (s);
 			continue;
 		}
-			
-		item = gtk_menu_item_new_with_label (s);
-		gtk_widget_show (GTK_WIDGET(item));
-		gtk_menu_shell_append (GTK_MENU_SHELL (menu), GTK_WIDGET (item));
 
-		g_signal_connect (G_OBJECT (item), "activate",
-				  G_CALLBACK (set_selection), s);
-		g_signal_connect (G_OBJECT (item), "destroy",
-				  G_CALLBACK (free_str), s);
+		gtk_combo_box_append_text (GTK_COMBO_BOX (menu), s);
+		theme_list = g_list_append (theme_list, s);
 
 		if (! strcmp (ball_filename, s))
-			gtk_menu_set_active (GTK_MENU (menu), itemno);
+			gtk_combo_box_set_active (GTK_COMBO_BOX (menu), itemno);
 			  
 		itemno++;
 	}
@@ -992,7 +990,7 @@ pref_dialog_response (GtkDialog *dialog, gint response, gpointer data)
 static void
 game_props_callback (GtkWidget *widget, void *data)
 {
-	GtkWidget *w, *menu, *omenu, *l, *fv;
+	GtkWidget *w, *omenu, *l, *fv;
 	GtkWidget *frame;
 	GtkWidget *table;
 
@@ -1023,10 +1021,10 @@ game_props_callback (GtkWidget *widget, void *data)
 			gtk_misc_set_alignment (GTK_MISC (l), 0, 0.5);
 			gtk_table_attach_defaults (GTK_TABLE (table), l, 0, 1, 0, 1);
 	    
-			omenu = gtk_option_menu_new ();
-			menu = gtk_menu_new ();
-			fill_menu (menu, ".png", FALSE);
-			gtk_option_menu_set_menu (GTK_OPTION_MENU (omenu), menu);
+			omenu = gtk_combo_box_new_text ();
+			g_signal_connect (G_OBJECT (omenu), "changed",
+					  G_CALLBACK (set_selection), NULL);
+			fill_menu (omenu, ".png", FALSE);
 			gtk_table_attach_defaults (GTK_TABLE (table), omenu, 1, 2, 0, 1);
 
 
@@ -1035,11 +1033,13 @@ game_props_callback (GtkWidget *widget, void *data)
 			gtk_table_attach_defaults (GTK_TABLE (table), l, 0, 1, 1, 2);
 	    
 			{
-				int ur, ug, ub;
+				guint r,g,b;
+				GdkColor u;
 				
-				w  = gnome_color_picker_new ();
-				sscanf (backgnd.name, "#%02x%02x%02x", &ur, &ug, &ub);
-				gnome_color_picker_set_i8 (GNOME_COLOR_PICKER (w), ur, ug, ub, 0);
+				w  = gtk_color_button_new ();
+				sscanf (backgnd.name, "#%02x%02x%02x", &r, &g, &b);
+				u.red = r; u.green = g; u.blue = b;
+				gtk_color_button_set_color (GTK_COLOR_BUTTON (w), &u);
 				g_signal_connect (G_OBJECT (w), "color_set",
 						  G_CALLBACK (bg_color_callback), &backgnd.name);
 			}
