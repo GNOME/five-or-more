@@ -3,12 +3,12 @@
              "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd"
 [
   <!ENTITY legal SYSTEM "legal.xml">
-  <!ENTITY appversion "2.0">
-  <!ENTITY manrevision "2.0">
+  <!ENTITY appversion "2.4">
+  <!ENTITY manrevision "2.4">
   <!ENTITY date "March 2002">
   <!ENTITY app "<application>Glines</application>">
   <!ENTITY appname "Glines">
-  <!ENTITY version "2.0">
+  <!ENTITY version "2.4">
 ]>
 <!-- 
       (Do not remove this comment block.)
@@ -119,11 +119,11 @@
   <title>Introduction</title>
 
   <para> 
-   <application>Glines</application>, is the Gnome port of the once 
-   popular Windows game called <application>Color Lines</application>.
-   The game's objective is to align as often as possible five balls or more 
-   of the same color causing them to disappear, play as long as possible, and 
-   be #1 in the High Scores. 
+   <application>Glines</application>, is the Gnome port of the once
+   popular Windows game called <application>Color Lines</application>
+   The game's objective is to align as often as possible five balls or more
+   of the same color causing them to disappear, play as long as possible, and
+   be #1 in the High Scores.
    
   </para>
 
@@ -152,14 +152,15 @@
     <title>Playing Glines</title>
     <para>
       <application>Glines</application> is easy to play. At startup, you find
-      yourself with five balls randomly positioned on the board. Each turn, 
-      you are allowed to move one ball. You can move it up or down, left 
+      yourself with five balls randomly positioned on the board. Each turn,
+      you are allowed to move one ball. You can move it up or down, left
       or right, or any combination of the previously mentioned directions,
       any number of squares. After your move, the computer drops three balls,
       again at random positions. You can preview the color of the balls to be
-      dropped in the upper right corner of the application's window. 
-      If you manage to align five balls of the same color, they disappear,
-      leaving you some more room to continue playing.
+      dropped in the upper right corner of the application's window.
+      If you manage to align five balls of the same color, they
+      disappear and you are given an extra move before more balls
+      drop.
     </para>
 
 
@@ -230,21 +231,21 @@
         balls of random colors on the board.
       </para>
       <para>
-        To make a move, click on one of the balls. A ball is activated when it 
-	starts rotating (or doing something else depending on the theme, but 
-	let us not anticipate&hellip;). You can then select its destination by 
-	clicking an empty square. If the path to the destination is clear, 
-	the activated ball rolls there. If the destination square is occupied 
-	by another ball, no ball will be moved and the selection will be 
-	transferred to the latter ball. If the path is not clear (your ball 
-	cannot jump over already laid down balls!) the application prints a 
-	warning in the status bar (bottom of the window) and the original 
+        To make a move, click on one of the balls. A ball is activated when it
+	starts rotating (or doing something else depending on the theme, but
+	let us not anticipate&hellip;). You can then select its destination by
+	clicking an empty square. If the path to the destination is clear,
+	the activated ball rolls there. If the destination square is occupied
+	by another ball, no ball will be moved and the selection will be
+	transferred to the latter ball. If the path is not clear (your ball
+	cannot jump over already laid down balls!) the application prints a
+	warning in the status bar (bottom of the window) and the original
 	ball remains active.
       </para>
       <para>
-        As balls disappear, you get points, your score is shown in the upper 
-	right corner of the application window. The amount of point you get 
-	depends on the number of balls you managed to align (see 
+        As balls disappear, you get points, your score is shown in the upper
+	right corner of the application window. The points you score
+	depends on the number of balls you managed to align (see
 	<xref linkend="glines-table1" />).
       </para>
       
@@ -329,7 +330,8 @@
 	  <para>
             <menuchoice> 
 	       <shortcut><keysym>Ctrl-N</keysym></shortcut>
-               <guimenuitem>New Game</guimenuitem>
+               <guimenuitem>New Game</guimenuitem>clear the board and
+	       start a new game. The current game is abandoned.
 	    </menuchoice>
            </para>
          </listitem>     
@@ -337,7 +339,7 @@
 	<listitem>
 	  <para>
             <menuchoice>
-               <guimenuitem>Scores...</guimenuitem>
+               <guimenuitem>Scores...</guimenuitem>show the high score table.
             </menuchoice>
         </para>
        </listitem>
@@ -346,7 +348,8 @@
 	<para>
           <menuchoice>
             <shortcut><keysym>Ctrl-Q</keysym></shortcut>
-            <guimenuitem>Exit</guimenuitem>
+            <guimenuitem>Exit</guimenuitem>abandon the current game
+            and close the program.
           </menuchoice>
         </para>
        </listitem>
@@ -380,36 +383,13 @@
        <itemizedlist>
         <listitem>
          <para>
-          <guimenuitem>Glines Manual</guimenuitem>&mdash;
+          <menuchoice>
+            <shortcut><keysym>F1</keysym></shortcut>
+          <guimenuitem>Contents</guimenuitem>&mdash;
           shows this manual.
+          </menuchoice>
          </para>
         </listitem>
-        <listitem>
-         <para>
-          <guimenuitem>Playing Glines</guimenuitem>&mdash;
-          shows the section of the manual dealing with how to play Glines.
-         </para>
-        </listitem>
-        <listitem>
-         <para>
-          <guimenuitem>Creating New Themes</guimenuitem>&mdash;
-          shows details about creating new themes for glines.
-         </para>
-        </listitem>
-        <listitem>
-         <para>
-          <guimenuitem>Known Bugs</guimenuitem>&mdash;
-         lists the application's known bugs and features on the whishlist. 
-         </para>
-         </listitem>
-         <listitem>
-         <para>
-          <guimenuitem>Authors and Bug Reporting</guimenuitem>&mdash;
-          provides the authors' contact and information on how to submit bug
-	  reports.           
-         </para>
-        </listitem>
-
         <listitem>
          <para>
           <guimenuitem>About</guimenuitem>&mdash; shows
@@ -449,31 +429,28 @@
     <!-- ==== End of Figure ==== -->
 
   <para>
-   You can select different ball styles and background images for 
-   <application>Glines</application>. Just click on the drop down menus and 
-   choose your favorite look. 
+   You can select different ball styles and background colors in the
+   Themes section. 
   </para>
   <para>
-   Ever been teased by an application asking you if you really want to quit?
-   Well, the checkbox labelled "Ask confirmation when quitting" can help you 
-   disable this feature.
+   You can speed up the movement of the balls by checking the Use fast
+   moves box in the General preferences section.
   </para>
   <para>
-   <application>Glines</application> version 1.9 and higher has now session 
-   management support, which allows it to remember your favorite settings 
-   when you quit the application or when you log out from your desktop. 
+   Any changes you make are instantly applied. Furthermore your
+   preferences are remembered for the next time you run
+   <application>Glines</application>.
   </para>
-  <caution>
-   <title>Warning!</title>
-   <para>
-    Be careful though, the game itself is not saved!!!
-   </para>
-  </caution>
 </sect2>
  </sect1>
   <sect1 id="themes">
     <title>How to create new themes</title>
-    <para>Some info about creating skins to glines.</para>
+    <para>Each theme consists of a single PNG image file. This image
+    consists of an array of seven rows, corresponding to the different
+    ball colors, and four columns each of which is a frame in the
+    animation of the ball. Each cell in the array is 64 pixels high by
+    64 pixels wide giving a total image size of 128 x 244. Use an
+    existing theme as a guide.</para>
   </sect1>
 
  <!-- ============= Bugs ================================== -->
@@ -493,20 +470,17 @@
  <sect1 id="authors">
   <title>Authors</title>
   <para>
-   <application>Glines</application> was written by Róbert Szókovács
-   (<email>szo@appaloosacorp.hu</email>) and Szabolcs Bán
-   (<email>shooby@gnome.hu</email>). To find more information about
-   <application>Glines</application>, please visit the <ulink
-   url="http://projects.gnome.hu/glines/" type="http">Glines Web
-   page</ulink>.  Please send all comments, suggestions, and bug reports to
-   the <ulink url="http://bugs.gnome.org" type="http">GNOME bug tracking
-   database</ulink>. (Instructions for submitting bug reports can be found
+   <application>Glines</application> was written by Róbert
+   Szókovács (<email>szo@appaloosacorp.hu</email>) and Szabolcs Bán
+   (<email>shooby@gnome.hu</email>). Please send all comments,
+   suggestions, and bug reports to the <ulink
+   url="http://bugs.gnome.org" type="http">GNOME bug tracking
+   database</ulink>. (Instructions for submitting bug reports can be
+   found
    <ulink url="http://bugs.gnome.org/Reporting.html" type="http">
-   on-line</ulink>.) If you are using GNOME 1.1 or later, you can also use
+   on-line</ulink>.) You can also use the
    <application>Bug Report Tool</application>
-   (<command>bug-buddy</command>), available in the
-   <guisubmenu>Utilities</guisubmenu> submenu of <guimenu>Main
-   Menu</guimenu>, for submitting bug reports.
+   (<command>bug-buddy</command>) for submitting bug reports.
   </para>
 
   <para> This manual was written by Emese Kovács
