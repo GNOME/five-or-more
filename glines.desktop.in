@@ -1,6 +1,6 @@
 [Desktop Entry]
 _Name=Glines
-_Comment=Gnome color lines
+_Comment=Color lines game
 Exec=glines
 Icon=glines.png
 Terminal=0
