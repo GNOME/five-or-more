@@ -2,6 +2,7 @@
 glines_helpdir = $(datadir)/gnome/help/glines/C
 
 glines_help_DATA =         \
+	user-guide.sgml		\
         topic.dat
 
 # Files that aren't in a binary/data/library target have to be listed here
@@ -9,7 +10,6 @@ glines_help_DATA =         \
 # We include the timestamp files so it won't even try to rebuild the docs
 # unless you edit the SGML files.
 EXTRA_DIST = \
-	user-guide.sgml		\
 	user-guide.stamp	\
         topic.dat
 
