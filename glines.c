@@ -584,7 +584,7 @@ animate(gpointer gp)
 	}
 
 	field[active].phase++;
-	if(field[active].phase >= 6) field[active].phase = 0;
+	if(field[active].phase >= 4) field[active].phase = 0;
 	draw_ball(widget, backpixmap, x, y, field[active].color, field[active].phase, 1);
 
 	return TRUE;
