@@ -928,6 +928,7 @@ fill_menu (GtkWidget *menu, char * mtype, gboolean bg)
 	int itemno = 0;
 	
 	dir = opendir (dname);
+	g_free (dname);
 
 	if (!dir)
 		return;

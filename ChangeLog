@@ -1,3 +1,8 @@
+2003-07-06  Steve Chaplin  <stevech1097@yahoo.com.au>
+
+	* glines.c (fill_menu): Add 'g_free (dname);' to fix a
+	memory leak.
+
 2003-07-02  Callum McKenzie <callum@physics.otago.ac.nz>
         * Makefile.am: Build fixes.
 
