@@ -1,3 +1,7 @@
+2004-01-03  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* Makefile.am (pixmap_DATA): Add balls.svg to the distribution.
+
 2004-01-02  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* glines.c (load_image): Rescale graphics to fit. The graphics now
