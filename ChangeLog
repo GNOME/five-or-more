@@ -1,3 +1,7 @@
+2001-07-27  Abel Cheung  <maddog@linux.org.hk>
+
+	* glines.desktop: Added traditional Chinese translation.
+
 2001-07-06  Juan Pablo Mendoza <pablo_juan@yahoo.com>
 
 	* glines.c: Sayonara imlib.
