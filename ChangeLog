@@ -1,3 +1,8 @@
+2004-11-30  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* glines.c (main): Alan Horkan's incredibly complicated patch to
+	eliminate a semantic difficulty in the preview labelling.
+
 2004-11-18  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* help/C/glines.xml: Explain how to use the keyboard.

@@ -1647,7 +1647,7 @@ main (int argc, char *argv [])
 
 	hbox = gtk_hbox_new(FALSE, 0);
 	gtk_table_attach_defaults (GTK_TABLE (table), hbox, 0, 1, 0, 1);
-	label = gtk_label_new (g_strdup_printf ("<span weight=\"bold\">%s</span>", _("Next Balls:")));
+	label = gtk_label_new (g_strdup_printf ("<span weight=\"bold\">%s</span>", _("Next:")));
 	gtk_label_set_use_markup (GTK_LABEL (label), TRUE);
 	gtk_box_pack_start (GTK_BOX (hbox), label, FALSE, FALSE, 5);
 
