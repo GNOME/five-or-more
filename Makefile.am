@@ -1,3 +1,5 @@
+SUBDIRS = help
+
 scoredir=$(localstatedir)/games
 pixmapdir = $(datadir)/pixmaps/glines
 icondir = $(datadir)/pixmaps
@@ -8,7 +10,7 @@ INCLUDES = -I.. -I$(srcdir)/..		\
 	-DGNOMELOCALEDIR=\""$(datadir)/locale"\" \
 	-DG_DISABLE_DEPRECATED -DGDK_DISABLE_DEPRECATED \
 	-DGTK_DISABLE_DEPRECATED -DGNOME_DISABLE_DEPRECATED
-	
+
 bin_PROGRAMS = glines
 
 glines_SOURCES = 	\
