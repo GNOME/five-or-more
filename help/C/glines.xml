@@ -175,7 +175,7 @@
     <!-- ==== Figure ==== -->
     <mediaobject id="mainwindow-fig">
      <imageobject>
-      <imagedata fileref="figures/glines-new-game" format="PNG" srccredit="emese" />
+      <imagedata fileref="figures/glines-startgame" format="PNG" srccredit="emese" />
      </imageobject>
      <textobject>
       <phrase>Glines Main Window</phrase>
@@ -197,7 +197,7 @@
    
     <mediaobject id="gameover-fig">
      <imageobject>
-      <imagedata fileref="figures/glines-game-over" format="PNG" srccredit="emese kovacs" />
+      <imagedata fileref="figures/glines-gameover" format="PNG" srccredit="emese kovacs" />
      </imageobject>
      <textobject>
       <phrase>Game Over!</phrase>
@@ -428,7 +428,7 @@
  <!-- ==== Figure ==== -->
     <mediaobject id="preferences-dialogbox">
      <imageobject>
-      <imagedata fileref="figures/glines-preferences" format="PNG" srccredit="emese" />
+      <imagedata fileref="figures/preferences" format="PNG" srccredit="emese" />
      </imageobject>
      <textobject>
       <phrase>Preferences</phrase>
