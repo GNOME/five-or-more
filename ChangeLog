@@ -1,3 +1,12 @@
+2004-11-18  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* help/C/glines.xml: Explain how to use the keyboard.
+
+	* glines.c: Apply a keyboard-control patch from Anton
+	Gavrilov. Also removed the cryptic /* XXX Ezt megkapja */ comment
+	(it is Hungarian for 'it gets this one', I have never understood
+	it).
+
 2004-11-16  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* glines.c (load_image): Fall back to the default if the theme is

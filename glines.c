@@ -79,6 +79,9 @@ int active = -1;
 int target = -1;
 int inmove = 0;
 int score = 0;
+int cursor_x = FIELDSIZE / 2;
+int cursor_y = FIELDSIZE / 2;
+gboolean show_cursor = FALSE;
 
 int boxsize;
 
@@ -501,23 +504,10 @@ deactivate (GtkWidget *widget, int x, int y)
 	active = -1;
 }
 
-static gint
-button_press_event (GtkWidget *widget, GdkEvent *event)
+static void cell_clicked (GtkWidget *widget, int fx, int fy)
 {
 	int x, y;
-	int fx, fy;
 
-	/* XXX Ezt megkapja */
-
-	if(inmove) return TRUE;
-
-	/* Ignore the 2BUTTON and 3BUTTON events. */
-	if (event->type != GDK_BUTTON_PRESS)
-		return TRUE;
-	
-	gtk_widget_get_pointer (widget, &x, &y);
-	fx = x / boxsize;
-	fy = y / boxsize;
         gnome_appbar_set_status(GNOME_APPBAR(appbar), "");
 	if(field[fx + fy*9].color == 0)
 	{
@@ -571,6 +561,118 @@ button_press_event (GtkWidget *widget, GdkEvent *event)
 			active = fx + fy*9;
 			field[active].active = 1;
 		}
+	}
+
+}
+
+static gint
+button_press_event (GtkWidget *widget, GdkEvent *event)
+{
+	int x, y;
+	int fx, fy;
+
+	if(inmove) return TRUE;
+
+	/* Ignore the 2BUTTON and 3BUTTON events. */
+	if (event->type != GDK_BUTTON_PRESS)
+		return TRUE;
+	
+	if (show_cursor)
+	{
+		show_cursor = FALSE;
+		draw_box (draw_area, cursor_x, cursor_y);
+	}
+
+	gtk_widget_get_pointer (widget, &x, &y);
+	fx = x / boxsize;
+	fy = y / boxsize;
+
+	cursor_x = fx;
+	cursor_y = fy;
+
+	cell_clicked (widget, fx, fy);
+
+	return TRUE;
+}
+
+static void
+move_cursor (int dx, int dy)
+{
+	int old_x = cursor_x;
+	int old_y = cursor_y;
+
+	if (!show_cursor)
+	{
+		show_cursor = TRUE;
+		draw_box (draw_area, cursor_x, cursor_y);
+	}
+
+	cursor_x = cursor_x + dx;
+	if (cursor_x < 0)
+		cursor_x = 0;
+	if (cursor_x >= FIELDSIZE)
+		cursor_x = FIELDSIZE - 1;
+	cursor_y = cursor_y + dy;
+	if (cursor_y < 0)
+		cursor_y = 0;
+	if (cursor_y >= FIELDSIZE)
+		cursor_y = FIELDSIZE - 1;
+
+	if (cursor_x == old_x && cursor_y == old_y)
+		return;
+
+	draw_box (draw_area, old_x, old_y);
+	draw_box (draw_area, cursor_x, cursor_y);
+}
+
+static gboolean
+key_press_event (GtkWidget *widget, GdkEventKey *event, void *d)
+{
+	guint key;
+
+	key = event->keyval;
+
+	switch (key)
+	{
+		case GDK_Left:
+		case GDK_KP_Left:
+			move_cursor (-1, 0);
+			break;
+		case GDK_Right:
+		case GDK_KP_Right:
+			move_cursor (1, 0);
+			break;
+		case GDK_Up:
+		case GDK_KP_Up:
+			move_cursor (0, -1);
+			break;
+		case GDK_Down:
+		case GDK_KP_Down:
+			move_cursor (0, 1);
+			break;
+		case GDK_Home:
+		case GDK_KP_Home:
+			move_cursor (-999, 0);
+			break;
+		case GDK_End:
+		case GDK_KP_End:
+			move_cursor (999, 0);
+			break;
+		case GDK_Page_Up:
+		case GDK_KP_Page_Up:
+			move_cursor (0, -999);
+			break;
+		case GDK_Page_Down:
+		case GDK_KP_Page_Down:
+			move_cursor (0, 999);
+			break;
+
+		case GDK_space:
+		case GDK_Return:
+		case GDK_KP_Enter:
+			if (show_cursor)
+				cell_clicked (widget, cursor_x, cursor_y);
+			break;
 	}
 
 	return TRUE;
@@ -652,6 +754,23 @@ field_expose_event (GtkWidget *widget, GdkEventExpose *event, gpointer gp)
 			}
 		}
 	}
+
+	if (show_cursor && cursor_x >= x_start && cursor_x <= x_end
+		&& cursor_y >= y_start && cursor_y <= y_end)
+	{
+		GdkColormap *cmap;
+		GdkColor color;
+
+		gdk_color_parse ("#FFFFFF", &color);
+		cmap = gtk_widget_get_colormap (widget);
+		gdk_colormap_alloc_color (cmap, &color, FALSE, TRUE);
+		gdk_gc_set_foreground (gc, &color);
+
+		gdk_draw_rectangle (window, gc, FALSE,
+			cursor_x * boxsize + 1, cursor_y * boxsize + 1,
+			boxsize - 2, boxsize - 2);
+	}
+
         g_object_unref (gc);
 
 	draw_grid ();
@@ -1565,6 +1684,8 @@ main (int argc, char *argv [])
 	draw_area = gtk_drawing_area_new ();
 	g_signal_connect (G_OBJECT(draw_area), "button_press_event",
 			  G_CALLBACK (button_press_event), NULL);
+	g_signal_connect (G_OBJECT(draw_area), "key_press_event",
+			  G_CALLBACK (key_press_event), NULL);
 	g_signal_connect (G_OBJECT (draw_area), "configure_event",
 			  G_CALLBACK (configure_event_callback), NULL);
 	g_signal_connect (G_OBJECT (draw_area), "expose_event",
@@ -1574,7 +1695,10 @@ main (int argc, char *argv [])
 	gtk_container_add (GTK_CONTAINER (gridframe), draw_area);
 	gtk_table_attach_defaults (GTK_TABLE (table), gridframe, 0, 1, 1, 10);
 
-	gtk_widget_set_events (draw_area, gtk_widget_get_events(draw_area) |GDK_BUTTON_PRESS_MASK);
+	gtk_widget_set_events (draw_area, gtk_widget_get_events(draw_area) |GDK_BUTTON_PRESS_MASK|GDK_KEY_PRESS_MASK);
+
+	GTK_WIDGET_SET_FLAGS (draw_area, GTK_CAN_FOCUS);
+	gtk_widget_grab_focus (draw_area);
 
 	update_score_state ();
 
