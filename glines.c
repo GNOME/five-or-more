@@ -1220,17 +1220,13 @@ preview_configure_cb (GtkWidget * widget, GdkEventConfigure * event)
 static int
 configure_event_callback (GtkWidget *widget, GdkEventConfigure *event)
 {
-	int xboxsize, yboxsize;
-
 	if (ball_pixmap) 
 		g_object_unref (ball_pixmap);
 
 	if (blank_pixmap)
 		g_object_unref (blank_pixmap);
 
-	xboxsize = event->width/FIELDSIZE;
-	yboxsize = event->height/FIELDSIZE;
-	boxsize = MIN (xboxsize, yboxsize);
+	boxsize = (event->width - 1)/FIELDSIZE;
 
 	ball_pixmap = gdk_pixmap_new (draw_area->window, boxsize*4, boxsize*7,
 				      -1);
@@ -1580,6 +1576,7 @@ main (int argc, char *argv [])
 	g_signal_connect (G_OBJECT (draw_area), "expose_event",
 			  G_CALLBACK (field_expose_event), NULL);
 	gridframe = games_grid_frame_new (FIELDSIZE, FIELDSIZE);
+	games_grid_frame_set_padding (GAMES_GRID_FRAME(gridframe), 1, 1);
 	gtk_container_add (GTK_CONTAINER (gridframe), draw_area);
 	gtk_table_attach_defaults (GTK_TABLE (table), gridframe, 0, 1, 1, 10);
 
