@@ -1,3 +1,7 @@
+2001-07-05  Juan Pablo Mendoza <pablo_juan@yahoo.com>
+
+	* glines.c (load_image): Fix typo.
+
 2001-06-26  Juan Pablo Mendoza <pablo_juan@yahoo.com>
 
 	* glines.c (load_image): Remove more useless code. Use a dialog

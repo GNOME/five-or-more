@@ -65,8 +65,8 @@ GdkPixmap **mask)
 	g_free( tmp );
 
 	if (!g_file_exists (fn)) {
-		char *message = g_strdup_printf (_("Glines Couldn't find pixmap file:\n%s\n\n"
-			"Please check you Glines instalation"), fn);
+		char *message = g_strdup_printf (_("Glines couldn't find pixmap file:\n%s\n\n"
+			"Please check your Glines installation"), fn);
 		GtkWidget *w = gnome_error_dialog (message);
 		gnome_dialog_run_and_close (GNOME_DIALOG(w));
 		g_free (message);
