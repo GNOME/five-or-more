@@ -1,3 +1,7 @@
+2003-12-04  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* glines.c (fill_menu): Rework to use the new libgames-support API.
+
 2003-11-27  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* glines.c: Remove old pref dialog help code that is no longer

@@ -912,40 +912,23 @@ set_selection (GtkWidget *widget, char *data)
 				 entry->data, NULL);
 }
 
-static void
-fill_menu (GtkWidget *menu)
+static GtkWidget * 
+fill_menu (void)
 {
-	gchar * shortname;
-	gchar * dot;
-	int itemno;
-	GList * item;
+	/* FIXME: this abuses the knowledge that a GamesFileList is really
+	 * a GList, but this is going to change. */
+
 	gchar *dname = gnome_program_locate_file (NULL, GNOME_FILE_DOMAIN_APP_PIXMAP,
 						  ("glines"), FALSE, NULL);
 
-	if (theme_list) {
-		g_list_foreach (theme_list, (GFunc) g_free, NULL);
-		g_list_free (theme_list);
-	}
+	games_file_list_free ((GamesFileList *)theme_list);
 
-	theme_list = g_list_sort (games_get_file_list_basename ("*.png", dname, NULL),
-				  (GCompareFunc) g_utf8_collate);  
+	theme_list = (GList *) games_file_list_new_images (dname, NULL);
 	g_free (dname);
+	games_file_list_transform_basename ((GamesFileList *) theme_list);
+	theme_list = g_list_sort (theme_list, (GCompareFunc) g_utf8_collate);  
 
-	item = theme_list;
-	itemno = 0;
-	while (item) {
-		/* Strip the suffix for display purposes. */
-		shortname = g_strdup ((gchar *) item->data);
-		if ((dot = g_utf8_strrchr (shortname, -1, '.')))
-			*dot = '\0';
-		
-		gtk_combo_box_append_text (GTK_COMBO_BOX (menu), shortname);
-		if (! g_utf8_collate (ball_filename, shortname))
-			gtk_combo_box_set_active (GTK_COMBO_BOX (menu), itemno);
-		
-		itemno++;
-		item = g_list_next (item);
-	}
+	return games_file_list_create_widget ((GamesFileList *) theme_list, ball_filename);
 }
 
 static void
@@ -998,10 +981,9 @@ game_props_callback (GtkWidget *widget, void *data)
 			gtk_misc_set_alignment (GTK_MISC (l), 0, 0.5);
 			gtk_table_attach_defaults (GTK_TABLE (table), l, 0, 1, 0, 1);
 	    
-			omenu = gtk_combo_box_new_text ();
+			omenu = fill_menu ();
 			g_signal_connect (G_OBJECT (omenu), "changed",
 					  G_CALLBACK (set_selection), NULL);
-			fill_menu (omenu);
 			gtk_table_attach_defaults (GTK_TABLE (table), omenu, 1, 2, 0, 1);
 
 
