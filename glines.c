@@ -337,7 +337,7 @@ game_new_callback (GtkWidget *widget, void *data)
 }
 
 static void
-show_scores (gint pos)
+show_scores (gint pos, gboolean new_game)
 {
 	GtkWidget *dialog;
 
@@ -346,8 +346,10 @@ show_scores (gint pos)
 		gtk_window_set_transient_for (GTK_WINDOW (dialog),
 					      GTK_WINDOW (app));
 		gtk_window_set_modal (GTK_WINDOW (dialog), TRUE);
-		g_signal_connect (G_OBJECT (dialog), "unmap", 
-				  G_CALLBACK (game_new_callback), NULL);
+		if (new_game)
+			g_signal_connect (G_OBJECT (dialog), "unmap", 
+					  G_CALLBACK (game_new_callback), 
+					  NULL);
 	}
 }
 
@@ -374,7 +376,7 @@ game_over (void)
 
 	gnome_appbar_set_status (GNOME_APPBAR (appbar), _("Game Over!"));
 	pos = gnome_score_log (score, NULL, TRUE);
-	show_scores (pos);
+	show_scores (pos, TRUE);
 	update_score_state ();
 	return;
 }
@@ -936,7 +938,7 @@ animate (gpointer gp)
 static void
 game_top_ten_callback(GtkWidget *widget, gpointer data)
 {
-	show_scores (0);
+	show_scores (0, FALSE);
 }
 
 static int

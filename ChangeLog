@@ -1,3 +1,8 @@
+2004-10-09  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* glines.c: Make sure that calling show_scores from the menu
+	doesn't trigger a new game.
+
 2004-10-07  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* glines.c (game_new_callback): Implement Anton Gavrilov's
