@@ -711,14 +711,14 @@ game_about_callback (GtkWidget *widget, void *data)
                            NULL
                           };
    /* Translator credits */
-   gchar *translator_credits = _("");
+   gchar *translator_credits = _("translator_credits");
    					        
 	about = gnome_about_new (_("Glines"), VERSION,
 			_("(C) 1997-2000 the Free Software Foundation"),
 			_("Gnome port of the once-popular Color Lines game"),
 			(const char **)authors,
 			(const char **)documenters,
-                        (const char *)translator_credits,
+			strcmp (translator_credits, "translator_credits") != 0 ? translator_credits : NULL,
 		        NULL);
 	gnome_dialog_set_parent(about), GTK_WINDOW(app);
 	gtk_widget_show (about);
