@@ -444,13 +444,16 @@
 </sect2>
  </sect1>
   <sect1 id="themes">
-    <title>How to create new themes</title>
+    <title>How to create new themes</title> 
     <para>Each theme consists of a single PNG image file. This image
     consists of an array of seven rows, corresponding to the different
     ball colors, and four columns each of which is a frame in the
-    animation of the ball. Each cell in the array is 64 pixels high by
-    64 pixels wide giving a total image size of 128 x 244. Use an
-    existing theme as a guide.</para>
+    animation of the ball. The actual size of the image is irrelevant,
+    it will be rescaled, but the sub-images must form a four by seven
+    grid to get the correct effect. When using SVG remember that the
+    image size is the page size, if your grid does not fill the page
+    try shrinking the page size. Use an existing theme as a
+    guide.</para>
   </sect1>
 
  <!-- ============= Bugs ================================== -->

@@ -1,3 +1,7 @@
+2004-01-04  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* help/C/glines.xml: Updated the theme-creation section.
+
 2004-01-03  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* glines.c (load_image): 	
