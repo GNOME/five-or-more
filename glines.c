@@ -790,6 +790,10 @@ game_about_callback (GtkWidget *widget, void *data)
 			(const char **)documenters,
 			strcmp (translator_credits, "translator_credits") != 0 ? translator_credits : NULL,
 		        pixbuf);
+	
+	if (pixbuf != NULL)
+		gdk_pixbuf_unref (pixbuf);
+		
 	gtk_window_set_transient_for (GTK_WINDOW (about), GTK_WINDOW(app));
 	g_signal_connect (G_OBJECT(about), "destroy",
 		G_CALLBACK(gtk_widget_destroyed), &about);
