@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Glines
+Name[pt_BR]=Glines
 Name[da]=Gnome linjer
 Name[et]=Munamäng
 Name[fi]=Glines
@@ -10,6 +11,7 @@ Name[lt]=Glines
 Name[no]=Glines
 Name[sv]=Glines
 Comment=Gnome color lines
+Comment[pt_BR]=Linhas coloridas do Gnome
 Comment[da]=Gnome farvelinjer
 Comment[et]=Värviliste munade rittaseadmine
 Comment[fi]=Värilliset rivit
