@@ -24,7 +24,7 @@ glines_SOURCES = 	\
 
 glines_LDADD =		\
 	$(GNOME_GAMES_LIBS) \
-	$(top_srcdir)/libgames-support/libgames-support.la \
+	../libgames-support/libgames-support.la \
 	$(INTLLIBS)
 
 pixmap_DATA = ball.png classic.png dots.png pulse.png gumball.png 
