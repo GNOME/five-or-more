@@ -63,6 +63,9 @@ GConfClient *conf_client = NULL;
 GtkWidget *draw_area;
 static GtkWidget *app, *appbar, *pref_dialog;
 GtkWidget *preview_widgets[NPIECES];
+GtkWidget *menubar;
+GtkWidget *scoreitem;
+
 field_props field[HFIELDSIZE * VFIELDSIZE];
 
 /* Pre-rendering image data prepared from file. */
@@ -115,10 +118,32 @@ static struct {
 
 /* predeclare the menus */
 
-GnomeUIInfo gamemenu[];
-GnomeUIInfo settingsmenu[];
-GnomeUIInfo helpmenu[];
-GnomeUIInfo mainmenu[];
+gchar *warning_message = NULL;
+
+static void
+show_image_warning (gchar *message)
+{
+	GtkWidget *dialog;
+	GtkWidget *button;
+
+        dialog = gtk_message_dialog_new (GTK_WINDOW (app),
+                                         GTK_DIALOG_MODAL,
+                                         GTK_MESSAGE_WARNING,
+                                         GTK_BUTTONS_CLOSE,
+                                         _("Could not load theme"));
+
+        gtk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog), message);
+
+        button = gtk_dialog_add_button (GTK_DIALOG (dialog),
+                                        _("Preferences"), GTK_RESPONSE_ACCEPT);
+
+        gtk_dialog_set_default_response (GTK_DIALOG (dialog), GTK_RESPONSE_ACCEPT);
+
+        g_signal_connect (button, "clicked", G_CALLBACK (game_props_callback), NULL);
+
+        gtk_dialog_run (GTK_DIALOG (dialog));
+        gtk_widget_destroy (dialog);
+}
 
 static void 
 load_image (gchar *fname,
@@ -134,24 +159,17 @@ load_image (gchar *fname,
 
 
 	if (!g_file_test (fn, G_FILE_TEST_EXISTS)) {
-		char * message;
-		GtkWidget * w;
-		
+		warning_message = g_strdup_printf (_("Unable to locate file:\n%s\n\n"
+						     "The default theme will be loaded instead."), fn);
+
 		tmp = g_build_filename ("glines", "balls.svg", NULL);
 		fn = gnome_program_locate_file (NULL, GNOME_FILE_DOMAIN_APP_PIXMAP, (tmp), FALSE, NULL);
 		g_free (tmp);
+
 		if (!g_file_test (fn, G_FILE_TEST_EXISTS)) {
-			message = g_strdup_printf (_("Five or More could not find image file:\n%s\n\n"
-						     "Please check Five or More is installed correctly."), fn);
-			w = gtk_message_dialog_new (GTK_WINDOW (app),
-						    GTK_DIALOG_MODAL | GTK_DIALOG_DESTROY_WITH_PARENT,
-						    GTK_MESSAGE_ERROR,
-						    GTK_BUTTONS_OK,
-						    message,
-						    NULL);
-			gtk_dialog_run (GTK_DIALOG (w));	
-			g_free (message);
-			exit (1);
+			g_free (warning_message);
+			warning_message = g_strdup_printf (_("Unable to locate file:\n%s\n\n"
+				         		     "Please check that Five or More is installed correctly."), fn);
 		}
 	}
 
@@ -177,16 +195,33 @@ refresh_pixmaps (void)
 	if (!ball_pixmap)
 		return;
 
-	if (ball_preimage)
+	if (ball_preimage) {
 		ball_pixbuf = games_preimage_render (ball_preimage, 4*boxsize, 
 						     7*boxsize, NULL);
+
+		/* Handle rendering problems. */
+		if (!ball_pixbuf) {
+			g_object_unref (ball_preimage);
+			ball_preimage = NULL;
+
+			if (!warning_message) {
+				warning_message = g_strdup ("The selected theme failed to render.\n\n"
+							    "Please check that Five or More is installed correctly.");
+			}
+		}
+	}
 
         if (!ball_pixbuf) {
 		ball_pixbuf = gdk_pixbuf_new (GDK_COLORSPACE_RGB, TRUE, 8,
 					      4*boxsize, 7*boxsize);
 		gdk_pixbuf_fill (ball_pixbuf, 0x00000000);
-		/* FIXME : Warning for image loading failure */
 	}
+
+	if (warning_message)
+		show_image_warning (warning_message);
+	g_free (warning_message);
+	warning_message = NULL;
+
 
 	gc = gdk_gc_new (ball_pixmap);
 	gdk_gc_set_foreground (gc, &backgnd.color);
@@ -379,7 +414,7 @@ update_score_state ()
 
 	top = gnome_score_get_notable ("glines", NULL, &names,
 				       &scores, &scoretimes);
-	gtk_widget_set_sensitive (gamemenu[2].widget, top > 0);
+	gtk_widget_set_sensitive (scoreitem, top > 0);
 	g_strfreev (names);
 	g_free (scores);
 	g_free (scoretimes);
@@ -1078,54 +1113,19 @@ game_top_ten_callback(GtkWidget *widget, gpointer data)
 static int
 game_about_callback (GtkWidget *widget, void *data)
 {
-    static GtkWidget *about = NULL;
-    GdkPixbuf *pixbuf = NULL;
-    const gchar *authors[] = {
-		            "Robert Szokovacs <szo@appaloosacorp.hu>",
-			    "Szabolcs B\xc3\xa1n <shooby@gnome.hu>",
-			    NULL
-			    };
-    
-   gchar *documenters[] = {
-                           NULL
-                          };
-   /* Translator credits */
-   gchar *translator_credits = _("translator-credits");
+   const gchar *authors[] = {"Robert Szokovacs <szo@appaloosacorp.hu>",
+			     "Szabolcs B\xc3\xa1n <shooby@gnome.hu>",
+			     NULL};
 
-   if (about != NULL) {
-        gtk_window_present (GTK_WINDOW(about));
-        return TRUE;
-   }
-   {
-	   char *filename = NULL;
-
-	   filename = gnome_program_locate_file (NULL,
-			   GNOME_FILE_DOMAIN_APP_PIXMAP,  ("glines.png"),
-			   TRUE, NULL);
-	   if (filename != NULL)
-	   {
-		   pixbuf = gdk_pixbuf_new_from_file(filename, NULL);
-		   g_free (filename);
-	   }
-   }
-   					        
-	about = gnome_about_new (_("Five or More"), VERSION,
-			"Copyright \xc2\xa9 1997-2004 Free Software "
-			"Foundation, Inc.",
-			_("GNOME port of the once-popular Color Lines game"),
-			(const char **)authors,
-			(const char **)documenters,
-			strcmp (translator_credits, "translator-credits") != 0 ? translator_credits : NULL,
-		        pixbuf);
-	
-	if (pixbuf != NULL)
-		gdk_pixbuf_unref (pixbuf);
-		
-	gtk_window_set_transient_for (GTK_WINDOW (about), GTK_WINDOW(app));
-	g_signal_connect (G_OBJECT(about), "destroy",
-		G_CALLBACK(gtk_widget_destroyed), &about);
-	gtk_widget_show (about);
-	return TRUE;
+   gtk_show_about_dialog (GTK_WINDOW(app),
+			  "name", _("Five or More"),
+			  "version", VERSION,
+			  "comments", _("GNOME port of the once-popular Color Lines game"),
+			  "copyright", "Copyright \xc2\xa9 1997-2004 Free Software Foundation, Inc.",
+			  "authors", authors,
+			  "translator_credits", _("translator-credits"),
+			  NULL);
+   return TRUE;
 }       
 
 static void
@@ -1240,7 +1240,7 @@ pref_dialog_response (GtkDialog *dialog, gint response, gpointer data)
 	gtk_widget_hide (GTK_WIDGET (dialog));
 }
 
-static void
+void
 game_props_callback (GtkWidget *widget, void *data)
 {
 	GtkWidget *w, *omenu, *l, *fv;
@@ -1336,6 +1336,12 @@ game_quit_callback (GtkWidget *widget, void *data)
 		g_source_remove (animate_id);
 	gtk_main_quit ();
 	return FALSE;
+}
+
+static void
+game_help_callback (void)
+{
+	gnome_help_display ("glines.xml", NULL, NULL);
 }
 
 static int
@@ -1483,41 +1489,59 @@ client_die (GnomeClient *client, gpointer client_data)
 
 }
 
-GnomeUIInfo gamemenu[] = {
-	
-    	GNOMEUIINFO_MENU_NEW_GAME_ITEM(game_new_callback, NULL),
 
-	GNOMEUIINFO_SEPARATOR,
-
-	GNOMEUIINFO_MENU_SCORES_ITEM(game_top_ten_callback, NULL),
-
-        GNOMEUIINFO_SEPARATOR,
-
-	GNOMEUIINFO_MENU_QUIT_ITEM(game_quit_callback, NULL),
-
-	GNOMEUIINFO_END
+const GtkActionEntry actions[] = {
+	{ "GameMenu", NULL, N_("_Game") },
+	{ "SettingsMenu", NULL, N_("_Settings") }, 
+	{ "HelpMenu", NULL, N_("_Help") },
+	{ "NewGame", GTK_STOCK_NEW, N_("_New Game"), "<control>N", NULL, G_CALLBACK (game_new_callback) },
+	{ "Scores", NULL, N_("_Scores..."), NULL, NULL, G_CALLBACK (game_top_ten_callback) },
+	{ "Quit", GTK_STOCK_QUIT, NULL, NULL, NULL, G_CALLBACK (game_quit_callback) },
+	{ "Preferences", GTK_STOCK_PREFERENCES, NULL, NULL, NULL, G_CALLBACK (game_props_callback) },
+	{ "Contents", GTK_STOCK_HELP, N_("_Contents"), "F1", NULL, G_CALLBACK (game_help_callback) },
+	{ "About", GTK_STOCK_ABOUT, NULL, NULL, NULL, G_CALLBACK (game_about_callback) }
 };
 
-GnomeUIInfo settingsmenu[] = {
-        GNOMEUIINFO_MENU_PREFERENCES_ITEM(game_props_callback, NULL),
+const char *ui_description = 
+"<ui>"
+"  <menubar name='MainMenu'>"
+"    <menu action='GameMenu'>"
+"      <menuitem action='NewGame'/>"
+"      <separator/>"
+"      <menuitem action='Scores'/>"
+"      <separator/>"
+"      <menuitem action='Quit'/>"
+"    </menu>"
+"    <menu action='SettingsMenu'>"
+"      <menuitem action='Preferences'/>"
+"    </menu>"
+"    <menu action='HelpMenu'>"
+"      <menuitem action='Contents'/>"
+"      <menuitem action='About'/>"
+"    </menu>"
+"  </menubar>"
+"</ui>";
 
-	GNOMEUIINFO_END
+static void create_menus ()
+{
+	GtkUIManager *ui_manager;
+	GtkAccelGroup *accel_group;
+	GtkActionGroup *action_group;
+
+	action_group = gtk_action_group_new ("MenuActions");
+	gtk_action_group_set_translation_domain (action_group, GETTEXT_PACKAGE);
+	gtk_action_group_add_actions (action_group, actions, 
+				      G_N_ELEMENTS (actions), NULL);
+	ui_manager = gtk_ui_manager_new ();
+	gtk_ui_manager_insert_action_group (ui_manager, action_group, 0);
+	gtk_ui_manager_add_ui_from_string (ui_manager, ui_description, -1, NULL);
+	accel_group = gtk_ui_manager_get_accel_group (ui_manager);
+	gtk_window_add_accel_group (GTK_WINDOW (app), accel_group);
+
+	scoreitem = gtk_ui_manager_get_widget (ui_manager, 
+					       "/MainMenu/GameMenu/Scores");
+	menubar = gtk_ui_manager_get_widget (ui_manager, "/MainMenu");
 };
-
-
-GnomeUIInfo helpmenu[] = {
-        GNOMEUIINFO_HELP("glines"),
-	GNOMEUIINFO_MENU_ABOUT_ITEM(game_about_callback, NULL),
-	GNOMEUIINFO_END
-};
-
-GnomeUIInfo mainmenu[] = {
-  	GNOMEUIINFO_MENU_GAME_TREE(gamemenu),
-	GNOMEUIINFO_MENU_SETTINGS_TREE(settingsmenu),
-	GNOMEUIINFO_MENU_HELP_TREE(helpmenu),
-	GNOMEUIINFO_END
-};
-
 
 #ifndef GNOME_CLIENT_RESTARTED
 #define GNOME_CLIENT_RESTARTED(client) \
@@ -1567,7 +1591,9 @@ move_timeout_changed_cb (GConfClient *client,
 	if (timeout_tmp != move_timeout)
 		move_timeout = timeout_tmp;
   
-	/* FIXME apply in the prefs dialog GUI */
+	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (fast_moves_toggle_button),
+				      (move_timeout == 10));
+
 }
 
 static void
@@ -1655,12 +1681,11 @@ main (int argc, char *argv [])
 	appbar = gnome_appbar_new (FALSE, TRUE, GNOME_PREFERENCES_USER);
 	gnome_app_set_statusbar (GNOME_APP (app), GTK_WIDGET(appbar));  
 
-	gnome_app_create_menus(GNOME_APP(app), mainmenu);
-
-	gnome_app_install_menu_hints(GNOME_APP (app), mainmenu);
-  
 	vbox = gtk_vbox_new (FALSE, 0);
 	gnome_app_set_contents (GNOME_APP (app), vbox);
+
+	create_menus ();
+	gtk_box_pack_start (GTK_BOX (vbox), menubar, FALSE, FALSE, 0);
 
  	table = gtk_table_new (10, 1, TRUE);
 	gtk_box_pack_start_defaults (GTK_BOX (vbox), table);
@@ -1721,9 +1746,6 @@ main (int argc, char *argv [])
 	gtk_widget_grab_focus (draw_area);
 
 	update_score_state ();
-
-	hbox = gtk_hbox_new (0,3);
-	gtk_box_pack_start (GTK_BOX (vbox), hbox, 0, 0, 0);
 
 	load_properties ();
 

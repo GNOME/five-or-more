@@ -30,6 +30,8 @@ void init_preview(void);
 
 void draw_preview(void);
 
+void game_props_callback (GtkWidget *widget, void *data);
+
 int init_new_balls(int num, int prev);
 
 gint animate(gpointer gp);

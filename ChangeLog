@@ -1,3 +1,11 @@
+2005-03-17  Richard Hoelscher  <rah@rahga.com>
+
+	* glines.c (create_menus): Use GtkUIManager API for menus.
+	(move_timeout_changed_cb): Prefs checkbox watches gconf change.
+	(refresh_pixmaps): Warnings on render error.
+	(show_image_warning): New theme warning dialog.
+	(main): Remove an unused hbox from the first revision.
+
 2005-03-02  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* help/C/glines.xml: Bump the app version number. No revisions.
