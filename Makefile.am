@@ -42,12 +42,22 @@ Games_DATA = $(Games_in_files:.desktop.in=.desktop)
 
 DISTCLEANFILES = $(Games_DATA) $(schema_DATA)
 
+SCOREFILES = Small Medium Large
+
 install-data-local:
 if GCONF_SCHEMAS_INSTALL
 	GCONF_CONFIG_SOURCE=$(GCONF_SCHEMA_CONFIG_SOURCE) $(GCONFTOOL) --makefile-install-rule $(top_builddir)/glines/$(schema_DATA)
 endif
 	-$(mkinstalldirs) $(DESTDIR)$(scoredir)
-	-touch $(DESTDIR)$(scoredir)/glines.scores
-	-chown $(scores_user):$(scores_group) $(DESTDIR)$(scoredir)/glines.scores
-	-chmod 664 $(DESTDIR)$(scoredir)/glines.scores
+	## Migrate to the new scoring system (with a link for dual-version
+	## installs).
+	-if [ -f $(DESTDIR)$(scoredir)/glines.scores -a ! -f $(DESTDIR)$(scoredir)/glines.Small.scores ] ; then \
+	  mv -f $(DESTDIR)$(scoredir)/glines.scores $(DESTDIR)$(scoredir)/glines.Small.scores ; \
+	  ln -s $(DESTDIR)$(scoredir)/glines.Small.scores $(DESTDIR)$(scoredir)/glines.scores ; \
+	fi
+	-for i in ${SCOREFILES} ; do \
+	  touch $(DESTDIR)$(scoredir)/glines.$$i.scores; \
+	  chown $(scores_user):$(scores_group) $(DESTDIR)$(scoredir)/glines.$$i.scores; \
+	  chmod 664 $(DESTDIR)$(scoredir)/glines.$$i.scores; \
+	done
 	-if test "x$(setgid)" = "xtrue"; then chgrp $(scores_group) $(DESTDIR)$(bindir)/glines && chmod 2555 $(DESTDIR)$(bindir)/glines ; fi

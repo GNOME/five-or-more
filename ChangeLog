@@ -1,3 +1,20 @@
+2005-03-23  Richard Hoelscher  <rah@rahga.com>
+
+	* Makefile.am: support multiple scorefiles
+	* glines.c: Marco's patch for high-score-support
+
+	* glines.h:
+	* glines.c: Marco Colombo's patch for configurable playfield
+	size has been applied. Many macros have been replaced by variables,
+	look for hfieldsize, vfieldsize, ncolors, npieces, and several more.
+	(refresh_preview_pixmaps): Creates a blank pixmap for use in preview.
+	(draw_preview): Now handles up to MAXNPIECES preview pixmaps.
+	(route)(find_lines): Bulk of  macro replacement took place here.
+	(set_sizes)(size_callback): New. Handle setting size from prefs.
+	(game_props_callback): Add support for switching sizes among "Small",
+	"Medium", "Large".
+	(main): Use new alignment properties in the preview frame.
+
 2005-03-23  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* glines.c: Patches from Dennis Cranston

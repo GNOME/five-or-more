@@ -37,6 +37,7 @@
 #include <gdk-pixbuf/gdk-pixbuf.h>
 #include <libgnomeui/gnome-window-icon.h>
 #include <gconf/gconf-client.h>
+#include <games-scores-dialog.h>
 #include "games-frame.h"
 #include "games-files.h"
 #include "games-gridframe.h"
@@ -52,21 +53,28 @@
 #define KEY_SAVED_PREVIEW "/apps/glines/saved/preview"
 #define KEY_WIDTH "/apps/glines/saved/width"
 #define KEY_HEIGHT "/apps/glines/saved/height"
+#define KEY_SIZE "/apps/glines/preferences/size"
 
-#define NCOLORS 7
-#define NPIECES 3
-#define HFIELDSIZE 9
-#define VFIELDSIZE 9
+#define MAXNPIECES 10
+#define MAXFIELDSIZE 30
+#define DEFAULT_GAME_SIZE SMALL
+
+gint hfieldsize;
+gint vfieldsize;
+gint ncolors;
+gint npieces;
+gint game_size = UNSET;
+gboolean pref_dialog_done = FALSE;
 
 GConfClient *conf_client = NULL;
 
 GtkWidget *draw_area;
-static GtkWidget *app, *appbar, *pref_dialog;
-GtkWidget *preview_widgets[NPIECES];
+static GtkWidget *app, *appbar, *pref_dialog, *gridframe;
+GtkWidget *preview_widgets[MAXNPIECES];
 GtkWidget *menubar;
 GtkWidget *scoreitem;
 
-field_props field[HFIELDSIZE * VFIELDSIZE];
+field_props field[MAXFIELDSIZE * MAXFIELDSIZE];
 
 /* Pre-rendering image data prepared from file. */
 GamesPreimage *ball_preimage = NULL;
@@ -76,6 +84,7 @@ GdkPixmap *ball_pixmap = NULL;
 GdkPixmap *preview_pixmaps[7] = { NULL, NULL, NULL, NULL, NULL, NULL, NULL };
 /* A pixmap of a blank tile. */
 GdkPixmap *blank_pixmap = NULL;
+GdkPixmap *blank_preview_pixmap = NULL;
 
 GtkWidget *fast_moves_toggle_button = NULL;
 
@@ -85,8 +94,8 @@ int active = -1;
 int target = -1;
 int inmove = 0;
 int score = 0;
-int cursor_x = HFIELDSIZE / 2;
-int cursor_y = VFIELDSIZE / 2;
+int cursor_x = MAXFIELDSIZE / 2;
+int cursor_y = MAXFIELDSIZE / 2;
 gboolean show_cursor = FALSE;
 
 int boxsize;
@@ -102,8 +111,7 @@ int preview_width = 0;
 
 int move_timeout = 100;
 int animate_id = 0;
-int preview[NPIECES];
-int response;
+int preview[MAXNPIECES];
 char * ball_filename;
 GtkWidget *scorelabel;
 scoretable sctab[] = {{5, 10}, {6, 12}, {7, 18}, {8, 28}, {9, 42}, {10, 82}, {11, 108}, {12, 138}, {13, 172}, {14, 210}, {0,0}};
@@ -115,8 +123,6 @@ static struct {
 } backgnd = {
 	{0, 0, 0, 0}, NULL, 0
 };
-
-/* predeclare the menus */
 
 gchar *warning_message = NULL;
 
@@ -283,6 +289,12 @@ refresh_preview_pixmaps (void)
 				 GDK_RGB_DITHER_NORMAL, 0, 0);
 	}
 
+	if (blank_preview_pixmap)
+		g_object_unref (blank_preview_pixmap);
+	blank_preview_pixmap = gdk_pixmap_new (widget->window, preview_width, preview_height, -1);
+	gdk_draw_rectangle (blank_preview_pixmap, widget->style->bg_gc[GTK_STATE_NORMAL],
+			    TRUE, 0, 0, preview_width, preview_height);
+
 	g_object_unref (scaled);
 
 }
@@ -312,7 +324,7 @@ reset_game (void)
 {
 	int i;
 
-	for(i=0; i < HFIELDSIZE * VFIELDSIZE; i++)
+	for(i=0; i < hfieldsize * vfieldsize; i++)
 	{
 		field[i].color = 0;
 		field[i].phase = 0;
@@ -321,7 +333,7 @@ reset_game (void)
 	}
 	score = 0;
 	init_preview ();
-	init_new_balls (5, -1);
+	init_new_balls (npieces, -1);
 }
 
 static void
@@ -352,7 +364,7 @@ reset_pathsearch (void)
 {
 	int i;
 
-	for(i = 0; i < HFIELDSIZE * VFIELDSIZE; i++)
+	for(i = 0; i < hfieldsize * vfieldsize; i++)
 		field[i].pathsearch = -1;
 }
 
@@ -361,9 +373,9 @@ init_preview (void)
 {
 	int i;
 
-	for (i = 0; i < NPIECES; i++)
+	for (i = 0; i < npieces; i++)
 	{
-		preview[i] = 1 + (int) ((double)NCOLORS * rand () / (RAND_MAX + 1.0));
+		preview[i] = 1 + (int) ((double)ncolors * rand () / (RAND_MAX + 1.0));
 	}
 }
 
@@ -372,16 +384,24 @@ draw_preview (void)
 {
 	int i;
 
-	for (i=0; i<NPIECES; i++) {
-		gdk_window_set_back_pixmap (preview_widgets[i]->window,
-					    preview_pixmaps[preview[i]-1],
-					    FALSE);
+	for (i=0; i < MAXNPIECES; i++) {
+
+		if (i < npieces)
+			gdk_window_set_back_pixmap (preview_widgets[i]->window,
+						    preview_pixmaps[preview[i]-1],
+						    FALSE);
+		else
+			gdk_window_set_back_pixmap (preview_widgets[i]->window,
+						    blank_preview_pixmap,
+						    FALSE);
+
 		gdk_window_clear (preview_widgets[i]->window);
 	}
+	
 }
 
 static void
-game_new_callback (GtkWidget *widget, void *data)
+game_new_callback (void)
 {
 	reset_game ();
  	start_game ();
@@ -390,18 +410,36 @@ game_new_callback (GtkWidget *widget, void *data)
 static void
 show_scores (gint pos, gboolean new_game)
 {
-	GtkWidget *dialog;
+	int i;
+	static GtkWidget *dialog;
 
-	dialog = gnome_scores_display (_("Five or More"), "glines", NULL, pos);
-	if (dialog != NULL) {
-		gtk_window_set_transient_for (GTK_WINDOW (dialog),
-					      GTK_WINDOW (app));
-		gtk_window_set_modal (GTK_WINDOW (dialog), TRUE);
-		if (new_game)
-			g_signal_connect (G_OBJECT (dialog), "destroy", 
-					  G_CALLBACK (game_new_callback), 
-					  NULL);
+	if (dialog == NULL) {
+		dialog = games_scores_dialog_new ("glines", 
+						  _("GNOME Five or More"));
+
+		games_scores_dialog_set_style (GAMES_SCORES_DIALOG (dialog),
+					       GAMES_SCORES_STYLE_PLAIN);
+
+		for (i = 0; i < (MAX_SIZE - SMALL); i++) {
+			games_scores_dialog_add_category (GAMES_SCORES_DIALOG (dialog),
+							  scorenames[i],
+							  _(scorenames[i]));
+		}
+		games_scores_dialog_set_category_description (GAMES_SCORES_DIALOG (dialog),
+							      _("Field size:"));	
 	}
+
+	games_scores_dialog_set_category (GAMES_SCORES_DIALOG (dialog),
+					  scorenames[game_size - SMALL]);
+
+	if (pos > 0) {
+		games_scores_dialog_set_hilight (GAMES_SCORES_DIALOG (dialog),
+						 pos);
+	}
+
+	gtk_window_present (GTK_WINDOW (dialog));
+	gtk_dialog_run (GTK_DIALOG (dialog));
+	gtk_widget_hide (dialog);
 }
 
 static void
@@ -426,7 +464,7 @@ game_over (void)
 	int pos;
 
 	gnome_appbar_set_status (GNOME_APPBAR (appbar), _("Game Over!"));
-	pos = gnome_score_log (score, NULL, TRUE);
+	pos = gnome_score_log (score, scorenames[game_size - SMALL], TRUE);
 	show_scores (pos, TRUE);
 	update_score_state ();
 	return;
@@ -438,7 +476,7 @@ static int spaces_left (void)
 
 	j = 0;
 
-	for (i=0; i<HFIELDSIZE*VFIELDSIZE; i++) {
+	for (i=0; i<hfieldsize*vfieldsize; i++) {
 		if (field[i].color == 0)
 			j++;
 	}
@@ -461,13 +499,13 @@ int
 init_new_balls (int num, int prev)
 {
 	int i, j = -1;
-	gfloat num_boxes = HFIELDSIZE * VFIELDSIZE;
+	gfloat num_boxes = hfieldsize * vfieldsize;
 	for (i = 0; i < num;)
 	{
 		j = (int) (num_boxes * rand ()/(RAND_MAX + 1.0));
 		if (field[j].color == 0)
 		{
-			field[j].color = (prev == -1) ? (1 + (int) ((double)NCOLORS*rand()/(RAND_MAX+1.0))):preview[prev]; 
+			field[j].color = (prev == -1) ? (1 + (int) ((double)ncolors*rand()/(RAND_MAX+1.0))):preview[prev]; 
 			i++;
 		}
 	}
@@ -489,18 +527,18 @@ route (int num)
 
 	if (field[target].pathsearch == num)
 		return 1;
-	for (i = 0; i < HFIELDSIZE*VFIELDSIZE; i++)
+	for (i = 0; i < hfieldsize*vfieldsize; i++)
 	{
 		if (field[i].pathsearch == num)
 		{
 			flag = 1;	
-			if ((i/HFIELDSIZE > 0) && (field[i - HFIELDSIZE].pathsearch == -1) && (field[i - HFIELDSIZE].color == 0))
-				field[i - HFIELDSIZE].pathsearch = num+1;
-			if ((i/HFIELDSIZE < VFIELDSIZE - 1) && (field[i + HFIELDSIZE].pathsearch == -1) && (field[i + HFIELDSIZE].color == 0))
-				field[i + HFIELDSIZE].pathsearch = num+1;
-			if ((i%HFIELDSIZE > 0) && (field[i - 1].pathsearch == -1) && (field[i - 1].color == 0))
+			if ((i/hfieldsize > 0) && (field[i - hfieldsize].pathsearch == -1) && (field[i - hfieldsize].color == 0))
+				field[i - hfieldsize].pathsearch = num+1;
+			if ((i/hfieldsize < vfieldsize - 1) && (field[i + hfieldsize].pathsearch == -1) && (field[i + hfieldsize].color == 0))
+				field[i + hfieldsize].pathsearch = num+1;
+			if ((i%hfieldsize > 0) && (field[i - 1].pathsearch == -1) && (field[i - 1].color == 0))
 				field[i - 1].pathsearch = num+1;
-			if ((i%HFIELDSIZE < HFIELDSIZE - 1) && (field[i + 1].pathsearch == -1) && (field[i + 1].color == 0))
+			if ((i%hfieldsize < hfieldsize - 1) && (field[i + 1].pathsearch == -1) && (field[i + 1].color == 0))
 			{
 				field[i + 1].pathsearch = num+1;
 			}
@@ -515,18 +553,18 @@ fix_route (int num, int pos)
 {
 	int i;
 
-	for (i = 0; i< HFIELDSIZE*VFIELDSIZE; i++)
+	for (i = 0; i< hfieldsize*vfieldsize; i++)
 		if ((i != pos) && (field[i].pathsearch == num))
 			field[i].pathsearch = -1;
 	if (num < 2)
 		return;
-	if ((pos/HFIELDSIZE > 0) && (field[pos - HFIELDSIZE].pathsearch == num - 1))
-		fix_route(num - 1, pos - HFIELDSIZE);	
-	if ((pos%HFIELDSIZE > 0) && (field[pos - 1].pathsearch == num - 1))
+	if ((pos/hfieldsize > 0) && (field[pos - hfieldsize].pathsearch == num - 1))
+		fix_route(num - 1, pos - hfieldsize);	
+	if ((pos%hfieldsize > 0) && (field[pos - 1].pathsearch == num - 1))
 		fix_route(num - 1, pos - 1);	
-	if ((pos/HFIELDSIZE < VFIELDSIZE - 1) && (field[pos + HFIELDSIZE].pathsearch == num - 1))
-		fix_route(num - 1, pos + HFIELDSIZE);	
-	if ((pos%HFIELDSIZE < HFIELDSIZE - 1) && (field[pos + 1].pathsearch == num - 1))
+	if ((pos/hfieldsize < vfieldsize - 1) && (field[pos + hfieldsize].pathsearch == num - 1))
+		fix_route(num - 1, pos + hfieldsize);	
+	if ((pos%hfieldsize < hfieldsize - 1) && (field[pos + 1].pathsearch == num - 1))
 		fix_route(num - 1, pos + 1);	
 }
 	
@@ -563,7 +601,7 @@ static void cell_clicked (GtkWidget *widget, int fx, int fy)
 	int x, y;
 
         gnome_appbar_set_status(GNOME_APPBAR(appbar), "");
-	if(field[fx + fy*HFIELDSIZE].color == 0)
+	if(field[fx + fy*hfieldsize].color == 0)
 	{
 		/* Clicked on an empty field */
 
@@ -573,7 +611,7 @@ static void cell_clicked (GtkWidget *widget, int fx, int fy)
 			 * already in move. Therefore we should begin
 			 * the moving sequence */
 
-			target = fx + fy*HFIELDSIZE;
+			target = fx + fy*hfieldsize;
 			if(find_route())
 			{
 				/* We found a route to the new position */
@@ -593,7 +631,7 @@ static void cell_clicked (GtkWidget *widget, int fx, int fy)
 	{
 		/* Clicked on a ball */
 
-		if((fx + fy*HFIELDSIZE) == active)
+		if((fx + fy*hfieldsize) == active)
 		{
 			/* It's active, so let's deactivate it! */
 
@@ -607,12 +645,12 @@ static void cell_clicked (GtkWidget *widget, int fx, int fy)
 			{
 				/* There is an other active ball, we should deactivate it first! */
 
-				x = active%HFIELDSIZE;
-				y = active/HFIELDSIZE;
+				x = active%hfieldsize;
+				y = active/hfieldsize;
 				deactivate(widget, x, y);
 			}
 
-			active = fx + fy*HFIELDSIZE;
+			active = fx + fy*hfieldsize;
 			field[active].active = 1;
 		}
 	}
@@ -664,13 +702,13 @@ move_cursor (int dx, int dy)
 	cursor_x = cursor_x + dx;
 	if (cursor_x < 0)
 		cursor_x = 0;
-	if (cursor_x >= HFIELDSIZE)
-		cursor_x = HFIELDSIZE - 1;
+	if (cursor_x >= hfieldsize)
+		cursor_x = hfieldsize - 1;
 	cursor_y = cursor_y + dy;
 	if (cursor_y < 0)
 		cursor_y = 0;
-	if (cursor_y >= VFIELDSIZE)
-		cursor_y = VFIELDSIZE - 1;
+	if (cursor_y >= vfieldsize)
+		cursor_y = vfieldsize - 1;
 
 	if (cursor_x == old_x && cursor_y == old_y)
 		return;
@@ -783,7 +821,7 @@ field_expose_event (GtkWidget *widget, GdkEventExpose *event, gpointer gp)
 		for (j = x_start; j < x_end; j++) {
 			int phase, color;
 
-			idx = j + i * HFIELDSIZE;
+			idx = j + i * hfieldsize;
 
 			if (field[idx].color != 0) {
 				phase = field[idx].phase;
@@ -869,23 +907,23 @@ find_lines (int num)
 {
 	int count = 1;
 	int subcount = 0;
-	int x = num%HFIELDSIZE;
-	int y = num/HFIELDSIZE;
-	int list[HFIELDSIZE];
+	int x = num%hfieldsize;
+	int y = num/hfieldsize;
+	int list[hfieldsize];
 
 	/* Horizontal */
 
 	x++;
-	while ((x <= HFIELDSIZE - 1) && (field[x + y*HFIELDSIZE].color == field[num].color))
+	while ((x <= hfieldsize - 1) && (field[x + y*hfieldsize].color == field[num].color))
 	{
-		list[subcount] = x + y*HFIELDSIZE;
+		list[subcount] = x + y*hfieldsize;
 		subcount++;
 		x++;
 	}
-	x = num % HFIELDSIZE - 1;
-	while ((x >= 0) && (field[x + y*HFIELDSIZE].color == field[num].color))
+	x = num % hfieldsize - 1;
+	while ((x >= 0) && (field[x + y*hfieldsize].color == field[num].color))
 	{
-		list[subcount] = x + y*HFIELDSIZE;
+		list[subcount] = x + y*hfieldsize;
 		subcount++;
 		x--;
 	}
@@ -898,18 +936,18 @@ find_lines (int num)
 
 	/* Vertical */
 
-	x = num%HFIELDSIZE;
+	x = num%hfieldsize;
 	y++;
-	while ((y <= VFIELDSIZE - 1) && (field[x + y*HFIELDSIZE].color == field[num].color))
+	while ((y <= vfieldsize - 1) && (field[x + y*hfieldsize].color == field[num].color))
 	{
-		list[subcount] = x + y*HFIELDSIZE;
+		list[subcount] = x + y*hfieldsize;
 		subcount++;
 		y++;
 	}
-	y = num / HFIELDSIZE - 1;
-	while ((y >= 0) && (field[x + y*HFIELDSIZE].color == field[num].color))
+	y = num / hfieldsize - 1;
+	while ((y >= 0) && (field[x + y*hfieldsize].color == field[num].color))
 	{
-		list[subcount] = x + y*HFIELDSIZE;
+		list[subcount] = x + y*hfieldsize;
 		subcount++;
 		y--;
 	}
@@ -922,20 +960,20 @@ find_lines (int num)
 	
 	/* Diagonal ++*/
 	
-	x = num%HFIELDSIZE + 1;
-	y = num/HFIELDSIZE + 1;
-	while ((y <= VFIELDSIZE - 1) && (x <= HFIELDSIZE - 1) && (field[x + y*HFIELDSIZE].color == field[num].color))
+	x = num%hfieldsize + 1;
+	y = num/hfieldsize + 1;
+	while ((y <= vfieldsize - 1) && (x <= hfieldsize - 1) && (field[x + y*hfieldsize].color == field[num].color))
 	{
-		list[subcount] = x + y*HFIELDSIZE;
+		list[subcount] = x + y*hfieldsize;
 		subcount++;
 		y++;
 		x++;
 	}
-	x = num % HFIELDSIZE - 1;
-	y = num / HFIELDSIZE - 1;
-	while ((y >= 0) && (x >= 0) && (field[x + y*HFIELDSIZE].color == field[num].color))
+	x = num % hfieldsize - 1;
+	y = num / hfieldsize - 1;
+	while ((y >= 0) && (x >= 0) && (field[x + y*hfieldsize].color == field[num].color))
 	{
-		list[subcount] = x + y*HFIELDSIZE;
+		list[subcount] = x + y*hfieldsize;
 		subcount++;
 		y--;
 		x--;
@@ -949,20 +987,20 @@ find_lines (int num)
 
 	/* Diagonal +-*/
 	
-	x = num % HFIELDSIZE + 1;
-	y = num / HFIELDSIZE - 1;
-	while ((y >= 0) && (x <= HFIELDSIZE - 1) && (field[x + y*HFIELDSIZE].color == field[num].color))
+	x = num % hfieldsize + 1;
+	y = num / hfieldsize - 1;
+	while ((y >= 0) && (x <= hfieldsize - 1) && (field[x + y*hfieldsize].color == field[num].color))
 	{
-		list[subcount] = x + y*HFIELDSIZE;
+		list[subcount] = x + y*hfieldsize;
 		subcount++;
 		y--;
 		x++;
 	}
-	x = num % HFIELDSIZE - 1;
-	y = num / HFIELDSIZE + 1;
-	while ((y <= VFIELDSIZE - 1) && (x >= 0) && (field[x + y*HFIELDSIZE].color == field[num].color))
+	x = num % hfieldsize - 1;
+	y = num / hfieldsize + 1;
+	while ((y <= vfieldsize - 1) && (x >= 0) && (field[x + y*hfieldsize].color == field[num].color))
 	{
-		list[subcount] = x + y*HFIELDSIZE;
+		list[subcount] = x + y*hfieldsize;
 		subcount++;
 		y++;
 		x--;
@@ -980,7 +1018,7 @@ static void clear_tags (void)
 {
 	int i;
 
-	for (i=0; i<HFIELDSIZE*VFIELDSIZE; i++)
+	for (i=0; i<hfieldsize*vfieldsize; i++)
 		field[i].tag = 0;
 }
 
@@ -989,13 +1027,13 @@ static int kill_tags (GtkWidget * widget)
 	int i,j;
 
 	j = 0;
-	for (i = 0; i <HFIELDSIZE*VFIELDSIZE; i++) {
+	for (i = 0; i <hfieldsize*vfieldsize; i++) {
 		if (field[i].tag == 1) {
 			j++;
 			field[i].color = 0;
 			field[i].phase = 0;
 			field[i].active = 0;
-			draw_box (widget, i % HFIELDSIZE, i / HFIELDSIZE);
+			draw_box (widget, i % hfieldsize, i / hfieldsize);
 		}
 	}
 
@@ -1029,27 +1067,27 @@ animate (gpointer gp)
 	int x, y;
 	int newactive = 0;
 
-	x = active % HFIELDSIZE;
-	y = active / HFIELDSIZE;
+	x = active % hfieldsize;
+	y = active / hfieldsize;
 
 	if (active == -1) return TRUE;
 	if (inmove != 0)
 	{
 		if ((x > 0) && (field[active - 1].pathsearch == field[active].pathsearch+1))
 			newactive = active - 1;
-		else if ((x < HFIELDSIZE - 1) && (field[active + 1].pathsearch == field[active].pathsearch+1))
+		else if ((x < hfieldsize - 1) && (field[active + 1].pathsearch == field[active].pathsearch+1))
 			newactive = active + 1;
-		else if ((y > 0) && (field[active - HFIELDSIZE].pathsearch == field[active].pathsearch+1))
-			newactive = active - HFIELDSIZE;
-		else if ((y < VFIELDSIZE - 1) && (field[active + HFIELDSIZE].pathsearch == field[active].pathsearch+1))
-			newactive = active + HFIELDSIZE;
+		else if ((y > 0) && (field[active - hfieldsize].pathsearch == field[active].pathsearch+1))
+			newactive = active - hfieldsize;
+		else if ((y < vfieldsize - 1) && (field[active + hfieldsize].pathsearch == field[active].pathsearch+1))
+			newactive = active + hfieldsize;
 		else
 		{
 			set_inmove (0);
 		}
 		draw_box (widget, x, y);
-		x = newactive % HFIELDSIZE;
-		y = newactive / HFIELDSIZE;
+		x = newactive % hfieldsize;
+		y = newactive / hfieldsize;
 		field[newactive].phase = field[active].phase;
 		field[newactive].color = field[active].color;
 		field[active].phase = 0;
@@ -1067,19 +1105,19 @@ animate (gpointer gp)
 			if (!check_goal (widget, newactive))
 			{
 				gboolean fullline;
-				int balls[NPIECES];
+				int balls[npieces];
 				int spaces;
 
 				clear_tags ();
 				fullline = FALSE;
 				spaces = spaces_left ();
-				if (spaces > NPIECES)
-					spaces = NPIECES;
+				if (spaces > npieces)
+					spaces = npieces;
 				for (x = 0; x < spaces; x++)
 				{
 					int tmp = init_new_balls (1, x);
-					draw_box (widget, tmp % HFIELDSIZE,
-						   tmp / HFIELDSIZE);
+					draw_box (widget, tmp % hfieldsize,
+						  tmp / hfieldsize);
 					balls[x] = tmp;
 					fullline = (find_lines (balls[x]) >= 5) || fullline;
 				}
@@ -1105,13 +1143,13 @@ animate (gpointer gp)
 }
 
 static void
-game_top_ten_callback(GtkWidget *widget, gpointer data)
+game_top_ten_callback (GtkAction *action, gpointer data)
 {
 	show_scores (0, FALSE);
 }
 
 static int
-game_about_callback (GtkWidget *widget, void *data)
+game_about_callback (GtkAction *action, gpointer *data)
 {
    const gchar *authors[] = {"Robert Szokovacs <szo@appaloosacorp.hu>",
 			     "Szabolcs B\xc3\xa1n <shooby@gnome.hu>",
@@ -1187,6 +1225,45 @@ bg_color_callback (GtkWidget *widget, gpointer data)
 }
 
 static void
+set_sizes (gint size)
+{
+	hfieldsize = field_sizes[size][0];
+	vfieldsize = field_sizes[size][1];
+	ncolors    = field_sizes[size][2];
+	npieces    = field_sizes[size][3];
+	game_size  = size;
+
+	gconf_client_set_int (conf_client, KEY_SIZE, size, NULL);
+
+	if (gridframe)
+		games_grid_frame_set (GAMES_GRID_FRAME (gridframe),
+				      hfieldsize, vfieldsize);
+}
+
+static void
+size_callback (GtkWidget *widget, gpointer data)
+{
+	if (pref_dialog_done)
+		gconf_client_set_int (conf_client, KEY_SIZE, GPOINTER_TO_INT (data), NULL);
+}
+
+static void
+size_changed_cb (GConfClient *client,
+		 guint cnxn_id,
+		 GConfEntry *entry,
+		 gpointer user_data)
+{
+	gint size_tmp;
+	size_tmp = gconf_client_get_int (conf_client, KEY_SIZE, NULL);
+
+	if (size_tmp != game_size) {
+		set_sizes (size_tmp);
+		reset_game ();
+		start_game ();
+	}
+}
+
+static void
 load_theme ()
 {
 	load_image (ball_filename, &ball_preimage);
@@ -1241,12 +1318,13 @@ pref_dialog_response (GtkDialog *dialog, gint response, gpointer data)
 }
 
 void
-game_props_callback (GtkWidget *widget, void *data)
+game_props_callback (void)
 {
 	GtkWidget *w, *omenu, *l, *fv;
 	GtkWidget *frame;
 	GtkWidget *table;
 	GtkWidget *vbox;
+	GtkWidget *button;
 
 	if (! pref_dialog)
 		{
@@ -1283,7 +1361,7 @@ game_props_callback (GtkWidget *widget, void *data)
 			l = gtk_label_new_with_mnemonic (_("_Ball image:"));
 			gtk_misc_set_alignment (GTK_MISC (l), 0, 0.5);
 			gtk_table_attach_defaults (GTK_TABLE (table), l, 0, 1, 0, 1);
-	    
+
 			omenu = fill_menu ();
 			g_signal_connect (G_OBJECT (omenu), "changed",
 					  G_CALLBACK (set_selection), NULL);
@@ -1294,7 +1372,7 @@ game_props_callback (GtkWidget *widget, void *data)
 			l = gtk_label_new_with_mnemonic (_("B_ackground color:"));
 			gtk_misc_set_alignment (GTK_MISC (l), 0, 0.5);
 			gtk_table_attach_defaults (GTK_TABLE (table), l, 0, 1, 1, 2);
-	    
+
 			{
 				w  = gtk_color_button_new ();
 				gtk_color_button_set_color (GTK_COLOR_BUTTON (w), &backgnd.color);
@@ -1306,13 +1384,48 @@ game_props_callback (GtkWidget *widget, void *data)
 			gtk_label_set_mnemonic_widget (GTK_LABEL (l), w);
 
 
-			frame = games_frame_new (_("General"));
+			frame = games_frame_new (_("Field size"));
 			fv = gtk_vbox_new (FALSE, FALSE);
 			gtk_box_set_spacing (GTK_BOX (fv), 6);
 			gtk_container_add (GTK_CONTAINER (frame), fv);
 			gtk_box_pack_start (GTK_BOX (vbox), frame, 
 					    FALSE, FALSE, 0);
+			
+			button = gtk_radio_button_new_with_mnemonic (NULL, _("_Small") );
+			if (game_size == SMALL)
+				gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button), TRUE);
+			g_signal_connect (G_OBJECT (button), "clicked", 
+					  G_CALLBACK (size_callback), (gpointer) SMALL);
 
+			gtk_container_add (GTK_CONTAINER (fv), button);
+
+			button = gtk_radio_button_new_with_mnemonic
+				(gtk_radio_button_get_group (GTK_RADIO_BUTTON(button)),
+				 _("_Medium") );
+			
+			if (game_size == MEDIUM)
+				gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button), TRUE);
+			g_signal_connect (G_OBJECT (button), "clicked", 
+					  G_CALLBACK (size_callback), (gpointer) MEDIUM);
+			gtk_container_add (GTK_CONTAINER (fv), button);
+
+			button = gtk_radio_button_new_with_mnemonic
+				(gtk_radio_button_get_group (GTK_RADIO_BUTTON(button)),
+				 _("_Large") );
+			if (game_size == LARGE)
+				gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button), TRUE);
+			g_signal_connect (G_OBJECT (button), "clicked", 
+					  G_CALLBACK (size_callback), (gpointer) LARGE);
+			gtk_container_add (GTK_CONTAINER (fv), button);
+
+
+			frame = games_frame_new (_("General"));
+			fv = gtk_vbox_new (FALSE, FALSE);
+			gtk_box_set_spacing (GTK_BOX (fv), 6);
+			gtk_container_add (GTK_CONTAINER (frame), fv);
+			gtk_box_pack_start (GTK_BOX (vbox), frame,
+					    FALSE, FALSE, 0);
+			
 			fast_moves_toggle_button = 
 				gtk_check_button_new_with_mnemonic ( _("_Use fast moves") );
 			if (move_timeout == 10) 
@@ -1327,6 +1440,8 @@ game_props_callback (GtkWidget *widget, void *data)
 			gtk_container_add (GTK_CONTAINER (fv), fast_moves_toggle_button);
 
 			gtk_widget_show_all (pref_dialog);
+
+			pref_dialog_done = TRUE;
 		}
 	
 	gtk_window_present (GTK_WINDOW (pref_dialog));
@@ -1342,7 +1457,7 @@ window_resize_cb (GtkWidget * widget, GdkEventConfigure * event, void * data)
 }
 
 static int
-game_quit_callback (GtkWidget *widget, void *data)
+game_quit_callback (GtkAction *action, gpointer data)
 {
 	if (animate_id)
 		g_source_remove (animate_id);
@@ -1351,7 +1466,7 @@ game_quit_callback (GtkWidget *widget, void *data)
 }
 
 static void
-game_help_callback (void)
+game_help_callback (GtkAction *action, gpointer data)
 {
 	gnome_help_display ("glines.xml", NULL, NULL);
 }
@@ -1378,7 +1493,7 @@ configure_event_callback (GtkWidget *widget, GdkEventConfigure *event)
 	if (blank_pixmap)
 		g_object_unref (blank_pixmap);
 
-	boxsize = (event->width - 1)/HFIELDSIZE;
+	boxsize = (event->width - 1)/hfieldsize;
 	ball_pixmap = gdk_pixmap_new (draw_area->window, boxsize*4, boxsize*7,
 				      -1);
 	blank_pixmap = gdk_pixmap_new (draw_area->window, boxsize, boxsize, -1);
@@ -1404,20 +1519,20 @@ save_state (GnomeClient *client,
 	gconf_client_set_int (conf_client,
                               KEY_SAVED_SCORE, score, NULL);
 
-	buf = g_malloc (HFIELDSIZE * VFIELDSIZE * 4 + 1);
-	for (i = 0; i < HFIELDSIZE * VFIELDSIZE; i++)
+	buf = g_malloc (hfieldsize * vfieldsize * 4 + 1);
+	for (i = 0; i < hfieldsize * vfieldsize; i++)
 	{
 		buf[i*4] = field[i].color + 'h';
 		buf[i*4 + 1] = field[i].pathsearch + 'h';
 		buf[i*4 + 2] = field[i].phase + 'h';
 		buf[i*4 + 3] = field[i].active + 'h';
 	}
-	buf[HFIELDSIZE * VFIELDSIZE * 4] = '\0';
+	buf[hfieldsize * vfieldsize * 4] = '\0';
 	gconf_client_set_string (conf_client,
                                  KEY_SAVED_FIELD, buf, NULL);
-	for(i = 0; i < NPIECES; i++)
+	for(i = 0; i < npieces; i++)
 		buf[i] = preview[i] + 'h';
-	buf[NPIECES] = '\0';
+	buf[npieces] = '\0';
 	gconf_client_set_string (conf_client,
                                  KEY_SAVED_PREVIEW, buf, NULL);
 	g_free(buf);
@@ -1472,10 +1587,10 @@ restart (void)
                                        KEY_SAVED_FIELD, NULL);
 	if(buf)
 	{
-		for(i = 0; i < HFIELDSIZE * VFIELDSIZE; i++)
+		for(i = 0; i < hfieldsize * vfieldsize; i++)
 		{
-			field[i].color = CLAMP (buf[i*4] - 'h', 1, NCOLORS);
-			field[i].pathsearch = CLAMP (buf[i*4 + 1] - 'h', -1, HFIELDSIZE*VFIELDSIZE);
+			field[i].color = CLAMP (buf[i*4] - 'h', 1, ncolors);
+			field[i].pathsearch = CLAMP (buf[i*4 + 1] - 'h', -1, hfieldsize*vfieldsize);
 			field[i].phase = CLAMP (buf[i*4 + 2] - 'h', 0, 3);
 			field[i].active = CLAMP (buf[i*4 + 3] - 'h', -1, 1);
 		}
@@ -1485,8 +1600,8 @@ restart (void)
                                        KEY_SAVED_PREVIEW, NULL);
 	if(buf)
 	{
-		for(i = 0; i < NPIECES; i++)
-			preview[i] = CLAMP (buf[i] - 'h', 1, NCOLORS);
+		for(i = 0; i < npieces; i++)
+			preview[i] = CLAMP (buf[i] - 'h', 1, ncolors);
 		g_free(buf);
 	}
 }
@@ -1631,6 +1746,11 @@ init_config (int argc, char ** argv)
 				 KEY_BACKGROUND_COLOR,
 				 bg_color_changed_cb,
 				 NULL, NULL, NULL);
+	gconf_client_notify_add (conf_client,
+				 KEY_SIZE,
+				 size_changed_cb,
+				 NULL, NULL, NULL);
+
 
 	/* These are here because they are only loaded once. */
 	width = gconf_client_get_int (conf_client,
@@ -1640,13 +1760,20 @@ init_config (int argc, char ** argv)
 	height = gconf_client_get_int (conf_client,
 				       KEY_HEIGHT, NULL);
 	height = MAX (height, MIN_HEIGHT);
+
+	game_size = gconf_client_get_int (conf_client,
+					  KEY_SIZE, NULL);
+	if (game_size == UNSET)
+		game_size = DEFAULT_GAME_SIZE;
+		
+	game_size = CLAMP (game_size, SMALL, MAX_SIZE - 1);
+	set_sizes (game_size);
 }
 
 int
 main (int argc, char *argv [])
 {
-	GtkWidget *alignment;   
-	GtkWidget *gridframe, *label;
+	GtkWidget *label;
 	GtkWidget *vbox, *table, *hbox;
 	GtkWidget *preview_hbox;
 	GnomeClient *client;
@@ -1699,26 +1826,25 @@ main (int argc, char *argv [])
 	create_menus ();
 	gtk_box_pack_start (GTK_BOX (vbox), menubar, FALSE, FALSE, 0);
 
- 	table = gtk_table_new (10, 1, TRUE);
+ 	table = gtk_table_new (11, 1, TRUE);
 	gtk_box_pack_start_defaults (GTK_BOX (vbox), table);
 
 	hbox = gtk_hbox_new(FALSE, 0);
+
 	gtk_table_attach_defaults (GTK_TABLE (table), hbox, 0, 1, 0, 1);
 	label = gtk_label_new (g_strdup_printf ("<span weight=\"bold\">%s</span>", _("Next:")));
 	gtk_label_set_use_markup (GTK_LABEL (label), TRUE);
 	gtk_box_pack_start (GTK_BOX (hbox), label, FALSE, FALSE, 5);
 
-	alignment = gtk_alignment_new (0, 0.5, 0.3, 1);
-	gtk_box_pack_start (GTK_BOX (hbox), alignment, TRUE, TRUE, 0);
+	gridframe = games_grid_frame_new (MAXNPIECES, 1);
+	games_grid_frame_set_alignment (GAMES_GRID_FRAME(gridframe), 0, 0.5);
+	gtk_box_pack_start (GTK_BOX (hbox), gridframe, TRUE, TRUE, 0);
 
-	gridframe = games_grid_frame_new (NPIECES, 1);
-	gtk_container_add (GTK_CONTAINER (alignment), gridframe);
-	
 	preview_hbox = gtk_hbox_new (FALSE, 0);
 	gtk_container_add (GTK_CONTAINER (gridframe), 
 			   preview_hbox);
 
-	for (i=0; i<NPIECES; i++) {
+	for (i=0; i<MAXNPIECES; i++) {
 		preview_widgets[i] = gtk_drawing_area_new ();
 		gtk_box_pack_start (GTK_BOX (preview_hbox),
 				    preview_widgets[i], TRUE, TRUE, 0);
@@ -1747,10 +1873,10 @@ main (int argc, char *argv [])
 			  G_CALLBACK (configure_event_callback), NULL);
 	g_signal_connect (G_OBJECT (draw_area), "expose_event",
 			  G_CALLBACK (field_expose_event), NULL);
-	gridframe = games_grid_frame_new (HFIELDSIZE, VFIELDSIZE);
+	gridframe = games_grid_frame_new (hfieldsize, vfieldsize);
 	games_grid_frame_set_padding (GAMES_GRID_FRAME(gridframe), 1, 1);
 	gtk_container_add (GTK_CONTAINER (gridframe), draw_area);
-	gtk_table_attach_defaults (GTK_TABLE (table), gridframe, 0, 1, 1, 10);
+	gtk_table_attach_defaults (GTK_TABLE (table), gridframe, 0, 1, 1, 11);
 
 	gtk_widget_set_events (draw_area, gtk_widget_get_events(draw_area) |GDK_BUTTON_PRESS_MASK|GDK_KEY_PRESS_MASK);
 
