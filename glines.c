@@ -57,7 +57,7 @@
 
 #define MAXNPIECES 10
 #define MAXFIELDSIZE 30
-#define DEFAULT_GAME_SIZE SMALL
+#define DEFAULT_GAME_SIZE MEDIUM
 
 gint hfieldsize;
 gint vfieldsize;

@@ -1,3 +1,12 @@
+2005-03-24  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* glines.h: 
+	* glines.schemas.in:
+	* glines.c (DEFAULT_GAME_SIZE): 	
+	* Makefile.am: Make Medium the same as the old version and also
+	make it the default. Make small, meaner and nastier. Also add a
+	schema for the size parameter.
+
 2005-03-23  Richard Hoelscher  <rah@rahga.com>
 
 	* Makefile.am: support multiple scorefiles

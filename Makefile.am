@@ -53,7 +53,7 @@ endif
 	## installs).
 	-if [ -f $(DESTDIR)$(scoredir)/glines.scores -a ! -f $(DESTDIR)$(scoredir)/glines.Small.scores ] ; then \
 	  mv -f $(DESTDIR)$(scoredir)/glines.scores $(DESTDIR)$(scoredir)/glines.Small.scores ; \
-	  ln -s $(DESTDIR)$(scoredir)/glines.Small.scores $(DESTDIR)$(scoredir)/glines.scores ; \
+	  ln -s $(DESTDIR)$(scoredir)/glines.Medium.scores $(DESTDIR)$(scoredir)/glines.scores ; \
 	fi
 	-for i in ${SCOREFILES} ; do \
 	  touch $(DESTDIR)$(scoredir)/glines.$$i.scores; \

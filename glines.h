@@ -14,8 +14,8 @@ enum {
 /* Keep these in sync with the enum above. */
 const
 gint field_sizes[MAX_SIZE][4] = {{-1, -1, -1, -1}, /* This is a dummy entry. */
-                                 { 9,  9, 5, 3},   /* SMALL */
-                                 {15,  9, 7, 5},   /* MEDIUM */
+                                 { 7,  7, 5, 3},   /* SMALL */
+                                 {9,  9, 7, 3},   /* MEDIUM */
                                  {20, 15, 7, 7}};  /* LARGE */
 
 const
