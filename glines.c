@@ -780,12 +780,12 @@ main (int argc, char *argv [])
 	GtkWidget *vbox, *hbox;
 	GnomeClient *client;
 	
+	gnome_score_init("glines");
+
 	srand(time(NULL));
 	
 	bindtextdomain (PACKAGE, GNOMELOCALEDIR);
 	textdomain (PACKAGE);
-
-	gnome_score_init("glines");
 
 	gnome_init ("glines", VERSION, argc, argv);
 	gnome_window_icon_set_default_from_file (GNOME_ICONDIR"/glines.xpm");
