@@ -40,7 +40,7 @@ Games_in_files = glines.desktop.in
 Games_DATA = $(Games_in_files:.desktop.in=.desktop)
 @INTLTOOL_DESKTOP_RULE@
 
-CLEANFILES = $(Games_DATA)
+CLEANFILES = $(Games_DATA) $(schema_DATA)
 
 install-data-local:
 if GCONF_SCHEMAS_INSTALL
