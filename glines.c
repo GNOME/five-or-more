@@ -588,10 +588,10 @@ field_expose_event (GtkWidget *widget, GdkEventExpose *event, gpointer gp)
 	guint x_start, x_end, y_start, y_end, i, j, idx;
 
 	x_start = event->area.x / boxsize;
-	x_end = (event->area.x + event->area.width) / boxsize + 1;
+	x_end = (event->area.x + event->area.width - 1) / boxsize + 1;
 
 	y_start = event->area.y / boxsize;
-	y_end = (event->area.y + event->area.height) / boxsize + 1;
+	y_end = (event->area.y + event->area.height - 1) / boxsize + 1;
 
         gc = gdk_gc_new (draw_area->window);
 
