@@ -5,3 +5,4 @@ _libs
 glines
 glines.o
 Makefile.in
+glines.desktop

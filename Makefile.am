@@ -22,11 +22,13 @@ glines_LDADD =		\
 pixmap_DATA = ball.png classic.png dots.png pulse.png \
 		black.xpm gray.xpm woody.xpm
 
-EXTRA_DIST = glines.desktop $(pixmap_DATA) $(icon_DATA)
+EXTRA_DIST = glines.desktop.in $(pixmap_DATA) $(icon_DATA)
 
 icon_DATA = glines.png
 
-Games_DATA = glines.desktop
+Games_in_files = glines.desktop.in
+Games_DATA = $(Games_in_files:.desktop.in=.desktop)
+@INTLTOOL_DESKTOP_RULE@
 
 install-data-local:
 	-$(mkinstalldirs) $(DESTDIR)$(scoredir)
