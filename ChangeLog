@@ -1,0 +1,40 @@
+2000-08-09  Szabolcs BAN <shooby@gnome.hu>
+
+	* Added Help button to preferences window,
+	committed new help (not to /configure.in)
+
+2000-08-05  Szabolcs BAN <shooby@gnome.hu>
+
+	* Started writing this ChangeLog.
+
+2000-08-05  Szabolcs BAN <shooby@gnome.hu>
+
+	* glines.c: added session managemnt support and the possibility to
+	configure (via the settings dialog) the program's behaviour on quit.
+
+2000-08-01  Szabolcs BAN <shooby@gnome.hu>
+
+	* glines.c, glines.h: Added theme support (via the new settings
+	dialog), changed ball.xpm to png: this way, it is easy to decide
+        wether the picture is a ball or a background element (balls are png
+        format, backgrounds are xpms).  Added some art files: black.xpm,
+        gray.xpm, woody.xpm, marble,xpm, ball.png, classic.png, pulse.png,
+        dots.png.
+
+2000-07-20  Szabolcs BAN <shooby@gnome.hu>
+
+        * glines.c: applied patch of
+          Hans Persson <unicorn@lysator.liu.se> for showing/hiding
+          status message "Can't go there!"
+
+2000-07-04  Szabolcs BAN <shooby@gnome.hu>
+
+        * glines.c: applied patch of Szo. Quul!
+
+2000-05-12  Andreas Hyden  <a.hyden@cyberpoint.se>
+
+        * glines.desktop: Added Swedish translation.
+
+1999-04-24  Shooby Ban <bansz@szif.hu>
+
+        * glines/*: Added a new game.
