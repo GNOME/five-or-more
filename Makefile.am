@@ -21,7 +21,7 @@ glines_LDADD =		\
 	$(INTLLIBS)
 
 pixmap_DATA = ball.xpm box.xpm
-EXTRA_DIST = glines.desktop $(pixmap_DATA) $icon_DATA
+EXTRA_DIST = glines.desktop $(pixmap_DATA) $(icon_DATA)
 
 icon_DATA = glines.xpm
 
