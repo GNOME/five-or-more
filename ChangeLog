@@ -1,3 +1,9 @@
+2005-04-04  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* glines.c: Further reworking of the layout code to avoid cutting
+	the text at the top. The table now gets resized to match the
+	logical layout rather than using the 100-unit layout.
+
 2005-04-03  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* glines.c: Convert to using GRand rather than rand. Remove some

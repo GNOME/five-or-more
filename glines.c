@@ -219,22 +219,19 @@ load_image (gchar *fname,
    gets too large. */
 static void relay_table (void)
 {
-	gint breakpt;
+	gint height;
 	GValue value = { 0 };
 
-	breakpt = 100/(1 + vfieldsize);
-
+	height = 1 + vfieldsize;
 	g_value_init (&value, G_TYPE_INT);
-	g_value_set_int (&value, breakpt);
-
+	g_value_set_int (&value, height);
+	
 	gtk_container_child_set_property (GTK_CONTAINER (table),
 					  bottom_pane,
-					  "top-attach",
+					  "bottom_attach",
 					  &value);
-	gtk_container_child_set_property (GTK_CONTAINER (table),
-					  top_pane,
-					  "bottom-attach",
-					  &value);
+
+	gtk_table_resize (GTK_TABLE (table), vfieldsize + 1, 1);
 }
 
 static void
@@ -1917,12 +1914,12 @@ main (int argc, char *argv [])
 	create_menus ();
 	gtk_box_pack_start (GTK_BOX (vbox), menubar, FALSE, FALSE, 0);
 
- 	table = gtk_table_new (100, 1, TRUE);
+ 	table = gtk_table_new (2, 1, TRUE);
 	gtk_box_pack_start_defaults (GTK_BOX (vbox), table);
 
 	hbox = gtk_hbox_new(FALSE, 0);
 
-	gtk_table_attach_defaults (GTK_TABLE (table), hbox, 0, 1, 0, 10);
+	gtk_table_attach_defaults (GTK_TABLE (table), hbox, 0, 1, 0, 1);
 	top_pane = hbox;
 	label = gtk_label_new (g_strdup_printf ("<span weight=\"bold\">%s</span>", _("Next:")));
 	gtk_label_set_use_markup (GTK_LABEL (label), TRUE);
@@ -1968,7 +1965,7 @@ main (int argc, char *argv [])
 	gridframe = games_grid_frame_new (hfieldsize, vfieldsize);
 	games_grid_frame_set_padding (GAMES_GRID_FRAME(gridframe), 1, 1);
 	gtk_container_add (GTK_CONTAINER (gridframe), draw_area);
-	gtk_table_attach_defaults (GTK_TABLE (table), gridframe, 0, 1, 10, 100);
+	gtk_table_attach_defaults (GTK_TABLE (table), gridframe, 0, 1, 1, 2);
 	bottom_pane = gridframe;
 
 	relay_table ();
