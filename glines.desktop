@@ -1,10 +1,12 @@
 [Desktop Entry]
 Name=Glines
+Name[da]=Glines
 Name[et]=Munamäng
 Name[fi]=Glines
 Name[ja]=Glines
 Name[no]=Glines
 Comment=Gnome color lines
+Comment[da]=Gnome farvelinier
 Comment[et]=Värviliste munade rittaseadmine
 Comment[fi]=Värilliset rivit
 Comment[hu]=Color lines játék GNOME alá
