@@ -1,3 +1,8 @@
+2002-12-24 John Fleck <jfleck@inkstain.net>
+
+	* help/C/glines.xml: add <figure> tags around screenshots
+	so the links to them display correctly in Yelp
+
 2002-12-11  Ross Burton  <ross@burtonini.com>
 
 	* help/C/glines-C.omf:

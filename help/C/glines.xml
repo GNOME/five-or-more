@@ -119,7 +119,7 @@
   <title>Introduction</title>
 
   <para> 
-   <application>Glines</application>, is the GNOME port of the once 
+   <application>Glines</application>, is the Gnome port of the once 
    popular Windows game called <application>Color Lines</application>.
    The game's objective is to align as often as possible five balls or more 
    of the same color causing them to disappear, play as long as possible, and 
@@ -173,7 +173,10 @@
     looks like is shown in <xref linkend="mainwindow-fig" />.
 
     <!-- ==== Figure ==== -->
-    <mediaobject id="mainwindow-fig">
+	<figure id="mainwindow-fig">
+	  <title>Glines Main Window</title>
+	  <screenshot>
+    <mediaobject>
      <imageobject>
       <imagedata fileref="figures/glines-startgame" format="PNG" srccredit="emese" />
      </imageobject>
@@ -184,6 +187,8 @@
       <para>Glines Main Window</para>
      </caption>
     </mediaobject>
+</screenshot>
+</figure>
      <!-- ==== End of Figure ==== -->
 
    </para>
@@ -194,8 +199,10 @@
      and harder&hellip; The game is over, when the board is full. 
    
    <!-- ==== Figure ==== -->
-   
-    <mediaobject id="gameover-fig">
+   <figure id="gameover-fig">
+	  <title>Game Over!</title>
+	  <screenshot>
+    <mediaobject>
      <imageobject>
       <imagedata fileref="figures/glines-gameover" format="PNG" srccredit="emese kovacs" />
      </imageobject>
@@ -206,7 +213,8 @@
       <para>Game Over!</para>
      </caption>
     </mediaobject>
-   
+ </screenshot>
+</figure>  
    <!-- ==== End of Figure ==== -->
    
    </para>
