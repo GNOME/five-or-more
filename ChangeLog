@@ -1,3 +1,8 @@
+2004-01-20  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* balls.svg: Reworked version from Richard Hoelscher. Smaller file
+	and wobble-free graphics.
+
 2004-01-10  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* glines.c (field_expose_event): Shrink the event area by one so
