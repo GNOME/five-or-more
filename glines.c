@@ -902,7 +902,8 @@ bg_color_changed_cb (GConfClient *client,
 
 	color = gconf_client_get_string (client,
 					 KEY_BACKGROUND_COLOR, NULL);
-	set_backgnd_color (color);
+	if (color != NULL)
+		set_backgnd_color (color);
 }
 
 static void
@@ -1165,21 +1166,22 @@ load_properties (void)
 	ball_filename = gconf_client_get_string (conf_client,
 						 KEY_BALL_THEME,
 						 NULL);
-	if (! ball_filename)
+	if (ball_filename == NULL)
 		ball_filename = g_strdup ("pulse.png");
 
 	move_timeout = gconf_client_get_int (conf_client,
 					     KEY_MOVE_TIMEOUT,
 					     NULL);
+	if (move_timeout <= 0)
+		move_timeout = 100;
 
 	buf = gconf_client_get_string (conf_client,
 				       KEY_BACKGROUND_COLOR,
 				       NULL);
+	if (buf == NULL)
+		buf = g_strdup ("#000000");
 	set_backgnd_color (buf);
 	g_free (buf);
-
-	if (move_timeout <= 0)
-		move_timeout = 100;
 
 	load_theme ();
 }

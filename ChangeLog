@@ -1,3 +1,10 @@
+2003-06-20  William Jon McCann  <mccann@jhu.edu>
+
+	* glines.schemas.in: Added background_color.  Fixed typo.
+
+	* glines.c (bg_color_changed_cb):
+	(load_properties):  Check gconf background color is not NULL.
+
 2003-06-19  William Jon McCann  <mccann@jhu.edu>
 
 	* glines.c: #define gconf key names.
