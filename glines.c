@@ -895,7 +895,7 @@ game_about_callback (GtkWidget *widget, void *data)
    }
    					        
 	about = gnome_about_new (_("Glines"), VERSION,
-			"Copyright \xc2\xa9 1997-2003 Free Software "
+			"Copyright \xc2\xa9 1997-2004 Free Software "
 			"Foundation, Inc.",
 			_("GNOME port of the once-popular Color Lines game"),
 			(const char **)authors,
