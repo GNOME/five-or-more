@@ -1,7 +1,4 @@
-figs = \
-	figures/glines-gameover.png	\
-	figures/preferences.png		\
-	figures/glines-startgame.png
+figdir = figures
 docname = glines
 lang = C
 omffile = glines-C.omf

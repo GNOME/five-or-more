@@ -1,14 +1,30 @@
 <?xml version="1.0" standalone="no"?>
 <omf>
-  <resource>
-    <title>
-      Glines Manual
-    </title>
-    <subject>
-      <category>GNOME|Games</category>
-    </subject>
-    <format mime="text/xml"/>
-    <identifier url="glines.xml"/>
-    <language code="C"/>
-  </resource>
-</omf>
+       <resource>
+       <creator>
+    emese@gnome.hu (Emese Kov&#xE1;cs)
+   </creator>
+     <maintainer>
+    chris@wilddev.net (Chris Lyttle)
+   </maintainer>
+     <title>
+     Glines Manual
+   </title>
+     <date>
+    2002-05-05
+   </date>
+     <version identifier="2.0" date="2002-05-05" description="Updated to full OMF format"/>
+     <subject category="GNOME|Games"/>
+     <description>
+    Glines, is the Gnome port of the once popular Windows game called Color Lines. The game's objective is to align as often as possible five balls or more of the same color causing them to disappear, play as long as possible, and be #1 in the High Scores.
+   </description>
+     <type>
+     user's guide
+   </type>
+     <format mime="text/xml" dtd="-//OASIS//DTD DocBook XML V4.1.2//EN"/>
+     <identifier url="file://usr/share/gnome/help/glines/C/glines.xml"/>
+     <language code="C"/>
+     <relation seriesid="1f44f7a0-5ffe-11d6-969e-bc780d867e8b"/>
+     <rights type="GNU FDL" license.version="1.1" holder="Emese Kov&#xE1;cs"/>
+     </resource>
+     </omf>
