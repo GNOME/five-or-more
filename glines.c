@@ -580,10 +580,10 @@ field_expose_event (GtkWidget *widget, GdkEventExpose *event, gpointer gp)
 	guint x_start, x_end, y_start, y_end, i, j, idx;
 
 	x_start = event->area.x / boxsize;
-	x_end = x_start + event->area.width / boxsize + 1;
+	x_end = (event->area.x + event->area.width) / boxsize + 1;
 
 	y_start = event->area.y / boxsize;
-	y_end = y_start + event->area.height / boxsize + 1;
+	y_end = (event->area.y + event->area.height) / boxsize + 1;
 
         gc = gdk_gc_new (draw_area->window);
 
@@ -1426,7 +1426,8 @@ main (int argc, char *argv [])
 
 	hbox = gtk_hbox_new(FALSE, 0);
 	gtk_box_pack_start (GTK_BOX (vbox), hbox, FALSE, FALSE, 0);
-	frame = gtk_aspect_frame_new (_("Next Balls"), 0.5, 0.5, 3.0, FALSE);
+	frame = gtk_aspect_frame_new (g_strdup_printf ("<span weight=\"bold\">%s</span>", _("Next Balls")), 0.5, 0.5, 3.0, FALSE);
+	gtk_label_set_use_markup (GTK_LABEL (GTK_FRAME(frame)->label_widget), TRUE);
 	gtk_container_set_border_width (GTK_CONTAINER (frame), 0);
 	gtk_frame_set_shadow_type (GTK_FRAME (frame), GTK_SHADOW_NONE);
 	gtk_frame_set_label_align (GTK_FRAME (frame), 0, 0);
