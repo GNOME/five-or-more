@@ -1,3 +1,7 @@
+2005-03-02  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* help/C/glines.xml: Bump the app version number. No revisions.
+
 2005-01-03  Richard Hoelscher  <rah@rahga.com>
 
 	* glines.c (load_image): Preimage API update, uri -> file. 
