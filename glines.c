@@ -1626,7 +1626,7 @@ load_properties (void)
 						 KEY_BALL_THEME,
 						 NULL);
 	if (ball_filename == NULL)
-		ball_filename = g_strdup ("pulse.png");
+		ball_filename = g_strdup ("balls.svg");
 
 	move_timeout = gconf_client_get_int (conf_client,
 					     KEY_MOVE_TIMEOUT,

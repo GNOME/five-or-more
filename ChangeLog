@@ -3,7 +3,7 @@
 	* glines.c: 	
 	* glines.xml: Muck around with the labels again: now items are
 	objects and the documentation has been updated to reflect this and
-	other recent changes.
+	other recent changes. Also fix a default filename.
 
 2005-04-08  Marco Colombo  <m.colombo@ed.ac.uk>
 
