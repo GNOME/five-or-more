@@ -394,7 +394,7 @@ start_game (void)
 	char string[20];
 
 	gnome_appbar_set_status (GNOME_APPBAR (appbar),
-				 _("Match five balls of the same color in a row to score!"));
+				 _("Match five objects of the same type in a row to score!"));
 	refresh_screen ();
 	active = -1;
 	target = -1;
@@ -471,7 +471,7 @@ show_scores (gint pos, gboolean new_game)
 							  _(scorenames[i]));
 		}
 		games_scores_dialog_set_category_description (GAMES_SCORES_DIALOG (dialog),
-							      _("Field size:"));	
+							      _("Board Size:"));	
 	}
 
 	games_scores_dialog_set_category (GAMES_SCORES_DIALOG (dialog),
@@ -1435,7 +1435,7 @@ game_props_callback (void)
 			gtk_box_pack_start (GTK_BOX (vbox), frame, 
 					    FALSE, FALSE, 0);
 
-			l = gtk_label_new_with_mnemonic (_("_Ball image:"));
+			l = gtk_label_new_with_mnemonic (_("_Image:"));
 			gtk_misc_set_alignment (GTK_MISC (l), 0, 0.5);
 			gtk_table_attach_defaults (GTK_TABLE (table), l, 0, 1, 0, 1);
 
@@ -1461,7 +1461,7 @@ game_props_callback (void)
 			gtk_label_set_mnemonic_widget (GTK_LABEL (l), w);
 
 
-			frame = games_frame_new (_("Field Size"));
+			frame = games_frame_new (_("Board Size"));
 			fv = gtk_vbox_new (FALSE, FALSE);
 			gtk_box_set_spacing (GTK_BOX (fv), 6);
 			gtk_container_add (GTK_CONTAINER (frame), fv);

@@ -1,3 +1,15 @@
+2005-04-18  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* glines.c: 	
+	* glines.xml: Muck around with the labels again: now items are
+	objects and the documentation has been updated to reflect this and
+	other recent changes.
+
+2005-04-08  Marco Colombo  <m.colombo@ed.ac.uk>
+
+	* glines.c: Generalize the remaining label that was assuming that
+	the items to match are balls (Bug 172907).
+
 2005-04-04  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* glines.c: Further reworking of the layout code to avoid cutting
@@ -15,7 +27,7 @@
 	header.
 
 	* glines.c: Evil code to rearrange the main layout table when the
-	game size changes so that the preview doesn't get too big.
+	game size changes so that the preview doesn't get too big (Bug 172359).
 
 2005-03-31  Richard Hoelscher  <rah@rahga.com>
 

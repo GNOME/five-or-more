@@ -121,8 +121,8 @@
   <para> 
    <application>Five or More</application>, is the Gnome port of the once
    popular Windows game called <application>Color Lines</application>
-   The game's objective is to align as often as possible five balls or more
-   of the same color causing them to disappear, play as long as possible, and
+   The game's objective is to align as often as possible five or more objects
+   of the same color and shape causing them to disappear. Play as long as possible, and
    be #1 in the High Scores.
    
   </para>
@@ -151,15 +151,13 @@
   <sect1 id="usage">
     <title>Playing Five or More</title>
     <para>
-      <application>Five or More</application> is easy to play. At startup, you find
-      yourself with five balls randomly positioned on the board. Each turn,
-      you are allowed to move one ball. You can move it up or down, left
-      or right, or any combination of the previously mentioned directions,
-      any number of squares. After your move, the computer drops three balls,
-      again at random positions. You can preview the color of the balls to be
-      dropped in the upper right corner of the application's window.
-      If you manage to align five balls of the same color, they
-      disappear and you are given an extra move before more balls
+      Playing <application>Five or More</application> is easy. At startup, you find
+      yourself with five objects randomly positioned on the board. Each turn,
+      you are allowed to move one object. You can move it anywhere on the board as long as there is a clear path. Afterward, the computer drops more objects
+      at random positions (the exact number depends on the size of the game). You can preview the next objects to be
+      dropped in the upper right corner of the game's window.
+      If you manage to align five objects of the same shape and color, they
+      disappear and you are given an extra move before more objects
       drop.
     </para>
 
@@ -169,97 +167,77 @@
    <title>Basic usage</title>
    <para>
     Starting <application>Five or More</application> presents you with the
-    <interface>game board</interface>, which is nine squares on a
-    side.  A new game starts as you launch the application. What it 
-    looks like is shown in <xref linkend="mainwindow-fig" />.
+    <interface>game board</interface> and a new game starts. What it 
+    looks like is shown in <xref linkend="mainwindow-fig" />.</para>
 
     <!-- ==== Figure ==== -->
 	<figure id="mainwindow-fig">
-	  <title>Five or More Main Window</title>
 	  <screenshot>
-    <mediaobject>
-     <imageobject>
-      <imagedata fileref="figures/glines-startgame" format="PNG" srccredit="emese" />
-     </imageobject>
-     <textobject>
-      <phrase>Five or More Main Window</phrase>
-     </textobject>
-     <caption>
-      <para>Five or More Main Window</para>
-     </caption>
-    </mediaobject>
-</screenshot>
-</figure>
+	      <mediaobject>
+	      <imageobject>
+	      <imagedata fileref="figures/glines-startgame" format="PNG" srccredit="emese" />
+	      </imageobject>
+	      </mediaobject>
+	  </screenshot>
+	  <title>The main window when you start a game.</title>
+	</figure>
      <!-- ==== End of Figure ==== -->
-
-   </para>
 
    <para>
      As the game progresses, the board gets more and more crowded 
-     (unless you are really good...) and making balls disappear gets harder
-     and harder&hellip; The game is over, when the board is full. 
+     (unless you are really good...) and making objects disappear gets harder
+     and harder. The game is over, when the board is full. 
+   </para>
    
    <!-- ==== Figure ==== -->
    <figure id="gameover-fig">
-	  <title>Game Over!</title>
 	  <screenshot>
     <mediaobject>
      <imageobject>
       <imagedata fileref="figures/glines-gameover" format="PNG" srccredit="emese kovacs" />
      </imageobject>
-     <textobject>
-      <phrase>Game Over!</phrase>
-     </textobject>
-     <caption>
-      <para>Game Over!</para>
-     </caption>
     </mediaobject>
  </screenshot>
+	  <title>Game over!</title>
 </figure>  
    <!-- ==== End of Figure ==== -->
    
-   </para>
-  <para>
-  Instead of using the mouse you can use the keyboard to play <application>Five or More</application>. To use the keyboard, hit an arrow key and a cursor will appear near the center of the board. The arrow keys will move the cursor. When the cursor is over the ball you want to move, use the spacebar to select it. Then shift the cursor to the ball's destination and hit the space bar again to move the ball.</para><para>If you start using the mouse again, the cursor will disappear. The cursor will reappear if you use the arrow keys again.
-  </para>
-
   </sect2>
 
 
   <!-- ========= Rulez =========================== -->
 
     <sect2 id="rules"> 
-      <title>Basic Rules</title>
+      <title>Playing the Game</title>
       <para>
-        A game of <application>Five or More</application> begins with five
-        balls of random colors on the board.
+        A game of <application>Five or More</application> begins with some
+        random objects on the board.
       </para>
       <para>
-        To make a move, click on one of the balls. A ball is activated when it
+        To make a move, click on one of the objects. When an object is activated it
 	starts rotating (or doing something else depending on the theme, but
 	let us not anticipate&hellip;). You can then select its destination by
-	clicking an empty square. If the path to the destination is clear,
-	the activated ball rolls there. If the destination square is occupied
-	by another ball, no ball will be moved and the selection will be
-	transferred to the latter ball. If the path is not clear (your ball
-	cannot jump over already laid down balls!) the application prints a
+	clicking an empty square. If the path to the destination is clear
+	the activated item travels there. If the destination square is occupied
+	by another object nothing will be moved and the selection will be
+	transferred to the new object. If the path is not clear (you cannot
+	jump objects over obstacles!) the application prints a
 	warning in the status bar (bottom of the window) and the original
-	ball remains active.
+	object remains active.
       </para>
       <para>
-        As balls disappear, you get points, your score is shown in the upper
-	right corner of the application window. The points you score
-	depends on the number of balls you managed to align (see
-	<xref linkend="glines-table1" />).
+        As objects disappear, you get points. The points you score
+	depends on the number of objects you managed to align (see
+	<xref linkend="glines-table1" />). Your score is shown in the upper
+	right corner of the window.
       </para>
       
     <!-- ====  Table 1.  ==== -->
     <table id="glines-table1">
-     <title>Scoring in Five or More</title>
       <tgroup cols="2" align="center">
        <thead>
         <row>
-         <entry>Number of balls</entry>
+         <entry>Number of objects</entry>
          <entry>Score given</entry>
         </row>
        </thead>
@@ -306,7 +284,15 @@
        </row>
       </tbody>
      </tgroup> 
+     <title>Scoring in Five or More</title>
     </table>
+
+  <sect3>
+  <title>Using the Keyboard</title>
+  <para>
+  Instead of using the mouse you can use the keyboard to play <application>Five or More</application>. To use the keyboard, hit an arrow key and a cursor will appear near the center of the board. The arrow keys will move the cursor. When the cursor is over the object you want to move, use the spacebar to select it. Then shift the cursor to the object's destination and hit the space bar again to move the object.</para><para>If you start using the mouse again, the cursor will disappear. The cursor will reappear if you use the arrow keys again.
+  </para>
+  </sect3>
 
 
    <!-- ==== End of Table ==== -->
@@ -315,145 +301,89 @@
     </sect2>
 
 
-  <!-- ========= Menus =========================== -->
-  <sect2 id="menubar">
-   <title>Menus</title>
-   <para>
-    The menu bar, located at the top of the <interface>game 
-    board</interface>, contains the following menus:
-   </para>
-
-   <variablelist>
-    <varlistentry>
-     <term><guimenu>Game</guimenu></term>
-     <listitem>
-      <para>
-       This menu contains three items:
-      <itemizedlist>	
-	<listitem>
-	  <para>
-            <menuchoice> 
-	       <shortcut><keysym>Ctrl-N</keysym></shortcut>
-               <guimenuitem>New Game</guimenuitem>clear the board and
-	       start a new game. The current game is abandoned.
-	    </menuchoice>
-           </para>
-         </listitem>     
-       
-	<listitem>
-	  <para>
-            <menuchoice>
-               <guimenuitem>Scores...</guimenuitem>show the high score table.
-            </menuchoice>
-        </para>
-       </listitem>
-
-       	<listitem>
-	<para>
-          <menuchoice>
-            <shortcut><keysym>Ctrl-Q</keysym></shortcut>
-            <guimenuitem>Exit</guimenuitem>abandon the current game
-            and close the program.
-          </menuchoice>
-        </para>
-       </listitem>
-     </itemizedlist>
-      </para>
-     </listitem>
-    </varlistentry>
-
-	<varlistentry>
-	  <term><guimenu>Settings</guimenu></term>
-	  <listitem>
-	    <para>
-              The <guimenu>Settings</guimenu> menu contains only one item:
-              <itemizedlist>
-		<listitem>
-		  <para>
-                   <guimenuitem>Preferences</guimenuitem>
-                    which brings up the preferences dialog box.
-                  </para>
-		</listitem>
-	      </itemizedlist>
-            </para>
-	  </listitem>
-	</varlistentry>
-
-    <varlistentry>
-     <term><guimenu>Help</guimenu></term>
-     <listitem>
-      <para>
-       This menu contains:
-       <itemizedlist>
-        <listitem>
-         <para>
-          <menuchoice>
-            <shortcut><keysym>F1</keysym></shortcut>
-          <guimenuitem>Contents</guimenuitem>&mdash;
-          shows this manual.
-          </menuchoice>
-         </para>
-        </listitem>
-        <listitem>
-         <para>
-          <guimenuitem>About</guimenuitem>&mdash; shows
-          basic information about
-          <application>Five or More</application>, such as
-          the author's name and the application version number.
-         </para>
-        </listitem>
-       </itemizedlist>
-
-      </para>
-     </listitem>
-    </varlistentry>
-   </variablelist>
-  </sect2>
-  <sect2 id="settings">
-  <title>How to set preferences</title>
+  </sect1>
+  <sect1 id="settings">
+  <title>Customizing the Game</title>
   <para>
    You can configure <application>Five or More</application> by clicking on 
    <guimenuitem>Preferences</guimenuitem> in the applications 
    <guimenu>Settings</guimenu> menu. The following 
-   <interface>dialogbox</interface> will show up:
+   <interface>dialog</interface> will appear:
   </para>
  <!-- ==== Figure ==== -->
+   <figure>
     <mediaobject id="preferences-dialogbox">
      <imageobject>
       <imagedata fileref="figures/preferences" format="PNG" srccredit="emese" />
      </imageobject>
-     <textobject>
-      <phrase>Preferences</phrase>
-     </textobject>
-     <caption>
-      <para>Preferences</para>
-     </caption>
     </mediaobject>
-    
+     <title>
+      Preferences
+     </title>
+  </figure>    
     <!-- ==== End of Figure ==== -->
 
   <para>
-   You can select different ball styles and background colors in the
-   Themes section. If you find it difficult distinguishing the colours, 
+   You can select different object styles and background colors in the
+   <guimenu>Themes</guimenu> section. If you find it difficult distinguishing the colours, 
    try the shapes theme.
   </para>
   <para>
-   You can speed up the movement of the balls by checking the Use fast
-   moves box in the General preferences section.
+   The <guimenu>Board Size</guimenu> section lets you select the size of the board. Each size has a slightly different balance: larger sizes give you more space to move, but more objects arrive each turn. The parameters for each size are given in <xref linkend="table-sizes" />).
+  </para>
+    <table id="table-sizes">
+      <tgroup cols="5" align="center">
+       <thead>
+        <row>
+         <entry align="left">Size</entry>
+         <entry>Width</entry>
+         <entry>Height</entry>
+	 <entry>Number of Types</entry>
+         <entry>Objects per Turn</entry>
+        </row>
+       </thead>
+       <tbody>
+       <row>
+        <entry align="left">Small</entry>
+        <entry>7</entry>
+        <entry>7</entry>
+        <entry>5</entry>
+        <entry>3</entry>
+       </row>
+       <row>
+        <entry align="left">Medium</entry>
+        <entry>9</entry>
+        <entry>9</entry>
+        <entry>7</entry>
+        <entry>3</entry>
+       </row>
+       <row>
+        <entry align="left">Large</entry>
+        <entry>20</entry>
+        <entry>15</entry>
+        <entry>7</entry>
+        <entry>7</entry>
+       </row>
+      </tbody>
+     </tgroup> 
+     <title>Scoring in Five or More</title>
+    </table>
+
+  <para>
+   You can speed up the movement of the objects by checking the Use fast
+   moves box in the <guimenu>General</guimenu> preferences section.
   </para>
   <para>
-   Any changes you make are instantly applied. Furthermore your
-   preferences are remembered for the next time you run
+   Any changes you make are instantly applied and remembered for the next time you run
    <application>Five or More</application>.
   </para>
-</sect2>
- </sect1>
+  </sect1>
   <sect1 id="themes">
     <title>How to create new themes</title> 
     <para>Each theme consists of a single PNG image file. This image
     consists of an array of seven rows, corresponding to the different
-    ball colors, and four columns each of which is a frame in the
-    animation of the ball. The actual size of the image is irrelevant,
+    object colors/shapes, and four columns, each of which is a frame in the
+    animation of the object. The actual size of the image is irrelevant,
     it will be rescaled, but the sub-images must form a four by seven
     grid to get the correct effect. When using SVG remember that the
     image size is the page size, if your grid does not fill the page
