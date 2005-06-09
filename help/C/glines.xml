@@ -394,14 +394,18 @@
  <!-- ============= Bugs ================================== -->
  <!-- This section should describe known bugs and limitations of
       the program if there are any - please be frank and list all
-      problems you know of -->
+      problems you know of 
+
+      Better to omit this section than give false impression of perfection
+      Add back in if there is something worth saying
+
  <sect1 id="bugs">
   <title>Known Bugs and Limitations</title>
   <para>
    This application has no known bugs.
   </para>
  </sect1>
-
+-->
 
 <!-- ============= Authors ================================ -->
 
