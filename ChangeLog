@@ -1,3 +1,7 @@
+2005-05-09  Alan Horkan <horkana tcd ie>
+
+	* help/C/glines.xml: Removed Known Bugs sections where not needed.
+
 2005-04-18  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* glines.c: 	
