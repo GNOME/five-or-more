@@ -86,7 +86,7 @@ GRand *rgen;
 GConfClient *conf_client = NULL;
 
 GtkWidget *draw_area;
-static GtkWidget *app, *appbar, *pref_dialog, *gridframe;
+GtkWidget *app, *statusbar, *pref_dialog, *gridframe;
 GtkWidget *preview_widgets[MAXNPIECES];
 GtkWidget *menubar;
 GtkWidget *scoreitem;
@@ -150,6 +150,17 @@ static struct {
 };
 
 gchar *warning_message = NULL;
+
+static void
+set_statusbar_message (gchar *message)
+{
+	guint context_id;
+	context_id = gtk_statusbar_get_context_id (GTK_STATUSBAR (statusbar),
+					       "message");
+	gtk_statusbar_pop (GTK_STATUSBAR (statusbar), context_id);
+	gtk_statusbar_push (GTK_STATUSBAR (statusbar), context_id,
+			    message);
+}
 
 static void
 show_image_warning (gchar *message)
@@ -392,9 +403,8 @@ static void
 start_game (void)
 {
 	char string[20];
-
-	gnome_appbar_set_status (GNOME_APPBAR (appbar),
-				 _("Match five objects of the same type in a row to score!"));
+ 
+	set_statusbar_message (_("Match five objects of the same type in a row to score!"));
 	refresh_screen ();
 	active = -1;
 	target = -1;
@@ -508,7 +518,7 @@ game_over (void)
 {
 	int pos;
 
-	gnome_appbar_set_status (GNOME_APPBAR (appbar), _("Game Over!"));
+	set_statusbar_message (_("Game Over!"));
 	pos = gnome_score_log (score, scorenames[game_size - SMALL], TRUE);
 	show_scores (pos, TRUE);
 	update_score_state ();
@@ -647,7 +657,7 @@ static void cell_clicked (GtkWidget *widget, int fx, int fy)
 {
 	int x, y;
 
-        gnome_appbar_set_status(GNOME_APPBAR(appbar), "");
+	set_statusbar_message ("");
 	if(field[fx + fy*hfieldsize].color == 0)
 	{
 		/* Clicked on an empty field */
@@ -668,7 +678,7 @@ static void cell_clicked (GtkWidget *widget, int fx, int fy)
 			else
 			{
 				/* Can't move there! */
-				gnome_appbar_set_status(GNOME_APPBAR(appbar), _("Can't move there!"));
+				set_statusbar_message (_("You can't move there!"));
 				reset_pathsearch();
 				target = -1;
 			}
@@ -1730,9 +1740,8 @@ const char *ui_description =
 "  </menubar>"
 "</ui>";
 
-static void create_menus ()
+static void create_menus (GtkUIManager *ui_manager)
 {
-	GtkUIManager *ui_manager;
 	GtkAccelGroup *accel_group;
 	GtkActionGroup *action_group;
 
@@ -1745,7 +1754,6 @@ static void create_menus ()
 	leavefullscreen_action = gtk_action_group_get_action (action_group, "LeaveFullscreen");
 	set_fullscreen_actions (FALSE);
 	
-	ui_manager = gtk_ui_manager_new ();
 	gtk_ui_manager_insert_action_group (ui_manager, action_group, 0);
 	gtk_ui_manager_add_ui_from_string (ui_manager, ui_description, -1, NULL);
 	accel_group = gtk_ui_manager_get_accel_group (ui_manager);
@@ -1863,6 +1871,7 @@ main (int argc, char *argv [])
 	GtkWidget *label;
 	GtkWidget *vbox, *hbox;
 	GtkWidget *preview_hbox;
+	GtkUIManager *ui_manager;
 	GnomeClient *client;
 	int i;
 	
@@ -1906,18 +1915,21 @@ main (int argc, char *argv [])
 	g_signal_connect (G_OBJECT (app), "window_state_event",
 			  G_CALLBACK (window_state_callback), NULL);
 
-	appbar = gnome_appbar_new (FALSE, TRUE, GNOME_PREFERENCES_USER);
-	gnome_app_set_statusbar (GNOME_APP (app), GTK_WIDGET(appbar));  
+	statusbar = gtk_statusbar_new ();
+	ui_manager = gtk_ui_manager_new ();
+	
+	games_stock_prepare_for_statusbar_tooltips (ui_manager, statusbar);
+	gtk_statusbar_set_has_resize_grip (GTK_STATUSBAR (statusbar), FALSE);
 
 	vbox = gtk_vbox_new (FALSE, 0);
 	gnome_app_set_contents (GNOME_APP (app), vbox);
 
-	create_menus ();
+	create_menus (ui_manager);
 	gtk_box_pack_start (GTK_BOX (vbox), menubar, FALSE, FALSE, 0);
 
  	table = gtk_table_new (2, 1, TRUE);
 	gtk_box_pack_start_defaults (GTK_BOX (vbox), table);
-
+	gtk_box_pack_start (GTK_BOX (vbox), statusbar, FALSE, FALSE, 0);
 	hbox = gtk_hbox_new(FALSE, 0);
 
 	gtk_table_attach_defaults (GTK_TABLE (table), hbox, 0, 1, 0, 1);
