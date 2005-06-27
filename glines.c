@@ -1859,6 +1859,7 @@ init_config (int argc, char ** argv)
 int
 main (int argc, char *argv [])
 {
+	char *label_text;
 	GtkWidget *label;
 	GtkWidget *vbox, *hbox;
 	GtkWidget *preview_hbox;
@@ -1921,7 +1922,9 @@ main (int argc, char *argv [])
 
 	gtk_table_attach_defaults (GTK_TABLE (table), hbox, 0, 1, 0, 1);
 	top_pane = hbox;
-	label = gtk_label_new (g_strdup_printf ("<span weight=\"bold\">%s</span>", _("Next:")));
+	label_text = g_strdup_printf ("<span weight=\"bold\">%s</span>", _("Next:"));
+	label = gtk_label_new (label_text);
+	g_free (label_text);
 	gtk_label_set_use_markup (GTK_LABEL (label), TRUE);
 	gtk_box_pack_start (GTK_BOX (hbox), label, FALSE, FALSE, 5);
 
@@ -1949,7 +1952,9 @@ main (int argc, char *argv [])
 
 	gtk_box_pack_end (GTK_BOX (hbox), scorelabel, FALSE, FALSE, 5);
 
-	label = gtk_label_new (g_strdup_printf ("<span weight=\"bold\">%s</span>", _("Score:")));
+	label_text = g_strdup_printf ("<span weight=\"bold\">%s</span>", _("Score:"));
+	label = gtk_label_new (label_text);
+	g_free (label_text);
 	gtk_label_set_use_markup (GTK_LABEL (label), TRUE);
 	gtk_box_pack_end (GTK_BOX (hbox), label, FALSE, FALSE, 5);
 
