@@ -473,7 +473,7 @@ show_scores (gint pos, gboolean new_game)
 						  _("GNOME Five or More"));
 
 		games_scores_dialog_set_style (GAMES_SCORES_DIALOG (dialog),
-					       GAMES_SCORES_STYLE_PLAIN);
+					       GAMES_SCORES_STYLE_PLAIN_DESCENDING);
 
 		for (i = 0; i < (MAX_SIZE - SMALL); i++) {
 			games_scores_dialog_add_category (GAMES_SCORES_DIALOG (dialog),

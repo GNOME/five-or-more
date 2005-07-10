@@ -1,3 +1,7 @@
+2005-07-10  Richard Hoelscher  <rah@rahga.com>
+
+	* glines.c (show_scores): Scores dialog style as descending (#309958)
+
 2005-06-24  Richard Hoelscher  <rah@rahga.com>
 
 	* glines.c (set_statusbar_message): Use GtkStatusbar, not GnomeAppBar.
