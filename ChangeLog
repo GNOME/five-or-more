@@ -1,3 +1,7 @@
+2005-07-11  Richard Hoelscher  <rah@rahga.com>
+
+	* glines.c: Make ui_description readonly.
+
 2005-07-10  Richard Hoelscher  <rah@rahga.com>
 
 	* glines.c (show_scores): Scores dialog style as descending (#309958)
