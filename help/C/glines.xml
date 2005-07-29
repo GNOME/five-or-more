@@ -3,7 +3,7 @@
              "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd"
 [
   <!ENTITY legal SYSTEM "legal.xml">
-  <!ENTITY appversion "2.10">
+  <!ENTITY appversion "2.12">
   <!ENTITY manrevision "2.8">
   <!ENTITY date "September 2004">
   <!ENTITY app "<application>Five or More</application>">
