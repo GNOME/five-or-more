@@ -28,9 +28,11 @@
 
 #include <math.h>
 #include <gnome.h>
+#include <glib/gi18n.h>
 #include <gdk-pixbuf/gdk-pixbuf.h>
 #include <libgnomeui/gnome-window-icon.h>
 #include <gconf/gconf-client.h>
+#include <games-scores.h>
 #include <games-scores-dialog.h>
 #include <games-frame.h>
 #include <games-files.h>
@@ -71,8 +73,22 @@ gint field_sizes[MAX_SIZE][4] = {{-1, -1, -1, -1}, /* This is a dummy entry. */
 
 const
 gchar *scorenames[]  = {N_("Small"),
-                        N_("Medium"),
+                        N_("glines|Medium"),
                         N_("Large")};
+
+static const GamesScoresCategory scorecats[] = {{"Small", N_("Small")},
+                                                {"Medium", N_("glines|Medium")},
+                                                {"Large", N_("Large")},
+                                                GAMES_SCORES_LAST_CATEGORY};
+
+static const GamesScoresDescription scoredesc = {scorecats,
+                                                 "Small",
+                                                 "glines",
+                                                 GAMES_SCORES_STYLE_PLAIN_DESCENDING};
+
+GamesScores *highscores;
+
+
 
 gint hfieldsize;
 gint vfieldsize;
@@ -118,7 +134,7 @@ GamesFileList * theme_file_list = NULL;
 int active = -1;
 int target = -1;
 int inmove = 0;
-int score = 0;
+guint score = 0;
 int cursor_x = MAXFIELDSIZE / 2;
 int cursor_y = MAXFIELDSIZE / 2;
 gboolean show_cursor = FALSE;
@@ -465,27 +481,14 @@ game_new_callback (void)
 static void
 show_scores (gint pos, gboolean new_game)
 {
-	int i;
 	static GtkWidget *dialog;
 
 	if (dialog == NULL) {
-		dialog = games_scores_dialog_new ("glines", 
+		dialog = games_scores_dialog_new (highscores, 
 						  _("GNOME Five or More"));
-
-		games_scores_dialog_set_style (GAMES_SCORES_DIALOG (dialog),
-					       GAMES_SCORES_STYLE_PLAIN_DESCENDING);
-
-		for (i = 0; i < (MAX_SIZE - SMALL); i++) {
-			games_scores_dialog_add_category (GAMES_SCORES_DIALOG (dialog),
-							  scorenames[i],
-							  _(scorenames[i]));
-		}
 		games_scores_dialog_set_category_description (GAMES_SCORES_DIALOG (dialog),
 							      _("Board Size:"));	
 	}
-
-	games_scores_dialog_set_category (GAMES_SCORES_DIALOG (dialog),
-					  scorenames[game_size - SMALL]);
 
 	if (pos > 0) {
 		games_scores_dialog_set_hilight (GAMES_SCORES_DIALOG (dialog),
@@ -500,17 +503,10 @@ show_scores (gint pos, gboolean new_game)
 static void
 update_score_state ()
 {
-        gchar **names = NULL;
-        gfloat *scores = NULL;
-        time_t *scoretimes = NULL;
-	gint top;
+	GList *top;
 
-	top = gnome_score_get_notable ("glines", NULL, &names,
-				       &scores, &scoretimes);
-	gtk_widget_set_sensitive (scoreitem, top > 0);
-	g_strfreev (names);
-	g_free (scores);
-	g_free (scoretimes);
+	top = games_scores_get (highscores);
+	gtk_widget_set_sensitive (scoreitem, top != NULL);
 }
 
 static void
@@ -519,7 +515,7 @@ game_over (void)
 	int pos;
 
 	set_statusbar_message (_("Game Over!"));
-	pos = gnome_score_log (score, scorenames[game_size - SMALL], TRUE);
+	pos = games_scores_add_score (highscores, (GamesScoreValue)score);
 	show_scores (pos, TRUE);
 	update_score_state ();
 	return;
@@ -1289,6 +1285,7 @@ set_sizes (gint size)
 	ncolors    = field_sizes[size][2];
 	npieces    = field_sizes[size][3];
 	game_size  = size;
+	games_scores_set_category (highscores, scorecats[size - 1].key);
 
 	gconf_client_set_int (conf_client, KEY_SIZE, size, NULL);
 
@@ -1875,8 +1872,6 @@ main (int argc, char *argv [])
 	GnomeClient *client;
 	int i;
 	
-	gnome_score_init ("glines");
-
 	rgen = g_rand_new ();
 	
 	bindtextdomain (GETTEXT_PACKAGE, GNOMELOCALEDIR);
@@ -1888,6 +1883,8 @@ main (int argc, char *argv [])
 			    argc, argv,
 			    GNOME_PARAM_POPT_TABLE, NULL,
 			    GNOME_PARAM_APP_DATADIR, DATADIR, NULL);
+
+	highscores = games_scores_new (&scoredesc);
 
         init_config (argc, argv);
 	games_stock_init ();

@@ -1,3 +1,11 @@
+2005-09-07  Callum McKenzie  <callum@spooky-possum.org>
+
+	* glines.c: Update to use the new high scores API.
+
+2005-08-10  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* glines.c: Added context tags as per the request in bug #312802.
+
 2005-08-06  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* help/C/glines.xml: Remove the mention of the
