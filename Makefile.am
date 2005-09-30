@@ -21,8 +21,8 @@ glines_SOURCES = 	\
 	glines.c glines.h
 
 glines_LDADD =		\
-	$(GNOME_GAMES_LIBS) \
 	../libgames-support/libgames-support.la \
+	$(GNOME_GAMES_LIBS) \
 	$(INTLLIBS)
 
 pixmap_DATA = balls.svg shapes.svg
