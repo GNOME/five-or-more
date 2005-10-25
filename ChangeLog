@@ -1,3 +1,8 @@
+2005-10-25  Callum McKenzie  <callum@spooky-possum.org>
+
+	* glines.c (button_press_event): Fix bug #319364 by clamping the x
+	and y box coordinates to the grid size.
+
 2005-09-07  Callum McKenzie  <callum@spooky-possum.org>
 
 	* glines.c: Update to use the new high scores API.

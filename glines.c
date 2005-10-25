@@ -731,6 +731,11 @@ button_press_event (GtkWidget *widget, GdkEvent *event)
 	gtk_widget_get_pointer (widget, &x, &y);
 	fx = x / boxsize;
 	fy = y / boxsize;
+	
+	/* If we click on the outer border pixels, the previous calculation
+	 * will be wrong and we must correct. */
+	fx = CLAMP (fx, 0, hfieldsize - 1);
+	fy = CLAMP (fy, 0, vfieldsize - 1);
 
 	cursor_x = fx;
 	cursor_y = fy;
