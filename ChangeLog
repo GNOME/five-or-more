@@ -1,3 +1,8 @@
+2006-01-05  Callum McKenzie  <callum@spooky-possum.org>
+
+	* glines.c (main): Doh! Forgot to add the setgid_io_init call to
+	glines. (Bug #325764.)
+
 2005-10-25  Callum McKenzie  <callum@spooky-possum.org>
 
 	* glines.c (button_press_event): Fix bug #319364 by clamping the x

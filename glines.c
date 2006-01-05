@@ -1876,7 +1876,9 @@ main (int argc, char *argv [])
 	GtkUIManager *ui_manager;
 	GnomeClient *client;
 	int i;
-	
+
+	setgid_io_init ();
+
 	rgen = g_rand_new ();
 	
 	bindtextdomain (GETTEXT_PACKAGE, GNOMELOCALEDIR);
