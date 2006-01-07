@@ -513,9 +513,11 @@ static void
 game_over (void)
 {
 	int pos;
+	GamesScoreValue hiscore;
 
 	set_statusbar_message (_("Game Over!"));
-	pos = games_scores_add_score (highscores, (GamesScoreValue)score);
+	hiscore.plain = score;
+	pos = games_scores_add_score (highscores, hiscore);
 	show_scores (pos, TRUE);
 	update_score_state ();
 	return;

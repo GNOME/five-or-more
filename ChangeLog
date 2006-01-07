@@ -1,3 +1,8 @@
+2006-01-08  Callum McKenzie  <callum@spooky-possum.org>
+
+	* glines.c: Patch to allow compilation with the Forte C
+	compiler. (Damien Carbery, Bug #326024.)
+
 2006-01-05  Callum McKenzie  <callum@spooky-possum.org>
 
 	* glines.c (main): Doh! Forgot to add the setgid_io_init call to
