@@ -2011,5 +2011,7 @@ main (int argc, char *argv [])
 
 	g_object_unref (conf_client);
 
+	gnome_accelerators_sync();
+
 	return (0);
 }
