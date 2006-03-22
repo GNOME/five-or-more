@@ -414,21 +414,10 @@
   <para>
    <application>Five or More</application> was written by Róbert
    Szókovács (<email>szo@appaloosacorp.hu</email>) and Szabolcs Bán
-   (<email>shooby@gnome.hu</email>). Please send all comments,
-   suggestions, and bug reports to the <ulink
-   url="http://bugs.gnome.org" type="http">GNOME bug tracking
-   database</ulink>. You can also use the
-   <application>Bug Report Tool</application>
-   (<command>bug-buddy</command>) for submitting bug reports.
-  </para>
-
-  <para> This manual was written by Emese Kovács
-   (<email>emese@gnome.hu</email>). Please send all comments and suggestions
-   regarding this manual to the <ulink url="http://www.gnome.org/gdp"
-   type="http">GNOME Documentation Project</ulink> by sending an email to
-   <email>docs@gnome.org</email>. You can also add your comments online by
-   using the <ulink url="http://www.gnome.org/gdp/doctable/"
-   type="http">GNOME Documentation Status Table</ulink>.
+   (<email>shooby@gnome.hu</email>). This manual was written by Emese Kovács
+   (<email>emese@gnome.hu</email>). 
+   For information on how to make comments, suggestions and to report
+   bugs please see the <ulink url="ghelp:gnome-feedback" type="help">feedback document</ulink>.
   </para>
 
   <!-- For translations: uncomment this:
