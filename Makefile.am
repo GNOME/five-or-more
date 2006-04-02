@@ -6,7 +6,7 @@ schema_DATA = $(schema_in_files:.schemas.in=.schemas)
 @INTLTOOL_SCHEMAS_RULE@
 
 pixmapdir = $(datadir)/pixmaps/glines
-icondir = $(datadir)/pixmaps
+icondir = $(datadir)/icons/hicolor/48x48/apps/
 Gamesdir = $(datadir)/applications
 
 INCLUDES = -I.. -I$(srcdir)/..		\
@@ -34,7 +34,7 @@ EXTRA_DIST = 			\
 	$(schema_in_files)
 
 
-icon_DATA = glines.png
+icon_DATA = gnome-five-or-more.png
 
 Games_in_files = glines.desktop.in
 Games_DATA = $(Games_in_files:.desktop.in=.desktop)

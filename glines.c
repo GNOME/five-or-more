@@ -30,7 +30,6 @@
 #include <gnome.h>
 #include <glib/gi18n.h>
 #include <gdk-pixbuf/gdk-pixbuf.h>
-#include <libgnomeui/gnome-window-icon.h>
 #include <gconf/gconf-client.h>
 #include <games-scores.h>
 #include <games-scores-dialog.h>
@@ -1222,6 +1221,7 @@ game_about_callback (GtkAction *action, gpointer *data)
 			  "copyright", "Copyright \xc2\xa9 1997-2004 Free Software Foundation, Inc.",
 			  "authors", authors,
 			  "translator_credits", _("translator-credits"),
+			  "logo-icon-name", "gnome-five-or-more",
 			  NULL);
    return TRUE;
 }       
@@ -1897,7 +1897,7 @@ main (int argc, char *argv [])
 
         init_config (argc, argv);
 	games_stock_init ();
-	gnome_window_icon_set_default_from_file (GNOME_ICONDIR"/glines.png");
+	gtk_window_set_default_icon_name ("gnome-five-or-more");
 	client = gnome_master_client ();
 
 	g_signal_connect (G_OBJECT (client), "save_yourself",

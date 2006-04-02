@@ -1,3 +1,10 @@
+2006-04-02  Callum McKenzie  <callum@spooky-possum.org>
+
+	* glines.c: 
+	* glines.desktop.in:
+	* Makefile.am: Update the icon handling to use icon themes. Rename
+	the icon to gnome-five-or-more.png.
+
 2006-03-22  Callum McKenzie  <callum@spooky-possum.org>
 
 	* help/C/glines.xml: Remove the doctable link, it was broken
