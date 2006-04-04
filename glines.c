@@ -1877,6 +1877,7 @@ main (int argc, char *argv [])
 	GtkWidget *preview_hbox;
 	GtkUIManager *ui_manager;
 	GnomeClient *client;
+	GnomeProgram *program;
 	int i;
 
 	setgid_io_init ();
@@ -1887,11 +1888,11 @@ main (int argc, char *argv [])
 	bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
 	textdomain (GETTEXT_PACKAGE);
 
-	gnome_program_init ("glines", VERSION,
-			    LIBGNOMEUI_MODULE,
-			    argc, argv,
-			    GNOME_PARAM_POPT_TABLE, NULL,
-			    GNOME_PARAM_APP_DATADIR, DATADIR, NULL);
+	program = gnome_program_init ("glines", VERSION,
+				      LIBGNOMEUI_MODULE,
+				      argc, argv,
+				      GNOME_PARAM_POPT_TABLE, NULL,
+				      GNOME_PARAM_APP_DATADIR, DATADIR, NULL);
 
 	highscores = games_scores_new (&scoredesc);
 
@@ -2012,6 +2013,8 @@ main (int argc, char *argv [])
 	g_object_unref (conf_client);
 
 	gnome_accelerators_sync();
+
+	g_object_unref (program);
 
 	return (0);
 }
