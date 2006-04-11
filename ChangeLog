@@ -1,3 +1,7 @@
+2006-04-06  Thomas Andersen  <phomes@gmail.com>
+
+	* glines.c: Update About dialog
+
 2006-04-04  Callum McKenzie  <callum@spooky-possum.org>
 
 	* glines.c: Patch from Przemys©aw Grzegorczyk to unref

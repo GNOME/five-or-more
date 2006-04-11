@@ -1214,14 +1214,21 @@ game_about_callback (GtkAction *action, gpointer *data)
 			     "Szabolcs B\xc3\xa1n <shooby@gnome.hu>",
 			     NULL};
 
+   const gchar *documenters[] = {"Emese Kovács",
+				 NULL};
+
    gtk_show_about_dialog (GTK_WINDOW(app),
 			  "name", _("Five or More"),
 			  "version", VERSION,
 			  "comments", _("GNOME port of the once-popular Color Lines game"),
-			  "copyright", "Copyright \xc2\xa9 1997-2004 Free Software Foundation, Inc.",
+			  "copyright", "Copyright \xc2\xa9 1997-2006 Free Software Foundation, Inc.",
+			  "license", "GPL 2+",
 			  "authors", authors,
+			  "documenters", documenters,
 			  "translator_credits", _("translator-credits"),
 			  "logo-icon-name", "gnome-five-or-more",
+			  "website", "http://www.gnome.org/projects/gnome-games/",
+			  "wrap-license", TRUE,
 			  NULL);
    return TRUE;
 }       
