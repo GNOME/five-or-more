@@ -1223,7 +1223,7 @@ game_about_callback (GtkAction * action, gpointer * data)
 			 "comments",
 			 _("GNOME port of the once-popular Color Lines game"),
 			 "copyright",
-			 "Copyright \xc2\xa9 1997-2006 Free Software Foundation, Inc.",
+			 "Copyright \xc2\xa9 1997-2007 Free Software Foundation, Inc.",
 			 "license", license, "authors", authors,
 			 "documenters", documenters, "translator_credits",
 			 _("translator-credits"), "logo-icon-name",
