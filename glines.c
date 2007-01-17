@@ -1505,7 +1505,7 @@ game_props_callback (void)
     gtk_container_add (GTK_CONTAINER (fv), button);
 
 
-    frame = games_frame_new (_("General"));
+    frame = games_frame_new (_("glines|General"));
     fv = gtk_vbox_new (FALSE, FALSE);
     gtk_box_set_spacing (GTK_BOX (fv), 6);
     gtk_container_add (GTK_CONTAINER (frame), fv);
