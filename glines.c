@@ -72,14 +72,14 @@ gint field_sizes[MAX_SIZE][4] = { {-1, -1, -1, -1},	/* This is a dummy entry. */
 };				/* LARGE */
 
 const
-gchar *scorenames[] = { N_("Small"),
+gchar *scorenames[] = { N_("glines|Small"),
   N_("glines|Medium"),
-  N_("Large")
+  N_("glines|Large")
 };
 
-static const GamesScoresCategory scorecats[] = { {"Small", N_("Small")},
+static const GamesScoresCategory scorecats[] = { {"Small", N_("glines|Small")},
 {"Medium", N_("glines|Medium")},
-{"Large", N_("Large")},
+{"Large", N_("glines|Large")},
 GAMES_SCORES_LAST_CATEGORY
 };
 
@@ -1479,7 +1479,7 @@ game_props_callback (void)
     gtk_container_add (GTK_CONTAINER (frame), fv);
     gtk_box_pack_start (GTK_BOX (vbox), frame, FALSE, FALSE, 0);
 
-    button = gtk_radio_button_new_with_mnemonic (NULL, _("_Small"));
+    button = gtk_radio_button_new_with_mnemonic (NULL, _("glines|_Small"));
     if (game_size == SMALL)
       gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button), TRUE);
     g_signal_connect (G_OBJECT (button), "clicked",
@@ -1488,7 +1488,7 @@ game_props_callback (void)
     gtk_container_add (GTK_CONTAINER (fv), button);
 
     button = gtk_radio_button_new_with_mnemonic
-      (gtk_radio_button_get_group (GTK_RADIO_BUTTON (button)), _("_Medium"));
+      (gtk_radio_button_get_group (GTK_RADIO_BUTTON (button)), _("glines|_Medium"));
 
     if (game_size == MEDIUM)
       gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button), TRUE);
@@ -1497,7 +1497,7 @@ game_props_callback (void)
     gtk_container_add (GTK_CONTAINER (fv), button);
 
     button = gtk_radio_button_new_with_mnemonic
-      (gtk_radio_button_get_group (GTK_RADIO_BUTTON (button)), _("_Large"));
+      (gtk_radio_button_get_group (GTK_RADIO_BUTTON (button)), _("glines|_Large"));
     if (game_size == LARGE)
       gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button), TRUE);
     g_signal_connect (G_OBJECT (button), "clicked",
