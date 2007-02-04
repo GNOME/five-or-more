@@ -29,7 +29,7 @@
 <!-- please do not change the id; for translations, change lang to -->
 <!-- appropriate code -->
  <articleinfo>
-  <title>&app; Manual V&manrevision;</title>
+  <title>&app; Manual</title>
   <copyright>
    <year>2000-2002</year>
    <holder>Emese Kovács</holder>
@@ -46,7 +46,7 @@
 <!-- An address can be added to the publisher information.  If a role is 
      not specified, the publisher/author is the same for all versions of the 
      document.  -->
-    <publisher> 
+    <publisher role="maintainer"> 
       <publishername> GNOME Documentation Project </publishername> 
     </publisher> 
 
@@ -172,6 +172,7 @@
 
     <!-- ==== Figure ==== -->
 	<figure id="mainwindow-fig">
+	  <title>The main window when you start a game.</title>
 	  <screenshot>
 	      <mediaobject>
 	      <imageobject>
@@ -179,7 +180,6 @@
 	      </imageobject>
 	      </mediaobject>
 	  </screenshot>
-	  <title>The main window when you start a game.</title>
 	</figure>
      <!-- ==== End of Figure ==== -->
 
@@ -191,6 +191,7 @@
    
    <!-- ==== Figure ==== -->
    <figure id="gameover-fig">
+	  <title>Game over!</title>
 	  <screenshot>
     <mediaobject>
      <imageobject>
@@ -198,7 +199,6 @@
      </imageobject>
     </mediaobject>
  </screenshot>
-	  <title>Game over!</title>
 </figure>  
    <!-- ==== End of Figure ==== -->
    
@@ -234,6 +234,7 @@
       
     <!-- ====  Table 1.  ==== -->
     <table id="glines-table1">
+     <title>Scoring in Five or More</title>
       <tgroup cols="2" align="center">
        <thead>
         <row>
@@ -284,7 +285,6 @@
        </row>
       </tbody>
      </tgroup> 
-     <title>Scoring in Five or More</title>
     </table>
 
   <sect3>
@@ -312,14 +312,12 @@
   </para>
  <!-- ==== Figure ==== -->
    <figure>
+     <title>Preferences</title>   
     <mediaobject id="preferences-dialogbox">
      <imageobject>
       <imagedata fileref="figures/preferences" format="PNG" srccredit="emese" />
      </imageobject>
     </mediaobject>
-     <title>
-      Preferences
-     </title>
   </figure>    
     <!-- ==== End of Figure ==== -->
 
@@ -332,6 +330,7 @@
    The <guimenu>Board Size</guimenu> section lets you select the size of the board. Each size has a slightly different balance: larger sizes give you more space to move, but more objects arrive each turn. The parameters for each size are given in <xref linkend="table-sizes" />).
   </para>
     <table id="table-sizes">
+     <title>Scoring in Five or More</title>
       <tgroup cols="5" align="center">
        <thead>
         <row>
@@ -366,7 +365,6 @@
        </row>
       </tbody>
      </tgroup> 
-     <title>Scoring in Five or More</title>
     </table>
 
   <para>
