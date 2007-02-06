@@ -1393,14 +1393,16 @@ fullscreen_callback (GtkAction * action)
     gtk_window_unfullscreen (GTK_WINDOW (app));
 }
 
-static void
+static gboolean
 window_state_callback (GtkWidget * widget, GdkEventWindowState * event)
 {
   if (!(event->changed_mask & GDK_WINDOW_STATE_FULLSCREEN))
-    return;
+    return FALSE;
 
   set_fullscreen_actions (event->new_window_state &
 			  GDK_WINDOW_STATE_FULLSCREEN);
+    
+  return FALSE;
 }
 
 static void
@@ -1530,7 +1532,7 @@ game_props_callback (void)
   gtk_window_present (GTK_WINDOW (pref_dialog));
 }
 
-static int
+static gboolean
 window_resize_cb (GtkWidget * widget, GdkEventConfigure * event, void *data)
 {
   gconf_client_set_int (conf_client, KEY_WIDTH, event->width, NULL);
