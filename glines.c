@@ -494,7 +494,7 @@ show_scores (gint pos, gboolean new_game)
   static GtkWidget *dialog;
 
   if (dialog == NULL) {
-    dialog = games_scores_dialog_new (highscores, _("GNOME Five or More"));
+    dialog = games_scores_dialog_new (GTK_WINDOW (app), highscores, _("GNOME Five or More"));
     games_scores_dialog_set_category_description (GAMES_SCORES_DIALOG
 						  (dialog), _("Board Size:"));
   }
