@@ -1,3 +1,9 @@
+2007-02-13  Daniel Nylander <po@danielnylander.se>
+
+	* sv/sv.po: Added Swedish translation.
+	* sv/figures/*png: Added screenshots.
+	* Makefile.am: Added sv to DOC_LINGAS.
+
 2007-02-04  Joachim Noreiko  <jnoreiko@yahoo.com>
 
   * C/glines.xml: fixed validation errors. #404020
