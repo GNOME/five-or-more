@@ -1,3 +1,7 @@
+2007-03-04  Claude Paroz  <claude@2xlibre.net>
+
+	* C/glines.xml: Add .png extension to screenshot image filenames.
+
 2007-03-02  Daniel Nylander <po@danielnylander.se>
 
 	* sv/sv.po: Updated Swedish translation.

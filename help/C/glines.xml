@@ -182,7 +182,7 @@
 	  <screenshot>
 	      <mediaobject>
 	      <imageobject>
-	      <imagedata fileref="figures/glines-startgame" format="PNG" srccredit="emese" />
+	      <imagedata fileref="figures/glines-startgame.png" format="PNG" srccredit="emese" />
 	      </imageobject>
 	      </mediaobject>
 	  </screenshot>
@@ -201,7 +201,7 @@
 	  <screenshot>
     <mediaobject>
      <imageobject>
-      <imagedata fileref="figures/glines-gameover" format="PNG" srccredit="emese kovacs" />
+      <imagedata fileref="figures/glines-gameover.png" format="PNG" srccredit="emese kovacs" />
      </imageobject>
     </mediaobject>
  </screenshot>
