@@ -1,3 +1,9 @@
+2007-03-09  Christophe Bliard  <christophe.bliard@trux.info>
+
+	* fr/fr.po: Added French translation.
+	* fr/figures/*png: Added screenshots.
+	* Makefile.am: Added fr to DOC_LINGUAS.
+
 2007-03-04  Claude Paroz  <claude@2xlibre.net>
 
 	* C/glines.xml: Add .png extension to screenshot image filenames.
