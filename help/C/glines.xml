@@ -321,7 +321,7 @@
      <title>Preferences</title>   
     <mediaobject id="preferences-dialogbox">
      <imageobject>
-      <imagedata fileref="figures/preferences" format="PNG" srccredit="emese" />
+      <imagedata fileref="figures/preferences.png" format="PNG" srccredit="emese" />
      </imageobject>
     </mediaobject>
   </figure>    
