@@ -74,6 +74,28 @@
       </schema>
 
       <schema>
+        <key>/schemas/apps/glines/saved/maximized</key>
+        <applyto>/apps/glines/saved/maximized</applyto>
+        <owner>glines</owner>
+        <type>bool</type>
+        <default>false</default>
+        <locale name="C">
+          <short>Window maximized</short>
+        </locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/apps/glines/saved/fullscreen</key>
+        <applyto>/apps/glines/saved/fullscreen</applyto>
+        <owner>glines</owner>
+        <type>bool</type>
+        <default>false</default>
+        <locale name="C">
+          <short>Window fullscreened</short>
+        </locale>
+      </schema>
+
+      <schema>
       <key>/schemas/apps/glines/saved/score</key>
       <applyto>/apps/glines/saved/score</applyto>
       <owner>glines</owner>

@@ -1,3 +1,9 @@
+2007-04-28  Andreas Røsdal  <andreasr@gnome.org>
+
+	* glines.c:
+	* glines.schemas.in: Remember the unmaximised window size. 
+	Patch by Christian Persch in bug #404554.
+
 2007-01-17  Alexander Shopov  <ash@contact.bg>
 
 	* glines.c: Trivial change to disambiguate

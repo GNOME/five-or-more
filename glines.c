@@ -49,6 +49,8 @@
 #define KEY_SAVED_PREVIEW "/apps/glines/saved/preview"
 #define KEY_WIDTH "/apps/glines/saved/width"
 #define KEY_HEIGHT "/apps/glines/saved/height"
+#define KEY_MAXIMIZED "/apps/glines/saved/maximized"
+#define KEY_FULLSCREEN "/apps/glines/saved/fullscreen"
 #define KEY_SIZE "/apps/glines/preferences/size"
 
 #define MAXNPIECES 10
@@ -99,6 +101,8 @@ gint ncolors;
 gint npieces;
 gint game_size = UNSET;
 gboolean pref_dialog_done = FALSE;
+gboolean is_maximized = FALSE;
+gboolean is_fullscreen = FALSE;
 
 GRand *rgen;
 
@@ -730,6 +734,7 @@ button_press_event (GtkWidget * widget, GdkEvent * event)
     draw_box (draw_area, cursor_x, cursor_y);
   }
 
+  /* FIXMEchpe: why not use event->[xy] here? */
   gtk_widget_get_pointer (widget, &x, &y);
   fx = x / boxsize;
   fy = y / boxsize;
@@ -1375,8 +1380,11 @@ set_fast_moves_callback (GtkWidget * widget, gpointer * data)
 }
 
 static void
-set_fullscreen_actions (gboolean is_fullscreen)
+set_fullscreen_actions (gboolean fullscreen)
 {
+  is_fullscreen = fullscreen != FALSE;
+  gconf_client_set_bool (conf_client, KEY_FULLSCREEN, is_fullscreen, NULL);
+
   gtk_action_set_sensitive (leavefullscreen_action, is_fullscreen);
   gtk_action_set_visible (leavefullscreen_action, is_fullscreen);
 
@@ -1396,12 +1404,22 @@ fullscreen_callback (GtkAction * action)
 static gboolean
 window_state_callback (GtkWidget * widget, GdkEventWindowState * event)
 {
-  if (!(event->changed_mask & GDK_WINDOW_STATE_FULLSCREEN))
+  gboolean maximized_changed, fullscreen_changed;
+  gboolean new_fullscreen;
+
+  maximized_changed = event->changed_mask & GDK_WINDOW_STATE_MAXIMIZED;
+  fullscreen_changed = event->changed_mask & GDK_WINDOW_STATE_FULLSCREEN;
+  if (!maximized_changed && !fullscreen_changed)
     return FALSE;
 
-  set_fullscreen_actions (event->new_window_state &
-			  GDK_WINDOW_STATE_FULLSCREEN);
-    
+  is_maximized = (event->new_window_state & GDK_WINDOW_STATE_MAXIMIZED) != 0;
+  new_fullscreen = (event->new_window_state & GDK_WINDOW_STATE_FULLSCREEN) != 0;
+
+  if (!fullscreen_changed)
+    gconf_client_set_bool (conf_client, KEY_MAXIMIZED, is_maximized, NULL);
+
+  set_fullscreen_actions (new_fullscreen);
+
   return FALSE;
 }
 
@@ -1535,8 +1553,10 @@ game_props_callback (void)
 static gboolean
 window_resize_cb (GtkWidget * widget, GdkEventConfigure * event, void *data)
 {
-  gconf_client_set_int (conf_client, KEY_WIDTH, event->width, NULL);
-  gconf_client_set_int (conf_client, KEY_HEIGHT, event->height, NULL);
+  if (!is_maximized && !is_fullscreen) {
+    gconf_client_set_int (conf_client, KEY_WIDTH, event->width, NULL);
+    gconf_client_set_int (conf_client, KEY_HEIGHT, event->height, NULL);
+  }
 
   return FALSE;
 }
@@ -1846,6 +1866,7 @@ main (int argc, char *argv[])
   GtkUIManager *ui_manager;
   GnomeClient *client;
   GnomeProgram *program;
+  gboolean do_maximize, do_fullscreen;
   int i;
 
   setgid_io_init ();
@@ -1865,6 +1886,9 @@ main (int argc, char *argv[])
   highscores = games_scores_new (&scoredesc);
 
   init_config (argc, argv);
+  do_maximize = gconf_client_get_bool (conf_client, KEY_MAXIMIZED, NULL);
+  do_fullscreen = gconf_client_get_bool (conf_client, KEY_FULLSCREEN, NULL);
+
   games_stock_init ();
   gtk_window_set_default_icon_name ("gnome-five-or-more");
   client = gnome_master_client ();
@@ -1884,8 +1908,8 @@ main (int argc, char *argv[])
 
   g_signal_connect (G_OBJECT (app), "delete_event",
 		    G_CALLBACK (game_quit_callback), NULL);
-  g_signal_connect (G_OBJECT (app), "configure_event",
-		    G_CALLBACK (window_resize_cb), NULL);
+  g_signal_connect_after (G_OBJECT (app), "configure_event",
+		          G_CALLBACK (window_resize_cb), NULL);
   g_signal_connect (G_OBJECT (app), "window_state_event",
 		    G_CALLBACK (window_state_callback), NULL);
 
@@ -1972,6 +1996,11 @@ main (int argc, char *argv[])
   update_score_state ();
 
   load_properties ();
+
+  if (do_maximize)
+    gtk_window_maximize (GTK_WINDOW (app));
+  if (do_fullscreen)
+    gtk_window_fullscreen (GTK_WINDOW (app));
 
   gtk_widget_show_all (app);
 
