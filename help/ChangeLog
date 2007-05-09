@@ -1,3 +1,8 @@
+2007-05-09  Andreas Røsdal  <andreasr@gnome.org>
+
+	* C/glines.xml: Remove unneeded parentheses in help file.
+	Patch from Jason McFarlane in bug #426926.
+
 2007-04-21  Jorge Gonzalez <jorgegonz@svn.gnome.org>
 
 	* es/es.po: Added es translation

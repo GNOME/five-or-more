@@ -333,7 +333,7 @@
    try the shapes theme.
   </para>
   <para>
-   The <guimenu>Board Size</guimenu> section lets you select the size of the board. Each size has a slightly different balance: larger sizes give you more space to move, but more objects arrive each turn. The parameters for each size are given in <xref linkend="table-sizes" />).
+   The <guimenu>Board Size</guimenu> section lets you select the size of the board. Each size has a slightly different balance: larger sizes give you more space to move, but more objects arrive each turn. The parameters for each size are given in <xref linkend="table-sizes" />.
   </para>
     <table id="table-sizes">
      <title>Scoring in Five or More</title>
