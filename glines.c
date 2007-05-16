@@ -1230,10 +1230,10 @@ game_about_callback (GtkAction * action, gpointer * data)
 			 "copyright",
 			 "Copyright \xc2\xa9 1997-2007 Free Software Foundation, Inc.",
 			 "license", license, "authors", authors,
-			 "documenters", documenters, "translator_credits",
-			 _("translator-credits"), "logo-icon-name",
-			 "gnome-five-or-more", "website",
-			 "http://www.gnome.org/projects/gnome-games/",
+			 "documenters", documenters,
+			 "translator_credits", _("translator-credits"),
+			 "logo-icon-name", "gnome-glines",
+			 "website", "http://www.gnome.org/projects/gnome-games/",
 			 "wrap-license", TRUE, NULL);
   g_free (license);
   return TRUE;
@@ -1890,7 +1890,7 @@ main (int argc, char *argv[])
   do_fullscreen = gconf_client_get_bool (conf_client, KEY_FULLSCREEN, NULL);
 
   games_stock_init ();
-  gtk_window_set_default_icon_name ("gnome-five-or-more");
+  gtk_window_set_default_icon_name ("gnome-glines");
   client = gnome_master_client ();
 
   g_signal_connect (G_OBJECT (client), "save_yourself",
