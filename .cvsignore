@@ -1,9 +1,0 @@
-Makefile
-.deps
-_libs
-.libs
-glines
-glines.o
-glines.schemas
-Makefile.in
-glines.desktop
