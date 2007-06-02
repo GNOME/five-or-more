@@ -2,7 +2,7 @@
 
 /*
  * Color lines for GNOME
- * (c) 1999 Free Software Foundation
+ * Copyright © 1999 Free Software Foundation
  * Authors: Robert Szokovacs <szo@appaloosacorp.hu>
  *          Szabolcs Ban <shooby@gnome.hu>
  *
@@ -22,15 +22,13 @@
  * USA
  */
 
-#ifdef HAVE_CONFIG_H
 #include <config.h>
-#endif
 
 #include <math.h>
-#include <gnome.h>
 #include <glib/gi18n.h>
 #include <gdk-pixbuf/gdk-pixbuf.h>
 #include <gconf/gconf-client.h>
+#include <gnome.h>
 #include <games-scores.h>
 #include <games-scores-dialog.h>
 #include <games-frame.h>
@@ -66,104 +64,98 @@ enum {
 };
 
 /* Keep these in sync with the enum above. */
-const
-gint field_sizes[MAX_SIZE][4] = { {-1, -1, -1, -1},	/* This is a dummy entry. */
-{7, 7, 5, 3},			/* SMALL */
-{9, 9, 7, 3},			/* MEDIUM */
-{20, 15, 7, 7}
-};				/* LARGE */
-
-const
-gchar *scorenames[] = { N_("Small"),
-  N_("glines|Medium"),
-  N_("Large")
+static const gint field_sizes[MAX_SIZE][4] = {
+  {-1, -1, -1, -1}, /* This is a dummy entry. */
+  {7, 7, 5, 3},     /* SMALL */
+  {9, 9, 7, 3},     /* MEDIUM */
+  {20, 15, 7, 7}    /* LARGE */
 };
 
-static const GamesScoresCategory scorecats[] = { {"Small", N_("Small")},
-{"Medium", N_("glines|Medium")},
-{"Large", N_("Large")},
-GAMES_SCORES_LAST_CATEGORY
+static const GamesScoresCategory scorecats[] = {
+  { "Small",  N_("Small") },
+  { "Medium", N_("glines|Medium") },
+  { "Large",  N_("Large") },
+  GAMES_SCORES_LAST_CATEGORY
 };
 
-static const GamesScoresDescription scoredesc = { scorecats,
+static const GamesScoresDescription scoredesc = {
+  scorecats,
   "Small",
   "glines",
   GAMES_SCORES_STYLE_PLAIN_DESCENDING
 };
 
-GamesScores *highscores;
+static GamesScores *highscores;
 
+static gint hfieldsize;
+static gint vfieldsize;
+static gint ncolors;
+static gint npieces;
+static gint game_size = UNSET;
+static gboolean pref_dialog_done = FALSE;
+static gboolean is_maximized = FALSE;
+static gboolean is_fullscreen = FALSE;
 
+static GRand *rgen;
 
-gint hfieldsize;
-gint vfieldsize;
-gint ncolors;
-gint npieces;
-gint game_size = UNSET;
-gboolean pref_dialog_done = FALSE;
-gboolean is_maximized = FALSE;
-gboolean is_fullscreen = FALSE;
+static GConfClient *conf_client = NULL;
 
-GRand *rgen;
-
-GConfClient *conf_client = NULL;
-
-GtkWidget *draw_area;
-GtkWidget *app, *statusbar, *pref_dialog, *gridframe;
-GtkWidget *preview_widgets[MAXNPIECES];
-GtkWidget *menubar;
-GtkWidget *scoreitem;
-GtkAction *fullscreen_action;
-GtkAction *leavefullscreen_action;
+static GtkWidget *draw_area;
+static GtkWidget *app, *statusbar, *pref_dialog, *gridframe;
+static GtkWidget *preview_widgets[MAXNPIECES];
+static GtkWidget *menubar;
+static GtkWidget *scoreitem;
+static GtkAction *fullscreen_action;
+static GtkAction *leavefullscreen_action;
 
 /* These keep track of what we put in the main table so we
  * can reshuffle them when we change the field size. */
-GtkWidget *table;
-GtkWidget *top_pane;
-GtkWidget *bottom_pane;
+static GtkWidget *table;
+static GtkWidget *top_pane;
+static GtkWidget *bottom_pane;
 
-field_props field[MAXFIELDSIZE * MAXFIELDSIZE];
+static field_props field[MAXFIELDSIZE * MAXFIELDSIZE];
 
 /* Pre-rendering image data prepared from file. */
-GamesPreimage *ball_preimage = NULL;
+static GamesPreimage *ball_preimage = NULL;
 /* The tile images with balls rendered on them. */
-GdkPixmap *ball_pixmap = NULL;
+static GdkPixmap *ball_pixmap = NULL;
 /* The balls rendered to a size appropriate for the preview. */
-GdkPixmap *preview_pixmaps[7] = { NULL, NULL, NULL, NULL, NULL, NULL, NULL };
+static GdkPixmap *preview_pixmaps[7] = { NULL, NULL, NULL, NULL, NULL, NULL, NULL };
 
 /* A pixmap of a blank tile. */
-GdkPixmap *blank_pixmap = NULL;
-GdkPixmap *blank_preview_pixmap = NULL;
+static GdkPixmap *blank_pixmap = NULL;
+static GdkPixmap *blank_preview_pixmap = NULL;
 
-GtkWidget *fast_moves_toggle_button = NULL;
+static GtkWidget *fast_moves_toggle_button = NULL;
 
-GamesFileList *theme_file_list = NULL;
+static GamesFileList *theme_file_list = NULL;
 
-int active = -1;
-int target = -1;
-int inmove = 0;
-guint score = 0;
-int cursor_x = MAXFIELDSIZE / 2;
-int cursor_y = MAXFIELDSIZE / 2;
-gboolean show_cursor = FALSE;
+static int active = -1;
+static int target = -1;
+static int inmove = 0;
+static guint score = 0;
+static int cursor_x = MAXFIELDSIZE / 2;
+static int cursor_y = MAXFIELDSIZE / 2;
+static gboolean show_cursor = FALSE;
 
-int boxsize;
+static int boxsize;
 
 /* The width and height of the main window. */
 #define MIN_WIDTH  190
 #define MIN_HEIGHT 240
-int width;
-int height;
+static int width;
+static int height;
 
-int preview_height = 0;
-int preview_width = 0;
+static int preview_height = 0;
+static int preview_width = 0;
 
-int move_timeout = 100;
-int animate_id = 0;
-int preview[MAXNPIECES];
-char *ball_filename;
-GtkWidget *scorelabel;
-scoretable sctab[] =
+static int move_timeout = 100;
+static int animate_id = 0;
+static int preview[MAXNPIECES];
+static char *ball_filename;
+static GtkWidget *scorelabel;
+static scoretable sctab[] =
   { {5, 10}, {6, 12}, {7, 18}, {8, 28}, {9, 42}, {10, 82}, {11, 108}, {12,
 								       138},
   {13, 172}, {14, 210}, {0, 0} };
@@ -172,11 +164,9 @@ static struct {
   GdkColor color;
   gchar *name;
   gint set;
-} backgnd = {
-  {
-0, 0, 0, 0}, NULL, 0};
+} backgnd = { { 0, 0, 0, 0}, NULL, 0 };
 
-gchar *warning_message = NULL;
+static gchar *warning_message = NULL;
 
 static void
 set_statusbar_message (gchar * message)
@@ -291,7 +281,7 @@ refresh_pixmaps (void)
 
   if (ball_preimage) {
     ball_pixbuf = games_preimage_render (ball_preimage, 4 * boxsize,
-					 7 * boxsize, NULL);
+					 7 * boxsize);
 
     /* Handle rendering problems. */
     if (!ball_pixbuf) {
@@ -354,7 +344,7 @@ refresh_preview_pixmaps (void)
 
   if (ball_preimage)
     scaled = games_preimage_render (ball_preimage, 4 * preview_width,
-				    7 * preview_height, NULL);
+				    7 * preview_height);
 
   if (!scaled) {
     scaled = gdk_pixbuf_new (GDK_COLORSPACE_RGB, TRUE, 8,
@@ -500,7 +490,7 @@ show_scores (gint pos, gboolean new_game)
   if (dialog == NULL) {
     dialog = games_scores_dialog_new (GTK_WINDOW (app), highscores, _("GNOME Five or More"));
     games_scores_dialog_set_category_description (GAMES_SCORES_DIALOG
-						  (dialog), _("Board Size:"));
+						  (dialog), _("_Board size:"));
   }
 
   if (pos > 0) {
@@ -1209,7 +1199,7 @@ game_top_ten_callback (GtkAction * action, gpointer data)
   show_scores (0, FALSE);
 }
 
-static int
+static void
 game_about_callback (GtkAction * action, gpointer * data)
 {
   const gchar *authors[] = { "Robert Szokovacs <szo@appaloosacorp.hu>",
@@ -1234,9 +1224,9 @@ game_about_callback (GtkAction * action, gpointer * data)
 			 "translator_credits", _("translator-credits"),
 			 "logo-icon-name", "gnome-glines",
 			 "website", "http://www.gnome.org/projects/gnome-games/",
+                         "website-label", _("GNOME Games web site"),
 			 "wrap-license", TRUE, NULL);
   g_free (license);
-  return TRUE;
 }
 
 static void
@@ -1525,7 +1515,7 @@ game_props_callback (void)
     gtk_container_add (GTK_CONTAINER (fv), button);
 
 
-    frame = games_frame_new (_("glines|General"));
+    frame = games_frame_new (Q_("glines|General"));
     fv = gtk_vbox_new (FALSE, FALSE);
     gtk_box_set_spacing (GTK_BOX (fv), 6);
     gtk_container_add (GTK_CONTAINER (frame), fv);
@@ -1820,11 +1810,9 @@ move_timeout_changed_cb (GConfClient * client,
 }
 
 static void
-init_config (int argc, char **argv)
+init_config (void)
 {
   conf_client = gconf_client_get_default ();
-
-  gconf_init (argc, argv, NULL);
 
   gconf_client_add_dir (conf_client,
 			KEY_DIR, GCONF_CLIENT_PRELOAD_ONELEVEL, NULL);
@@ -1869,6 +1857,13 @@ main (int argc, char *argv[])
   gboolean do_maximize, do_fullscreen;
   int i;
 
+#if defined(HAVE_GNOME) || defined(HAVE_RSVG_GNOMEVFS)
+  /* If we're going to use gnome-vfs, we need to init threads before
+   * calling any glib functions.
+   */
+  g_thread_init (NULL);
+#endif
+
   setgid_io_init ();
 
   rgen = g_rand_new ();
@@ -1880,29 +1875,33 @@ main (int argc, char *argv[])
   program = gnome_program_init ("glines", VERSION,
 				LIBGNOMEUI_MODULE,
 				argc, argv,
-				GNOME_PARAM_POPT_TABLE, NULL,
-				GNOME_PARAM_APP_DATADIR, DATADIR, NULL);
+				GNOME_PARAM_GOPTION_CONTEXT, g_option_context_new (NULL),
+				GNOME_PARAM_APP_DATADIR, DATADIR, /* FIXMEchpe: this ought to use SHAREDIR !! */
+                                NULL);
 
   highscores = games_scores_new (&scoredesc);
 
-  init_config (argc, argv);
+  init_config ();
   do_maximize = gconf_client_get_bool (conf_client, KEY_MAXIMIZED, NULL);
   do_fullscreen = gconf_client_get_bool (conf_client, KEY_FULLSCREEN, NULL);
 
   games_stock_init ();
   gtk_window_set_default_icon_name ("gnome-glines");
-  client = gnome_master_client ();
 
-  g_signal_connect (G_OBJECT (client), "save_yourself",
+  client = gnome_master_client ();
+  g_signal_connect (client, "save_yourself",
 		    G_CALLBACK (save_state), argv[0]);
-  g_signal_connect (G_OBJECT (client), "die", G_CALLBACK (client_die), NULL);
+  g_signal_connect (client, "die",
+                    G_CALLBACK (client_die), NULL);
 
   if (GNOME_CLIENT_RESTARTED (client))
     restart ();
   else
     reset_game ();
 
-  app = gnome_app_new ("glines", _("Five or More"));
+  app = gtk_window_new (GTK_WINDOW_TOPLEVEL);
+  gtk_window_set_title (GTK_WINDOW (app), _("Five or More"));
+
   gtk_window_set_default_size (GTK_WINDOW (app), width, height);
   gtk_widget_set_size_request (GTK_WIDGET (app), MIN_WIDTH, MIN_HEIGHT);
 
@@ -1920,7 +1919,7 @@ main (int argc, char *argv[])
   gtk_statusbar_set_has_resize_grip (GTK_STATUSBAR (statusbar), FALSE);
 
   vbox = gtk_vbox_new (FALSE, 0);
-  gnome_app_set_contents (GNOME_APP (app), vbox);
+  gtk_container_add (GTK_CONTAINER (app), vbox);
 
   create_menus (ui_manager);
   gtk_box_pack_start (GTK_BOX (vbox), menubar, FALSE, FALSE, 0);
