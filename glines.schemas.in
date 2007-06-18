@@ -50,8 +50,8 @@
       </schema>
 
       <schema>
-      <key>/schemas/apps/glines/saved/width</key>
-      <applyto>/apps/glines/saved/width</applyto>
+      <key>/schemas/apps/glines/width</key>
+      <applyto>/apps/glines/width</applyto>
       <owner>glines</owner>
       <type>int</type>
       <default>380</default>
@@ -62,8 +62,8 @@
       </schema>
 
       <schema>
-      <key>/schemas/apps/glines/saved/height</key>
-      <applyto>/apps/glines/saved/height</applyto>
+      <key>/schemas/apps/glines/height</key>
+      <applyto>/apps/glines/height</applyto>
       <owner>glines</owner>
       <type>int</type>
       <default>485</default>
@@ -74,8 +74,8 @@
       </schema>
 
       <schema>
-        <key>/schemas/apps/glines/saved/maximized</key>
-        <applyto>/apps/glines/saved/maximized</applyto>
+        <key>/schemas/apps/glines/maximized</key>
+        <applyto>/apps/glines/maximized</applyto>
         <owner>glines</owner>
         <type>bool</type>
         <default>false</default>
@@ -85,8 +85,8 @@
       </schema>
 
       <schema>
-        <key>/schemas/apps/glines/saved/fullscreen</key>
-        <applyto>/apps/glines/saved/fullscreen</applyto>
+        <key>/schemas/apps/glines/fullscreen</key>
+        <applyto>/apps/glines/fullscreen</applyto>
         <owner>glines</owner>
         <type>bool</type>
         <default>false</default>
