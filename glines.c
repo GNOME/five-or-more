@@ -92,8 +92,6 @@ static gint ncolors;
 static gint npieces;
 static gint game_size = UNSET;
 static gboolean pref_dialog_done = FALSE;
-static gboolean is_maximized = FALSE;
-static gboolean is_fullscreen = FALSE;
 
 static GRand *rgen;
 
@@ -1395,11 +1393,11 @@ set_fast_moves_callback (GtkWidget * widget, gpointer * data)
 static void
 set_fullscreen_actions (gboolean fullscreen)
 {
-  gtk_action_set_sensitive (leavefullscreen_action, is_fullscreen);
-  gtk_action_set_visible (leavefullscreen_action, is_fullscreen);
+  gtk_action_set_sensitive (leavefullscreen_action, fullscreen);
+  gtk_action_set_visible (leavefullscreen_action, fullscreen);
 
-  gtk_action_set_sensitive (fullscreen_action, !is_fullscreen);
-  gtk_action_set_visible (fullscreen_action, !is_fullscreen);
+  gtk_action_set_sensitive (fullscreen_action, !fullscreen);
+  gtk_action_set_visible (fullscreen_action, !fullscreen);
 }
 
 static void
