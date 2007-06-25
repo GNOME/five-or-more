@@ -1834,7 +1834,7 @@ main (int argc, char *argv[])
   gtk_window_set_title (GTK_WINDOW (app), _("Five or More"));
 
   gtk_window_set_default_size (GTK_WINDOW (app), DEFAULT_WIDTH, DEFAULT_HEIGHT);
-  games_conf_add_window (GTK_WINDOW (app));
+  games_conf_add_window (GTK_WINDOW (app), NULL);
 
   g_signal_connect (G_OBJECT (app), "delete_event",
 		    G_CALLBACK (game_quit_callback), NULL);
