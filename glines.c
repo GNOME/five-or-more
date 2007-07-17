@@ -6,6 +6,8 @@
  * Authors: Robert Szokovacs <szo@appaloosacorp.hu>
  *          Szabolcs Ban <shooby@gnome.hu>
  *
+ * Copyright © 2007 Christian Persch
+ *
  * This game is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation; either version 2, or (at your option)
@@ -1197,13 +1199,17 @@ game_about_callback (GtkAction * action, gpointer * data)
   gchar *license = games_get_license (_("Five or More"));
 
   gtk_show_about_dialog (GTK_WINDOW (app),
-			 "name", _("Five or More"),
+#if GTK_CHECK_VERSION (2, 11, 0)
+                         "program-name", _("Five or More"),
+#else
+                         "name", _("Five or More"),
+#endif
 			 "version", VERSION,
-			 "comments",
-			 _("GNOME port of the once-popular Color Lines game"),
+			 "comments", _("GNOME port of the once-popular Color Lines game"),
 			 "copyright",
 			 "Copyright \xc2\xa9 1997-2007 Free Software Foundation, Inc.",
-			 "license", license, "authors", authors,
+			 "license", license,
+                         "authors", authors,
 			 "documenters", documenters,
 			 "translator_credits", _("translator-credits"),
 			 "logo-icon-name", "gnome-glines",
@@ -1360,15 +1366,10 @@ set_selection (GtkWidget * widget, char *data)
 static GtkWidget *
 fill_menu (void)
 {
-  gchar *dname =
-    gnome_program_locate_file (NULL, GNOME_FILE_DOMAIN_APP_PIXMAP,
-			       ("glines"), FALSE, NULL);
-
   if (theme_file_list)
     g_object_unref (theme_file_list);
 
-  theme_file_list = games_file_list_new_images (dname, NULL);
-  g_free (dname);
+  theme_file_list = games_file_list_new_images (PIXMAPDIR, NULL);
   games_file_list_transform_basename (theme_file_list);
 
   return games_file_list_create_widget (theme_file_list, ball_filename,
@@ -1747,6 +1748,7 @@ create_menus (GtkUIManager * ui_manager)
   menubar = gtk_ui_manager_get_widget (ui_manager, "/MainMenu");
 }
 
+#ifdef HAVE_GNOME
 #ifndef GNOME_CLIENT_RESTARTED
 #define GNOME_CLIENT_RESTARTED(client) \
 (GNOME_CLIENT_CONNECTED (client) && \
@@ -1754,6 +1756,7 @@ create_menus (GtkUIManager * ui_manager)
  (strcmp (gnome_client_get_id (client), \
   gnome_client_get_previous_id (client)) == 0))
 #endif /* GNOME_CLIENT_RESTARTED */
+#endif /* HAVE_GNOME */
 
 static void
 init_config (void)
