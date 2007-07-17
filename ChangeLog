@@ -3,7 +3,7 @@
         * glines.c:
         * Makefile.am: Allow building glines with gtk-only platform.
 
-2007-04-28  Andreas Rsdal  <andreasr@gnome.org>
+2007-04-28  Andreas Røsdal  <andreasr@gnome.org>
 
 	* glines.c:
 	* glines.schemas.in: Remember the unmaximised window size. 
@@ -474,7 +474,7 @@ Wed Aug 27 15:10:24 2003  Jonathan Blandford  <jrb@redhat.com>
 
 	* glines.c: Fix a race condition where the animation callback may be
 	called after the main drawing area is destroyed. Based mostly on
-	J�gen Viksell's <jorgen.viksell@telia.com> patch. Fixes bug 117019.
+	Jörgen Viksell's <jorgen.viksell@telia.com> patch. Fixes bug 117019.
 
 2003-07-06  Steve Chaplin  <stevech1097@yahoo.com.au>
 
