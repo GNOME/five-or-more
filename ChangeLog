@@ -1,4 +1,9 @@
-2007-04-28  Andreas Røsdal  <andreasr@gnome.org>
+2007-06-29  Christian Persch <chpe@gnome.org>
+
+        * glines.c:
+        * Makefile.am: Allow building glines with gtk-only platform.
+
+2007-04-28  Andreas Rsdal  <andreasr@gnome.org>
 
 	* glines.c:
 	* glines.schemas.in: Remember the unmaximised window size. 
@@ -19,7 +24,7 @@
 
 2006-04-04  Callum McKenzie  <callum@spooky-possum.org>
 
-	* glines.c: Patch from Przemys©aw Grzegorczyk to unref
+	* glines.c: Patch from Przemysaw Grzegorczyk to unref
 	the GnomeProgram in all main loops.
 
 2006-04-02  Callum McKenzie  <callum@spooky-possum.org>
@@ -469,7 +474,7 @@ Wed Aug 27 15:10:24 2003  Jonathan Blandford  <jrb@redhat.com>
 
 	* glines.c: Fix a race condition where the animation callback may be
 	called after the main drawing area is destroyed. Based mostly on
-	Jörgen Viksell's <jorgen.viksell@telia.com> patch. Fixes bug 117019.
+	Jï¿½gen Viksell's <jorgen.viksell@telia.com> patch. Fixes bug 117019.
 
 2003-07-06  Steve Chaplin  <stevech1097@yahoo.com.au>
 
