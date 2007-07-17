@@ -1970,6 +1970,9 @@ main (int argc, char *argv[])
   /* Enter the event loop */
   gtk_main ();
 
+  if (ball_preimage)
+    g_object_unref (ball_preimage);
+
   games_conf_shutdown ();
 
 #ifdef HAVE_GNOME
