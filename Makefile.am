@@ -2,6 +2,13 @@ NULL =
 
 SUBDIRS = help
 
+# FIXMEchpe: this should really use pixmapdir = $(pkgdatadir)/glines/pixmaps !!
+pixmapdir = $(datadir)/pixmaps/glines
+pixmap_DATA = \
+	balls.svg	\
+	shapes.svg	\
+	$(NULL)
+
 bin_PROGRAMS = glines
 
 glines_SOURCES =	\
@@ -14,6 +21,7 @@ glines_CPPFLAGS = \
 	-I$(top_srcdir)/libgames-support	\
 	-DDATADIR="\"$(datadir)\""		\
 	-DSHAREDIR="\"$(pkgdatadir)\""		\
+	-DPIXMAPDIR="\"$(pixmapdir)\""		\
 	-DGNOMELOCALEDIR=\""$(datadir)/locale"\"\
 	$(AM_CPPFLAGS)
 
@@ -41,13 +49,6 @@ if WITH_GTHREAD
 glines_CFLAGS += $(GHTREAD_CFLAGS)
 glines_LDADD += $(GTHREAD_LIBS)
 endif
-
-# FIXMEchpe: this should really use pixmapdir = $(pkgdatadir)/glines/pixmaps !!
-pixmapdir = $(datadir)/pixmaps/glines
-pixmap_DATA = \
-	balls.svg	\
-	shapes.svg	\
-	$(NULL)
 
 schema_in_files = glines.schemas.in
 schemadir   = $(GCONF_SCHEMA_FILE_DIR)

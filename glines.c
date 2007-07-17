@@ -205,47 +205,31 @@ show_image_warning (gchar * message)
   gtk_widget_destroy (dialog);
 }
 
-static void
-load_image (gchar * fname, GamesPreimage ** preimage)
+static GamesPreimage *
+load_image (gchar * fname)
 {
-  gchar *tmp, *fn = NULL;
-  GamesPreimage *tmp_preimage;
+  GamesPreimage *preimage;
+  gchar *path;
 
-  tmp = g_build_filename ("glines", fname, NULL);
-
-  fn =
-    gnome_program_locate_file (NULL, GNOME_FILE_DOMAIN_APP_PIXMAP, (tmp),
-			       FALSE, NULL);
-  g_free (tmp);
-
-
-  if (!g_file_test (fn, G_FILE_TEST_EXISTS)) {
+  path = g_build_filename (PIXMAPDIR, fname, NULL);
+  if (!g_file_test (path, G_FILE_TEST_EXISTS)) {
     warning_message = g_strdup_printf (_("Unable to locate file:\n%s\n\n"
 					 "The default theme will be loaded instead."),
-				       fn);
+				       fname);
 
-    tmp = g_build_filename ("glines", "balls.svg", NULL);
-    fn =
-      gnome_program_locate_file (NULL, GNOME_FILE_DOMAIN_APP_PIXMAP, (tmp),
-				 FALSE, NULL);
-    g_free (tmp);
-
-    if (!g_file_test (fn, G_FILE_TEST_EXISTS)) {
+    path = g_build_filename (PIXMAPDIR, "balls.svg", NULL);
+    if (!g_file_test (path, G_FILE_TEST_EXISTS)) {
       g_free (warning_message);
       warning_message = g_strdup_printf (_("Unable to locate file:\n%s\n\n"
 					   "Please check that Five or More is installed correctly."),
-					 fn);
+					 fname);
     }
   }
 
-  tmp_preimage = games_preimage_new_from_file (fn, NULL);
-  g_free (fn);
+  preimage = games_preimage_new_from_file (path, NULL);
+  g_free (path);
 
-
-  if (*preimage)
-    g_object_unref (*preimage);
-
-  *preimage = tmp_preimage;
+  return preimage;
 }
 
 /* The main table has to be layed out differently depending on the
@@ -1279,7 +1263,10 @@ set_sizes (gint size)
 static void
 load_theme ()
 {
-  load_image (ball_filename, &ball_preimage);
+  if (ball_preimage)
+    g_object_unref (ball_preimage);
+  ball_preimage = load_image (ball_filename);
+
   refresh_pixmaps ();
   refresh_preview_pixmaps ();
 }
