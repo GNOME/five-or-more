@@ -1553,7 +1553,11 @@ game_quit_callback (GtkAction * action, gpointer data)
 static void
 game_help_callback (GtkAction * action, gpointer data)
 {
+#ifdef HAVE_GNOME
   gnome_help_display ("glines.xml", NULL, NULL);
+#else
+#warning need to port help to gtk-only!
+#endif /* HAVE_GNOME */
 }
 
 static int
