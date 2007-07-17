@@ -1218,7 +1218,7 @@ game_about_callback (GtkAction * action, gpointer * data)
 			 "license", license,
                          "authors", authors,
 			 "documenters", documenters,
-			 "translator_credits", _("translator-credits"),
+			 "translator-credits", _("translator-credits"),
 			 "logo-icon-name", "gnome-glines",
 			 "website", "http://www.gnome.org/projects/gnome-games/",
                          "website-label", _("GNOME Games web site"),
