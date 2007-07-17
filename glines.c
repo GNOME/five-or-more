@@ -1955,8 +1955,6 @@ main (int argc, char *argv[])
   /* Enter the event loop */
   gtk_main ();
 
-  gnome_accelerators_sync ();
-
   games_conf_shutdown ();
 
   g_object_unref (program);
