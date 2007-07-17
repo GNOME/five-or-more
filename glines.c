@@ -213,6 +213,7 @@ load_image (gchar * fname)
 {
   GamesPreimage *preimage;
   gchar *path;
+  GError *error = NULL;
 
   path = g_build_filename (PIXMAPDIR, fname, NULL);
   if (!g_file_test (path, G_FILE_TEST_EXISTS)) {
@@ -229,8 +230,13 @@ load_image (gchar * fname)
     }
   }
 
-  preimage = games_preimage_new_from_file (path, NULL);
+  preimage = games_preimage_new_from_file (path, &error);
   g_free (path);
+
+  if (error) {
+    warning_message = g_strdup (error->message);
+    g_error_free (error);
+  }
 
   return preimage;
 }
@@ -312,7 +318,7 @@ refresh_pixmaps (void)
 static void
 refresh_preview_pixmaps (void)
 {
-  int i;
+  guint i;
   GdkPixbuf *scaled = NULL;
   GtkWidget *widget = preview_widgets[0];
 
@@ -325,8 +331,8 @@ refresh_preview_pixmaps (void)
    * set them as the background for each widget in the preview array.
    * This code assumes that each preview window is identical. */
 
-  if (preview_pixmaps[0])
-    for (i = 0; i < 7; i++)
+  for (i = 0; i < 7; i++)
+    if (preview_pixmaps[i])
       g_object_unref (preview_pixmaps[i]);
 
   if (ball_preimage)
@@ -446,7 +452,7 @@ init_preview (void)
 void
 draw_preview (void)
 {
-  int i;
+  guint i;
 
   for (i = 0; i < MAXNPIECES; i++) {
 
@@ -1857,6 +1863,8 @@ main (int argc, char *argv[])
     restart ();
   else
     reset_game ();
+#else
+  reset_game ();
 #endif /* HAVE_GNOME */
 
   app = gtk_window_new (GTK_WINDOW_TOPLEVEL);
