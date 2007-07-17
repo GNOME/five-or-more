@@ -23,11 +23,13 @@
  */
 
 #include <config.h>
+//#undef HAVE_GNOME
 
 #include <math.h>
+
+#include <glib.h>
 #include <glib/gi18n.h>
 #include <gdk-pixbuf/gdk-pixbuf.h>
-#include <gnome.h>
 #include <games-scores.h>
 #include <games-scores-dialog.h>
 #include <games-frame.h>
@@ -36,6 +38,11 @@
 #include <games-preimage.h>
 #include <games-stock.h>
 #include <games-conf.h>
+
+#ifdef HAVE_GNOME
+#include <gnome.h>
+#endif
+
 #include "glines.h"
 
 #define KEY_PREFERENCES_GROUP "preferences"
@@ -1441,9 +1448,9 @@ game_props_callback (void)
 					       GTK_STOCK_CLOSE,
 					       GTK_RESPONSE_CLOSE, NULL);
     gtk_dialog_set_has_separator (GTK_DIALOG (pref_dialog), FALSE);
-    g_signal_connect (G_OBJECT (pref_dialog), "response",
+    g_signal_connect (pref_dialog, "response",
 		      G_CALLBACK (pref_dialog_response), NULL);
-    g_signal_connect (G_OBJECT (pref_dialog), "delete_event",
+    g_signal_connect (pref_dialog, "delete-event",
 		      G_CALLBACK (gtk_widget_hide), NULL);
 
     gtk_window_set_resizable (GTK_WINDOW (pref_dialog), FALSE);
@@ -1468,7 +1475,7 @@ game_props_callback (void)
     gtk_table_attach_defaults (GTK_TABLE (table), l, 0, 1, 0, 1);
 
     omenu = fill_menu ();
-    g_signal_connect (G_OBJECT (omenu), "changed",
+    g_signal_connect (omenu, "changed",
 		      G_CALLBACK (set_selection), NULL);
     gtk_table_attach_defaults (GTK_TABLE (table), omenu, 1, 2, 0, 1);
     gtk_label_set_mnemonic_widget (GTK_LABEL (l), omenu);
@@ -1481,7 +1488,7 @@ game_props_callback (void)
     {
       w = gtk_color_button_new ();
       gtk_color_button_set_color (GTK_COLOR_BUTTON (w), &backgnd.color);
-      g_signal_connect (G_OBJECT (w), "color_set",
+      g_signal_connect (w, "color-set",
 			G_CALLBACK (bg_color_callback), NULL);
     }
 
@@ -1498,7 +1505,7 @@ game_props_callback (void)
     button = gtk_radio_button_new_with_mnemonic (NULL, _("_Small"));
     if (game_size == SMALL)
       gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button), TRUE);
-    g_signal_connect (G_OBJECT (button), "clicked",
+    g_signal_connect (button, "clicked",
 		      G_CALLBACK (size_callback), (gpointer) SMALL);
 
     gtk_container_add (GTK_CONTAINER (fv), button);
@@ -1508,7 +1515,7 @@ game_props_callback (void)
 
     if (game_size == MEDIUM)
       gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button), TRUE);
-    g_signal_connect (G_OBJECT (button), "clicked",
+    g_signal_connect (button, "clicked",
 		      G_CALLBACK (size_callback), (gpointer) MEDIUM);
     gtk_container_add (GTK_CONTAINER (fv), button);
 
@@ -1516,7 +1523,7 @@ game_props_callback (void)
       (gtk_radio_button_get_group (GTK_RADIO_BUTTON (button)), _("_Large"));
     if (game_size == LARGE)
       gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button), TRUE);
-    g_signal_connect (G_OBJECT (button), "clicked",
+    g_signal_connect (button, "clicked",
 		      G_CALLBACK (size_callback), (gpointer) LARGE);
     gtk_container_add (GTK_CONTAINER (fv), button);
 
@@ -1533,7 +1540,7 @@ game_props_callback (void)
       gtk_toggle_button_set_active
 	(GTK_TOGGLE_BUTTON (fast_moves_toggle_button), TRUE);
     }
-    g_signal_connect (G_OBJECT (fast_moves_toggle_button), "clicked",
+    g_signal_connect (fast_moves_toggle_button, "clicked",
 		      G_CALLBACK (set_fast_moves_callback), NULL);
 
     gtk_container_add (GTK_CONTAINER (fv), fast_moves_toggle_button);
@@ -1778,14 +1785,20 @@ init_config (void)
 int
 main (int argc, char *argv[])
 {
+  GOptionContext *context;
   char *label_text;
   GtkWidget *label;
   GtkWidget *vbox, *hbox;
   GtkWidget *preview_hbox;
   GtkUIManager *ui_manager;
+#ifdef HAVE_GNOME
   GnomeClient *client;
   GnomeProgram *program;
   int i;
+#else
+  gboolean retval;
+  GError *error = NULL;
+#endif
 
 #if defined(HAVE_GNOME) || defined(HAVE_RSVG_GNOMEVFS)
   /* If we're going to use gnome-vfs, we need to init threads before
@@ -1802,24 +1815,43 @@ main (int argc, char *argv[])
   bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
   textdomain (GETTEXT_PACKAGE);
 
+  context = g_option_context_new (NULL);
+#if GLIB_CHECK_VERSION (2, 12, 0)
+  g_option_context_set_translation_domain (context, GETTEXT_PACKAGE);
+#endif
+
+#ifdef HAVE_GNOME
   program = gnome_program_init ("glines", VERSION,
 				LIBGNOMEUI_MODULE,
 				argc, argv,
-				GNOME_PARAM_GOPTION_CONTEXT, g_option_context_new (NULL),
+				GNOME_PARAM_GOPTION_CONTEXT, context,
 				GNOME_PARAM_APP_DATADIR, DATADIR, /* FIXMEchpe: this ought to use SHAREDIR !! */
                                 NULL);
+#else
+  g_option_context_add_group (gtk_get_option_group (TRUE));
 
-  highscores = games_scores_new (&scoredesc);
+  retval = g_option_context_parse (context, &argc, &argv, &error);
+  g_option_context_free (context);
+  if (!retval) {
+    g_print ("%s", error->message);
+    g_error_free (error);
+    exit (1);
+  }
+#endif /* HAVE_GNOME */
 
   games_conf_initialise ("GLines");
+
+  highscores = games_scores_new (&scoredesc);
 
   init_config ();
 
   games_stock_init ();
+
   gtk_window_set_default_icon_name ("gnome-glines");
 
+#ifdef HAVE_GNOME
   client = gnome_master_client ();
-  g_signal_connect (client, "save_yourself",
+  g_signal_connect (client, "save-yourself",
 		    G_CALLBACK (save_state), argv[0]);
   g_signal_connect (client, "die",
                     G_CALLBACK (client_die), NULL);
@@ -1828,6 +1860,7 @@ main (int argc, char *argv[])
     restart ();
   else
     reset_game ();
+#endif /* HAVE_GNOME */
 
   app = gtk_window_new (GTK_WINDOW_TOPLEVEL);
 
@@ -1836,9 +1869,9 @@ main (int argc, char *argv[])
   gtk_window_set_default_size (GTK_WINDOW (app), DEFAULT_WIDTH, DEFAULT_HEIGHT);
   games_conf_add_window (GTK_WINDOW (app), NULL);
 
-  g_signal_connect (G_OBJECT (app), "delete_event",
+  g_signal_connect (app, "delete-event",
 		    G_CALLBACK (game_quit_callback), NULL);
-  g_signal_connect (G_OBJECT (app), "window_state_event",
+  g_signal_connect (app, "window-state-event",
 		    G_CALLBACK (window_state_callback), NULL);
 
   statusbar = gtk_statusbar_new ();
@@ -1883,10 +1916,10 @@ main (int argc, char *argv[])
     /* Yes, this is an evil hack. */
     gtk_widget_realize (preview_widgets[i]);
   }
-  g_signal_connect (G_OBJECT (preview_widgets[0]), "configure_event",
+  g_signal_connect (preview_widgets[0], "configure-event",
 		    G_CALLBACK (preview_configure_cb), NULL);
 
-  scorelabel = gtk_label_new ("");
+  scorelabel = gtk_label_new (NULL);
 
   gtk_box_pack_end (GTK_BOX (hbox), scorelabel, FALSE, FALSE, 5);
 
@@ -1898,13 +1931,13 @@ main (int argc, char *argv[])
   gtk_box_pack_end (GTK_BOX (hbox), label, FALSE, FALSE, 5);
 
   draw_area = gtk_drawing_area_new ();
-  g_signal_connect (G_OBJECT (draw_area), "button_press_event",
+  g_signal_connect (draw_area, "button-press-event",
 		    G_CALLBACK (button_press_event), NULL);
-  g_signal_connect (G_OBJECT (draw_area), "key_press_event",
+  g_signal_connect (draw_area, "key-press-event",
 		    G_CALLBACK (key_press_event), NULL);
-  g_signal_connect (G_OBJECT (draw_area), "configure_event",
+  g_signal_connect (draw_area, "configure-event",
 		    G_CALLBACK (configure_event_callback), NULL);
-  g_signal_connect (G_OBJECT (draw_area), "expose_event",
+  g_signal_connect (draw_area, "expose-event",
 		    G_CALLBACK (field_expose_event), NULL);
   gridframe = games_grid_frame_new (hfieldsize, vfieldsize);
   games_grid_frame_set_padding (GAMES_GRID_FRAME (gridframe), 1, 1);
