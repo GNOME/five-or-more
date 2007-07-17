@@ -25,13 +25,14 @@
  */
 
 #include <config.h>
-//#undef HAVE_GNOME
 
+#include <stdlib.h>    
 #include <math.h>
 
 #include <glib.h>
 #include <glib/gi18n.h>
 #include <gdk-pixbuf/gdk-pixbuf.h>
+#include <gdk/gdkkeysyms.h>
 #include <games-scores.h>
 #include <games-scores-dialog.h>
 #include <games-frame.h>
@@ -1593,6 +1594,8 @@ configure_event_callback (GtkWidget * widget, GdkEventConfigure * event)
   return TRUE;
 }
 
+#ifdef HAVE_GNOME
+
 static int
 save_state (GnomeClient * client,
 	    gint phase,
@@ -1623,6 +1626,16 @@ save_state (GnomeClient * client,
 
   return TRUE;
 }
+
+static gint
+client_die (GnomeClient * client, gpointer client_data)
+{
+  gtk_main_quit ();
+
+  return FALSE;
+}
+
+#endif /* HAVE_GNOME */
 
 static void
 load_properties (void)
@@ -1675,17 +1688,7 @@ restart (void)
   }
 }
 
-
-static gint
-client_die (GnomeClient * client, gpointer client_data)
-{
-  gtk_main_quit ();
-
-  return FALSE;
-}
-
-
-const GtkActionEntry actions[] = {
+static const GtkActionEntry actions[] = {
   {"GameMenu", NULL, N_("_Game")},
   {"SettingsMenu", NULL, N_("_Settings")},
   {"HelpMenu", NULL, N_("_Help")},
@@ -1785,10 +1788,10 @@ main (int argc, char *argv[])
   GtkWidget *vbox, *hbox;
   GtkWidget *preview_hbox;
   GtkUIManager *ui_manager;
+  guint i;
 #ifdef HAVE_GNOME
   GnomeClient *client;
   GnomeProgram *program;
-  int i;
 #else
   gboolean retval;
   GError *error = NULL;
@@ -1822,7 +1825,7 @@ main (int argc, char *argv[])
 				GNOME_PARAM_APP_DATADIR, DATADIR, /* FIXMEchpe: this ought to use SHAREDIR !! */
                                 NULL);
 #else
-  g_option_context_add_group (gtk_get_option_group (TRUE));
+  g_option_context_add_group (context, gtk_get_option_group (TRUE));
 
   retval = g_option_context_parse (context, &argc, &argv, &error);
   g_option_context_free (context);
@@ -1961,7 +1964,9 @@ main (int argc, char *argv[])
 
   games_conf_shutdown ();
 
+#ifdef HAVE_GNOME
   g_object_unref (program);
+#endif /* HAVE_GNOME */
 
-  return (0);
+  return 0;
 }
