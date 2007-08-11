@@ -1212,7 +1212,7 @@ game_about_callback (GtkAction * action, gpointer * data)
                          "name", _("Five or More"),
 #endif
 			 "version", VERSION,
-			 "comments", _("GNOME port of the once-popular Color Lines game"),
+			 "comments", _("GNOME port of the once-popular Color Lines game.\n\nFive or More is a part of GNOME Games."),
 			 "copyright",
 			 "Copyright \xc2\xa9 1997-2007 Free Software Foundation, Inc.",
 			 "license", license,
