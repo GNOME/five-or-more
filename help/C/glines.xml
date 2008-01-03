@@ -32,7 +32,10 @@
   <title>&app; Manual</title>
   <abstract role="description">
     <para>
-      Align balls of the same color to make them disappear and prevent the board from filling up.
+	To play Five or More one must align colored pieces as the board
+	gets filled with randomly placed pieces. When five or more pieces
+	of the same color get lined up, they disappear. The game ends
+	when the board gets filled up all the way.
     </para>
   </abstract>
 
