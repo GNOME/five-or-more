@@ -1,14 +1,15 @@
+# translation of glines.HEAD.po to Español
 # Spanish translation for glines manual
 # Traducción al español del manual de glines / cinco o más
 #
-# Jorge González <jorgegonz@svn.gnome.org>, 2007.
+# Jorge González <jorgegonz@svn.gnome.org>, 2007, 2008.
 msgid ""
 msgstr ""
-"Project-Id-Version: glines.HEAD.es\n"
-"POT-Creation-Date: 2007-05-09 23:38+0100\n"
-"PO-Revision-Date: 2007-05-10 00:49+0200\n"
+"Project-Id-Version: glines.HEAD\n"
+"POT-Creation-Date: 2008-01-03 18:49+0000\n"
+"PO-Revision-Date: 2008-01-04 21:48+0100\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
-"Language-Team: Spanish <traductores@es.gnome.org>\n"
+"Language-Team: Español <<gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -17,19 +18,19 @@ msgstr ""
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: C/glines.xml:185(None)
+#: C/glines.xml:188(None)
 msgid "@@image: 'figures/glines-startgame.png'; md5=e6e58f72dc4802d89a45a7726f4c7fd7"
 msgstr "@@image: 'figures/glines-startgame.png'; md5=e6e58f72dc4802d89a45a7726f4c7fd7"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: C/glines.xml:204(None)
+#: C/glines.xml:207(None)
 msgid "@@image: 'figures/glines-gameover.png'; md5=949d09a01ee02944bf3f278ce1ebc2ba"
 msgstr "@@image: 'figures/glines-gameover.png'; md5=949d09a01ee02944bf3f278ce1ebc2ba"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: C/glines.xml:324(None)
+#: C/glines.xml:327(None)
 msgid "@@image: 'figures/preferences.png'; md5=745336aefd6ade740f6064bdf4121379"
 msgstr "@@image: 'figures/preferences.png'; md5=745336aefd6ade740f6064bdf4121379"
 
@@ -39,22 +40,25 @@ msgstr "Manual de <application>Cinco o más</application>"
 
 #: C/glines.xml:34(para)
 msgid ""
-"Align balls of the same color to make them disappear and prevent the board "
-"from filling up."
+"To play Five or More one must align colored pieces as the board gets filled "
+"with randomly placed pieces. When five or more pieces of the same color get "
+"lined up, they disappear. The game ends when the board gets filled up all "
+"the way."
 msgstr ""
-"Alinee las bolas del mismo color para hacer que desaparezcan y prevenir que "
-"la pantalla se llene de ellas."
+"Para jugar a Cinco o más debe alinear las piezas coloreadas mientras el tablero se va llenando "
+"con piezas colocadas aleatoriamente. Cuando cinco o más piezas del mismo color se "
+"alinean, desaparecen. El juego termina cuando la pantalla se llena completamente."
 
-#: C/glines.xml:40(year)
+#: C/glines.xml:43(year)
 msgid "2000-2002"
 msgstr "2000-2002"
 
-#: C/glines.xml:41(holder)
+#: C/glines.xml:44(holder)
 msgid "Emese Kovács"
 msgstr "Emese Kovács"
 
-#: C/glines.xml:56(publishername) C/glines.xml:69(orgname)
-#: C/glines.xml:95(para)
+#: C/glines.xml:59(publishername) C/glines.xml:72(orgname)
+#: C/glines.xml:98(para)
 msgid "GNOME Documentation Project"
 msgstr "Proyecto de Documentación de Gnome"
 
@@ -163,39 +167,39 @@ msgstr ""
 "CONDICIONES ESTABLECIDAS EN LA LICENCIA DE DOCUMENTACIÓN LIBRE DE GNU (GFDL) "
 "Y TENIENDO EN CUENTA QUE: <placeholder-1/>"
 
-#: C/glines.xml:66(firstname)
+#: C/glines.xml:69(firstname)
 msgid "Emese"
 msgstr "Emese"
 
-#: C/glines.xml:67(surname)
+#: C/glines.xml:70(surname)
 msgid "Kovács"
 msgstr "Kovács"
 
-#: C/glines.xml:70(email)
+#: C/glines.xml:73(email)
 msgid "emese@gnome.hu"
 msgstr "emese@gnome.hu"
 
-#: C/glines.xml:89(revnumber)
+#: C/glines.xml:92(revnumber)
 msgid "Five or More Manual V2.8"
 msgstr "Manual de Cinco o más V2.8"
 
-#: C/glines.xml:90(date)
+#: C/glines.xml:93(date)
 msgid "September 2004"
 msgstr "Septiembre de 2004"
 
-#: C/glines.xml:92(para)
+#: C/glines.xml:95(para)
 msgid "Emese Kovács <email>emese@gnome.hu</email>"
 msgstr "Emese Kovács <email>emese@gnome.hu</email>"
 
-#: C/glines.xml:100(releaseinfo)
+#: C/glines.xml:103(releaseinfo)
 msgid "This manual describes version 2.12 of Five or More."
 msgstr "Este manual describe la versión 2.12 de Cinco o más."
 
-#: C/glines.xml:107(title)
+#: C/glines.xml:110(title)
 msgid "Feedback"
 msgstr "Comentarios"
 
-#: C/glines.xml:108(para)
+#: C/glines.xml:111(para)
 msgid ""
 "To report a bug or make a suggestion regarding the <application>Five or "
 "More</application> application or this manual, follow the directions in the "
@@ -207,15 +211,15 @@ msgstr ""
 "indicaciones en la <ulink url=\"ghelp:gnome-feedback\" type=\"help\">Página "
 "de comentarios de GNOME</ulink>."
 
-#: C/glines.xml:118(primary)
+#: C/glines.xml:121(primary)
 msgid "Five or More"
 msgstr "Cinco o más"
 
-#: C/glines.xml:125(title)
+#: C/glines.xml:128(title)
 msgid "Introduction"
 msgstr "Introducción"
 
-#: C/glines.xml:127(para)
+#: C/glines.xml:130(para)
 msgid ""
 "<application>Five or More</application>, is the Gnome port of the once "
 "popular Windows game called <application>Color Lines</application> The "
@@ -229,7 +233,7 @@ msgstr ""
 "color y forma con la mayor frecuencia posible, haciendo que desaparezcan. "
 "Juegue cuanto más mejor y aparezca el número 1 en las puntuaciones."
 
-#: C/glines.xml:136(para)
+#: C/glines.xml:139(para)
 msgid ""
 "To run <application>Five or More</application>, select <guimenuitem>Five or "
 "More</guimenuitem> from the <guisubmenu>Games</guisubmenu> submenu of the "
@@ -241,7 +245,7 @@ msgstr ""
 "guisubmenu> del menú <guimenu>Aplicaciones</guimenu>, o escriba "
 "<command>glines</command> en la línea de comandos."
 
-#: C/glines.xml:144(para)
+#: C/glines.xml:147(para)
 msgid ""
 "<application>Five or More</application> is included in the <filename>GNOME-"
 "games</filename> package, which is part of the GNOME desktop environment. "
@@ -253,11 +257,11 @@ msgstr ""
 "GNOME. Este documento describe la versión 2.8 de <application>Cinco o más</"
 "application>."
 
-#: C/glines.xml:158(title)
+#: C/glines.xml:161(title)
 msgid "Playing Five or More"
 msgstr "Jugar a Cinco o más"
 
-#: C/glines.xml:159(para)
+#: C/glines.xml:162(para)
 msgid ""
 "Playing <application>Five or More</application> is easy. At startup, you "
 "find yourself with five objects randomly positioned on the board. Each turn, "
@@ -279,11 +283,11 @@ msgstr ""
 "cinco objetos de la misma forma y color, desaparecerán y obtendrá un "
 "movimiento extra antes de la siguiente ronda."
 
-#: C/glines.xml:173(title)
+#: C/glines.xml:176(title)
 msgid "Basic usage"
 msgstr "Uso básico"
 
-#: C/glines.xml:174(para)
+#: C/glines.xml:177(para)
 msgid ""
 "Starting <application>Five or More</application> presents you with the "
 "<interface>game board</interface> and a new game starts. What it looks like "
@@ -293,12 +297,12 @@ msgstr ""
 "<interface>tablero de juego</interface>. El tablero se asemeja a lo que se "
 "muestra en la <xref linkend=\"mainwindow-fig\"/>."
 
-#: C/glines.xml:181(title)
+#: C/glines.xml:184(title)
 msgid "The main window when you start a game."
 msgstr "La ventana principal cuando inicia el juego."
 
 #. ==== End of Figure ====
-#: C/glines.xml:192(para)
+#: C/glines.xml:195(para)
 msgid ""
 "As the game progresses, the board gets more and more crowded (unless you are "
 "really good...) and making objects disappear gets harder and harder. The "
@@ -308,15 +312,15 @@ msgstr ""
 "realmente bueno...) y hacer desaparecer objetos se hace más y más difícil. "
 "El juego termina cuando el tablero está lleno."
 
-#: C/glines.xml:200(title)
+#: C/glines.xml:203(title)
 msgid "Game over!"
 msgstr "Fin del juego"
 
-#: C/glines.xml:217(title)
+#: C/glines.xml:220(title)
 msgid "Playing the Game"
 msgstr "Jugar a Cinco o Más"
 
-#: C/glines.xml:218(para)
+#: C/glines.xml:221(para)
 msgid ""
 "A game of <application>Five or More</application> begins with some random "
 "objects on the board."
@@ -324,7 +328,7 @@ msgstr ""
 "Un juego de <application>Cinco o más</application> comienza con unos cuantos "
 "objetos aleatorios en el tablero."
 
-#: C/glines.xml:222(para)
+#: C/glines.xml:225(para)
 msgid ""
 "To make a move, click on one of the objects. When an object is activated it "
 "starts rotating (or doing something else depending on the theme, but let us "
@@ -347,7 +351,7 @@ msgstr ""
 "en la barra de estado (parte inferior de la ventana) mientras que el objeto "
 "original seguirá activo."
 
-#: C/glines.xml:234(para)
+#: C/glines.xml:237(para)
 msgid ""
 "As objects disappear, you get points. The points you score depends on the "
 "number of objects you managed to align (see <xref linkend=\"glines-table1\"/"
@@ -358,96 +362,96 @@ msgstr ""
 "\"glines-table1\"/>). Se muestra su puntuación en la parte superior de la "
 "esquina derecha de la ventana."
 
-#: C/glines.xml:243(title) C/glines.xml:339(title)
+#: C/glines.xml:246(title) C/glines.xml:342(title)
 msgid "Scoring in Five or More"
 msgstr "Puntuación en Cinco o Más"
 
-#: C/glines.xml:247(entry)
+#: C/glines.xml:250(entry)
 msgid "Number of objects"
 msgstr "Número de objetos"
 
-#: C/glines.xml:248(entry)
+#: C/glines.xml:251(entry)
 msgid "Score given"
 msgstr "Puntuación obtenida"
 
-#: C/glines.xml:253(entry) C/glines.xml:355(entry)
+#: C/glines.xml:256(entry) C/glines.xml:358(entry)
 msgid "5"
 msgstr "5"
 
-#: C/glines.xml:254(entry) C/glines.xml:273(entry)
+#: C/glines.xml:257(entry) C/glines.xml:276(entry)
 msgid "10"
 msgstr "10"
 
-#: C/glines.xml:257(entry)
+#: C/glines.xml:260(entry)
 msgid "6"
 msgstr "6"
 
-#: C/glines.xml:258(entry) C/glines.xml:281(entry)
+#: C/glines.xml:261(entry) C/glines.xml:284(entry)
 msgid "12"
 msgstr "12"
 
-#: C/glines.xml:261(entry) C/glines.xml:353(entry) C/glines.xml:354(entry)
-#: C/glines.xml:362(entry) C/glines.xml:369(entry) C/glines.xml:370(entry)
+#: C/glines.xml:264(entry) C/glines.xml:356(entry) C/glines.xml:357(entry)
+#: C/glines.xml:365(entry) C/glines.xml:372(entry) C/glines.xml:373(entry)
 msgid "7"
 msgstr "7"
 
-#: C/glines.xml:262(entry)
+#: C/glines.xml:265(entry)
 msgid "18"
 msgstr "18"
 
-#: C/glines.xml:265(entry)
+#: C/glines.xml:268(entry)
 msgid "8"
 msgstr "8"
 
-#: C/glines.xml:266(entry)
+#: C/glines.xml:269(entry)
 msgid "28"
 msgstr "28"
 
-#: C/glines.xml:269(entry) C/glines.xml:360(entry) C/glines.xml:361(entry)
+#: C/glines.xml:272(entry) C/glines.xml:363(entry) C/glines.xml:364(entry)
 msgid "9"
 msgstr "9"
 
-#: C/glines.xml:270(entry)
+#: C/glines.xml:273(entry)
 msgid "42"
 msgstr "42"
 
-#: C/glines.xml:274(entry)
+#: C/glines.xml:277(entry)
 msgid "82"
 msgstr "82"
 
-#: C/glines.xml:277(entry)
+#: C/glines.xml:280(entry)
 msgid "11"
 msgstr "11"
 
-#: C/glines.xml:278(entry)
+#: C/glines.xml:281(entry)
 msgid "108"
 msgstr "108"
 
-#: C/glines.xml:282(entry)
+#: C/glines.xml:285(entry)
 msgid "138"
 msgstr "138"
 
-#: C/glines.xml:285(entry)
+#: C/glines.xml:288(entry)
 msgid "13"
 msgstr "13"
 
-#: C/glines.xml:286(entry)
+#: C/glines.xml:289(entry)
 msgid "172"
 msgstr "172"
 
-#: C/glines.xml:289(entry)
+#: C/glines.xml:292(entry)
 msgid "14"
 msgstr "14"
 
-#: C/glines.xml:290(entry)
+#: C/glines.xml:293(entry)
 msgid "210"
 msgstr "210"
 
-#: C/glines.xml:297(title)
+#: C/glines.xml:300(title)
 msgid "Using the Keyboard"
 msgstr "Usar el teclado"
 
-#: C/glines.xml:298(para)
+#: C/glines.xml:301(para)
 msgid ""
 "Instead of using the mouse you can use the keyboard to play "
 "<application>Five or More</application>. To use the keyboard, hit an arrow "
@@ -464,7 +468,7 @@ msgstr ""
 "el cursor al destino del objeto y pulse de nuevo la barra espaciadora para "
 "mover el objeto."
 
-#: C/glines.xml:299(para)
+#: C/glines.xml:302(para)
 msgid ""
 "If you start using the mouse again, the cursor will disappear. The cursor "
 "will reappear if you use the arrow keys again."
@@ -472,11 +476,11 @@ msgstr ""
 "Si comienza a usar el ratón de nuevo, el cursor desaparecerá. El cursor "
 "reaparecerá si usa las techas de flecha de nuevo."
 
-#: C/glines.xml:312(title)
+#: C/glines.xml:315(title)
 msgid "Customizing the Game"
 msgstr "Personalizando el juego"
 
-#: C/glines.xml:313(para)
+#: C/glines.xml:316(para)
 msgid ""
 "You can configure <application>Five or More</application> by clicking on "
 "<guimenuitem>Preferences</guimenuitem> in the applications "
@@ -488,12 +492,12 @@ msgstr ""
 "guimenu> de la aplicación. Aparecerá el siguiente <interface>diálogo</"
 "interface>:"
 
-#: C/glines.xml:321(title)
+#: C/glines.xml:324(title)
 msgid "Preferences"
 msgstr "Preferencias"
 
 #. ==== End of Figure ====
-#: C/glines.xml:330(para)
+#: C/glines.xml:333(para)
 msgid ""
 "You can select different object styles and background colors in the "
 "<guimenu>Themes</guimenu> section. If you find it difficult distinguishing "
@@ -503,7 +507,7 @@ msgstr ""
 "sección <guimenu>Temas</guimenu>. Si encuentra difícil distinguir los "
 "colores, pruebe el tema «shapes»."
 
-#: C/glines.xml:335(para)
+#: C/glines.xml:338(para)
 msgid ""
 "The <guimenu>Board Size</guimenu> section lets you select the size of the "
 "board. Each size has a slightly different balance: larger sizes give you "
@@ -516,51 +520,51 @@ msgstr ""
 "turno aparecerán más objetos. Los parámetros para cada tamaño están dados en "
 "<xref linkend=\"table-sizes\"/>."
 
-#: C/glines.xml:343(entry)
+#: C/glines.xml:346(entry)
 msgid "Size"
 msgstr "Tamaño"
 
-#: C/glines.xml:344(entry)
+#: C/glines.xml:347(entry)
 msgid "Width"
 msgstr "Anchura"
 
-#: C/glines.xml:345(entry)
+#: C/glines.xml:348(entry)
 msgid "Height"
 msgstr "Altura"
 
-#: C/glines.xml:346(entry)
+#: C/glines.xml:349(entry)
 msgid "Number of Types"
 msgstr "Número de tipos"
 
-#: C/glines.xml:347(entry)
+#: C/glines.xml:350(entry)
 msgid "Objects per Turn"
 msgstr "Objetos por turno"
 
-#: C/glines.xml:352(entry)
+#: C/glines.xml:355(entry)
 msgid "Small"
 msgstr "Pequeño"
 
-#: C/glines.xml:356(entry) C/glines.xml:363(entry)
+#: C/glines.xml:359(entry) C/glines.xml:366(entry)
 msgid "3"
 msgstr "3"
 
-#: C/glines.xml:359(entry)
+#: C/glines.xml:362(entry)
 msgid "Medium"
 msgstr "Medio"
 
-#: C/glines.xml:366(entry)
+#: C/glines.xml:369(entry)
 msgid "Large"
 msgstr "Grande"
 
-#: C/glines.xml:367(entry)
+#: C/glines.xml:370(entry)
 msgid "20"
 msgstr "20"
 
-#: C/glines.xml:368(entry)
+#: C/glines.xml:371(entry)
 msgid "15"
 msgstr "15"
 
-#: C/glines.xml:376(para)
+#: C/glines.xml:379(para)
 msgid ""
 "You can speed up the movement of the objects by checking the Use fast moves "
 "box in the <guimenu>General</guimenu> preferences section."
@@ -568,7 +572,7 @@ msgstr ""
 "Puede acelerar el movimiento de los objetos seleccionado Usar movimientos "
 "rápidos en la sección de preferencias del menú <guimenu>Ajustes</guimenu>."
 
-#: C/glines.xml:380(para)
+#: C/glines.xml:383(para)
 msgid ""
 "Any changes you make are instantly applied and remembered for the next time "
 "you run <application>Five or More</application>."
@@ -576,11 +580,11 @@ msgstr ""
 "Cualquier cambio que haga se reflejará instantáneamente y se recordará para "
 "la siguiente vez que inicie <application>Cinco o más</application>."
 
-#: C/glines.xml:386(title)
+#: C/glines.xml:389(title)
 msgid "How to create new themes"
 msgstr "Para crear nuevos temas"
 
-#: C/glines.xml:387(para)
+#: C/glines.xml:390(para)
 msgid ""
 "Each theme consists of a single PNG image file. This image consists of an "
 "array of seven rows, corresponding to the different object colors/shapes, "
@@ -600,11 +604,11 @@ msgstr ""
 "pruebe a ajustar el tamaño de la página. Use un tema ya existente como "
 "referencia."
 
-#: C/glines.xml:417(title)
+#: C/glines.xml:420(title)
 msgid "Authors"
 msgstr "Autores"
 
-#: C/glines.xml:418(para)
+#: C/glines.xml:421(para)
 msgid ""
 "<application>Five or More</application> was written by Róbert Szókovács "
 "(<email>szo@appaloosacorp.hu</email>) and Szabolcs Bán (<email>shooby@gnome."
@@ -619,11 +623,11 @@ msgstr ""
 "sugerencias e informar de errores, visite <ulink url=\"ghelp:gnome-feedback"
 "\" type=\"help\">la página de comentarios</ulink>."
 
-#: C/glines.xml:443(title)
+#: C/glines.xml:446(title)
 msgid "License"
 msgstr "Licencia"
 
-#: C/glines.xml:444(para)
+#: C/glines.xml:447(para)
 msgid ""
 "This program is free software; you can redistribute it and/or modify it "
 "under the terms of the <citetitle>GNU General Public License</citetitle> as "
@@ -635,7 +639,7 @@ msgstr ""
 "como se publica por la Free Software Foundation; ya sea la versión 2 de la "
 "Licencia, o (a su elección) cualquier versión posterior."
 
-#: C/glines.xml:451(para)
+#: C/glines.xml:454(para)
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -647,7 +651,7 @@ msgstr ""
 "IDONEIDAD PARA UN PROPÓSITO PARTICULAR. Vea la <citetitle>Licencia Pública "
 "General GNU</citetitle> para más detalles."
 
-#: C/glines.xml:457(para)
+#: C/glines.xml:460(para)
 msgid ""
 "A copy of the <citetitle>GNU General Public License</citetitle> is included "
 "as an appendix to the <citetitle>GNOME Users Guide</citetitle>. You may also "
@@ -670,5 +674,5 @@ msgstr ""
 #. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2.
 #: C/glines.xml:0(None)
 msgid "translator-credits"
-msgstr "Jorge González <jorge.gonzalez.gonzalez@hispalinux.es>, 2007"
+msgstr "Jorge González <jorgegonz@svn.gnome.org>, 2007-2008."
 
