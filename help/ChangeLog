@@ -1,3 +1,13 @@
+2008-02-27  Luca Ferretti  <elle.uca@libero.it>
+
+	* Makefile.am:
+	* it/Makefile.am:
+	* it/glines-it.omf:
+	* it/glines.sgml:
+	* it/it.po:
+	Added Italian translation by Alessio Treglia and removed
+	old sgml one.
+
 2008-02-12  Jorge Gonzalez  <jorgegonz@svn.gnome.org>
 
 	* es/es.po: Updated Spanish translation.
