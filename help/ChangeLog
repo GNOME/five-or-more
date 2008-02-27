@@ -1,5 +1,9 @@
 2008-02-27  Luca Ferretti  <elle.uca@libero.it>
 
+	* it.po: Fix a couple of mismatching tags.
+
+2008-02-27  Luca Ferretti  <elle.uca@libero.it>
+
 	* it/figures/*:
 	Added screenshots for Italian translation by Alessio Treglia.
 

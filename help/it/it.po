@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: manuale cinque o più\n"
 "POT-Creation-Date: 2008-02-19 13:06+0000\n"
-"PO-Revision-Date: 2008-02-20 13:38+0100\n"
+"PO-Revision-Date: 2008-02-27 17:57+0100\n"
 "Last-Translator: Alessio Treglia <quadrispro@ubuntu-it.org>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
 "MIME-Version: 1.0\n"
@@ -297,7 +297,7 @@ msgstr "Preferenze"
 #. ==== End of Figure ====
 #: C/glines.xml:333(para)
 msgid "You can select different object styles and background colors in the <guimenu>Themes</guimenu> section. If you find it difficult distinguishing the colours, try the shapes theme."
-msgstr "È possibile selezionare stili diversi per gli oggetti e colori di sfondo nella sezione <guimenu>Temi«/guimenu>. Se si trova difficile distinguere i colori è possibile provare il tema delle forme."
+msgstr "È possibile selezionare stili diversi per gli oggetti e colori di sfondo nella sezione <guimenu>Temi</guimenu>. Se si trova difficile distinguere i colori è possibile provare il tema delle forme."
 
 #: C/glines.xml:338(para)
 msgid "The <guimenu>Board Size</guimenu> section lets you select the size of the board. Each size has a slightly different balance: larger sizes give you more space to move, but more objects arrive each turn. The parameters for each size are given in <xref linkend=\"table-sizes\"/>."
@@ -378,7 +378,7 @@ msgstr "Licenza"
 
 #: C/glines.xml:447(para)
 msgid "This program is free software; you can redistribute it and/or modify it under the terms of the <citetitle>GNU General Public License</citetitle> as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version."
-msgstr "Questo programma è software libero; è lecito redistribuirlo e/o modificarlo secondo i termini della <citetile>GNU General Public License</citetitle> come è pubblicata dalla Free Software Foundation; o la versione 2 della licenza o (a propria scelta) una versione successiva."
+msgstr "Questo programma è software libero; è lecito redistribuirlo e/o modificarlo secondo i termini della <citetitle>GNU General Public License</citetitle> come è pubblicata dalla Free Software Foundation; o la versione 2 della licenza o (a propria scelta) una versione successiva."
 
 #: C/glines.xml:454(para)
 msgid "This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the <citetitle>GNU General Public License</citetitle> for more details."
