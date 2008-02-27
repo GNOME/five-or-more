@@ -2,8 +2,10 @@
 
 	* Makefile.am:
 	* it/Makefile.am:
+	* it/figures/*:
 	* it/glines-it.omf:
 	* it/glines.sgml:
+	* it/topic.dat:
 	* it/it.po:
 	Added Italian translation by Alessio Treglia and removed
 	old sgml one.
