@@ -1,36 +1,35 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2008-05-09 12:55+0000\n"
-"PO-Revision-Date: 2008-06-05 11:33+ZONE\n"
+"Project-Id-Version: glines\n"
+"POT-Creation-Date: 2008-08-29 04:15+0000\n"
+"PO-Revision-Date: 2008-08-29 14:44+0100\n"
 "Last-Translator: Mario Blättermann <mario.blaettermann@t-online.de>\n"
-"Language-Team: German <gnome-de@gnome.org\n"
+"Language-Team: German <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: German\n"
+"X-Poedit-Country: GERMANY\n"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
 #: C/glines.xml:188(None)
 msgid ""
 "@@image: 'figures/glines-startgame.png'; md5=e6e58f72dc4802d89a45a7726f4c7fd7"
-msgstr ""
-"@@image: 'figures/glines-startgame.png'; md5=6c5272c3bf60cb77a0cfaaa3d705abf7"
+msgstr "translated"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
 #: C/glines.xml:207(None)
 msgid ""
 "@@image: 'figures/glines-gameover.png'; md5=949d09a01ee02944bf3f278ce1ebc2ba"
-msgstr ""
-"@@image: 'figures/glines-gameover.png'; md5=f3ba17b70b11b7d34c4056004744ba12"
+msgstr "translated"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
 #: C/glines.xml:327(None)
 msgid "@@image: 'figures/preferences.png'; md5=745336aefd6ade740f6064bdf4121379"
-msgstr ""
-"@@image: 'figures/preferences.png'; md5=234ba8402eb9a285bc65243564efa94a"
+msgstr "translated"
 
 #: C/glines.xml:32(title)
 msgid "<application>Five or More</application> Manual"
@@ -76,7 +75,7 @@ msgstr ""
 "sowie ohne Texte auf dem vorderen und hinteren Buchdeckel kopiert, verteilt "
 "und/oder modifiziert werden. Eine Kopie der GFDL finden Sie unter diesem "
 "<ulink type=\"help\" url=\"ghelp:fdl\">Link</ulink> oder in der mit diesem "
-"Handbuch gelieferten Datei COPYING-DOCs."
+"Handbuch gelieferten Datei COPYING-DOCS."
 
 #: C/glines.xml:12(para)
 msgid ""
@@ -120,15 +119,15 @@ msgid ""
 "LICENSE. NO USE OF ANY DOCUMENT OR MODIFIED VERSION OF THE DOCUMENT IS "
 "AUTHORIZED HEREUNDER EXCEPT UNDER THIS DISCLAIMER; AND"
 msgstr ""
-"DIESES DOKUMENT WIRD \"WIE ES IST\" ZUR VERFÜGUNG GESTELLT, OHNE GARANTIEN "
-"IRGENDEINER ART, SOWOHL AUSDRÜCKLICH GENANNTE ALS AUCH ANGEDEUTETE. DIES "
-"BEZIEHT SICH AUCH OHNE EINSCHRÄNKUNG AUF GARANTIEN, DASS DIESES DOKUMENT ODER "
-"VERÄNDERTE FASSUNGEN DIESES DOKUMENTS FREI VON HANDELSDEFEKTEN, FÜR EINEN "
-"BESTIMMTEN ZWECK GEEIGNET IST ODER DASS ES KEINE RECHTE DRITTER VERLETZT. DAS "
-"VOLLE RISIKO WAS QUALITÄT, GENAUIGKEIT UND LEISTUNG DES DOKUMENTS ODER "
-"VERÄNDERTE FASSUNGEN DES DOKUMENTS LIEGT BEI IHNEN. SOLLTE EIN DOKUMENT ODER "
-"EINE VERÄNDERTE FASSUNG DAVON FEHLER IRGENDEINER ART BEINHALTEN, TRAGEN SIE "
-"(NICHT DER URSPRUNGSAUTOR, DER AUTOR ODER EIN MITWIRKENDER) DIE KOSTEN FÜR "
+"DIESES DOKUMENT WIRD »WIE VORLIEGEND« GELIEFERT, OHNE GARANTIEN IRGENDEINER "
+"ART, SOWOHL AUSDRÜCKLICH GENANNTE ALS AUCH ANGEDEUTETE. DIES BEZIEHT SICH "
+"AUCH OHNE EINSCHRÄNKUNG AUF GARANTIEN, DASS DIESES DOKUMENT ODER VERÄNDERTE "
+"FASSUNGEN DIESES DOKUMENTS FREI VON HANDELSDEFEKTEN, FÜR EINEN BESTIMMTEN "
+"ZWECK GEEIGNET IST ODER DASS ES KEINE RECHTE DRITTER VERLETZT. DAS VOLLE "
+"RISIKO WAS QUALITÄT, GENAUIGKEIT UND LEISTUNG DES DOKUMENTS ODER VERÄNDERTE "
+"FASSUNGEN DES DOKUMENTS LIEGT BEI IHNEN. SOLLTE EIN DOKUMENT ODER EINE "
+"VERÄNDERTE FASSUNG DAVON FEHLER IRGENDEINER ART BEINHALTEN, TRAGEN SIE (NICHT "
+"DER URSPRUNGSAUTOR, DER AUTOR ODER EIN MITWIRKENDER) DIE KOSTEN FÜR "
 "NOTWENDIGE DIENSTLEISTUNGEN, REPARATUREN ODER FEHLERKORREKTUREN. DIESER "
 "HAFTUNGSAUSSCHLUSS IST EIN ESSENZIELLER TEIL DIESER LIZENZ. DIE VERWENDUNG "
 "EINES DOKUMENTS ODER EINER VERÄNDERTEN VERSION DES DOKUMENTS IST NICHT "
@@ -196,7 +195,7 @@ msgstr "Emese Kovács <email>emese@gnome.hu</email>"
 
 #: C/glines.xml:103(releaseinfo)
 msgid "This manual describes version 2.12 of Five or More."
-msgstr "Dieses Handbuch beschreibt Version 2.12 von Fünf-oder-mehr"
+msgstr "Dieses Handbuch beschreibt Version 2.12 von Fünf-oder-mehr."
 
 #: C/glines.xml:110(title)
 msgid "Feedback"
@@ -210,8 +209,8 @@ msgid ""
 msgstr ""
 "Um Fehler zu melden oder einen Vorschlag zur Anwendung <application>Fünf-oder-"
 "mehr</application> oder zu diesem Handbuch zu machen, folgen Sie den "
-"Anweisungen auf der <ulink url=\"ghelp:gnome-feedback\" type=\"help\">GNOME "
-"Seite für Rückmeldungen</ulink>.\""
+"Anweisungen auf der <ulink url=\"ghelp:gnome-feedback\" type=\"help\">GNOME-"
+"Seite für Rückmeldungen</ulink>."
 
 #: C/glines.xml:121(primary)
 msgid "Five or More"
@@ -229,11 +228,11 @@ msgid ""
 "color and shape causing them to disappear. Play as long as possible, and be "
 "#1 in the High Scores."
 msgstr ""
-"<application>Fünf-oder-mehr</application> ist eine-Gnome-Version des einst "
-"populären Spiels <application>Color Lines</application>. Ziel des Spiels ist "
-"es, so oft wie möglich fünf oder mehr Objekte gleicher Farbe in eine Reihe zu "
-"bringen, um sie vom Spielfeld entfernen. Spielen Sie so lange wie möglich, "
-"und werden Sie die Nummer 1 in den Bestenlisten!"
+"<application>Fünf-oder-mehr</application> ist eine Gnome-Version des einst "
+"populären Windows-Spiels <application>Color Lines</application>. Ziel des "
+"Spiels ist es, so oft wie möglich fünf oder mehr Objekte gleicher Farbe in "
+"eine Reihe zu bringen, um sie vom Spielfeld entfernen. Spielen Sie so lange "
+"wie möglich, und werden Sie die Nummer 1 in den Bestenlisten!"
 
 #: C/glines.xml:139(para)
 msgid ""
@@ -280,10 +279,10 @@ msgstr ""
 "Richtung auf dem Spielfeld bewegen, solange der Pfad dahin frei ist. Nebenher "
 "platziert der Computer weitere Objekte auf zufälligen Positionen. Deren "
 "Anzahl hängt von der gewählten Spielfeldgröße ab. Eine Vorschau der nächsten "
-"zu platzierenden Objekte finden Sie in der i der rechten oberen Ecke des "
-"Fensters. Wenn es Ihnen gelingt, fünf Objekte der gleichen Farbe "
-"aneinanderzureihen, werden diese enfernt und Sie erhalten einen Extrazug, "
-"bevor weitere Objekte platziert werden."
+"zu platzierenden Objekte finden Sie in der rechten oberen Ecke des Fensters. "
+"Wenn es Ihnen gelingt, fünf Objekte der gleichen Farbe aneinanderzureihen, "
+"werden diese entfernt und Sie erhalten einen Extrazug, bevor weitere Objekte "
+"platziert werden."
 
 #: C/glines.xml:176(title)
 msgid "Basic usage"
@@ -474,7 +473,8 @@ msgid ""
 "If you start using the mouse again, the cursor will disappear. The cursor "
 "will reappear if you use the arrow keys again."
 msgstr ""
-"Sobald sie wieder die Maus benutzen, wird der Cursor deaktiviert. Er kann " "durch Drücken einer der Pfeiltasten wieder aktiviert werden."
+"Sobald sie wieder die Maus benutzen, wird der Cursor deaktiviert. Er kann "
+"durch Drücken einer der Pfeiltasten wieder aktiviert werden."
 
 #: C/glines.xml:315(title)
 msgid "Customizing the Game"
@@ -504,7 +504,7 @@ msgid ""
 msgstr ""
 "Sie können zwischen verschiedenen Objektstilen und Hintergrundfarben in der "
 "Sektion <guimenu>Themen</guimenu> wählen. Wenn Sie meinen, das die Farben zu "
-"schwierig auseinanderzuhalten sind, sollten Sie das \"shapes\"-Thema wählen."
+"schwierig auseinanderzuhalten sind, sollten Sie das »shapes«-Thema wählen."
 
 #: C/glines.xml:338(para)
 msgid ""
@@ -569,7 +569,7 @@ msgid ""
 "box in the <guimenu>General</guimenu> preferences section."
 msgstr ""
 "Sie können die Geschwindigkeit der Objekte erhöhen, indem sie die Auswahlbox "
-"\"Züge schnell ausführen\" mit einem Häkchen versehen."
+"»Züge schnell ausführen« mit einem Häkchen versehen."
 
 #: C/glines.xml:383(para)
 msgid ""
@@ -577,7 +577,7 @@ msgid ""
 "you run <application>Five or More</application>."
 msgstr ""
 "Jede der getätigten Einstellungen wird sofort übernommen und für den nächsten "
-"Start von -application>Fünf-oder-mehr</application> gespeichert."
+"Start von <application>Fünf-oder-mehr</application> gespeichert."
 
 #: C/glines.xml:389(title)
 msgid "How to create new themes"
@@ -616,12 +616,12 @@ msgid ""
 "bugs please see the <ulink url=\"ghelp:gnome-feedback\" type=\"help"
 "\">feedback document</ulink>."
 msgstr ""
-"<application>Fünf-oder-mehr</application> wurde geschrieben von Róbert "
-"Szókovács (<email>szo@appaloosacorp.hu</email>) und Szabolcs Bán "
-"(<email>shooby@gnome.hu</email>). Dieses Handbuch wurde geschrieben von Emese "
-"Kovács (<email>emese@gnome.hu</email>). For information on how to make "
-"comments, suggestions and to report bugs please see the <ulink url=\"ghelp:"
-"gnome-feedback\" type=\"help\">feedback document</ulink>."
+"<application>Fünf-oder-mehr</application> wurde von Róbert Szókovács "
+"(<email>szo@appaloosacorp.hu</email>) und Szabolcs Bán (<email>shooby@gnome."
+"hu</email>) geschrieben. Dieses Handbuch wurde von Emese Kovács "
+"(<email>emese@gnome.hu</email>) geschrieben. Weitere Informationen über "
+"Kommentare, Vorschläge und Fehlerberichte finden Sie im <ulink url=\"ghelp:"
+"gnome-feedback\" type=\"help\">Rückmeldungs-Dokument</ulink>."
 
 #: C/glines.xml:446(title)
 msgid "License"
