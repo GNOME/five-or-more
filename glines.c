@@ -41,6 +41,7 @@
 #include <games-preimage.h>
 #include <games-stock.h>
 #include <games-conf.h>
+#include <games-runtime.h>
 
 #ifdef HAVE_GNOME
 #include <gnome.h>
@@ -1810,6 +1811,9 @@ main (int argc, char *argv[])
   g_thread_init (NULL);
 #endif
 
+  if (!games_runtime_init ("glines"))
+    return 1;
+
   setgid_io_init ();
 
   rgen = g_rand_new ();
@@ -1978,6 +1982,8 @@ main (int argc, char *argv[])
 #ifdef HAVE_GNOME
   g_object_unref (program);
 #endif /* HAVE_GNOME */
+
+  games_runtime_shutdown ();
 
   return 0;
 }
