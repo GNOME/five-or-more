@@ -192,10 +192,10 @@ show_image_warning (gchar * message)
 				   GTK_DIALOG_MODAL,
 				   GTK_MESSAGE_WARNING,
 				   GTK_BUTTONS_CLOSE,
-				   _("Could not load theme"));
+				   "%s",_("Could not load theme"));
 
   gtk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog),
-					    message);
+					    "%s", message);
 
   button = gtk_dialog_add_button (GTK_DIALOG (dialog),
 				  _("Preferences"), GTK_RESPONSE_ACCEPT);
