@@ -31,22 +31,23 @@
 
 #include <glib.h>
 #include <glib/gi18n.h>
+#include <gtk/gtk.h>
 #include <gdk-pixbuf/gdk-pixbuf.h>
 #include <gdk/gdkkeysyms.h>
 
-#include <games-scores.h>
-#include <games-scores-dialog.h>
-#include <games-frame.h>
-#include <games-files.h>
-#include <games-gridframe.h>
-#include <games-preimage.h>
-#include <games-stock.h>
-#include <games-conf.h>
-#include <games-runtime.h>
+#include <libgames-support/games-conf.h>
+#include <libgames-support/games-files.h>
+#include <libgames-support/games-frame.h>
+#include <libgames-support/games-gridframe.h>
+#include <libgames-support/games-preimage.h>
+#include <libgames-support/games-runtime.h>
+#include <libgames-support/games-scores.h>
+#include <libgames-support/games-scores-dialog.h>
+#include <libgames-support/games-stock.h>
 
-#ifdef HAVE_GNOME
-#include <gnome.h>
-#endif
+#ifdef WITH_SMCLIENT
+#include <libgames-support/eggsmclient.h>
+#endif /* WITH_SMCLIENT */
 
 #include "glines.h"
 
@@ -1619,17 +1620,14 @@ configure_event_callback (GtkWidget * widget, GdkEventConfigure * event)
   return TRUE;
 }
 
-#ifdef HAVE_GNOME
-
+#ifdef WITH_SMCLIENT
 static int
-save_state (GnomeClient * client,
-	    gint phase,
-	    GnomeSaveStyle save_style,
-	    gint shutdown,
-	    GnomeInteractStyle interact_style,
-	    gint fast, gpointer client_data)
+save_state_cb (EggSMClient *client,
+	    gpointer client_data)
 {
   gchar *buf;
+  int argc = 0;
+  char *argv[2];
   int i;
 
   games_conf_set_integer (KEY_SAVED_GROUP, KEY_SAVED_SCORE, score);
@@ -1649,18 +1647,24 @@ save_state (GnomeClient * client,
   games_conf_set_string (KEY_SAVED_GROUP, KEY_SAVED_PREVIEW, buf);
   g_free (buf);
 
+  argv[argc++] = g_get_prgname ();
+  argv[argc++] = " --resume";
+
+  egg_sm_client_set_restart_command (client, argc, (const char **) argv);
+
   return TRUE;
 }
 
 static gint
-client_die (GnomeClient * client, gpointer client_data)
+quit_cb (EggSMClient *client,
+         gpointer client_data)
 {
   gtk_main_quit ();
 
   return FALSE;
 }
 
-#endif /* HAVE_GNOME */
+#endif /* WITH_SMCLIENT */
 
 static void
 load_properties (void)
@@ -1780,16 +1784,6 @@ create_menus (GtkUIManager * ui_manager)
   menubar = gtk_ui_manager_get_widget (ui_manager, "/MainMenu");
 }
 
-#ifdef HAVE_GNOME
-#ifndef GNOME_CLIENT_RESTARTED
-#define GNOME_CLIENT_RESTARTED(client) \
-(GNOME_CLIENT_CONNECTED (client) && \
- (gnome_client_get_previous_id (client) != NULL) && \
- (strcmp (gnome_client_get_id (client), \
-  gnome_client_get_previous_id (client)) == 0))
-#endif /* GNOME_CLIENT_RESTARTED */
-#endif /* HAVE_GNOME */
-
 static void
 init_config (void)
 {
@@ -1814,13 +1808,16 @@ main (int argc, char *argv[])
   GtkWidget *preview_hbox;
   GtkUIManager *ui_manager;
   guint i;
-#ifdef HAVE_GNOME
-  GnomeClient *client;
-  GnomeProgram *program;
-#else
   gboolean retval;
   GError *error = NULL;
-#endif
+#ifdef WITH_SMCLIENT
+  EggSMClient *sm_client;
+  gboolean resume = FALSE;
+  const GOptionEntry options[] = {
+    { "resume", 'r', G_OPTION_FLAG_HIDDEN, G_OPTION_ARG_NONE, &resume, NULL, NULL },
+    { NULL }
+  };
+#endif /* WITH_SMCLIENT */
 
 #if defined(HAVE_GNOME) || defined(HAVE_RSVG_GNOMEVFS)
   /* If we're going to use gnome-vfs, we need to init threads before
@@ -1836,7 +1833,7 @@ main (int argc, char *argv[])
 
   rgen = g_rand_new ();
 
-  bindtextdomain (GETTEXT_PACKAGE, GNOMELOCALEDIR);
+  bindtextdomain (GETTEXT_PACKAGE, games_runtime_get_directory (GAMES_RUNTIME_LOCALE_DIRECTORY));
   bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
   textdomain (GETTEXT_PACKAGE);
 
@@ -1845,15 +1842,11 @@ main (int argc, char *argv[])
   g_option_context_set_translation_domain (context, GETTEXT_PACKAGE);
 #endif
 
-#ifdef HAVE_GNOME
-  program = gnome_program_init ("glines", VERSION,
-				LIBGNOMEUI_MODULE,
-				argc, argv,
-				GNOME_PARAM_GOPTION_CONTEXT, context,
-				GNOME_PARAM_APP_DATADIR, DATADIR, /* FIXMEchpe: this ought to use SHAREDIR !! */
-                                NULL);
-#else
   g_option_context_add_group (context, gtk_get_option_group (TRUE));
+#ifdef WITH_SMCLIENT
+  g_option_context_add_group (context, egg_sm_client_get_option_group ());
+  g_option_context_add_main_entries (context, options, GETTEXT_PACKAGE);
+#endif /* WITH_SMCLIENT */
 
   retval = g_option_context_parse (context, &argc, &argv, &error);
   g_option_context_free (context);
@@ -1862,7 +1855,8 @@ main (int argc, char *argv[])
     g_error_free (error);
     exit (1);
   }
-#endif /* HAVE_GNOME */
+
+  g_set_application_name (_("Five or More"));
 
   games_conf_initialise ("GLines");
 
@@ -1874,20 +1868,19 @@ main (int argc, char *argv[])
 
   gtk_window_set_default_icon_name ("gnome-glines");
 
-#ifdef HAVE_GNOME
-  client = gnome_master_client ();
-  g_signal_connect (client, "save-yourself",
-		    G_CALLBACK (save_state), argv[0]);
-  g_signal_connect (client, "die",
-                    G_CALLBACK (client_die), NULL);
-
-  if (GNOME_CLIENT_RESTARTED (client))
+#ifdef WITH_SMCLIENT
+  sm_client = egg_sm_client_get ();
+  g_signal_connect (sm_client, "save-state",
+		    G_CALLBACK (save_state_cb), NULL);
+  g_signal_connect (sm_client, "quit",
+                    G_CALLBACK (quit_cb), NULL);
+  if (resume)
     restart ();
   else
     reset_game ();
 #else
   reset_game ();
-#endif /* HAVE_GNOME */
+#endif /* WITH_SMCLIENT */
 
   app = gtk_window_new (GTK_WINDOW_TOPLEVEL);
 
@@ -1997,9 +1990,10 @@ main (int argc, char *argv[])
 
   games_conf_shutdown ();
 
-#ifdef HAVE_GNOME
-  g_object_unref (program);
-#endif /* HAVE_GNOME */
+#ifdef WITH_SMCLIENT
+  g_signal_handlers_disconnect_matched (sm_client, G_SIGNAL_MATCH_DATA,
+                                        0, 0, NULL, NULL, NULL);
+#endif /* WITH_SMCLIENT */
 
   games_runtime_shutdown ();
 
