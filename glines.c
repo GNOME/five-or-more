@@ -1623,11 +1623,12 @@ configure_event_callback (GtkWidget * widget, GdkEventConfigure * event)
 #ifdef WITH_SMCLIENT
 static int
 save_state_cb (EggSMClient *client,
+	    GKeyFile* keyfile,
 	    gpointer client_data)
 {
   gchar *buf;
   int argc = 0;
-  char *argv[2];
+  char *argv[1];
   int i;
 
   games_conf_set_integer (KEY_SAVED_GROUP, KEY_SAVED_SCORE, score);
@@ -1648,7 +1649,6 @@ save_state_cb (EggSMClient *client,
   g_free (buf);
 
   argv[argc++] = g_get_prgname ();
-  argv[argc++] = " --resume";
 
   egg_sm_client_set_restart_command (client, argc, (const char **) argv);
 
@@ -1812,11 +1812,6 @@ main (int argc, char *argv[])
   GError *error = NULL;
 #ifdef WITH_SMCLIENT
   EggSMClient *sm_client;
-  gboolean resume = FALSE;
-  const GOptionEntry options[] = {
-    { "resume", 'r', G_OPTION_FLAG_HIDDEN, G_OPTION_ARG_NONE, &resume, NULL, NULL },
-    { NULL }
-  };
 #endif /* WITH_SMCLIENT */
 
 #if defined(HAVE_GNOME) || defined(HAVE_RSVG_GNOMEVFS)
@@ -1845,7 +1840,6 @@ main (int argc, char *argv[])
   g_option_context_add_group (context, gtk_get_option_group (TRUE));
 #ifdef WITH_SMCLIENT
   g_option_context_add_group (context, egg_sm_client_get_option_group ());
-  g_option_context_add_main_entries (context, options, GETTEXT_PACKAGE);
 #endif /* WITH_SMCLIENT */
 
   retval = g_option_context_parse (context, &argc, &argv, &error);
@@ -1874,7 +1868,7 @@ main (int argc, char *argv[])
 		    G_CALLBACK (save_state_cb), NULL);
   g_signal_connect (sm_client, "quit",
                     G_CALLBACK (quit_cb), NULL);
-  if (resume)
+  if (egg_sm_client_is_resumed(sm_client))
     restart ();
   else
     reset_game ();
