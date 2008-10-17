@@ -33,6 +33,7 @@
 #include <glib/gi18n.h>
 #include <gdk-pixbuf/gdk-pixbuf.h>
 #include <gdk/gdkkeysyms.h>
+
 #include <games-scores.h>
 #include <games-scores-dialog.h>
 #include <games-frame.h>
@@ -214,15 +215,17 @@ load_image (gchar * fname)
 {
   GamesPreimage *preimage;
   gchar *path;
+  const char *dirname;
   GError *error = NULL;
 
-  path = g_build_filename (PIXMAPDIR, fname, NULL);
+  dirname = games_runtime_get_directory (GAMES_RUNTIME_GAME_PIXMAP_DIRECTORY);
+  path = g_build_filename (dirname, fname, NULL);
   if (!g_file_test (path, G_FILE_TEST_EXISTS)) {
     warning_message = g_strdup_printf (_("Unable to locate file:\n%s\n\n"
 					 "The default theme will be loaded instead."),
 				       fname);
 
-    path = g_build_filename (PIXMAPDIR, "balls.svg", NULL);
+    path = g_build_filename (dirname, "balls.svg", NULL);
     if (!g_file_test (path, G_FILE_TEST_EXISTS)) {
       g_free (warning_message);
       warning_message = g_strdup_printf (_("Unable to locate file:\n%s\n\n"

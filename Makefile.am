@@ -2,8 +2,7 @@ NULL =
 
 SUBDIRS = help
 
-# FIXMEchpe: this should really use pixmapdir = $(pkgdatadir)/glines/pixmaps !!
-pixmapdir = $(datadir)/pixmaps/glines
+pixmapdir = $(pkgdatadir)/glines/pixmaps
 pixmap_DATA = \
 	balls.svg	\
 	shapes.svg	\
