@@ -16,12 +16,7 @@ glines_SOURCES =	\
 	$(NULL)
 
 glines_CPPFLAGS = \
-	-I$(top_srcdir)				\
-	-I$(top_srcdir)/libgames-support	\
-	-DDATADIR="\"$(datadir)\""		\
-	-DSHAREDIR="\"$(pkgdatadir)\""		\
-	-DPIXMAPDIR="\"$(pixmapdir)\""		\
-	-DGNOMELOCALEDIR=\""$(datadir)/locale"\"\
+	-I$(top_srcdir) \
 	$(AM_CPPFLAGS)
 
 glines_CFLAGS = \

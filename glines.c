@@ -1379,10 +1379,13 @@ set_selection (GtkWidget * widget, char *data)
 static GtkWidget *
 fill_menu (void)
 {
+  char *pixmap_dir;
+
   if (theme_file_list)
     g_object_unref (theme_file_list);
 
-  theme_file_list = games_file_list_new_images (PIXMAPDIR, NULL);
+  pixmap_dir = games_runtime_get_directory (GAMES_RUNTIME_GAME_PIXMAP_DIRECTORY);
+  theme_file_list = games_file_list_new_images (pixmap_dir, NULL);
   games_file_list_transform_basename (theme_file_list);
 
   return games_file_list_create_widget (theme_file_list, ball_filename,
