@@ -1379,7 +1379,7 @@ set_selection (GtkWidget * widget, char *data)
 static GtkWidget *
 fill_menu (void)
 {
-  char *pixmap_dir;
+  const char *pixmap_dir;
 
   if (theme_file_list)
     g_object_unref (theme_file_list);
