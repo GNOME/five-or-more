@@ -502,15 +502,6 @@ show_scores (gint pos, gboolean new_game)
 }
 
 static void
-update_score_state ()
-{
-  GList *top;
-
-  top = games_scores_get (highscores);
-  gtk_widget_set_sensitive (scoreitem, top != NULL);
-}
-
-static void
 game_over (void)
 {
   int pos;
@@ -520,7 +511,6 @@ game_over (void)
   hiscore.plain = score;
   pos = games_scores_add_score (highscores, hiscore);
   show_scores (pos, TRUE);
-  update_score_state ();
   return;
 }
 
@@ -1952,8 +1942,6 @@ main (int argc, char *argv[])
 
   GTK_WIDGET_SET_FLAGS (draw_area, GTK_CAN_FOCUS);
   gtk_widget_grab_focus (draw_area);
-
-  update_score_state ();
 
   load_properties ();
 
