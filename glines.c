@@ -383,17 +383,25 @@ draw_all_balls (GtkWidget * widget)
   gdk_window_invalidate_rect (widget->window, NULL, FALSE);
 }
 
-void
-set_inmove (int i)
+static void
+start_animation (void)
 {
   int ms;
 
+  ms = (inmove ? move_timeout : 100);
+  if (animate_id == 0)
+    animate_id = g_timeout_add (ms, animate, draw_area);
+}
+
+void
+set_inmove (int i)
+{
   if (inmove != i) {
     inmove = i;
-    ms = (inmove ? move_timeout : 100);
     if (animate_id)
       g_source_remove (animate_id);
-    animate_id = g_timeout_add (ms, animate, draw_area);
+    animate_id = 0;
+    start_animation ();
   }
 }
 
@@ -690,6 +698,7 @@ cell_clicked (GtkWidget * widget, int fx, int fy)
 
       active = fx + fy * hfieldsize;
       field[active].active = 1;
+      start_animation();
     }
   }
 
@@ -1108,8 +1117,11 @@ animate (gpointer gp)
   x = active % hfieldsize;
   y = active / hfieldsize;
 
-  if (active == -1)
-    return TRUE;
+  if (active == -1) {
+    animate_id = 0;
+    return FALSE;
+  }
+
   if (inmove != 0) {
     if ((x > 0)
         && (field[active - 1].pathsearch == field[active].pathsearch + 1))
