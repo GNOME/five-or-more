@@ -85,9 +85,9 @@ static const gint field_sizes[MAX_SIZE][4] = {
 };
 
 static const GamesScoresCategory scorecats[] = {
-  { "Small",  N_("Small") },
-  { "Medium", N_("glines|Medium") },
-  { "Large",  N_("Large") }
+  { "Small",  NC_("board size", "Small")  },
+  { "Medium", NC_("board size", "Medium") },
+  { "Large",  NC_("board size", "Large")  }
 };
 
 static GamesScores *highscores;
@@ -1824,7 +1824,7 @@ main (int argc, char *argv[])
 
   highscores = games_scores_new ("glines",
                                  scorecats, G_N_ELEMENTS (scorecats),
-                                 NULL, NULL,
+                                 "board size", NULL,
                                  0 /* default category */,
                                  GAMES_SCORES_STYLE_PLAIN_DESCENDING);
 
