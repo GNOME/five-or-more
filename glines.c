@@ -1438,6 +1438,8 @@ game_props_callback (void)
   GtkWidget *table;
   GtkWidget *vbox;
   GtkWidget *button;
+  int i;
+  GSList *group;
 
   if (!pref_dialog) {
     pref_dialog = gtk_dialog_new_with_buttons (_("Five or More Preferences"),
@@ -1500,33 +1502,21 @@ game_props_callback (void)
     gtk_container_add (GTK_CONTAINER (frame), fv);
     gtk_box_pack_start (GTK_BOX (vbox), frame, FALSE, FALSE, 0);
 
-    button = gtk_radio_button_new_with_mnemonic (NULL, _("_Small"));
-    if (game_size == SMALL)
-      gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button), TRUE);
-    g_signal_connect (button, "clicked",
-                      G_CALLBACK (size_callback), (gpointer) SMALL);
+    group = NULL;
+    for (i = 0; i < G_N_ELEMENTS (scorecats); ++i) {
+      button = gtk_radio_button_new_with_mnemonic (group, g_dpgettext2 (NULL, "board size", scorecats[i].name));
+      if (game_size == i)
+        gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button), TRUE);
 
-    gtk_container_add (GTK_CONTAINER (fv), button);
+      g_signal_connect (button, "clicked",
+                        G_CALLBACK (size_callback), GINT_TO_POINTER (i + 1));
 
-    button = gtk_radio_button_new_with_mnemonic
-      (gtk_radio_button_get_group (GTK_RADIO_BUTTON (button)), _("_Medium"));
+      gtk_box_pack_start (GTK_BOX (fv), button, FALSE, FALSE, 0);
 
-    if (game_size == MEDIUM)
-      gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button), TRUE);
-    g_signal_connect (button, "clicked",
-                      G_CALLBACK (size_callback), (gpointer) MEDIUM);
-    gtk_container_add (GTK_CONTAINER (fv), button);
+      group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (button));
+    }
 
-    button = gtk_radio_button_new_with_mnemonic
-      (gtk_radio_button_get_group (GTK_RADIO_BUTTON (button)), _("_Large"));
-    if (game_size == LARGE)
-      gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button), TRUE);
-    g_signal_connect (button, "clicked",
-                      G_CALLBACK (size_callback), (gpointer) LARGE);
-    gtk_container_add (GTK_CONTAINER (fv), button);
-
-
-    frame = games_frame_new (Q_("glines|General"));
+    frame = games_frame_new (C_("preferences", "General"));
     fv = gtk_vbox_new (FALSE, FALSE);
     gtk_box_set_spacing (GTK_BOX (fv), 6);
     gtk_container_add (GTK_CONTAINER (frame), fv);
