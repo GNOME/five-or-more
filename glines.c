@@ -1274,7 +1274,7 @@ set_sizes (gint size)
 }
 
 static void
-load_theme ()
+load_theme (void)
 {
   if (ball_preimage)
     g_object_unref (ball_preimage);
