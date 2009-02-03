@@ -1466,7 +1466,7 @@ game_props_callback (void)
     table = gtk_table_new (2, 2, FALSE);
     gtk_container_set_border_width (GTK_CONTAINER (table), 0);
     gtk_table_set_row_spacings (GTK_TABLE (table), 6);
-    gtk_table_set_col_spacings (GTK_TABLE (table), 6);
+    gtk_table_set_col_spacings (GTK_TABLE (table), 12);
     gtk_container_add (GTK_CONTAINER (frame), table);
     gtk_box_pack_start (GTK_BOX (vbox), frame, FALSE, FALSE, 0);
 
@@ -1497,8 +1497,7 @@ game_props_callback (void)
 
 
     frame = games_frame_new (_("Board Size"));
-    fv = gtk_vbox_new (FALSE, FALSE);
-    gtk_box_set_spacing (GTK_BOX (fv), 6);
+    fv = gtk_vbox_new (FALSE, 6);
     gtk_container_add (GTK_CONTAINER (frame), fv);
     gtk_box_pack_start (GTK_BOX (vbox), frame, FALSE, FALSE, 0);
 
@@ -1517,8 +1516,7 @@ game_props_callback (void)
     }
 
     frame = games_frame_new (C_("preferences", "General"));
-    fv = gtk_vbox_new (FALSE, FALSE);
-    gtk_box_set_spacing (GTK_BOX (fv), 6);
+    fv = gtk_vbox_new (FALSE, 6);
     gtk_container_add (GTK_CONTAINER (frame), fv);
     gtk_box_pack_start (GTK_BOX (vbox), frame, FALSE, FALSE, 0);
 
