@@ -1860,7 +1860,7 @@ main (int argc, char *argv[])
   gtk_box_pack_start (GTK_BOX (vbox), menubar, FALSE, FALSE, 0);
 
   table = gtk_table_new (2, 1, TRUE);
-  gtk_box_pack_start_defaults (GTK_BOX (vbox), table);
+  gtk_box_pack_start (GTK_BOX (vbox), table, TRUE, TRUE, 0);
   gtk_box_pack_start (GTK_BOX (vbox), statusbar, FALSE, FALSE, 0);
   hbox = gtk_hbox_new (FALSE, 0);
 
