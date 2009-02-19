@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: glines.DOC\n"
 "POT-Creation-Date: 2008-01-03 18:49+0000\n"
-"PO-Revision-Date: 2008-03-08 10:51+0100\n"
+"PO-Revision-Date: 2009-02-19 23:46+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -394,7 +394,7 @@ msgstr "En kopia av <citetitle>GNU General Public License</citetitle> finns inkl
 #. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2.
 #: C/glines.xml:0(None)
 msgid "translator-credits"
-msgstr "Daniel Nylander <po@danielnylander.se>, 2007, 2008"
+msgstr "Daniel Nylander <po@danielnylander.se>, 2007, 2008, 2009"
 
 #~ msgid ""
 #~ "Align balls of the same color to make them disappear and prevent the "
