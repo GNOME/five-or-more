@@ -504,12 +504,6 @@ msgstr ""
 "the colours, try the shapes theme."
 
 #: C/glines.xml:338(para)
-#, fuzzy
-#| msgid ""
-#| "The <guimenu>Board Size</guimenu> section lets you select the size of the "
-#| "board. Each size has a slightly different balance: larger sizes give you "
-#| "more space to move, but more objects arrive each turn. The parameters for "
-#| "each size are given in <xref linkend=\"table-sizes\"/>)."
 msgid ""
 "The <guimenu>Board Size</guimenu> section lets you select the size of the "
 "board. Each size has a slightly different balance: larger sizes give you "
@@ -519,7 +513,7 @@ msgstr ""
 "The <guimenu>Board Size</guimenu> section lets you select the size of the "
 "board. Each size has a slightly different balance: larger sizes give you "
 "more space to move, but more objects arrive each turn. The parameters for "
-"each size are given in <xref linkend=\"table-sizes\"/>)."
+"each size are given in <xref linkend=\"table-sizes\"/>."
 
 #: C/glines.xml:346(entry)
 msgid "Size"
