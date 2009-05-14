@@ -166,7 +166,7 @@
       yourself with five objects randomly positioned on the board. Each turn,
       you are allowed to move one object. You can move it anywhere on the board as long as there is a clear path. Afterward, the computer drops more objects
       at random positions (the exact number depends on the size of the game). You can preview the next objects to be
-      dropped in the upper right corner of the game's window.
+      dropped in the upper left corner of the game's window.
       If you manage to align five objects of the same shape and color, they
       disappear and you are given an extra move before more objects
       drop.
