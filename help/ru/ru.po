@@ -106,8 +106,8 @@ msgid "Feedback"
 msgstr "Обратная связь"
 
 #: C/glines.xml:108(para) 
-msgid "To report a bug or make a suggestion regarding the <application>Five or More</application> application or this manual, follow the directions in the <ulink url=\"ghelp:gnome-feedback\" type=\"help\">GNOME Feedback Page</ulink>."
-msgstr "Чтобы сообщить об ошибке или внести предложение относительно игры Цветные линии или данного руководства, следуйте ссылке <ulink url=\"ghelp:gnome-feedback\" type=\"help\">Обратная связь с GNOME</ulink>."
+msgid "To report a bug or make a suggestion regarding the <application>Five or More</application> application or this manual, follow the directions in the <ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">GNOME Feedback Page</ulink>."
+msgstr "Чтобы сообщить об ошибке или внести предложение относительно игры Цветные линии или данного руководства, следуйте ссылке <ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">Обратная связь с GNOME</ulink>."
 
 #: C/glines.xml:118(primary) 
 msgid "Five or More"
@@ -356,8 +356,8 @@ msgid "Authors"
 msgstr "Авторы"
 
 #: C/glines.xml:418(para) 
-msgid "<application>Five or More</application> was written by Róbert Szókovács (<email>szo@appaloosacorp.hu</email>) and Szabolcs Bán (<email>shooby@gnome.hu</email>). This manual was written by Emese Kovács (<email>emese@gnome.hu</email>). For information on how to make comments, suggestions and to report bugs please see the <ulink url=\"ghelp:gnome-feedback\" type=\"help\">feedback document</ulink>."
-msgstr "Игра <application>Цветные линии</application> была написана Róbert Szókovács (<email>szo@appaloosacorp.hu</email>) и Szabolcs Bán (<email>shooby@gnome.hu</email>). Это руководство было написано Emese Kovács (<email>emese@gnome.hu</email>). Информацию о том, как сделать комментарии, предложения и сообщить об ошибке, пожалуйста, смотрите <ulink url=\"ghelp:gnome-feedback\" type=\"help\">страницу обратной связи</ulink>."
+msgid "<application>Five or More</application> was written by Róbert Szókovács (<email>szo@appaloosacorp.hu</email>) and Szabolcs Bán (<email>shooby@gnome.hu</email>). This manual was written by Emese Kovács (<email>emese@gnome.hu</email>). For information on how to make comments, suggestions and to report bugs please see the <ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">feedback document</ulink>."
+msgstr "Игра <application>Цветные линии</application> была написана Róbert Szókovács (<email>szo@appaloosacorp.hu</email>) и Szabolcs Bán (<email>shooby@gnome.hu</email>). Это руководство было написано Emese Kovács (<email>emese@gnome.hu</email>). Информацию о том, как сделать комментарии, предложения и сообщить об ошибке, пожалуйста, смотрите <ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">страницу обратной связи</ulink>."
 
 #: C/glines.xml:443(title) 
 msgid "License"

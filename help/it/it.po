@@ -107,8 +107,8 @@ msgid "Feedback"
 msgstr "Commenti"
 
 #: C/glines.xml:111(para)
-msgid "To report a bug or make a suggestion regarding the <application>Five or More</application> application or this manual, follow the directions in the <ulink url=\"ghelp:gnome-feedback\" type=\"help\">GNOME Feedback Page</ulink>."
-msgstr "Per segnalare un problema o inviare suggerimenti sull'applicazione <application>Cinque o più</application> o su questo manuale, seguire le istruzioni presenti alla <ulink url=\"ghelp:gnome-feedback\" type=\"help\">pagina di commenti su GNOME</ulink>."
+msgid "To report a bug or make a suggestion regarding the <application>Five or More</application> application or this manual, follow the directions in the <ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">GNOME Feedback Page</ulink>."
+msgstr "Per segnalare un problema o inviare suggerimenti sull'applicazione <application>Cinque o più</application> o su questo manuale, seguire le istruzioni presenti alla <ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">pagina di commenti su GNOME</ulink>."
 
 #: C/glines.xml:121(primary)
 msgid "Five or More"
@@ -369,8 +369,8 @@ msgid "Authors"
 msgstr "Autori"
 
 #: C/glines.xml:421(para)
-msgid "<application>Five or More</application> was written by Róbert Szókovács (<email>szo@appaloosacorp.hu</email>) and Szabolcs Bán (<email>shooby@gnome.hu</email>). This manual was written by Emese Kovács (<email>emese@gnome.hu</email>). For information on how to make comments, suggestions and to report bugs please see the <ulink url=\"ghelp:gnome-feedback\" type=\"help\">feedback document</ulink>."
-msgstr "<application>Cinque o più</application> è stato scritto da Róbert Szókovács (<email>szo@appaloosacorp.hu</email>) e Szabolcs Bán (<email>shooby@gnome.hu</email>). Questo manuale è stato scritto da by Emese Kovács (<email>emese@gnome.hu</email>). Per informazioni su come riportare bug e inviare commenti o suggerimenti consultare <ulink url=\"ghelp:gnome-feedback\" type=\"help\">questo documento</ulink>."
+msgid "<application>Five or More</application> was written by Róbert Szókovács (<email>szo@appaloosacorp.hu</email>) and Szabolcs Bán (<email>shooby@gnome.hu</email>). This manual was written by Emese Kovács (<email>emese@gnome.hu</email>). For information on how to make comments, suggestions and to report bugs please see the <ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">feedback document</ulink>."
+msgstr "<application>Cinque o più</application> è stato scritto da Róbert Szókovács (<email>szo@appaloosacorp.hu</email>) e Szabolcs Bán (<email>shooby@gnome.hu</email>). Questo manuale è stato scritto da by Emese Kovács (<email>emese@gnome.hu</email>). Per informazioni su come riportare bug e inviare commenti o suggerimenti consultare <ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">questo documento</ulink>."
 
 #: C/glines.xml:446(title)
 msgid "License"
