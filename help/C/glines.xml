@@ -112,7 +112,7 @@
       <title>Feedback</title> 
       <para>To report a bug or make a suggestion regarding the &app; application or
 	this manual, follow the directions in the 
-	<ulink url="ghelp:gnome-feedback"
+	<ulink url="ghelp:user-guide?feedback-bugs"
 	  type="help">GNOME Feedback Page</ulink>. 
       </para>
 <!-- Translators may also add here feedback address for translations -->
@@ -426,7 +426,7 @@
    (<email>shooby@gnome.hu</email>). This manual was written by Emese Kovács
    (<email>emese@gnome.hu</email>). 
    For information on how to make comments, suggestions and to report
-   bugs please see the <ulink url="ghelp:gnome-feedback" type="help">feedback document</ulink>.
+   bugs please see the <ulink url="ghelp:user-guide?feedback-bugs" type="help">feedback document</ulink>.
   </para>
 
   <!-- For translations: uncomment this:
