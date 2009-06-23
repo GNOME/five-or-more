@@ -345,13 +345,13 @@ refresh_preview_pixmaps (void)
 
 
   for (i = 0; i < 7; i++) {
-    preview_pixmaps[i] = gdk_pixmap_new (widget->window,
+    preview_pixmaps[i] = gdk_pixmap_new (gtk_widget_get_window (widget),
                                          preview_width, preview_height, -1);
     gdk_draw_rectangle (preview_pixmaps[i],
-                        widget->style->bg_gc[GTK_STATE_NORMAL],
+                        gtk_widget_get_style (widget)->bg_gc[GTK_STATE_NORMAL],
                         TRUE, 0, 0, preview_width, preview_height);
 
-    gdk_draw_pixbuf (preview_pixmaps[i], widget->style->white_gc,
+    gdk_draw_pixbuf (preview_pixmaps[i], gtk_widget_get_style (widget)->white_gc,
                      scaled, 0, i * preview_height, 0, 0,
                      preview_width, preview_height,
                      GDK_RGB_DITHER_NORMAL, 0, 0);
@@ -359,11 +359,11 @@ refresh_preview_pixmaps (void)
 
   if (blank_preview_pixmap)
     g_object_unref (blank_preview_pixmap);
-  blank_preview_pixmap =
-    gdk_pixmap_new (widget->window, preview_width, preview_height, -1);
+  blank_preview_pixmap = gdk_pixmap_new (gtk_widget_get_window (widget), 
+                                         preview_width, preview_height, -1);
   gdk_draw_rectangle (blank_preview_pixmap,
-                      widget->style->bg_gc[GTK_STATE_NORMAL], TRUE, 0, 0,
-                      preview_width, preview_height);
+                      gtk_widget_get_style (widget)->bg_gc[GTK_STATE_NORMAL], 
+                      TRUE, 0, 0, preview_width, preview_height);
 
   g_object_unref (scaled);
 
@@ -372,7 +372,7 @@ refresh_preview_pixmaps (void)
 static void
 draw_all_balls (GtkWidget * widget)
 {
-  gdk_window_invalidate_rect (widget->window, NULL, FALSE);
+  gdk_window_invalidate_rect (gtk_widget_get_window (widget), NULL, FALSE);
 }
 
 static void
@@ -463,13 +463,13 @@ draw_preview (void)
   for (i = 0; i < MAXNPIECES; i++) {
 
     if (i < npieces)
-      gdk_window_set_back_pixmap (preview_widgets[i]->window,
+      gdk_window_set_back_pixmap (gtk_widget_get_window (preview_widgets[i]),
                                   preview_pixmaps[preview[i] - 1], FALSE);
     else
-      gdk_window_set_back_pixmap (preview_widgets[i]->window,
+      gdk_window_set_back_pixmap (gtk_widget_get_window (preview_widgets[i]),
                                   blank_preview_pixmap, FALSE);
 
-    gdk_window_clear (preview_widgets[i]->window);
+    gdk_window_clear (gtk_widget_get_window (preview_widgets[i]));
   }
 
 }
@@ -827,7 +827,7 @@ draw_grid (void)
     GdkColormap *cmap;
     GdkColor color;
 
-    grid_gc = gdk_gc_new (draw_area->window);
+    grid_gc = gdk_gc_new (gtk_widget_get_window (draw_area));
 
     gdk_color_parse ("#525F6C", &color);
     cmap = gtk_widget_get_colormap (draw_area);
@@ -836,19 +836,20 @@ draw_grid (void)
   }
 
   for (i = boxsize; i < w; i = i + boxsize)
-    gdk_draw_line (draw_area->window, grid_gc, i, 0, i, h);
+    gdk_draw_line (gtk_widget_get_window (draw_area), grid_gc, i, 0, i, h);
 
   for (i = boxsize; i < h; i = i + boxsize)
-    gdk_draw_line (draw_area->window, grid_gc, 0, i, w, i);
+    gdk_draw_line (gtk_widget_get_window (draw_area), grid_gc, 0, i, w, i);
 
-  gdk_draw_rectangle (draw_area->window, grid_gc, FALSE, 0, 0, w - 1, h - 1);
+  gdk_draw_rectangle (gtk_widget_get_window (draw_area), grid_gc, FALSE, 0, 0, 
+                      w - 1, h - 1);
 }
 
 /* Redraw a part of the field */
 static gint
 field_expose_event (GtkWidget * widget, GdkEventExpose * event, gpointer gp)
 {
-  GdkWindow *window = widget->window;
+  GdkWindow *window = gtk_widget_get_window (widget);
   GdkGC *gc;
   guint x_start, x_end, y_start, y_end, i, j, idx;
 
@@ -858,7 +859,7 @@ field_expose_event (GtkWidget * widget, GdkEventExpose * event, gpointer gp)
   y_start = event->area.y / boxsize;
   y_end = (event->area.y + event->area.height - 1) / boxsize + 1;
 
-  gc = gdk_gc_new (draw_area->window);
+  gc = gdk_gc_new (gtk_widget_get_window (draw_area));
 
   for (i = y_start; i < y_end; i++) {
     for (j = x_start; j < x_end; j++) {
@@ -1455,12 +1456,12 @@ game_props_callback (void)
 
     gtk_window_set_resizable (GTK_WINDOW (pref_dialog), FALSE);
     gtk_container_set_border_width (GTK_CONTAINER (pref_dialog), 5);
-    gtk_box_set_spacing (GTK_BOX (GTK_DIALOG (pref_dialog)->vbox), 2);
+    gtk_box_set_spacing (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (pref_dialog))), 2);
 
     vbox = gtk_vbox_new (FALSE, 18);
     gtk_container_set_border_width (GTK_CONTAINER (vbox), 5);
-    gtk_box_pack_start (GTK_BOX (GTK_DIALOG (pref_dialog)->vbox), vbox,
-                        FALSE, FALSE, 0);
+    gtk_box_pack_start (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (pref_dialog))),
+                        vbox, FALSE, FALSE, 0);
 
     frame = games_frame_new (_("Themes"));
     table = gtk_table_new (2, 2, FALSE);
@@ -1577,9 +1578,10 @@ configure_event_callback (GtkWidget * widget, GdkEventConfigure * event)
     g_object_unref (blank_pixmap);
 
   boxsize = (event->width - 1) / hfieldsize;
-  ball_pixmap = gdk_pixmap_new (draw_area->window, boxsize * 4, boxsize * 7,
-                                -1);
-  blank_pixmap = gdk_pixmap_new (draw_area->window, boxsize, boxsize, -1);
+  ball_pixmap = gdk_pixmap_new (gtk_widget_get_window (draw_area), boxsize * 4, 
+                                boxsize * 7, -1);
+  blank_pixmap = gdk_pixmap_new (gtk_widget_get_window (draw_area), boxsize, 
+                                 boxsize, -1);
   refresh_pixmaps ();
 
   refresh_screen ();
