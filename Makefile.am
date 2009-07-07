@@ -1,6 +1,10 @@
-NULL =
+SUBDIRS =
 
-SUBDIRS = help
+if BUILD_HELP
+SUBDIRS += help
+endif
+
+NULL =
 
 pixmapdir = $(pkgdatadir)/glines/pixmaps
 pixmap_DATA = \
