@@ -1784,7 +1784,9 @@ main (int argc, char *argv[])
   if (!games_runtime_init ("glines"))
     return 1;
 
+#ifdef ENABLE_SETGID
   setgid_io_init ();
+#endif
 
   rgen = g_rand_new ();
 
