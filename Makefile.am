@@ -49,8 +49,11 @@ glines_LDADD += $(GTHREAD_LIBS)
 endif
 
 schema_in_files = glines.schemas.in
-schemadir   = $(GCONF_SCHEMA_FILE_DIR)
+if HAVE_GNOME
+schemadir = $(GCONF_SCHEMA_FILE_DIR)
 schema_DATA = $(schema_in_files:.schemas.in=.schemas)
+endif
+
 @INTLTOOL_SCHEMAS_RULE@
 
 desktop_in_files = glines.desktop.in.in
