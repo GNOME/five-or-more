@@ -39,6 +39,7 @@
 #include <libgames-support/games-files.h>
 #include <libgames-support/games-frame.h>
 #include <libgames-support/games-gridframe.h>
+#include <libgames-support/games-gtk-compat.h>
 #include <libgames-support/games-help.h>
 #include <libgames-support/games-preimage.h>
 #include <libgames-support/games-runtime.h>
@@ -819,9 +820,11 @@ draw_grid (void)
   static GdkGC *grid_gc;
   guint w, h;
   guint i;
+  GtkAllocation allocation;
 
-  w = draw_area->allocation.width;
-  h = draw_area->allocation.height;
+  gtk_widget_get_allocation (draw_area, &allocation);
+  w = allocation.width;
+  h = allocation.height;
 
   if (!grid_gc) {
     GdkColormap *cmap;
