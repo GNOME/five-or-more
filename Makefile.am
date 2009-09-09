@@ -56,6 +56,8 @@ endif
 
 @INTLTOOL_SCHEMAS_RULE@
 
+man_MANS = glines.6
+
 desktop_in_files = glines.desktop.in.in
 desktopdir = $(datadir)/applications
 desktop_DATA = $(desktop_in_files:.desktop.in.in=.desktop)
@@ -64,6 +66,7 @@ desktop_DATA = $(desktop_in_files:.desktop.in.in=.desktop)
 EXTRA_DIST = 			\
 	$(pixmap_DATA)		\
 	$(schema_in_files)	\
+	$(man_MANS)		\
 	$(NULL)
 
 CLEANFILES = $(desktop_DATA) $(schema_DATA)
