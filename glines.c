@@ -1667,8 +1667,6 @@ restart (void)
    * and without some sort of restricted-access storage the
    * user will always be able to change it. */
   score = games_conf_get_integer (KEY_SAVED_GROUP, KEY_SAVED_SCORE, NULL);
-  if (score < 0)
-    score = 0;
 
   buf = games_conf_get_string (KEY_SAVED_GROUP, KEY_SAVED_FIELD, NULL);
   if (buf) {
