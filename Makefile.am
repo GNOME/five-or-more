@@ -108,3 +108,5 @@ install-exec-hook:
 	  chgrp $(scores_group) $(DESTDIR)$(bindir)/glines && chmod 2555 $(DESTDIR)$(bindir)/glines ;\
 	fi
 
+
+-include $(top_srcdir)/git.mk

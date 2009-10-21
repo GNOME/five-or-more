@@ -13,3 +13,5 @@ DOC_FIGURES = \
 	figures/preferences.png
 
 dist-hook: doc-dist-hook
+
+-include $(top_srcdir)/git.mk
