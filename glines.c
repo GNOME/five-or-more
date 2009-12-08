@@ -1929,7 +1929,7 @@ main (int argc, char *argv[])
                          gtk_widget_get_events (draw_area) |
                          GDK_BUTTON_PRESS_MASK | GDK_KEY_PRESS_MASK);
 
-  GTK_WIDGET_SET_FLAGS (draw_area, GTK_CAN_FOCUS);
+  gtk_widget_set_can_focus (draw_area, TRUE);
   gtk_widget_grab_focus (draw_area);
 
   load_properties ();
