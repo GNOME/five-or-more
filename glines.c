@@ -849,7 +849,7 @@ draw_grid (void)
 }
 
 /* Redraw a part of the field */
-static gint
+static gboolean
 field_expose_event (GtkWidget * widget, GdkEventExpose * event, gpointer gp)
 {
   GdkWindow *window = gtk_widget_get_window (widget);
