@@ -31,6 +31,7 @@ glines_LDADD =	\
 	$(top_builddir)/libgames-support/libgames-support.la \
 	$(GTK_LIBS)	\
 	$(INTLLIBS)	\
+	-lm \
 	$(NULL)
 
 if HAVE_GNOME
