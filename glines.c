@@ -1466,7 +1466,7 @@ game_props_callback (void)
     gtk_box_pack_start (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (pref_dialog))),
                         vbox, FALSE, FALSE, 0);
 
-    frame = games_frame_new (_("Themes"));
+    frame = games_frame_new (_("Appearance"));
     table = gtk_table_new (2, 2, FALSE);
     gtk_container_set_border_width (GTK_CONTAINER (table), 0);
     gtk_table_set_row_spacings (GTK_TABLE (table), 6);
