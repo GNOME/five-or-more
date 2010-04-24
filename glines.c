@@ -46,6 +46,7 @@
 #include <libgames-support/games-scores.h>
 #include <libgames-support/games-scores-dialog.h>
 #include <libgames-support/games-stock.h>
+#include <libgames-support/games-fullscreen-action.h>
 
 #ifdef WITH_SMCLIENT
 #include <libgames-support/eggsmclient.h>
@@ -108,7 +109,6 @@ static GtkWidget *preview_widgets[MAXNPIECES];
 static GtkWidget *menubar;
 static GtkWidget *scoreitem;
 static GtkAction *fullscreen_action;
-static GtkAction *leavefullscreen_action;
 
 /* These keep track of what we put in the main table so we
  * can reshuffle them when we change the field size. */
@@ -1400,35 +1400,6 @@ set_fast_moves_callback (GtkWidget * widget, gpointer * data)
 }
 
 static void
-set_fullscreen_actions (gboolean fullscreen)
-{
-  gtk_action_set_sensitive (leavefullscreen_action, fullscreen);
-  gtk_action_set_visible (leavefullscreen_action, fullscreen);
-
-  gtk_action_set_sensitive (fullscreen_action, !fullscreen);
-  gtk_action_set_visible (fullscreen_action, !fullscreen);
-}
-
-static void
-fullscreen_callback (GtkAction * action)
-{
-  if (action == fullscreen_action)
-    gtk_window_fullscreen (GTK_WINDOW (app));
-  else
-    gtk_window_unfullscreen (GTK_WINDOW (app));
-}
-
-static gboolean
-window_state_callback (GtkWidget * widget, GdkEventWindowState * event)
-{
-  if (event->changed_mask & GDK_WINDOW_STATE_FULLSCREEN) {
-    set_fullscreen_actions ((event->new_window_state & GDK_WINDOW_STATE_FULLSCREEN) != 0);
-  }
-
-  return FALSE;
-}
-
-static void
 pref_dialog_response (GtkDialog * dialog, gint response, gpointer data)
 {
   gtk_widget_hide (GTK_WIDGET (dialog));
@@ -1702,10 +1673,6 @@ static const GtkActionEntry actions[] = {
    G_CALLBACK (game_help_callback)},
   {"About", GTK_STOCK_ABOUT, NULL, NULL, NULL,
    G_CALLBACK (game_about_callback)},
-  {"Fullscreen", GAMES_STOCK_FULLSCREEN, NULL, NULL, NULL,
-   G_CALLBACK (fullscreen_callback)},
-  {"LeaveFullscreen", GAMES_STOCK_LEAVE_FULLSCREEN, NULL, NULL, NULL,
-   G_CALLBACK (fullscreen_callback)}
 };
 
 const char ui_description[] =
@@ -1720,7 +1687,6 @@ const char ui_description[] =
   "    </menu>"
   "    <menu action='SettingsMenu'>"
   "      <menuitem action='Fullscreen'/>"
-  "      <menuitem action='LeaveFullscreen'/>"
   "      <menuitem action='Preferences'/>"
   "    </menu>"
   "    <menu action='HelpMenu'>"
@@ -1738,11 +1704,8 @@ create_menus (GtkUIManager * ui_manager)
   gtk_action_group_add_actions (action_group, actions,
                                 G_N_ELEMENTS (actions), NULL);
 
-  fullscreen_action =
-    gtk_action_group_get_action (action_group, "Fullscreen");
-  leavefullscreen_action =
-    gtk_action_group_get_action (action_group, "LeaveFullscreen");
-  set_fullscreen_actions (FALSE);
+  fullscreen_action = GTK_ACTION (games_fullscreen_action_new ("Fullscreen", GTK_WINDOW (app)));
+  gtk_action_group_add_action_with_accel (action_group, fullscreen_action, NULL);
 
   gtk_ui_manager_insert_action_group (ui_manager, action_group, 0);
   gtk_ui_manager_add_ui_from_string (ui_manager, ui_description, -1, NULL);
@@ -1848,8 +1811,6 @@ main (int argc, char *argv[])
   gtk_window_set_default_size (GTK_WINDOW (app), DEFAULT_WIDTH, DEFAULT_HEIGHT);
   g_signal_connect (app, "delete-event",
                     G_CALLBACK (game_quit_callback), NULL);
-  g_signal_connect (app, "window-state-event",
-                    G_CALLBACK (window_state_callback), NULL);
   games_conf_add_window (GTK_WINDOW (app), NULL);
 
   statusbar = gtk_statusbar_new ();
