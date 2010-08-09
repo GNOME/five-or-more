@@ -262,7 +262,7 @@ relay_table (void)
 static void
 refresh_pixmaps (void)
 {
-  GdkGC *gc;
+  cairo_t *cr, *cr_blank;
   GdkPixbuf *ball_pixbuf = NULL;
 
   /* Since we get called both by configure and after loading an image.
@@ -298,20 +298,24 @@ refresh_pixmaps (void)
   g_free (warning_message);
   warning_message = NULL;
 
+  cr = gdk_cairo_create (ball_pixmap);
+  gdk_cairo_set_source_color (cr, &backgnd.color);
 
-  gc = gdk_gc_new (ball_pixmap);
-  gdk_gc_set_foreground (gc, &backgnd.color);
+  cairo_rectangle (cr, 0, 0, boxsize * 4, boxsize * 7);
+  cairo_fill (cr);
 
-  gdk_draw_rectangle (ball_pixmap, gc, TRUE, 0, 0, 4 * boxsize, 7 * boxsize);
+  gdk_cairo_set_source_pixbuf (cr, ball_pixbuf, 0, 0);
+  cairo_mask (cr, cairo_get_source (cr));
 
-  gdk_draw_pixbuf (ball_pixmap, gc,
-                   ball_pixbuf, 0, 0, 0, 0, boxsize * 4, boxsize * 7,
-                   GDK_RGB_DITHER_NORMAL, 0, 0);
+  cr_blank = gdk_cairo_create (blank_pixmap);
+  gdk_cairo_set_source_color (cr_blank, &backgnd.color);
 
-  gdk_draw_rectangle (blank_pixmap, gc, TRUE, 0, 0, boxsize, boxsize);
+  cairo_rectangle (cr_blank, 0, 0, boxsize, boxsize);
+  cairo_fill (cr_blank);
 
   g_object_unref (ball_pixbuf);
-  g_object_unref (gc);
+  cairo_destroy (cr);
+  cairo_destroy (cr_blank);
 }
 
 static void
@@ -320,11 +324,18 @@ refresh_preview_pixmaps (void)
   guint i;
   GdkPixbuf *scaled = NULL;
   GtkWidget *widget = preview_widgets[0];
+  cairo_t *cr;
+  GdkRectangle preview_rect;
 
   /* Like the refresh_pixmaps() function, we may be called before
    * the window is ready. */
   if (preview_height == 0)
     return;
+
+  preview_rect.x = 0;
+  preview_rect.y = 0;
+  preview_rect.width = preview_width;
+  preview_rect.height = preview_height;
 
   /* We create pixmaps for each of the ball colours and then
    * set them as the background for each widget in the preview array.
@@ -344,30 +355,32 @@ refresh_preview_pixmaps (void)
     gdk_pixbuf_fill (scaled, 0x00000000);
   }
 
-
   for (i = 0; i < 7; i++) {
     preview_pixmaps[i] = gdk_pixmap_new (gtk_widget_get_window (widget),
                                          preview_width, preview_height, -1);
-    gdk_draw_rectangle (preview_pixmaps[i],
-                        gtk_widget_get_style (widget)->bg_gc[GTK_STATE_NORMAL],
-                        TRUE, 0, 0, preview_width, preview_height);
+    cr = gdk_cairo_create (preview_pixmaps[i]);
+    gdk_cairo_set_source_color (cr, &gtk_widget_get_style (widget)->bg[GTK_STATE_NORMAL]);
+    gdk_cairo_rectangle (cr, &preview_rect);
+    cairo_fill (cr);
 
-    gdk_draw_pixbuf (preview_pixmaps[i], gtk_widget_get_style (widget)->white_gc,
-                     scaled, 0, i * preview_height, 0, 0,
-                     preview_width, preview_height,
-                     GDK_RGB_DITHER_NORMAL, 0, 0);
+    gdk_cairo_set_source_pixbuf (cr, scaled, 0, -1.0 * preview_height * i);
+    cairo_mask (cr, cairo_get_source (cr));
+
+    cairo_destroy (cr);
   }
 
   if (blank_preview_pixmap)
     g_object_unref (blank_preview_pixmap);
+
   blank_preview_pixmap = gdk_pixmap_new (gtk_widget_get_window (widget), 
                                          preview_width, preview_height, -1);
-  gdk_draw_rectangle (blank_preview_pixmap,
-                      gtk_widget_get_style (widget)->bg_gc[GTK_STATE_NORMAL], 
-                      TRUE, 0, 0, preview_width, preview_height);
+  cr = gdk_cairo_create (blank_preview_pixmap);
+  gdk_cairo_set_source_color (cr, &gtk_widget_get_style (widget)->bg[GTK_STATE_NORMAL]);
+  gdk_cairo_rectangle (cr, &preview_rect);
+  cairo_fill (cr);
 
+  cairo_destroy (cr);
   g_object_unref (scaled);
-
 }
 
 static void
@@ -817,7 +830,8 @@ key_press_event (GtkWidget * widget, GdkEventKey * event, void *d)
 static void
 draw_grid (void)
 {
-  static GdkGC *grid_gc;
+  cairo_t *cr;
+  GdkColor color;
   guint w, h;
   guint i;
   GtkAllocation allocation;
@@ -826,26 +840,27 @@ draw_grid (void)
   w = allocation.width;
   h = allocation.height;
 
-  if (!grid_gc) {
-    GdkColormap *cmap;
-    GdkColor color;
-
-    grid_gc = gdk_gc_new (gtk_widget_get_window (draw_area));
-
-    gdk_color_parse ("#525F6C", &color);
-    cmap = gtk_widget_get_colormap (draw_area);
-    gdk_colormap_alloc_color (cmap, &color, FALSE, TRUE);
-    gdk_gc_set_foreground (grid_gc, &color);
-  }
+  cr = gdk_cairo_create (gtk_widget_get_window (draw_area));
+  gdk_color_parse ("#525F6C", &color);
+  gdk_cairo_set_source_color (cr, &color);
+  cairo_set_line_width (cr, 1.0);
 
   for (i = boxsize; i < w; i = i + boxsize)
-    gdk_draw_line (gtk_widget_get_window (draw_area), grid_gc, i, 0, i, h);
+  {
+    cairo_move_to (cr, i + 0.5, 0 + 0.5);
+    cairo_line_to (cr, i + 0.5, h + 0.5);
+  }
 
   for (i = boxsize; i < h; i = i + boxsize)
-    gdk_draw_line (gtk_widget_get_window (draw_area), grid_gc, 0, i, w, i);
+  {
+    cairo_move_to (cr, 0 + 0.5, i + 0.5);
+    cairo_line_to (cr, w + 0.5, i + 0.5);
+  }
 
-  gdk_draw_rectangle (gtk_widget_get_window (draw_area), grid_gc, FALSE, 0, 0, 
-                      w - 1, h - 1);
+  cairo_rectangle (cr, 0.5, 0.5, w - 0.5, h - 0.5);
+  cairo_stroke (cr);
+
+  cairo_destroy (cr);
 }
 
 /* Redraw a part of the field */
@@ -853,7 +868,7 @@ static gboolean
 field_expose_event (GtkWidget * widget, GdkEventExpose * event, gpointer gp)
 {
   GdkWindow *window = gtk_widget_get_window (widget);
-  GdkGC *gc;
+  cairo_t *cr;
   guint x_start, x_end, y_start, y_end, i, j, idx;
 
   x_start = event->area.x / boxsize;
@@ -862,7 +877,7 @@ field_expose_event (GtkWidget * widget, GdkEventExpose * event, gpointer gp)
   y_start = event->area.y / boxsize;
   y_end = (event->area.y + event->area.height - 1) / boxsize + 1;
 
-  gc = gdk_gc_new (gtk_widget_get_window (draw_area));
+  cr = gdk_cairo_create (window);
 
   for (i = y_start; i < y_end; i++) {
     for (j = x_start; j < x_end; j++) {
@@ -870,26 +885,27 @@ field_expose_event (GtkWidget * widget, GdkEventExpose * event, gpointer gp)
 
       idx = j + i * hfieldsize;
 
+      cairo_rectangle (cr, j * boxsize, i * boxsize, boxsize, boxsize);
+
       if (field[idx].color != 0) {
         phase = field[idx].phase;
         color = field[idx].color - 1;
 
         phase = ABS (ABS (3 - phase) - 3);
 
-        gdk_draw_drawable (window, gc, ball_pixmap,
-                           phase * boxsize,
-                           color * boxsize,
-                           j * boxsize, i * boxsize, boxsize, boxsize);
+        gdk_cairo_set_source_pixmap (cr, ball_pixmap,
+                                     (1.0 * j - phase) * boxsize,
+                                     (1.0 * i - color) * boxsize);
       } else {
-        gdk_draw_drawable (window, gc, blank_pixmap,
-                           0, 0, j * boxsize, i * boxsize, boxsize, boxsize);
+        gdk_cairo_set_source_pixmap (cr, blank_pixmap, 0, 0);
       }
+
+      cairo_fill (cr);
     }
   }
 
   if (show_cursor && cursor_x >= x_start && cursor_x <= x_end
       && cursor_y >= y_start && cursor_y <= y_end) {
-    GdkColormap *cmap;
     GdkColor color;
 
     if (((backgnd.color.red + backgnd.color.green + backgnd.color.blue) / 3) >
@@ -898,16 +914,15 @@ field_expose_event (GtkWidget * widget, GdkEventExpose * event, gpointer gp)
     else
       gdk_color_parse ("#FFFFFF", &color);
 
-    cmap = gtk_widget_get_colormap (widget);
-    gdk_colormap_alloc_color (cmap, &color, FALSE, TRUE);
-    gdk_gc_set_foreground (gc, &color);
-
-    gdk_draw_rectangle (window, gc, FALSE,
-                        cursor_x * boxsize + 1, cursor_y * boxsize + 1,
-                        boxsize - 2, boxsize - 2);
+    gdk_cairo_set_source_color (cr, &color);
+    cairo_set_line_width (cr, 1.0);
+    cairo_rectangle (cr,
+                     cursor_x * boxsize + 1.5, cursor_y * boxsize + 1.5,
+                     boxsize - 2.5, boxsize - 2.5);
+    cairo_stroke (cr);
   }
 
-  g_object_unref (gc);
+  cairo_destroy (cr);
 
   draw_grid ();
 
