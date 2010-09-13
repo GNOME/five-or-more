@@ -938,9 +938,10 @@ addscore (int num)
 
   while ((sctab[i].num != num) && (sctab[i].num != 0))
     i++;
-  if (sctab[i].num == 0)
-    retval = 10 + (int) pow ((double) 2.0, (double) (num - 5));
-  else
+  if (sctab[i].num == 0) {
+    num-=5;
+    retval = sctab[num%5].score + 72 * (num/5) + (num-5)*24 ;
+  } else
     retval = sctab[i].score;
 
   score += retval;
