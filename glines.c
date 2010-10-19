@@ -121,13 +121,13 @@ static field_props field[MAXFIELDSIZE * MAXFIELDSIZE];
 /* Pre-rendering image data prepared from file. */
 static GamesPreimage *ball_preimage = NULL;
 /* The tile images with balls rendered on them. */
-static GdkPixmap *ball_pixmap = NULL;
+static cairo_surface_t *ball_surface = NULL;
 /* The balls rendered to a size appropriate for the preview. */
-static GdkPixmap *preview_pixmaps[7] = { NULL, NULL, NULL, NULL, NULL, NULL, NULL };
+static cairo_surface_t *preview_surfaces[7] = { NULL, NULL, NULL, NULL, NULL, NULL, NULL };
 
-/* A pixmap of a blank tile. */
-static GdkPixmap *blank_pixmap = NULL;
-static GdkPixmap *blank_preview_pixmap = NULL;
+/* A cairo_surface_t of a blank tile. */
+static cairo_surface_t *blank_surface = NULL;
+static cairo_surface_t *blank_preview_surface = NULL;
 
 static GtkWidget *fast_moves_toggle_button = NULL;
 
@@ -268,7 +268,7 @@ refresh_pixmaps (void)
   /* Since we get called both by configure and after loading an image.
    * it is possible the pixmaps aren't initialised. If they aren't
    * we don't do anything. */
-  if (!ball_pixmap)
+  if (!ball_surface)
     return;
 
   if (ball_preimage) {
@@ -298,7 +298,7 @@ refresh_pixmaps (void)
   g_free (warning_message);
   warning_message = NULL;
 
-  cr = gdk_cairo_create (ball_pixmap);
+  cr = cairo_create (ball_surface);
   gdk_cairo_set_source_color (cr, &backgnd.color);
 
   cairo_rectangle (cr, 0, 0, boxsize * 4, boxsize * 7);
@@ -307,7 +307,7 @@ refresh_pixmaps (void)
   gdk_cairo_set_source_pixbuf (cr, ball_pixbuf, 0, 0);
   cairo_mask (cr, cairo_get_source (cr));
 
-  cr_blank = gdk_cairo_create (blank_pixmap);
+  cr_blank = cairo_create (blank_surface);
   gdk_cairo_set_source_color (cr_blank, &backgnd.color);
 
   cairo_rectangle (cr_blank, 0, 0, boxsize, boxsize);
@@ -319,7 +319,7 @@ refresh_pixmaps (void)
 }
 
 static void
-refresh_preview_pixmaps (void)
+refresh_preview_surfaces (void)
 {
   guint i;
   GdkPixbuf *scaled = NULL;
@@ -342,8 +342,8 @@ refresh_preview_pixmaps (void)
    * This code assumes that each preview window is identical. */
 
   for (i = 0; i < 7; i++)
-    if (preview_pixmaps[i])
-      g_object_unref (preview_pixmaps[i]);
+    if (preview_surfaces[i])
+      cairo_surface_destroy (preview_surfaces[i]);
 
   if (ball_preimage)
     scaled = games_preimage_render (ball_preimage, 4 * preview_width,
@@ -356,9 +356,10 @@ refresh_preview_pixmaps (void)
   }
 
   for (i = 0; i < 7; i++) {
-    preview_pixmaps[i] = gdk_pixmap_new (gtk_widget_get_window (widget),
-                                         preview_width, preview_height, -1);
-    cr = gdk_cairo_create (preview_pixmaps[i]);
+    preview_surfaces[i] = gdk_window_create_similar_surface (gtk_widget_get_window (widget),
+                                                             CAIRO_CONTENT_COLOR_ALPHA,
+                                                             preview_width, preview_height);
+    cr = cairo_create (preview_surfaces[i]);
     gdk_cairo_set_source_color (cr, &gtk_widget_get_style (widget)->bg[GTK_STATE_NORMAL]);
     gdk_cairo_rectangle (cr, &preview_rect);
     cairo_fill (cr);
@@ -369,12 +370,13 @@ refresh_preview_pixmaps (void)
     cairo_destroy (cr);
   }
 
-  if (blank_preview_pixmap)
-    g_object_unref (blank_preview_pixmap);
+  if (blank_preview_surface)
+    cairo_surface_destroy (blank_preview_surface);
 
-  blank_preview_pixmap = gdk_pixmap_new (gtk_widget_get_window (widget), 
-                                         preview_width, preview_height, -1);
-  cr = gdk_cairo_create (blank_preview_pixmap);
+  blank_preview_surface = gdk_window_create_similar_surface (gtk_widget_get_window (widget),
+                                                             CAIRO_CONTENT_COLOR_ALPHA,
+                                                             preview_width, preview_height);
+  cr = cairo_create (blank_preview_surface);
   gdk_cairo_set_source_color (cr, &gtk_widget_get_style (widget)->bg[GTK_STATE_NORMAL]);
   gdk_cairo_rectangle (cr, &preview_rect);
   cairo_fill (cr);
@@ -472,19 +474,21 @@ init_preview (void)
 void
 draw_preview (void)
 {
+/*
   guint i;
 
   for (i = 0; i < MAXNPIECES; i++) {
 
     if (i < npieces)
       gdk_window_set_back_pixmap (gtk_widget_get_window (preview_widgets[i]),
-                                  preview_pixmaps[preview[i] - 1], FALSE);
+                                  preview_surfaces[preview[i] - 1], FALSE);
     else
       gdk_window_set_back_pixmap (gtk_widget_get_window (preview_widgets[i]),
-                                  blank_preview_pixmap, FALSE);
+                                  blank_preview_surface, FALSE);
 
     gdk_window_clear (gtk_widget_get_window (preview_widgets[i]));
   }
+*/
 
 }
 
@@ -828,19 +832,15 @@ key_press_event (GtkWidget * widget, GdkEventKey * event, void *d)
 }
 
 static void
-draw_grid (void)
+draw_grid (cairo_t *cr)
 {
-  cairo_t *cr;
   GdkColor color;
   guint w, h;
   guint i;
-  GtkAllocation allocation;
 
-  gtk_widget_get_allocation (draw_area, &allocation);
-  w = allocation.width;
-  h = allocation.height;
+  w = gtk_widget_get_allocated_width(draw_area);
+  h = gtk_widget_get_allocated_height(draw_area);
 
-  cr = gdk_cairo_create (gtk_widget_get_window (draw_area));
   gdk_color_parse ("#525F6C", &color);
   gdk_cairo_set_source_color (cr, &color);
   cairo_set_line_width (cr, 1.0);
@@ -859,28 +859,16 @@ draw_grid (void)
 
   cairo_rectangle (cr, 0.5, 0.5, w - 0.5, h - 0.5);
   cairo_stroke (cr);
-
-  cairo_destroy (cr);
 }
 
-/* Redraw a part of the field */
 static gboolean
-field_expose_event (GtkWidget * widget, GdkEventExpose * event, gpointer gp)
+field_draw_callback (GtkWidget * widget, cairo_t *cr)
 {
-  GdkWindow *window = gtk_widget_get_window (widget);
-  cairo_t *cr;
-  guint x_start, x_end, y_start, y_end, i, j, idx;
+  guint i, j, idx;
+  GdkColor cursorColor;
 
-  x_start = event->area.x / boxsize;
-  x_end = (event->area.x + event->area.width - 1) / boxsize + 1;
-
-  y_start = event->area.y / boxsize;
-  y_end = (event->area.y + event->area.height - 1) / boxsize + 1;
-
-  cr = gdk_cairo_create (window);
-
-  for (i = y_start; i < y_end; i++) {
-    for (j = x_start; j < x_end; j++) {
+  for (i = 0; i < hfieldsize; i++) {
+    for (j = 0; j < vfieldsize; j++) {
       int phase, color;
 
       idx = j + i * hfieldsize;
@@ -893,38 +881,32 @@ field_expose_event (GtkWidget * widget, GdkEventExpose * event, gpointer gp)
 
         phase = ABS (ABS (3 - phase) - 3);
 
-        gdk_cairo_set_source_pixmap (cr, ball_pixmap,
-                                     (1.0 * j - phase) * boxsize,
-                                     (1.0 * i - color) * boxsize);
+        cairo_set_source_surface (cr, ball_surface,
+                                 (1.0 * j - phase) * boxsize,
+                                 (1.0 * i - color) * boxsize);
       } else {
-        gdk_cairo_set_source_pixmap (cr, blank_pixmap, 0, 0);
+        cairo_set_source_surface (cr, blank_surface, 1.0 * j * boxsize, 1.0 * i * boxsize);
       }
 
       cairo_fill (cr);
     }
   }
 
-  if (show_cursor && cursor_x >= x_start && cursor_x <= x_end
-      && cursor_y >= y_start && cursor_y <= y_end) {
-    GdkColor color;
+  /* Cursor */
+  if (((backgnd.color.red + backgnd.color.green + backgnd.color.blue) / 3) >
+      (G_MAXUINT16 / 2))
+    gdk_color_parse ("#000000", &cursorColor);
+  else
+    gdk_color_parse ("#FFFFFF", &cursorColor);
 
-    if (((backgnd.color.red + backgnd.color.green + backgnd.color.blue) / 3) >
-        (G_MAXUINT16 / 2))
-      gdk_color_parse ("#000000", &color);
-    else
-      gdk_color_parse ("#FFFFFF", &color);
+  gdk_cairo_set_source_color (cr, &cursorColor);
+  cairo_set_line_width (cr, 1.0);
+  cairo_rectangle (cr,
+                   cursor_x * boxsize + 1.5, cursor_y * boxsize + 1.5,
+                   boxsize - 2.5, boxsize - 2.5);
+  cairo_stroke (cr);
 
-    gdk_cairo_set_source_color (cr, &color);
-    cairo_set_line_width (cr, 1.0);
-    cairo_rectangle (cr,
-                     cursor_x * boxsize + 1.5, cursor_y * boxsize + 1.5,
-                     boxsize - 2.5, boxsize - 2.5);
-    cairo_stroke (cr);
-  }
-
-  cairo_destroy (cr);
-
-  draw_grid ();
+  draw_grid (cr);
 
   return FALSE;
 }
@@ -1249,9 +1231,6 @@ game_about_callback (GtkAction * action, gpointer * data)
 static void
 set_backgnd_color (const gchar * str)
 {
-  GdkColormap *colormap;
-  GtkStyle *widget_style, *temp_style;
-
   if (!str)
     str = g_strdup ("#000000");
 
@@ -1263,17 +1242,6 @@ set_backgnd_color (const gchar * str)
   if (!gdk_color_parse (backgnd.name, &backgnd.color)) {
     gdk_color_parse ("#000000", &backgnd.color);
   }
-
-  colormap = gtk_widget_get_colormap (draw_area);
-  gdk_colormap_alloc_color (colormap, &backgnd.color, FALSE, TRUE);
-  widget_style = gtk_widget_get_style (draw_area);
-  temp_style = gtk_style_copy (widget_style);
-  temp_style->bg[0] = backgnd.color;
-  temp_style->bg[1] = backgnd.color;
-  temp_style->bg[2] = backgnd.color;
-  temp_style->bg[3] = backgnd.color;
-  temp_style->bg[4] = backgnd.color;
-  gtk_widget_set_style (draw_area, temp_style);
 }
 
 static void
@@ -1301,7 +1269,7 @@ load_theme (void)
   ball_preimage = load_image (ball_filename);
 
   refresh_pixmaps ();
-  refresh_preview_pixmaps ();
+  refresh_preview_surfaces ();
 }
 
 static void
@@ -1550,7 +1518,7 @@ preview_configure_cb (GtkWidget * widget, GdkEventConfigure * event)
   preview_width = event->width;
   preview_height = event->height;
 
-  refresh_preview_pixmaps ();
+  refresh_preview_surfaces ();
 
   draw_preview ();
 
@@ -1560,17 +1528,19 @@ preview_configure_cb (GtkWidget * widget, GdkEventConfigure * event)
 static int
 configure_event_callback (GtkWidget * widget, GdkEventConfigure * event)
 {
-  if (ball_pixmap)
-    g_object_unref (ball_pixmap);
+  if (ball_surface)
+    cairo_surface_destroy(ball_surface);
 
-  if (blank_pixmap)
-    g_object_unref (blank_pixmap);
+  if (blank_surface)
+    cairo_surface_destroy (blank_surface);
 
   boxsize = (event->width - 1) / hfieldsize;
-  ball_pixmap = gdk_pixmap_new (gtk_widget_get_window (draw_area), boxsize * 4, 
-                                boxsize * 7, -1);
-  blank_pixmap = gdk_pixmap_new (gtk_widget_get_window (draw_area), boxsize, 
-                                 boxsize, -1);
+  ball_surface = gdk_window_create_similar_surface (gtk_widget_get_window (draw_area),
+                                                    CAIRO_CONTENT_COLOR_ALPHA,
+                                                    boxsize * 4, boxsize * 7);
+  blank_surface = gdk_window_create_similar_surface (gtk_widget_get_window (draw_area),
+                                                     CAIRO_CONTENT_COLOR_ALPHA,
+                                                     boxsize, boxsize);
   refresh_pixmaps ();
 
   refresh_screen ();
@@ -1832,7 +1802,7 @@ main (int argc, char *argv[])
   ui_manager = gtk_ui_manager_new ();
 
   games_stock_prepare_for_statusbar_tooltips (ui_manager, statusbar);
-  gtk_window_set_has_resize_grip (GTK_WINDOW (app), FALSE);
+  gtk_window_set_has_resize_grip (GTK_WINDOW (app), TRUE);
 
   vbox = gtk_vbox_new (FALSE, 0);
   gtk_container_add (GTK_CONTAINER (app), vbox);
@@ -1891,8 +1861,8 @@ main (int argc, char *argv[])
                     G_CALLBACK (key_press_event), NULL);
   g_signal_connect (draw_area, "configure-event",
                     G_CALLBACK (configure_event_callback), NULL);
-  g_signal_connect (draw_area, "expose-event",
-                    G_CALLBACK (field_expose_event), NULL);
+  g_signal_connect (draw_area, "draw",
+                    G_CALLBACK (field_draw_callback), NULL);
   gridframe = games_grid_frame_new (hfieldsize, vfieldsize);
   games_grid_frame_set_padding (GAMES_GRID_FRAME (gridframe), 1, 1);
   gtk_container_add (GTK_CONTAINER (gridframe), draw_area);
