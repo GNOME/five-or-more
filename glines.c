@@ -783,42 +783,42 @@ key_press_event (GtkWidget * widget, GdkEventKey * event, void *d)
   key = event->keyval;
 
   switch (key) {
-  case GDK_Left:
-  case GDK_KP_Left:
+  case GDK_KEY_Left:
+  case GDK_KEY_KP_Left:
     move_cursor (-1, 0);
     break;
-  case GDK_Right:
-  case GDK_KP_Right:
+  case GDK_KEY_Right:
+  case GDK_KEY_KP_Right:
     move_cursor (1, 0);
     break;
-  case GDK_Up:
-  case GDK_KP_Up:
+  case GDK_KEY_Up:
+  case GDK_KEY_KP_Up:
     move_cursor (0, -1);
     break;
-  case GDK_Down:
-  case GDK_KP_Down:
+  case GDK_KEY_Down:
+  case GDK_KEY_KP_Down:
     move_cursor (0, 1);
     break;
-  case GDK_Home:
-  case GDK_KP_Home:
+  case GDK_KEY_Home:
+  case GDK_KEY_KP_Home:
     move_cursor (-999, 0);
     break;
-  case GDK_End:
-  case GDK_KP_End:
+  case GDK_KEY_End:
+  case GDK_KEY_KP_End:
     move_cursor (999, 0);
     break;
-  case GDK_Page_Up:
-  case GDK_KP_Page_Up:
+  case GDK_KEY_Page_Up:
+  case GDK_KEY_KP_Page_Up:
     move_cursor (0, -999);
     break;
-  case GDK_Page_Down:
-  case GDK_KP_Page_Down:
+  case GDK_KEY_Page_Down:
+  case GDK_KEY_KP_Page_Down:
     move_cursor (0, 999);
     break;
 
-  case GDK_space:
-  case GDK_Return:
-  case GDK_KP_Enter:
+  case GDK_KEY_space:
+  case GDK_KEY_Return:
+  case GDK_KEY_KP_Enter:
     if (show_cursor)
       cell_clicked (widget, cursor_x, cursor_y);
     break;
@@ -1438,7 +1438,6 @@ game_props_callback (void)
                                                GTK_DIALOG_DESTROY_WITH_PARENT,
                                                GTK_STOCK_CLOSE,
                                                GTK_RESPONSE_CLOSE, NULL);
-    gtk_dialog_set_has_separator (GTK_DIALOG (pref_dialog), FALSE);
     g_signal_connect (pref_dialog, "response",
                       G_CALLBACK (pref_dialog_response), NULL);
     g_signal_connect (pref_dialog, "delete-event",
@@ -1833,7 +1832,7 @@ main (int argc, char *argv[])
   ui_manager = gtk_ui_manager_new ();
 
   games_stock_prepare_for_statusbar_tooltips (ui_manager, statusbar);
-  gtk_statusbar_set_has_resize_grip (GTK_STATUSBAR (statusbar), FALSE);
+  gtk_window_set_has_resize_grip (GTK_WINDOW (app), FALSE);
 
   vbox = gtk_vbox_new (FALSE, 0);
   gtk_container_add (GTK_CONTAINER (app), vbox);
