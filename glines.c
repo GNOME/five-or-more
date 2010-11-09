@@ -1208,11 +1208,7 @@ game_about_callback (GtkAction * action, gpointer * data)
   gchar *license = games_get_license (_("Five or More"));
 
   gtk_show_about_dialog (GTK_WINDOW (app),
-#if GTK_CHECK_VERSION (2, 11, 0)
                          "program-name", _("Five or More"),
-#else
-                         "name", _("Five or More"),
-#endif
                          "version", VERSION,
                          "comments", _("GNOME port of the once-popular Color Lines game.\n\nFive or More is a part of GNOME Games."),
                          "copyright",
