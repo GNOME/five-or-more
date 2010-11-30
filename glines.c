@@ -867,8 +867,8 @@ field_draw_callback (GtkWidget * widget, cairo_t *cr)
   guint i, j, idx;
   GdkColor cursorColor;
 
-  for (i = 0; i < hfieldsize; i++) {
-    for (j = 0; j < vfieldsize; j++) {
+  for (i = 0; i < vfieldsize; i++) {
+    for (j = 0; j < hfieldsize; j++) {
       int phase, color;
 
       idx = j + i * hfieldsize;
