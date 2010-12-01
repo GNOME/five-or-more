@@ -474,22 +474,21 @@ init_preview (void)
 void
 draw_preview (void)
 {
-/*
   guint i;
+  cairo_pattern_t *pattern;
 
   for (i = 0; i < MAXNPIECES; i++) {
 
     if (i < npieces)
-      gdk_window_set_back_pixmap (gtk_widget_get_window (preview_widgets[i]),
-                                  preview_surfaces[preview[i] - 1], FALSE);
+      pattern = cairo_pattern_create_for_surface (preview_surfaces[preview[i] - 1]);
     else
-      gdk_window_set_back_pixmap (gtk_widget_get_window (preview_widgets[i]),
-                                  blank_preview_surface, FALSE);
+      pattern = cairo_pattern_create_for_surface (blank_preview_surface);
 
-    gdk_window_clear (gtk_widget_get_window (preview_widgets[i]));
+    gdk_window_set_background_pattern (gtk_widget_get_window (preview_widgets[i]),
+                                       pattern);
+    cairo_pattern_destroy (pattern);
+    gtk_widget_queue_draw (preview_widgets[i]);
   }
-*/
-
 }
 
 static void
