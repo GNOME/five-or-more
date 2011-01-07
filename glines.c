@@ -1587,26 +1587,6 @@ quit_cb (EggSMClient *client,
   return FALSE;
 }
 
-#endif /* WITH_SMCLIENT */
-
-static void
-load_properties (void)
-{
-  gchar *buf;
-
-  ball_filename = games_conf_get_string_with_default (KEY_PREFERENCES_GROUP, KEY_BALL_THEME, DEFAULT_BALL_THEME);
-
-  move_timeout = games_conf_get_integer (KEY_PREFERENCES_GROUP, KEY_MOVE_TIMEOUT, NULL);
-  if (move_timeout <= 0)
-    move_timeout = 100;
-
-  buf = games_conf_get_string_with_default (KEY_PREFERENCES_GROUP, KEY_BACKGROUND_COLOR, "#000000"); /* FIXMEchpe? */
-  set_backgnd_color (buf);
-  g_free (buf);
-
-  load_theme ();
-}
-
 static void
 restart (void)
 {
@@ -1636,6 +1616,26 @@ restart (void)
       preview[i] = CLAMP (buf[i] - 'h', 1, ncolors);
     g_free (buf);
   }
+}
+
+#endif /* WITH_SMCLIENT */
+
+static void
+load_properties (void)
+{
+  gchar *buf;
+
+  ball_filename = games_conf_get_string_with_default (KEY_PREFERENCES_GROUP, KEY_BALL_THEME, DEFAULT_BALL_THEME);
+
+  move_timeout = games_conf_get_integer (KEY_PREFERENCES_GROUP, KEY_MOVE_TIMEOUT, NULL);
+  if (move_timeout <= 0)
+    move_timeout = 100;
+
+  buf = games_conf_get_string_with_default (KEY_PREFERENCES_GROUP, KEY_BACKGROUND_COLOR, "#000000"); /* FIXMEchpe? */
+  set_backgnd_color (buf);
+  g_free (buf);
+
+  load_theme ();
 }
 
 static const GtkActionEntry actions[] = {
