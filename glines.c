@@ -39,7 +39,6 @@
 #include <libgames-support/games-files.h>
 #include <libgames-support/games-frame.h>
 #include <libgames-support/games-gridframe.h>
-#include <libgames-support/games-gtk-compat.h>
 #include <libgames-support/games-help.h>
 #include <libgames-support/games-preimage.h>
 #include <libgames-support/games-runtime.h>
