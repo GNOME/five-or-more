@@ -889,18 +889,20 @@ field_draw_callback (GtkWidget * widget, cairo_t *cr)
   }
 
   /* Cursor */
-  if (((backgnd.color.red + backgnd.color.green + backgnd.color.blue) / 3) >
-      (G_MAXUINT16 / 2))
-    gdk_color_parse ("#000000", &cursorColor);
-  else
-    gdk_color_parse ("#FFFFFF", &cursorColor);
+  if (show_cursor) {
+    if (((backgnd.color.red + backgnd.color.green + backgnd.color.blue) / 3) >
+        (G_MAXUINT16 / 2))
+      gdk_color_parse ("#000000", &cursorColor);
+    else
+      gdk_color_parse ("#FFFFFF", &cursorColor);
 
-  gdk_cairo_set_source_color (cr, &cursorColor);
-  cairo_set_line_width (cr, 1.0);
-  cairo_rectangle (cr,
-                   cursor_x * boxsize + 1.5, cursor_y * boxsize + 1.5,
-                   boxsize - 2.5, boxsize - 2.5);
-  cairo_stroke (cr);
+    gdk_cairo_set_source_color (cr, &cursorColor);
+    cairo_set_line_width (cr, 1.0);
+    cairo_rectangle (cr,
+                     cursor_x * boxsize + 1.5, cursor_y * boxsize + 1.5,
+                     boxsize - 2.5, boxsize - 2.5);
+    cairo_stroke (cr);
+  }
 
   draw_grid (cr);
 
