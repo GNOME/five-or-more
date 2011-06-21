@@ -323,8 +323,13 @@ refresh_preview_surfaces (void)
   guint i;
   GdkPixbuf *scaled = NULL;
   GtkWidget *widget = preview_widgets[0];
+  GtkStyleContext *context;
+  GdkRGBA bg;
   cairo_t *cr;
   GdkRectangle preview_rect;
+
+  context = gtk_widget_get_style_context (widget);
+  gtk_style_context_get_background_color (context, GTK_STATE_FLAG_NORMAL, &bg);
 
   /* Like the refresh_pixmaps() function, we may be called before
    * the window is ready. */
@@ -359,7 +364,7 @@ refresh_preview_surfaces (void)
                                                              CAIRO_CONTENT_COLOR_ALPHA,
                                                              preview_width, preview_height);
     cr = cairo_create (preview_surfaces[i]);
-    gdk_cairo_set_source_color (cr, &gtk_widget_get_style (widget)->bg[GTK_STATE_NORMAL]);
+    gdk_cairo_set_source_rgba (cr, &bg);
     gdk_cairo_rectangle (cr, &preview_rect);
     cairo_fill (cr);
 
@@ -376,7 +381,7 @@ refresh_preview_surfaces (void)
                                                              CAIRO_CONTENT_COLOR_ALPHA,
                                                              preview_width, preview_height);
   cr = cairo_create (blank_preview_surface);
-  gdk_cairo_set_source_color (cr, &gtk_widget_get_style (widget)->bg[GTK_STATE_NORMAL]);
+  gdk_cairo_set_source_rgba (cr, &bg);
   gdk_cairo_rectangle (cr, &preview_rect);
   cairo_fill (cr);
 
@@ -1409,7 +1414,7 @@ game_props_callback (void)
     gtk_container_set_border_width (GTK_CONTAINER (pref_dialog), 5);
     gtk_box_set_spacing (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (pref_dialog))), 2);
 
-    vbox = gtk_vbox_new (FALSE, 18);
+    vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 18);
     gtk_container_set_border_width (GTK_CONTAINER (vbox), 5);
     gtk_box_pack_start (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (pref_dialog))),
                         vbox, FALSE, FALSE, 0);
@@ -1449,7 +1454,7 @@ game_props_callback (void)
 
 
     frame = games_frame_new (_("Board Size"));
-    fv = gtk_vbox_new (FALSE, 6);
+    fv = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
     gtk_container_add (GTK_CONTAINER (frame), fv);
     gtk_box_pack_start (GTK_BOX (vbox), frame, FALSE, FALSE, 0);
 
@@ -1468,7 +1473,7 @@ game_props_callback (void)
     }
 
     frame = games_frame_new (C_("preferences", "General"));
-    fv = gtk_vbox_new (FALSE, 6);
+    fv = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
     gtk_container_add (GTK_CONTAINER (frame), fv);
     gtk_box_pack_start (GTK_BOX (vbox), frame, FALSE, FALSE, 0);
 
@@ -1795,7 +1800,7 @@ main (int argc, char *argv[])
   games_stock_prepare_for_statusbar_tooltips (ui_manager, statusbar);
   gtk_window_set_has_resize_grip (GTK_WINDOW (app), TRUE);
 
-  vbox = gtk_vbox_new (FALSE, 0);
+  vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
   gtk_container_add (GTK_CONTAINER (app), vbox);
 
   create_menus (ui_manager);
@@ -1804,7 +1809,7 @@ main (int argc, char *argv[])
   table = gtk_table_new (2, 1, TRUE);
   gtk_box_pack_start (GTK_BOX (vbox), table, TRUE, TRUE, 0);
   gtk_box_pack_start (GTK_BOX (vbox), statusbar, FALSE, FALSE, 0);
-  hbox = gtk_hbox_new (FALSE, 0);
+  hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
 
   gtk_table_attach_defaults (GTK_TABLE (table), hbox, 0, 1, 0, 1);
   top_pane = hbox;
@@ -1819,7 +1824,7 @@ main (int argc, char *argv[])
   games_grid_frame_set_alignment (GAMES_GRID_FRAME (gridframe), 0, 0.5);
   gtk_box_pack_start (GTK_BOX (hbox), gridframe, TRUE, TRUE, 0);
 
-  preview_hbox = gtk_hbox_new (FALSE, 0);
+  preview_hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
   gtk_container_add (GTK_CONTAINER (gridframe), preview_hbox);
 
   for (i = 0; i < MAXNPIECES; i++) {
