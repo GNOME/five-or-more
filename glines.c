@@ -35,7 +35,6 @@
 #include <gdk-pixbuf/gdk-pixbuf.h>
 #include <gdk/gdkkeysyms.h>
 
-#include <libgames-support/games-conf.h>
 #include <libgames-support/games-files.h>
 #include <libgames-support/games-frame.h>
 #include <libgames-support/games-gridframe.h>
@@ -44,6 +43,7 @@
 #include <libgames-support/games-runtime.h>
 #include <libgames-support/games-scores.h>
 #include <libgames-support/games-scores-dialog.h>
+#include <libgames-support/games-settings.h>
 #include <libgames-support/games-stock.h>
 #include <libgames-support/games-fullscreen-action.h>
 
@@ -53,13 +53,11 @@
 
 #include "glines.h"
 
-#define KEY_PREFERENCES_GROUP "preferences"
-#define KEY_BACKGROUND_COLOR  "background_color"
-#define KEY_BALL_THEME        "ball_theme"
-#define KEY_MOVE_TIMEOUT      "move_timeout"
+#define KEY_BACKGROUND_COLOR  "background-color"
+#define KEY_BALL_THEME        "ball-theme"
+#define KEY_MOVE_TIMEOUT      "move-timeout"
 #define KEY_SIZE              "size"
 
-#define KEY_SAVED_GROUP   "saved"
 #define KEY_SAVED_SCORE   "score"
 #define KEY_SAVED_FIELD   "field"
 #define KEY_SAVED_PREVIEW "preview"
@@ -92,6 +90,7 @@ static const GamesScoresCategory scorecats[] = {
 };
 
 static GamesScores *highscores;
+static GSettings *settings;
 
 static gint hfieldsize;
 static gint vfieldsize;
@@ -1253,7 +1252,7 @@ set_sizes (gint size)
   game_size = size;
   games_scores_set_category (highscores, scorecats[size - 1].key);
 
-  games_conf_set_integer (KEY_PREFERENCES_GROUP, KEY_SIZE, size);
+  g_settings_set_int (settings, KEY_SIZE, size);
 
   if (gridframe)
     games_grid_frame_set (GAMES_GRID_FRAME (gridframe),
@@ -1272,18 +1271,12 @@ load_theme (void)
 }
 
 static void
-conf_value_changed_cb (GamesConf *conf,
-                       const char *group,
-                       const char *key,
-                       gpointer user_data)
+conf_value_changed_cb (GSettings *settings, gchar *key)
 {
-  if (!group || strcmp (group, KEY_PREFERENCES_GROUP) != 0)
-    return;
-
   if (strcmp (key, KEY_BACKGROUND_COLOR) == 0) {
     gchar *color;
 
-    color = games_conf_get_string (KEY_PREFERENCES_GROUP, KEY_BACKGROUND_COLOR, NULL);
+    color = g_settings_get_string (settings, KEY_BACKGROUND_COLOR);
     if (color != NULL) {
       set_backgnd_color (color);
       g_free (color);
@@ -1291,7 +1284,7 @@ conf_value_changed_cb (GamesConf *conf,
   } else if (strcmp (key, KEY_BALL_THEME) == 0) {
     gchar *theme_tmp = NULL;
 
-    theme_tmp = games_conf_get_string (KEY_PREFERENCES_GROUP, KEY_BALL_THEME, NULL);
+    theme_tmp = g_settings_get_string (settings, KEY_BALL_THEME);
     if (theme_tmp) {
       if (strcmp (theme_tmp, ball_filename) != 0) {
         g_free (ball_filename);
@@ -1305,7 +1298,7 @@ conf_value_changed_cb (GamesConf *conf,
   } else if (strcmp (key, KEY_MOVE_TIMEOUT) == 0) {
     gint timeout_tmp;
 
-    timeout_tmp = games_conf_get_integer (KEY_PREFERENCES_GROUP, KEY_MOVE_TIMEOUT, NULL);
+    timeout_tmp = g_settings_get_int (settings, KEY_MOVE_TIMEOUT);
     timeout_tmp = CLAMP (timeout_tmp, 1, 1000);
     if (timeout_tmp != move_timeout)
       move_timeout = timeout_tmp;
@@ -1315,7 +1308,7 @@ conf_value_changed_cb (GamesConf *conf,
 
   } else if (strcmp (key, KEY_SIZE) == 0) {
     gint size_tmp;
-    size_tmp = games_conf_get_integer (KEY_PREFERENCES_GROUP, KEY_SIZE, NULL);
+    size_tmp = g_settings_get_int (settings, KEY_SIZE);
 
     if (size_tmp != game_size) {
       set_sizes (size_tmp);
@@ -1336,14 +1329,14 @@ bg_color_callback (GtkWidget * widget, gpointer data)
 
   g_snprintf (str, sizeof (str), "#%04x%04x%04x", c.red, c.green, c.blue);
 
-  games_conf_set_string (KEY_PREFERENCES_GROUP, KEY_BACKGROUND_COLOR, str);
+  g_settings_set_string (settings, KEY_BACKGROUND_COLOR, str);
 }
 
 static void
 size_callback (GtkWidget * widget, gpointer data)
 {
   if (pref_dialog_done)
-    games_conf_set_integer (KEY_PREFERENCES_GROUP, KEY_SIZE, GPOINTER_TO_INT (data));
+    g_settings_set_int (settings, KEY_SIZE, GPOINTER_TO_INT (data));
 }
 
 static void
@@ -1354,7 +1347,7 @@ set_selection (GtkWidget * widget, char *data)
   entry = games_file_list_get_nth (theme_file_list,
                                    gtk_combo_box_get_active (GTK_COMBO_BOX
                                                              (widget)));
-  games_conf_set_string (KEY_PREFERENCES_GROUP, KEY_BALL_THEME, entry);
+  g_settings_set_string (settings, KEY_BALL_THEME, entry);
 }
 
 static GtkWidget *
@@ -1379,7 +1372,7 @@ set_fast_moves_callback (GtkWidget * widget, gpointer * data)
 {
   gboolean is_on = gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (widget));
   gint timeout = is_on ? 10 : 100;
-  games_conf_set_integer (KEY_PREFERENCES_GROUP, KEY_MOVE_TIMEOUT, timeout);
+  g_settings_set_int (settings, KEY_MOVE_TIMEOUT, timeout);
 }
 
 static void
@@ -1558,7 +1551,7 @@ save_state_cb (EggSMClient *client,
   char *argv[1];
   int i;
 
-  games_conf_set_integer (KEY_SAVED_GROUP, KEY_SAVED_SCORE, score);
+  g_settings_set_int (settings, KEY_SAVED_SCORE, score);
 
   buf = g_malloc (hfieldsize * vfieldsize * 4 + 1);
   for (i = 0; i < hfieldsize * vfieldsize; i++) {
@@ -1568,11 +1561,11 @@ save_state_cb (EggSMClient *client,
     buf[i * 4 + 3] = field[i].active + 'h';
   }
   buf[hfieldsize * vfieldsize * 4] = '\0';
-  games_conf_set_string (KEY_SAVED_GROUP, KEY_SAVED_FIELD, buf);
+  g_settings_set_string (settings, KEY_SAVED_FIELD, buf);
   for (i = 0; i < npieces; i++)
     buf[i] = preview[i] + 'h';
   buf[npieces] = '\0';
-  games_conf_set_string (KEY_SAVED_GROUP, KEY_SAVED_PREVIEW, buf);
+  g_settings_set_string (settings, KEY_SAVED_PREVIEW, buf);
   g_free (buf);
 
   argv[argc++] = g_get_prgname ();
@@ -1601,9 +1594,9 @@ restart (void)
    * restore the game the score has to be stored somewhere
    * and without some sort of restricted-access storage the
    * user will always be able to change it. */
-  score = games_conf_get_integer (KEY_SAVED_GROUP, KEY_SAVED_SCORE, NULL);
+  score = g_settings_get_int (settings, KEY_SAVED_SCORE);
 
-  buf = games_conf_get_string (KEY_SAVED_GROUP, KEY_SAVED_FIELD, NULL);
+  buf = g_settings_get_string (settings, KEY_SAVED_FIELD);
   if (buf) {
     for (i = 0; i < hfieldsize * vfieldsize; i++) {
       field[i].color = CLAMP (buf[i * 4] - 'h', 1, ncolors);
@@ -1614,7 +1607,7 @@ restart (void)
     }
     g_free (buf);
   }
-  buf = games_conf_get_string (KEY_SAVED_GROUP, KEY_SAVED_PREVIEW, NULL);
+  buf = g_settings_get_string (settings, KEY_SAVED_PREVIEW);
   if (buf) {
     for (i = 0; i < npieces; i++)
       preview[i] = CLAMP (buf[i] - 'h', 1, ncolors);
@@ -1629,13 +1622,13 @@ load_properties (void)
 {
   gchar *buf;
 
-  ball_filename = games_conf_get_string_with_default (KEY_PREFERENCES_GROUP, KEY_BALL_THEME, DEFAULT_BALL_THEME);
+  ball_filename = g_settings_get_string (settings, KEY_BALL_THEME);
 
-  move_timeout = games_conf_get_integer (KEY_PREFERENCES_GROUP, KEY_MOVE_TIMEOUT, NULL);
+  move_timeout = g_settings_get_int (settings, KEY_MOVE_TIMEOUT);
   if (move_timeout <= 0)
     move_timeout = 100;
 
-  buf = games_conf_get_string_with_default (KEY_PREFERENCES_GROUP, KEY_BACKGROUND_COLOR, "#000000"); /* FIXMEchpe? */
+  buf = g_settings_get_string (settings, KEY_BACKGROUND_COLOR); /* FIXMEchpe? */
   set_backgnd_color (buf);
   g_free (buf);
 
@@ -1704,10 +1697,10 @@ create_menus (GtkUIManager * ui_manager)
 static void
 init_config (void)
 {
-  g_signal_connect (games_conf_get_default (), "value-changed",
+  g_signal_connect (settings, "changed",
                     G_CALLBACK (conf_value_changed_cb), NULL);
 
-  game_size = games_conf_get_integer (KEY_PREFERENCES_GROUP, KEY_SIZE, NULL);
+  game_size = g_settings_get_int (settings, KEY_SIZE);
   if (game_size == UNSET)
     game_size = DEFAULT_GAME_SIZE;
 
@@ -1757,7 +1750,7 @@ main (int argc, char *argv[])
 
   g_set_application_name (_("Five or More"));
 
-  games_conf_initialise ("GLines");
+  settings = g_settings_new ("org.gnome.glines");
 
   highscores = games_scores_new ("glines",
                                  scorecats, G_N_ELEMENTS (scorecats),
@@ -1792,7 +1785,8 @@ main (int argc, char *argv[])
   gtk_window_set_default_size (GTK_WINDOW (app), DEFAULT_WIDTH, DEFAULT_HEIGHT);
   g_signal_connect (app, "delete-event",
                     G_CALLBACK (game_quit_callback), NULL);
-  games_conf_add_window (GTK_WINDOW (app), NULL);
+
+  games_settings_bind_window_state ("/org/gnome/glines/", GTK_WINDOW (app));
 
   statusbar = gtk_statusbar_new ();
   ui_manager = gtk_ui_manager_new ();
@@ -1886,7 +1880,7 @@ main (int argc, char *argv[])
   if (ball_preimage)
     g_object_unref (ball_preimage);
 
-  games_conf_shutdown ();
+  g_settings_sync();
 
 #ifdef WITH_SMCLIENT
   g_signal_handlers_disconnect_matched (sm_client, G_SIGNAL_MATCH_DATA,

@@ -49,13 +49,10 @@ glines_CFLAGS += $(GHTREAD_CFLAGS)
 glines_LDADD += $(GTHREAD_LIBS)
 endif
 
-schema_in_files = glines.schemas.in
-if HAVE_GNOME
-schemadir = $(GCONF_SCHEMA_FILE_DIR)
-schema_DATA = $(schema_in_files:.schemas.in=.schemas)
-endif
-
-@INTLTOOL_SCHEMAS_RULE@
+gsettings_in_file = org.gnome.glines.gschema.xml.in
+gsettings_SCHEMAS = $(gsettings_in_file:.xml.in=.xml)
+@INTLTOOL_XML_NOMERGE_RULE@
+@GSETTINGS_RULES@
 
 man_MANS = glines.6
 
@@ -66,27 +63,18 @@ desktop_DATA = $(desktop_in_files:.desktop.in.in=.desktop)
 
 EXTRA_DIST = 			\
 	$(pixmap_DATA)		\
-	$(schema_in_files)	\
+	$(gsettings_in_file)    \
 	$(man_MANS)		\
 	$(NULL)
 
-CLEANFILES = $(desktop_DATA) $(schema_DATA)
-DISTCLEANFILES = $(desktop_DATA) $(schema_DATA)
+CLEANFILES = $(desktop_DATA) $(gsettings_SCHEMAS)
+DISTCLEANFILES = $(desktop_DATA) $(gsettings_SCHEMAS)
 
 SCOREFILES = \
 	Small	\
 	Medium	\
 	Large	\
 	$(NULL)
-
-install-schemas-local: $(schema_DATA)
-if GCONF_SCHEMAS_INSTALL
-	if test -z "$(DESTDIR)" ; then \
-		for p in $^ ; do \
-			GCONF_CONFIG_SOURCE=$(GCONF_SCHEMA_CONFIG_SOURCE) $(GCONFTOOL) --makefile-install-rule $$p 2>&1 > /dev/null; \
-		done \
-	fi
-endif
 
 install-scorefiles-local:
 	-$(mkinstalldirs) $(DESTDIR)$(scoredir)
@@ -102,7 +90,7 @@ install-scorefiles-local:
 	  chmod 664 $(DESTDIR)$(scoredir)/glines.$$i.scores; \
 	done
 
-install-data-local: install-schemas-local install-scorefiles-local
+install-data-local: install-scorefiles-local
 
 install-exec-hook:
 	-if test "$(setgid)" = "true"; then \
