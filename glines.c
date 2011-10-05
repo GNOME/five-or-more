@@ -91,6 +91,7 @@ static const GamesScoresCategory scorecats[] = {
 
 static GamesScores *highscores;
 static GSettings *settings;
+static GtkBuilder *builder_preferences
 
 static gint hfieldsize;
 static gint vfieldsize;
@@ -126,8 +127,6 @@ static cairo_surface_t *preview_surfaces[7] = { NULL, NULL, NULL, NULL, NULL, NU
 /* A cairo_surface_t of a blank tile. */
 static cairo_surface_t *blank_surface = NULL;
 static cairo_surface_t *blank_preview_surface = NULL;
-
-static GtkWidget *fast_moves_toggle_button = NULL;
 
 static GamesFileList *theme_file_list = NULL;
 
@@ -1303,9 +1302,6 @@ conf_value_changed_cb (GSettings *settings, gchar *key)
     if (timeout_tmp != move_timeout)
       move_timeout = timeout_tmp;
 
-    gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (fast_moves_toggle_button),
-                                  (move_timeout == 10));
-
   } else if (strcmp (key, KEY_SIZE) == 0) {
     gint size_tmp;
     size_tmp = g_settings_get_int (settings, KEY_SIZE);
@@ -1384,104 +1380,63 @@ pref_dialog_response (GtkDialog * dialog, gint response, gpointer data)
 void
 game_props_callback (void)
 {
-  GtkWidget *w, *omenu, *l, *fv;
-  GtkWidget *frame;
-  GtkWidget *table;
-  GtkWidget *vbox;
-  GtkWidget *button;
-  int i;
-  GSList *group;
+  gchar *ui_path;
+  GError *error = NULL;
+  GtkWidget *omenu;
+  GtkWidget *grid;
+  GtkWidget *color_button;
+  GtkWidget *size_radio;
+  GtkWidget *fast_moves_checkbutton;
 
   if (!pref_dialog) {
-    pref_dialog = gtk_dialog_new_with_buttons (_("Five or More Preferences"),
-                                               GTK_WINDOW (app),
-                                               GTK_DIALOG_DESTROY_WITH_PARENT,
-                                               GTK_STOCK_CLOSE,
-                                               GTK_RESPONSE_CLOSE, NULL);
+    ui_path = g_build_filename (games_runtime_get_directory (GAMES_RUNTIME_GAME_DATA_DIRECTORY), "glines-preferences.ui", NULL);
+    builder_preferences = gtk_builder_new ();
+    gtk_builder_add_from_file (builder_preferences, ui_path, &error);
+    g_free (ui_path);
+
+    if (error) {
+      g_critical ("Unable to load the user interface file: %s", error->message);
+      g_error_free (error);
+      g_assert_not_reached ();
+    }
+
+    pref_dialog = GTK_WIDGET (gtk_builder_get_object (builder_preferences, "preferences_dialog"));
     g_signal_connect (pref_dialog, "response",
                       G_CALLBACK (pref_dialog_response), NULL);
     g_signal_connect (pref_dialog, "delete-event",
                       G_CALLBACK (gtk_widget_hide), NULL);
 
-    gtk_window_set_resizable (GTK_WINDOW (pref_dialog), FALSE);
-    gtk_container_set_border_width (GTK_CONTAINER (pref_dialog), 5);
-    gtk_box_set_spacing (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (pref_dialog))), 2);
-
-    vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 18);
-    gtk_container_set_border_width (GTK_CONTAINER (vbox), 5);
-    gtk_box_pack_start (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (pref_dialog))),
-                        vbox, FALSE, FALSE, 0);
-
-    frame = games_frame_new (_("Appearance"));
-    table = gtk_table_new (2, 2, FALSE);
-    gtk_container_set_border_width (GTK_CONTAINER (table), 0);
-    gtk_table_set_row_spacings (GTK_TABLE (table), 6);
-    gtk_table_set_col_spacings (GTK_TABLE (table), 12);
-    gtk_container_add (GTK_CONTAINER (frame), table);
-    gtk_box_pack_start (GTK_BOX (vbox), frame, FALSE, FALSE, 0);
-
-    l = gtk_label_new_with_mnemonic (_("_Image:"));
-    gtk_misc_set_alignment (GTK_MISC (l), 0, 0.5);
-    gtk_table_attach_defaults (GTK_TABLE (table), l, 0, 1, 0, 1);
-
+    grid = GTK_WIDGET (gtk_builder_get_object (builder_preferences, "grid1"));
     omenu = fill_menu ();
+    gtk_widget_show_all (GTK_WIDGET (omenu));
+    gtk_grid_attach (GTK_GRID (grid), GTK_WIDGET (omenu), 1, 0, 1, 1);
     g_signal_connect (omenu, "changed",
                       G_CALLBACK (set_selection), NULL);
-    gtk_table_attach_defaults (GTK_TABLE (table), omenu, 1, 2, 0, 1);
-    gtk_label_set_mnemonic_widget (GTK_LABEL (l), omenu);
 
+    color_button = GTK_WIDGET (gtk_builder_get_object (builder_preferences, "colorbutton1"));
+    gtk_color_button_set_color (GTK_COLOR_BUTTON (color_button), &backgnd.color);
+    g_signal_connect (color_button, "color-set",
+                      G_CALLBACK (bg_color_callback), NULL);
 
-    l = gtk_label_new_with_mnemonic (_("B_ackground color:"));
-    gtk_misc_set_alignment (GTK_MISC (l), 0, 0.5);
-    gtk_table_attach_defaults (GTK_TABLE (table), l, 0, 1, 1, 2);
+    size_radio = GTK_WIDGET (gtk_builder_get_object (builder_preferences, "radiobutton_small"));
+    g_signal_connect (size_radio, "clicked",
+                      G_CALLBACK (size_callback), GINT_TO_POINTER (1));
 
-    {
-      w = gtk_color_button_new ();
-      gtk_color_button_set_color (GTK_COLOR_BUTTON (w), &backgnd.color);
-      g_signal_connect (w, "color-set",
-                        G_CALLBACK (bg_color_callback), NULL);
-    }
+    size_radio = GTK_WIDGET (gtk_builder_get_object (builder_preferences, "radiobutton_medium"));
+    g_signal_connect (size_radio, "clicked",
+                      G_CALLBACK (size_callback), GINT_TO_POINTER (2));
 
-    gtk_table_attach_defaults (GTK_TABLE (table), w, 1, 2, 1, 2);
-    gtk_label_set_mnemonic_widget (GTK_LABEL (l), w);
+    size_radio = GTK_WIDGET (gtk_builder_get_object (builder_preferences, "radiobutton_large"));
+    g_signal_connect (size_radio, "clicked",
+                      G_CALLBACK (size_callback), GINT_TO_POINTER (3));
 
-
-    frame = games_frame_new (_("Board Size"));
-    fv = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
-    gtk_container_add (GTK_CONTAINER (frame), fv);
-    gtk_box_pack_start (GTK_BOX (vbox), frame, FALSE, FALSE, 0);
-
-    group = NULL;
-    for (i = 0; i < G_N_ELEMENTS (scorecats); ++i) {
-      button = gtk_radio_button_new_with_mnemonic (group, g_dpgettext2 (NULL, "board size", scorecats[i].name));
-      if (game_size == i)
-        gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button), TRUE);
-
-      g_signal_connect (button, "clicked",
-                        G_CALLBACK (size_callback), GINT_TO_POINTER (i + 1));
-
-      gtk_box_pack_start (GTK_BOX (fv), button, FALSE, FALSE, 0);
-
-      group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (button));
-    }
-
-    frame = games_frame_new (C_("preferences", "General"));
-    fv = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
-    gtk_container_add (GTK_CONTAINER (frame), fv);
-    gtk_box_pack_start (GTK_BOX (vbox), frame, FALSE, FALSE, 0);
-
-    fast_moves_toggle_button =
-      gtk_check_button_new_with_mnemonic (_("_Use fast moves"));
+    fast_moves_checkbutton = GTK_WIDGET (gtk_builder_get_object (builder_preferences, "checkbutton_fast_moves"));
     if (move_timeout == 10) {
-      gtk_toggle_button_set_active
-        (GTK_TOGGLE_BUTTON (fast_moves_toggle_button), TRUE);
+      gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (fast_moves_checkbutton), TRUE);
     }
-    g_signal_connect (fast_moves_toggle_button, "clicked",
+
+    g_signal_connect (fast_moves_checkbutton, "clicked",
                       G_CALLBACK (set_fast_moves_callback), NULL);
-
-    gtk_container_add (GTK_CONTAINER (fv), fast_moves_toggle_button);
-
-    gtk_widget_show_all (pref_dialog);
 
     pref_dialog_done = TRUE;
   }

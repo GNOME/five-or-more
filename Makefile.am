@@ -1,4 +1,4 @@
-SUBDIRS =
+SUBDIRS = data
 
 if BUILD_HELP
 SUBDIRS += help
