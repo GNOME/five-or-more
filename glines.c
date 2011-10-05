@@ -91,7 +91,7 @@ static const GamesScoresCategory scorecats[] = {
 
 static GamesScores *highscores;
 static GSettings *settings;
-static GtkBuilder *builder_preferences
+static GtkBuilder *builder_preferences;
 
 static gint hfieldsize;
 static gint vfieldsize;
@@ -1326,6 +1326,9 @@ bg_color_callback (GtkWidget * widget, gpointer data)
   g_snprintf (str, sizeof (str), "#%04x%04x%04x", c.red, c.green, c.blue);
 
   g_settings_set_string (settings, KEY_BACKGROUND_COLOR, str);
+
+  load_theme ();
+  refresh_screen ();
 }
 
 static void
