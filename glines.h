@@ -34,4 +34,14 @@ int init_new_balls (int num, int prev);
 
 gint animate (gpointer gp);
 
+
+void game_new_callback (void);
+void game_top_ten_callback (GtkAction * action, gpointer data);
+int game_quit_callback (GtkAction * action, gpointer data);
+void game_props_callback (void);
+void game_help_callback (GtkAction * action, gpointer data);
+void game_about_callback (GtkAction * action, gpointer * data);
+
+void pref_dialog_response (GtkDialog * dialog, gint response, gpointer data);
+
 #endif

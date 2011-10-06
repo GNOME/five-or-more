@@ -36,7 +36,6 @@
 #include <gdk/gdkkeysyms.h>
 
 #include <libgames-support/games-files.h>
-#include <libgames-support/games-frame.h>
 #include <libgames-support/games-gridframe.h>
 #include <libgames-support/games-help.h>
 #include <libgames-support/games-preimage.h>
@@ -45,7 +44,6 @@
 #include <libgames-support/games-scores-dialog.h>
 #include <libgames-support/games-settings.h>
 #include <libgames-support/games-stock.h>
-#include <libgames-support/games-fullscreen-action.h>
 
 #ifdef WITH_SMCLIENT
 #include <libgames-support/eggsmclient.h>
@@ -91,6 +89,7 @@ static const GamesScoresCategory scorecats[] = {
 
 static GamesScores *highscores;
 static GSettings *settings;
+static GtkBuilder *builder;
 static GtkBuilder *builder_preferences;
 
 static gint hfieldsize;
@@ -105,15 +104,6 @@ static GRand *rgen;
 static GtkWidget *draw_area;
 static GtkWidget *app, *statusbar, *pref_dialog, *gridframe;
 static GtkWidget *preview_widgets[MAXNPIECES];
-static GtkWidget *menubar;
-static GtkWidget *scoreitem;
-static GtkAction *fullscreen_action;
-
-/* These keep track of what we put in the main table so we
- * can reshuffle them when we change the field size. */
-static GtkWidget *table;
-static GtkWidget *top_pane;
-static GtkWidget *bottom_pane;
 
 static field_props field[MAXFIELDSIZE * MAXFIELDSIZE];
 
@@ -139,10 +129,6 @@ static int cursor_y = MAXFIELDSIZE / 2;
 static gboolean show_cursor = FALSE;
 
 static int boxsize;
-
-/* The width and height of the main window. */
-#define DEFAULT_WIDTH  320
-#define DEFAULT_HEIGHT 400
 
 static int preview_height = 0;
 static int preview_width = 0;
@@ -235,25 +221,6 @@ load_image (gchar * fname)
   }
 
   return preimage;
-}
-
-/* The main table has to be layed out differently depending on the
-   size of the playing area we choose. Otherwise the preview window
-   gets too large. */
-static void
-relay_table (void)
-{
-  gint height;
-  GValue value = { 0 };
-
-  height = 1 + vfieldsize;
-  g_value_init (&value, G_TYPE_INT);
-  g_value_set_int (&value, height);
-
-  gtk_container_child_set_property (GTK_CONTAINER (table),
-                                    bottom_pane, "bottom_attach", &value);
-
-  gtk_table_resize (GTK_TABLE (table), vfieldsize + 1, 1);
 }
 
 static void
@@ -493,7 +460,7 @@ draw_preview (void)
   }
 }
 
-static void
+void
 game_new_callback (void)
 {
   reset_game ();
@@ -1189,13 +1156,13 @@ animate (gpointer gp)
   return TRUE;
 }
 
-static void
+void
 game_top_ten_callback (GtkAction * action, gpointer data)
 {
   show_scores (0, FALSE);
 }
 
-static void
+void
 game_about_callback (GtkAction * action, gpointer * data)
 {
   const gchar *authors[] = { "Robert Szokovacs <szo@appaloosacorp.hu>",
@@ -1308,7 +1275,6 @@ conf_value_changed_cb (GSettings *settings, gchar *key)
 
     if (size_tmp != game_size) {
       set_sizes (size_tmp);
-      relay_table ();
       reset_game ();
       start_game ();
     }
@@ -1374,7 +1340,7 @@ set_fast_moves_callback (GtkWidget * widget, gpointer * data)
   g_settings_set_int (settings, KEY_MOVE_TIMEOUT, timeout);
 }
 
-static void
+void
 pref_dialog_response (GtkDialog * dialog, gint response, gpointer data)
 {
   gtk_widget_hide (GTK_WIDGET (dialog));
@@ -1447,7 +1413,7 @@ game_props_callback (void)
   gtk_window_present (GTK_WINDOW (pref_dialog));
 }
 
-static int
+int
 game_quit_callback (GtkAction * action, gpointer data)
 {
   if (animate_id)
@@ -1456,7 +1422,7 @@ game_quit_callback (GtkAction * action, gpointer data)
   return FALSE;
 }
 
-static void
+void
 game_help_callback (GtkAction * action, gpointer data)
 {
   games_help_display (app, "glines", NULL);
@@ -1593,65 +1559,6 @@ load_properties (void)
   load_theme ();
 }
 
-static const GtkActionEntry actions[] = {
-  {"GameMenu", NULL, N_("_Game")},
-  {"SettingsMenu", NULL, N_("_Settings")},
-  {"HelpMenu", NULL, N_("_Help")},
-  {"NewGame", GAMES_STOCK_NEW_GAME, NULL, NULL, NULL,
-   G_CALLBACK (game_new_callback)},
-  {"Scores", GAMES_STOCK_SCORES, NULL, NULL, NULL,
-   G_CALLBACK (game_top_ten_callback)},
-  {"Quit", GTK_STOCK_QUIT, NULL, NULL, NULL, G_CALLBACK (game_quit_callback)},
-  {"Preferences", GTK_STOCK_PREFERENCES, NULL, NULL, NULL,
-   G_CALLBACK (game_props_callback)},
-  {"Contents", GAMES_STOCK_CONTENTS, NULL, NULL, NULL,
-   G_CALLBACK (game_help_callback)},
-  {"About", GTK_STOCK_ABOUT, NULL, NULL, NULL,
-   G_CALLBACK (game_about_callback)},
-};
-
-const char ui_description[] =
-  "<ui>"
-  "  <menubar name='MainMenu'>"
-  "    <menu action='GameMenu'>"
-  "      <menuitem action='NewGame'/>"
-  "      <separator/>"
-  "      <menuitem action='Scores'/>"
-  "      <separator/>"
-  "      <menuitem action='Quit'/>"
-  "    </menu>"
-  "    <menu action='SettingsMenu'>"
-  "      <menuitem action='Fullscreen'/>"
-  "      <menuitem action='Preferences'/>"
-  "    </menu>"
-  "    <menu action='HelpMenu'>"
-  "      <menuitem action='Contents'/>"
-  "      <menuitem action='About'/>" "    </menu>" "  </menubar>" "</ui>";
-
-static void
-create_menus (GtkUIManager * ui_manager)
-{
-  GtkAccelGroup *accel_group;
-  GtkActionGroup *action_group;
-
-  action_group = gtk_action_group_new ("MenuActions");
-  gtk_action_group_set_translation_domain (action_group, GETTEXT_PACKAGE);
-  gtk_action_group_add_actions (action_group, actions,
-                                G_N_ELEMENTS (actions), NULL);
-
-  fullscreen_action = GTK_ACTION (games_fullscreen_action_new ("Fullscreen", GTK_WINDOW (app)));
-  gtk_action_group_add_action_with_accel (action_group, fullscreen_action, NULL);
-
-  gtk_ui_manager_insert_action_group (ui_manager, action_group, 0);
-  gtk_ui_manager_add_ui_from_string (ui_manager, ui_description, -1, NULL);
-  accel_group = gtk_ui_manager_get_accel_group (ui_manager);
-  gtk_window_add_accel_group (GTK_WINDOW (app), accel_group);
-
-  scoreitem = gtk_ui_manager_get_widget (ui_manager,
-                                         "/MainMenu/GameMenu/Scores");
-  menubar = gtk_ui_manager_get_widget (ui_manager, "/MainMenu");
-}
-
 static void
 init_config (void)
 {
@@ -1670,11 +1577,9 @@ int
 main (int argc, char *argv[])
 {
   GOptionContext *context;
-  char *label_text;
-  GtkWidget *label;
+  gchar *ui_path;
   GtkWidget *vbox, *hbox;
   GtkWidget *preview_hbox;
-  GtkUIManager *ui_manager;
   guint i;
   gboolean retval;
   GError *error = NULL;
@@ -1736,41 +1641,21 @@ main (int argc, char *argv[])
   reset_game ();
 #endif /* WITH_SMCLIENT */
 
-  app = gtk_window_new (GTK_WINDOW_TOPLEVEL);
+  ui_path = g_build_filename (games_runtime_get_directory (GAMES_RUNTIME_GAME_DATA_DIRECTORY), "glines.ui", NULL);
+  builder = gtk_builder_new ();
+  gtk_builder_add_from_file (builder, ui_path, &error);
+  g_free (ui_path);
 
-  gtk_window_set_title (GTK_WINDOW (app), _("Five or More"));
+  if (error) {
+    g_critical ("Unable to load the user interface file: %s", error->message);
+    g_error_free (error);
+    g_assert_not_reached ();
+  }
 
-  gtk_window_set_default_size (GTK_WINDOW (app), DEFAULT_WIDTH, DEFAULT_HEIGHT);
-  g_signal_connect (app, "delete-event",
-                    G_CALLBACK (game_quit_callback), NULL);
-
+  app = GTK_WIDGET (gtk_builder_get_object (builder, "glines_window"));
   games_settings_bind_window_state ("/org/gnome/glines/", GTK_WINDOW (app));
 
-  statusbar = gtk_statusbar_new ();
-  ui_manager = gtk_ui_manager_new ();
-
-  games_stock_prepare_for_statusbar_tooltips (ui_manager, statusbar);
-  gtk_window_set_has_resize_grip (GTK_WINDOW (app), TRUE);
-
-  vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
-  gtk_container_add (GTK_CONTAINER (app), vbox);
-
-  create_menus (ui_manager);
-  gtk_box_pack_start (GTK_BOX (vbox), menubar, FALSE, FALSE, 0);
-
-  table = gtk_table_new (2, 1, TRUE);
-  gtk_box_pack_start (GTK_BOX (vbox), table, TRUE, TRUE, 0);
-  gtk_box_pack_start (GTK_BOX (vbox), statusbar, FALSE, FALSE, 0);
-  hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
-
-  gtk_table_attach_defaults (GTK_TABLE (table), hbox, 0, 1, 0, 1);
-  top_pane = hbox;
-  label_text =
-    g_strdup_printf ("<span weight=\"bold\">%s</span>", _("Next:"));
-  label = gtk_label_new (label_text);
-  g_free (label_text);
-  gtk_label_set_use_markup (GTK_LABEL (label), TRUE);
-  gtk_box_pack_start (GTK_BOX (hbox), label, FALSE, FALSE, 5);
+  hbox = GTK_WIDGET (gtk_builder_get_object (builder, "top_box"));
 
   gridframe = games_grid_frame_new (MAXNPIECES, 1);
   games_grid_frame_set_alignment (GAMES_GRID_FRAME (gridframe), 0, 0.5);
@@ -1791,17 +1676,9 @@ main (int argc, char *argv[])
   g_signal_connect (preview_widgets[0], "configure-event",
                     G_CALLBACK (preview_configure_cb), NULL);
 
-  scorelabel = gtk_label_new (NULL);
+  scorelabel = GTK_WIDGET (gtk_builder_get_object (builder, "scorelabel"));
 
-  gtk_box_pack_end (GTK_BOX (hbox), scorelabel, FALSE, FALSE, 5);
-
-  label_text =
-    g_strdup_printf ("<span weight=\"bold\">%s</span>", _("Score:"));
-  label = gtk_label_new (label_text);
-  g_free (label_text);
-  gtk_label_set_use_markup (GTK_LABEL (label), TRUE);
-  gtk_box_pack_end (GTK_BOX (hbox), label, FALSE, FALSE, 5);
-
+  vbox = GTK_WIDGET (gtk_builder_get_object (builder, "vbox"));
   draw_area = gtk_drawing_area_new ();
   g_signal_connect (draw_area, "button-press-event",
                     G_CALLBACK (button_press_event), NULL);
@@ -1814,10 +1691,9 @@ main (int argc, char *argv[])
   gridframe = games_grid_frame_new (hfieldsize, vfieldsize);
   games_grid_frame_set_padding (GAMES_GRID_FRAME (gridframe), 1, 1);
   gtk_container_add (GTK_CONTAINER (gridframe), draw_area);
-  gtk_table_attach_defaults (GTK_TABLE (table), gridframe, 0, 1, 1, 2);
-  bottom_pane = gridframe;
+  gtk_box_pack_start (GTK_BOX (vbox), gridframe, TRUE, TRUE, 0);
 
-  relay_table ();
+  statusbar = GTK_WIDGET (gtk_builder_get_object (builder, "statusbar"));
 
   gtk_widget_set_events (draw_area,
                          gtk_widget_get_events (draw_area) |
@@ -1827,6 +1703,8 @@ main (int argc, char *argv[])
   gtk_widget_grab_focus (draw_area);
 
   load_properties ();
+
+  gtk_builder_connect_signals (builder, NULL);
 
   gtk_widget_show_all (app);
 

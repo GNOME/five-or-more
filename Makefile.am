@@ -24,11 +24,13 @@ glines_CPPFLAGS = \
 	$(AM_CPPFLAGS)
 
 glines_CFLAGS = \
+	$(GMODULE_CFLAGS) \
 	$(GTK_CFLAGS)	\
 	$(AM_CFLAGS)
 
 glines_LDADD =	\
 	$(top_builddir)/libgames-support/libgames-support.la \
+	$(GMODULE_LIBS) \
 	$(GTK_LIBS)	\
 	$(INTLLIBS)	\
 	-lm \
