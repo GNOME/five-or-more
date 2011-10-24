@@ -7,7 +7,7 @@
     <property name="title" translatable="yes">Five or more</property>
     <property name="default_width">320</property>
     <property name="default_height">400</property>
-    <property name="icon_name">accessories-calculator</property>
+    <property name="icon_name">gnome-glines</property>
     <accel-groups>
       <group name="accelgroup"/>
     </accel-groups>
