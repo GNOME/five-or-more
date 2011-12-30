@@ -16,6 +16,27 @@
 
   <title>Introduction</title>
 
-  <p>Short introductory text...</p>
+  
+  <p>Five or More, is the Gnome port of the once
+   popular Windows game called<em>Color Lines</em>
+   The game's objective is to align as often as possible five or more objects
+   of the same color and shape causing them to disappear. Play as long as possible, and
+   be #1 in the High Scores
+   
+  </p>
+<p>
+To run<gui>Five</gui> or More, select
+   <gui>Five or More</gui> from the
+   Games submenu of the<gui> Main
+   Menu</gui> or type glines on the
+   command line.</p>
+
+ <p>Five or More is included in the
+   GNOME-games package, which is part of the
+   GNOME desktop environment. This document describes the <gui>newest version</gui> of Five or More which is distributed under a CreativeCommons Attribution-Share Alike
+    <link xref="license"><app>3.0 Unported license.</app></link>.
+  .
+    </p>
+
 
 </page>

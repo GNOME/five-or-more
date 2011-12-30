@@ -15,5 +15,14 @@
   </info>
 
   <title>Create a new theme</title>
+<p>Each theme consists of a single PNG image file. This image
+    consists of an array of seven rows, corresponding to the different
+    <key>object colors/shapes,</key> and four columns, each of which is a frame in the
+    animation of the object. The actual size of the image is irrelevant,
+    it will be rescaled, but the sub-images must form a four by seven
+    grid to get the correct effect. When using SVG remember that the
+    image size is the page size, if your grid does not fill the page
+    try shrinking the page size. Use an existing theme as a
+    guide.</p>
 
 </page>

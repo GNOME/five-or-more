@@ -15,5 +15,53 @@
   </info>
 
   <title>How to Play</title>
+<p> Playing <key>Five or More</key> is easy. At startup, you find
+      yourself with five objects randomly positioned on <gui>the board</gui>. Each turn,
+      you are allowed to move one object. You can move it anywhere on the board as long as 
+ there is a clear path. Afterward, the computer drops more objects
+      at random positions (the exact number depends on the size of the game). You can preview the next objects to be
+      dropped in the upper left corner of the game's window.
+      If you manage to align five objects of the same shape and color, they
+      disappear and you are given an extra move before more objects drop.</p>
+
+
+
+<p> Starting <key>Five or More </key> presents you with the
+    game board and a new game starts. What it 
+    looks like is shown below </p> 
+
+<figure>
+  <desc><app>Five or more </app> game starts like this .</desc>
+  <media type="image" src="figures/glines-startgame.png" width="300" >      </media>
+</figure>
+<note style = "tip">
+<p> As the game progresses, the board gets more and more crowded 
+     (unless you are really good...) and making objects disappear gets harder
+     and harder. The game is over, when the board is full. 
+   </p></note>
+
+
+<figure>
+  <desc><app>Five or more </app> game ends like this.</desc>
+  <media type="image" src="figures/glines-gameover.png" width="300" >
+</media>
+</figure>
+
+<section id = "scores">
+<title> View Scores </title><p>
+You can view your scores by clicking<guiseq><gui> games Scores</gui></guiseq>
+The scores of Gnome<key>Five or More</key> is recorded according to the <app>board size</app>.scores of different board sizes are recorded seperately</p> 
+<note><p>That is because the game status changes with the size of the board</p></note>
+<note style = "tip"><p> You can select the board size by using the <key>drop down list given in front</key></p>
+</note>
+<figure>
+  <desc><app>Five or more </app> Viewing the scores.</desc>
+  <media type="image" src="figures/scores.png" width="300" >
+</media>
+</figure>
+</section>
+
 
 </page>
+
+

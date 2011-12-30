@@ -15,5 +15,73 @@
   </info>
 
   <title>Change board size</title>
+<p>You can configure Five or More by clicking on 
+   Preferences in the applications 
+   Settings menu. The following 
+   dialog will appear<guiseq><gui> Settings</gui><gui>preferences</gui></guiseq> </p>
+
+
+<figure>
+  <desc><app>Five or more </app> preferences.</desc>
+  <media type="image" src="figures/preferences.png" width="300" ></media>
+</figure>
+
+
+<note>
+<p> The Board Size section lets you select the size of the board. Each size has a slightly different balance: larger sizes give you more space to move, but more objects arrive each turn. </p></note>
+<p><gui> Small Size Board</gui></p>
+
+<figure>
+  <desc><app>Five or more </app> small board</desc>
+  <media type="image" src="figures/Small.png" width="300" ></media>
+</figure>
+
+<p><gui> Medium Size Board</gui></p>
+
+<figure>
+  <desc><app> Five or more </app> medium size board </desc>
+  <media type="image" src="figures/medium.png" width="300" ></media>
+</figure>
+<p><gui> Large Size Board</gui></p>
+
+
+<figure>
+  <desc><app>Five or more </app> large size board</desc>
+  <media type="image" src="figures/Large.png" width="300" ></media>
+</figure>
+
+<p>The parameters for each size are given here</p>
+
+<table shade="all">
+<tr>
+    <td><p>Size</p></td> <td><p>Width</p></td><td><p>Height</p></td>>
+    <td><p>No of tytpes</p></td> <td><p>Objects per turn</p></td>
+  </tr>>
+<tr>
+<td><p>Small</p></td> <td><p>7</p></td><td><p>7</p></td>>
+    <td><p>5</p></td> <td><p>3</p></td>
+  </tr>
+<tr>
+<td><p>Medium</p></td> <td><p>9</p></td><td><p>9</p></td>
+    <td><p>7</p></td> <td><p>3</p></td>
+  </tr>
+<tr>
+<td><p>Large</p></td> <td><p>20</p></td><td><p>15</p></td>
+    <td><p>7</p></td> <td><p>7</p></td>
+  </tr>
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
 
 </page>
