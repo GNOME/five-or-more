@@ -6,8 +6,8 @@
     <revision version="0.1" date="2011-12-10" status="stub"/>
 
     <credit type="author copyright">
-      <name></name>
-      <email></email>
+       <name>Lahiru lanka</name>
+      <email> lankakck@.gmailcom</email>
       <years>2011</years>
     </credit>
 
@@ -15,14 +15,14 @@
   </info>
 
   <title>Fast moves option</title>
-<p>You can speed up the movement of the objects by checking the Use fast
-   moves box in the<gui> General</gui> preferences section.(click settings then go to preferences)  </p>
+<p>You can speed up your object movements in the game board by using the fast move option which is in the <gui>General</gui> preference section.</p><p>Click <guiseq><gui>settings</gui><gui>preferences</gui></guiseq></p>
+
 <p>Any changes you make are instantly applied and remembered for the next time you run
-   <key>Five or More.</key> </p>
-<p><app> In the below picture the fast move option has been selected by ticking on it</app></p>
+   <key>Glines</key> </p>
+<p><app>In the below picture the fast move option has been selected by ticking on it</app></p>
 
 <figure>
-  <desc> How to make <app> Five or more </app> faster </desc>
+  <desc> How to make <app>glines</app> faster </desc>
   <media type="image" src="figures/fastmove.png" width="250" ></media>
 </figure>
 

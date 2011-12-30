@@ -6,8 +6,8 @@
     <revision version="0.1" date="2011-12-10" status="stub"/>
 
     <credit type="author copyright">
-      <name></name>
-      <email></email>
+       <name>Lahiru lanka</name>
+      <email> lankakck@.gmailcom</email>
       <years>2011</years>
     </credit>
 
@@ -15,48 +15,37 @@
   </info>
 
   <title>How to Play</title>
-<p> Playing <key>Five or More</key> is easy. At startup, you find
-      yourself with five objects randomly positioned on <gui>the board</gui>. Each turn,
-      you are allowed to move one object. You can move it anywhere on the board as long as 
- there is a clear path. Afterward, the computer drops more objects
-      at random positions (the exact number depends on the size of the game). You can preview the next objects to be
-      dropped in the upper left corner of the game's window.
-      If you manage to align five objects of the same shape and color, they
-      disappear and you are given an extra move before more objects drop.</p>
+<p>You will see that playing <key>Glines</key> is quite easy if you are tallented in brain work outs.At the start you can see that there are few objects placed on your board.In each turn you are alloved to move one object.You should know that to an object to be moved there should be a clear path.After you moved your objects computer drops more objects randomely.The number of drops depend on your game board size. And also you can get a preview of the objects that are to be dropped in the upper left corner of the game window.If you became successful in aligning five or more objects in the same color or with the same shape they will get disappear from the game board and a <gui>extra move is given for you</gui>.</p>
+<note><p>Disappearing of objects will clear up your game board and will give you more time to play.More time you play the <key>more you score</key></p></note> 
 
 
-
-<p> Starting <key>Five or More </key> presents you with the
-    game board and a new game starts. What it 
-    looks like is shown below </p> 
+<p><key>Glines</key> starts with a game board.How it looks like is shown below </p><p>To start a new game you can select new from the game menue</p> 
 
 <figure>
-  <desc><app>Five or more </app> game starts like this .</desc>
-  <media type="image" src="figures/glines-startgame.png" width="300" >      </media>
+  <desc><app>Glines</app>game starts like this.</desc>
+  <media type="image" src="figures/glines-startgame.png" width="300" ></media>
 </figure>
 <note style = "tip">
-<p> As the game progresses, the board gets more and more crowded 
-     (unless you are really good...) and making objects disappear gets harder
-     and harder. The game is over, when the board is full. 
+<p>By the passing of time the board gets more crowded.(if you do not work out properly)Which makes the game harder.The game is <key>over</key> when the board full.
    </p></note>
 
 
 <figure>
-  <desc><app>Five or more </app> game ends like this.</desc>
+  <desc><app>Glines</app> game ends like this.</desc>
   <media type="image" src="figures/glines-gameover.png" width="300" >
 </media>
 </figure>
 
 <section id = "scores">
 <title> View Scores </title><p>
-You can view your scores by clicking<guiseq><gui> games Scores</gui></guiseq>
-The scores of Gnome<key>Five or More</key> is recorded according to the <app>board size</app>.scores of different board sizes are recorded seperately</p> 
+You can view your scores by clicking <guiseq><gui>games Scores</gui></guiseq>
+The scores of Gnome <key>Glines</key> is recorded according to the <app>board size</app>.Scores of different board sizes are recorded seperately</p> 
 <note><p>That is because the game status changes with the size of the board</p></note>
-<note style = "tip"><p> You can select the board size by using the <key>drop down list given in front</key></p>
+<note style = "tip"><p>You can select the board size by using the <key>drop down list given in front</key></p>
 </note>
 <figure>
-  <desc><app>Five or more </app> Viewing the scores.</desc>
-  <media type="image" src="figures/scores.png" width="300" >
+<desc><app>Glines</app> Viewing the scores.</desc>
+<media type="image" src="figures/scores.png" width="300" >
 </media>
 </figure>
 </section>

@@ -6,8 +6,8 @@
     <revision version="0.1" date="2011-12-10" status="stub"/>
 
     <credit type="author copyright">
-      <name></name>
-      <email></email>
+      <name>Lahiru lanka</name>
+      <email> lankakck@.gmailcom</email>
       <years>2011</years>
     </credit>
 
@@ -15,38 +15,37 @@
   </info>
 
   <title>Change board size</title>
-<p>You can configure Five or More by clicking on 
-   Preferences in the applications 
-   Settings menu. The following 
-   dialog will appear<guiseq><gui> Settings</gui><gui>preferences</gui></guiseq> </p>
+<p>You can change the board size of the <gui>glines</gui> by clicking on preferences in the setting menue.
+   <guiseq><gui>Settings</gui><gui>preferences</gui></guiseq></p>
 
 
 <figure>
-  <desc><app>Five or more </app> preferences.</desc>
+  <desc><app>Glines</app> preferences.</desc>
   <media type="image" src="figures/preferences.png" width="300" ></media>
 </figure>
 
 
+
 <note>
-<p> The Board Size section lets you select the size of the board. Each size has a slightly different balance: larger sizes give you more space to move, but more objects arrive each turn. </p></note>
-<p><gui> Small Size Board</gui></p>
+<p>The "board Size" section lets you to select the size of the board weather it is small,medium or large. While a board with larger size gives you more space to move and in the other way round <gui>more objects</gui> will arrive to your board in each turn.</p></note>
+<p><gui>Small Size Board</gui></p>
 
 <figure>
-  <desc><app>Five or more </app> small board</desc>
+  <desc><app>Glines</app> Small board</desc>
   <media type="image" src="figures/Small.png" width="300" ></media>
 </figure>
 
-<p><gui> Medium Size Board</gui></p>
+<p><gui>Medium Size Board</gui></p>
 
 <figure>
-  <desc><app> Five or more </app> medium size board </desc>
+  <desc><app>Glines</app> medium size board</desc>
   <media type="image" src="figures/medium.png" width="300" ></media>
 </figure>
-<p><gui> Large Size Board</gui></p>
+<p><gui>Large Size Board</gui></p>
 
 
 <figure>
-  <desc><app>Five or more </app> large size board</desc>
+  <desc><app>Glines</app> large size board</desc>
   <media type="image" src="figures/Large.png" width="300" ></media>
 </figure>
 
@@ -55,19 +54,19 @@
 <table shade="all">
 <tr>
     <td><p>Size</p></td> <td><p>Width</p></td><td><p>Height</p></td>>
-    <td><p>No of tytpes</p></td> <td><p>Objects per turn</p></td>
+    <td><p>No of tytpes</p></td> <td><p>Objects per turn</p></td><td><p>No of squars</p></td>
   </tr>>
 <tr>
 <td><p>Small</p></td> <td><p>7</p></td><td><p>7</p></td>>
-    <td><p>5</p></td> <td><p>3</p></td>
+    <td><p>5</p></td> <td><p>3</p></td><td><p>49</p></td>
   </tr>
 <tr>
 <td><p>Medium</p></td> <td><p>9</p></td><td><p>9</p></td>
-    <td><p>7</p></td> <td><p>3</p></td>
+    <td><p>7</p></td> <td><p>3</p></td><td><p>81</p></td>
   </tr>
 <tr>
 <td><p>Large</p></td> <td><p>20</p></td><td><p>15</p></td>
-    <td><p>7</p></td> <td><p>7</p></td>
+    <td><p>7</p></td> <td><p>7</p></td><td><p>300</p></td>
   </tr>
 
 </table>

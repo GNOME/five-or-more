@@ -6,32 +6,31 @@
     <revision version="0.1" date="2011-12-10" status="stub"/>
 
     <credit type="author copyright">
-      <name></name>
-      <email></email>
-      <years>2011</years>
+      <name>Lahiru lanka</name>
+      <email> lankakck@.gmailcom</email>
     </credit>
 
     <desc></desc>
   </info>
 
   <title>Change theme</title>
-<p>Image pattern and Background color are the things that you can adjust when changig the theme.This new version of gnome glines  Five or more gives you the oppertunity to.....</p>
+<p>Image pattern and Background color are the things that you can adjust when changig the theme.<gui>Glines</gui> gives you the oppertunity to.....</p>
 <section id = "image pattern">
 <title>Select the image pattern</title>
 <list>
-<item><p> Balls</p> </item>
+<item><p>Balls</p> </item>
 
-<item><p> Shapes</p> </item>
+<item><p>Shapes</p> </item>
 </list>
 
 <figure>
-  <desc><app>Five or more with </app> different shapes.</desc>
+  <desc><app>Glines</app> with different shapes.</desc>
   <media type="image" src="figures/shapes.png" width="250" ></media>
 </figure>
 
 
 <figure>
-<desc><app> Five or more </app> with different balls.</desc>
+<desc><app>Glines</app> with different balls.</desc>
 <media type="image" src="figures/balls.png" width="250" ></media>
 </figure>
 </section>
@@ -40,22 +39,14 @@
 
 	<title>To change the background color</title>
 <note>
-<p> You can select the background color by using the <key>Color pallet</key> </p></note>
- <p> color pallet </p>
+<p>You can select the background color by using the <key>Color pallet</key></p></note>
+ <p>color pallet</p>
 
 
 <figure>
-<desc><app>Five or more </app> color pallet</desc>
+<desc><app>Glines</app> color pallet</desc>
  <media type="image" src="figures/pickcolor.png" width="300
 "/> </figure>
 
 </section>	
-
-
-  
-
- 
-
-
-
 </page>
