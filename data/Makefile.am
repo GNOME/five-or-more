@@ -1,3 +1,5 @@
+SUBDIRS = icons
+
 uidir = $(pkgdatadir)/glines/
 ui_DATA = \
 	glines.ui \
