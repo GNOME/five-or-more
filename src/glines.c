@@ -45,10 +45,6 @@
 #include <libgames-support/games-settings.h>
 #include <libgames-support/games-stock.h>
 
-#ifdef WITH_SMCLIENT
-#include <libgames-support/eggsmclient.h>
-#endif /* WITH_SMCLIENT */
-
 #include "glines.h"
 
 #define KEY_BACKGROUND_COLOR  "background-color"
@@ -1464,83 +1460,6 @@ configure_event_callback (GtkWidget * widget, GdkEventConfigure * event)
   return TRUE;
 }
 
-#ifdef WITH_SMCLIENT
-static int
-save_state_cb (EggSMClient *client,
-            GKeyFile* keyfile,
-            gpointer client_data)
-{
-  gchar *buf;
-  int argc = 0;
-  char *argv[1];
-  int i;
-
-  g_settings_set_int (settings, KEY_SAVED_SCORE, score);
-
-  buf = g_malloc (hfieldsize * vfieldsize * 4 + 1);
-  for (i = 0; i < hfieldsize * vfieldsize; i++) {
-    buf[i * 4] = field[i].color + 'h';
-    buf[i * 4 + 1] = field[i].pathsearch + 'h';
-    buf[i * 4 + 2] = field[i].phase + 'h';
-    buf[i * 4 + 3] = field[i].active + 'h';
-  }
-  buf[hfieldsize * vfieldsize * 4] = '\0';
-  g_settings_set_string (settings, KEY_SAVED_FIELD, buf);
-  for (i = 0; i < npieces; i++)
-    buf[i] = preview[i] + 'h';
-  buf[npieces] = '\0';
-  g_settings_set_string (settings, KEY_SAVED_PREVIEW, buf);
-  g_free (buf);
-
-  argv[argc++] = g_get_prgname ();
-
-  egg_sm_client_set_restart_command (client, argc, (const char **) argv);
-
-  return TRUE;
-}
-
-static gint
-quit_cb (EggSMClient *client,
-         gpointer client_data)
-{
-  gtk_main_quit ();
-
-  return FALSE;
-}
-
-static void
-restart (void)
-{
-  gchar *buf;
-  int i;
-
-  /* This isn't really a good idea, but if we're going to
-   * restore the game the score has to be stored somewhere
-   * and without some sort of restricted-access storage the
-   * user will always be able to change it. */
-  score = g_settings_get_int (settings, KEY_SAVED_SCORE);
-
-  buf = g_settings_get_string (settings, KEY_SAVED_FIELD);
-  if (buf) {
-    for (i = 0; i < hfieldsize * vfieldsize; i++) {
-      field[i].color = CLAMP (buf[i * 4] - 'h', 1, ncolors);
-      field[i].pathsearch =
-        CLAMP (buf[i * 4 + 1] - 'h', -1, hfieldsize * vfieldsize);
-      field[i].phase = CLAMP (buf[i * 4 + 2] - 'h', 0, 3);
-      field[i].active = CLAMP (buf[i * 4 + 3] - 'h', -1, 1);
-    }
-    g_free (buf);
-  }
-  buf = g_settings_get_string (settings, KEY_SAVED_PREVIEW);
-  if (buf) {
-    for (i = 0; i < npieces; i++)
-      preview[i] = CLAMP (buf[i] - 'h', 1, ncolors);
-    g_free (buf);
-  }
-}
-
-#endif /* WITH_SMCLIENT */
-
 static void
 load_properties (void)
 {
@@ -1583,9 +1502,6 @@ main (int argc, char *argv[])
   guint i;
   gboolean retval;
   GError *error = NULL;
-#ifdef WITH_SMCLIENT
-  EggSMClient *sm_client;
-#endif /* WITH_SMCLIENT */
 
   if (!games_runtime_init ("glines"))
     return 1;
@@ -1599,9 +1515,6 @@ main (int argc, char *argv[])
   context = g_option_context_new (NULL);
   g_option_context_set_translation_domain (context, GETTEXT_PACKAGE);
   g_option_context_add_group (context, gtk_get_option_group (TRUE));
-#ifdef WITH_SMCLIENT
-  g_option_context_add_group (context, egg_sm_client_get_option_group ());
-#endif /* WITH_SMCLIENT */
 
   retval = g_option_context_parse (context, &argc, &argv, &error);
   g_option_context_free (context);
@@ -1626,20 +1539,6 @@ main (int argc, char *argv[])
   games_stock_init ();
 
   gtk_window_set_default_icon_name ("glines");
-
-#ifdef WITH_SMCLIENT
-  sm_client = egg_sm_client_get ();
-  g_signal_connect (sm_client, "save-state",
-                    G_CALLBACK (save_state_cb), NULL);
-  g_signal_connect (sm_client, "quit",
-                    G_CALLBACK (quit_cb), NULL);
-  if (egg_sm_client_is_resumed(sm_client))
-    restart ();
-  else
-    reset_game ();
-#else
-  reset_game ();
-#endif /* WITH_SMCLIENT */
 
   ui_path = g_build_filename (games_runtime_get_directory (GAMES_RUNTIME_GAME_DATA_DIRECTORY), "glines.ui", NULL);
   builder = gtk_builder_new ();
@@ -1717,11 +1616,6 @@ main (int argc, char *argv[])
     g_object_unref (ball_preimage);
 
   g_settings_sync();
-
-#ifdef WITH_SMCLIENT
-  g_signal_handlers_disconnect_matched (sm_client, G_SIGNAL_MATCH_DATA,
-                                        0, 0, NULL, NULL, NULL);
-#endif /* WITH_SMCLIENT */
 
   games_runtime_shutdown ();
 
