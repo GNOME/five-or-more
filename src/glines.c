@@ -1505,10 +1505,6 @@ main (int argc, char *argv[])
   gboolean retval;
   GError *error = NULL;
 
-#ifdef ENABLE_SETGID
-  setgid_io_init ();
-#endif
-
   rgen = g_rand_new ();
 
   context = g_option_context_new (NULL);
