@@ -37,7 +37,6 @@
 
 #include <libgames-support/games-files.h>
 #include <libgames-support/games-gridframe.h>
-#include <libgames-support/games-help.h>
 #include <libgames-support/games-preimage.h>
 #include <libgames-support/games-runtime.h>
 #include <libgames-support/games-scores.h>
@@ -1421,7 +1420,12 @@ game_quit_callback (GtkAction * action, gpointer data)
 void
 game_help_callback (GtkAction * action, gpointer data)
 {
-  games_help_display (app, "glines", NULL);
+  GError *error = NULL;
+
+  gtk_show_uri (gtk_widget_get_screen (GTK_WIDGET (app)), "ghelp:glines", gtk_get_current_event_time (), &error);
+  if (error)
+    g_warning ("Failed to show help: %s", error->message);
+  g_clear_error (&error);
 }
 
 static int
