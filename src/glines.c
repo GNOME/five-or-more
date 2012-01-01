@@ -188,17 +188,15 @@ load_image (gchar * fname)
 {
   GamesPreimage *preimage;
   gchar *path;
-  const char *dirname;
   GError *error = NULL;
 
-  dirname = games_runtime_get_directory (GAMES_RUNTIME_GAME_PIXMAP_DIRECTORY);
-  path = g_build_filename (dirname, fname, NULL);
+  path = g_build_filename (DATA_DIRECTORY, "themes", fname, NULL);
   if (!g_file_test (path, G_FILE_TEST_EXISTS)) {
     warning_message = g_strdup_printf (_("Unable to locate file:\n%s\n\n"
                                          "The default theme will be loaded instead."),
                                        fname);
 
-    path = g_build_filename (dirname, "balls.svg", NULL);
+    path = g_build_filename (DATA_DIRECTORY, "themes", "balls.svg", NULL);
     if (!g_file_test (path, G_FILE_TEST_EXISTS)) {
       g_free (warning_message);
       warning_message = g_strdup_printf (_("Unable to locate file:\n%s\n\n"
@@ -1313,13 +1311,14 @@ set_selection (GtkWidget * widget, char *data)
 static GtkWidget *
 fill_menu (void)
 {
-  const char *pixmap_dir;
+  gchar *pixmap_dir;
 
   if (theme_file_list)
     g_object_unref (theme_file_list);
 
-  pixmap_dir = games_runtime_get_directory (GAMES_RUNTIME_GAME_PIXMAP_DIRECTORY);
+  pixmap_dir = g_build_filename (DATA_DIRECTORY, "themes", NULL);
   theme_file_list = games_file_list_new_images (pixmap_dir, NULL);
+  g_free (pixmap_dir);
   games_file_list_transform_basename (theme_file_list);
 
   return games_file_list_create_widget (theme_file_list, ball_filename,
@@ -1353,7 +1352,7 @@ game_props_callback (void)
   GtkWidget *fast_moves_checkbutton;
 
   if (!pref_dialog) {
-    ui_path = g_build_filename (games_runtime_get_directory (GAMES_RUNTIME_GAME_DATA_DIRECTORY), "glines-preferences.ui", NULL);
+    ui_path = g_build_filename (DATA_DIRECTORY, "glines-preferences.ui", NULL);
     builder_preferences = gtk_builder_new ();
     gtk_builder_add_from_file (builder_preferences, ui_path, &error);
     g_free (ui_path);
@@ -1544,7 +1543,7 @@ main (int argc, char *argv[])
 
   gtk_window_set_default_icon_name ("glines");
 
-  ui_path = g_build_filename (games_runtime_get_directory (GAMES_RUNTIME_GAME_DATA_DIRECTORY), "glines.ui", NULL);
+  ui_path = g_build_filename (DATA_DIRECTORY, "glines.ui", NULL);
   builder = gtk_builder_new ();
   gtk_builder_add_from_file (builder, ui_path, &error);
   g_free (ui_path);

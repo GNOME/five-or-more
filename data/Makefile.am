@@ -1,12 +1,12 @@
 SUBDIRS = icons
 
-uidir = $(pkgdatadir)/glines/
+uidir = $(datadir)/glines/
 ui_DATA = \
 	glines.ui \
 	glines-preferences.ui
 
-pixmapdir = $(pkgdatadir)/glines/pixmaps
-pixmap_DATA = \
+themedir = $(datadir)/glines/themes
+theme_DATA = \
 	balls.svg	\
 	shapes.svg
 
@@ -23,7 +23,7 @@ desktop_DATA = $(desktop_in_files:.desktop.in.in=.desktop)
 @INTLTOOL_DESKTOP_RULE@
 
 EXTRA_DIST = 			\
-	$(pixmap_DATA)		\
+	$(theme_DATA)		\
 	$(gsettings_in_file)    \
 	$(man_MANS)	\
 	$(ui_DATA)

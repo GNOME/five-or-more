@@ -9,6 +9,7 @@ glines_CPPFLAGS = \
 	$(AM_CPPFLAGS)
 
 glines_CFLAGS = \
+	-DDATA_DIRECTORY=\"$(datadir)/glines\" \
 	$(GMODULE_CFLAGS) \
 	$(GTK_CFLAGS)	\
 	$(AM_CFLAGS)
