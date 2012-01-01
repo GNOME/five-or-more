@@ -35,7 +35,7 @@
 #include <gdk-pixbuf/gdk-pixbuf.h>
 #include <gdk/gdkkeysyms.h>
 
-#include <libgames-support/games-files.h>
+#include <libgames-support/games-file-list.h>
 #include <libgames-support/games-gridframe.h>
 #include <libgames-support/games-preimage.h>
 #include <libgames-support/games-scores.h>
