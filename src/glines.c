@@ -38,7 +38,6 @@
 #include <libgames-support/games-files.h>
 #include <libgames-support/games-gridframe.h>
 #include <libgames-support/games-preimage.h>
-#include <libgames-support/games-runtime.h>
 #include <libgames-support/games-scores.h>
 #include <libgames-support/games-scores-dialog.h>
 #include <libgames-support/games-settings.h>
@@ -1506,9 +1505,6 @@ main (int argc, char *argv[])
   gboolean retval;
   GError *error = NULL;
 
-  if (!games_runtime_init ("glines"))
-    return 1;
-
 #ifdef ENABLE_SETGID
   setgid_io_init ();
 #endif
@@ -1619,8 +1615,6 @@ main (int argc, char *argv[])
     g_object_unref (ball_preimage);
 
   g_settings_sync();
-
-  games_runtime_shutdown ();
 
   return 0;
 }
