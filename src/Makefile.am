@@ -21,11 +21,6 @@ glines_LDADD =	\
 	$(INTLLIBS)	\
 	-lm
 
-if HAVE_GNOME
-glines_CFLAGS += $(GNOME_CFLAGS)
-glines_LDADD += $(GNOME_LIBS)
-endif
-
 if HAVE_RSVG
 glines_CFLAGS += $(RSVG_CFLAGS)
 glines_LDADD += $(RSVG_LIBS)
