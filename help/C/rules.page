@@ -28,10 +28,29 @@
 
 <item><p>The game is over when the board is full, since no object can be moved at that point.</p></item>
 </list>
-<figure>
-  <desc><app>Five or More</app> game over position.</desc>
-  <media type="image" src="figures/glines-gameover.png" width="300">
-</media>
-</figure>
 
+<table>
+ <tr>
+  <td>
+  <media type="image" src="figures/horizontal.png" width="200">
+    <p>Example horizontal alignment</p>
+  </media>
+   </td>
+   <td>
+  <media type="image" src="figures/vertical.png" width="200">
+    <p>Example vertical alignment</p>
+  </media>
+   </td>
+   <td>
+  <media type="image" src="figures/diagonal.png" width="200">
+    <p>Example diagonal alignment</p>
+  </media>
+   </td>
+   <td>
+  <media type="image" src="figures/glines-gameover.png" width="200">
+    <p><app>Five or More</app> game over position.</p>
+  </media>
+    </td>
+   </tr>
+</table>
 </page>
