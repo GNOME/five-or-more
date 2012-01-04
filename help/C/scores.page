@@ -1,0 +1,81 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic" style="task"
+      id="scores">
+  <info>
+    <link type="guide" xref="index#play" />
+    <revision version="0.1" date="2011-12-10" status="stub"/>
+
+    <credit type="author copyright">
+       <name>Lahiru lanka</name>
+      <email>lankakck@.gmailcom</email>
+      <years>2011</years>
+    </credit>
+    <credit type="editor">
+      <name>Tiffany Antopolski</name>
+      <email>tiffany.antopolski@gmail.com</email>
+    </credit>
+    <desc></desc>
+  </info>
+
+<title>Scoring</title>
+<p>You score points by creating lines of 5 or more objects.  The points you gain depends on the number of objects that disappear.</p>
+
+    <table rules="rowgroups cols" frame="all">
+      <tbody>
+        <tr>
+         <td><p><em>Number of objects</em></p></td>
+         <td><p><em>Number of points</em></p></td>
+        </tr>
+      </tbody>
+      <tbody>
+       <tr>
+        <td><p>5</p></td>
+        <td><p>10</p></td>
+       </tr>
+       <tr>
+        <td><p>6</p></td>
+        <td><p>12</p></td>
+       </tr>
+       <tr>
+        <td><p>7</p></td>
+        <td><p>18</p></td>
+       </tr>
+       <tr>
+        <td><p>8</p></td>
+        <td><p>28</p></td>
+       </tr>
+       <tr>
+        <td><p>9</p></td>
+        <td><p>42</p></td>
+       </tr>
+       <tr>
+        <td><p>10</p></td>
+        <td><p>82</p></td>
+       </tr>
+       <tr>
+        <td><p>11</p></td>
+        <td><p>108</p></td>
+       </tr>
+       <tr>
+        <td><p>12</p></td>
+        <td><p>138</p></td>
+       </tr>
+      <tr>
+        <td><p>13</p></td>
+        <td><p>172</p></td>
+      </tr>
+      <tr>
+        <td><p>14</p></td>
+        <td><p>210</p></td>
+       </tr>
+     </tbody>
+    </table>
+
+<note style="tip">
+<p>
+You can view the high scores by clicking <guiseq><gui>Game</gui><gui>Scores</gui></guiseq>.
+</p>
+<p>
+The <app>Five or More</app> scores are recorded according to the board size. You can select the <gui>Board Size</gui> of interest using the drop down menu.</p> 
+</note>
+</page>

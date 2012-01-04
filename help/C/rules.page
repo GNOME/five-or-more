@@ -1,0 +1,37 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic" style="task"
+      id="rules">
+  <info>
+    <link type="guide" xref="index#play" />
+    <revision version="0.1" date="2011-12-10" status="stub"/>
+
+    <credit type="author copyright">
+      <name></name>
+      <email></email>
+      <years>2011</years>
+    </credit>
+
+    <desc></desc>
+  </info>
+
+  <title>Rules</title>
+<list>
+<item><p>At the start of the game there are either 3 or 7 objects placed on your board, depending on the <link xref="change-board-size">board size</link>.</p></item>
+
+<item><p>Each time you <link xref="play">move an object</link>, additional objects are placed randomly on the board. The number of new objects placed each turn also depends on the board. A preview of the objects to be placed on the board appears in the upper left corner of the game window.</p></item>
+
+<item><p>There must be a clear path from the original position of the object to the destination cell.</p></item>
+
+<item><p>A straight horizontal, vertical or diagonal line of five or more similar objects will disappear from the game board.  When this happens you will have an extra move without additional objects being added to the board.</p></item>
+
+<item><p>The more objects you clear, the longer the game will go on. The longer you play, the higher your <link xref="scores">score</link>.</p></item>
+
+<item><p>The game is over when the board is full, since no object can be moved at that point.</p></item>
+</list>
+<figure>
+  <desc><app>Five or More</app> game over position.</desc>
+  <media type="image" src="figures/glines-gameover.png" width="300">
+</media>
+</figure>
+
+</page>
