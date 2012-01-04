@@ -18,15 +18,22 @@ DOC_FIGURES = \
 	figures/small.png
 
 DOC_PAGES = \
+	bug-filing.page			\
 	change-board-size.page	\
 	change-theme.page		\
+	commandline.page		\
+	develop.page			\
+	documentation.page		\
 	fast-moves.page			\
 	index.page				\
 	legal.xml				\
 	license.page			\
-	play.page			    \
+	play.page				\
+	rules.page				\
+	scores.page				\
 	shortcuts.page			\
-	strategy.page
+	strategy.page			\
+	translate.page
 
 DOC_LINGUAS = ca cs de el en_GB es eu fr it oc pl ru sl sr sr@latin sv tr zh_CN
 
