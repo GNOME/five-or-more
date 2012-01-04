@@ -25,30 +25,39 @@
     <p>The <gui>Board Size</gui> section lets you to select a small, medium or large board. While a board with larger size gives you more space, it also places more objects on the board per turn.</p>
 
   <section id="board-parameters">
+  <title>Board parameters</title>
     <p>The 3 different board sizes have the following parameters:</p>
 
-    <table shade="all">
+   <table shade="all">
      <tr>
-       <td><p><em>Size</em></p></td> <td><p><em>Width</em></p></td><td><p><em>Height</em></p></td>
-       <td><p><em>Number of types</em></p></td> <td><p><em>New objects per turn</em></p></td><td><p><em>Number of cells</em></p></td>
-     </tr>>
+       <td><p><em>Size</em></p></td> 
+       <td><p><em>Width</em></p></td>
+       <td><p><em>Height</em></p></td>
+       <td><p><em>Number of types</em></p></td>        <td><p><em>New objects per turn</em></p></td>
+       <td><p><em>Number of cells</em></p></td>
+     </tr>
+
      <tr>
-    <td><p>Small</p></td> <td><p>7</p></td><td><p>7</p></td>>
-    <td><p>5</p></td> <td><p>3</p></td><td><p>49</p></td>
+       <td><p>Small</p></td>
+       <td><p>7</p></td>
+       <td><p>7</p></td>
+       <td><p>5</p></td>
+       <td><p>3</p></td>
+       <td><p>49</p></td>
   </tr>
+
 <tr>
 <td><p>Medium</p></td> <td><p>9</p></td><td><p>9</p></td>
     <td><p>7</p></td> <td><p>3</p></td><td><p>81</p></td>
   </tr>
+
 <tr>
 <td><p>Large</p></td> <td><p>20</p></td><td><p>15</p></td>
     <td><p>7</p></td> <td><p>7</p></td><td><p>300</p></td>
   </tr>
 </table>
+
 </section>
-
-
-
 
 
   <section id="board-sizes">
@@ -57,7 +66,7 @@
   <table>
     <tr>
       <td>
-        <media type="image" src="figures/Small.png" height="200">
+        <media type="image" src="figures/small.png" height="200">
           <p><app>Five or More</app> Small board</p>
         </media>
       </td>
@@ -67,7 +76,7 @@
         </media>
       </td>
       <td>
-        <media type="image" src="figures/Large.png" height="200">
+        <media type="image" src="figures/large.png" height="200">
           <p><app>Five or More</app> large size board</p>
         </media>
       </td>
