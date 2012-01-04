@@ -33,12 +33,12 @@
 
 <section id="images">
 <title>Images available</title>
-  <media type="image" src="figures/color-shapes.png" width="300" style="floatleft">
-  <p>Five or More with different shapes</p>
+  <media type="image" src="figures/color-balls.png" width="300" style="floatleft">
+  <p>Five or More with different balls</p>
 </media>
 
-<media type="image" src="figures/color-balls.png" width="300">
-<p><app>Five or More</app> with different balls</p>
+<media type="image" src="figures/color-shapes.png" width="300">
+<p><app>Five or More</app> with different shapes</p>
 </media>
 </section>
 
