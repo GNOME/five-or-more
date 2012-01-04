@@ -7,46 +7,46 @@
 
     <credit type="author copyright">
       <name>Lahiru lanka</name>
-      <email> lankakck@.gmailcom</email>
+      <email>lankakck@.gmailcom</email>
+      <years>2012</years>
     </credit>
-
+   <credit type="editor">
+    <name>Tiffany Antopolski</name>
+    <email>tiffany.antopolski@gmail.com</email>
+   </credit>
     <desc></desc>
   </info>
 
-  <title>Change theme</title>
-<p>Image pattern and Background color are the things that you can adjust when changig the theme.<gui>Glines</gui> gives you the oppertunity to.....</p>
-<section id = "image pattern">
-<title>Select the image pattern</title>
+  <title>Change the look and feel</title>
+<p>To change the appearance of the pieces and the board:</p>
+
+<steps>
+<item><p>Click <guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq>.</p>
+
 <list>
-<item><p>Balls</p> </item>
-
-<item><p>Shapes</p> </item>
+<item><p>Select <gui>balls</gui> or <gui>shapes</gui> from the <gui>Image</gui> drop down menu to change the playing pieces.</p></item>
+<item><p>Click on the colored box next to <gui>Image background</gui> to access the color palette.</p></item>
 </list>
+</item>
+<item><p>Click <gui>Close</gui>.</p></item>
+</steps>
 
-<figure>
-  <desc><app>Glines</app> with different shapes.</desc>
-  <media type="image" src="figures/shapes.png" width="250" ></media>
-</figure>
+<section id="images">
+<title>Images available</title>
+  <media type="image" src="figures/color-shapes.png" width="300" style="floatleft">
+  <p>Five or More with different shapes</p>
+</media>
 
-
-<figure>
-<desc><app>Glines</app> with different balls.</desc>
-<media type="image" src="figures/balls.png" width="250" ></media>
-</figure>
+<media type="image" src="figures/color-balls.png" width="300">
+<p><app>Five or More</app> with different balls</p>
+</media>
 </section>
 
-<section id="background color">
-
-	<title>To change the background color</title>
-<note>
-<p>You can select the background color by using the <key>Color pallet</key></p></note>
- <p>color pallet</p>
-
-
-<figure>
-<desc><app>Glines</app> color pallet</desc>
- <media type="image" src="figures/pickcolor.png" width="300
-"/> </figure>
-
-</section>	
+<section id="colors">
+<title>Background colors available</title>
+ <media type="image" src="figures/pickcolor.png" width="200
+">
+<p>Five or More color palette</p>
+</media>
+</section>
 </page>
