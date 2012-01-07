@@ -1162,7 +1162,8 @@ game_about_callback (GtkAction * action, gpointer * data)
     NULL
   };
 
-  const gchar *documenters[] = { "Emese Kovács",
+  const gchar *documenters[] = { "Tiffany Antopolski",
+                                 "Lanka Rathnayaka",
     NULL
   };
   gchar *license = games_get_license (_("Five or More"));
