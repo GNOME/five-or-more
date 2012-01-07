@@ -16,7 +16,7 @@
 
   <title>Change speed</title>
 <p>You can speed up the object movements. Click:</p>
-<p><guiseq><gui>Settings</gui><gui>Preference</gui></guiseq>.</p>
+<p><guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq>.</p>
 
 <p>Any changes you make are instantly applied and remembered for the next time you run
    <key>Five or More</key> </p>
