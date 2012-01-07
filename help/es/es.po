@@ -8,8 +8,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: glines.HEAD\n"
-"POT-Creation-Date: 2012-01-07 06:52+0000\n"
-"PO-Revision-Date: 2012-01-07 13:53+0100\n"
+"POT-Creation-Date: 2012-01-07 12:55+0000\n"
+"PO-Revision-Date: 2012-01-07 19:01+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -38,7 +38,6 @@ msgstr "tiffany.antopolski@gmail.com"
 #: C/play.page:11(years) C/fast-moves.page:11(years)
 #: C/documentation.page:10(years) C/develop.page:12(years)
 #: C/change-board-size.page:11(years) C/bug-filing.page:12(years)
-#| msgid "11"
 msgid "2011"
 msgstr "2011"
 
@@ -71,6 +70,8 @@ msgid ""
 "There are <link href=\"http://l10n.gnome.org/module/gnome-games/\">many "
 "languages</link> for which translations are still needed."
 msgstr ""
+"Hay <link href=\"http://l10n.gnome.org/module/gnome-games/\">muchos idiomas</"
+"link> para los que se siguen necesitando traducciones."
 
 #: C/translate.page:30(p)
 msgid ""
@@ -79,6 +80,10 @@ msgid ""
 "teams/\">translation team</link> for your language. This will give you the "
 "ability to upload new translations."
 msgstr ""
+"Para empezar a traducir necesitará <link href=\"http:l10n.gnome.org\">crear "
+"una cuenta</link> y unirse al <link href=\"http://l10n.gnome.org/teams/"
+"\">equipo de traducción</link> de su idioma. Esto le dará la posibilidad de "
+"subir traducciones nuevas."
 
 #: C/translate.page:34(p)
 msgid ""
@@ -87,6 +92,11 @@ msgid ""
 "channel are located worldwide, so you may not get an immediate response as a "
 "result of timezone differences."
 msgstr ""
+"Puede chatear con los traductores de GNOME usando <link href=\"https://"
+"cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fi18n\">irc</link>. "
+"La gente de los canales se encuentra en cualquier parte del mundo, por lo "
+"que puede que no obtenga una respuesa inmediata debido a las diferencias "
+"horarias."
 
 #: C/translate.page:37(p)
 msgid ""
@@ -94,6 +104,9 @@ msgid ""
 "<link href=\"http://mail.gnome.org/mailman/listinfo/gnome-i18n\">mailing "
 "list</link>."
 msgstr ""
+"Alternativamente, puede contactar con el equipo de internacionalización "
+"usando su <link href=\"http://mail.gnome.org/mailman/listinfo/gnome-i18n"
+"\">lista de correo</link>."
 
 #: C/strategy.page:17(title)
 msgid "Strategy"
@@ -120,7 +133,6 @@ msgid "Fullscreen"
 msgstr "Pantalla completa"
 
 #: C/shortcuts.page:25(key)
-#| msgid "11"
 msgid "F11"
 msgstr "F11"
 
@@ -152,7 +164,6 @@ msgid "lankakck@.gmailcom"
 msgstr "lankakck@.gmailcom"
 
 #: C/scores.page:20(title)
-#| msgid "Score given"
 msgid "Scoring"
 msgstr "Puntuación"
 
@@ -167,7 +178,6 @@ msgid "Number of objects"
 msgstr "Número de objetos"
 
 #: C/scores.page:27(em)
-#| msgid "Number of objects"
 msgid "Number of points"
 msgstr "Número de puntos"
 
@@ -268,27 +278,18 @@ msgstr ""
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
 #: C/rules.page:40(None)
-#| msgid ""
-#| "@@image: 'figures/glines-startgame.png'; "
-#| "md5=e6e58f72dc4802d89a45a7726f4c7fd7"
 msgid "@@image: 'figures/vertical.png'; md5=9f17201dac1c4c78a572ac17dce45ce0"
 msgstr "@@image: 'figures/vertical.png'; md5=9f17201dac1c4c78a572ac17dce45ce0"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
 #: C/rules.page:45(None)
-#| msgid ""
-#| "@@image: 'figures/glines-gameover.png'; "
-#| "md5=949d09a01ee02944bf3f278ce1ebc2ba"
 msgid "@@image: 'figures/diagonal.png'; md5=8654cd0cc269ac9ed0f8fb8bce02a8fc"
 msgstr "@@image: 'figures/diagonal.png'; md5=8654cd0cc269ac9ed0f8fb8bce02a8fc"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
 #: C/rules.page:50(None)
-#| msgid ""
-#| "@@image: 'figures/glines-gameover.png'; "
-#| "md5=949d09a01ee02944bf3f278ce1ebc2ba"
 msgid ""
 "@@image: 'figures/glines-gameover.png'; md5=ab35873b1818aa94499cc7fcca646db6"
 msgstr ""
@@ -339,15 +340,15 @@ msgstr ""
 
 #: C/rules.page:36(p)
 msgid "Example horizontal alignment"
-msgstr ""
+msgstr "Ejemplo de alienación horizontal"
 
 #: C/rules.page:41(p)
 msgid "Example vertical alignment"
-msgstr ""
+msgstr "Ejemplo de alineación vertical"
 
 #: C/rules.page:46(p)
 msgid "Example diagonal alignment"
-msgstr ""
+msgstr "Ejemplo de alineación en diagonal"
 
 #: C/rules.page:51(p)
 #, fuzzy
@@ -358,9 +359,6 @@ msgstr "Manual de <application>Cinco o más</application>"
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
 #: C/play.page:42(None)
-#| msgid ""
-#| "@@image: 'figures/glines-gameover.png'; "
-#| "md5=949d09a01ee02944bf3f278ce1ebc2ba"
 msgid ""
 "@@image: 'figures/glines-demo.ogv'; md5=f9222aaac4ad0df37975c8ac77fbe1cc"
 msgstr ""
@@ -374,9 +372,10 @@ msgstr "Cómo jugar"
 msgid ""
 "To start a new game click <guiseq><gui>Game</gui><gui>New</gui></guiseq>."
 msgstr ""
+"Para empezar una partida nueva, pulse <guiseq><gui>Juego</gui><gui>Nuevo</"
+"gui></guiseq>."
 
 #: C/play.page:21(title)
-#| msgid "Using the Keyboard"
 msgid "Using the mouse"
 msgstr "Usar el ratón"
 
@@ -388,10 +387,9 @@ msgstr ""
 
 #: C/play.page:26(p)
 msgid "Click on the cell you want to move the object to."
-msgstr ""
+msgstr "Pulse en la celda a la que quiere mover el objeto."
 
 #: C/play.page:30(title)
-#| msgid "Using the Keyboard"
 msgid "Using the keyboard"
 msgstr "Usar el teclado"
 
@@ -463,7 +461,6 @@ msgid "Under the following conditions:"
 msgstr "Bajo las siguientes condiciones:"
 
 #: C/license.page:38(em)
-#| msgid "Introduction"
 msgid "Attribution"
 msgstr "Atribución"
 
@@ -497,6 +494,10 @@ msgid ""
 "link>, or read the full <link href=\"http://creativecommons.org/licenses/by-"
 "sa/3.0/\">Commons Deed</link>."
 msgstr ""
+"Para ver el texto completo de la licencia consulte la <link href=\"http://"
+"creativecommons.org/licenses/by-sa/3.0/legalcode\">página web de Creative "
+"Commons</link> o lea el <link href=\"http://creativecommons.org/licenses/by-"
+"sa/3.0/\"> Escrito de Commons</link>."
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -515,13 +516,10 @@ msgid "Five or More"
 msgstr "Cinco o más"
 
 #: C/index.page:12(email)
-#| msgid "tiffany.antopolski@gmail.com"
 msgid "lankakck@gmail.com"
 msgstr "lankakck@gmail.com"
 
 #: C/index.page:24(title)
-#| msgid ""
-#| "<media type=\"image\" src=\"figures/logo32.png\">Glines logo</media>Glines"
 msgid ""
 "<media type=\"image\" src=\"figures/logo32.png\">Five or More logo</"
 "media>Five or More"
@@ -564,11 +562,11 @@ msgid "You can speed up the object movements. Click:"
 msgstr ""
 
 #: C/fast-moves.page:19(p)
-msgid "<guiseq><gui>Settings</gui><gui>Preference</gui></guiseq>."
-msgstr ""
+#| msgid "Click <guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq>."
+msgid "<guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq>."
+msgstr "<guiseq><gui>Configuración</gui><gui>Preferencias</gui></guiseq>."
 
 #: C/fast-moves.page:21(p)
-#, fuzzy
 #| msgid ""
 #| "Any changes you make are instantly applied and remembered for the next "
 #| "time you run <application>Five or More</application>."
@@ -581,7 +579,7 @@ msgstr ""
 
 #: C/documentation.page:17(title)
 msgid "Help write documentation"
-msgstr ""
+msgstr "Ayudar a escribir documentación"
 
 #: C/documentation.page:19(p)
 msgid ""
@@ -602,6 +600,8 @@ msgid ""
 "Our <link href=\"https://live.gnome.org/DocumentationProject/Contributing"
 "\">wiki</link> page contains useful information."
 msgstr ""
+"El <link href=\"https://live.gnome.org/DocumentationProject/Contributing"
+"\">wiki</link> contiene información útil."
 
 #: C/develop.page:19(title)
 msgid "Help develop"
@@ -622,9 +622,14 @@ msgid ""
 "href=\"http://mail.gnome.org/mailman/listinfo/games-list\">mailing list</"
 "link>."
 msgstr ""
+"Si quiere <link href=\"https://live.gnome.org/GnomeGames/Contributing"
+"\">contribuir al desarrollo de los <app>juegos de GNOME</app></link>, puede "
+"ponerse en contacto con los desarrolladores usando <link href=\"https://"
+"cbe005.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</"
+"link>, o mediante la <link href=\"http://mail.gnome.org/mailman/listinfo/"
+"games-list\">lista de correo</link>."
 
 #: C/commandline.page:11(years) C/change-theme.page:11(years)
-#| msgid "12"
 msgid "2012"
 msgstr "2012"
 
@@ -635,7 +640,6 @@ msgstr "Línea de comandos"
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
 #: C/change-theme.page:36(None)
-#| msgid "@@image: 'figures/logo32.png'; md5=51b65eea63f1a6c26a4c5d628dba406c"
 msgid ""
 "@@image: 'figures/color-balls.png'; md5=ac9b26a5c770a7e118c84d82b43fbcaa"
 msgstr ""
@@ -644,7 +648,6 @@ msgstr ""
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
 #: C/change-theme.page:40(None)
-#| msgid "@@image: 'figures/logo32.png'; md5=51b65eea63f1a6c26a4c5d628dba406c"
 msgid ""
 "@@image: 'figures/color-shapes.png'; md5=12b538f0d29c55aa93c8fd6adec58ffc"
 msgstr ""
@@ -653,7 +656,6 @@ msgstr ""
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
 #: C/change-theme.page:48(None)
-#| msgid "@@image: 'figures/logo32.png'; md5=51b65eea63f1a6c26a4c5d628dba406c"
 msgid "@@image: 'figures/pickcolor.png'; md5=51d82564630d095c45865aff5518e6fc"
 msgstr "@@image: 'figures/pickcolor.png'; md5=51d82564630d095c45865aff5518e6fc"
 
@@ -712,21 +714,18 @@ msgstr "Cinco o más"
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
 #: C/change-board-size.page:69(None)
-#| msgid "@@image: 'figures/logo.png'; md5=83ba6ff888acbdea3ad599b055ed7710"
 msgid "@@image: 'figures/small.png'; md5=cc59a29333b3b145c9e7928872c714bc"
 msgstr "@@image: 'figures/small.png'; md5=cc59a29333b3b145c9e7928872c714bc"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
 #: C/change-board-size.page:74(None)
-#| msgid "@@image: 'figures/logo.png'; md5=83ba6ff888acbdea3ad599b055ed7710"
 msgid "@@image: 'figures/medium.png'; md5=ae122a301d215d40fff80717211b0915"
 msgstr "@@image: 'figures/medium.png'; md5=ae122a301d215d40fff80717211b0915"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
 #: C/change-board-size.page:79(None)
-#| msgid "@@image: 'figures/logo32.png'; md5=51b65eea63f1a6c26a4c5d628dba406c"
 msgid "@@image: 'figures/large.png'; md5=14942e047fbbc3538ababbfa888fa4e6"
 msgstr "@@image: 'figures/large.png'; md5=14942e047fbbc3538ababbfa888fa4e6"
 
@@ -735,13 +734,12 @@ msgid "Change board size"
 msgstr ""
 
 #: C/change-board-size.page:20(p)
-#| msgid "Using the Keyboard"
 msgid "To change the board:"
 msgstr "Para cambiar el tablero:"
 
 #: C/change-board-size.page:22(p)
 msgid "Click <guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq>"
-msgstr ""
+msgstr "Pulse en <guiseq><gui>Ajustes</gui><gui>Preferencias</gui></guiseq>."
 
 #: C/change-board-size.page:25(p)
 #, fuzzy
@@ -782,7 +780,6 @@ msgid "Height"
 msgstr "Altura"
 
 #: C/change-board-size.page:36(em)
-#| msgid "Number of Types"
 msgid "Number of types"
 msgstr "Número de tipos"
 
@@ -793,7 +790,6 @@ msgid "New objects per turn"
 msgstr "Objetos por turno"
 
 #: C/change-board-size.page:37(em)
-#| msgid "Number of Types"
 msgid "Number of cells"
 msgstr "Número de celdas"
 
@@ -806,7 +802,6 @@ msgid "3"
 msgstr "3"
 
 #: C/change-board-size.page:46(p)
-#| msgid "9"
 msgid "49"
 msgstr "49"
 
@@ -815,7 +810,6 @@ msgid "Medium"
 msgstr "Medio"
 
 #: C/change-board-size.page:51(p)
-#| msgid "8"
 msgid "81"
 msgstr "81"
 
@@ -856,7 +850,6 @@ msgid "<app>Five or More</app> large size board"
 msgstr "Manual de <application>Cinco o más</application>"
 
 #: C/bug-filing.page:11(email)
-#| msgid "tiffany.antopolski@gmail.com"
 msgid "tiffany@antopolski.com"
 msgstr "tiffany@antopolski.com"
 
@@ -865,17 +858,25 @@ msgid "Report a Problem"
 msgstr "Informar de un problema"
 
 #: C/bug-filing.page:20(p)
+#, fuzzy
 msgid ""
 "<app>Mahjongg</app> is maintained by a volunteer community. You are welcome "
 "to participate. If you notice a problem you can file a <em>bug report</em>. "
 "To file a bug, go to <link href=\"https://bugzilla.gnome.org/\"/>."
 msgstr ""
+"<app>Cinco o más</app> lo mantiene la comunidad de manera voluntaria. Si "
+"quiere participar, es bienvenido. Si encuentra un error, puede rellenar un "
+"<em>informe de error</em>. Para informar de un error, vaya a <link href="
+"\"https://bugzilla.gnome.org/\"/>."
 
 #: C/bug-filing.page:23(p)
 msgid ""
 "This is a bug tracking system where users and developers can file details "
 "about bugs, crashes and request enhancements."
 msgstr ""
+"Este es el sistema de seguimiento de errores en el que los usuarios y los "
+"desarrolladores pueden archivar detalles sobre los errores, fallos y "
+"solicitudes de mejoras."
 
 #: C/bug-filing.page:26(p)
 msgid ""
@@ -884,6 +885,11 @@ msgid ""
 "receive updates by e-mail about the status of your bug. If you don't already "
 "have an account, just click on the <gui>New Account</gui> link to create one."
 msgstr ""
+"Para participar necesita una cuenta, que le permitirá obtener acceso, "
+"informar de errores y hacer comentarios. También debe registrarte para poder "
+"recibir actualizaciones por correo-e sobre el estado de su informe de error. "
+"Si todavía no tiene una cuenta, simplemente pulse en el enlace <gui>New "
+"Account</gui> para crear una."
 
 #: C/bug-filing.page:29(p)
 msgid ""
@@ -894,12 +900,20 @@ msgid ""
 "\"https://bugzilla.gnome.org/browse.cgi?product=gnome-games\">browse</link> "
 "for the bug to see if it already exists."
 msgstr ""
+"Una vez que tenga su cuenta, inicie sesión y pulse en <guiseq><gui>Informar "
+"de un error</gui><gui>Aplicaciones</gui><gui>gnome-games</gui></guiseq>. "
+"Antes de informar de un error, lea las <link href=\"https://bugzilla.gnome."
+"org/page.cgi?id=bug-writing.html\">guías para informar de un error</link> y "
+"<link href=\"https://bugzilla.gnome.org/browse.cgi?product=evince\">busque</"
+"link> el error para ver si ya existe."
 
 #: C/bug-filing.page:33(p)
 msgid ""
 "To file your bug, choose the component <gui>glines</gui> in the "
 "<gui>Component</gui> menu."
 msgstr ""
+"Para enviar su informe de error, elija el componente <gui>glines</gui> en el "
+"menú <gui>Component</gui>."
 
 #: C/bug-filing.page:36(p)
 msgid ""
@@ -907,12 +921,17 @@ msgid ""
 "<gui>Severity</gui> menu. Fill in the Summary and Description sections and "
 "click <gui>Commit</gui>."
 msgstr ""
+"Si está solicitando una característica nueva, elija <gui>enhancement</gui> "
+"en el menú <gui>Severity</gui>. Rellene las secciones «Summary» y "
+"«Description» y pulse en <gui>Commit</gui>."
 
 #: C/bug-filing.page:40(p)
 msgid ""
 "Your report will be given an ID number, and its status will be updated as it "
 "is being dealt with."
 msgstr ""
+"Se asignará un número de ID a su informe, y su estado se actualizará a "
+"medida que se vaya tratando."
 
 #. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2
 #: C/index.page:0(None)
