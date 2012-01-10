@@ -29,7 +29,6 @@ DOC_PAGES = \
 	documentation.page		\
 	fast-moves.page			\
 	index.page			\
-	legal.xml			\
 	license.page			\
 	play.page			\
 	rules.page			\
