@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: glines.HEAD\n"
 "POT-Creation-Date: 2012-01-07 18:21+0000\n"
-"PO-Revision-Date: 2012-01-10 17:39+0100\n"
+"PO-Revision-Date: 2012-01-10 17:44+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -660,7 +660,7 @@ msgstr "@@image: 'figures/pickcolor.png'; md5=51d82564630d095c45865aff5518e6fc"
 
 #: C/change-theme.page:20(title)
 msgid "Change the look and feel"
-msgstr ""
+msgstr "Cambiar el aspecto"
 
 #: C/change-theme.page:21(p)
 msgid "To change the appearance of the pieces and the board:"
