@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: glines.HEAD\n"
 "POT-Creation-Date: 2012-01-07 18:21+0000\n"
-"PO-Revision-Date: 2012-01-10 17:44+0100\n"
+"PO-Revision-Date: 2012-01-10 17:46+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -858,7 +858,6 @@ msgid "Report a Problem"
 msgstr "Informar de un problema"
 
 #: C/bug-filing.page:20(p)
-#, fuzzy
 msgid ""
 "<app>Mahjongg</app> is maintained by a volunteer community. You are welcome "
 "to participate. If you notice a problem you can file a <em>bug report</em>. "
