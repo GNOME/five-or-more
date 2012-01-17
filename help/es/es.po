@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: glines.HEAD\n"
 "POT-Creation-Date: 2012-01-15 20:12+0000\n"
-"PO-Revision-Date: 2012-01-17 14:31+0100\n"
+"PO-Revision-Date: 2012-01-17 16:53+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -175,6 +175,8 @@ msgid ""
 "You score points by creating lines of 5 or more objects. The points you gain "
 "depends on the number of objects that disappear."
 msgstr ""
+"Puede sumar puntos creando líneas de 5 o más objetos. Los puntos que gana "
+"dependen del número de objetos que desaparecen."
 
 #: C/scores.page:26(em)
 msgid "Number of objects"
@@ -263,6 +265,8 @@ msgid ""
 "You can view the high scores by clicking <guiseq><gui>Game</gui><gui>Scores</"
 "gui></guiseq>."
 msgstr ""
+"Puede ver las puntuaciones pulsando <guiseq><gui>Juego</gui><gui>Puntuación</"
+"gui></guiseq>."
 
 #: C/scores.page:78(p)
 msgid ""
@@ -270,6 +274,9 @@ msgid ""
 "You can select the <gui>Board Size</gui> of interest using the drop down "
 "menu."
 msgstr ""
+"La puntuación de <app>Cinco o más</app> se graba de acuerdo con el tamaño "
+"del tablero. Puede seleccionar el <gui>Tamaño del tablero</gui> que le "
+"interese usando el menú desplegable."
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -307,6 +314,8 @@ msgid ""
 "At the start of the game there are either 3 or 7 objects placed on your "
 "board, depending on the <link xref=\"change-board-size\">board size</link>."
 msgstr ""
+"Al empezar el juego hay 3 o 7 objetos colocados en el teclado, dependiendo "
+"del <link xref=\"change-board-size\">tamaño del tablero</link>."
 
 #: C/rules.page:21(p)
 msgid ""
@@ -315,12 +324,19 @@ msgid ""
 "also depends on the board. A preview of the objects to be placed on the "
 "board appears in the upper left corner of the game window."
 msgstr ""
+"Cada vez que <link xref=\"play\">mueve un objeto</link>, se añaden objetos "
+"adicionales de manera aleatoria al tablero. El número de objetos nuevos que "
+"se colocan en cada turno depende del tablero. Aparecerá una vista previa de "
+"los objetos que se colocarán en la esquina superior izquierda de la ventana "
+"del juego."
 
 #: C/rules.page:23(p)
 msgid ""
 "There must be a clear path from the original position of the object to the "
 "destination cell (i.e you can not jump over objects)."
 msgstr ""
+"Debe haber un camino limpio desde la posición original del objeto hasta la "
+"casilla de destino (ej. no puede saltar sobre otros objetos)."
 
 #: C/rules.page:25(p)
 msgid ""
@@ -328,18 +344,25 @@ msgid ""
 "objects will disappear from the game board. When this happens you will have "
 "an extra move without additional objects being added to the board."
 msgstr ""
+"Desaparecerá del tablero una línea recta horizontal, vertical o diagonal de "
+"cinco o más objetos similares. Cuando esto ocurre, tendrá un movimiento "
+"adicional sin que se añadan objetos al tablero."
 
 #: C/rules.page:27(p)
 msgid ""
 "The more objects you clear, the longer the game will go on. The longer you "
 "play, the higher your <link xref=\"scores\">score</link>."
 msgstr ""
+"Cuantos más objetos elimine, más durará el juego. Cuanto más juegue, más "
+"alta será su <link xref=\"scores\">puntuación</link>."
 
 #: C/rules.page:29(p)
 msgid ""
 "The game is over when the board is full, since no object can be moved at "
 "that point."
 msgstr ""
+"El juego termina cuando el tablero está lleno, ya que no se puede mover "
+"ningún objeto."
 
 #: C/rules.page:36(p)
 msgid "Example horizontal alignment"
@@ -390,7 +413,7 @@ msgstr ""
 
 #: C/play.page:26(p)
 msgid "Click on the cell you want to move the object to."
-msgstr "Pulse en la celda a la que quiere mover el objeto."
+msgstr "Pulse en la casilla a la que quiere mover el objeto."
 
 #: C/play.page:30(title)
 msgid "Using the keyboard"
@@ -423,6 +446,9 @@ msgid ""
 "<key>Spacebar</key>. This will cause the chosen object to me moved to the "
 "destination cell."
 msgstr ""
+"Muévase a la casilla de destino y pulse <key>Intro</key> o <key>Barra "
+"espaciadora</key>. Esto hará que el obheto elegido se mueva a la casilla de "
+"destino."
 
 #: C/play.page:41(title)
 msgid "Video demonstration"
@@ -544,6 +570,12 @@ msgid ""
 "they disappear. The goal is to vanish as many objects as possible. The game "
 "is over when the entire board is full."
 msgstr ""
+"<key>Cinco o más</key> es un entrenamiento para el cerebro muy sencillo. El "
+"objetivo es colocar al menos cinco objetos con la misma <link xref=\"change-"
+"theme#images\">forma o color</link>en línea recta. La línea puede ser "
+"vertical, horizontal o diagonal. Cuando haya cinco o más objetos agrupados "
+"en una línea, desaparecerán. El objetivo es hacer desaparecer el mayor "
+"número posible de objetos. El juego termina cuando el tablero se llena."
 
 #: C/index.page:32(title)
 msgid "Game Play"
@@ -696,6 +728,8 @@ msgid ""
 "Click on the colored box next to <gui>Image background</gui> to access the "
 "color palette."
 msgstr ""
+"Pulse en la caja coloreada junto a <gui>Imagen de fondo</gui> para acceder a "
+"la paleta de colores."
 
 #: C/change-theme.page:31(p)
 msgid "Click <gui>Close</gui>."
@@ -800,7 +834,7 @@ msgstr "Objetos nuevos por turno"
 
 #: C/change-board-size.page:37(em)
 msgid "Number of cells"
-msgstr "Número de celdas"
+msgstr "Número de casillas"
 
 #: C/change-board-size.page:41(p)
 msgid "Small"
