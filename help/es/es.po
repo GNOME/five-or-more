@@ -8,8 +8,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: glines.HEAD\n"
-"POT-Creation-Date: 2012-01-10 16:49+0000\n"
-"PO-Revision-Date: 2012-01-15 20:35+0100\n"
+"POT-Creation-Date: 2012-01-15 20:12+0000\n"
+"PO-Revision-Date: 2012-01-17 14:31+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -49,8 +49,8 @@ msgstr "Michael Hill"
 msgid "mdhillca@gmail.com"
 msgstr "mdhillca@gmail.com"
 
-#: C/translate.page:19(p) C/legal.xml:2(p) C/index.page:19(p)
-#: C/documentation.page:13(p) C/develop.page:15(p) C/bug-filing.page:15(p)
+#: C/translate.page:19(p) C/index.page:19(p) C/documentation.page:13(p)
+#: C/develop.page:15(p) C/bug-filing.page:15(p)
 msgid "Creative Commons Share Alike 3.0"
 msgstr "Creative Commons Compartir Igual 3.0"
 
@@ -354,10 +354,9 @@ msgid "Example diagonal alignment"
 msgstr "Ejemplo de alineación en diagonal"
 
 #: C/rules.page:51(p)
-#, fuzzy
 #| msgid "<application>Five or More</application> Manual"
 msgid "<app>Five or More</app> game over position."
-msgstr "Manual de <application>Cinco o más</application>"
+msgstr "Posición de juego terminado en <application>Cinco o más</application>."
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -387,6 +386,7 @@ msgid ""
 "Click on the object you want to move. The selected object will begin "
 "spinning."
 msgstr ""
+"Pulse en el objeto que quiere mover. El objeto seleccionado empezará a girar."
 
 #: C/play.page:26(p)
 msgid "Click on the cell you want to move the object to."
@@ -401,16 +401,21 @@ msgid ""
 "Press any of the arrow keys. An outline around a cell will appear on the "
 "board."
 msgstr ""
+"Pulse cualquier tecla de flecha. Aparecerá un borde alrededor de una casilla "
+"en el tablero."
 
 #: C/play.page:33(p)
 msgid "Using the arrow keys, navigate to the object you want to move."
 msgstr ""
+"Usando las teclas de flechas, navegue hasta el objeto que quiere mover."
 
 #: C/play.page:34(p)
 msgid ""
 "To select the object, press the <key>Enter</key> or <key>Spacebar</key>. The "
 "selected object will begin spinning."
 msgstr ""
+"Para seleccionar el objeto, pulse <key>Intro</key> o <key>Barra espaciadora</"
+"key>. El objeto seleccionado empezará a girar."
 
 #: C/play.page:35(p)
 msgid ""
@@ -585,6 +590,8 @@ msgid ""
 "The <app>GNOME Games</app> documentation is maintained by a volunteer "
 "community. You are welcome to participate."
 msgstr ""
+"La documentación de los <app>juegos de GNOME</app> las mantiene una "
+"comunidad de voluntarios. Si quiere participar es bienvenido."
 
 #: C/documentation.page:22(p)
 msgid ""
@@ -593,6 +600,10 @@ msgid ""
 "gnome.org%2Fdocs\">irc</link>, or via our <link href=\"http://mail.gnome.org/"
 "mailman/listinfo/gnome-doc-list\">mailing list</link>."
 msgstr ""
+"Para colaborar con el Proyecto de documentación, póngase en contacto usando "
+"<link href=\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%"
+"2Fdocs\">irc</link>, o mediante la <link href=\"http://mail.gnome.org/"
+"mailman/listinfo/gnome-doc-list\">lista de correo</link>."
 
 #: C/documentation.page:24(p)
 msgid ""
@@ -611,6 +622,8 @@ msgid ""
 "The <app>GNOME Games</app> are developed and maintained by a volunteer "
 "community. You are welcome to participate."
 msgstr ""
+"Los <app>juegos de GNOME</app> los desarrolla y los mantiene una comunidad "
+"de voluntarios. Si quiere participar es bienvenido."
 
 #: C/develop.page:23(p)
 msgid ""
@@ -664,7 +677,7 @@ msgstr "Cambiar el aspecto"
 
 #: C/change-theme.page:21(p)
 msgid "To change the appearance of the pieces and the board:"
-msgstr ""
+msgstr "Para cambiar la apariencia de las fichas y del tablero:"
 
 #: C/change-theme.page:24(p)
 msgid "Click <guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq>."
@@ -675,6 +688,8 @@ msgid ""
 "Select <gui>balls</gui> or <gui>shapes</gui> from the <gui>Image</gui> drop "
 "down menu to change the playing pieces."
 msgstr ""
+"Seleccione <gui>bolas</gui> o <gui>formas</gui> en el menú desplegable "
+"<gui>Imagen</gui> para cambiar las fichas del juego."
 
 #: C/change-theme.page:28(p)
 msgid ""
@@ -692,23 +707,21 @@ msgstr "Imágenes disponibles"
 
 #: C/change-theme.page:37(p)
 msgid "Five or More with different balls"
-msgstr ""
+msgstr "Cinco o más con diferentes bolas"
 
 #: C/change-theme.page:41(p)
-#, fuzzy
 #| msgid "<application>Five or More</application> Manual"
 msgid "<app>Five or More</app> with different shapes"
-msgstr "Manual de <application>Cinco o más</application>"
+msgstr "<app>Cinco o más</app> con diferentes formas"
 
 #: C/change-theme.page:46(title)
 msgid "Background colors available"
-msgstr ""
+msgstr "Colores de fondo disponibles"
 
 #: C/change-theme.page:49(p)
-#, fuzzy
 #| msgid "Five or More"
 msgid "Five or More color palette"
-msgstr "Cinco o más"
+msgstr "Paleta de color de Cinco o más"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -730,7 +743,7 @@ msgstr "@@image: 'figures/large.png'; md5=14942e047fbbc3538ababbfa888fa4e6"
 
 #: C/change-board-size.page:19(title)
 msgid "Change board size"
-msgstr ""
+msgstr "Cambiar el tamaño del tablero"
 
 #: C/change-board-size.page:20(p)
 msgid "To change the board:"
@@ -742,7 +755,6 @@ msgstr ""
 "Pulse en <guiseq><gui>Configuración</gui><gui>Preferencias</gui></guiseq>."
 
 #: C/change-board-size.page:25(p)
-#, fuzzy
 #| msgid ""
 #| "The <guimenu>Board Size</guimenu> section lets you select the size of the "
 #| "board. Each size has a slightly different balance: larger sizes give you "
@@ -753,19 +765,17 @@ msgid ""
 "large board. While a board with larger size gives you more space, it also "
 "places more objects on the board per turn."
 msgstr ""
-"La sección <guimenu>Tamaño del tablero</guimenu> le permite seleccionar el "
-"tamaño del tablero. Cada tamaño tiene unas características ligeramente "
-"diferentes: los tamaños grandes le dan más tamaño para moverse, pero cada "
-"turno aparecerán más objetos. Los parámetros para cada tamaño están dados en "
-"<xref linkend=\"table-sizes\"/>."
+"La sección <gui>Tamaño del tablero</gui> le permite seleccionar un tablero "
+"pequeño, mediano o grande. Un tablero grande le da más espacio para moverse, "
+"pero cada turno aparecerán más objetos."
 
 #: C/change-board-size.page:28(title)
 msgid "Board parameters"
-msgstr ""
+msgstr "Parámetros del tablero"
 
 #: C/change-board-size.page:29(p)
 msgid "The 3 different board sizes have the following parameters:"
-msgstr ""
+msgstr "Los 3 tamaños del tablero tiene los siguientes parámetros:"
 
 #: C/change-board-size.page:33(em)
 msgid "Size"
@@ -784,10 +794,9 @@ msgid "Number of types"
 msgstr "Número de tipos"
 
 #: C/change-board-size.page:36(em)
-#, fuzzy
 #| msgid "Objects per Turn"
 msgid "New objects per turn"
-msgstr "Objetos por turno"
+msgstr "Objetos nuevos por turno"
 
 #: C/change-board-size.page:37(em)
 msgid "Number of cells"
@@ -831,23 +840,21 @@ msgstr "300"
 
 #: C/change-board-size.page:64(title)
 msgid "The 3 board sizes"
-msgstr ""
+msgstr "Los 3 tamaños del tablero"
 
 #: C/change-board-size.page:70(p)
-#, fuzzy
 #| msgid "<application>Five or More</application> Manual"
 msgid "<app>Five or More</app> Small board"
-msgstr "Manual de <application>Cinco o más</application>"
+msgstr "Tablero pequeño de <app>Cinco o más</app>"
 
 #: C/change-board-size.page:75(p)
 msgid "<app>Five or More</app> medium size board"
-msgstr ""
+msgstr "Tablero mediano de <app>Cinco o más</app>"
 
 #: C/change-board-size.page:80(p)
-#, fuzzy
 #| msgid "<application>Five or More</application> Manual"
 msgid "<app>Five or More</app> large size board"
-msgstr "Manual de <application>Cinco o más</application>"
+msgstr "Tablero grande de <app>Cinco o más</app>"
 
 #: C/bug-filing.page:11(email)
 msgid "tiffany@antopolski.com"
@@ -858,7 +865,6 @@ msgid "Report a Problem"
 msgstr "Informar de un problema"
 
 #: C/bug-filing.page:20(p)
-#, fuzzy
 #| msgid ""
 #| "<app>Mahjongg</app> is maintained by a volunteer community. You are "
 #| "welcome to participate. If you notice a problem you can file a <em>bug "
@@ -1244,8 +1250,8 @@ msgstr ""
 
 #~ msgid ""
 #~ "As objects disappear, you get points. The points you score depends on the "
-#~ "number of objects you managed to align (see <xref linkend=\"glines-"
-#~ "table1\"/>). Your score is shown in the upper right corner of the window."
+#~ "number of objects you managed to align (see <xref linkend=\"glines-table1"
+#~ "\"/>). Your score is shown in the upper right corner of the window."
 #~ msgstr ""
 #~ "Obtendrá puntos al hacer desaparecer los objetos. Los puntos que obtiene "
 #~ "dependen del número de objetos que fue capaz de alinear (vea <xref "
@@ -1380,8 +1386,8 @@ msgstr ""
 #~ "citetitle> from the Free Software Foundation by visiting <ulink url="
 #~ "\"http://www.fsf.org\" type=\"http\">their Web site</ulink> or by writing "
 #~ "to <address> Free Software Foundation, Inc. <street>59 Temple Place</"
-#~ "street> - Suite 330 <city>Boston</city>, <state>MA</"
-#~ "state><postcode>02111-1307</postcode><country>USA</country></address>"
+#~ "street> - Suite 330 <city>Boston</city>, <state>MA</state><postcode>02111-"
+#~ "1307</postcode><country>USA</country></address>"
 #~ msgstr ""
 #~ "Una copia de la <citetitle>Licencia Pública General GNU</citetitle> está "
 #~ "incluida en el apéndice de la <citetitle>Guía de Usuario de GNOME</"
