@@ -1506,6 +1506,8 @@ main (int argc, char *argv[])
   gboolean retval;
   GError *error = NULL;
 
+  games_scores_startup ();
+
   rgen = g_rand_new ();
 
   context = g_option_context_new (NULL);
