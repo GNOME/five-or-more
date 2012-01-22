@@ -1,11 +1,7 @@
-include $(top_srcdir)/gnome-doc-utils.make
-dist-hook: doc-dist-hook
+@YELP_HELP_RULES@
+HELP_ID = glines
 
-DOC_ID = glines
-DOC_INCLUDES = \
-	legal.xml
-
-DOC_FIGURES = \
+HELP_MEDIA = \
 	figures/color-balls.png		\
 	figures/color-shapes.png	\
 	figures/diagonal.png		\
@@ -20,7 +16,7 @@ DOC_FIGURES = \
 	figures/small.png		\
 	figures/vertical.png
 
-DOC_PAGES = \
+HELP_FILES = \
 	bug-filing.page			\
 	change-board-size.page		\
 	change-theme.page		\
@@ -29,6 +25,7 @@ DOC_PAGES = \
 	documentation.page		\
 	fast-moves.page			\
 	index.page			\
+	legal.xml			\
 	license.page			\
 	play.page			\
 	rules.page			\
@@ -37,6 +34,6 @@ DOC_PAGES = \
 	strategy.page			\
 	translate.page
 
-DOC_LINGUAS = ca cs de el en_GB es eu fr it oc pl ru sl sr sr@latin sv tr zh_CN
+HELP_LINGUAS = ca cs de el en_GB es eu fr it oc pl ru sl sr sr@latin sv tr zh_CN
 
 -include $(top_srcdir)/git.mk
