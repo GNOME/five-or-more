@@ -1516,7 +1516,7 @@ main (int argc, char *argv[])
   rgen = g_rand_new ();
 
   context = g_option_context_new (NULL);
-  g_option_context_set_translation_dmoain (context, GETTEXT_PACKAGE);
+  g_option_context_set_translation_domain (context, GETTEXT_PACKAGE);
   g_option_context_add_group (context, gtk_get_option_group (TRUE));
 
   retval = g_option_context_parse (context, &argc, &argv, &error);
