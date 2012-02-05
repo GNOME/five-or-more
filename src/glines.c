@@ -1282,7 +1282,7 @@ bg_color_callback (GtkWidget * widget, gpointer data)
 
   gtk_color_button_get_rgba (GTK_COLOR_BUTTON (widget), &c);
 
-  g_snprintf (str, sizeof (str), "#%04x%04x%04x", (int) (c.red * 255 + 0.5), (int) (c.green * 255 + 0.5), (int) (c.blue * 255 + 0.5));
+  g_snprintf (str, sizeof (str), "#%04x%04x%04x", (int) (c.red * 65535 + 0.5), (int) (c.green * 65535 + 0.5), (int) (c.blue * 65535 + 0.5));
 
   g_settings_set_string (settings, KEY_BACKGROUND_COLOR, str);
 
