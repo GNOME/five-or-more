@@ -139,7 +139,7 @@ static scoretable sctab[] =
   {13, 172}, {14, 210}, {0, 0} };
 
 static struct {
-  GdkColor color;
+  GdkRGBA color;
   gchar *name;
   gint set;
 } backgnd = { { 0, 0, 0, 0}, NULL, 0 };
@@ -256,7 +256,7 @@ refresh_pixmaps (void)
   warning_message = NULL;
 
   cr = cairo_create (ball_surface);
-  gdk_cairo_set_source_color (cr, &backgnd.color);
+  gdk_cairo_set_source_rgba (cr, &backgnd.color);
 
   cairo_rectangle (cr, 0, 0, boxsize * 4, boxsize * 7);
   cairo_fill (cr);
@@ -265,7 +265,7 @@ refresh_pixmaps (void)
   cairo_mask (cr, cairo_get_source (cr));
 
   cr_blank = cairo_create (blank_surface);
-  gdk_cairo_set_source_color (cr_blank, &backgnd.color);
+  gdk_cairo_set_source_rgba (cr_blank, &backgnd.color);
 
   cairo_rectangle (cr_blank, 0, 0, boxsize, boxsize);
   cairo_fill (cr_blank);
@@ -793,15 +793,15 @@ key_press_event (GtkWidget * widget, GdkEventKey * event, void *d)
 static void
 draw_grid (cairo_t *cr)
 {
-  GdkColor color;
+  GdkRGBA color;
   guint w, h;
   guint i;
 
   w = gtk_widget_get_allocated_width(draw_area);
   h = gtk_widget_get_allocated_height(draw_area);
 
-  gdk_color_parse ("#525F6C", &color);
-  gdk_cairo_set_source_color (cr, &color);
+  gdk_rgba_parse (&color, "#525F6C");
+  gdk_cairo_set_source_rgba (cr, &color);
   cairo_set_line_width (cr, 1.0);
 
   for (i = boxsize; i < w; i = i + boxsize)
@@ -824,7 +824,7 @@ static gboolean
 field_draw_callback (GtkWidget * widget, cairo_t *cr)
 {
   guint i, j, idx;
-  GdkColor cursorColor;
+  GdkRGBA cursorColor;
 
   for (i = 0; i < vfieldsize; i++) {
     for (j = 0; j < hfieldsize; j++) {
@@ -853,13 +853,12 @@ field_draw_callback (GtkWidget * widget, cairo_t *cr)
 
   /* Cursor */
   if (show_cursor) {
-    if (((backgnd.color.red + backgnd.color.green + backgnd.color.blue) / 3) >
-        (G_MAXUINT16 / 2))
-      gdk_color_parse ("#000000", &cursorColor);
+    if (((backgnd.color.red + backgnd.color.green + backgnd.color.blue) / 3) > 0.5)
+      gdk_rgba_parse (&cursorColor, "#000000");
     else
-      gdk_color_parse ("#FFFFFF", &cursorColor);
+      gdk_rgba_parse (&cursorColor, "#FFFFFF");
 
-    gdk_cairo_set_source_color (cr, &cursorColor);
+    gdk_cairo_set_source_rgba (cr, &cursorColor);
     cairo_set_line_width (cr, 1.0);
     cairo_rectangle (cr,
                      cursor_x * boxsize + 1.5, cursor_y * boxsize + 1.5,
@@ -1197,8 +1196,8 @@ set_backgnd_color (const gchar * str)
     backgnd.name = g_strdup (str);
   }
 
-  if (!gdk_color_parse (backgnd.name, &backgnd.color)) {
-    gdk_color_parse ("#000000", &backgnd.color);
+  if (!gdk_rgba_parse (&backgnd.color, backgnd.name)) {
+    gdk_rgba_parse (&backgnd.color, "#000000");
   }
 }
 
@@ -1278,12 +1277,12 @@ conf_value_changed_cb (GSettings *settings, gchar *key)
 static void
 bg_color_callback (GtkWidget * widget, gpointer data)
 {
-  GdkColor c;
+  GdkRGBA c;
   char str[64];
 
-  gtk_color_button_get_color (GTK_COLOR_BUTTON (widget), &c);
+  gtk_color_button_get_rgba (GTK_COLOR_BUTTON (widget), &c);
 
-  g_snprintf (str, sizeof (str), "#%04x%04x%04x", c.red, c.green, c.blue);
+  g_snprintf (str, sizeof (str), "#%04x%04x%04x", (int) (c.red * 255 + 0.5), (int) (c.green * 255 + 0.5), (int) (c.blue * 255 + 0.5));
 
   g_settings_set_string (settings, KEY_BACKGROUND_COLOR, str);
 
@@ -1378,7 +1377,7 @@ game_props_callback (void)
                       G_CALLBACK (set_selection), NULL);
 
     color_button = GTK_WIDGET (gtk_builder_get_object (builder_preferences, "colorbutton1"));
-    gtk_color_button_set_color (GTK_COLOR_BUTTON (color_button), &backgnd.color);
+    gtk_color_button_set_rgba (GTK_COLOR_BUTTON (color_button), &backgnd.color);
     g_signal_connect (color_button, "color-set",
                       G_CALLBACK (bg_color_callback), NULL);
 
