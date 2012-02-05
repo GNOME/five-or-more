@@ -3,9 +3,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: glines\n"
-"POT-Creation-Date: 2011-12-10 23:18+0000\n"
-"PO-Revision-Date: 2011-12-11 22:26+0100\n"
+"Project-Id-Version: glines docs master\n"
+"POT-Creation-Date: 2012-01-22 20:07+0000\n"
+"PO-Revision-Date: 2012-02-05 22:47+0100\n"
 "Last-Translator: Mario Blättermann <mario.blaettermann@gmail.com>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -14,280 +14,1018 @@ msgstr ""
 "X-Poedit-Language: German\n"
 "X-Poedit-Country: GERMANY\n"
 
-#. When image changes, this message will be marked fuzzy or untranslated for you.
-#. It doesn't matter what you translate it to: it's not used at all.
-#: C/index.page:6(None)
-msgid "@@image: 'figures/logo.png'; md5=83ba6ff888acbdea3ad599b055ed7710"
+#. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
+msgctxt "_"
+msgid "translator-credits"
+msgstr "Mario Blättermann <mario.blaettermann@gmail.com>, 2008-2012."
+
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#.
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.page:6(media)
+msgctxt "_"
+msgid "external ref='figures/logo.png' md5='83ba6ff888acbdea3ad599b055ed7710'"
 msgstr "original"
 
-#. When image changes, this message will be marked fuzzy or untranslated for you.
-#. It doesn't matter what you translate it to: it's not used at all.
-#: C/index.page:20(None)
-msgid "@@image: 'figures/logo32.png'; md5=51b65eea63f1a6c26a4c5d628dba406c"
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#.
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.page:25(media)
+msgctxt "_"
+msgid "external ref='figures/logo32.png' md5='51b65eea63f1a6c26a4c5d628dba406c'"
 msgstr "original"
 
-#: C/index.page:7(title) C/index.page:8(title)
-msgid "Glines"
+#: C/index.page:7(info/title)
+msgctxt "link"
+msgid "Five or More"
 msgstr "Fünf oder mehr"
 
-#: C/index.page:11(name)
+#: C/index.page:8(info/title)
+msgctxt "text"
+msgid "Five or More"
+msgstr "Fünf oder mehr"
+
+#: C/index.page:11(credit/name) C/change-board-size.page:9(credit/name)
+#: C/change-theme.page:9(credit/name) C/fast-moves.page:9(credit/name)
+#: C/play.page:9(credit/name) C/scores.page:9(credit/name)
+msgid "Lahiru lanka"
+msgstr "Lahiru lanka"
+
+#: C/index.page:15(credit/name) C/bug-filing.page:10(credit/name)
+#: C/change-board-size.page:14(credit/name) C/change-theme.page:14(credit/name)
+#: C/commandline.page:9(credit/name) C/develop.page:10(credit/name)
+#: C/documentation.page:8(credit/name) C/scores.page:14(credit/name)
+#: C/shortcuts.page:9(credit/name) C/translate.page:10(credit/name)
 msgid "Tiffany Antopolski"
 msgstr "Tiffany Antopolski"
 
-#: C/index.page:12(email)
-msgid "tiffany.antopolski@gmail.com"
-msgstr "tiffany.antopolski@gmail.com"
-
-#: C/index.page:15(p)
+#: C/index.page:19(license/p) C/bug-filing.page:15(license/p)
+#: C/develop.page:15(license/p) C/documentation.page:13(license/p)
+#: C/legal.xml:2(license/p) C/translate.page:19(license/p)
 msgid "Creative Commons Share Alike 3.0"
 msgstr "Creative Commons Share Alike 3.0"
 
-#: C/index.page:20(title)
+#: C/index.page:24(page/title)
 msgid ""
-"<media type=\"image\" src=\"figures/logo32.png\">Glines logo</media>Glines"
+"<media type=\"image\" src=\"figures/logo32.png\">Five or More logo</"
+"media>Five or More"
 msgstr ""
 "<media type=\"image\" src=\"figures/logo32.png\">Fünf-oder-mehr-Logo</"
 "media>Fünf oder mehr"
 
-#: C/index.page:23(title)
+#: C/index.page:27(page/p)
+msgid ""
+"<key>Five or More</key> is a deceptively simple brain workout. The goal is to "
+"place at least five objects of the same <link xref=\"change-theme#images"
+"\">color or shape</link> into a straight line. The line can be horizontal, "
+"vertical or diagonal. Once five or more objects are grouped into a line, they "
+"disappear. The goal is to vanish as many objects as possible. The game is "
+"over when the entire board is full."
+msgstr ""
+"Auf den ersten Blick ist <app>Fünf oder mehr</app> ein einfacher "
+"Gehirntrainer. Das Ziel besteht darin, dass mindestens fünf Objekte der <link "
+"xref=\"change-theme#images\">gleichen Form oder Farbe</link> in einer geraden "
+"Linie anzuordnen. Die Linie kann horizontal, vertikal oder diagonal "
+"angeordnet sein. Sobald fünf Objekte in einer geraden Linie angeordnet sind, "
+"verschwinden diese vom Spielfeld."
+
+#: C/index.page:32(section/title)
 msgid "Game Play"
 msgstr "Spielverlauf"
 
-#: C/index.page:27(title)
+#: C/index.page:36(section/title)
 msgid "Useful tips"
 msgstr "Nützliche Tipps"
 
-#: C/index.page:31(title)
+#: C/index.page:40(section/title)
 msgid "Advanced"
 msgstr "Fortgeschritten"
 
-#: C/index.page:35(title)
+#: C/index.page:44(section/title)
 msgid "Get Involved"
 msgstr "Mithelfen"
 
-#. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2
-#: C/index.page:0(None)
-msgid "translator-credits"
-msgstr "Mario Blättermann <mario.blaettermann@gmail.com>, 2008, 2009, 2011."
+#: C/bug-filing.page:12(credit/years) C/change-board-size.page:11(credit/years)
+#: C/develop.page:12(credit/years) C/documentation.page:10(credit/years)
+#: C/fast-moves.page:11(credit/years) C/play.page:11(credit/years)
+#: C/rules.page:11(credit/years) C/scores.page:11(credit/years)
+#: C/shortcuts.page:11(credit/years) C/strategy.page:11(credit/years)
+#: C/translate.page:12(credit/years)
+msgid "2011"
+msgstr "2011"
 
-#~ msgid ""
-#~ "@@image: 'figures/glines-startgame.png'; "
-#~ "md5=e6e58f72dc4802d89a45a7726f4c7fd7"
-#~ msgstr "translated"
+#: C/bug-filing.page:19(page/title)
+msgid "Report a Problem"
+msgstr "Einen Fehlerbericht erstellen"
 
-#~ msgid ""
-#~ "@@image: 'figures/glines-gameover.png'; "
-#~ "md5=949d09a01ee02944bf3f278ce1ebc2ba"
-#~ msgstr "translated"
+#: C/bug-filing.page:20(page/p)
+msgid ""
+"<app>Five or More</app> is maintained by a volunteer community. You are "
+"welcome to participate. If you notice a problem you can file a <em>bug "
+"report</em>. To file a bug, go to <link href=\"https://bugzilla.gnome.org/\"/"
+">."
+msgstr ""
+"<app>Fünf oder mehr</app> wird von einer Gemeinschaft aus Freiwilligen "
+"betreut. Sie sind herzlich eingeladen, sich zu beteiligen. Falls Sie auf ein "
+"Problem stoßen, erstellen Sie einen <em>Fehlerbericht</em>. Besuchen Sie "
+"hierzu <link href=\"https://bugzilla.gnome.org/\"/>."
 
-#~ msgid ""
-#~ "@@image: 'figures/preferences.png'; md5=745336aefd6ade740f6064bdf4121379"
-#~ msgstr "translated"
+#: C/bug-filing.page:23(page/p)
+msgid ""
+"This is a bug tracking system where users and developers can file details "
+"about bugs, crashes and request enhancements."
+msgstr ""
+"Dies ist ein Fehlererfassungssystem, in dem Benutzer und Entwickler Details "
+"über Fehler, Abstürze und Verbesserungswünsche hinterlassen können."
 
-#~ msgid "<application>Five or More</application> Manual"
-#~ msgstr "<application>Fünf-oder-mehr</application>-Handbuch"
+#: C/bug-filing.page:26(page/p)
+msgid ""
+"To participate you need an account which will give you the ability to gain "
+"access, file bugs, and make comments. Also, you need to register so you can "
+"receive updates by e-mail about the status of your bug. If you don't already "
+"have an account, just click on the <gui>New Account</gui> link to create one."
+msgstr ""
+"Dazu benötigen Sie ein Konto, über das Sie Fehler melden und Kommentare "
+"hinterlassen können. Außerdem müssen Sie sich registrieren, um "
+"Statusmeldungen zu Ihrem Fehlerbericht per E-Mail erhalten zu können. Falls "
+"Sie noch nicht über ein Konto verfügen, klicken Sie auf <gui>New Account</"
+"gui>, um eines anzulegen."
 
-#~ msgid ""
-#~ "To play Five or More one must align colored pieces as the board gets "
-#~ "filled with randomly placed pieces. When five or more pieces of the same "
-#~ "color get lined up, they disappear. The game ends when the board gets "
-#~ "filled up all the way."
-#~ msgstr ""
-#~ "Beim Spiel Fünf-oder-mehr müssen farbige Objekte aufgereiht werden, "
-#~ "während sich das Spielfeld mit zufällig platzierten Objekten füllt. Wenn "
-#~ "fünf oder mehr Objekte der gleichen Farbe eine Reihe bilden, werden sie "
-#~ "entfernt. Das Spiel endet, wenn das Spielfeld vollständig gefüllt ist."
+#: C/bug-filing.page:29(page/p)
+msgid ""
+"Once you have an account, log in, click on <guiseq><gui>File a Bug</"
+"gui><gui>Applications</gui><gui>gnome-games</gui></guiseq>. Before reporting "
+"a bug, please read the <link href=\"https://bugzilla.gnome.org/page.cgi?"
+"id=bug-writing.html\">bug writing guidelines</link>, and please <link href="
+"\"https://bugzilla.gnome.org/browse.cgi?product=gnome-games\">browse</link> "
+"for the bug to see if it already exists."
+msgstr ""
+"Sobald die Erstellung des Kontos abgeschlossen ist, klicken Sie auf "
+"<guiseq><gui>File a Bug</gui><gui>Applications</gui><gui>gnome-games</gui></"
+"guiseq>. Bevor Sie einen Fehler melden, lesen Sie bitte die <link href="
+"\"https://bugzilla.gnome.org/page.cgi?id=bug-writing.html\">bug writing "
+"guidelines</link> und <link href=\"https://bugzilla.gnome.org/browse.cgi?"
+"product=gnome-games\">schauen Sie bitte nach</link>, ob der Fehler vielleicht "
+"schon gemeldet wurde."
 
-#~ msgid "2000-2002"
-#~ msgstr "2000-2002"
+#: C/bug-filing.page:33(page/p)
+msgid ""
+"To file your bug, choose the component <gui>glines</gui> in the "
+"<gui>Component</gui> menu."
+msgstr ""
+"Um einen Fehler zu melden, wählen Sie <gui>glines</gui> im <gui>Component</"
+"gui>-Menü."
 
-#~ msgid "Emese Kovács"
-#~ msgstr "Emese Kovács"
+#: C/bug-filing.page:36(page/p)
+msgid ""
+"If you are requesting a new feature, choose <gui>enhancement</gui> in the "
+"<gui>Severity</gui> menu. Fill in the Summary and Description sections and "
+"click <gui>Commit</gui>."
+msgstr ""
+"Falls Sie eine Anfrage nach einem neuen Funktionsmerkmal stellen, wählen Sie "
+"<gui>enhancement</gui> im Menü <gui>Severity</gui>. Füllen Sie die Felder "
+"»Summary« und »Description« aus und klicken Sie auf <gui>Commit</gui>."
 
-#~ msgid "GNOME Documentation Project"
-#~ msgstr "GNOME-Dokumentationsprojekt"
+#: C/bug-filing.page:40(page/p)
+msgid ""
+"Your report will be given an ID number, and its status will be updated as it "
+"is being dealt with."
+msgstr ""
+"Ihr Bericht bekommt eine Kennung (ID) zugewiesen und der Status wird mit "
+"laufender Bearbeitung stets aktualisiert."
 
-#~ msgid ""
-#~ "Permission is granted to copy, distribute and/or modify this document "
-#~ "under the terms of the GNU Free Documentation License (GFDL), Version 1.1 "
-#~ "or any later version published by the Free Software Foundation with no "
-#~ "Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. You can "
-#~ "find a copy of the GFDL at this <ulink type=\"help\" url=\"ghelp:fdl"
-#~ "\">link</ulink> or in the file COPYING-DOCS distributed with this manual."
-#~ msgstr ""
-#~ "Das vorliegende Dokument kann gemäß den Bedingungen der GNU Free "
-#~ "Documentation License (GFDL), Version 1.1 oder jeder späteren, von der "
-#~ "Free Software Foundation veröffentlichten Version ohne unveränderbare "
-#~ "Abschnitte sowie ohne Texte auf dem vorderen und hinteren Buchdeckel "
-#~ "kopiert, verteilt und/oder modifiziert werden. Eine Kopie der GFDL finden "
-#~ "Sie unter diesem <ulink type=\"help\" url=\"ghelp:fdl\">Link</ulink> oder "
-#~ "in der mit diesem Handbuch gelieferten Datei COPYING-DOCS."
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/change-board-size.page:69(media)
+msgctxt "_"
+msgid "external ref='figures/small.png' md5='cc59a29333b3b145c9e7928872c714bc'"
+msgstr "original"
 
-#~ msgid ""
-#~ "This manual is part of a collection of GNOME manuals distributed under the "
-#~ "GFDL. If you want to distribute this manual separately from the "
-#~ "collection, you can do so by adding a copy of the license to the manual, "
-#~ "as described in section 6 of the license."
-#~ msgstr ""
-#~ "Dieses Handbuch ist Teil einer Sammlung von GNOME-Handbüchern, die unter "
-#~ "der GFDL veröffentlicht werden. Wenn Sie dieses Handbuch getrennt von der "
-#~ "Sammlung weiterverbreiten möchten, können Sie das tun indem Sie eine Kopie "
-#~ "der Lizenz zum Handbuch hinzufügen wie es in Abschnitt 6 der Lizenz "
-#~ "beschrieben ist."
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/change-board-size.page:74(media)
+msgctxt "_"
+msgid "external ref='figures/medium.png' md5='ae122a301d215d40fff80717211b0915'"
+msgstr "original"
 
-#~ msgid ""
-#~ "Many of the names used by companies to distinguish their products and "
-#~ "services are claimed as trademarks. Where those names appear in any GNOME "
-#~ "documentation, and the members of the GNOME Documentation Project are made "
-#~ "aware of those trademarks, then the names are in capital letters or "
-#~ "initial capital letters."
-#~ msgstr ""
-#~ "Viele der Namen, die von Unternehmen verwendet werden, um ihre Produkte "
-#~ "und Dienstleistungen von anderen zu unterscheiden, sind eingetragene "
-#~ "Warenzeichen. An den Stellen, an denen diese Namen in einer GNOME-"
-#~ "Dokumentation erscheinen, werden die Namen in Großbuchstaben oder mit "
-#~ "einem großen Anfangsbuchstaben geschrieben, wenn das GNOME Documentation "
-#~ "Project auf diese Warenzeichen hingewiesen wird."
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/change-board-size.page:79(media)
+msgctxt "_"
+msgid "external ref='figures/large.png' md5='14942e047fbbc3538ababbfa888fa4e6'"
+msgstr "original"
 
-#~ msgid ""
-#~ "DOCUMENT IS PROVIDED ON AN \"AS IS\" BASIS, WITHOUT WARRANTY OF ANY KIND, "
-#~ "EITHER EXPRESSED OR IMPLIED, INCLUDING, WITHOUT LIMITATION, WARRANTIES "
-#~ "THAT THE DOCUMENT OR MODIFIED VERSION OF THE DOCUMENT IS FREE OF DEFECTS "
-#~ "MERCHANTABLE, FIT FOR A PARTICULAR PURPOSE OR NON-INFRINGING. THE ENTIRE "
-#~ "RISK AS TO THE QUALITY, ACCURACY, AND PERFORMANCE OF THE DOCUMENT OR "
-#~ "MODIFIED VERSION OF THE DOCUMENT IS WITH YOU. SHOULD ANY DOCUMENT OR "
-#~ "MODIFIED VERSION PROVE DEFECTIVE IN ANY RESPECT, YOU (NOT THE INITIAL "
-#~ "WRITER, AUTHOR OR ANY CONTRIBUTOR) ASSUME THE COST OF ANY NECESSARY "
-#~ "SERVICING, REPAIR OR CORRECTION. THIS DISCLAIMER OF WARRANTY CONSTITUTES "
-#~ "AN ESSENTIAL PART OF THIS LICENSE. NO USE OF ANY DOCUMENT OR MODIFIED "
-#~ "VERSION OF THE DOCUMENT IS AUTHORIZED HEREUNDER EXCEPT UNDER THIS "
-#~ "DISCLAIMER; AND"
-#~ msgstr ""
-#~ "DIESES DOKUMENT WIRD »WIE VORLIEGEND« GELIEFERT, OHNE GARANTIEN "
-#~ "IRGENDEINER ART, SOWOHL AUSDRÜCKLICH GENANNTE ALS AUCH ANGEDEUTETE. DIES "
-#~ "BEZIEHT SICH AUCH OHNE EINSCHRÄNKUNG AUF GARANTIEN, DASS DIESES DOKUMENT "
-#~ "ODER VERÄNDERTE FASSUNGEN DIESES DOKUMENTS FREI VON HANDELSDEFEKTEN, FÜR "
-#~ "EINEN BESTIMMTEN ZWECK GEEIGNET IST ODER DASS ES KEINE RECHTE DRITTER "
-#~ "VERLETZT. DAS VOLLE RISIKO WAS QUALITÄT, GENAUIGKEIT UND LEISTUNG DES "
-#~ "DOKUMENTS ODER VERÄNDERTE FASSUNGEN DES DOKUMENTS LIEGT BEI IHNEN. SOLLTE "
-#~ "EIN DOKUMENT ODER EINE VERÄNDERTE FASSUNG DAVON FEHLER IRGENDEINER ART "
-#~ "BEINHALTEN, TRAGEN SIE (NICHT DER URSPRUNGSAUTOR, DER AUTOR ODER EIN "
-#~ "MITWIRKENDER) DIE KOSTEN FÜR NOTWENDIGE DIENSTLEISTUNGEN, REPARATUREN ODER "
-#~ "FEHLERKORREKTUREN. DIESER HAFTUNGSAUSSCHLUSS IST EIN ESSENZIELLER TEIL "
-#~ "DIESER LIZENZ. DIE VERWENDUNG EINES DOKUMENTS ODER EINER VERÄNDERTEN "
-#~ "VERSION DES DOKUMENTS IST NICHT GESTATTET AUßER UNTER BEACHTUNG DIESES "
-#~ "HAFTUNGSAUSSCHLUSSES UND"
+#: C/change-board-size.page:19(page/title)
+msgid "Change board size"
+msgstr "Die Spielfeldgröße ändern"
 
-#~ msgid ""
-#~ "UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY, WHETHER IN TORT "
-#~ "(INCLUDING NEGLIGENCE), CONTRACT, OR OTHERWISE, SHALL THE AUTHOR, INITIAL "
-#~ "WRITER, ANY CONTRIBUTOR, OR ANY DISTRIBUTOR OF THE DOCUMENT OR MODIFIED "
-#~ "VERSION OF THE DOCUMENT, OR ANY SUPPLIER OF ANY OF SUCH PARTIES, BE LIABLE "
-#~ "TO ANY PERSON FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR "
-#~ "CONSEQUENTIAL DAMAGES OF ANY CHARACTER INCLUDING, WITHOUT LIMITATION, "
-#~ "DAMAGES FOR LOSS OF GOODWILL, WORK STOPPAGE, COMPUTER FAILURE OR "
-#~ "MALFUNCTION, OR ANY AND ALL OTHER DAMAGES OR LOSSES ARISING OUT OF OR "
-#~ "RELATING TO USE OF THE DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT, "
-#~ "EVEN IF SUCH PARTY SHALL HAVE BEEN INFORMED OF THE POSSIBILITY OF SUCH "
-#~ "DAMAGES."
-#~ msgstr ""
-#~ "UNTER KEINEN UMSTÄNDEN UND AUF BASIS KEINER RECHTSGRUNDLAGE, EGAL OB DURCH "
-#~ "UNERLAUBTEN HANDLUNGEN (EINSCHLIEßLICH FAHRLÄSSIGKEIT), VERTRAG ODER "
-#~ "ANDERWEITIG KANN DER AUTOR, URSPRUNGSAUTOR, EIN MITWIRKENDER ODER EIN "
-#~ "VERTRIEBSPARTNER DIESES DOKUMENTS ODER EINER VERÄNDERTEN FASSUNG DES "
-#~ "DOKUMENTS ODER EIN ZULIEFERER EINER DIESER PARTEIEN, HAFTBAR GEMACHT "
-#~ "WERDEN FÜR DIREKTE, INDIREKTE, SPEZIELLE, VERSEHENTLICHE ODER FOLGESCHÄDEN "
-#~ "JEGLICHER ART, EINSCHLIEßLICH UND OHNE EINSCHRÄNKUNGEN SCHÄDEN DURCH "
-#~ "VERLUST VON KULANZ, ARBEITSAUSFALL, COMPUTERVERSAGEN ODER "
-#~ "COMPUTERFEHLFUNKTIONEN ODER ALLE ANDEREN SCHÄDEN ODER VERLUSTE, DIE SICH "
-#~ "AUS ODER IN VERBINDUNG MIT DER VERWENDUNG DES DOKUMENTS UND VERÄNDERTER "
-#~ "FASSUNGEN DES DOKUMENTS ERGEBEN, AUCH WENN DIE OBEN GENANNTEN PARTEIEN "
-#~ "ÜBER DIE MÖGLICHKEIT SOLCHER SCHÄDEN INFORMIERT WAREN."
+#: C/change-board-size.page:20(page/p)
+msgid "To change the board:"
+msgstr "So passen Sie das Spielfeld an:"
 
-#~ msgid ""
-#~ "DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT ARE PROVIDED UNDER THE "
-#~ "TERMS OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER UNDERSTANDING "
-#~ "THAT: <placeholder-1/>"
-#~ msgstr ""
-#~ "DAS DOKUMENT UND VERÄNDERTE FASSUNGEN DES DOKUMENTS WERDEN UNTER DEN "
-#~ "BEDINGUNGEN DER GNU FREE DOCUMENTATION LICENSE ZUR VERFÜGUNG GESTELLT MIT "
-#~ "DEM WEITERGEHENDEN VERSTÄNDNIS, DASS: <placeholder-1/>"
+#: C/change-board-size.page:22(item/p)
+msgid "Click <guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq>"
+msgstr ""
+"Klicken Sie auf <guiseq><gui>Einstellungen</gui><gui>Einstellungen</gui></"
+"guiseq>."
 
-#~ msgid "Emese"
-#~ msgstr "Emese"
+#: C/change-board-size.page:25(page/p)
+msgid ""
+"The <gui>Board Size</gui> section lets you to select a small, medium or large "
+"board. While a board with larger size gives you more space, it also places "
+"more objects on the board per turn."
+msgstr ""
+"Im Abschnitt <gui>Spielfeldgröße</gui> können Sie ein kleines, mittleres oder "
+"großes Spielfeld auswählen. Zwar erhalten Sie mit einem großen Spielfeld mehr "
+"Platz, aber es werden mit jedem Zug auch mehr Objekte platziert."
 
-#~ msgid "Kovács"
-#~ msgstr "Kovács"
+#: C/change-board-size.page:28(section/title)
+msgid "Board parameters"
+msgstr "Spielfeldparameter"
 
-#~ msgid "emese@gnome.hu"
-#~ msgstr "emese@gnome.hu"
+#: C/change-board-size.page:29(section/p)
+msgid "The 3 different board sizes have the following parameters:"
+msgstr ""
+"Für die drei verschiedenen Spielfeldgrößen stehen die folgenden Parameter zur "
+"Verfügung:"
 
-#~ msgid "Five or More Manual V2.8"
-#~ msgstr "Fünf-oder-mehr-Handbuch V2.8"
+#: C/change-board-size.page:33(td/p)
+msgid "<em>Size</em>"
+msgstr "<em>Größe</em>"
 
-#~ msgid "September 2004"
-#~ msgstr "September 2004"
+#: C/change-board-size.page:34(td/p)
+msgid "<em>Width</em>"
+msgstr "<em>Breite</em>"
 
-#~ msgid "Emese Kovács <email>emese@gnome.hu</email>"
-#~ msgstr "Emese Kovács <email>emese@gnome.hu</email>"
+#: C/change-board-size.page:35(td/p)
+msgid "<em>Height</em>"
+msgstr "<em>Höhe</em>"
 
-#~ msgid "This manual describes version 2.12 of Five or More."
-#~ msgstr "Dieses Handbuch beschreibt Version 2.12 von Fünf-oder-mehr."
+#: C/change-board-size.page:36(td/p)
+msgid "<em>Number of types</em>"
+msgstr "<em>Anzahl der Typen</em>"
 
-#~ msgid "Feedback"
-#~ msgstr "Rückmeldungen"
+#: C/change-board-size.page:36(td/p)
+msgid "<em>New objects per turn</em>"
+msgstr "<em>Neue Objekte pro Zug</em>"
 
-#~ msgid ""
-#~ "To report a bug or make a suggestion regarding the <application>Five or "
-#~ "More</application> application or this manual, follow the directions in "
-#~ "the <ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">GNOME "
-#~ "Feedback Page</ulink>."
-#~ msgstr ""
-#~ "Um Fehler zu melden oder einen Vorschlag zur Anwendung <application>Fünf-"
-#~ "oder-mehr</application> oder zu diesem Handbuch zu machen, folgen Sie den "
-#~ "Anweisungen auf der <ulink url=\"ghelp:user-guide?feedback-bugs\" type="
-#~ "\"help\">GNOME-Seite für Rückmeldungen</ulink>."
+#: C/change-board-size.page:37(td/p)
+msgid "<em>Number of cells</em>"
+msgstr "<em>Anzahl der Zellen</em>"
 
-#~ msgid "Five or More"
-#~ msgstr "Fünf oder mehr"
+#: C/change-board-size.page:41(td/p)
+msgid "Small"
+msgstr "Klein"
 
-#~ msgid "Introduction"
-#~ msgstr "Einführung"
+#: C/change-board-size.page:42(td/p) C/change-board-size.page:43(td/p)
+#: C/change-board-size.page:51(td/p) C/change-board-size.page:56(td/p)
+#: C/scores.page:40(td/p)
+msgid "7"
+msgstr "7"
 
-#~ msgid ""
-#~ "<application>Five or More</application>, is the Gnome port of the once "
-#~ "popular Windows game called <application>Color Lines</application> The "
-#~ "game's objective is to align as often as possible five or more objects of "
-#~ "the same color and shape causing them to disappear. Play as long as "
-#~ "possible, and be #1 in the High Scores."
-#~ msgstr ""
-#~ "<application>Fünf-oder-mehr</application> ist eine Gnome-Version des einst "
-#~ "populären Windows-Spiels <application>Color Lines</application>. Ziel des "
-#~ "Spiels ist es, so oft wie möglich fünf oder mehr Objekte gleicher Farbe in "
-#~ "eine Reihe zu bringen, um sie vom Spielfeld entfernen. Spielen Sie so "
-#~ "lange wie möglich, und werden Sie die Nummer 1 in den Bestenlisten!"
+#: C/change-board-size.page:44(td/p) C/scores.page:32(td/p)
+msgid "5"
+msgstr "5"
 
-#~ msgid ""
-#~ "To run <application>Five or More</application>, select <guimenuitem>Five "
-#~ "or More</guimenuitem> from the <guisubmenu>Games</guisubmenu> submenu of "
-#~ "the <guimenu>Main Menu</guimenu>, or type <command>glines</command> on the "
-#~ "command line."
-#~ msgstr ""
-#~ "Um <application>Fünf-oder-mehr</application> zu starten, wählen Sie "
-#~ "<menuchoice><guisubmenu>Spiele</guisubmenu><guimenuitem>Fünf oder mehr</"
-#~ "guimenuitem></menuchoice> aus dem Menü <guimenu>Anwendungen</guimenu> oder "
-#~ "geben Sie <command>glines</command> auf der Befehlszeile ein."
+#: C/change-board-size.page:45(td/p) C/change-board-size.page:51(td/p)
+msgid "3"
+msgstr "3"
 
-#~ msgid ""
-#~ "<application>Five or More</application> is included in the <filename>GNOME-"
-#~ "games</filename> package, which is part of the GNOME desktop environment. "
-#~ "This document describes version 2.8 of <application>Five or More</"
-#~ "application>."
-#~ msgstr ""
-#~ "<application>Fünf-oder-mehr</application> ist Teil des Pakets "
-#~ "<filename>gnome-games</filename>, das Teil der GNOME- Desktopumgebung ist. "
-#~ "Dieses Dokument beschreibt Version 2.8 von <application>Fünf-oder-mehr</"
-#~ "application>"
+#: C/change-board-size.page:46(td/p)
+msgid "49"
+msgstr "49"
 
-#~ msgid "Playing Five or More"
-#~ msgstr "Fünf-oder-mehr spielen"
+#: C/change-board-size.page:50(td/p)
+msgid "Medium"
+msgstr "Mittel"
+
+#: C/change-board-size.page:50(td/p) C/scores.page:48(td/p)
+msgid "9"
+msgstr "9"
+
+#: C/change-board-size.page:51(td/p)
+msgid "81"
+msgstr "81"
+
+#: C/change-board-size.page:55(td/p)
+msgid "Large"
+msgstr "Groß"
+
+#: C/change-board-size.page:55(td/p)
+msgid "20"
+msgstr "20"
+
+#: C/change-board-size.page:55(td/p)
+msgid "15"
+msgstr "15"
+
+#: C/change-board-size.page:56(td/p)
+msgid "300"
+msgstr "300"
+
+#: C/change-board-size.page:64(section/title)
+msgid "The 3 board sizes"
+msgstr "Die drei Spielfeldgrößen"
+
+#: C/change-board-size.page:70(media/p)
+msgid "<app>Five or More</app> Small board"
+msgstr "Kleines Spielfeld in <app>Fünf-oder-mehr</app>"
+
+#: C/change-board-size.page:75(media/p)
+msgid "<app>Five or More</app> medium size board"
+msgstr "Mittleres Spielfeld in <app>Fünf-oder-mehr</app>"
+
+#: C/change-board-size.page:80(media/p)
+msgid "<app>Five or More</app> large size board"
+msgstr "Großes Spielfeld in <app>Fünf-oder-mehr</app>"
+
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/change-theme.page:36(media)
+msgctxt "_"
+msgid ""
+"external ref='figures/color-balls.png' md5='ac9b26a5c770a7e118c84d82b43fbcaa'"
+msgstr "original"
+
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/change-theme.page:40(media)
+msgctxt "_"
+msgid ""
+"external ref='figures/color-shapes.png' md5='12b538f0d29c55aa93c8fd6adec58ffc'"
+msgstr "original"
+
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/change-theme.page:48(media)
+msgctxt "_"
+msgid ""
+"external ref='figures/pickcolor.png' md5='51d82564630d095c45865aff5518e6fc'"
+msgstr "original"
+
+#: C/change-theme.page:11(credit/years) C/commandline.page:11(credit/years)
+msgid "2012"
+msgstr "2012"
+
+#: C/change-theme.page:20(page/title)
+msgid "Change the look and feel"
+msgstr "Das Erscheinungsbild anpassen"
+
+#: C/change-theme.page:21(page/p)
+msgid "To change the appearance of the pieces and the board:"
+msgstr "So ändern Sie die Darstellung der Kugeln und des Spielfelds:"
+
+#: C/change-theme.page:24(item/p)
+msgid "Click <guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq>."
+msgstr ""
+"Klicken Sie auf <guiseq><gui>Einstellungen</gui><gui>Einstellungen</gui></"
+"guiseq>."
+
+#: C/change-theme.page:27(item/p)
+msgid ""
+"Select <gui>balls</gui> or <gui>shapes</gui> from the <gui>Image</gui> drop "
+"down menu to change the playing pieces."
+msgstr ""
+"Wählen Sie <gui>balls</gui> oder <gui>shapes</gui> im Auswahlmenü <gui>Bild</"
+"gui>, um die Spielsteine anzupassen."
+
+#: C/change-theme.page:28(item/p)
+msgid ""
+"Click on the colored box next to <gui>Image background</gui> to access the "
+"color palette."
+msgstr ""
+"Klicken Sie auf das farbige Feld neben <gui>Hintergrundfarbe</gui>, um auf "
+"die Farbpalette zuzugreifen."
+
+#: C/change-theme.page:31(item/p)
+msgid "Click <gui>Close</gui>."
+msgstr "Klicken Sie auf <gui>Schließen</gui>."
+
+#: C/change-theme.page:35(section/title)
+msgid "Images available"
+msgstr "Verfügbare Grafiken"
+
+#: C/change-theme.page:37(media/p)
+msgid "Five or More with different balls"
+msgstr "Fünf oder mehr mit verschiedenen Kugeln"
+
+#: C/change-theme.page:41(media/p)
+msgid "<app>Five or More</app> with different shapes"
+msgstr "<app>Fünf-oder-mehr</app> mit verschiedenen Formen"
+
+#: C/change-theme.page:46(section/title)
+msgid "Background colors available"
+msgstr "Verfügbare Hintergrundfarben"
+
+#: C/change-theme.page:49(media/p)
+msgid "Five or More color palette"
+msgstr "Farbpalette für <app>Fünf oder mehr</app>"
+
+#: C/commandline.page:17(page/title)
+msgid "Commandline"
+msgstr "Befehlszeile"
+
+#: C/develop.page:19(page/title)
+msgid "Help develop"
+msgstr "Bei der Entwicklung helfen"
+
+#: C/develop.page:20(page/p)
+msgid ""
+"The <app>GNOME Games</app> are developed and maintained by a volunteer "
+"community. You are welcome to participate."
+msgstr ""
+"Die <app>GNOME Games</app> werden von einer Gemeinschaft aus Freiwilligen "
+"entwickelt und betreut. Sie sind herzlich eingeladen, sich daran zu "
+"beteiligen."
+
+#: C/develop.page:23(page/p)
+msgid ""
+"If you would like to <link href=\"https://live.gnome.org/GnomeGames/"
+"Contributing\">help develop <app>GNOME Games</app></link>, you can get in "
+"touch with the developers using <link href=\"https://cbe005.chat.mibbit.com/?"
+"url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, or via our <link "
+"href=\"http://mail.gnome.org/mailman/listinfo/games-list\">mailing list</"
+"link>."
+msgstr ""
+"Falls Sie <link href=\"https://live.gnome.org/GnomeGames/Contributing\">bei "
+"der Entwicklung <app>GNOME Games</app> helfen möchten</link>, können Sie mit "
+"den Entwicklern im <link href=\"https://cbe005.chat.mibbit.com/?url=irc%3A%2F"
+"%2Firc.gnome.org%2Fgnome-games\">IRC</link> oder über deren <link href="
+"\"http://mail.gnome.org/mailman/listinfo/games-list\">Mailingliste</link> "
+"Kontakt aufnehmen."
+
+#: C/documentation.page:17(page/title)
+msgid "Help write documentation"
+msgstr "Beim Schreiben der Dokumentation helfen"
+
+#: C/documentation.page:19(page/p)
+msgid ""
+"The <app>GNOME Games</app> documentation is maintained by a volunteer "
+"community. You are welcome to participate."
+msgstr ""
+"Die Dokumentation der <app>GNOME Games</app> wird von einer Gemeinschaft aus "
+"Freiwilligen betreut. Sie sind herzlich eingeladen, sich daran zu beteiligen."
+
+#: C/documentation.page:22(page/p)
+msgid ""
+"To contribute to the Documentation Project, feel free to get in touch with us "
+"using <link href=\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome."
+"org%2Fdocs\">irc</link>, or via our <link href=\"http://mail.gnome.org/"
+"mailman/listinfo/gnome-doc-list\">mailing list</link>."
+msgstr ""
+"Falls Sie sich am Dokumentationsprojekt beteiligen wollen, nehmen Sie im "
+"<link href=\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org"
+"%2Fdocs\">IRC</link> oder über die <link href=\"http://mail.gnome.org/mailman/"
+"listinfo/gnome-doc-list\">Mailingliste</link> mit uns Kontakt auf."
+
+#: C/documentation.page:24(page/p)
+msgid ""
+"Our <link href=\"https://live.gnome.org/DocumentationProject/Contributing"
+"\">wiki</link> page contains useful information."
+msgstr ""
+"Unser <link href=\"https://live.gnome.org/DocumentationProject/Contributing"
+"\">Wiki</link> enthält eine Reihe nützlicher Informationen für Sie bereit."
+
+#: C/fast-moves.page:17(page/title)
+msgid "Change speed"
+msgstr "Geschwindigkeit ändern"
+
+#: C/fast-moves.page:18(page/p)
+msgid "You can speed up the object movements. Click:"
+msgstr "Sie können die Bewegungen der Kugeln beschleunigen. Klicken Sie auf:"
+
+#: C/fast-moves.page:19(page/p)
+msgid "<guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq>."
+msgstr "<guiseq><gui>Einstellungen</gui><gui>Einstellungen</gui></guiseq>."
+
+#: C/fast-moves.page:21(page/p)
+msgid ""
+"Any changes you make are instantly applied and remembered for the next time "
+"you run <key>Five or More</key>"
+msgstr ""
+"Jede von Ihnen getätigte Änderung wird unmittelbar angewendet und für den "
+"nächsten Start von <gui>Fünf oder mehr</gui> gespeichert."
+
+#: C/license.page:8(info/desc)
+msgid "Legal information."
+msgstr "Rechtliche Hinweise."
+
+#: C/license.page:11(page/title)
+msgid "License"
+msgstr "Lizenz"
+
+#: C/license.page:12(page/p)
+msgid ""
+"This work is distributed under a CreativeCommons Attribution-Share Alike 3.0 "
+"Unported license."
+msgstr ""
+"Dieses Werk wird unter einer »CreativeCommons Attribution-Share Alike 3.0 "
+"Unported license« verbreitet."
+
+#: C/license.page:20(page/p)
+msgid "You are free:"
+msgstr "Es ist Ihnen gestattet:"
+
+#: C/license.page:25(item/title)
+msgid "<em>To share</em>"
+msgstr "<em>Freizugeben</em>"
+
+#: C/license.page:26(item/p)
+msgid "To copy, distribute and transmit the work."
+msgstr ""
+"Das Werk bzw. den Inhalt zu vervielfältigen, zu verbreiten und öffentlich "
+"zugänglich zu machen."
+
+#: C/license.page:29(item/title)
+msgid "<em>To remix</em>"
+msgstr "<em>Änderungen vorzunehmen</em>"
+
+#: C/license.page:30(item/p)
+msgid "To adapt the work."
+msgstr "Abwandlungen und Bearbeitungen des Werkes bzw. Inhaltes anzufertigen."
+
+#: C/license.page:33(page/p)
+msgid "Under the following conditions:"
+msgstr "Unter den folgenden Bedingungen:"
+
+#: C/license.page:38(item/title)
+msgid "<em>Attribution</em>"
+msgstr "<em>Weitergabe</em>"
+
+#: C/license.page:39(item/p)
+msgid ""
+"You must attribute the work in the manner specified by the author or licensor "
+"(but not in any way that suggests that they endorse you or your use of the "
+"work)."
+msgstr ""
+"Sie dürfen das Werk nur unter gleichen Bedingungen weitergeben, wie Sie vom "
+"Autor oder Lizenzgeber festgelegt wurden (aber nicht so, dass es wie Ihr Werk "
+"aussieht)."
+
+#: C/license.page:46(item/title)
+msgid "<em>Share Alike</em>"
+msgstr "<em>Unter gleichen Bedingungen</em>"
+
+#: C/license.page:47(item/p)
+msgid ""
+"If you alter, transform, or build upon this work, you may distribute the "
+"resulting work only under the same, similar or a compatible license."
+msgstr ""
+"Wenn Sie das lizenzierte Werk bzw. den lizenzierten Inhalt bearbeiten, "
+"abwandeln oder in anderer Weise erkennbar als Grundlage für eigenes Schaffen "
+"verwenden, dürfen Sie die daraufhin neu entstandenen Werke bzw. Inhalte nur "
+"unter Verwendung von Lizenzbedingungen weitergeben, die mit denen dieses "
+"Lizenzvertrages identisch, vergleichbar oder kompatibel sind."
+
+#: C/license.page:53(page/p)
+msgid ""
+"For the full text of the license, see the <link href=\"http://creativecommons."
+"org/licenses/by-sa/3.0/legalcode\">CreativeCommons website</link>, or read "
+"the full <link href=\"http://creativecommons.org/licenses/by-sa/3.0/"
+"\">Commons Deed</link>."
+msgstr ""
+"Den vollständigen Text der Lizenz finden sie auf der <link href=\"http://"
+"creativecommons.org/licenses/by-sa/3.0/legalcode\">CreativeCommons-Webseite</"
+"link>. Oder Sie können den vollständigen <link href=\"http://creativecommons."
+"org/licenses/by-sa/3.0/\">Commons Deed</link> lesen."
+
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/play.page:42(media)
+msgctxt "_"
+msgid ""
+"external ref='figures/glines-demo.ogv' md5='f9222aaac4ad0df37975c8ac77fbe1cc'"
+msgstr "original"
+
+#: C/play.page:17(page/title)
+msgid "How to Play"
+msgstr "Spielverlauf"
+
+#: C/play.page:19(page/p)
+msgid ""
+"To start a new game click <guiseq><gui>Game</gui><gui>New</gui></guiseq>."
+msgstr ""
+"Um ein neues Spiel zu starten, klicken Sie auf <guiseq><gui>Spiel</"
+"gui><gui>Neu</gui></guiseq>."
+
+#: C/play.page:21(section/title)
+msgid "Using the mouse"
+msgstr "Mit der Maus"
+
+#: C/play.page:24(item/p)
+msgid ""
+"Click on the object you want to move. The selected object will begin spinning."
+msgstr ""
+"Klicken Sie auf das Objekt, welches Sie bewegen wollen. Das ausgewählte "
+"Objekt beginnt sich zu drehen."
+
+#: C/play.page:26(item/p)
+msgid "Click on the cell you want to move the object to."
+msgstr "Klicken Sie auf die Zelle, zu der Sie das Objekt bewegen wollen."
+
+#: C/play.page:30(section/title)
+msgid "Using the keyboard"
+msgstr "Mit der Tastatur"
+
+#: C/play.page:32(item/p)
+msgid ""
+"Press any of the arrow keys. An outline around a cell will appear on the "
+"board."
+msgstr ""
+"Drücken Sie eine der Pfeiltasten. Eine der Zellen auf dem Spielfeld wird "
+"daraufhin umrandet."
+
+#: C/play.page:33(item/p)
+msgid "Using the arrow keys, navigate to the object you want to move."
+msgstr ""
+"Mit den Pfeiltasten können Sie sich nun zu dem Objekt bewegen, welches Sie "
+"verschieben wollen."
+
+#: C/play.page:34(item/p)
+msgid ""
+"To select the object, press the <key>Enter</key> or <key>Spacebar</key>. The "
+"selected object will begin spinning."
+msgstr ""
+"Um das Objekt auszuwählen, drücken Sie die <key>Eingabetaste</key> oder die "
+"<key>Leertaste</key>. Das gewählte Objekt beginnt sich zu drehen."
+
+#: C/play.page:35(item/p)
+msgid ""
+"Move to the destination cell, and again press the <key>Enter</key> or "
+"<key>Spacebar</key>. This will cause the chosen object to me moved to the "
+"destination cell."
+msgstr ""
+"Bewegen Sie sich nun zu der gewünschten Zelle und drücken Sie die "
+"<key>Eingabetaste</key> oder die <key>Leertaste</key>. Dadurch wird das "
+"gewählte Objekt zur gewünschten Zelle verschoben."
+
+#: C/play.page:41(section/title)
+msgid "Video demonstration"
+msgstr "Video-Demonstration"
+
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/rules.page:35(media)
+msgctxt "_"
+msgid ""
+"external ref='figures/horizontal.png' md5='069cf4ce8408b1cc5e6337f2527c4d2e'"
+msgstr "original"
+
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/rules.page:40(media)
+msgctxt "_"
+msgid ""
+"external ref='figures/vertical.png' md5='9f17201dac1c4c78a572ac17dce45ce0'"
+msgstr "original"
+
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/rules.page:45(media)
+msgctxt "_"
+msgid ""
+"external ref='figures/diagonal.png' md5='8654cd0cc269ac9ed0f8fb8bce02a8fc'"
+msgstr "original"
+
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/rules.page:50(media)
+msgctxt "_"
+msgid ""
+"external ref='figures/glines-gameover.png' "
+"md5='ab35873b1818aa94499cc7fcca646db6'"
+msgstr "original"
+
+#: C/rules.page:17(page/title)
+msgid "Rules"
+msgstr "Regeln"
+
+#: C/rules.page:19(item/p)
+msgid ""
+"At the start of the game there are either 3 or 7 objects placed on your "
+"board, depending on the <link xref=\"change-board-size\">board size</link>."
+msgstr ""
+"Zu Beginn des Spiels befinden sich bereits 3 oder 7 Objekte auf dem "
+"Spielfeld, abhängig von der <link xref=\"change-board-size\">Spielfeldgröße</"
+"link>."
+
+#: C/rules.page:21(item/p)
+msgid ""
+"Each time you <link xref=\"play\">move an object</link>, additional objects "
+"are placed randomly on the board. The number of new objects placed each turn "
+"also depends on the board. A preview of the objects to be placed on the board "
+"appears in the upper left corner of the game window."
+msgstr ""
+"Jedes Mal beim <link xref=\"play\">Bewegen eines Objekts</link> werden "
+"zusätzliche Objekte zufällig auf dem Spielfeld platziert. Die Anzahl ist vom "
+"Spielfeld abhängig. Eine Vorschau der nächsten zu platzierenden Objekte wird "
+"in der linken oberen Ecke des Programmfensters angezeigt."
+
+#: C/rules.page:23(item/p)
+msgid ""
+"There must be a clear path from the original position of the object to the "
+"destination cell (i.e you can not jump over objects)."
+msgstr ""
+"Der Weg von der ursprünglichen Position zur Zielposition muss frei sein, das "
+"bedeutet, dass Sie nicht über andere Objekte springen können."
+
+#: C/rules.page:25(item/p)
+msgid ""
+"A straight horizontal, vertical or diagonal line of five or more similar "
+"objects will disappear from the game board. When this happens you will have "
+"an extra move without additional objects being added to the board."
+msgstr ""
+"Eine gerade horizontale, vertikale oder diagonale Linie aus fünf oder mehr "
+"Objekten wird vom Spielfeld entfernt. In diesem Fall erhalten Sie außerdem "
+"einen zusätzlichen Zug, bei dem keine weiteren Objekte zum Spielfeld "
+"hinzugefügt werden."
+
+#: C/rules.page:27(item/p)
+msgid ""
+"The more objects you clear, the longer the game will go on. The longer you "
+"play, the higher your <link xref=\"scores\">score</link>."
+msgstr ""
+"Je mehr Objekte Sie entfernen, umso länger wird das Spiel fortgesetzt. Je "
+"länger Sie spielen, umso höher wird Ihr <link xref=\"scores\">Punktestand</"
+"link>."
+
+#: C/rules.page:29(item/p)
+msgid ""
+"The game is over when the board is full, since no object can be moved at that "
+"point."
+msgstr ""
+"Das Spiel ist vorbei, sobald das Spielfeld vollständig gefüllt ist, da dann "
+"kein Objekt mehr bewegt werden kann."
+
+#: C/rules.page:36(media/p)
+msgid "Example horizontal alignment"
+msgstr "Beispiel für eine horizontale Anordnung"
+
+#: C/rules.page:41(media/p)
+msgid "Example vertical alignment"
+msgstr "Beispiel für eine vertikale Anordnung"
+
+#: C/rules.page:46(media/p)
+msgid "Example diagonal alignment"
+msgstr "Beispiel für eine diagonale Anordnung"
+
+#: C/rules.page:51(media/p)
+msgid "<app>Five or More</app> game over position."
+msgstr "<application>Fünf-oder-mehr</application>-Endposition"
+
+#: C/scores.page:20(page/title)
+msgid "Scoring"
+msgstr "Punkte erzielen"
+
+#: C/scores.page:21(page/p)
+msgid ""
+"You score points by creating lines of 5 or more objects. The points you gain "
+"depends on the number of objects that disappear."
+msgstr ""
+"Sie erzielen Punkte, indem Sie Zeilen aus fünf oder mehr Objekten bilden. Die "
+"erzielbaren Punkte hängen von der Anzahl der Objekte ab, die dadurch entfernt "
+"werden."
+
+#: C/scores.page:26(td/p)
+msgid "<em>Number of objects</em>"
+msgstr "<em>Anzahl der Objekte</em>"
+
+#: C/scores.page:27(td/p)
+msgid "<em>Number of points</em>"
+msgstr "<em>Anzahl der Punkte</em>"
+
+#: C/scores.page:33(td/p) C/scores.page:52(td/p)
+msgid "10"
+msgstr "10"
+
+#: C/scores.page:36(td/p)
+msgid "6"
+msgstr "6"
+
+#: C/scores.page:37(td/p) C/scores.page:60(td/p)
+msgid "12"
+msgstr "12"
+
+#: C/scores.page:41(td/p)
+msgid "18"
+msgstr "18"
+
+#: C/scores.page:44(td/p)
+msgid "8"
+msgstr "8"
+
+#: C/scores.page:45(td/p)
+msgid "28"
+msgstr "28"
+
+#: C/scores.page:49(td/p)
+msgid "42"
+msgstr "42"
+
+#: C/scores.page:53(td/p)
+msgid "82"
+msgstr "82"
+
+#: C/scores.page:56(td/p)
+msgid "11"
+msgstr "11"
+
+#: C/scores.page:57(td/p)
+msgid "108"
+msgstr "108"
+
+#: C/scores.page:61(td/p)
+msgid "138"
+msgstr "138"
+
+#: C/scores.page:64(td/p)
+msgid "13"
+msgstr "13"
+
+#: C/scores.page:65(td/p)
+msgid "172"
+msgstr "172"
+
+#: C/scores.page:68(td/p)
+msgid "14"
+msgstr "14"
+
+#: C/scores.page:69(td/p)
+msgid "210"
+msgstr "210"
+
+#: C/scores.page:75(note/p)
+msgid ""
+"You can view the high scores by clicking <guiseq><gui>Game</gui><gui>Scores</"
+"gui></guiseq>."
+msgstr ""
+"Sie können die Punktestände betrachten, indem Sie auf <guiseq><gui>Spiel</"
+"gui><gui>Ergebnisse</gui></guiseq> klicken."
+
+#: C/scores.page:78(note/p)
+msgid ""
+"The <app>Five or More</app> scores are recorded according to the board size. "
+"You can select the <gui>Board Size</gui> of interest using the drop down menu."
+msgstr ""
+"Die Ergebnisse von <app>Fünf oder mehr</app> werden entsprechend der "
+"Spielfeldgröße gespeichert. Sie können die gewünschte <gui>Spielfeldgröße</"
+"gui> in der Auswahlliste auswählen."
+
+#: C/shortcuts.page:17(page/title)
+msgid "Keyboard shortcuts"
+msgstr "Tastenkürzel"
+
+#: C/shortcuts.page:20(td/p)
+msgid "New game"
+msgstr "Neues Spiel"
+
+#: C/shortcuts.page:21(td/p)
+msgid "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
+msgstr "<keyseq><key>Strg</key><key>N</key></keyseq>"
+
+#: C/shortcuts.page:24(td/p)
+msgid "Fullscreen"
+msgstr "Vollbild"
+
+#: C/shortcuts.page:25(td/p)
+msgid "<key>F11</key>"
+msgstr "<key>F11</key>"
+
+#: C/shortcuts.page:28(td/p)
+msgid "Help"
+msgstr "Hilfe"
+
+#: C/shortcuts.page:29(td/p)
+msgid "<key>F1</key>"
+msgstr "<key>F1</key>"
+
+#: C/shortcuts.page:32(td/p)
+msgid "Quit"
+msgstr "Beenden"
+
+#: C/shortcuts.page:33(td/p)
+msgid "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
+msgstr "<keyseq><key>Strg</key><key>Q</key></keyseq>"
+
+#: C/strategy.page:17(page/title)
+msgid "Strategy"
+msgstr "Strategie"
+
+#: C/translate.page:15(credit/name)
+msgid "Michael Hill"
+msgstr "Michael Hill"
+
+#: C/translate.page:23(page/title)
+msgid "Help translate"
+msgstr "Beim Übersetzen helfen"
+
+#: C/translate.page:24(page/p)
+msgid ""
+"The <app>GNOME games</app> user interface and documentation is being "
+"translated by a world-wide volunteer community. You are welcome to "
+"participate."
+msgstr ""
+"Die Benutzeroberfläche und die Dokumentation der <app>GNOME Games</app> "
+"werden von einer weltweiten Gemeinschaft aus Freiwilligen übersetzt. Sie sind "
+"herzlich eingeladen, sich daran zu beteiligen."
+
+#: C/translate.page:27(page/p)
+msgid ""
+"There are <link href=\"http://l10n.gnome.org/module/gnome-games/\">many "
+"languages</link> for which translations are still needed."
+msgstr ""
+"Übersetzungen sind noch für <link href=\"http://l10n.gnome.org/module/gnome-"
+"games/\">zahlreiche Sprachen</link> nötig."
+
+#: C/translate.page:30(page/p)
+msgid ""
+"To start translating you will need to <link href=\"http:l10n.gnome.org"
+"\">create an account</link> and join the <link href=\"http://l10n.gnome.org/"
+"teams/\">translation team</link> for your language. This will give you the "
+"ability to upload new translations."
+msgstr ""
+"Um mit der Übersetzung zu beginnen, müssen Sie zunächst <link href=\"http:"
+"l10n.gnome.org\">ein Konto erstellen</link> und einem <link href=\"http://"
+"l10n.gnome.org/teams/\">Übersetzungstteam</link> für Ihre Sprache beitreten. "
+"So erhalten Sie die Möglichkeit, neue Übersetzungen hochzuladen."
+
+#: C/translate.page:34(page/p)
+msgid ""
+"You can chat with GNOME translators using <link href=\"https://cbe003.chat."
+"mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fi18n\">irc</link>. People on the "
+"channel are located worldwide, so you may not get an immediate response as a "
+"result of timezone differences."
+msgstr ""
+"Sie können mit GNOME-Übersetzern im <link href=\"https://cbe003.chat.mibbit."
+"com/?url=irc%3A%2F%2Firc.gnome.org%2Fi18n\">IRC</link> chatten. Die "
+"Teilnehmer in diesem Kanal sind über die ganze Welt verstreut, so dass Sie "
+"aufgrund der unterschiedlichen Zeitzonen nicht unbedingt sofort eine Antwort "
+"erhalten werden."
+
+#: C/translate.page:37(page/p)
+msgid ""
+"Alternatively, you can contact the Internationalization Team using their "
+"<link href=\"http://mail.gnome.org/mailman/listinfo/gnome-i18n\">mailing "
+"list</link>."
+msgstr ""
+"Alternativ können Sie das Internationaliserungsteam über dessen <link href="
+"\"http://mail.gnome.org/mailman/listinfo/gnome-i18n\">Mailingliste</link> "
+"kontaktieren."
+
+#~ msgid "tiffany.antopolski@gmail.com"
+#~ msgstr "tiffany.antopolski@gmail.com"
+
+#~ msgid "mdhillca@gmail.com"
+#~ msgstr "mdhillca@gmail.com"
+
+#~ msgid "Ctrl"
+#~ msgstr "Strg"
+
+#~ msgid "N"
+#~ msgstr "N"
+
+#~ msgid "F11"
+#~ msgstr "F11"
+
+#~ msgid "F1"
+#~ msgstr "F1"
+
+#~ msgid "Q"
+#~ msgstr "Q"
+
+#~ msgid "lankakck@.gmailcom"
+#~ msgstr "lankakck@.gmailcom"
