@@ -8,8 +8,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: glines.HEAD\n"
-"POT-Creation-Date: 2012-01-22 20:07+0000\n"
-"PO-Revision-Date: 2012-01-23 13:59+0100\n"
+"POT-Creation-Date: 2012-02-06 14:50+0000\n"
+"PO-Revision-Date: 2012-02-06 18:10+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -19,7 +19,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
-#| msgid "translator-credits"
 msgctxt "_"
 msgid "translator-credits"
 msgstr ""
@@ -36,7 +35,6 @@ msgstr ""
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
 #: C/index.page:6(media)
-#| msgid "@@image: 'figures/logo.png'; md5=83ba6ff888acbdea3ad599b055ed7710"
 msgctxt "_"
 msgid "external ref='figures/logo.png' md5='83ba6ff888acbdea3ad599b055ed7710'"
 msgstr "external ref='figures/logo.png' md5='83ba6ff888acbdea3ad599b055ed7710'"
@@ -51,7 +49,6 @@ msgstr "external ref='figures/logo.png' md5='83ba6ff888acbdea3ad599b055ed7710'"
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
 #: C/index.page:25(media)
-#| msgid "@@image: 'figures/logo32.png'; md5=51b65eea63f1a6c26a4c5d628dba406c"
 msgctxt "_"
 msgid ""
 "external ref='figures/logo32.png' md5='51b65eea63f1a6c26a4c5d628dba406c'"
@@ -59,13 +56,11 @@ msgstr ""
 "external ref='figures/logo32.png' md5='51b65eea63f1a6c26a4c5d628dba406c'"
 
 #: C/index.page:7(info/title)
-#| msgid "Five or More"
 msgctxt "link"
 msgid "Five or More"
 msgstr "Cinco o más"
 
 #: C/index.page:8(info/title)
-#| msgid "Five or More"
 msgctxt "text"
 msgid "Five or More"
 msgstr "Cinco o más"
@@ -78,10 +73,9 @@ msgstr "Lahiru lanka"
 
 #: C/index.page:15(credit/name) C/bug-filing.page:10(credit/name)
 #: C/change-board-size.page:14(credit/name)
-#: C/change-theme.page:14(credit/name) C/commandline.page:9(credit/name)
-#: C/develop.page:10(credit/name) C/documentation.page:8(credit/name)
-#: C/scores.page:14(credit/name) C/shortcuts.page:9(credit/name)
-#: C/translate.page:10(credit/name)
+#: C/change-theme.page:14(credit/name) C/develop.page:10(credit/name)
+#: C/documentation.page:8(credit/name) C/scores.page:14(credit/name)
+#: C/shortcuts.page:9(credit/name) C/translate.page:10(credit/name)
 msgid "Tiffany Antopolski"
 msgstr "Tiffany Antopolski"
 
@@ -225,7 +219,6 @@ msgstr ""
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
 #: C/change-board-size.page:69(media)
-#| msgid "@@image: 'figures/small.png'; md5=cc59a29333b3b145c9e7928872c714bc"
 msgctxt "_"
 msgid "external ref='figures/small.png' md5='cc59a29333b3b145c9e7928872c714bc'"
 msgstr ""
@@ -236,7 +229,6 @@ msgstr ""
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
 #: C/change-board-size.page:74(media)
-#| msgid "@@image: 'figures/medium.png'; md5=ae122a301d215d40fff80717211b0915"
 msgctxt "_"
 msgid ""
 "external ref='figures/medium.png' md5='ae122a301d215d40fff80717211b0915'"
@@ -248,7 +240,6 @@ msgstr ""
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
 #: C/change-board-size.page:79(media)
-#| msgid "@@image: 'figures/large.png'; md5=14942e047fbbc3538ababbfa888fa4e6"
 msgctxt "_"
 msgid "external ref='figures/large.png' md5='14942e047fbbc3538ababbfa888fa4e6'"
 msgstr ""
@@ -298,17 +289,14 @@ msgid "<em>Height</em>"
 msgstr "<em>Altura</em>"
 
 #: C/change-board-size.page:36(td/p)
-#| msgid "Number of types"
 msgid "<em>Number of types</em>"
 msgstr "<em>Número de tipos</em>"
 
 #: C/change-board-size.page:36(td/p)
-#| msgid "New objects per turn"
 msgid "<em>New objects per turn</em>"
 msgstr "<em>Objetos nuevos por turno</em>"
 
 #: C/change-board-size.page:37(td/p)
-#| msgid "Number of cells"
 msgid "<em>Number of cells</em>"
 msgstr "<em>Número de casillas</em>"
 
@@ -383,8 +371,6 @@ msgstr "Tablero grande de <app>Cinco o más</app>"
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
 #: C/change-theme.page:36(media)
-#| msgid ""
-#| "@@image: 'figures/color-balls.png'; md5=ac9b26a5c770a7e118c84d82b43fbcaa"
 msgctxt "_"
 msgid ""
 "external ref='figures/color-balls.png' md5='ac9b26a5c770a7e118c84d82b43fbcaa'"
@@ -396,8 +382,6 @@ msgstr ""
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
 #: C/change-theme.page:40(media)
-#| msgid ""
-#| "@@image: 'figures/color-shapes.png'; md5=12b538f0d29c55aa93c8fd6adec58ffc"
 msgctxt "_"
 msgid ""
 "external ref='figures/color-shapes.png' "
@@ -411,15 +395,13 @@ msgstr ""
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
 #: C/change-theme.page:48(media)
-#| msgid ""
-#| "@@image: 'figures/pickcolor.png'; md5=51d82564630d095c45865aff5518e6fc"
 msgctxt "_"
 msgid ""
 "external ref='figures/pickcolor.png' md5='51d82564630d095c45865aff5518e6fc'"
 msgstr ""
 "external ref='figures/pickcolor.png' md5='51d82564630d095c45865aff5518e6fc'"
 
-#: C/change-theme.page:11(credit/years) C/commandline.page:11(credit/years)
+#: C/change-theme.page:11(credit/years)
 msgid "2012"
 msgstr "2012"
 
@@ -474,10 +456,6 @@ msgstr "Colores de fondo disponibles"
 #: C/change-theme.page:49(media/p)
 msgid "Five or More color palette"
 msgstr "Paleta de color de Cinco o más"
-
-#: C/commandline.page:17(page/title)
-msgid "Commandline"
-msgstr "Línea de comandos"
 
 #: C/develop.page:19(page/title)
 msgid "Help develop"
@@ -580,7 +558,6 @@ msgid "You are free:"
 msgstr "Es libre de:"
 
 #: C/license.page:25(item/title)
-#| msgid "To share"
 msgid "<em>To share</em>"
 msgstr "<em>Compartir</em>"
 
@@ -589,7 +566,6 @@ msgid "To copy, distribute and transmit the work."
 msgstr "Copiar, distribuir y transmitir el trabajo."
 
 #: C/license.page:29(item/title)
-#| msgid "To remix"
 msgid "<em>To remix</em>"
 msgstr "<em>Hacer obras derivadas</em>"
 
@@ -602,7 +578,6 @@ msgid "Under the following conditions:"
 msgstr "Bajo las siguientes condiciones:"
 
 #: C/license.page:38(item/title)
-#| msgid "Attribution"
 msgid "<em>Attribution</em>"
 msgstr "<em>Atribución</em>"
 
@@ -617,7 +592,6 @@ msgstr ""
 "o apoyan el uso que hace de su obra)."
 
 #: C/license.page:46(item/title)
-#| msgid "Share Alike"
 msgid "<em>Share Alike</em>"
 msgstr "<em>Compartir igual</em>"
 
@@ -647,8 +621,6 @@ msgstr ""
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
 #: C/play.page:42(media)
-#| msgid ""
-#| "@@image: 'figures/glines-demo.ogv'; md5=f9222aaac4ad0df37975c8ac77fbe1cc"
 msgctxt "_"
 msgid ""
 "external ref='figures/glines-demo.ogv' md5='f9222aaac4ad0df37975c8ac77fbe1cc'"
@@ -725,8 +697,6 @@ msgstr "Vídeo de demostración"
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
 #: C/rules.page:35(media)
-#| msgid ""
-#| "@@image: 'figures/horizontal.png'; md5=069cf4ce8408b1cc5e6337f2527c4d2e"
 msgctxt "_"
 msgid ""
 "external ref='figures/horizontal.png' md5='069cf4ce8408b1cc5e6337f2527c4d2e'"
@@ -738,8 +708,6 @@ msgstr ""
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
 #: C/rules.page:40(media)
-#| msgid ""
-#| "@@image: 'figures/vertical.png'; md5=9f17201dac1c4c78a572ac17dce45ce0"
 msgctxt "_"
 msgid ""
 "external ref='figures/vertical.png' md5='9f17201dac1c4c78a572ac17dce45ce0'"
@@ -751,8 +719,6 @@ msgstr ""
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
 #: C/rules.page:45(media)
-#| msgid ""
-#| "@@image: 'figures/diagonal.png'; md5=8654cd0cc269ac9ed0f8fb8bce02a8fc"
 msgctxt "_"
 msgid ""
 "external ref='figures/diagonal.png' md5='8654cd0cc269ac9ed0f8fb8bce02a8fc'"
@@ -764,9 +730,6 @@ msgstr ""
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
 #: C/rules.page:50(media)
-#| msgid ""
-#| "@@image: 'figures/glines-gameover.png'; "
-#| "md5=ab35873b1818aa94499cc7fcca646db6"
 msgctxt "_"
 msgid ""
 "external ref='figures/glines-gameover.png' "
@@ -863,12 +826,10 @@ msgstr ""
 "dependen del número de objetos que desaparecen."
 
 #: C/scores.page:26(td/p)
-#| msgid "Number of objects"
 msgid "<em>Number of objects</em>"
 msgstr "<em>Número de objetos</em>"
 
 #: C/scores.page:27(td/p)
-#| msgid "Number of points"
 msgid "<em>Number of points</em>"
 msgstr "<em>Número de puntos</em>"
 
@@ -1038,7 +999,7 @@ msgstr ""
 "Puede chatear con los traductores de GNOME usando <link href=\"https://"
 "cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fi18n\">irc</link>. "
 "La gente de los canales se encuentra en cualquier parte del mundo, por lo "
-"que puede que no obtenga una respuesa inmediata debido a las diferencias "
+"que puede que no obtenga una respuesta inmediata debido a las diferencias "
 "horarias."
 
 #: C/translate.page:37(page/p)
@@ -1050,6 +1011,9 @@ msgstr ""
 "Alternativamente, puede contactar con el equipo de internacionalización "
 "usando su <link href=\"http://mail.gnome.org/mailman/listinfo/gnome-i18n"
 "\">lista de correo</link>."
+
+#~ msgid "Commandline"
+#~ msgstr "Línea de comandos"
 
 #~ msgid "tiffany.antopolski@gmail.com"
 #~ msgstr "tiffany.antopolski@gmail.com"
