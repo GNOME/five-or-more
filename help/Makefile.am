@@ -20,7 +20,6 @@ HELP_FILES = \
 	bug-filing.page			\
 	change-board-size.page		\
 	change-theme.page		\
-	commandline.page		\
 	develop.page			\
 	documentation.page		\
 	fast-moves.page			\
