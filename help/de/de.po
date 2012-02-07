@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: glines docs master\n"
-"POT-Creation-Date: 2012-01-22 20:07+0000\n"
-"PO-Revision-Date: 2012-02-05 22:47+0100\n"
+"POT-Creation-Date: 2012-02-07 00:34+0000\n"
+"PO-Revision-Date: 2012-02-07 11:17+0100\n"
 "Last-Translator: Mario Blättermann <mario.blaettermann@gmail.com>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -65,9 +65,10 @@ msgstr "Lahiru lanka"
 
 #: C/index.page:15(credit/name) C/bug-filing.page:10(credit/name)
 #: C/change-board-size.page:14(credit/name) C/change-theme.page:14(credit/name)
-#: C/commandline.page:9(credit/name) C/develop.page:10(credit/name)
-#: C/documentation.page:8(credit/name) C/scores.page:14(credit/name)
-#: C/shortcuts.page:9(credit/name) C/translate.page:10(credit/name)
+#: C/develop.page:10(credit/name) C/documentation.page:8(credit/name)
+#: C/fast-moves.page:14(credit/name) C/scores.page:14(credit/name)
+#: C/shortcuts.page:9(credit/name) C/strategy.page:9(credit/name)
+#: C/translate.page:10(credit/name)
 msgid "Tiffany Antopolski"
 msgstr "Tiffany Antopolski"
 
@@ -121,8 +122,7 @@ msgstr "Mithelfen"
 #: C/develop.page:12(credit/years) C/documentation.page:10(credit/years)
 #: C/fast-moves.page:11(credit/years) C/play.page:11(credit/years)
 #: C/rules.page:11(credit/years) C/scores.page:11(credit/years)
-#: C/shortcuts.page:11(credit/years) C/strategy.page:11(credit/years)
-#: C/translate.page:12(credit/years)
+#: C/shortcuts.page:11(credit/years) C/translate.page:12(credit/years)
 msgid "2011"
 msgstr "2011"
 
@@ -387,7 +387,7 @@ msgid ""
 "external ref='figures/pickcolor.png' md5='51d82564630d095c45865aff5518e6fc'"
 msgstr "original"
 
-#: C/change-theme.page:11(credit/years) C/commandline.page:11(credit/years)
+#: C/change-theme.page:11(credit/years) C/strategy.page:11(credit/years)
 msgid "2012"
 msgstr "2012"
 
@@ -399,7 +399,7 @@ msgstr "Das Erscheinungsbild anpassen"
 msgid "To change the appearance of the pieces and the board:"
 msgstr "So ändern Sie die Darstellung der Kugeln und des Spielfelds:"
 
-#: C/change-theme.page:24(item/p)
+#: C/change-theme.page:24(item/p) C/fast-moves.page:24(item/p)
 msgid "Click <guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq>."
 msgstr ""
 "Klicken Sie auf <guiseq><gui>Einstellungen</gui><gui>Einstellungen</gui></"
@@ -444,10 +444,6 @@ msgstr "Verfügbare Hintergrundfarben"
 #: C/change-theme.page:49(media/p)
 msgid "Five or More color palette"
 msgstr "Farbpalette für <app>Fünf oder mehr</app>"
-
-#: C/commandline.page:17(page/title)
-msgid "Commandline"
-msgstr "Befehlszeile"
 
 #: C/develop.page:19(page/title)
 msgid "Help develop"
@@ -510,19 +506,25 @@ msgstr ""
 "Unser <link href=\"https://live.gnome.org/DocumentationProject/Contributing"
 "\">Wiki</link> enthält eine Reihe nützlicher Informationen für Sie bereit."
 
-#: C/fast-moves.page:17(page/title)
+#: C/fast-moves.page:21(page/title)
 msgid "Change speed"
 msgstr "Geschwindigkeit ändern"
 
-#: C/fast-moves.page:18(page/p)
-msgid "You can speed up the object movements. Click:"
-msgstr "Sie können die Bewegungen der Kugeln beschleunigen. Klicken Sie auf:"
+#: C/fast-moves.page:22(page/p)
+msgid "You can speed up the object movements:"
+msgstr "Sie können die Bewegungen der Kugeln beschleunigen:"
 
-#: C/fast-moves.page:19(page/p)
-msgid "<guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq>."
-msgstr "<guiseq><gui>Einstellungen</gui><gui>Einstellungen</gui></guiseq>."
+#: C/fast-moves.page:25(item/p)
+msgid "Under <gui>General</gui> check the <gui>Use fast moves</gui> option"
+msgstr ""
+"Aktivieren Sie die Option <gui>Schnelle Züge verwenden</gui> in "
+"<gui>Allgemein</gui>"
 
-#: C/fast-moves.page:21(page/p)
+#: C/fast-moves.page:26(item/p)
+msgid "Click <gui>Close</gui>"
+msgstr "Klicken Sie auf <gui>Schließen</gui>"
+
+#: C/fast-moves.page:29(note/p)
 msgid ""
 "Any changes you make are instantly applied and remembered for the next time "
 "you run <key>Five or More</key>"
@@ -945,6 +947,44 @@ msgstr "<keyseq><key>Strg</key><key>Q</key></keyseq>"
 msgid "Strategy"
 msgstr "Strategie"
 
+#: C/strategy.page:19(page/p)
+msgid ""
+"There is no universal strategy for <app>Five or More</app>, but some "
+"strategic elements do exist. Here are some things to try and keep in mind as "
+"you play:"
+msgstr ""
+"Es gibt keine universelle Strategie für <app>Fünf oder mehr</app>, dennoch "
+"gibt es einige strategische Ansätze. Folgendes sollten Sie beim Spiel "
+"bedenken:"
+
+#: C/strategy.page:22(item/p)
+msgid "Try to set at least three same objects with your every move."
+msgstr ""
+"Versuchen Sie, mit jedem Zug mindestens drei gleiche Objekte in eine Linie zu "
+"bringen."
+
+#: C/strategy.page:23(item/p)
+msgid ""
+"The board can quickly become very crowded with objects, so it is best to "
+"think ahead. Pay attention to the collection of <gui>Next</gui> objects, "
+"because knowing these will influence your moves."
+msgstr ""
+"Das Spielfeld kann binnen kürzester Zeit mit Objekten verstopft werden, "
+"denken Sie also vorausschauend. Achten Sie immer auf die Anzeige der "
+"<gui>nächsten Objekte</gui> und machen Sie Ihre Entscheidung für einen zug "
+"davon abhängig."
+
+#: C/strategy.page:24(item/p)
+msgid ""
+"Try to line up more than 5 objects. For example, if you have 6 objects, you "
+"can line up 2 and 3 with a space in between, and then connect them by placing "
+"the sixth object between them."
+msgstr ""
+"Versuchen Sie, mehr als fünf Objekte zusammenzufügen. Bei sechs Objekten "
+"beispielsweise können Sie zwei hintereinander liegende Linien mit zwei "
+"beziehungsweise drei Objekten und einem Leerfeld dazwischen bilden. Im "
+"nächsten Zug fügen Sie das sechste Objekt ein."
+
 #: C/translate.page:15(credit/name)
 msgid "Michael Hill"
 msgstr "Michael Hill"
@@ -1005,6 +1045,12 @@ msgstr ""
 "Alternativ können Sie das Internationaliserungsteam über dessen <link href="
 "\"http://mail.gnome.org/mailman/listinfo/gnome-i18n\">Mailingliste</link> "
 "kontaktieren."
+
+#~ msgid "Commandline"
+#~ msgstr "Befehlszeile"
+
+#~ msgid "<guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq>."
+#~ msgstr "<guiseq><gui>Einstellungen</gui><gui>Einstellungen</gui></guiseq>."
 
 #~ msgid "tiffany.antopolski@gmail.com"
 #~ msgstr "tiffany.antopolski@gmail.com"
