@@ -8,8 +8,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: glines.HEAD\n"
-"POT-Creation-Date: 2012-02-06 14:50+0000\n"
-"PO-Revision-Date: 2012-02-06 18:10+0100\n"
+"POT-Creation-Date: 2012-02-07 00:34+0000\n"
+"PO-Revision-Date: 2012-02-07 16:27+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -74,8 +74,9 @@ msgstr "Lahiru lanka"
 #: C/index.page:15(credit/name) C/bug-filing.page:10(credit/name)
 #: C/change-board-size.page:14(credit/name)
 #: C/change-theme.page:14(credit/name) C/develop.page:10(credit/name)
-#: C/documentation.page:8(credit/name) C/scores.page:14(credit/name)
-#: C/shortcuts.page:9(credit/name) C/translate.page:10(credit/name)
+#: C/documentation.page:8(credit/name) C/fast-moves.page:14(credit/name)
+#: C/scores.page:14(credit/name) C/shortcuts.page:9(credit/name)
+#: C/strategy.page:9(credit/name) C/translate.page:10(credit/name)
 msgid "Tiffany Antopolski"
 msgstr "Tiffany Antopolski"
 
@@ -130,7 +131,7 @@ msgstr "Involucrarse"
 #: C/documentation.page:10(credit/years) C/fast-moves.page:11(credit/years)
 #: C/play.page:11(credit/years) C/rules.page:11(credit/years)
 #: C/scores.page:11(credit/years) C/shortcuts.page:11(credit/years)
-#: C/strategy.page:11(credit/years) C/translate.page:12(credit/years)
+#: C/translate.page:12(credit/years)
 msgid "2011"
 msgstr "2011"
 
@@ -401,7 +402,7 @@ msgid ""
 msgstr ""
 "external ref='figures/pickcolor.png' md5='51d82564630d095c45865aff5518e6fc'"
 
-#: C/change-theme.page:11(credit/years)
+#: C/change-theme.page:11(credit/years) C/strategy.page:11(credit/years)
 msgid "2012"
 msgstr "2012"
 
@@ -413,7 +414,7 @@ msgstr "Cambiar el aspecto"
 msgid "To change the appearance of the pieces and the board:"
 msgstr "Para cambiar la apariencia de las fichas y del tablero:"
 
-#: C/change-theme.page:24(item/p)
+#: C/change-theme.page:24(item/p) C/fast-moves.page:24(item/p)
 msgid "Click <guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq>."
 msgstr "Pulse <guiseq><gui>Editar</gui><gui>Preferencias</gui></guiseq>."
 
@@ -517,19 +518,26 @@ msgstr ""
 "El <link href=\"https://live.gnome.org/DocumentationProject/Contributing"
 "\">wiki</link> contiene información útil."
 
-#: C/fast-moves.page:17(page/title)
+#: C/fast-moves.page:21(page/title)
 msgid "Change speed"
 msgstr "Cambiar la velocidad"
 
-#: C/fast-moves.page:18(page/p)
-msgid "You can speed up the object movements. Click:"
-msgstr "Puede acelerar los movimientos de los objetos. Pulse:"
+#: C/fast-moves.page:22(page/p)
+#| msgid "You can speed up the object movements. Click:"
+msgid "You can speed up the object movements:"
+msgstr "Puede acelerar los movimientos de los objetos:"
 
-#: C/fast-moves.page:19(page/p)
-msgid "<guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq>."
-msgstr "<guiseq><gui>Configuración</gui><gui>Preferencias</gui></guiseq>."
+#: C/fast-moves.page:25(item/p)
+msgid "Under <gui>General</gui> check the <gui>Use fast moves</gui> option"
+msgstr ""
+"En <gui>General</gui>, marque la opción <gui>Usar movimientos rápidos</gui>"
 
-#: C/fast-moves.page:21(page/p)
+#: C/fast-moves.page:26(item/p)
+#| msgid "Click <gui>Close</gui>."
+msgid "Click <gui>Close</gui>"
+msgstr "Pulse <gui>Cerrar</gui>"
+
+#: C/fast-moves.page:29(note/p)
 msgid ""
 "Any changes you make are instantly applied and remembered for the next time "
 "you run <key>Five or More</key>"
@@ -951,6 +959,40 @@ msgstr "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
 msgid "Strategy"
 msgstr "Estrategia"
 
+#: C/strategy.page:19(page/p)
+msgid ""
+"There is no universal strategy for <app>Five or More</app>, but some "
+"strategic elements do exist. Here are some things to try and keep in mind as "
+"you play:"
+msgstr ""
+"No hay una estrategia universal para <app>Cinco o más</app>, pero hay "
+"algunas elementos estratégicos. Aquí hay algunas cosas que puede probar y "
+"tener en cuenta cuando juegue:"
+
+#: C/strategy.page:22(item/p)
+msgid "Try to set at least three same objects with your every move."
+msgstr "Pruebe a establecer al menos tres objetos iguales cada vez que mueva."
+
+#: C/strategy.page:23(item/p)
+msgid ""
+"The board can quickly become very crowded with objects, so it is best to "
+"think ahead. Pay attention to the collection of <gui>Next</gui> objects, "
+"because knowing these will influence your moves."
+msgstr ""
+"El tablero puede llenarse rápidamente con objetos, por lo que es mejor "
+"pensar en el futuro. Preste atención a la colección de objetos "
+"<gui>Siguiente</gui>, ya que conocerlos puede influenciar sus movimientos."
+
+#: C/strategy.page:24(item/p)
+msgid ""
+"Try to line up more than 5 objects. For example, if you have 6 objects, you "
+"can line up 2 and 3 with a space in between, and then connect them by "
+"placing the sixth object between them."
+msgstr ""
+"Intente alinear más de 5 objetos. Por ejemplo, si tiene 6 objetos, puede "
+"alinear 2 y 3 con un espacio entre medias, y conectarlos poniendo el sexto "
+"objeto entre ellos."
+
 #: C/translate.page:15(credit/name)
 msgid "Michael Hill"
 msgstr "Michael Hill"
@@ -1011,6 +1053,9 @@ msgstr ""
 "Alternativamente, puede contactar con el equipo de internacionalización "
 "usando su <link href=\"http://mail.gnome.org/mailman/listinfo/gnome-i18n"
 "\">lista de correo</link>."
+
+#~ msgid "<guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq>."
+#~ msgstr "<guiseq><gui>Configuración</gui><gui>Preferencias</gui></guiseq>."
 
 #~ msgid "Commandline"
 #~ msgstr "Línea de comandos"
