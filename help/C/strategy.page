@@ -3,12 +3,12 @@
       id="strategy">
   <info>
     <link type="guide" xref="index#play" />
-    <revision version="0.1" date="2011-12-10" status="stub"/>
+    <revision version="0.1" date="2012-02-06" status="review"/>
 
     <credit type="author copyright">
-      <name></name>
-      <email></email>
-      <years>2011</years>
+      <name>Tiffany Antopolski</name>
+      <email>tiffany.antopolski@gmail.com</email>
+      <years>2012</years>
     </credit>
 
     <desc></desc>
@@ -16,4 +16,11 @@
 
   <title>Strategy</title>
 
+  <p>
+There is no universal strategy for <app>Five or More</app>, but some strategic elements do exist.  Here are some things to try and keep in mind as you play:</p>
+ <list>
+   <item><p>Try to set at least three same objects with your every move.</p></item>
+   <item><p>The board can quickly become very crowded with objects, so it is best to think ahead. Pay attention to the collection of <gui>Next</gui> objects, because knowing these will influence your moves.</p></item>
+    <item><p>Try to line up more than 5 objects.  For example, if you have 6 objects, you can line up 2 and 3 with a space in between, and then connect them by placing the sixth object between them.</p></item>
+  </list>
 </page>

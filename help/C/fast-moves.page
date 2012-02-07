@@ -3,22 +3,30 @@
       id="fast-moves">
   <info>
     <link type="guide" xref="index#tips" />
-    <revision version="0.1" date="2011-12-10" status="stub"/>
+    <revision version="0.1" date="2012-02-06" status="review"/>
 
     <credit type="author copyright">
        <name>Lahiru lanka</name>
       <email> lankakck@.gmailcom</email>
       <years>2011</years>
     </credit>
+    <credit type="editor">
+     <name>Tiffany Antopolski</name>
+     <email>tiffany.antopolski@gmail.com</email>
+    </credit>
 
     <desc></desc>
   </info>
 
   <title>Change speed</title>
-<p>You can speed up the object movements. Click:</p>
-<p><guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq>.</p>
+    <p>You can speed up the object movements:</p>
+    <steps>
+      <item><p>Click <guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq>.</p></item>
+      <item><p>Under <gui>General</gui> check the <gui>Use fast moves</gui> option</p></item>
+      <item><p>Click <gui>Close</gui></p></item>
+    </steps>
 
-<p>Any changes you make are instantly applied and remembered for the next time you run
-   <key>Five or More</key> </p>
+    <note><p>Any changes you make are instantly applied and remembered for the next time you run
+   <key>Five or More</key></p></note>
 
 </page>
