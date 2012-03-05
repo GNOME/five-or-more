@@ -728,7 +728,7 @@ msgstr ""
 
 #: C/scores.page:26(td/p)
 msgid "<em>Number of objects</em>"
-msgstr "<em>Número de obxectos"
+msgstr "<em>Número de obxectos</em>"
 
 #: C/scores.page:27(td/p)
 msgid "<em>Number of points</em>"
