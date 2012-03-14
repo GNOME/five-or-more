@@ -3,7 +3,7 @@
       id="fast-moves">
   <info>
     <link type="guide" xref="index#tips" />
-    <revision version="0.1" date="2012-02-06" status="review"/>
+    <revision pkgversion="3.4.0" version="0.1" date="2012-03-13" status="final"/>
 
     <credit type="author copyright">
        <name>Lahiru lanka</name>
@@ -14,19 +14,23 @@
      <name>Tiffany Antopolski</name>
      <email>tiffany.antopolski@gmail.com</email>
     </credit>
+    <credit type="editor">
+     <name>Michael Hill</name>
+     <email>mdhillca@gmail.com</email>
+    </credit>
 
     <desc></desc>
   </info>
 
   <title>Change speed</title>
-    <p>You can speed up the object movements:</p>
+    <p>To speed up object movements:</p>
     <steps>
       <item><p>Click <guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq>.</p></item>
-      <item><p>Under <gui>General</gui> check the <gui>Use fast moves</gui> option</p></item>
-      <item><p>Click <gui>Close</gui></p></item>
+      <item><p>Under <gui>General</gui>, select <gui>Use fast moves</gui>.</p></item>
+      <item><p>Click <gui>Close</gui>.</p></item>
     </steps>
 
-    <note><p>Any changes you make are instantly applied and remembered for the next time you run
-   <key>Five or More</key></p></note>
+    <note><p>Any changes you make are instantly applied and remembered for the
+     next time you run <app>Five or More</app>.</p></note>
 
 </page>

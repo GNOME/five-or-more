@@ -3,8 +3,7 @@
       id="change-board-size">
   <info>
     <link type="guide" xref="index#tips" />
-    <revision version="0.1" date="2012-02-06" status="review"/>
-
+    <revision pkgversion="3.4.0" version="0.1" date="2012-03-13" status="final"/>
     <credit type="author copyright">
       <name>Lahiru lanka</name>
       <email> lankakck@.gmailcom</email>
@@ -14,15 +13,24 @@
      <name>Tiffany Antopolski</name>
      <email>tiffany.antopolski@gmail.com</email>
     </credit>
+    <credit type="editor">
+     <name>Michael Hill</name>
+     <email>mdhillca@gmail.com</email>
+    </credit>
   </info>
 
   <title>Change board size</title>
-    <p>To change the board:</p>
+    <p>To change the board size:</p>
      <list>
        <item><p>Click <guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq></p></item>
-     </list>
+       <item><p>Under <gui>Board Size</gui>, select <gui>Small</gui>,
+       <gui>Medium</gui>, or <gui>Large</gui>.</p></item>
+    </list>
 
-    <p>The <gui>Board Size</gui> section lets you to select a small, medium or large board. While a board with larger size gives you more space, it also places more objects on the board per turn.</p>
+  <note style="tip">
+    <p>While a larger board gives you more space, there are also more objects in
+    play for each turn.</p>
+  </note>
 
   <section id="board-parameters">
   <title>Board parameters</title>
@@ -33,7 +41,8 @@
        <td><p><em>Size</em></p></td> 
        <td><p><em>Width</em></p></td>
        <td><p><em>Height</em></p></td>
-       <td><p><em>Number of types</em></p></td>        <td><p><em>New objects per turn</em></p></td>
+       <td><p><em>Number of types</em></p></td>
+       <td><p><em>New objects per turn</em></p></td>
        <td><p><em>Number of cells</em></p></td>
      </tr>
 

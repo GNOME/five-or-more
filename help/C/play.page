@@ -3,12 +3,16 @@
       id="play">
   <info>
     <link type="guide" xref="index#play" />
-    <revision version="0.1" date="2012-02-06" status="review"/>
+    <revision pkgversion="3.4.0" version="0.1" date="2012-03-13" status="final"/>
 
     <credit type="author copyright">
        <name>Lahiru lanka</name>
       <email> lankakck@.gmailcom</email>
       <years>2011</years>
+    </credit>
+    <credit type="editor">
+      <name>Michael Hill</name>
+      <email>mdhillca@gmail.com</email>
     </credit>
 
     <desc></desc>
@@ -16,32 +20,49 @@
 
   <title>How to Play</title>
 
-<p>To start a new game click <guiseq><gui>Game</gui><gui>New</gui></guiseq>.</p> 
-<section id="mouse">
-<title>Using the mouse</title>
-<steps>
-  <item>
-    <p>Click on the object you want to move. The selected object will begin spinning.</p>
-  </item>
-  <item><p>Click on the cell you want to move the object to.</p></item>
-</steps>
-</section>
-<section id="keyboard">
-<title>Using the keyboard</title>
-<steps>
-<item><p>Press any of the arrow keys.  An outline around a cell will appear on the board.</p></item>
-<item><p>Using the arrow keys, navigate to the object you want to move.</p></item>
-<item><p>To select the object, press the <key>Enter</key> or <key>Spacebar</key>. The selected object will begin spinning.</p></item>
-<item><p>Move to the destination cell, and again press the <key>Enter</key> or <key>Spacebar</key>.  This will cause the chosen object to me moved to the destination cell.</p></item>
-</steps>
-</section>
+  <p>To start a new game click <guiseq><gui>Game</gui><gui>New</gui></guiseq>.</p> 
 
+  <section id="mouse">
 
-    <section id="usage-video">
-      <title>Video demonstration</title>
-       <media type="video" mime="application/ogg" src="figures/glines-demo.ogv">
+  <title>Using the mouse</title>
 
-        </media>
-    </section>
+  <steps>
+    <item>
+      <p>Click on the object you want to move. The selected object will begin
+       spinning.</p>
+    </item>
+    <item>
+      <p>Click on the destination cell.</p>
+    </item>
+  </steps>
+
+  </section>
+
+  <section id="keyboard">
+
+  <title>Using the keyboard</title>
+
+  <steps>
+    <item><p>Press any of the arrow keys.  An outline around a cell will appear
+     on the board.</p></item>
+    <item><p>Using the arrow keys, navigate to the object you want to
+     move.</p></item>
+    <item><p>To select the object, press the <key>Enter</key> or
+     <key>Spacebar</key>. The selected object will begin spinning.</p></item>
+    <item><p>Move to the destination cell, and again press the
+     <key>Enter</key> or <key>Spacebar</key>.  The chosen object will move to
+     the destination cell.</p></item>
+  </steps>
+
+  </section>
+
+  <section id="usage-video">
+
+  <title>Video demonstration</title>
+
+    <media type="video" mime="application/ogg" src="figures/glines-demo.ogv">
+    </media>
+    
+  </section>
 
 </page>

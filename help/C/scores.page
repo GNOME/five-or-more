@@ -3,7 +3,7 @@
       id="scores">
   <info>
     <link type="guide" xref="index#play" />
-    <revision version="0.1" date="2012-02-06" status="review"/>
+    <revision pkgversion="3.4.0" version="0.1" date="2012-03-13" status="final"/>
 
     <credit type="author copyright">
        <name>Lahiru lanka</name>
@@ -18,7 +18,8 @@
   </info>
 
 <title>Scoring</title>
-<p>You score points by creating lines of 5 or more objects.  The points you gain depends on the number of objects that disappear.</p>
+<p>You score points by creating lines of 5 or more objects.  The number of
+ points depends on the number of objects that disappear.</p>
 
     <table rules="rowgroups cols" frame="all">
       <tbody>
@@ -72,10 +73,10 @@
     </table>
 
 <note style="tip">
-<p>
-You can view the high scores by clicking <guiseq><gui>Game</gui><gui>Scores</gui></guiseq>.
-</p>
-<p>
-The <app>Five or More</app> scores are recorded according to the board size. You can select the <gui>Board Size</gui> of interest using the drop down menu.</p> 
+<p>You can view the high scores by clicking
+ <guiseq><gui>Game</gui><gui>Scores</gui></guiseq>.</p>
+<p>The <app>Five or More</app> scores are recorded according to the board size.
+ You can select the <gui>Board Size</gui> of interest using the drop down
+ menu.</p> 
 </note>
 </page>
