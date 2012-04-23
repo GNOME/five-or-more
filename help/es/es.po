@@ -8,8 +8,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: glines.HEAD\n"
-"POT-Creation-Date: 2012-03-14 01:46+0000\n"
-"PO-Revision-Date: 2012-03-14 17:27+0100\n"
+"POT-Creation-Date: 2012-04-22 22:39+0000\n"
+"PO-Revision-Date: 2012-04-23 11:06+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -82,7 +82,7 @@ msgstr "Tiffany Antopolski"
 
 #: C/index.page:20(license/p) C/bug-filing.page:16(license/p)
 #: C/develop.page:15(license/p) C/documentation.page:13(license/p)
-#: C/legal.xml:2(license/p) C/translate.page:19(license/p)
+#: C/translate.page:19(license/p)
 msgid "Creative Commons Share Alike 3.0"
 msgstr "Creative Commons Compartir Igual 3.0"
 
@@ -256,7 +256,6 @@ msgid "Change board size"
 msgstr "Cambiar el tamaño del tablero"
 
 #: C/change-board-size.page:23(page/p)
-#| msgid "To change the board:"
 msgid "To change the board size:"
 msgstr "Para cambiar el tamaño del tablero:"
 
@@ -535,26 +534,33 @@ msgid "Change speed"
 msgstr "Cambiar la velocidad"
 
 #: C/fast-moves.page:26(page/p)
-#| msgid "You can speed up the object movements:"
 msgid "To speed up object movements:"
 msgstr "Para acelerar los movimientos de los objetos:"
 
 #: C/fast-moves.page:29(item/p)
-#| msgid "Under <gui>General</gui> check the <gui>Use fast moves</gui> option"
 msgid "Under <gui>General</gui>, select <gui>Use fast moves</gui>."
 msgstr ""
 "En <gui>General</gui>, marque la opción <gui>Usar movimientos rápidos</gui>."
 
 #: C/fast-moves.page:33(note/p)
-#| msgid ""
-#| "Any changes you make are instantly applied and remembered for the next "
-#| "time you run <key>Five or More</key>"
 msgid ""
 "Any changes you make are instantly applied and remembered for the next time "
 "you run <app>Five or More</app>."
 msgstr ""
 "Cualquier cambio que haga se reflejará instantáneamente y se recordará para "
 "la siguiente vez que inicie <app>Cinco o más</app>."
+
+#: C/legal.xml:3(p/link)
+#| msgid ""
+#| "This work is distributed under a CreativeCommons Attribution-Share Alike "
+#| "3.0 Unported license."
+msgid "Creative Commons Attribution-ShareAlike 3.0 Unported License"
+msgstr ""
+"Licencia Creative Commons Atribución - Compartir igual 3.0 sin soporte."
+
+#: C/legal.xml:3(license/p)
+msgid "This work is licensed under a <_:link-1/>."
+msgstr "Este trabajo está licenciado bajo la <_:link-1/>."
 
 #: C/license.page:9(info/desc)
 msgid "Legal information."
@@ -698,10 +704,6 @@ msgstr ""
 "key>. El objeto seleccionado empezará a girar."
 
 #: C/play.page:52(item/p)
-#| msgid ""
-#| "Move to the destination cell, and again press the <key>Enter</key> or "
-#| "<key>Spacebar</key>. This will cause the chosen object to me moved to the "
-#| "destination cell."
 msgid ""
 "Move to the destination cell, and again press the <key>Enter</key> or "
 "<key>Spacebar</key>. The chosen object will move to the destination cell."
@@ -839,9 +841,6 @@ msgid "Scoring"
 msgstr "Puntuación"
 
 #: C/scores.page:21(page/p)
-#| msgid ""
-#| "You score points by creating lines of 5 or more objects. The points you "
-#| "gain depends on the number of objects that disappear."
 msgid ""
 "You score points by creating lines of 5 or more objects. The number of "
 "points depends on the number of objects that disappear."
@@ -1014,10 +1013,6 @@ msgid "Help translate"
 msgstr "Ayudar a traducir"
 
 #: C/translate.page:25(page/p)
-#| msgid ""
-#| "The <app>GNOME games</app> user interface and documentation is being "
-#| "translated by a world-wide volunteer community. You are welcome to "
-#| "participate."
 msgid ""
 "The <app>GNOME Games</app> user interface and documentation is being "
 "translated by a world-wide volunteer community. You are welcome to "
