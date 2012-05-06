@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: glines docs master\n"
-"POT-Creation-Date: 2012-03-14 01:46+0000\n"
-"PO-Revision-Date: 2012-03-17 22:23+0100\n"
+"POT-Creation-Date: 2012-04-22 22:38+0000\n"
+"PO-Revision-Date: 2012-05-06 16:43+0100\n"
 "Last-Translator: Mario Blättermann <mario.blaettermann@gmail.com>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -74,7 +74,7 @@ msgstr "Tiffany Antopolski"
 
 #: C/index.page:20(license/p) C/bug-filing.page:16(license/p)
 #: C/develop.page:15(license/p) C/documentation.page:13(license/p)
-#: C/legal.xml:2(license/p) C/translate.page:19(license/p)
+#: C/translate.page:19(license/p)
 msgid "Creative Commons Share Alike 3.0"
 msgstr "Creative Commons Share Alike 3.0"
 
@@ -538,6 +538,14 @@ msgid ""
 msgstr ""
 "Jede von Ihnen getätigte Änderung wird unmittelbar angewendet und für den "
 "nächsten Start von <app>Fünf oder mehr</app> gespeichert."
+
+#: C/legal.xml:3(p/link)
+msgid "Creative Commons Attribution-ShareAlike 3.0 Unported License"
+msgstr "Creative Commons Attribution-ShareAlike 3.0 Unported License"
+
+#: C/legal.xml:3(license/p)
+msgid "This work is licensed under a <_:link-1/>."
+msgstr "Dieses Werk wird unter einer <_:link-1/> verbreitet."
 
 #: C/license.page:9(info/desc)
 msgid "Legal information."
