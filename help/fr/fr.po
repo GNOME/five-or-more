@@ -10,8 +10,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: glines documentation\n"
-"POT-Creation-Date: 2012-04-22 22:39+0000\n"
-"PO-Revision-Date: 2012-03-26 08:56+0200\n"
+"POT-Creation-Date: 2012-05-21 22:40+0000\n"
+"PO-Revision-Date: 2012-05-23 09:51+0200\n"
 "Last-Translator: Alain Lojewski <allomervan@gmail.com>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "MIME-Version: 1.0\n"
@@ -565,11 +565,12 @@ msgstr ""
 #: C/legal.xml:3(p/link)
 msgid "Creative Commons Attribution-ShareAlike 3.0 Unported License"
 msgstr ""
-"licence Creative Commons Paternité-Partage des Conditions Initiales à l'Identique 3.0 Unported"
+"Creative Commons Paternité-Partage des Conditions Initiales à l'Identique "
+"3.0 Unported"
 
 #: C/legal.xml:3(license/p)
 msgid "This work is licensed under a <_:link-1/>."
-msgstr "Cette œuvre est distribuée sous <_:link-1/>."
+msgstr "Cette œuvre est distribuée sous licence <_:link-1/>."
 
 #: C/license.page:9(info/desc)
 msgid "Legal information."
