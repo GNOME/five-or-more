@@ -1410,9 +1410,7 @@ game_props_callback (void)
 int
 game_quit_callback (GtkAction * action, gpointer data)
 {
-  if (animate_id)
-    g_source_remove (animate_id);
-  gtk_main_quit ();
+  gtk_widget_destroy (app);
   return FALSE;
 }
 
@@ -1495,39 +1493,14 @@ init_config (void)
   set_sizes (game_size);
 }
 
-int
-main (int argc, char *argv[])
+static void
+startup_cb (GApplication *application)
 {
-  GOptionContext *context;
   gchar *ui_path;
   GtkWidget *vbox, *hbox;
   GtkWidget *preview_hbox;
   guint i;
-  gboolean retval;
   GError *error = NULL;
-
-  setlocale (LC_ALL, "");
-  bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
-  bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
-  textdomain (GETTEXT_PACKAGE);
-
-  games_scores_startup ();
-
-  rgen = g_rand_new ();
-
-  context = g_option_context_new (NULL);
-  g_option_context_set_translation_domain (context, GETTEXT_PACKAGE);
-  g_option_context_add_group (context, gtk_get_option_group (TRUE));
-
-  retval = g_option_context_parse (context, &argc, &argv, &error);
-  g_option_context_free (context);
-  if (!retval) {
-    g_print ("%s", error->message);
-    g_error_free (error);
-    exit (1);
-  }
-
-  g_set_application_name (_("Five or More"));
 
   settings = g_settings_new ("org.gnome.glines");
 
@@ -1541,7 +1514,6 @@ main (int argc, char *argv[])
 
   games_stock_init ();
 
-  gtk_window_set_default_icon_name ("glines");
 
   ui_path = g_build_filename (DATA_DIRECTORY, "glines.ui", NULL);
   builder = gtk_builder_new ();
@@ -1555,6 +1527,7 @@ main (int argc, char *argv[])
   }
 
   app = GTK_WIDGET (gtk_builder_get_object (builder, "glines_window"));
+  gtk_application_add_window (GTK_APPLICATION (application), GTK_WINDOW (app));
   games_settings_bind_window_state ("/org/gnome/glines/", GTK_WINDOW (app));
 
   hbox = GTK_WIDGET (gtk_builder_get_object (builder, "top_box"));
@@ -1607,18 +1580,58 @@ main (int argc, char *argv[])
   load_properties ();
 
   gtk_builder_connect_signals (builder, NULL);
+}
 
+static void
+activate_cb (GApplication *application)
+{
   gtk_widget_show_all (app);
 
   start_game ();
+}
 
-  /* Enter the event loop */
-  gtk_main ();
+int
+main (int argc, char *argv[])
+{
+  GOptionContext *context;
+  gboolean retval;
+  GtkApplication *application;
+  int status;
+  GError *error = NULL;
+
+  setlocale (LC_ALL, "");
+  bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
+  bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
+  textdomain (GETTEXT_PACKAGE);
+
+  games_scores_startup ();
+
+  rgen = g_rand_new ();
+
+  context = g_option_context_new (NULL);
+  g_option_context_set_translation_domain (context, GETTEXT_PACKAGE);
+  g_option_context_add_group (context, gtk_get_option_group (TRUE));
+
+  retval = g_option_context_parse (context, &argc, &argv, &error);
+  g_option_context_free (context);
+  if (!retval) {
+    g_print ("%s", error->message);
+    g_error_free (error);
+    exit (1);
+  }
+
+  g_set_application_name (_("Five or More"));
+
+  gtk_window_set_default_icon_name ("glines");
+
+  application = gtk_application_new ("org.gnome.glines", G_APPLICATION_FLAGS_NONE);
+  g_signal_connect (application, "startup", G_CALLBACK (startup_cb), NULL);
+  g_signal_connect (application, "activate", G_CALLBACK (activate_cb), NULL);
+
+  status = g_application_run (G_APPLICATION (application), argc, argv);  
 
   if (ball_preimage)
     g_object_unref (ball_preimage);
 
-  g_settings_sync();
-
-  return 0;
+  return status;
 }
