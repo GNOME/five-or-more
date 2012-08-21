@@ -1,6 +1,8 @@
 bin_PROGRAMS = glines
 
 glines_SOURCES =	\
+	games-file-list.c	\
+	games-file-list.h	\
 	glines.c	\
 	glines.h
 
