@@ -4,10 +4,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: packagename\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-22 22:39+0000\n"
-"PO-Revision-Date: 2012-08-22 00:27+0200\n"
+"POT-Creation-Date: 2012-08-22 08:14+0000\n"
+"PO-Revision-Date: 2012-08-23 13:50+0200\n"
 "Last-Translator: Tom Tryfonidis <tomtryf@gmail.com>\n"
 "Language-Team: Greek <team@gnome.gr>\n"
+"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -15,7 +16,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
-#| msgid "translator-credits"
 msgctxt "_"
 msgid "translator-credits"
 msgstr ""
@@ -57,13 +57,11 @@ msgstr ""
 "external ref='figures/logo32.png' md5='51b65eea63f1a6c26a4c5d628dba406c'"
 
 #: C/index.page:7(info/title)
-#| msgid "Five or More"
 msgctxt "link"
 msgid "Five or More"
 msgstr "Πέντε ή περισσότερα"
 
 #: C/index.page:8(info/title)
-#| msgid "Five or More"
 msgctxt "text"
 msgid "Five or More"
 msgstr "Πέντε ή περισσότερα"
@@ -98,7 +96,6 @@ msgstr ""
 "Περισσότερα</media>Πέντε ή Περισσότερα"
 
 #: C/index.page:28(page/p)
-#, fuzzy
 msgid ""
 "<key>Five or More</key> is a deceptively simple brain workout. The goal is "
 "to place at least five objects of the same <link xref=\"change-theme#images"
@@ -107,13 +104,14 @@ msgid ""
 "they disappear. The goal is to vanish as many objects as possible. The game "
 "is over when the entire board is full."
 msgstr ""
-"Το <key>Πέντε ή περισσότερα</key> is a deceptively simple brain workout. Ο "
-"στόχος είναι να τοποθετηθούν τουλάχιστον πέντε αντικείμενα του ίδιου <link "
-"color xref=\"change-theme#images\">χρώματος ή σχήματος</ link> σε μια ευθεία "
-"γραμμή. Η γραμμή μπορεί να είναι οριζόντια, κάθετα ή διαγώνια. Μόλις πέντε ή "
-"περισσότερα αντικείμενα ομαδοποιηθούν σε μία γραμμή, εξαφανίζονται. Ο στόχος "
-"είναι να εξαφανιστούν όσο το δυνατόν περισσότερα αντικείμενα. Το παιχνίδι "
-"τελειώνει όταν ολόκληρος ο πίνακας είναι πλήρης."
+"Το <key>Πέντε ή περισσότερα</key> είναι ένα απλό παιχνίδι εξάσκησης του "
+"μυαλού. Στόχος του είναι να τοποθετηθούν τουλάχιστον πέντε αντικείμενα του "
+"ίδιου <link color xref=\"change-theme#images\">χρώματος ή σχήματος</ link> "
+"σε μια ευθεία γραμμή. Η γραμμή μπορεί να είναι οριζόντια, κάθετα ή διαγώνια. "
+"Όταν πέντε ή περισσότερα αντικείμενα ομαδοποιηθούν σε μία γραμμή, "
+"εξαφανίζονται και ο στόχος σας είναι να εξαφανιστούν όσο το δυνατόν "
+"περισσότερα αντικείμενα. Το παιχνίδι τελειώνει όταν ολόκληρος το ταμπλό "
+"είναι πλήρη."
 
 #: C/index.page:33(section/title)
 msgid "Game Play"
@@ -137,7 +135,6 @@ msgstr "Συμμετοχή"
 #: C/play.page:11(credit/years) C/rules.page:11(credit/years)
 #: C/scores.page:11(credit/years) C/shortcuts.page:11(credit/years)
 #: C/translate.page:12(credit/years)
-#| msgid "11"
 msgid "2011"
 msgstr "2011"
 
@@ -306,17 +303,14 @@ msgid "<em>Height</em>"
 msgstr "<em>Ύψος</em>"
 
 #: C/change-board-size.page:44(td/p)
-#| msgid "Number of Types"
 msgid "<em>Number of types</em>"
 msgstr "<em>Αριθμός τύπων</em>"
 
 #: C/change-board-size.page:45(td/p)
-#| msgid "Objects per Turn"
 msgid "<em>New objects per turn</em>"
 msgstr "<em>Νέα αντικείμενα ανά γύρο</em>"
 
 #: C/change-board-size.page:46(td/p)
-#| msgid "Number of Types"
 msgid "<em>Number of cells</em>"
 msgstr "<em>Αριθμός κελιών</em>"
 
@@ -339,7 +333,6 @@ msgid "3"
 msgstr "3"
 
 #: C/change-board-size.page:55(td/p)
-#| msgid "9"
 msgid "49"
 msgstr "49"
 
@@ -352,7 +345,6 @@ msgid "9"
 msgstr "9"
 
 #: C/change-board-size.page:60(td/p)
-#| msgid "8"
 msgid "81"
 msgstr "81"
 
@@ -377,7 +369,6 @@ msgid "The 3 board sizes"
 msgstr "Τα 3 μεγέθη του ταμπλό"
 
 #: C/change-board-size.page:79(media/p)
-#| msgid "<application>Five or More</application> Manual"
 msgid "<app>Five or More</app> Small board"
 msgstr "Μικρού μεγέθους ταμπλό του <app>Πέντε ή περισσότερα</app>"
 
@@ -386,7 +377,6 @@ msgid "<app>Five or More</app> medium size board"
 msgstr "Μεσαίου μεγέθους ταμπλό του <app>Πέντε ή περισσότερα</app>"
 
 #: C/change-board-size.page:89(media/p)
-#| msgid "<application>Five or More</application> Manual"
 msgid "<app>Five or More</app> large size board"
 msgstr "Μεγάλου μεγέθους ταμπλό του <app>Πέντε ή περισσότερα</app>"
 
@@ -426,7 +416,6 @@ msgstr ""
 "external ref='figures/pickcolor.png' md5='51d82564630d095c45865aff5518e6fc'"
 
 #: C/change-theme.page:10(credit/years) C/strategy.page:11(credit/years)
-#| msgid "12"
 msgid "2012"
 msgstr "2012"
 
@@ -443,7 +432,6 @@ msgid "Click <guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq>."
 msgstr "Κλικ στις <guiseq><gui>Ρυθμίσεις</gui><gui>Προτιμήσεις</gui></guiseq>."
 
 #: C/change-theme.page:26(item/p)
-#, fuzzy
 msgid ""
 "Select <gui>balls</gui> or <gui>shapes</gui> from the <gui>Image</gui> drop "
 "down menu to change the playing pieces."
@@ -472,7 +460,6 @@ msgid "Five or More with different balls"
 msgstr "Πέντε ή περισσότερα με διαφορετικές μπάλες"
 
 #: C/change-theme.page:42(media/p)
-#| msgid "<application>Five or More</application> Manual"
 msgid "<app>Five or More</app> with different shapes"
 msgstr "<app>Πέντε ή περισσότερα</app> με διαφορετικά σχήματα"
 
@@ -481,7 +468,6 @@ msgid "Background colors available"
 msgstr "Διαθέσιμα χρώματα παρασκηνίου"
 
 #: C/change-theme.page:50(media/p)
-#| msgid "Five or More"
 msgid "Five or More color palette"
 msgstr "Χρωματική παλέτα του Πέντε ή περισσότερα"
 
@@ -559,9 +545,6 @@ msgstr ""
 "Στο μενού <gui>Γενικά</gui>, πατήστε <gui>Χρήση γρήγορων κινήσεων</gui>."
 
 #: C/fast-moves.page:33(note/p)
-#| msgid ""
-#| "Any changes you make are instantly applied and remembered for the next "
-#| "time you run <application>Five or More</application>."
 msgid ""
 "Any changes you make are instantly applied and remembered for the next time "
 "you run <app>Five or More</app>."
@@ -607,11 +590,11 @@ msgstr "Να αντιγράψετε, να διανείμετε και να με�
 
 #: C/license.page:30(item/title)
 msgid "<em>To remix</em>"
-msgstr "<em>Να τροποιήσετε</em>"
+msgstr "<em>Να τροποποιήσετε</em>"
 
 #: C/license.page:31(item/p)
 msgid "To adapt the work."
-msgstr "Να τροποποιήσετε το έργο."
+msgstr "Να προσαρμόσετε το έργο."
 
 #: C/license.page:34(page/p)
 msgid "Under the following conditions:"
@@ -678,7 +661,6 @@ msgstr ""
 "gui><gui>Νέο</gui></guiseq>."
 
 #: C/play.page:27(section/title)
-#| msgid "Using the Keyboard"
 msgid "Using the mouse"
 msgstr "Χρησιμοποιώντας το ποντίκι"
 
@@ -695,7 +677,6 @@ msgid "Click on the destination cell."
 msgstr "Κάντε κλικ στο κελί προορισμού."
 
 #: C/play.page:43(section/title)
-#| msgid "Using the Keyboard"
 msgid "Using the keyboard"
 msgstr "Χρησιμοποιώντας το πληκτρολόγιο"
 
@@ -789,8 +770,8 @@ msgid ""
 "At the start of the game there are either 3 or 7 objects placed on your "
 "board, depending on the <link xref=\"change-board-size\">board size</link>."
 msgstr ""
-"Στο ξεκίνημα του παιχνιδιού υπάρχουν είτε 3 ή 7 αντικείμενα τοποθετημένα στο "
-"ταμπλό σας, εξαρτώμενα από το <link xref=\"change-board-size\">μέγεθος του "
+"Στο ξεκίνημα του παιχνιδιού υπάρχουν 3 ή 7 αντικείμενα τοποθετημένα στο "
+"ταμπλό σας, αναλόγως από το <link xref=\"change-board-size\">μέγεθος του "
 "ταμπλό</link>."
 
 #: C/rules.page:22(item/p)
@@ -801,10 +782,10 @@ msgid ""
 "board appears in the upper left corner of the game window."
 msgstr ""
 "Κάθε φορά που <link xref=\"play\">μετακινείτε ένα αντικείμενο</link>, "
-"προσθέτονται επιπλέον τυχαία αντικείμενα στον πίνακα. Ο αριθμός των "
-"αντικειμένων που τοποθετούνται εξαρτάται από τον πίνακα. Μια προεπισκόπηση "
-"των αντικειμένων που θα τοποθετηθούν εμφανίζονται στη πάνω αριστερή γωνία "
-"του παραθύρου."
+"προσθέτονται επιπλέον τυχαία αντικείμενα στο ταμπλό. Ο αριθμός των "
+"αντικειμένων που τοποθετούνται εξαρτάται από το ταμπλό. Μια προεπισκόπηση "
+"των αντικειμένων που θα τοποθετηθούν εμφανίζεται στη πάνω αριστερή γωνία του "
+"παραθύρου."
 
 #: C/rules.page:27(item/p)
 msgid ""
@@ -856,13 +837,11 @@ msgid "Example diagonal alignment"
 msgstr "Παράδειγμα διαγώνιας στοίχισης"
 
 #: C/rules.page:60(media/p)
-#, fuzzy
 #| msgid "<application>Five or More</application> Manual"
 msgid "<app>Five or More</app> game over position."
 msgstr "Θέση τερματισμού του <app>Πέντε ή περισσότερα</app>."
 
 #: C/scores.page:20(page/title)
-#| msgid "Score given"
 msgid "Scoring"
 msgstr "Βαθμολογία"
 
@@ -876,12 +855,10 @@ msgstr ""
 "εξαφανίζονται."
 
 #: C/scores.page:27(td/p)
-#| msgid "Number of objects"
 msgid "<em>Number of objects</em>"
 msgstr "<em>Αριθμός αντικειμένων</em>"
 
 #: C/scores.page:28(td/p)
-#| msgid "Number of objects"
 msgid "<em>Number of points</em>"
 msgstr "<em>Αριθμός πόντων</em>"
 
@@ -1140,7 +1117,7 @@ msgstr ""
 #~ "under the terms of the GNU Free Documentation License (GFDL), Version 1.1 "
 #~ "or any later version published by the Free Software Foundation with no "
 #~ "Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. You "
-#~ "can find a copy of the GFDL at this <ulink type=\"help\" url=\"help:fdl"
+#~ "can find a copy of the GFDL at this <ulink type=\"help\" url=\"ghelp:fdl"
 #~ "\">link</ulink> or in the file COPYING-DOCS distributed with this manual."
 #~ msgstr ""
 #~ "Χορηγείται άδεια αντιγραφής, διανομής και/ή τροποποίησης του παρόντος "
@@ -1148,7 +1125,7 @@ msgstr ""
 #~ "GNU (GFDL), ή οποιασδήποτε μεταγενέστερης έκδοσής αυτής από το Ίδρυμα "
 #~ "Ελεύθερου Λογισμικού (FSF), χωρίς αμετάβλητα τμήματα, κείμενα εξωφύλλου "
 #~ "και κείμενα οπισθοφύλλου. Αντίγραφο της άδειας GFDL είναι διαθέσιμο στον "
-#~ "ακόλουθο <ulink type=\"help\" url=\"help:fdl\">σύνδεσμο</ulink>, ή στο "
+#~ "ακόλουθο <ulink type=\"help\" url=\"ghelp:fdl\">σύνδεσμο</ulink>, ή στο "
 #~ "αρχείο COPYING-DOCS που διανέμεται μαζί με το παρόν εγχειρίδιο."
 
 #~ msgid ""
