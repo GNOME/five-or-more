@@ -36,7 +36,6 @@
 #include <gdk-pixbuf/gdk-pixbuf.h>
 #include <gdk/gdkkeysyms.h>
 
-#include <libgames-support/games-gridframe.h>
 #include <libgames-support/games-scores.h>
 #include <libgames-support/games-scores-dialog.h>
 #include <libgames-support/games-settings.h>
@@ -45,6 +44,7 @@
 #include "glines.h"
 #include "games-file-list.h"
 #include "games-preimage.h"
+#include "games-gridframe.h"
 
 #define KEY_BACKGROUND_COLOR  "background-color"
 #define KEY_BALL_THEME        "ball-theme"
