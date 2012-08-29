@@ -9,6 +9,8 @@ glines_SOURCES =	\
 	games-preimage.h	\
 	games-settings.c	\
 	games-settings.h	\
+	games-stock.c	\
+	games-stock.h	\
 	glines.c	\
 	glines.h
 
@@ -19,6 +21,7 @@ glines_CPPFLAGS = \
 glines_CFLAGS = \
 	-DDATA_DIRECTORY=\"$(datadir)/glines\" \
 	-DLOCALEDIR=\"$(datadir)/locale\" \
+	-DICON_THEME_DIRECTORY="\"$(datadir)/icons\"" \
 	$(GMODULE_CFLAGS) \
 	$(GTK_CFLAGS) \
 	$(RSVG_CFLAGS) \
