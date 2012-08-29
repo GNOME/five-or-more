@@ -43,7 +43,6 @@
 #include "games-file-list.h"
 #include "games-preimage.h"
 #include "games-gridframe.h"
-#include "games-settings.h"
 #include "games-stock.h"
 
 #define KEY_BACKGROUND_COLOR  "background-color"
@@ -99,6 +98,9 @@ static GRand *rgen;
 static GtkWidget *draw_area;
 static GtkWidget *app, *statusbar, *pref_dialog, *gridframe;
 static GtkWidget *preview_widgets[MAXNPIECES];
+
+static gint window_width = 0, window_height = 0;
+static gboolean window_is_fullscreen = FALSE, window_is_maximized = FALSE;
 
 static field_props field[MAXFIELDSIZE * MAXFIELDSIZE];
 
@@ -1493,6 +1495,28 @@ init_config (void)
   set_sizes (game_size);
 }
 
+static gboolean
+window_configure_event_cb (GtkWidget *widget, GdkEventConfigure *event)
+{
+  if (!window_is_maximized && !window_is_fullscreen)
+  {
+    window_width = event->width;
+    window_height = event->height;
+  }
+  
+  return FALSE;
+}
+
+static gboolean
+window_state_event_cb (GtkWidget *widget, GdkEventWindowState *event)
+{
+  if ((event->changed_mask & GDK_WINDOW_STATE_MAXIMIZED) != 0)
+    window_is_maximized = (event->new_window_state & GDK_WINDOW_STATE_MAXIMIZED) != 0;
+  if ((event->changed_mask & GDK_WINDOW_STATE_FULLSCREEN) != 0)
+    window_is_fullscreen = (event->new_window_state & GDK_WINDOW_STATE_FULLSCREEN) != 0;
+  return FALSE;
+}
+
 static void
 startup_cb (GApplication *application)
 {
@@ -1527,8 +1551,14 @@ startup_cb (GApplication *application)
   }
 
   app = GTK_WIDGET (gtk_builder_get_object (builder, "glines_window"));
+  g_signal_connect (GTK_WINDOW (app), "configure-event", G_CALLBACK (window_configure_event_cb), NULL);
+  g_signal_connect (GTK_WINDOW (app), "window-state-event", G_CALLBACK (window_state_event_cb), NULL);
+  gtk_window_set_default_size (GTK_WINDOW (app), g_settings_get_int (settings, "window-width"), g_settings_get_int (settings, "window-height"));
+  if (g_settings_get_boolean (settings, "window-is-fullscreen"))
+    gtk_window_fullscreen (GTK_WINDOW (app));
+  if (g_settings_get_boolean (settings, "window-is-maximized"))
+    gtk_window_maximize (GTK_WINDOW (app));
   gtk_application_add_window (GTK_APPLICATION (application), GTK_WINDOW (app));
-  games_settings_bind_window_state ("/org/gnome/glines/", GTK_WINDOW (app));
 
   hbox = GTK_WIDGET (gtk_builder_get_object (builder, "top_box"));
 
@@ -1590,6 +1620,15 @@ activate_cb (GApplication *application)
   start_game ();
 }
 
+static void
+shutdown_cb (GApplication *application)
+{
+  g_settings_set_int (settings, "window-width", window_width);
+  g_settings_set_int (settings, "window-height", window_height);
+  g_settings_set_boolean (settings, "window-is-maximized", window_is_maximized);
+  g_settings_set_boolean (settings, "window-is-fullscreen", window_is_fullscreen); 
+}
+
 int
 main (int argc, char *argv[])
 {
@@ -1627,6 +1666,7 @@ main (int argc, char *argv[])
   application = gtk_application_new ("org.gnome.glines", G_APPLICATION_FLAGS_NONE);
   g_signal_connect (application, "startup", G_CALLBACK (startup_cb), NULL);
   g_signal_connect (application, "activate", G_CALLBACK (activate_cb), NULL);
+  g_signal_connect (application, "shutdown", G_CALLBACK (shutdown_cb), NULL);
 
   status = g_application_run (G_APPLICATION (application), argc, argv);  
 
