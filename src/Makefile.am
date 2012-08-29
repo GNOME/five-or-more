@@ -7,6 +7,8 @@ glines_SOURCES =	\
 	games-gridframe.h	\
 	games-preimage.c	\
 	games-preimage.h	\
+	games-settings.c	\
+	games-settings.h	\
 	glines.c	\
 	glines.h
 

@@ -38,13 +38,13 @@
 
 #include <libgames-support/games-scores.h>
 #include <libgames-support/games-scores-dialog.h>
-#include <libgames-support/games-settings.h>
 #include <libgames-support/games-stock.h>
 
 #include "glines.h"
 #include "games-file-list.h"
 #include "games-preimage.h"
 #include "games-gridframe.h"
+#include "games-settings.h"
 
 #define KEY_BACKGROUND_COLOR  "background-color"
 #define KEY_BALL_THEME        "ball-theme"
