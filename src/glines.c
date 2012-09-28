@@ -36,13 +36,12 @@
 #include <gdk-pixbuf/gdk-pixbuf.h>
 #include <gdk/gdkkeysyms.h>
 
-#include <libgames-support/games-scores.h>
-#include <libgames-support/games-scores-dialog.h>
-
 #include "glines.h"
 #include "games-file-list.h"
 #include "games-preimage.h"
 #include "games-gridframe.h"
+#include "games-scores.h"
+#include "games-scores-dialog.h"
 #include "games-stock.h"
 
 #define KEY_BACKGROUND_COLOR  "background-color"
