@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: packagename\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-09-06 15:58+0000\n"
-"PO-Revision-Date: 2012-09-13 13:31+0200\n"
+"POT-Creation-Date: 2012-09-24 23:48+0000\n"
+"PO-Revision-Date: 2012-09-29 12:42+0200\n"
 "Last-Translator: Tom Tryfonidis <tomtryf@gmail.com>\n"
 "Language-Team: Greek <team@gnome.gr>\n"
 "Language: el\n"
@@ -103,12 +103,11 @@ msgid ""
 msgstr ""
 "Το <key>Πέντε ή περισσότερα</key> είναι ένα απλό παιχνίδι εξάσκησης του "
 "μυαλού. Στόχος του είναι να τοποθετηθούν τουλάχιστον πέντε αντικείμενα του "
-"ίδιου <link xref=\"change-theme#images\">χρώματος ή σχήματος</link> σε "
-"μια ευθεία γραμμή. Η γραμμή μπορεί να είναι οριζόντια, κάθετα ή διαγώνια. "
-"Όταν πέντε ή περισσότερα αντικείμενα ομαδοποιηθούν σε μία γραμμή, "
-"εξαφανίζονται και ο στόχος σας είναι να εξαφανιστούν όσο το δυνατόν "
-"περισσότερα αντικείμενα. Το παιχνίδι τελειώνει όταν ολόκληρος το ταμπλό "
-"είναι πλήρη."
+"ίδιου <link xref=\"change-theme#images\">χρώματος ή σχήματος</link> σε μια "
+"ευθεία γραμμή. Η γραμμή μπορεί να είναι οριζόντια, κάθετα ή διαγώνια. Όταν "
+"πέντε ή περισσότερα αντικείμενα ομαδοποιηθούν σε μία γραμμή, εξαφανίζονται "
+"και ο στόχος σας είναι να εξαφανιστούν όσο το δυνατόν περισσότερα "
+"αντικείμενα. Το παιχνίδι τελειώνει όταν ολόκληρο το ταμπλό είναι πλήρες."
 
 #: C/index.page:33(section/title)
 msgid "Game Play"
@@ -253,15 +252,16 @@ msgstr "Michael Hill"
 
 #: C/change-board-size.page:22(page/title)
 msgid "Change board size"
-msgstr "Αλλάξτε το μέγεθος του ταμπλό"
+msgstr "Αλλαγή μεγέθους του ταμπλό"
 
 #: C/change-board-size.page:23(page/p)
 msgid "To change the board size:"
-msgstr "Αλλάξτε το μέγεθος του ταμπλό:"
+msgstr "Για να αλλάξτε το μέγεθος του ταμπλό:"
 
 #: C/change-board-size.page:25(item/p)
 msgid "Click <guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq>"
-msgstr "Κλικ <guiseq><gui>Ρυθμίσεις</gui><gui>Προτιμήσεις</gui></guiseq>"
+msgstr ""
+"Κάντε κλικ στις <guiseq><gui>Ρυθμίσεις</gui><gui>Προτιμήσεις</gui></guiseq>"
 
 #: C/change-board-size.page:26(item/p)
 msgid ""
@@ -418,7 +418,7 @@ msgstr "2012"
 
 #: C/change-theme.page:19(page/title)
 msgid "Change the look and feel"
-msgstr "Αλλάξτε την εμφάνιση"
+msgstr "Αλλαγή της εμφάνισης"
 
 #: C/change-theme.page:20(page/p)
 msgid "To change the appearance of the pieces and the board:"
@@ -426,7 +426,8 @@ msgstr "Για να αλλάξετε την εμφάνιση των κομματ
 
 #: C/change-theme.page:23(item/p) C/fast-moves.page:28(item/p)
 msgid "Click <guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq>."
-msgstr "Κλικ στις <guiseq><gui>Ρυθμίσεις</gui><gui>Προτιμήσεις</gui></guiseq>."
+msgstr ""
+"Κάντε κλικ στις <guiseq><gui>Ρυθμίσεις</gui><gui>Προτιμήσεις</gui></guiseq>."
 
 #: C/change-theme.page:26(item/p)
 msgid ""
@@ -441,7 +442,7 @@ msgid ""
 "Click on the colored box next to <gui>Image background</gui> to access the "
 "color palette."
 msgstr ""
-"Κάντε κλικ στο χρωματισμένο κουτί δίπλα στο <gui>Παρασκήνιο εικόνας</gui> "
+"Κάντε κλικ στο χρωματισμένο κουτί δίπλα στο <gui>παρασκήνιο εικόνας</gui> "
 "για να μπείτε στη παλέτα χρωμάτων."
 
 #: C/change-theme.page:32(item/p) C/fast-moves.page:30(item/p)
@@ -768,8 +769,8 @@ msgid ""
 "board, depending on the <link xref=\"change-board-size\">board size</link>."
 msgstr ""
 "Στο ξεκίνημα του παιχνιδιού υπάρχουν 3 ή 7 αντικείμενα τοποθετημένα στο "
-"ταμπλό σας, αναλόγως από το <link xref=\"change-board-size\">μέγεθος του "
-"ταμπλό</link>."
+"ταμπλό σας, αναλόγως του <link xref=\"change-board-size\">μεγέθους του</"
+"link>."
 
 #: C/rules.page:22(item/p)
 msgid ""
@@ -780,9 +781,9 @@ msgid ""
 msgstr ""
 "Κάθε φορά που <link xref=\"play\">μετακινείτε ένα αντικείμενο</link>, "
 "προσθέτονται επιπλέον τυχαία αντικείμενα στο ταμπλό. Ο αριθμός των "
-"αντικειμένων που τοποθετούνται εξαρτάται από το ταμπλό. Μια προεπισκόπηση "
-"των αντικειμένων που θα τοποθετηθούν εμφανίζεται στη πάνω αριστερή γωνία του "
-"παραθύρου."
+"αντικειμένων που τοποθετούνται εξαρτάται από το ταμπλό και μια προεπισκόπηση "
+"των αντικειμένων που θα τοποθετηθούν, εμφανίζεται στην πάνω αριστερή γωνία "
+"του παραθύρου."
 
 #: C/rules.page:27(item/p)
 msgid ""
@@ -933,8 +934,8 @@ msgid ""
 "menu."
 msgstr ""
 "Οι βαθμολογίες του <app>Πέντε ή περισσότερα</app> καταγράφονται σε σχέση με "
-"το μέγεθος του ταμπλό. Μπορείτε να επιλέξετε το <gui>Μέγεθος ταμπλό</gui> "
-"που σας ενδιαφέρει χρησιμοποιώντας το αναπτυσσόμενο μενού."
+"το μέγεθος του ταμπλό. Μπορείτε να επιλέξετε το του <gui>μέγεθος ταμπλό</"
+"gui> που σας ενδιαφέρει χρησιμοποιώντας το αναπτυσσόμενο μενού."
 
 #: C/shortcuts.page:17(page/title)
 msgid "Keyboard shortcuts"
@@ -998,7 +999,7 @@ msgid ""
 "because knowing these will influence your moves."
 msgstr ""
 "Το ταμπλό μπορεί να γεμίσει πολύ γρήγορα με αντικείμενα, οπότε είναι καλό να "
-"σκέφτεστε προηγουμένως. Δώστε προσοχή στη συλλογή των <gui>Επόμενων</gui> "
+"σκέφτεστε προηγουμένως. Δώστε προσοχή στη συλλογή των <gui>επόμενων</gui> "
 "αντικειμένων, διότι γνωρίζοντας τα θα επηρεαστούν οι κινήσεις σας."
 
 #: C/strategy.page:24(item/p)
@@ -1065,8 +1066,8 @@ msgid ""
 "list</link>."
 msgstr ""
 "Εναλλακτικά, μπορείτε να επικοινωνήσετε με την ομάδα διεθνοποίησης "
-"χρησιμοποιώντας την <link href=\"http://mail.gnome.org/mailman/listinfo/"
-"gnome-i18n\">λίστα αλληλογραφίας</link> τους."
+"χρησιμοποιώντας τη <link href=\"http://mail.gnome.org/mailman/listinfo/gnome-"
+"i18n\">λίστα αλληλογραφίας</link> τους."
 
 #~ msgid ""
 #~ "@@image: 'figures/glines-startgame.png'; "
