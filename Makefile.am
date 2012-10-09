@@ -1,4 +1,4 @@
-SUBDIRS = src data help
+SUBDIRS = data help po src
 
 SCOREFILES = \
 	Small	\

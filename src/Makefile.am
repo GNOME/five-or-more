@@ -1,6 +1,6 @@
-bin_PROGRAMS = glines
+bin_PROGRAMS = five-or-more
 
-glines_SOURCES =	\
+five_or_more_SOURCES =	\
 	games-file-list.c	\
 	games-file-list.h	\
 	games-gridframe.c	\
@@ -21,35 +21,29 @@ glines_SOURCES =	\
 	glines.h
 
 if ENABLE_SETGID
-glines_SOURCES +=		\
+five_or_more_SOURCES +=		\
 	games-setgid-io.c		\
 	games-setgid-io.h
 endif # ENABLE_SETGID
 
-glines_CPPFLAGS = \
+five_or_more_CPPFLAGS = \
 	-I$(top_srcdir) \
 	$(AM_CPPFLAGS)
 
-glines_CFLAGS = \
-	-DDATA_DIRECTORY=\"$(datadir)/glines\" \
+five_or_more_CFLAGS = \
+	-DDATA_DIRECTORY=\"$(datadir)/five-or-more\" \
 	-DLOCALEDIR=\"$(datadir)/locale\" \
 	-DICON_THEME_DIRECTORY="\"$(datadir)/icons\"" \
 	-DSCORESDIR="\"$(scoredir)\""				\
-	$(GMODULE_CFLAGS) \
-	$(GTK_CFLAGS) \
-	$(RSVG_CFLAGS) \
-	$(AM_CFLAGS)
+	$(FIVE_OR_MORE_CFLAGS)
 
-glines_LDADD =	\
-	$(GMODULE_LIBS) \
-	$(GTK_LIBS)	\
-	$(RSVG_LIBS) \
-	$(INTLLIBS)	\
+five_or_more_LDADD =	\
+	$(FIVE_OR_MORE_LIBS) \
 	-lm
 
 install-exec-hook:
 	-if test "$(setgid)" = "true"; then \
-	  chgrp $(scores_group) $(DESTDIR)$(bindir)/glines && chmod 2555 $(DESTDIR)$(bindir)/glines ;\
+	  chgrp $(scores_group) $(DESTDIR)$(bindir)/five-or-more && chmod 2555 $(DESTDIR)$(bindir)/five-or-more ;\
 	fi
 
 -include $(top_srcdir)/git.mk

@@ -1,5 +1,5 @@
 @YELP_HELP_RULES@
-HELP_ID = glines
+HELP_ID = five-or-more
 
 HELP_MEDIA = \
 	figures/color-balls.png		\

@@ -1,5 +1,5 @@
 <schemalist>
-  <schema id="org.gnome.glines" path="/org/gnome/glines/" gettext-domain="gnome-games">
+  <schema id="org.gnome.five-or-more" path="/org/gnome/five-or-more/" gettext-domain="gnome-games">
     <key name="size" type="i">
       <default>2</default>
       <_summary>Playing field size</_summary>

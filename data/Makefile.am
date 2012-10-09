@@ -1,23 +1,23 @@
 SUBDIRS = icons
 
-uidir = $(datadir)/glines/
+uidir = $(datadir)/five-or-more/
 ui_DATA = \
-	glines.ui \
-	glines-preferences.ui
+	five-or-more.ui \
+	five-or-more-preferences.ui
 
-themedir = $(datadir)/glines/themes
+themedir = $(datadir)/five-or-more/themes
 theme_DATA = \
 	balls.svg	\
 	shapes.svg
 
-gsettings_in_file = org.gnome.glines.gschema.xml.in
+gsettings_in_file = org.gnome.five-or-more.gschema.xml.in
 gsettings_SCHEMAS = $(gsettings_in_file:.xml.in=.xml)
 @INTLTOOL_XML_NOMERGE_RULE@
 @GSETTINGS_RULES@
 
-man_MANS = glines.6
+man_MANS = five-or-more.6
 
-desktop_in_files = glines.desktop.in.in
+desktop_in_files = five-or-more.desktop.in.in
 desktopdir = $(datadir)/applications
 desktop_DATA = $(desktop_in_files:.desktop.in.in=.desktop)
 @INTLTOOL_DESKTOP_RULE@

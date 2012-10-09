@@ -1179,7 +1179,7 @@ game_about_callback (GtkAction * action, gpointer * data)
                          "authors", authors,
                          "documenters", documenters,
                          "translator-credits", _("translator-credits"),
-                         "logo-icon-name", "glines",
+                         "logo-icon-name", "five-or-more",
                          "website", "http://www.gnome.org/projects/gnome-games/",
                          "website-label", _("GNOME Games web site"),
                          "wrap-license", TRUE, NULL);
@@ -1353,7 +1353,7 @@ game_props_callback (void)
   GtkWidget *fast_moves_checkbutton;
 
   if (!pref_dialog) {
-    ui_path = g_build_filename (DATA_DIRECTORY, "glines-preferences.ui", NULL);
+    ui_path = g_build_filename (DATA_DIRECTORY, "five-or-more-preferences.ui", NULL);
     builder_preferences = gtk_builder_new ();
     gtk_builder_add_from_file (builder_preferences, ui_path, &error);
     g_free (ui_path);
@@ -1420,7 +1420,7 @@ game_help_callback (GtkAction * action, gpointer data)
 {
   GError *error = NULL;
 
-  gtk_show_uri (gtk_widget_get_screen (GTK_WIDGET (app)), "help:glines", gtk_get_current_event_time (), &error);
+  gtk_show_uri (gtk_widget_get_screen (GTK_WIDGET (app)), "help:five-or-more", gtk_get_current_event_time (), &error);
   if (error)
     g_warning ("Failed to show help: %s", error->message);
   g_clear_error (&error);
@@ -1525,9 +1525,9 @@ startup_cb (GApplication *application)
   guint i;
   GError *error = NULL;
 
-  settings = g_settings_new ("org.gnome.glines");
+  settings = g_settings_new ("org.gnome.five-or-more");
 
-  highscores = games_scores_new ("glines",
+  highscores = games_scores_new ("five-or-more",
                                  scorecats, G_N_ELEMENTS (scorecats),
                                  "board size", NULL,
                                  0 /* default category */,
@@ -1538,7 +1538,7 @@ startup_cb (GApplication *application)
   games_stock_init ();
 
 
-  ui_path = g_build_filename (DATA_DIRECTORY, "glines.ui", NULL);
+  ui_path = g_build_filename (DATA_DIRECTORY, "five-or-more.ui", NULL);
   builder = gtk_builder_new ();
   gtk_builder_add_from_file (builder, ui_path, &error);
   g_free (ui_path);
@@ -1660,9 +1660,9 @@ main (int argc, char *argv[])
 
   g_set_application_name (_("Five or More"));
 
-  gtk_window_set_default_icon_name ("glines");
+  gtk_window_set_default_icon_name ("five-or-more");
 
-  application = gtk_application_new ("org.gnome.glines", G_APPLICATION_FLAGS_NONE);
+  application = gtk_application_new ("org.gnome.five-or-more", G_APPLICATION_FLAGS_NONE);
   g_signal_connect (application, "startup", G_CALLBACK (startup_cb), NULL);
   g_signal_connect (application, "activate", G_CALLBACK (activate_cb), NULL);
   g_signal_connect (application, "shutdown", G_CALLBACK (shutdown_cb), NULL);
