@@ -7,4 +7,4 @@ data/five-or-more.desktop.in.in
 data/org.gnome.five-or-more.gschema.xml.in
 src/games-scores-dialog.c
 src/games-stock.c
-src/five-or-more.c
+src/glines.c
