@@ -21,4 +21,7 @@ install-scorefiles-local:
 
 install-data-local: install-scorefiles-local
 
+# Ignore score files, these *should* be left behind.
+distuninstallcheck_listfiles = find . -type f -print | grep -v '.scores'
+
 -include $(top_srcdir)/git.mk
