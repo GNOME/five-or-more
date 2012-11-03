@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/org/gnome/five-or-more/ui">
+    <file alias="five-or-more.ui" preprocess="xml-stripblanks">@top_srcdir@/data/five-or-more.ui</file>
+    <file alias="five-or-more-preferences.ui" preprocess="xml-stripblanks">@top_srcdir@/data/five-or-more-preferences.ui</file>
+  </gresource>
+</gresources>
