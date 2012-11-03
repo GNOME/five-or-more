@@ -49,8 +49,8 @@ namespace FiveOrMore
             builder = new Gtk.Builder ();
             try
             {
-                 builder.add_from_resource ("/org/gnome/five-or-more/ui/glines.ui");
-                 builder.add_from_resource ("/org/gnome/five-or-more/ui/glines-preferences.ui");
+                 builder.add_from_resource ("/org/gnome/five-or-more/ui/five-or-more.ui");
+                 builder.add_from_resource ("/org/gnome/five-or-more/ui/five-or-more-preferences.ui");
             }
             catch (GLib.Error e)
             {
