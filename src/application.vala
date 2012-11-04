@@ -5,7 +5,9 @@ namespace FiveOrMore
         private Gtk.ApplicationWindow window;
         private Settings settings;
         private Gtk.Builder builder;
-        //private GnomeGamesSupport.Scores highscores;
+        private History history;
+        private Size[] sizes;
+        private GlinesBoard board;
 
         private Gtk.Dialog preferences_dialog;
 
@@ -18,18 +20,9 @@ namespace FiveOrMore
             { "about", about_cb },
             { "quit", quit_cb }
         };
-
-        //private const GnomeGamesSupport.ScoresCategory scorecats[] =
-        //{
-        //    { "Small",  NC_("board size", "Small") },
-        //    { "Medium", NC_("board size", "Medium") },
-        //    { "Large",  NC_("board size", "Large") }
-        //};
     
         private const string[] authors = { "Thomas Andersen <phomes@gmail.com>", "Robert Szokovacs <szo@appaloosacorp.hu>", "Szabolcs B\xc3\xa1n <shooby@gnome.hu>" };
         //private const string[] documenters = { "Tiffany Antopolski", "Lanka Rathnayaka" };
-
-        private GlinesBoard board = new GlinesBoard(10, 10, 5, 3);
 
         public FiveOrMoreApp ()
         {
@@ -44,8 +37,6 @@ namespace FiveOrMore
 
             settings = new Settings ("org.gnome.five-or-more");
 
-            //highscores = new GnomeGamesSupport.Scores ("glines", scorecats, "board size", null, 0, GnomeGamesSupport.ScoreStyle.PLAIN_DESCENDING);
-
             builder = new Gtk.Builder ();
             try
             {
@@ -56,6 +47,11 @@ namespace FiveOrMore
             {
                 GLib.warning ("Could not load UI: %s", e.message);
             }
+
+            sizes = new Size[3];
+            sizes[0] = { "small", _("Small"), 7, 7, 5, 3 };
+            sizes[1] = { "medium", _("Medium"), 9, 9, 7, 3 };
+            sizes[2] = { "large", _("Large"), 20, 15, 7, 7 };
 
             var menu = new Menu ();
 
@@ -75,6 +71,9 @@ namespace FiveOrMore
             section.append (_("_Quit"), "app.quit");
             set_app_menu (menu);
 
+            var size = get_current_size ();
+            board = new GlinesBoard(size.columns, size.rows, size.ncolors, size.npieces);
+
             var box = (Gtk.Box) builder.get_object ("vbox");
             var view2d = new View2D (board);
             box.add (view2d);
@@ -82,6 +81,9 @@ namespace FiveOrMore
 
             window = (Gtk.ApplicationWindow) builder.get_object ("glines_window");
             add_window (window);
+
+            history = new History (Path.build_filename (Environment.get_user_data_dir (), "five-or-more", "history"));
+            history.load ();
         }
 
         public override void activate ()
@@ -99,12 +101,12 @@ namespace FiveOrMore
 
         private void scores_cb ()
         {
-            stdout.printf ("FIXME: Showing scores does not currently work\n");
+            var dialog = new ScoreDialog (history);
+            dialog.modal = true;
+            dialog.transient_for = window;
 
-            //var scores_dialog = new GnomeGamesSupport.ScoresDialog (window, highscores, _("GNOME Five or More"));
-            //scores_dialog.set_category_description (_("_Board size:"));
-            //scores_dialog.run ();
-            //scores_dialog.destroy ();
+            dialog.run ();
+            dialog.destroy ();
         }
 
         private void preferences_cb ()
@@ -151,7 +153,27 @@ namespace FiveOrMore
         {
             window.destroy ();
         }
+
+        private Size get_current_size ()
+        {
+            var id = settings.get_string ("size");
+            for (var i = 0; i < sizes.length; i++)
+            {
+                if (sizes[i].id == id)
+                    return sizes[i];
+            }
+
+            return sizes[0];
+        }
     }
 }
 
-
+public struct Size
+{
+    public string id;
+    public string name;
+    public int columns;
+    public int rows;
+    public int ncolors;
+    public int npieces;
+}

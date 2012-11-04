@@ -1,9 +1,9 @@
 <schemalist>
   <schema id="org.gnome.five-or-more" path="/org/gnome/five-or-more/" gettext-domain="gnome-games">
-    <key name="size" type="i">
-      <default>2</default>
+    <key name="size" type="s">
+      <default>'Small'</default>
       <_summary>Playing field size</_summary>
-      <_description>Playing field size. 1=Small, 2=Medium, 3=Large. Any other value is invalid.</_description>
+      <_description>Playing field size.  Small, Medium, Large.</_description>
     </key>
     <key name="ball-theme" type="s">
       <default>'balls.svg'</default>
@@ -19,21 +19,6 @@
       <default>100</default>
       <_summary>Time between moves</_summary>
       <_description>Time between moves in milliseconds.</_description>
-    </key>
-    <key name="score" type="i">
-      <default>0</default>
-      <_summary>Game score</_summary>
-      <_description>Game score from last saved session.</_description>
-    </key>
-    <key name="field" type="s">
-      <default>''</default>
-      <_summary>Game field</_summary>
-      <_description>Game field from last saved session.</_description>
-    </key>
-    <key name="preview" type="s">
-      <default>''</default>
-      <_summary>Game preview</_summary>
-      <_description>Game preview from last saved session.</_description>
     </key>
     <key name="window-width" type="i">
       <default>600</default>

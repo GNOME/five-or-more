@@ -9,14 +9,6 @@ five_or_more_SOURCES =	\
 	games-gridframe.h	\
 	games-preimage.c	\
 	games-preimage.h	\
-	games-score.h			\
-	games-score.c			\
-	games-scores.c			\
-	games-scores.h			\
-	games-scores-dialog.c	\
-	games-scores-dialog.h	\
-	games-scores-backend.c	\
-	games-scores-backend.h \
 	games-stock.c	\
 	games-stock.h	\
 	config.vapi \
@@ -24,17 +16,13 @@ five_or_more_SOURCES =	\
 	application.vala \
 	board.vala \
 	field.vala \
+	history.vala \
 	piece.vala \
 	preview-queue.vala \
+	score-dialog.vala \
 	view-2d.vala \
 	view-cli.vala \
 	$(BUILT_SOURCES)
-
-if ENABLE_SETGID
-five_or_more_SOURCES += \
-	games-setgid-io.c \
-	games-setgid-io.h
-endif # ENABLE_SETGID
 
 five_or_more_CPPFLAGS = \
 	-I$(top_srcdir) \
@@ -45,7 +33,6 @@ five_or_more_CFLAGS = \
 	-DGETTEXT_PACKAGE=\"$(GETTEXT_PACKAGE)\" \
 	-DDATA_DIRECTORY=\"$(datadir)/five-or-more\" \
 	-DICON_THEME_DIRECTORY="\"$(datadir)/icons\"" \
-	-DSCORESDIR="\"$(scoredir)\""				\
 	$(FIVE_OR_MORE_CFLAGS)
 
 five_or_more_LDADD =	\
@@ -62,10 +49,5 @@ five-or-more-resources.c: five-or-more.gresource.xml $(shell $(GLIB_COMPILE_RESO
 
 EXTRA_DIST = \
 	five-or-more.gresource.xml
-
-install-exec-hook:
-	-if test "$(setgid)" = "true"; then \
-	  chgrp $(scores_group) $(DESTDIR)$(bindir)/five-or-more && chmod 2555 $(DESTDIR)$(bindir)/five-or-more ;\
-	fi
 
 -include $(top_srcdir)/git.mk
