@@ -1,0 +1,29 @@
+Replace all references to 'glines' with five or more
+
+Remove unused menubar parts in the .ui file
+
+Add a clutter-based view
+
+Add tests of the model
+
+The cli version should be in raw mode
+
+Are the window sizes stored on shutdown?
+
+Add documenters to the about dialog
+
+Should the translations files be cleaned up after the split?
+
+Implement the line-detection code
+Implement game over detection
+
+2d-view:
+  show the queue
+  animate moving
+  highlight a selected piece
+
+cli: use the keys from gdk instead of hardcoding the numbers
+
+Remove all unused code files from the old games-lib
+
+Add a new-game screen
