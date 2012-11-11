@@ -13,7 +13,8 @@ Are the window sizes stored on shutdown?
 Should the translations files be cleaned up after the split?
 
 Implement the line-detection code
-Implement game over detection
+
+Use the current score when showing the gameover score-dialog
 
 2d-view:
   show the queue
@@ -25,3 +26,5 @@ cli: use the keys from gdk instead of hardcoding the numbers
 Remove all unused code files from the old games-lib
 
 Add a new-game screen
+
+use the clamp function from vala

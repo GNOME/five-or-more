@@ -68,32 +68,38 @@ namespace FiveOrMore
             section.append (_("_Quit"), "app.quit");
             set_app_menu (menu);
 
-            var size = get_current_size ();
-            board = new GlinesBoard(size.columns, size.rows, size.ncolors, size.npieces);
-
-            var box = (Gtk.Box) builder.get_object ("vbox");
-            var view2d = new View2D (board);
-            box.add (view2d);
-            view2d.show ();
-
             window = (Gtk.ApplicationWindow) builder.get_object ("glines_window");
             add_window (window);
 
             history = new History (Path.build_filename (Environment.get_user_data_dir (), "five-or-more", "history"));
             history.load ();
+
+            setup_new_game ();
         }
 
         public override void activate ()
         {
-            //var v = new ViewCli (board);
-            //v.run();
-
             window.present ();
         }
 
         private void new_game_cb ()
         {
-            stdout.printf ("new game\n");
+            setup_new_game ();
+        }
+
+        private void setup_new_game ()
+        {
+            var size = get_current_size ();
+            board = new GlinesBoard(size.columns, size.rows, size.ncolors, size.npieces);
+            board.gameover.connect ((o) => this.scores_cb());
+
+            var view2d = new View2D (board);
+
+            var box = (Gtk.Box) builder.get_object ("vbox");
+            box.foreach(c => box.remove (c));
+
+            box.add (view2d);
+            view2d.show ();
         }
 
         private void scores_cb ()
