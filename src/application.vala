@@ -20,9 +20,6 @@ namespace FiveOrMore
             { "about", about_cb },
             { "quit", quit_cb }
         };
-    
-        private const string[] authors = { "Thomas Andersen <phomes@gmail.com>", "Robert Szokovacs <szo@appaloosacorp.hu>", "Szabolcs B\xc3\xa1n <shooby@gnome.hu>" };
-        //private const string[] documenters = { "Tiffany Antopolski", "Lanka Rathnayaka" };
 
         public FiveOrMoreApp ()
         {
@@ -133,19 +130,22 @@ namespace FiveOrMore
 
         private void about_cb ()
         {
+            const string authors[] = { "Robert Szokovacs (original author)", "Szabolcs B\xc3\xa1n (original author)", "Thomas Andersen (port to vala)", null };
+            const string documenters[] = { "Tiffany Antopolski", "Lanka Rathnayaka", null };
+
             Gtk.show_about_dialog (window,
                                    "program-name", _("Five or More"),
                                    "logo-icon-name", "five-or-more",
                                    "version", Config.VERSION,
-                                   "comments", _("GNOME port of the once-popular Color Lines game.\n\nFive or More is a part of GNOME Games."),
+                                   "comments", _("GNOME port of the once-popular Color Lines game"),
                                    "copyright", "Copyright \xc2\xa9 1997-2012 Free Software Foundation, Inc.",
-                                   "license-type", Gtk.License.GPL_3_0,
+                                   //"license-type", Gtk.License.GPL_3_0,
                                    "wrap-license", false,
                                    "authors", authors,
-                                   //FIXME: "documenters", documenters,
+                                   "documenters", documenters,
                                    "translator-credits", _("translator-credits"),
-                                   "website", "http://www.gnome.org/projects/gnome-games/",
-                                   "website-label", _("GNOME Games web site"),
+                                   "website", "http://live.gnome.org/Five%20or%20more",
+                                   "website-label", _("Five or More web site"),
                                    null);
         }
         
