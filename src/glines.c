@@ -1527,7 +1527,7 @@ startup_cb (GApplication *application)
 
   settings = g_settings_new ("org.gnome.five-or-more");
 
-  highscores = games_scores_new ("five-or-more",
+  highscores = games_scores_new ("glines",
                                  scorecats, G_N_ELEMENTS (scorecats),
                                  "board size", NULL,
                                  0 /* default category */,
