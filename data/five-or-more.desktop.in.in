@@ -1,6 +1,7 @@
 [Desktop Entry]
 _Name=Five or More
 _Comment=Remove colored balls from the board by forming lines
+_Keywords=game;strategy;logic;
 Exec=five-or-more
 Icon=five-or-more
 Terminal=false
