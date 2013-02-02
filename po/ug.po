@@ -9,9 +9,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2012-12-02 21:08+0000\n"
-"PO-Revision-Date: 2011-11-09 16:10+0900\n"
-"Last-Translator: Gheyret Kenji<gheyret@yahoo.com>\n"
+"POT-Creation-Date: 2013-01-28 23:19+0000\n"
+"PO-Revision-Date: 2013-02-02 11:55+0900\n"
+"Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -27,6 +27,10 @@ msgstr "Five ياكى More"
 #: ../data/five-or-more.desktop.in.in.h:2
 msgid "Remove colored balls from the board by forming lines"
 msgstr "رەڭلىك توپلارنى تىزىپ ئۇلارنى تاختىدىن ئېلىۋېتىڭ"
+
+#: ../data/five-or-more.desktop.in.in.h:3
+msgid "game;strategy;logic;"
+msgstr "game؛strategy؛logic؛ئويۇن؛ئىستراتېگىيە؛لوگىكىلىق؛"
 
 #: ../data/five-or-more-preferences.ui.h:1
 msgid "Five or More Preferences"
@@ -49,7 +53,6 @@ msgid "Board Size"
 msgstr "تاختا چوڭلۇقى"
 
 #: ../data/five-or-more-preferences.ui.h:6
-#| msgid "Small"
 msgid "_Small"
 msgstr "كىچىك(_S)"
 
@@ -58,13 +61,10 @@ msgid "_Medium"
 msgstr "ئوتتۇراھال(_M)"
 
 #: ../data/five-or-more-preferences.ui.h:8
-#| msgid "Large"
 msgid "_Large"
 msgstr "چوڭ(_L)"
 
 #: ../data/five-or-more-preferences.ui.h:9
-#| msgctxt "preferences"
-#| msgid "General"
 msgid "General"
 msgstr "ئادەتتىكى"
 
@@ -73,7 +73,6 @@ msgid "_Use fast moves"
 msgstr "تېز مېڭىشنى ئىشلەت(_U)"
 
 #: ../data/five-or-more.ui.h:1
-#| msgid "Five or More"
 msgid "Five or more"
 msgstr "بەش ياكى ئۇنىڭدىن كۆپ"
 
@@ -103,8 +102,6 @@ msgid "Next:"
 msgstr "كېيىنكى:"
 
 #: ../data/five-or-more.ui.h:9
-#| msgctxt "number"
-#| msgid "0"
 msgid "0"
 msgstr "0"
 
@@ -170,12 +167,10 @@ msgid "Game preview from last saved session."
 msgstr "ئەڭ ئاخىرى ساقلانغان ئەڭگىمەدىكى ئويۇننى ئالدىن كۆرىدۇ."
 
 #: ../data/org.gnome.five-or-more.gschema.xml.in.h:15
-#| msgid "The width of the main window in pixels."
 msgid "Width of the window in pixels"
 msgstr "كۆزنەكنىڭ پىكسېل  بىلەن ئىپادىلەنگەن كەڭلىكى"
 
 #: ../data/org.gnome.five-or-more.gschema.xml.in.h:16
-#| msgid "The height of the main window in pixels."
 msgid "Height of the window in pixels"
 msgstr "كۆزنەكنىڭ پىكسېل  بىلەن ئىپادىلەنگەن ئېگىزلىكى"
 
@@ -189,14 +184,12 @@ msgstr "ئەگەر كۆزنەك تولۇق ئېكران بولسا true"
 
 #. Score dialog column header for the score time (e.g. 1 minute)
 #: ../src/games-scores-dialog.c:136
-#| msgid "Time"
 msgctxt "score-dialog"
 msgid "Time"
 msgstr "ۋاقىت"
 
 #. Score dialog column header for the score value (e.g. 30 moves)
 #: ../src/games-scores-dialog.c:142
-#| msgid "Score"
 msgctxt "score-dialog"
 msgid "Score"
 msgstr "ئېرىشكەن نومۇر"
@@ -204,7 +197,6 @@ msgstr "ئېرىشكەن نومۇر"
 #. Score format for time based scores.  %1$d is the time in minutes, %2$d is the time in seconds
 #: ../src/games-scores-dialog.c:307
 #, c-format
-#| msgid "%dm %ds"
 msgctxt "score-dialog"
 msgid "%1$dm %2$ds"
 msgstr "%1$dm %2$ds"
@@ -215,7 +207,6 @@ msgstr "يېڭى ئويۇن"
 
 #. Score dialog column header for the name of the player who recorded the score
 #: ../src/games-scores-dialog.c:571
-#| msgid "Name"
 msgctxt "score-dialog"
 msgid "Name"
 msgstr "ئاتى"
@@ -423,7 +414,7 @@ msgstr "چوڭ"
 
 #: ../src/glines.c:170
 msgid "Could not load theme"
-msgstr "ئۆرنەكنى ئوقۇيالمىدى"
+msgstr "ئۆرنەكنى ئوقۇغىلى بولمىدى"
 
 #: ../src/glines.c:176
 msgid "Preferences"
@@ -487,13 +478,7 @@ msgstr "بۇرۇن ئالقىشقا ئېرىشكەن رەڭلىك سىزىق ئ�
 msgid "translator-credits"
 msgstr "Gheyret Kenji <gheyret@gmail.com>\n"
 "Sahran<sahran@live.com>\n"
-"Muhemmed Erdem <misran_erdem@hotmail.com>\n"
-"\n"
-"Launchpad Contributions:\n"
-"  Abdumomin.Kadir https://launchpad.net/~abdumomin-kadir\n"
-"  Gheyret T.Kenji https://launchpad.net/~gheyret\n"
-"  Gheyret T.Kenji https://launchpad.net/~gheyretkenji\n"
-"  Sahran https://launchpad.net/~sahran"
+"Muhemmed Erdem <misran_erdem@hotmail.com>"
 
 #: ../src/glines.c:1184
 msgid "GNOME Games web site"
