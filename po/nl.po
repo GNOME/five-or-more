@@ -217,11 +217,11 @@ msgstr "De hoogte van het venster in beeldpunten."
 
 #: ../data/org.gnome.five-or-more.gschema.xml.in.h:17
 msgid "true if the window is maximized"
-msgstr "Waar als het venster is gemaximaliseerd"
+msgstr "Ingeschakeld als het venster is gemaximaliseerd"
 
 #: ../data/org.gnome.five-or-more.gschema.xml.in.h:18
 msgid "true if the window is fullscren"
-msgstr "Waar als het venster het volledige scherm vult"
+msgstr "Ingeschakeld als het venster het volledige scherm vult"
 
 #. Score dialog column header for the score time (e.g. 1 minute)
 #: ../src/games-scores-dialog.c:136
