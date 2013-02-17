@@ -21,8 +21,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: five-or-more\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-02 23:24+0100\n"
-"PO-Revision-Date: 2013-02-02 23:25+0100\n"
+"POT-Creation-Date: 2013-02-17 15:45+0100\n"
+"PO-Revision-Date: 2013-02-17 15:46+0100\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <gnomepl@aviary.pl>\n"
 "Language: pl\n"
@@ -405,8 +405,7 @@ msgstr ""
 "Program %s rozpowszechniany jest z nadzieją, iż będzie on użyteczny - jednak "
 "BEZ JAKIEJKOLWIEK GWARANCJI, nawet domyślnej gwarancji PRZYDATNOŚCI "
 "HANDLOWEJ albo PRZYDATNOŚCI DO OKREŚLONYCH ZASTOSOWAŃ. W celu uzyskania "
-"bliższych informacji należy zapoznać się z Powszechną Licencją Publiczną "
-"GNU. "
+"bliższych informacji należy zapoznać się z Powszechną Licencją Publiczną GNU."
 
 #: ../src/games-stock.c:327
 #, c-format
@@ -446,7 +445,7 @@ msgstr "Duża"
 
 #: ../src/glines.c:170
 msgid "Could not load theme"
-msgstr "Nie można wczytać motywu."
+msgstr "Nie można wczytać motywu"
 
 #: ../src/glines.c:176
 msgid "Preferences"
