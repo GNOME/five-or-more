@@ -1616,6 +1616,7 @@ activate_cb (GApplication *application)
 {
   gtk_widget_show_all (app);
 
+  reset_game ();
   start_game ();
 }
 
