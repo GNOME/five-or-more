@@ -8,6 +8,10 @@ ui_DATA = \
 themedir = $(datadir)/five-or-more/themes
 theme_DATA = \
 	balls.svg	\
+	classic.png	\
+	dots.png	\
+	gumball.png	\
+	pulse.png	\
 	shapes.svg
 
 gsettings_in_file = org.gnome.five-or-more.gschema.xml.in
