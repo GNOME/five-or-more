@@ -36,7 +36,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-"
 "or-more&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2013-01-28 23:19+0000\n"
-"PO-Revision-Date: 2013-03-08 12:29+0300\n"
+"PO-Revision-Date: 2013-03-09 05:37+0300\n"
 "Last-Translator: Dimitris Spingos (Δημήτρης Σπίγγος) <dmtrs32@gmail.com>\n"
 "Language-Team: team@gnome.gr\n"
 "Language: el\n"
@@ -54,8 +54,7 @@ msgstr "Πέντε ή περισσότερα"
 
 #: ../data/five-or-more.desktop.in.in.h:2
 msgid "Remove colored balls from the board by forming lines"
-msgstr ""
-"Δημιουργήστε γραμμές για να απομακρύνετε τις χρωματιστές μπάλες από το ταμπλό"
+msgstr "Αφαιρέστε τις χρωματιστές μπάλες από τον πίνακα σχηματίζοντας γραμμές"
 
 #: ../data/five-or-more.desktop.in.in.h:3
 msgid "game;strategy;logic;"
@@ -75,11 +74,11 @@ msgstr "_Εικόνα:"
 
 #: ../data/five-or-more-preferences.ui.h:4
 msgid "B_ackground color:"
-msgstr "Χρώμα _φόντου:"
+msgstr "Χρώμα _παρασκηνίου:"
 
 #: ../data/five-or-more-preferences.ui.h:5
 msgid "Board Size"
-msgstr "Μέγεθος ταμπλό"
+msgstr "Μέγεθος πίνακα"
 
 #: ../data/five-or-more-preferences.ui.h:6
 msgid "_Small"
@@ -115,7 +114,7 @@ msgstr "Βαθμολογία"
 
 #: ../data/five-or-more.ui.h:4
 msgid "_Settings"
-msgstr "Ρυθμίσεις"
+msgstr "_Ρυθμίσεις"
 
 #: ../data/five-or-more.ui.h:5
 msgid "_Help"
@@ -151,21 +150,21 @@ msgstr ""
 
 #: ../data/org.gnome.five-or-more.gschema.xml.in.h:3
 msgid "Ball style"
-msgstr "Στυλ μπάλας"
+msgstr "Τεχνοτροπία μπάλας"
 
 #: ../data/org.gnome.five-or-more.gschema.xml.in.h:4
 msgid "Ball style. The filename of the images to use for the balls."
 msgstr ""
-"Στυλ μπάλας. Τά όνοματα των αρχείων εικόνας που θα χρησιμοποιούνται για τις "
-"μπάλες."
+"Τεχνοτροπία μπάλας. Τα ονόματα των αρχείων εικόνας που θα χρησιμοποιούνται "
+"για τις μπάλες."
 
 #: ../data/org.gnome.five-or-more.gschema.xml.in.h:5
 msgid "Background color"
-msgstr "Χρώμα φόντου"
+msgstr "Χρώμα παρασκηνίου"
 
 #: ../data/org.gnome.five-or-more.gschema.xml.in.h:6
 msgid "Background color. The hex specification of the background color."
-msgstr "Χρώμα φόντου σε δεκαεξαδική μορφή."
+msgstr "Χρώμα παρασκηνίου σε δεκαεξαδική μορφή."
 
 #: ../data/org.gnome.five-or-more.gschema.xml.in.h:7
 msgid "Time between moves"
@@ -352,12 +351,12 @@ msgstr "_Επανάληψη κίνησης"
 #. Translators: this is the "Reset" scores button in a scores dialogue
 #: ../src/games-stock.c:256
 msgid "_Reset"
-msgstr "Επαναφορά"
+msgstr "Επανα_φορά"
 
 #. Translators: "_Restart" is the menu item 'Game->Restart', implies "Restart Game"
 #: ../src/games-stock.c:258
 msgid "_Restart"
-msgstr "_Επανεκκίνηση"
+msgstr "Επα_νεκκίνηση"
 
 #: ../src/games-stock.c:259
 msgid "_Undo Move"
@@ -369,11 +368,11 @@ msgstr "Μοί_ρασμα"
 
 #: ../src/games-stock.c:261
 msgid "_Leave Fullscreen"
-msgstr "_Έξοδος από πλήρη οθόνη"
+msgstr "Έ_ξοδος από πλήρη οθόνη"
 
 #: ../src/games-stock.c:262
 msgid "Network _Game"
-msgstr "Δικτυακό _παιχνίδι"
+msgstr "Δικτυακό πα_ιχνίδι"
 
 #: ../src/games-stock.c:263
 msgid "L_eave Game"
@@ -389,7 +388,7 @@ msgstr "Π_αύση"
 
 #: ../src/games-stock.c:266
 msgid "Res_ume"
-msgstr "Συνέχιση"
+msgstr "_Συνέχιση"
 
 #: ../src/games-stock.c:267
 msgid "_Scores"
@@ -409,9 +408,9 @@ msgid ""
 "version."
 msgstr ""
 "Το %s είναι ελεύθερο λογισμικό· επιτρέπεται η αναδιανομή ή/και τροποποίησή "
-"του υπό τους όρους της Γενικής Άδειας Δημόσιας Χρήσης GNU (GPL), όπως αυτή "
-"έχει δημοσιευτεί από το Ίδρυμα Ελεύθερου Λογισμικού (FSF) — είτε της έκδοσης "
-"%d της Άδειας, είτε (κατ' επιλογήν σας) οποιασδήποτε μεταγενέστερης έκδοσης."
+"του υπό τους όρους της Γενικής Άδειας Δημόσιας Χρήσης GNU -GPL- όπως αυτή "
+"έχει δημοσιευτεί από το Ίδρυμα Ελεύθερου Λογισμικού -FSF- είτε της έκδοσης %"
+"d της Άδειας, είτε (κατ' επιλογήν σας) οποιασδήποτε μεταγενέστερης έκδοσης."
 
 #: ../src/games-stock.c:322
 #, c-format
@@ -422,7 +421,7 @@ msgid ""
 "details."
 msgstr ""
 "Το %s διανέμεται με την ελπίδα ότι θα είναι χρήσιμο, αλλά ΧΩΡΙΣ ΚΑΜΙΑ "
-"ΕΓΓΥΗΣΗ. Χωρίς ούτε την έμμεση εγγύηση ΛΕΙΤΟΥΡΓΙΚΟΤΗΤΑΣ ή ΚΑΤΑΛΛΗΛΟΤΗΤΑΣΓΙΑ "
+"ΕΓΓΥΗΣΗ· χωρίς ούτε την έμμεση εγγύηση ΛΕΙΤΟΥΡΓΙΚΟΤΗΤΑΣ ή ΚΑΤΑΛΛΗΛΟΤΗΤΑΣΓΙΑ "
 "ΕΝΑ ΣΥΓΚΕΚΡΙΜΕΝΟ ΣΚΟΠΟ. Για περισσότερες λεπτομέρειες, δείτε τη γενική "
 "δημόσια άδεια χρήσης GNU."
 
@@ -443,8 +442,8 @@ msgid ""
 "this program.  If not, see <http://www.gnu.org/licenses/>."
 msgstr ""
 "Θα πρέπει να έχετε λάβει ένα αντίγραφο της Γενικής Άδειας Δημόσιας Χρήσης "
-"GNU (GPL) μαζί με το πρόγραμμα· Εάν όχι, επισκεφθείτε το <http://www.gnu.org/"
-"licenses/>."
+"GNU -GPL- μαζί με το πρόγραμμα. Εάν όχι, επισκεφθείτε το "
+"<http://www.gnu.org/licenses/>."
 
 #: ../src/glines.c:78
 msgctxt "board size"
@@ -478,7 +477,7 @@ msgid ""
 "The default theme will be loaded instead."
 msgstr ""
 "Αδυναμία εντοπισμού αρχείου:\n"
-"'%s'.\n"
+"%s\n"
 "\n"
 "Θα φορτωθεί το προεπιλεγμένο θέμα."
 
@@ -491,9 +490,9 @@ msgid ""
 "Please check that Five or More is installed correctly."
 msgstr ""
 "Αδυναμία εντοπισμού αρχείου:\n"
-"'%s'.\n"
+"%s\n"
 "\n"
-"Ελέγξτε αν το Πέντε ή Περισσότερα έχει εγκατασταθεί σωστά."
+"Ελέγξτε αν το Πέντε ή περισσότερα έχει εγκατασταθεί σωστά."
 
 #: ../src/glines.c:408
 msgid "Match five objects of the same type in a row to score!"
@@ -506,7 +505,7 @@ msgstr "Πέντε ή Περισσότερα"
 
 #: ../src/glines.c:472
 msgid "_Board size:"
-msgstr "Μέγε_θος ταμπλό"
+msgstr "Μέγε_θος πίνακα:"
 
 #: ../src/glines.c:489
 msgid "Game Over!"
@@ -523,13 +522,14 @@ msgid ""
 "\n"
 "Five or More is a part of GNOME Games."
 msgstr ""
-"Μεταφορά στο GNOME του πάλαι ποτέ δημοφιλούς παιχνιδιού Έγχρωμες Γραμμές\n"
+"Μεταφορά στο GNOME του πάλαι ποτέ δημοφιλούς παιχνιδιού Έγχρωμες γραμμές.\n"
 "\n"
-"Το Five or More είναι μέρος των παιχνιδιών του GNOME."
+"Το Πέντε ή περισσότερα είναι μέρος των παιχνιδιών του GNOME."
 
 #: ../src/glines.c:1181
 msgid "translator-credits"
 msgstr ""
+"Δημήτρης Σπίγγος <dmtrs32@gmail.com>\n"
 "Spiros Papadimitriou <spapadim+@cs.cmu.edu>\n"
 "Συμεών (Σίμος) Ξενιτέλλης <simos@hellug.gr>\n"
 "Κώστας Παπαδήμας <pkst@gmx.net>\n"
