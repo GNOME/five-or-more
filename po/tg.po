@@ -1,0 +1,474 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Victor Ibragimov <victor.ibragimov@gmail.com>, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Tajik Gnome\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-"
+"or-more&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2013-03-18 18:35+0000\n"
+"PO-Revision-Date: 2013-01-19 18:34+0500\n"
+"Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
+"Language-Team: \n"
+"Language: Tajik\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+
+#: ../data/glines.desktop.in.in.h:1 ../src/glines.c:1170 ../src/glines.c:1173
+#: ../src/glines.c:1662
+msgid "Five or More"
+msgstr ""
+
+#: ../data/glines.desktop.in.in.h:2
+msgid "Remove colored balls from the board by forming lines"
+msgstr ""
+
+#: ../data/glines.desktop.in.in.h:3
+msgid "game;strategy;logic;"
+msgstr ""
+
+#: ../data/five-or-more-preferences.ui.h:1
+msgid "Five or More Preferences"
+msgstr ""
+
+#: ../data/five-or-more-preferences.ui.h:2
+msgid "Appearance"
+msgstr "Намуди зоҳирӣ"
+
+#: ../data/five-or-more-preferences.ui.h:3
+msgid "_Image:"
+msgstr "_Тасвир:"
+
+#: ../data/five-or-more-preferences.ui.h:4
+msgid "B_ackground color:"
+msgstr ""
+
+#: ../data/five-or-more-preferences.ui.h:5
+msgid "Board Size"
+msgstr ""
+
+#: ../data/five-or-more-preferences.ui.h:6
+msgid "_Small"
+msgstr "_Хурд"
+
+#: ../data/five-or-more-preferences.ui.h:7
+msgid "_Medium"
+msgstr "_Миёна"
+
+#: ../data/five-or-more-preferences.ui.h:8
+msgid "_Large"
+msgstr "_Калон"
+
+#: ../data/five-or-more-preferences.ui.h:9
+msgid "General"
+msgstr "Умумӣ"
+
+#: ../data/five-or-more-preferences.ui.h:10
+msgid "_Use fast moves"
+msgstr ""
+
+#: ../data/five-or-more.ui.h:1
+msgid "Five or more"
+msgstr ""
+
+#: ../data/five-or-more.ui.h:2
+msgid "_Game"
+msgstr "_Бозӣ"
+
+#: ../data/five-or-more.ui.h:3
+msgid "Scores"
+msgstr ""
+
+#: ../data/five-or-more.ui.h:4
+msgid "_Settings"
+msgstr "_Танзимот"
+
+#: ../data/five-or-more.ui.h:5
+msgid "_Help"
+msgstr "_Кӯмак"
+
+#. Help contents menu item
+#: ../data/five-or-more.ui.h:7 ../src/games-stock.c:247
+msgid "_Contents"
+msgstr "_Мундариҷа"
+
+#: ../data/five-or-more.ui.h:8
+msgid "Next:"
+msgstr "Навбатӣ:"
+
+#: ../data/five-or-more.ui.h:9
+msgid "0"
+msgstr "0"
+
+#: ../data/five-or-more.ui.h:10
+msgid "Score:"
+msgstr ""
+
+#: ../data/org.gnome.five-or-more.gschema.xml.in.h:1
+msgid "Playing field size"
+msgstr ""
+
+#: ../data/org.gnome.five-or-more.gschema.xml.in.h:2
+msgid ""
+"Playing field size. 1=Small, 2=Medium, 3=Large. Any other value is invalid."
+msgstr ""
+
+#: ../data/org.gnome.five-or-more.gschema.xml.in.h:3
+msgid "Ball style"
+msgstr ""
+
+#: ../data/org.gnome.five-or-more.gschema.xml.in.h:4
+msgid "Ball style. The filename of the images to use for the balls."
+msgstr ""
+
+#: ../data/org.gnome.five-or-more.gschema.xml.in.h:5
+msgid "Background color"
+msgstr "Ранги пасзамина"
+
+#: ../data/org.gnome.five-or-more.gschema.xml.in.h:6
+msgid "Background color. The hex specification of the background color."
+msgstr ""
+
+#: ../data/org.gnome.five-or-more.gschema.xml.in.h:7
+msgid "Time between moves"
+msgstr ""
+
+#: ../data/org.gnome.five-or-more.gschema.xml.in.h:8
+msgid "Time between moves in milliseconds."
+msgstr ""
+
+#: ../data/org.gnome.five-or-more.gschema.xml.in.h:9
+msgid "Game score"
+msgstr ""
+
+#: ../data/org.gnome.five-or-more.gschema.xml.in.h:10
+msgid "Game score from last saved session."
+msgstr ""
+
+#: ../data/org.gnome.five-or-more.gschema.xml.in.h:11
+msgid "Game field"
+msgstr ""
+
+#: ../data/org.gnome.five-or-more.gschema.xml.in.h:12
+msgid "Game field from last saved session."
+msgstr ""
+
+#: ../data/org.gnome.five-or-more.gschema.xml.in.h:13
+msgid "Game preview"
+msgstr ""
+
+#: ../data/org.gnome.five-or-more.gschema.xml.in.h:14
+msgid "Game preview from last saved session."
+msgstr ""
+
+#: ../data/org.gnome.five-or-more.gschema.xml.in.h:15
+msgid "Width of the window in pixels"
+msgstr ""
+
+#: ../data/org.gnome.five-or-more.gschema.xml.in.h:16
+msgid "Height of the window in pixels"
+msgstr ""
+
+#: ../data/org.gnome.five-or-more.gschema.xml.in.h:17
+msgid "true if the window is maximized"
+msgstr ""
+
+#: ../data/org.gnome.five-or-more.gschema.xml.in.h:18
+msgid "true if the window is fullscren"
+msgstr ""
+
+#. Score dialog column header for the score time (e.g. 1 minute)
+#: ../src/games-scores-dialog.c:136
+msgctxt "score-dialog"
+msgid "Time"
+msgstr "Вақт"
+
+#. Score dialog column header for the score value (e.g. 30 moves)
+#: ../src/games-scores-dialog.c:142
+msgctxt "score-dialog"
+msgid "Score"
+msgstr ""
+
+#. Score format for time based scores.  %1$d is the time in minutes, %2$d is the time in seconds
+#: ../src/games-scores-dialog.c:307
+#, c-format
+msgctxt "score-dialog"
+msgid "%1$dm %2$ds"
+msgstr ""
+
+#: ../src/games-scores-dialog.c:470
+msgid "New Game"
+msgstr "Бозии нав"
+
+#. Score dialog column header for the name of the player who recorded the score
+#: ../src/games-scores-dialog.c:571
+msgctxt "score-dialog"
+msgid "Name"
+msgstr "Ном"
+
+#. Score dialog column header for the date the score was recorded
+#: ../src/games-scores-dialog.c:580
+msgid "Date"
+msgstr "Сана"
+
+#: ../src/games-stock.c:41
+msgid "View help for this game"
+msgstr ""
+
+#: ../src/games-stock.c:42
+msgid "End the current game"
+msgstr ""
+
+#: ../src/games-stock.c:43
+msgid "Toggle fullscreen mode"
+msgstr ""
+
+#: ../src/games-stock.c:44
+msgid "Get a hint for your next move"
+msgstr ""
+
+#: ../src/games-stock.c:45
+msgid "Leave fullscreen mode"
+msgstr ""
+
+#: ../src/games-stock.c:46
+msgid "Start a new multiplayer network game"
+msgstr ""
+
+#: ../src/games-stock.c:47
+msgid "End the current network game and return to network server"
+msgstr ""
+
+#: ../src/games-stock.c:48
+msgid "Start a new game"
+msgstr ""
+
+#: ../src/games-stock.c:49
+msgid "Pause the game"
+msgstr ""
+
+#: ../src/games-stock.c:50
+msgid "Show a list of players in the network game"
+msgstr ""
+
+#: ../src/games-stock.c:51
+msgid "Redo the undone move"
+msgstr ""
+
+#: ../src/games-stock.c:52
+msgid "Restart the game"
+msgstr ""
+
+#: ../src/games-stock.c:53
+msgid "Resume the paused game"
+msgstr ""
+
+#: ../src/games-stock.c:54
+msgid "View the scores"
+msgstr ""
+
+#: ../src/games-stock.c:55
+msgid "Undo the last move"
+msgstr ""
+
+#: ../src/games-stock.c:56
+msgid "About this game"
+msgstr ""
+
+#: ../src/games-stock.c:57
+msgid "Close this window"
+msgstr ""
+
+#: ../src/games-stock.c:58
+msgid "Configure the game"
+msgstr ""
+
+#: ../src/games-stock.c:59
+msgid "Quit this game"
+msgstr ""
+
+#: ../src/games-stock.c:248
+msgid "_Fullscreen"
+msgstr "_Экрани пурра"
+
+#: ../src/games-stock.c:249
+msgid "_Hint"
+msgstr ""
+
+#. Translators: This "_New" is for the menu item 'Game->New', implies "New Game"
+#: ../src/games-stock.c:251
+msgid "_New"
+msgstr "_Нав"
+
+#. Translators: This "_New Game" is for the game-over dialogue
+#: ../src/games-stock.c:253
+msgid "_New Game"
+msgstr "_Бозии нав"
+
+#: ../src/games-stock.c:254
+msgid "_Redo Move"
+msgstr ""
+
+#. Translators: this is the "Reset" scores button in a scores dialogue
+#: ../src/games-stock.c:256
+msgid "_Reset"
+msgstr "_Танзими дубора"
+
+#. Translators: "_Restart" is the menu item 'Game->Restart', implies "Restart Game"
+#: ../src/games-stock.c:258
+msgid "_Restart"
+msgstr "_Бозоғозидан"
+
+#: ../src/games-stock.c:259
+msgid "_Undo Move"
+msgstr "_Лағв кардани интиқолдиҳӣ"
+
+#: ../src/games-stock.c:260
+msgid "_Deal"
+msgstr ""
+
+#: ../src/games-stock.c:261
+msgid "_Leave Fullscreen"
+msgstr ""
+
+#: ../src/games-stock.c:262
+msgid "Network _Game"
+msgstr ""
+
+#: ../src/games-stock.c:263
+msgid "L_eave Game"
+msgstr ""
+
+#: ../src/games-stock.c:264
+msgid "Player _List"
+msgstr ""
+
+#: ../src/games-stock.c:265
+msgid "_Pause"
+msgstr "_Таваққуф кардан"
+
+#: ../src/games-stock.c:266
+msgid "Res_ume"
+msgstr ""
+
+#: ../src/games-stock.c:267
+msgid "_Scores"
+msgstr ""
+
+#: ../src/games-stock.c:268
+msgid "_End Game"
+msgstr ""
+
+#. %s is replaced with the name of the game in gnome-games.
+#: ../src/games-stock.c:317
+#, c-format
+msgid ""
+"%s is free software; you can redistribute it and/or modify it under the "
+"terms of the GNU General Public License as published by the Free Software "
+"Foundation; either version %d of the License, or (at your option) any later "
+"version."
+msgstr ""
+
+#: ../src/games-stock.c:322
+#, c-format
+msgid ""
+"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+"details."
+msgstr ""
+
+#: ../src/games-stock.c:327
+#, c-format
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
+"Fifth Floor, Boston, MA  02110-1301  USA"
+msgstr ""
+
+#: ../src/games-stock.c:331
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"this program.  If not, see <http://www.gnu.org/licenses/>."
+msgstr ""
+
+#: ../src/glines.c:78
+msgctxt "board size"
+msgid "Small"
+msgstr "Хурд"
+
+#: ../src/glines.c:79
+msgctxt "board size"
+msgid "Medium"
+msgstr "Миёна"
+
+#: ../src/glines.c:80
+msgctxt "board size"
+msgid "Large"
+msgstr "Калон"
+
+#: ../src/glines.c:170
+msgid "Could not load theme"
+msgstr ""
+
+#: ../src/glines.c:176
+msgid "Preferences"
+msgstr "Хусусиятҳо"
+
+#: ../src/glines.c:196
+#, c-format
+msgid ""
+"Unable to locate file:\n"
+"%s\n"
+"\n"
+"The default theme will be loaded instead."
+msgstr ""
+
+#: ../src/glines.c:203
+#, c-format
+msgid ""
+"Unable to locate file:\n"
+"%s\n"
+"\n"
+"Please check that Five or More is installed correctly."
+msgstr ""
+
+#: ../src/glines.c:408
+msgid "Match five objects of the same type in a row to score!"
+msgstr ""
+
+#: ../src/glines.c:470
+msgid "GNOME Five or More"
+msgstr ""
+
+#: ../src/glines.c:472
+msgid "_Board size:"
+msgstr ""
+
+#: ../src/glines.c:489
+msgid "Game Over!"
+msgstr ""
+
+#. Can't move there!
+#: ../src/glines.c:646
+msgid "You can't move there!"
+msgstr ""
+
+#: ../src/glines.c:1175
+msgid ""
+"GNOME port of the once-popular Color Lines game.\n"
+"\n"
+"Five or More is a part of GNOME Games."
+msgstr ""
+
+#: ../src/glines.c:1181
+msgid "translator-credits"
+msgstr ""
+
+#: ../src/glines.c:1184
+msgid "GNOME Games web site"
+msgstr ""
