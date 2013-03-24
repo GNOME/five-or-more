@@ -29,6 +29,7 @@ msgid "Remove colored balls from the board by forming lines"
 msgstr "رەڭلىك توپلارنى تىزىپ ئۇلارنى تاختىدىن ئېلىۋېتىڭ"
 
 #: ../data/five-or-more.desktop.in.in.h:3
+#, fuzzy
 msgid "game;strategy;logic;"
 msgstr "game؛strategy؛logic؛ئويۇن؛ئىستراتېگىيە؛لوگىكىلىق؛"
 
