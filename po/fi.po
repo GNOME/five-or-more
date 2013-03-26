@@ -15,8 +15,8 @@ msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-"
 "or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-01-28 23:19+0000\n"
-"PO-Revision-Date: 2013-03-23 15:40+0200\n"
+"POT-Creation-Date: 2013-03-24 18:45+0000\n"
+"PO-Revision-Date: 2013-03-26 20:24+0200\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos+l10n@iki.fi>\n"
 "Language-Team: Finnish <gnome-fi-laatu@lists.sourceforge.net>\n"
 "Language: fi\n"
@@ -28,16 +28,16 @@ msgstr ""
 "X-Generator: Lokalize 1.5\n"
 "X-POT-Import-Date: 2012-03-05 14:46:29+0000\n"
 
-#: ../data/five-or-more.desktop.in.in.h:1 ../src/glines.c:1170
-#: ../src/glines.c:1173 ../src/glines.c:1661
+#: ../data/glines.desktop.in.in.h:1 ../src/glines.c:1170 ../src/glines.c:1173
+#: ../src/glines.c:1662
 msgid "Five or More"
 msgstr "Viisi tai enemmän"
 
-#: ../data/five-or-more.desktop.in.in.h:2
+#: ../data/glines.desktop.in.in.h:2
 msgid "Remove colored balls from the board by forming lines"
 msgstr "Poista värilliset pallot laudalta muodostamalla jonoja"
 
-#: ../data/five-or-more.desktop.in.in.h:3
+#: ../data/glines.desktop.in.in.h:3
 msgid "game;strategy;logic;"
 msgstr "game;strategy;logic;strategia;logiikka;peli;"
 
@@ -47,7 +47,7 @@ msgstr "Viisi tai enemmän -asetukset"
 
 #: ../data/five-or-more-preferences.ui.h:2
 msgid "Appearance"
-msgstr "Ulkonäkö"
+msgstr "Ulkoasu"
 
 #: ../data/five-or-more-preferences.ui.h:3
 msgid "_Image:"
