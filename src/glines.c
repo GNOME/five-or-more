@@ -1614,9 +1614,8 @@ startup_cb (GApplication *application)
 static void
 activate_cb (GApplication *application)
 {
-  gtk_widget_show_all (app);
-
   reset_game ();
+  gtk_widget_show_all (app);
   start_game ();
 }
 
