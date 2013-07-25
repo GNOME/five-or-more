@@ -1014,7 +1014,7 @@ msgid ""
 "participate."
 msgstr ""
 "Uživatelské rozhraní a dokumentaci <app>her GNOME</app> překládá komunita "
-"dobrovolníků z celého světa."
+"dobrovolníků z celého světa. Vaše případná účast bude vítána."
 
 #: C/translate.page:28(page/p)
 msgid ""
