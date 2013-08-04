@@ -455,14 +455,16 @@ draw_preview (void)
 }
 
 void
-game_new_callback (void)
+game_new_callback (GSimpleAction *action,
+                   GVariant *parameter,
+                   gpointer user_data)
 {
   reset_game ();
   start_game ();
 }
 
 static void
-show_scores (gint pos, gboolean new_game)
+show_scores (gint pos)
 {
   static GtkWidget *dialog;
 
@@ -488,7 +490,7 @@ game_over (void)
 
   set_statusbar_message (_("Game Over!"));
   pos = games_scores_add_plain_score (highscores, score);
-  show_scores (pos, TRUE);
+  show_scores (pos);
   return;
 }
 
@@ -1150,13 +1152,17 @@ animate (gpointer gp)
 }
 
 void
-game_top_ten_callback (GtkAction * action, gpointer data)
+game_top_ten_callback (GSimpleAction *action,
+                       GVariant *parameter,
+                       gpointer user_data)
 {
-  show_scores (0, FALSE);
+  show_scores (0);
 }
 
 void
-game_about_callback (GtkAction * action, gpointer * data)
+game_about_callback (GSimpleAction *action,
+                     GVariant *parameter,
+                     gpointer user_data)
 {
   const gchar *authors[] = { "Robert Szokovacs <szo@appaloosacorp.hu>",
     "Szabolcs B\xc3\xa1n <shooby@gnome.hu>",
@@ -1342,7 +1348,9 @@ pref_dialog_response (GtkDialog * dialog, gint response, gpointer data)
 }
 
 void
-game_props_callback (void)
+game_props_callback (GSimpleAction *action,
+                     GVariant *parameter,
+                     gpointer user_data)
 {
   gchar *ui_path;
   GError *error = NULL;
@@ -1408,15 +1416,18 @@ game_props_callback (void)
   gtk_window_present (GTK_WINDOW (pref_dialog));
 }
 
-int
-game_quit_callback (GtkAction * action, gpointer data)
+void
+game_quit_callback (GSimpleAction *action,
+                    GVariant *parameter,
+                    gpointer user_data)
 {
   gtk_widget_destroy (app);
-  return FALSE;
 }
 
 void
-game_help_callback (GtkAction * action, gpointer data)
+game_help_callback (GSimpleAction *action,
+                    GVariant *parameter,
+                    gpointer user_data)
 {
   GError *error = NULL;
 
@@ -1525,6 +1536,19 @@ startup_cb (GApplication *application)
   guint i;
   GError *error = NULL;
 
+  GActionEntry app_actions[] = {
+    { "new", game_new_callback },
+    { "scores", game_top_ten_callback },
+    { "preferences", game_props_callback },
+    { "help", game_help_callback },
+    { "about", game_about_callback },
+    { "quit", game_quit_callback }
+  };
+
+  g_action_map_add_action_entries (G_ACTION_MAP (application),
+                                   app_actions, G_N_ELEMENTS (app_actions),
+                                   application);
+
   settings = g_settings_new ("org.gnome.five-or-more");
 
   highscores = games_scores_new ("glines",
@@ -1537,9 +1561,21 @@ startup_cb (GApplication *application)
 
   games_stock_init ();
 
+  builder = gtk_builder_new ();
+
+  ui_path = g_build_filename (DATA_DIRECTORY, "menu.ui", NULL);
+  gtk_builder_add_from_file (builder, ui_path, &error);
+  g_free (ui_path);
+
+  if (error) {
+    g_critical ("Unable to load the application menu file: %s", error->message);
+    g_error_free (error);
+  } else {
+    gtk_application_set_app_menu (GTK_APPLICATION (application),
+                                  G_MENU_MODEL (gtk_builder_get_object (builder, "appmenu")));
+  }
 
   ui_path = g_build_filename (DATA_DIRECTORY, "five-or-more.ui", NULL);
-  builder = gtk_builder_new ();
   gtk_builder_add_from_file (builder, ui_path, &error);
   g_free (ui_path);
 
@@ -1645,6 +1681,12 @@ main (int argc, char *argv[])
   games_scores_startup ();
 
   rgen = g_rand_new ();
+
+  /* 
+   * Required for proper app menu because the binary doesn't match the desktop file.
+   * Has to be before the call to g_option_context_parse.
+   */
+  g_set_prgname ("glines");
 
   context = g_option_context_new (NULL);
   g_option_context_set_translation_domain (context, GETTEXT_PACKAGE);

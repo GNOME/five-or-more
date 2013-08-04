@@ -3,7 +3,8 @@ SUBDIRS = icons
 uidir = $(datadir)/five-or-more/
 ui_DATA = \
 	five-or-more.ui \
-	five-or-more-preferences.ui
+	five-or-more-preferences.ui \
+	menu.ui
 
 themedir = $(datadir)/five-or-more/themes
 theme_DATA = \
