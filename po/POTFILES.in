@@ -4,6 +4,7 @@
 data/glines.desktop.in.in
 [type: gettext/glade]data/five-or-more-preferences.ui
 [type: gettext/glade]data/five-or-more.ui
+[type: gettext/glade]data/menu.ui
 data/org.gnome.five-or-more.gschema.xml.in
 src/games-scores-dialog.c
 src/games-stock.c
