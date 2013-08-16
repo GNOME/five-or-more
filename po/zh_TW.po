@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games 3.3.91\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-04 19:53+0800\n"
-"PO-Revision-Date: 2013-02-04 15:29+0800\n"
+"POT-Creation-Date: 2013-08-16 12:56+0800\n"
+"PO-Revision-Date: 2013-08-16 10:58+0800\n"
 "Last-Translator: Chao-Hsiung Liao <j_h_liau@yahoo.com.tw>\n"
 "Language-Team: Chinese (traditional)\n"
 "Language: \n"
@@ -21,16 +21,16 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Poedit 1.5.4\n"
 
-#: ../data/five-or-more.desktop.in.in.h:1 ../src/glines.c:1170
-#: ../src/glines.c:1173 ../src/glines.c:1661
+#: ../data/glines.desktop.in.in.h:1 ../data/five-or-more.ui.h:1
+#: ../src/glines.c:1176 ../src/glines.c:1179 ../src/glines.c:1703
 msgid "Five or More"
 msgstr "五子連色棋"
 
-#: ../data/five-or-more.desktop.in.in.h:2
+#: ../data/glines.desktop.in.in.h:2
 msgid "Remove colored balls from the board by forming lines"
 msgstr "移動同色的球成一直線令球消失"
 
-#: ../data/five-or-more.desktop.in.in.h:3
+#: ../data/glines.desktop.in.in.h:3
 msgid "game;strategy;logic;"
 msgstr "game;strategy;logic;遊戲;策略;邏輯;"
 
@@ -74,42 +74,41 @@ msgstr "一般"
 msgid "_Use fast moves"
 msgstr "快速移動(_U)"
 
-#: ../data/five-or-more.ui.h:1
-msgid "Five or more"
-msgstr "五子連色棋"
-
 #: ../data/five-or-more.ui.h:2
-msgid "_Game"
-msgstr "遊戲(_G)"
-
-#: ../data/five-or-more.ui.h:3
-msgid "Scores"
-msgstr "分數"
-
-#: ../data/five-or-more.ui.h:4
-msgid "_Settings"
-msgstr "設定值(_S)"
-
-#: ../data/five-or-more.ui.h:5
-msgid "_Help"
-msgstr "求助(_H)"
-
-#. Help contents menu item
-#: ../data/five-or-more.ui.h:7 ../src/games-stock.c:247
-msgid "_Contents"
-msgstr "內容(_C)"
-
-#: ../data/five-or-more.ui.h:8
 msgid "Next:"
 msgstr "下次的顏色:"
 
-#: ../data/five-or-more.ui.h:9
+#: ../data/five-or-more.ui.h:3
 msgid "0"
 msgstr "0"
 
-#: ../data/five-or-more.ui.h:10
+#: ../data/five-or-more.ui.h:4
 msgid "Score:"
 msgstr "得分："
+
+#: ../data/menu.ui.h:1 ../src/games-scores-dialog.c:470
+msgid "New Game"
+msgstr "開新局"
+
+#: ../data/menu.ui.h:2
+msgid "Scores"
+msgstr "分數"
+
+#: ../data/menu.ui.h:3 ../src/glines.c:176
+msgid "Preferences"
+msgstr "偏好設定"
+
+#: ../data/menu.ui.h:4
+msgid "Help"
+msgstr "求助"
+
+#: ../data/menu.ui.h:5
+msgid "About"
+msgstr "關於"
+
+#: ../data/menu.ui.h:6
+msgid "Quit"
+msgstr "結束"
 
 #: ../data/org.gnome.five-or-more.gschema.xml.in.h:1
 msgid "Playing field size"
@@ -203,10 +202,6 @@ msgctxt "score-dialog"
 msgid "%1$dm %2$ds"
 msgstr "%1$d 分 %2$d 秒"
 
-#: ../src/games-scores-dialog.c:470
-msgid "New Game"
-msgstr "開新局"
-
 #. Score dialog column header for the name of the player who recorded the score
 #: ../src/games-scores-dialog.c:571
 msgctxt "score-dialog"
@@ -293,6 +288,10 @@ msgstr "遊戲設定"
 #: ../src/games-stock.c:59
 msgid "Quit this game"
 msgstr "退出本遊戲"
+
+#: ../src/games-stock.c:247
+msgid "_Contents"
+msgstr "內容(_C)"
 
 #: ../src/games-stock.c:248
 msgid "_Fullscreen"
@@ -428,10 +427,6 @@ msgstr "大"
 msgid "Could not load theme"
 msgstr "無法載入主題"
 
-#: ../src/glines.c:176
-msgid "Preferences"
-msgstr "偏好設定"
-
 #: ../src/glines.c:196
 #, c-format
 msgid ""
@@ -462,24 +457,24 @@ msgstr ""
 msgid "Match five objects of the same type in a row to score!"
 msgstr "將五個相同顏色的球連成一直線就可以取分！"
 
-#: ../src/glines.c:470
+#: ../src/glines.c:472
 msgid "GNOME Five or More"
 msgstr "五子連色棋"
 
-#: ../src/glines.c:472
+#: ../src/glines.c:474
 msgid "_Board size:"
 msgstr "棋盤大小(_B):"
 
-#: ../src/glines.c:489
+#: ../src/glines.c:491
 msgid "Game Over!"
 msgstr "玩完了！"
 
 #. Can't move there!
-#: ../src/glines.c:646
+#: ../src/glines.c:648
 msgid "You can't move there!"
 msgstr "不能移動到那裡！"
 
-#: ../src/glines.c:1175
+#: ../src/glines.c:1181
 msgid ""
 "GNOME port of the once-popular Color Lines game.\n"
 "\n"
@@ -489,7 +484,7 @@ msgstr ""
 "\n"
 "五子連色棋是 GNOME 遊戲的一部分。"
 
-#: ../src/glines.c:1181
+#: ../src/glines.c:1187
 msgid "translator-credits"
 msgstr ""
 "如對翻譯有任何意見，請送一封電子郵件給\n"
@@ -499,9 +494,18 @@ msgstr ""
 "Abel Cheung <abel@oaka.org>, 2001-07\n"
 "Fernando <bv1al@journalist.com.tw>, 1999"
 
-#: ../src/glines.c:1184
+#: ../src/glines.c:1190
 msgid "GNOME Games web site"
 msgstr "GNOME Games 網站"
+
+#~ msgid "Five or more"
+#~ msgstr "五子連色棋"
+
+#~ msgid "_Game"
+#~ msgstr "遊戲(_G)"
+
+#~ msgid "_Settings"
+#~ msgstr "設定值(_S)"
 
 #~ msgid "Chess"
 #~ msgstr "國際象棋"
