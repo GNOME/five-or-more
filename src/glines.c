@@ -1413,6 +1413,7 @@ game_props_callback (GSimpleAction *action,
     pref_dialog_done = TRUE;
   }
 
+  gtk_window_set_transient_for (GTK_WINDOW (pref_dialog), GTK_WINDOW (app));
   gtk_window_present (GTK_WINDOW (pref_dialog));
 }
 
