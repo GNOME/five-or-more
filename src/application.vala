@@ -117,6 +117,7 @@ namespace FiveOrMore
             stdout.printf ("preferences\n");
             if (preferences_dialog == null)
                 preferences_dialog = (Gtk.Dialog) builder.get_object ("preferences_dialog");
+            preferences_dialog.transient_for = window;
             
             preferences_dialog.run();
             preferences_dialog.destroy ();
