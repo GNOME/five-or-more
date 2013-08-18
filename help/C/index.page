@@ -6,7 +6,7 @@
     <title type='link' role="trail"><media type="image" src="figures/logo.png"/></title>
     <title type='link'>Five or More</title>
     <title type='text'>Five or More</title>
-    <revision pkgversion="3.4.0" version="0.1" date="2012-03-13" status="final"/>
+    <revision pkgversion="3.10.0" version="0.1" date="2013-08-18" status="final"/>
 
      <credit type="author">
        <name>Lahiru lanka</name>
@@ -25,7 +25,7 @@
 <title>
 <media type="image" src="figures/logo32.png">Five or More logo</media> Five or More</title>
 
-  <p><key>Five or More</key> is a deceptively simple brain workout. The goal is to place at least five objects of the same <link xref="change-theme#images">color or shape</link> into a straight line. The line can be horizontal, vertical or diagonal.  Once five or more objects are grouped into a line, they disappear.  The goal is to vanish as many objects as possible.  The game is over when the entire board is full.</p>
+  <p><app>Five or More</app> is a deceptively simple brain workout. The goal is to place at least five objects of the same <link xref="change-theme#images">color or shape</link> into a straight line. The line can be horizontal, vertical or diagonal.  Once five or more objects are grouped into a line, they disappear.  The goal is to vanish as many objects as possible.  The game is over when the entire board is full.</p>
 
 
 
