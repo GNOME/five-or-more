@@ -21,8 +21,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: five-or-more\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-17 15:45+0100\n"
-"PO-Revision-Date: 2013-02-17 15:46+0100\n"
+"POT-Creation-Date: 2013-08-20 21:59+0200\n"
+"PO-Revision-Date: 2013-08-20 22:00+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <gnomepl@aviary.pl>\n"
 "Language: pl\n"
@@ -34,16 +34,16 @@ msgstr ""
 "X-Poedit-Language: Polish\n"
 "X-Poedit-Country: Poland\n"
 
-#: ../data/five-or-more.desktop.in.in.h:1 ../src/glines.c:1170
-#: ../src/glines.c:1173 ../src/glines.c:1661
+#: ../data/glines.desktop.in.in.h:1 ../data/five-or-more.ui.h:1
+#: ../src/glines.c:1176 ../src/glines.c:1179 ../src/glines.c:1704
 msgid "Five or More"
 msgstr "Kulki"
 
-#: ../data/five-or-more.desktop.in.in.h:2
+#: ../data/glines.desktop.in.in.h:2
 msgid "Remove colored balls from the board by forming lines"
 msgstr "Usuwanie kolorowych kul poprzez układanie ich w linie"
 
-#: ../data/five-or-more.desktop.in.in.h:3
+#: ../data/glines.desktop.in.in.h:3
 msgid "game;strategy;logic;"
 msgstr "gra;gierka;strategiczna;strategia;logiczna;logika;"
 
@@ -87,42 +87,41 @@ msgstr "Ogólne"
 msgid "_Use fast moves"
 msgstr "_Szybkie ruchy"
 
-#: ../data/five-or-more.ui.h:1
-msgid "Five or more"
-msgstr "Kulki"
-
 #: ../data/five-or-more.ui.h:2
-msgid "_Game"
-msgstr "_Gra"
-
-#: ../data/five-or-more.ui.h:3
-msgid "Scores"
-msgstr "Punkty"
-
-#: ../data/five-or-more.ui.h:4
-msgid "_Settings"
-msgstr "_Ustawienia"
-
-#: ../data/five-or-more.ui.h:5
-msgid "_Help"
-msgstr "Pomo_c"
-
-#. Help contents menu item
-#: ../data/five-or-more.ui.h:7 ../src/games-stock.c:247
-msgid "_Contents"
-msgstr "_Spis treści"
-
-#: ../data/five-or-more.ui.h:8
 msgid "Next:"
 msgstr "Następne:"
 
-#: ../data/five-or-more.ui.h:9
+#: ../data/five-or-more.ui.h:3
 msgid "0"
 msgstr "0"
 
-#: ../data/five-or-more.ui.h:10
+#: ../data/five-or-more.ui.h:4
 msgid "Score:"
 msgstr "Punkty:"
+
+#: ../data/menu.ui.h:1 ../src/games-scores-dialog.c:470
+msgid "New Game"
+msgstr "Nowa gra"
+
+#: ../data/menu.ui.h:2
+msgid "Scores"
+msgstr "Punkty"
+
+#: ../data/menu.ui.h:3 ../src/glines.c:176
+msgid "Preferences"
+msgstr "Preferencje"
+
+#: ../data/menu.ui.h:4
+msgid "Help"
+msgstr "Pomoc"
+
+#: ../data/menu.ui.h:5
+msgid "About"
+msgstr "O grze"
+
+#: ../data/menu.ui.h:6
+msgid "Quit"
+msgstr "Zakończ"
 
 #: ../data/org.gnome.five-or-more.gschema.xml.in.h:1
 msgid "Playing field size"
@@ -217,10 +216,6 @@ msgctxt "score-dialog"
 msgid "%1$dm %2$ds"
 msgstr "%1$dm %2$ds"
 
-#: ../src/games-scores-dialog.c:470
-msgid "New Game"
-msgstr "Nowa gra"
-
 #. Score dialog column header for the name of the player who recorded the score
 #: ../src/games-scores-dialog.c:571
 msgctxt "score-dialog"
@@ -307,6 +302,10 @@ msgstr "Konfiguruje grę"
 #: ../src/games-stock.c:59
 msgid "Quit this game"
 msgstr "Kończy działanie gry"
+
+#: ../src/games-stock.c:247
+msgid "_Contents"
+msgstr "_Spis treści"
 
 #: ../src/games-stock.c:248
 msgid "_Fullscreen"
@@ -447,10 +446,6 @@ msgstr "Duża"
 msgid "Could not load theme"
 msgstr "Nie można wczytać motywu"
 
-#: ../src/glines.c:176
-msgid "Preferences"
-msgstr "Preferencje"
-
 #: ../src/glines.c:196
 #, c-format
 msgid ""
@@ -482,24 +477,24 @@ msgid "Match five objects of the same type in a row to score!"
 msgstr ""
 "Należy ustawić w linii pięć kulek tego samego koloru, aby zdobyć punkty."
 
-#: ../src/glines.c:470
+#: ../src/glines.c:472
 msgid "GNOME Five or More"
 msgstr "GNOME Kulki"
 
-#: ../src/glines.c:472
+#: ../src/glines.c:474
 msgid "_Board size:"
 msgstr "_Rozmiar planszy:"
 
-#: ../src/glines.c:489
+#: ../src/glines.c:491
 msgid "Game Over!"
 msgstr "Koniec gry!"
 
 #. Can't move there!
-#: ../src/glines.c:646
+#: ../src/glines.c:648
 msgid "You can't move there!"
 msgstr "Nie można się tam ruszyć!"
 
-#: ../src/glines.c:1175
+#: ../src/glines.c:1181
 msgid ""
 "GNOME port of the once-popular Color Lines game.\n"
 "\n"
@@ -509,7 +504,7 @@ msgstr ""
 "\n"
 "Gra Kulki jest częścią gier GNOME."
 
-#: ../src/glines.c:1181
+#: ../src/glines.c:1187
 msgid "translator-credits"
 msgstr ""
 "Zbigniew Chyla <chyla@alice.ci.pwr.wroc.pl>, 1998-2002\n"
@@ -526,6 +521,6 @@ msgstr ""
 "Piotr Drąg <piotrdrag@gmail.com>, 2010-2013\n"
 "Aviary.pl <gnomepl@aviary.pl>, 2007-2013"
 
-#: ../src/glines.c:1184
+#: ../src/glines.c:1190
 msgid "GNOME Games web site"
 msgstr "Witryna gier GNOME"
