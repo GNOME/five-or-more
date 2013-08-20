@@ -1,3 +1,13 @@
+Five or More 3.9.90
+===================
+
+* Fix a crash when starting the game
+* Replace the menu bar with an application menu
+* Fullscreen option has been removed
+* Preferences dialog no longer considered a separate window by GNOME Shell
+* Fix two broken links in user help
+* Translation updates
+
 five-or-more 3.8.0
 ==================
 
