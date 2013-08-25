@@ -1,19 +1,20 @@
 # Jennie Petoumenou <epetoumenou@gmail.com>, 2009.
 # Fotis Tsamis <ftsamis@gmail.com>, 2009.
+# Dimitris Spingos (Δημήτρης Σπίγγος) <dmtrs32@gmail.com>, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: packagename\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-09-24 23:48+0000\n"
-"PO-Revision-Date: 2012-09-29 12:42+0200\n"
-"Last-Translator: Tom Tryfonidis <tomtryf@gmail.com>\n"
-"Language-Team: Greek <team@gnome.gr>\n"
+"POT-Creation-Date: 2013-06-04 03:44+0000\n"
+"PO-Revision-Date: 2013-08-25 16:30+0300\n"
+"Last-Translator: Dimitris Spingos (Δημήτρης Σπίγγος) <dmtrs32@gmail.com>\n"
+"Language-Team: team@gnome.gr\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 0.2\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Virtaal 0.7.1\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -21,7 +22,8 @@ msgid "translator-credits"
 msgstr ""
 "Τζένη Πετούμενου <epetoumenou@gmail.com>, 2009\n"
 "Φώτης Τσάμης <ftsamis@gmail.com>, 2009\n"
-"Θάνος Τρυφωνίδης <tomtryf@gmail.com>, 2012"
+"Θάνος Τρυφωνίδης <tomtryf@gmail.com>, 2012\n"
+"Δημήτρης Σπίγγος <dmtrs32@gmail.com>, 2013"
 
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
@@ -1028,11 +1030,14 @@ msgstr ""
 "συμμετάσχετε."
 
 #: C/translate.page:28(page/p)
+#| msgid ""
+#| "There are <link href=\"http://l10n.gnome.org/module/gnome-games/\">many "
+#| "languages</link> for which translations are still needed."
 msgid ""
-"There are <link href=\"http://l10n.gnome.org/module/gnome-games/\">many "
+"There are <link href=\"http://l10n.gnome.org/module/five-or-more/\">many "
 "languages</link> for which translations are still needed."
 msgstr ""
-"Υπάρχουν <link href=\"http://l10n.gnome.org/module/gnome-games/\">πολλές "
+"Υπάρχουν <link href=\"http://l10n.gnome.org/module/five-or-more/\">πολλές "
 "γλώσσες</link> για τις οποίες απαιτούνται μεταφράσεις."
 
 #: C/translate.page:30(page/p)
