@@ -8,8 +8,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: glines.HEAD\n"
-"POT-Creation-Date: 2013-06-04 03:44+0000\n"
-"PO-Revision-Date: 2013-06-05 18:20+0200\n"
+"POT-Creation-Date: 2013-08-27 01:30+0000\n"
+"PO-Revision-Date: 2013-09-02 16:56+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "Language: \n"
@@ -88,9 +88,6 @@ msgid "Creative Commons Share Alike 3.0"
 msgstr "Creative Commons Compartir Igual 3.0"
 
 #: C/index.page:25(page/title)
-#| msgid ""
-#| "<media type=\"image\" src=\"figures/logo32.png\">Five or More logo</"
-#| "media>Five or More"
 msgid ""
 "<media type=\"image\" src=\"figures/logo32.png\">Five or More logo</media> "
 "Five or More"
@@ -99,8 +96,15 @@ msgstr ""
 "media>Cinco o más"
 
 #: C/index.page:28(page/p)
+#| msgid ""
+#| "<key>Five or More</key> is a deceptively simple brain workout. The goal "
+#| "is to place at least five objects of the same <link xref=\"change-"
+#| "theme#images\">color or shape</link> into a straight line. The line can "
+#| "be horizontal, vertical or diagonal. Once five or more objects are "
+#| "grouped into a line, they disappear. The goal is to vanish as many "
+#| "objects as possible. The game is over when the entire board is full."
 msgid ""
-"<key>Five or More</key> is a deceptively simple brain workout. The goal is "
+"<app>Five or More</app> is a deceptively simple brain workout. The goal is "
 "to place at least five objects of the same <link xref=\"change-theme#images"
 "\">color or shape</link> into a straight line. The line can be horizontal, "
 "vertical or diagonal. Once five or more objects are grouped into a line, "
@@ -119,7 +123,8 @@ msgid "Game Play"
 msgstr "Juego"
 
 #: C/index.page:37(section/title)
-msgid "Useful tips"
+#| msgid "Useful tips"
+msgid "Useful Tips"
 msgstr "Consejos útiles"
 
 #: C/index.page:41(section/title)
@@ -940,26 +945,18 @@ msgid "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
 msgstr "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
 
 #: C/shortcuts.page:24(td/p)
-msgid "Fullscreen"
-msgstr "Pantalla completa"
-
-#: C/shortcuts.page:25(td/p)
-msgid "<key>F11</key>"
-msgstr "<key>F11</key>"
-
-#: C/shortcuts.page:28(td/p)
 msgid "Help"
 msgstr "Ayuda"
 
-#: C/shortcuts.page:29(td/p)
+#: C/shortcuts.page:25(td/p)
 msgid "<key>F1</key>"
 msgstr "<key>F1</key>"
 
-#: C/shortcuts.page:32(td/p)
+#: C/shortcuts.page:28(td/p)
 msgid "Quit"
 msgstr "Salir"
 
-#: C/shortcuts.page:33(td/p)
+#: C/shortcuts.page:29(td/p)
 msgid "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
 msgstr "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
 
@@ -1016,9 +1013,6 @@ msgstr ""
 "participar, es bienvenido."
 
 #: C/translate.page:28(page/p)
-#| msgid ""
-#| "There are <link href=\"http://l10n.gnome.org/module/gnome-games/\">many "
-#| "languages</link> for which translations are still needed."
 msgid ""
 "There are <link href=\"http://l10n.gnome.org/module/five-or-more/\">many "
 "languages</link> for which translations are still needed."
@@ -1060,6 +1054,12 @@ msgstr ""
 "Alternativamente, puede contactar con el equipo de internacionalización "
 "usando su <link href=\"http://mail.gnome.org/mailman/listinfo/gnome-i18n"
 "\">lista de correo</link>."
+
+#~ msgid "Fullscreen"
+#~ msgstr "Pantalla completa"
+
+#~ msgid "<key>F11</key>"
+#~ msgstr "<key>F11</key>"
 
 #~ msgid ""
 #~ "To file your bug, choose the component <gui>glines</gui> in the "
