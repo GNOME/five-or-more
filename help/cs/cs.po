@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games gnome-2-28\n"
-"POT-Creation-Date: 2013-06-04 03:44+0000\n"
+"POT-Creation-Date: 2013-08-27 01:30+0000\n"
 "PO-Revision-Date: 2013-07-25 21:04+0200\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
@@ -96,7 +96,7 @@ msgstr ""
 
 #: C/index.page:28(page/p)
 msgid ""
-"<key>Five or More</key> is a deceptively simple brain workout. The goal is "
+"<app>Five or More</app> is a deceptively simple brain workout. The goal is "
 "to place at least five objects of the same <link xref=\"change-theme#images"
 "\">color or shape</link> into a straight line. The line can be horizontal, "
 "vertical or diagonal. Once five or more objects are grouped into a line, "
@@ -115,7 +115,7 @@ msgid "Game Play"
 msgstr "Hraní hry"
 
 #: C/index.page:37(section/title)
-msgid "Useful tips"
+msgid "Useful Tips"
 msgstr "Užitečné tipy"
 
 #: C/index.page:41(section/title)
@@ -294,12 +294,10 @@ msgid "<em>Number of types</em>"
 msgstr "<em>Počet typů</em>"
 
 #: C/change-board-size.page:45(td/p)
-#| msgid "Objects per Turn"
 msgid "<em>New objects per turn</em>"
 msgstr "<em>Nových kamenů v tahu</em>"
 
 #: C/change-board-size.page:46(td/p)
-#| msgid "Number of Types"
 msgid "<em>Number of cells</em>"
 msgstr "<em>Počet polí</em>"
 
@@ -358,7 +356,6 @@ msgid "The 3 board sizes"
 msgstr "Tři velikosti hrací desky"
 
 #: C/change-board-size.page:79(media/p)
-#| msgid "<application>Five or More</application> Manual"
 msgid "<app>Five or More</app> Small board"
 msgstr "Malá hrací deska hry <application>Pět nebo víc</application>"
 
@@ -367,7 +364,6 @@ msgid "<app>Five or More</app> medium size board"
 msgstr "Střední hrací deska hry <application>Pět nebo víc</application>"
 
 #: C/change-board-size.page:89(media/p)
-#| msgid "<application>Five or More</application> Manual"
 msgid "<app>Five or More</app> large size board"
 msgstr "Velká hrací deska hry <application>Pět nebo víc</application>"
 
@@ -451,7 +447,6 @@ msgid "Five or More with different balls"
 msgstr "Hra <app>Pět nebo víc</app> s různými kuličkami"
 
 #: C/change-theme.page:42(media/p)
-#| msgid "<application>Five or More</application> Manual"
 msgid "<app>Five or More</app> with different shapes"
 msgstr "Hra <app>Pět nebo víc</app> s různými tvary"
 
@@ -460,7 +455,6 @@ msgid "Background colors available"
 msgstr "Dostupné barvy pozadí"
 
 #: C/change-theme.page:50(media/p)
-#| msgid "Five or More"
 msgid "Five or More color palette"
 msgstr "Barevná paleta ve hře <app>Pět nebo víc</app>"
 
@@ -538,9 +532,6 @@ msgid "Under <gui>General</gui>, select <gui>Use fast moves</gui>."
 msgstr "V <gui>Obecné</gui> zaškrtněte <gui>Používat rychlé tahy</gui>."
 
 #: C/fast-moves.page:33(note/p)
-#| msgid ""
-#| "Any changes you make are instantly applied and remembered for the next "
-#| "time you run <application>Five or More</application>."
 msgid ""
 "Any changes you make are instantly applied and remembered for the next time "
 "you run <app>Five or More</app>."
@@ -824,12 +815,10 @@ msgid "Example diagonal alignment"
 msgstr "Příklad úhlopříčného uspořádání"
 
 #: C/rules.page:60(media/p)
-#| msgid "<application>Five or More</application> Manual"
 msgid "<app>Five or More</app> game over position."
 msgstr "Stav na konci hry <app>Pět nebo víc</app>."
 
 #: C/scores.page:20(page/title)
-#| msgid "Score given"
 msgid "Scoring"
 msgstr "Skóre"
 
@@ -842,12 +831,10 @@ msgstr ""
 "závisí na počtu kamenů, které zmizí."
 
 #: C/scores.page:27(td/p)
-#| msgid "Number of objects"
 msgid "<em>Number of objects</em>"
 msgstr "<em>Počet kamenů</em>"
 
 #: C/scores.page:28(td/p)
-#| msgid "Number of objects"
 msgid "<em>Number of points</em>"
 msgstr "<em>Počet bodů</em>"
 
@@ -942,26 +929,18 @@ msgid "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
 msgstr "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
 
 #: C/shortcuts.page:24(td/p)
-msgid "Fullscreen"
-msgstr "Celá obrazovka"
-
-#: C/shortcuts.page:25(td/p)
-msgid "<key>F11</key>"
-msgstr "<key>F11</key>"
-
-#: C/shortcuts.page:28(td/p)
 msgid "Help"
 msgstr "Nápověda"
 
-#: C/shortcuts.page:29(td/p)
+#: C/shortcuts.page:25(td/p)
 msgid "<key>F1</key>"
 msgstr "<key>F1</key>"
 
-#: C/shortcuts.page:32(td/p)
+#: C/shortcuts.page:28(td/p)
 msgid "Quit"
 msgstr "Ukončit"
 
-#: C/shortcuts.page:33(td/p)
+#: C/shortcuts.page:29(td/p)
 msgid "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
 msgstr "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
 
