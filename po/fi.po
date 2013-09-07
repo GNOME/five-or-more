@@ -4,32 +4,32 @@
 #
 #
 # Gnome 2012-03 Finnish translation sprint participants:
-# Jiri Grönroos
 # Niklas Laxström
 # Sami Pesonen <sampeson@iki.fi>, 2002-2005.
 # Ilkka Tuohela <hile@iki.fi>, 2005-2009.
 # Timo Jyrinki <timo.jyrinki@iki.fi>, 2008.
-# Jiri Grönroos <jiri.gronroos@iki.fi>, 2012, 2013.
+# Jiri Grönroos <jiri.gronroos+l10n@iki.fi>, 2012, 2013.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-"
 "or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-03-24 18:45+0000\n"
-"PO-Revision-Date: 2013-03-26 20:24+0200\n"
+"POT-Creation-Date: 2013-08-11 16:36+0000\n"
+"PO-Revision-Date: 2013-09-04 20:29+0300\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos+l10n@iki.fi>\n"
-"Language-Team: Finnish <gnome-fi-laatu@lists.sourceforge.net>\n"
+"Language-Team: suomi <gnome-fi-laatu@lists.sourceforge.net>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Launchpad-Export-Date: 2010-09-13 15:09+0000\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Gtranslator 2.91.6\n"
 "X-POT-Import-Date: 2012-03-05 14:46:29+0000\n"
 
-#: ../data/glines.desktop.in.in.h:1 ../src/glines.c:1170 ../src/glines.c:1173
-#: ../src/glines.c:1662
+#: ../data/glines.desktop.in.in.h:1 ../data/five-or-more.ui.h:1
+#: ../src/glines.c:1176 ../src/glines.c:1179 ../src/glines.c:1703
 msgid "Five or More"
 msgstr "Viisi tai enemmän"
 
@@ -81,42 +81,44 @@ msgstr "Yleisasetukset"
 msgid "_Use fast moves"
 msgstr "Käytä _nopeita siirtoja"
 
-#: ../data/five-or-more.ui.h:1
-msgid "Five or more"
-msgstr "Viisi tai enemmän"
-
 #: ../data/five-or-more.ui.h:2
-msgid "_Game"
-msgstr "_Peli"
-
-#: ../data/five-or-more.ui.h:3
-msgid "Scores"
-msgstr "Pisteet"
-
-#: ../data/five-or-more.ui.h:4
-msgid "_Settings"
-msgstr "_Asetukset"
-
-#: ../data/five-or-more.ui.h:5
-msgid "_Help"
-msgstr "O_hje"
-
-#. Help contents menu item
-#: ../data/five-or-more.ui.h:7 ../src/games-stock.c:247
-msgid "_Contents"
-msgstr "_Sisältö"
-
-#: ../data/five-or-more.ui.h:8
 msgid "Next:"
 msgstr "Seuraava:"
 
-#: ../data/five-or-more.ui.h:9
+#: ../data/five-or-more.ui.h:3
 msgid "0"
 msgstr "0"
 
-#: ../data/five-or-more.ui.h:10
+#: ../data/five-or-more.ui.h:4
 msgid "Score:"
 msgstr "Pisteet:"
+
+#: ../data/menu.ui.h:1 ../src/games-scores-dialog.c:470
+msgid "New Game"
+msgstr "Uusi peli"
+
+#: ../data/menu.ui.h:2
+msgid "Scores"
+msgstr "Pisteet"
+
+#: ../data/menu.ui.h:3 ../src/glines.c:176
+msgid "Preferences"
+msgstr "Asetukset"
+
+#: ../data/menu.ui.h:4
+#| msgid "_Help"
+msgid "Help"
+msgstr "Ohje"
+
+#: ../data/menu.ui.h:5
+#| msgid "_About"
+msgid "About"
+msgstr "Tietoja"
+
+#: ../data/menu.ui.h:6
+#| msgid "_Quit"
+msgid "Quit"
+msgstr "Lopeta"
 
 #: ../data/org.gnome.five-or-more.gschema.xml.in.h:1
 msgid "Playing field size"
@@ -191,7 +193,7 @@ msgstr "tosi jos ikkuna on suurennettu"
 
 #: ../data/org.gnome.five-or-more.gschema.xml.in.h:18
 msgid "true if the window is fullscren"
-msgstr ""
+msgstr "tosi jos ikkuna on koko näytön tilassa"
 
 #. Score dialog column header for the score time (e.g. 1 minute)
 #: ../src/games-scores-dialog.c:136
@@ -211,10 +213,6 @@ msgstr "Pisteet"
 msgctxt "score-dialog"
 msgid "%1$dm %2$ds"
 msgstr "%d min %d s"
-
-#: ../src/games-scores-dialog.c:470
-msgid "New Game"
-msgstr "Uusi peli"
 
 #. Score dialog column header for the name of the player who recorded the score
 #: ../src/games-scores-dialog.c:571
@@ -302,6 +300,10 @@ msgstr "Määrittele pelin asetukset"
 #: ../src/games-stock.c:59
 msgid "Quit this game"
 msgstr "Lopeta tämä peli"
+
+#: ../src/games-stock.c:247
+msgid "_Contents"
+msgstr "_Sisältö"
 
 #: ../src/games-stock.c:248
 msgid "_Fullscreen"
@@ -440,10 +442,6 @@ msgstr "Suuri"
 msgid "Could not load theme"
 msgstr "Teemaa ei voi ladata"
 
-#: ../src/glines.c:176
-msgid "Preferences"
-msgstr "Asetukset"
-
 #: ../src/glines.c:196
 #, c-format
 msgid ""
@@ -474,24 +472,24 @@ msgstr ""
 msgid "Match five objects of the same type in a row to score!"
 msgstr "Siirrä viisi samanväristä palloa riviin saadaksesi pisteitä!"
 
-#: ../src/glines.c:470
+#: ../src/glines.c:472
 msgid "GNOME Five or More"
 msgstr "GNOMEn viisi tai enemmän"
 
-#: ../src/glines.c:472
+#: ../src/glines.c:474
 msgid "_Board size:"
 msgstr "_Laudan koko:"
 
-#: ../src/glines.c:489
+#: ../src/glines.c:491
 msgid "Game Over!"
 msgstr "Peli päättyi!"
 
 #. Can't move there!
-#: ../src/glines.c:646
+#: ../src/glines.c:648
 msgid "You can't move there!"
 msgstr "Ei voi siirtää sinne!"
 
-#: ../src/glines.c:1175
+#: ../src/glines.c:1181
 msgid ""
 "GNOME port of the once-popular Color Lines game.\n"
 "\n"
@@ -501,9 +499,10 @@ msgstr ""
 "\n"
 "Viisi tai enemmän on osa GNOMEn pelejä."
 
-#: ../src/glines.c:1181
+#: ../src/glines.c:1187
 msgid "translator-credits"
 msgstr ""
+"Jiri Grönroos, 2012-2013\n"
 "Timo Jyrinki, 2008\n"
 "Ilkka Tuohela, 2006-2009\n"
 "Sami Pesonen, 2002-2005\n"
@@ -521,9 +520,18 @@ msgstr ""
 "  Timo Jyrinki https://launchpad.net/~timo-jyrinki\n"
 "  eGetin https://launchpad.net/~egetin"
 
-#: ../src/glines.c:1184
+#: ../src/glines.c:1190
 msgid "GNOME Games web site"
-msgstr "GNOMEn pelien www-sivut"
+msgstr "Gnomen pelien verkkosivusto"
+
+#~ msgid "Five or more"
+#~ msgstr "Viisi tai enemmän"
+
+#~ msgid "_Game"
+#~ msgstr "_Peli"
+
+#~ msgid "_Settings"
+#~ msgstr "_Asetukset"
 
 #~ msgid "Chess"
 #~ msgstr "Shakki"
@@ -1930,12 +1938,6 @@ msgstr "GNOMEn pelien www-sivut"
 
 #~ msgid "_Preferences"
 #~ msgstr "_Asetukset"
-
-#~ msgid "_About"
-#~ msgstr "_Tietoja"
-
-#~ msgid "_Quit"
-#~ msgstr "_Lopeta"
 
 #~| msgid "_Hint"
 #~ msgid "Hint"
