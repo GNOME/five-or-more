@@ -1,14 +1,14 @@
 # Ales Nyakhaychyk <nab@mail.by>, 2003.
-# Ihar Hrachyshka <ihar.hrachyshka@gmail.com>, 2011.
+# Ihar Hrachyshka <ihar.hrachyshka@gmail.com>, 2011, 2013.
 # Kasia Bondarava <kasia.bondarava@gmail.com>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-"
 "or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-01-28 23:19+0000\n"
+"POT-Creation-Date: 2013-08-11 16:36+0000\n"
 "PO-Revision-Date: 2012-09-07 18:13+0300\n"
-"Last-Translator: Kasia Bondarava <kasia.bondarava@gmail.com>\n"
+"Last-Translator: Ihar Hrachyshka <ihar.hrachyshka@gmail.com>\n"
 "Language-Team: Belarusian <i18n-bel-gnome@googlegroups.com>\n"
 "Language: be\n"
 "MIME-Version: 1.0\n"
@@ -19,16 +19,16 @@ msgstr ""
 "X-Generator: Virtaal 0.7.0\n"
 "X-Project-Style: gnome\n"
 
-#: ../data/five-or-more.desktop.in.in.h:1 ../src/glines.c:1170
-#: ../src/glines.c:1173 ../src/glines.c:1661
+#: ../data/glines.desktop.in.in.h:1 ../data/five-or-more.ui.h:1
+#: ../src/glines.c:1176 ../src/glines.c:1179 ../src/glines.c:1703
 msgid "Five or More"
 msgstr "Пяць і болей"
 
-#: ../data/five-or-more.desktop.in.in.h:2
+#: ../data/glines.desktop.in.in.h:2
 msgid "Remove colored balls from the board by forming lines"
 msgstr "Выдаляй каляровыя аб'екты з дошкі, складаючы іх у лініі"
 
-#: ../data/five-or-more.desktop.in.in.h:3
+#: ../data/glines.desktop.in.in.h:3
 msgid "game;strategy;logic;"
 msgstr "гульня;стратэгія;логіка;лагічная гульня;"
 
@@ -72,42 +72,41 @@ msgstr "Агульнае"
 msgid "_Use fast moves"
 msgstr "_Хуткія хады"
 
-#: ../data/five-or-more.ui.h:1
-msgid "Five or more"
-msgstr "Пяць і болей"
-
 #: ../data/five-or-more.ui.h:2
-msgid "_Game"
-msgstr "_Гульня"
-
-#: ../data/five-or-more.ui.h:3
-msgid "Scores"
-msgstr "Лік"
-
-#: ../data/five-or-more.ui.h:4
-msgid "_Settings"
-msgstr "_Настройкі"
-
-#: ../data/five-or-more.ui.h:5
-msgid "_Help"
-msgstr "_Дапамога"
-
-#. Help contents menu item
-#: ../data/five-or-more.ui.h:7 ../src/games-stock.c:247
-msgid "_Contents"
-msgstr "_Змест"
-
-#: ../data/five-or-more.ui.h:8
 msgid "Next:"
 msgstr "Наступныя:"
 
-#: ../data/five-or-more.ui.h:9
+#: ../data/five-or-more.ui.h:3
 msgid "0"
 msgstr "0"
 
-#: ../data/five-or-more.ui.h:10
+#: ../data/five-or-more.ui.h:4
 msgid "Score:"
 msgstr "Лік:"
+
+#: ../data/menu.ui.h:1 ../src/games-scores-dialog.c:470
+msgid "New Game"
+msgstr "Новая гульня"
+
+#: ../data/menu.ui.h:2
+msgid "Scores"
+msgstr "Лік"
+
+#: ../data/menu.ui.h:3 ../src/glines.c:176
+msgid "Preferences"
+msgstr "Настройкі"
+
+#: ../data/menu.ui.h:4
+msgid "Help"
+msgstr "Дапамога"
+
+#: ../data/menu.ui.h:5
+msgid "About"
+msgstr "Аб праграме"
+
+#: ../data/menu.ui.h:6
+msgid "Quit"
+msgstr "Выйсці"
 
 #: ../data/org.gnome.five-or-more.gschema.xml.in.h:1
 msgid "Playing field size"
@@ -203,10 +202,6 @@ msgctxt "score-dialog"
 msgid "%1$dm %2$ds"
 msgstr "%1$dхв %2$dс"
 
-#: ../src/games-scores-dialog.c:470
-msgid "New Game"
-msgstr "Новая гульня"
-
 #. Score dialog column header for the name of the player who recorded the score
 #: ../src/games-scores-dialog.c:571
 msgctxt "score-dialog"
@@ -293,6 +288,10 @@ msgstr "Настроіць гульню"
 #: ../src/games-stock.c:59
 msgid "Quit this game"
 msgstr "Выйсці з гульні"
+
+#: ../src/games-stock.c:247
+msgid "_Contents"
+msgstr "_Змест"
 
 #: ../src/games-stock.c:248
 msgid "_Fullscreen"
@@ -431,10 +430,6 @@ msgstr "Вялікі"
 msgid "Could not load theme"
 msgstr "Не ўдалося загрузіць матыў аздаблення"
 
-#: ../src/glines.c:176
-msgid "Preferences"
-msgstr "Настройкі"
-
 #: ../src/glines.c:196
 #, c-format
 msgid ""
@@ -465,24 +460,24 @@ msgstr ""
 msgid "Match five objects of the same type in a row to score!"
 msgstr "Складайце па пяць аб'ектаў аднаго тыпу ў лінію!"
 
-#: ../src/glines.c:470
+#: ../src/glines.c:472
 msgid "GNOME Five or More"
 msgstr "Пяць і болей (GNOME)"
 
-#: ../src/glines.c:472
+#: ../src/glines.c:474
 msgid "_Board size:"
 msgstr "_Памер дошкі:"
 
-#: ../src/glines.c:489
+#: ../src/glines.c:491
 msgid "Game Over!"
 msgstr "Гульня скончана!"
 
 #. Can't move there!
-#: ../src/glines.c:646
+#: ../src/glines.c:648
 msgid "You can't move there!"
 msgstr "Сюды немагчыма перамясціць аб'ект!"
 
-#: ../src/glines.c:1175
+#: ../src/glines.c:1181
 msgid ""
 "GNOME port of the once-popular Color Lines game.\n"
 "\n"
@@ -492,13 +487,13 @@ msgstr ""
 "\n"
 "Гульня \"Пяць і болей\" з'яўляецца складовай часткай пакунка гульняў GNOME."
 
-#: ../src/glines.c:1181
+#: ../src/glines.c:1187
 msgid "translator-credits"
 msgstr ""
 "Ales Nyakhaychyk <nab@mail.by>\n"
 "Ihar Hrachyshka <ihar.hrachyshka@gmail.com>"
 
-#: ../src/glines.c:1184
+#: ../src/glines.c:1190
 msgid "GNOME Games web site"
 msgstr "Сеціўная пляцоўка гульняў GNOME"
 
