@@ -27,7 +27,7 @@ desktopdir = $(datadir)/applications
 desktop_DATA = $(desktop_in_files:.desktop.in.in=.desktop)
 @INTLTOOL_DESKTOP_RULE@
 
-appdata_dir = $(datadir)/appdata
+appdatadir = $(datadir)/appdata
 appdata_DATA = five-or-more.appdata.xml
 
 EXTRA_DIST = 			\
