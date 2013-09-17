@@ -34,8 +34,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-03-17 08:44+0100\n"
-"PO-Revision-Date: 2013-03-16 17:27+0100\n"
+"POT-Creation-Date: 2013-09-17 18:39+0200\n"
+"PO-Revision-Date: 2013-09-17 00:13+0200\n"
 "Last-Translator: Ask Hjorth Larsen <asklarsen@gmail.com>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "Language: da\n"
@@ -44,16 +44,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
-#: ../data/five-or-more.desktop.in.in.h:1 ../src/glines.c:1170
-#: ../src/glines.c:1173 ../src/glines.c:1662
+#: ../data/glines.desktop.in.in.h:1 ../data/five-or-more.ui.h:1
+#: ../src/glines.c:1176 ../src/glines.c:1179 ../src/glines.c:1704
 msgid "Five or More"
 msgstr "Kugler på stribe"
 
-#: ../data/five-or-more.desktop.in.in.h:2
+#: ../data/glines.desktop.in.in.h:2
 msgid "Remove colored balls from the board by forming lines"
 msgstr "Fjern farvede kugler fra brættet ved at danne linjer"
 
-#: ../data/five-or-more.desktop.in.in.h:3
+#: ../data/glines.desktop.in.in.h:3
 msgid "game;strategy;logic;"
 msgstr "spil;strategi;logik;"
 
@@ -97,42 +97,41 @@ msgstr "General"
 msgid "_Use fast moves"
 msgstr "_Benyt hurtige træk"
 
-#: ../data/five-or-more.ui.h:1
-msgid "Five or more"
-msgstr "Kugler på stribe"
-
 #: ../data/five-or-more.ui.h:2
-msgid "_Game"
-msgstr "_Spil"
-
-#: ../data/five-or-more.ui.h:3
-msgid "Scores"
-msgstr "Resultater"
-
-#: ../data/five-or-more.ui.h:4
-msgid "_Settings"
-msgstr "_Opsætning"
-
-#: ../data/five-or-more.ui.h:5
-msgid "_Help"
-msgstr "_Hjælp"
-
-#. Help contents menu item
-#: ../data/five-or-more.ui.h:7 ../src/games-stock.c:247
-msgid "_Contents"
-msgstr "_Indhold"
-
-#: ../data/five-or-more.ui.h:8
 msgid "Next:"
 msgstr "Næste:"
 
-#: ../data/five-or-more.ui.h:9
+#: ../data/five-or-more.ui.h:3
 msgid "0"
 msgstr "0"
 
-#: ../data/five-or-more.ui.h:10
+#: ../data/five-or-more.ui.h:4
 msgid "Score:"
 msgstr "Point:"
+
+#: ../data/menu.ui.h:1 ../src/games-scores-dialog.c:470
+msgid "New Game"
+msgstr "Nyt spil"
+
+#: ../data/menu.ui.h:2
+msgid "Scores"
+msgstr "Resultater"
+
+#: ../data/menu.ui.h:3 ../src/glines.c:176
+msgid "Preferences"
+msgstr "Indstillinger"
+
+#: ../data/menu.ui.h:4
+msgid "Help"
+msgstr "Hjælp"
+
+#: ../data/menu.ui.h:5
+msgid "About"
+msgstr "Om"
+
+#: ../data/menu.ui.h:6
+msgid "Quit"
+msgstr "Afslut"
 
 #: ../data/org.gnome.five-or-more.gschema.xml.in.h:1
 msgid "Playing field size"
@@ -227,10 +226,6 @@ msgctxt "score-dialog"
 msgid "%1$dm %2$ds"
 msgstr "%1$dm %2$ds"
 
-#: ../src/games-scores-dialog.c:470
-msgid "New Game"
-msgstr "Nyt spil"
-
 #. Score dialog column header for the name of the player who recorded the score
 #: ../src/games-scores-dialog.c:571
 msgctxt "score-dialog"
@@ -317,6 +312,10 @@ msgstr "Konfigurér spillet"
 #: ../src/games-stock.c:59
 msgid "Quit this game"
 msgstr "Afslut dette spil"
+
+#: ../src/games-stock.c:247
+msgid "_Contents"
+msgstr "_Indhold"
 
 #: ../src/games-stock.c:248
 msgid "_Fullscreen"
@@ -454,10 +453,6 @@ msgstr "Stor"
 msgid "Could not load theme"
 msgstr "Kunne ikke indlæse tema"
 
-#: ../src/glines.c:176
-msgid "Preferences"
-msgstr "Indstillinger"
-
 #: ../src/glines.c:196
 #, c-format
 msgid ""
@@ -488,24 +483,24 @@ msgstr ""
 msgid "Match five objects of the same type in a row to score!"
 msgstr "Få fem kugler af den samme farve på stribe for at få point!"
 
-#: ../src/glines.c:470
+#: ../src/glines.c:472
 msgid "GNOME Five or More"
 msgstr "Kugler på stribe"
 
-#: ../src/glines.c:472
+#: ../src/glines.c:474
 msgid "_Board size:"
 msgstr "_Brætstørrelse:"
 
-#: ../src/glines.c:489
+#: ../src/glines.c:491
 msgid "Game Over!"
 msgstr "Spillet er slut!"
 
 #. Can't move there!
-#: ../src/glines.c:646
+#: ../src/glines.c:648
 msgid "You can't move there!"
 msgstr "Kan ikke flytte dertil!"
 
-#: ../src/glines.c:1175
+#: ../src/glines.c:1181
 msgid ""
 "GNOME port of the once-popular Color Lines game.\n"
 "\n"
@@ -515,7 +510,7 @@ msgstr ""
 "\n"
 "Kugler på stribe er en del af GNOME Games."
 
-#: ../src/glines.c:1181
+#: ../src/glines.c:1187
 msgid "translator-credits"
 msgstr ""
 "Anders Wegge Jakobsen\n"
@@ -528,9 +523,21 @@ msgstr ""
 "Dansk-gruppen <dansk@dansk-gruppen.dk>\n"
 "Mere info: http://www.dansk-gruppen.dk"
 
-#: ../src/glines.c:1184
+#: ../src/glines.c:1190
 msgid "GNOME Games web site"
 msgstr "Hjemmeside for GNOME Games"
+
+#~ msgid "Five or more"
+#~ msgstr "Kugler på stribe"
+
+#~ msgid "_Game"
+#~ msgstr "_Spil"
+
+#~ msgid "_Settings"
+#~ msgstr "_Opsætning"
+
+#~ msgid "_Help"
+#~ msgstr "_Hjælp"
 
 #~ msgid "Chess"
 #~ msgstr "Skak"
@@ -1929,9 +1936,6 @@ msgstr "Hjemmeside for GNOME Games"
 
 #~ msgid "_About"
 #~ msgstr "_Om"
-
-#~ msgid "_Quit"
-#~ msgstr "_Afslut"
 
 #~ msgid "Hint"
 #~ msgstr "Fif"
@@ -6758,9 +6762,6 @@ msgstr "Hjemmeside for GNOME Games"
 #~ "GGZ-klienten skal startes direkte for at\n"
 #~ "dette spil kan spilles."
 
-#~ msgid "About"
-#~ msgstr "Om"
-
 #~ msgid "Message of the Day"
 #~ msgstr "Dagens meddelelse"
 
@@ -7074,9 +7075,6 @@ msgstr "Hjemmeside for GNOME Games"
 # Jeg er ikke klar over om der findes en standardiseret dansk oversættelse
 #~ msgid "MOTD"
 #~ msgstr "Dagens meddelelse"
-
-#~ msgid "Help"
-#~ msgstr "Hjælp"
 
 #~ msgid "Contents"
 #~ msgstr "Indhold"
