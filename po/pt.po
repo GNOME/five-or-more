@@ -6,10 +6,10 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: 3.8\n"
+"Project-Id-Version: 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-03-15 16:08+0000\n"
-"PO-Revision-Date: 2013-03-15 16:10+0000\n"
+"POT-Creation-Date: 2013-09-23 02:11+0100\n"
+"PO-Revision-Date: 2013-09-23 02:15+0000\n"
 "Last-Translator: Duarte Loreto <happyguy_pt@hotmail.com>\n"
 "Language-Team: Portuguese <gnome_pt@yahoogroups.com>\n"
 "Language: pt\n"
@@ -18,16 +18,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../data/five-or-more.desktop.in.in.h:1 ../src/glines.c:1170
-#: ../src/glines.c:1173 ../src/glines.c:1662
+#: ../data/glines.desktop.in.in.h:1 ../data/five-or-more.ui.h:1
+#: ../src/glines.c:1176 ../src/glines.c:1179 ../src/glines.c:1704
 msgid "Five or More"
 msgstr "Cinco ou Mais"
 
-#: ../data/five-or-more.desktop.in.in.h:2
+#: ../data/glines.desktop.in.in.h:2
 msgid "Remove colored balls from the board by forming lines"
 msgstr "Remova bolas coloridas do tabuleiro formando linhas"
 
-#: ../data/five-or-more.desktop.in.in.h:3
+#: ../data/glines.desktop.in.in.h:3
 msgid "game;strategy;logic;"
 msgstr "jogo;estratégia;lógica;"
 
@@ -71,42 +71,41 @@ msgstr "General"
 msgid "_Use fast moves"
 msgstr "_Utilizar jogadas rápidas"
 
-#: ../data/five-or-more.ui.h:1
-msgid "Five or more"
-msgstr "Cinco ou mais"
-
 #: ../data/five-or-more.ui.h:2
-msgid "_Game"
-msgstr "_Jogo"
-
-#: ../data/five-or-more.ui.h:3
-msgid "Scores"
-msgstr "Pontuações"
-
-#: ../data/five-or-more.ui.h:4
-msgid "_Settings"
-msgstr "_Definições"
-
-#: ../data/five-or-more.ui.h:5
-msgid "_Help"
-msgstr "_Ajuda"
-
-#. Help contents menu item
-#: ../data/five-or-more.ui.h:7 ../src/games-stock.c:247
-msgid "_Contents"
-msgstr "_Conteúdo"
-
-#: ../data/five-or-more.ui.h:8
 msgid "Next:"
 msgstr "Seguinte:"
 
-#: ../data/five-or-more.ui.h:9
+#: ../data/five-or-more.ui.h:3
 msgid "0"
 msgstr "0"
 
-#: ../data/five-or-more.ui.h:10
+#: ../data/five-or-more.ui.h:4
 msgid "Score:"
 msgstr "Pontuação:"
+
+#: ../data/menu.ui.h:1 ../src/games-scores-dialog.c:470
+msgid "New Game"
+msgstr "Novo Jogo"
+
+#: ../data/menu.ui.h:2
+msgid "Scores"
+msgstr "Pontuações"
+
+#: ../data/menu.ui.h:3 ../src/glines.c:176
+msgid "Preferences"
+msgstr "Preferências"
+
+#: ../data/menu.ui.h:4
+msgid "Help"
+msgstr "Ajuda"
+
+#: ../data/menu.ui.h:5
+msgid "About"
+msgstr "Sobre"
+
+#: ../data/menu.ui.h:6
+msgid "Quit"
+msgstr "Sair"
 
 #: ../data/org.gnome.five-or-more.gschema.xml.in.h:1
 msgid "Playing field size"
@@ -203,10 +202,6 @@ msgctxt "score-dialog"
 msgid "%1$dm %2$ds"
 msgstr "%1$dm %2$ds"
 
-#: ../src/games-scores-dialog.c:470
-msgid "New Game"
-msgstr "Novo Jogo"
-
 #. Score dialog column header for the name of the player who recorded the score
 #: ../src/games-scores-dialog.c:571
 msgctxt "score-dialog"
@@ -293,6 +288,10 @@ msgstr "Configurar o jogo"
 #: ../src/games-stock.c:59
 msgid "Quit this game"
 msgstr "Sair deste jogo"
+
+#: ../src/games-stock.c:247
+msgid "_Contents"
+msgstr "_Conteúdo"
 
 #: ../src/games-stock.c:248
 msgid "_Fullscreen"
@@ -431,10 +430,6 @@ msgstr "Grande"
 msgid "Could not load theme"
 msgstr "Incapaz de ler o tema"
 
-#: ../src/glines.c:176
-msgid "Preferences"
-msgstr "Preferências"
-
 #: ../src/glines.c:196
 #, c-format
 msgid ""
@@ -465,24 +460,24 @@ msgstr ""
 msgid "Match five objects of the same type in a row to score!"
 msgstr "Coincida cinco objetos do mesmo tipo numa linha para pontuar!"
 
-#: ../src/glines.c:470
+#: ../src/glines.c:472
 msgid "GNOME Five or More"
 msgstr "GNOME Cinco ou Mais"
 
-#: ../src/glines.c:472
+#: ../src/glines.c:474
 msgid "_Board size:"
 msgstr "_Tamanho do tabuleiro:"
 
-#: ../src/glines.c:489
+#: ../src/glines.c:491
 msgid "Game Over!"
 msgstr "Jogo Terminado!"
 
 #. Can't move there!
-#: ../src/glines.c:646
+#: ../src/glines.c:648
 msgid "You can't move there!"
 msgstr "Impossível mover-se para aí!"
 
-#: ../src/glines.c:1175
+#: ../src/glines.c:1181
 msgid ""
 "GNOME port of the once-popular Color Lines game.\n"
 "\n"
@@ -492,13 +487,25 @@ msgstr ""
 "\n"
 "Cinco ou Mais faz parte dos Jogos GNOME."
 
-#: ../src/glines.c:1181
+#: ../src/glines.c:1187
 msgid "translator-credits"
 msgstr "Duarte Loreto <happyguy_pt@hotmail.com>"
 
-#: ../src/glines.c:1184
+#: ../src/glines.c:1190
 msgid "GNOME Games web site"
 msgstr "Página dos jogos GNOME"
+
+#~ msgid "Five or more"
+#~ msgstr "Cinco ou mais"
+
+#~ msgid "_Game"
+#~ msgstr "_Jogo"
+
+#~ msgid "_Settings"
+#~ msgstr "_Definições"
+
+#~ msgid "_Help"
+#~ msgstr "_Ajuda"
 
 #~ msgid "Chess"
 #~ msgstr "Xadrez"
@@ -1894,9 +1901,6 @@ msgstr "Página dos jogos GNOME"
 
 #~ msgid "_About"
 #~ msgstr "_Sobre"
-
-#~ msgid "_Quit"
-#~ msgstr "_Sair"
 
 #~ msgid "Hint"
 #~ msgstr "Dica"
@@ -6700,9 +6704,6 @@ msgstr "Página dos jogos GNOME"
 #~ "Tem de iniciar o cliente GGZ diretamente\n"
 #~ "para poder jogar este jogo."
 
-#~ msgid "About"
-#~ msgstr "Sobre"
-
 #~ msgid "Message of the Day"
 #~ msgstr "Mensagem do Dia"
 
@@ -7014,9 +7015,6 @@ msgstr "Página dos jogos GNOME"
 
 #~ msgid "MOTD"
 #~ msgstr "MdD"
-
-#~ msgid "Help"
-#~ msgstr "Ajuda"
 
 #~ msgid "Contents"
 #~ msgstr "Conteúdo"
