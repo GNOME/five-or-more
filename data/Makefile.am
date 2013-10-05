@@ -22,9 +22,9 @@ gsettings_SCHEMAS = $(gsettings_in_file:.xml.in=.xml)
 
 man_MANS = five-or-more.6
 
-desktop_in_files = glines.desktop.in.in
+desktop_in_files = glines.desktop.in
 desktopdir = $(datadir)/applications
-desktop_DATA = $(desktop_in_files:.desktop.in.in=.desktop)
+desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
 @INTLTOOL_DESKTOP_RULE@
 
 appdatadir = $(datadir)/appdata
@@ -33,11 +33,12 @@ appdata_DATA = five-or-more.appdata.xml
 EXTRA_DIST = 			\
 	$(theme_DATA)		\
         $(appdata_DATA)		\
+	$(desktop_in_files)	\
 	$(gsettings_in_file)    \
 	$(man_MANS)	\
 	$(ui_DATA)
 
 CLEANFILES = $(desktop_DATA) $(gsettings_SCHEMAS)
-DISTCLEANFILES = $(desktop_DATA) $(gsettings_SCHEMAS)
+DISTCLEANFILES = $(gsettings_SCHEMAS)
 
 -include $(top_srcdir)/git.mk

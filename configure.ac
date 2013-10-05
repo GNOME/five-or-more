@@ -89,7 +89,6 @@ Makefile
 po/Makefile.in
 data/Makefile
 data/icons/Makefile
-data/glines.desktop.in
 help/Makefile
 src/Makefile
 ])
