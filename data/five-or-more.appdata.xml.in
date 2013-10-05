@@ -5,10 +5,14 @@
  <licence>CC0</licence>
  <description>
   <_p>
-   Five or More is the GNOME port of a once-popular game. Align five or more
-   objects of the same color into a line to cause them to disappear and score
-   points. More objects appear after every turn. Play as long as possible, until
-   the board is completely full.
+   Five or More is the GNOME port of a once-popular computer game. Align five or
+   more objects of the same color into a line to cause them to disappear and
+   score points. Earn many more points by lining up as many objects as possible
+   before clearing them.
+  </_p>
+  <_p>
+   More objects appear after every turn. Play for as long as possible, until the
+   board is completely full!
   </_p>
  </description>
  <screenshots>
