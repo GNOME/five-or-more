@@ -15,9 +15,7 @@ theme_DATA = \
 	pulse.png	\
 	shapes.svg
 
-gsettings_in_file = org.gnome.five-or-more.gschema.xml.in
-gsettings_SCHEMAS = $(gsettings_in_file:.xml.in=.xml)
-@INTLTOOL_XML_NOMERGE_RULE@
+gsettings_SCHEMAS = org.gnome.five-or-more.gschema.xml
 @GSETTINGS_RULES@
 
 man_MANS = five-or-more.6
@@ -34,11 +32,10 @@ EXTRA_DIST = 			\
 	$(theme_DATA)		\
         $(appdata_DATA)		\
 	$(desktop_in_files)	\
-	$(gsettings_in_file)    \
+	$(gsettings_SCHEMAS)	\
 	$(man_MANS)	\
 	$(ui_DATA)
 
-CLEANFILES = $(desktop_DATA) $(gsettings_SCHEMAS)
-DISTCLEANFILES = $(gsettings_SCHEMAS)
+CLEANFILES = $(desktop_DATA)
 
 -include $(top_srcdir)/git.mk
