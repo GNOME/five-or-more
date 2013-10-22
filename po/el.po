@@ -30,13 +30,14 @@
 # Michael Kotsarinis <mk73628@hotmail.com>, 2010.
 # George Stefanakis <george.stefanakis@gmail.com>, 2011.
 # Dimitris Spingos (Δημήτρης Σπίγγος) <dmtrs32@gmail.com>, 2013.
+# Efstathios Iosifidis <iosifidis@opensuse.org>, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.HEAD.el\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-"
 "or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-01-28 23:19+0000\n"
-"PO-Revision-Date: 2013-03-09 05:37+0300\n"
+"POT-Creation-Date: 2013-10-12 11:55+0000\n"
+"PO-Revision-Date: 2013-10-22 12:05+0300\n"
 "Last-Translator: Dimitris Spingos (Δημήτρης Σπίγγος) <dmtrs32@gmail.com>\n"
 "Language-Team: team@gnome.gr\n"
 "Language: el\n"
@@ -47,16 +48,16 @@ msgstr ""
 "X-Generator: Virtaal 0.7.1\n"
 "X-Project-Style: gnome\n"
 
-#: ../data/five-or-more.desktop.in.in.h:1 ../src/glines.c:1170
-#: ../src/glines.c:1173 ../src/glines.c:1661
+#: ../data/glines.desktop.in.in.h:1 ../data/five-or-more.ui.h:1
+#: ../src/glines.c:1176 ../src/glines.c:1179 ../src/glines.c:1704
 msgid "Five or More"
 msgstr "Πέντε ή περισσότερα"
 
-#: ../data/five-or-more.desktop.in.in.h:2
+#: ../data/glines.desktop.in.in.h:2
 msgid "Remove colored balls from the board by forming lines"
 msgstr "Αφαιρέστε τις χρωματιστές μπάλες από τον πίνακα σχηματίζοντας γραμμές"
 
-#: ../data/five-or-more.desktop.in.in.h:3
+#: ../data/glines.desktop.in.in.h:3
 msgid "game;strategy;logic;"
 msgstr "παιχνίδι;στρατηγική;λογική;"
 
@@ -100,42 +101,41 @@ msgstr "Γενικά"
 msgid "_Use fast moves"
 msgstr "_Χρήση γρήγορων κινήσεων"
 
-#: ../data/five-or-more.ui.h:1
-msgid "Five or more"
-msgstr "Πέντε ή περισσότερα"
-
 #: ../data/five-or-more.ui.h:2
-msgid "_Game"
-msgstr "_Παιχνίδι"
-
-#: ../data/five-or-more.ui.h:3
-msgid "Scores"
-msgstr "Βαθμολογία"
-
-#: ../data/five-or-more.ui.h:4
-msgid "_Settings"
-msgstr "_Ρυθμίσεις"
-
-#: ../data/five-or-more.ui.h:5
-msgid "_Help"
-msgstr "_Βοήθεια"
-
-#. Help contents menu item
-#: ../data/five-or-more.ui.h:7 ../src/games-stock.c:247
-msgid "_Contents"
-msgstr "_Περιεχόμενα"
-
-#: ../data/five-or-more.ui.h:8
 msgid "Next:"
 msgstr "Επόμενο:"
 
-#: ../data/five-or-more.ui.h:9
+#: ../data/five-or-more.ui.h:3
 msgid "0"
 msgstr "0"
 
-#: ../data/five-or-more.ui.h:10
+#: ../data/five-or-more.ui.h:4
 msgid "Score:"
 msgstr "Βαθμοί:"
+
+#: ../data/menu.ui.h:1 ../src/games-scores-dialog.c:470
+msgid "New Game"
+msgstr "Νέο Παιχνίδι"
+
+#: ../data/menu.ui.h:2
+msgid "Scores"
+msgstr "Βαθμολογία"
+
+#: ../data/menu.ui.h:3 ../src/glines.c:176
+msgid "Preferences"
+msgstr "Προτιμήσεις"
+
+#: ../data/menu.ui.h:4
+msgid "Help"
+msgstr "Βοήθεια"
+
+#: ../data/menu.ui.h:5
+msgid "About"
+msgstr "Περί"
+
+#: ../data/menu.ui.h:6
+msgid "Quit"
+msgstr "Έξοδος"
 
 #: ../data/org.gnome.five-or-more.gschema.xml.in.h:1
 msgid "Playing field size"
@@ -164,7 +164,7 @@ msgstr "Χρώμα παρασκηνίου"
 
 #: ../data/org.gnome.five-or-more.gschema.xml.in.h:6
 msgid "Background color. The hex specification of the background color."
-msgstr "Χρώμα παρασκηνίου σε δεκαεξαδική μορφή."
+msgstr "Χρώμα παρασκηνίου. Η δεκαεξαδική προδιαγραφή του χρώματος παρασκηνίου."
 
 #: ../data/org.gnome.five-or-more.gschema.xml.in.h:7
 msgid "Time between moves"
@@ -232,10 +232,6 @@ msgstr "Βαθμολογία"
 msgctxt "score-dialog"
 msgid "%1$dm %2$ds"
 msgstr "%1$dm %2$ds"
-
-#: ../src/games-scores-dialog.c:470
-msgid "New Game"
-msgstr "Νέο Παιχνίδι"
 
 #. Score dialog column header for the name of the player who recorded the score
 #: ../src/games-scores-dialog.c:571
@@ -326,6 +322,10 @@ msgstr "Ρύθμιση παιχνιδιού"
 msgid "Quit this game"
 msgstr "Έξοδος από αυτό το παιχνίδι"
 
+#: ../src/games-stock.c:247
+msgid "_Contents"
+msgstr "_Περιεχόμενα"
+
 #: ../src/games-stock.c:248
 msgid "_Fullscreen"
 msgstr "_Πλήρης οθόνη"
@@ -409,8 +409,8 @@ msgid ""
 msgstr ""
 "Το %s είναι ελεύθερο λογισμικό· επιτρέπεται η αναδιανομή ή/και τροποποίησή "
 "του υπό τους όρους της Γενικής Άδειας Δημόσιας Χρήσης GNU -GPL- όπως αυτή "
-"έχει δημοσιευτεί από το Ίδρυμα Ελεύθερου Λογισμικού -FSF- είτε της έκδοσης %"
-"d της Άδειας, είτε (κατ' επιλογήν σας) οποιασδήποτε μεταγενέστερης έκδοσης."
+"έχει δημοσιευτεί από το Ίδρυμα Ελεύθερου Λογισμικού -FSF- είτε της έκδοσης "
+"%d της Άδειας, είτε (κατ' επιλογήν σας) οποιασδήποτε μεταγενέστερης έκδοσης."
 
 #: ../src/games-stock.c:322
 #, c-format
@@ -464,10 +464,6 @@ msgstr "Μεγάλο"
 msgid "Could not load theme"
 msgstr "Αδυναμία φόρτωσης θέματος"
 
-#: ../src/glines.c:176
-msgid "Preferences"
-msgstr "Προτιμήσεις"
-
 #: ../src/glines.c:196
 #, c-format
 msgid ""
@@ -499,24 +495,24 @@ msgid "Match five objects of the same type in a row to score!"
 msgstr ""
 "Ταιριάξτε πέντε αντικείμενα του ίδιου τύπου σε μια σειρά για να σκοράρετε!"
 
-#: ../src/glines.c:470
+#: ../src/glines.c:472
 msgid "GNOME Five or More"
 msgstr "Πέντε ή Περισσότερα"
 
-#: ../src/glines.c:472
+#: ../src/glines.c:474
 msgid "_Board size:"
 msgstr "Μέγε_θος πίνακα:"
 
-#: ../src/glines.c:489
+#: ../src/glines.c:491
 msgid "Game Over!"
 msgstr "Τέλος Παιχνιδιού!"
 
 #. Can't move there!
-#: ../src/glines.c:646
+#: ../src/glines.c:648
 msgid "You can't move there!"
 msgstr "Δε μπορείτε να μετακινηθείτε εκεί!"
 
-#: ../src/glines.c:1175
+#: ../src/glines.c:1181
 msgid ""
 "GNOME port of the once-popular Color Lines game.\n"
 "\n"
@@ -526,18 +522,28 @@ msgstr ""
 "\n"
 "Το Πέντε ή περισσότερα είναι μέρος των παιχνιδιών του GNOME."
 
-#: ../src/glines.c:1181
+#: ../src/glines.c:1187
 msgid "translator-credits"
 msgstr ""
 "Δημήτρης Σπίγγος <dmtrs32@gmail.com>\n"
 "Spiros Papadimitriou <spapadim+@cs.cmu.edu>\n"
 "Συμεών (Σίμος) Ξενιτέλλης <simos@hellug.gr>\n"
 "Κώστας Παπαδήμας <pkst@gmx.net>\n"
-"Τζένη Πετούμενου <epetoumenou@gmail.com>"
+"Τζένη Πετούμενου <epetoumenou@gmail.com>\n"
+"Ευστάθιος Ιωσηφίδης <iosifidis@opensuse.org>"
 
-#: ../src/glines.c:1184
+#: ../src/glines.c:1190
 msgid "GNOME Games web site"
 msgstr "Ιστοσελίδα των παιχνιδιών του GNOME"
+
+#~ msgid "Five or more"
+#~ msgstr "Πέντε ή περισσότερα"
+
+#~ msgid "_Game"
+#~ msgstr "_Παιχνίδι"
+
+#~ msgid "_Settings"
+#~ msgstr "_Ρυθμίσεις"
 
 #~ msgid "Chess"
 #~ msgstr "Σκάκι"
@@ -1941,12 +1947,6 @@ msgstr "Ιστοσελίδα των παιχνιδιών του GNOME"
 
 #~ msgid "_Preferences"
 #~ msgstr "Π_ροτιμήσεις"
-
-#~ msgid "_About"
-#~ msgstr "_Περί"
-
-#~ msgid "_Quit"
-#~ msgstr "Έ_ξοδος"
 
 #~ msgid "Hint"
 #~ msgstr "Υπόδειξη"
