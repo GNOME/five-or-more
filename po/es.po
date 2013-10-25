@@ -12,8 +12,8 @@ msgstr ""
 "Project-Id-Version: gnome-games.master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-"
 "or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-08-11 16:36+0000\n"
-"PO-Revision-Date: 2013-08-14 13:32+0200\n"
+"POT-Creation-Date: 2013-10-20 02:40+0000\n"
+"PO-Revision-Date: 2013-10-25 11:29+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "Language: es\n"
@@ -24,18 +24,25 @@ msgstr ""
 "X-Generator: Gtranslator 2.91.5\n"
 "X-Project-Style: gnome\n"
 
-#: ../data/glines.desktop.in.in.h:1 ../data/five-or-more.ui.h:1
-#: ../src/glines.c:1176 ../src/glines.c:1179 ../src/glines.c:1703
-msgid "Five or More"
-msgstr "Cinco o más"
+#: ../data/five-or-more.appdata.xml.in.h:1
+msgid ""
+"Five or More is the GNOME port of a once-popular computer game. Align five "
+"or more objects of the same color into a line to cause them to disappear and "
+"score points. Earn many more points by lining up as many objects as possible "
+"before clearing them."
+msgstr ""
+"Cinco o más es la versión de GNOME del popular juego de ordenador. Alinee "
+"cinco o más objetos del mismo color en una línea para hacer que desaparezcan "
+"y ganar puntos. Gane tantos puntos como pueda alineando tantos objetos como "
+"sea posible antes de eliminarlos."
 
-#: ../data/glines.desktop.in.in.h:2
-msgid "Remove colored balls from the board by forming lines"
-msgstr "Elimine bolas de colores del tablero formando líneas"
-
-#: ../data/glines.desktop.in.in.h:3
-msgid "game;strategy;logic;"
-msgstr "juego;estrategia;lógica;"
+#: ../data/five-or-more.appdata.xml.in.h:2
+msgid ""
+"More objects appear after every turn. Play for as long as possible, until "
+"the board is completely full!"
+msgstr ""
+"Después de cada turno aparecen más objetos. Juegue todo el tiempo que pueda, "
+"hasta que se llene el tablero."
 
 #: ../data/five-or-more-preferences.ui.h:1
 msgid "Five or More Preferences"
@@ -77,6 +84,11 @@ msgstr "General"
 msgid "_Use fast moves"
 msgstr "_Usar movimientos rápidos"
 
+#: ../data/five-or-more.ui.h:1 ../data/glines.desktop.in.h:1
+#: ../src/glines.c:1176 ../src/glines.c:1179 ../src/glines.c:1704
+msgid "Five or More"
+msgstr "Cinco o más"
+
 #: ../data/five-or-more.ui.h:2
 msgid "Next:"
 msgstr "Siguiente:"
@@ -88,6 +100,14 @@ msgstr "0"
 #: ../data/five-or-more.ui.h:4
 msgid "Score:"
 msgstr "Puntuación:"
+
+#: ../data/glines.desktop.in.h:2
+msgid "Remove colored balls from the board by forming lines"
+msgstr "Elimine bolas de colores del tablero formando líneas"
+
+#: ../data/glines.desktop.in.h:3
+msgid "game;strategy;logic;"
+msgstr "juego;estrategia;lógica;"
 
 #: ../data/menu.ui.h:1 ../src/games-scores-dialog.c:470
 msgid "New Game"
@@ -110,82 +130,81 @@ msgid "About"
 msgstr "Acerca de"
 
 #: ../data/menu.ui.h:6
-#| msgid "_Quit"
 msgid "Quit"
 msgstr "Salir"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:1
+#: ../data/org.gnome.five-or-more.gschema.xml.h:1
 msgid "Playing field size"
 msgstr "Tamaño del campo de juego"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:2
+#: ../data/org.gnome.five-or-more.gschema.xml.h:2
 msgid ""
 "Playing field size. 1=Small, 2=Medium, 3=Large. Any other value is invalid."
 msgstr ""
 "Tamaño del campo de juego. 1 = pequeño, 2 = mediano, 3 = grande. Cualquier "
 "otro valor es incorrecto."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:3
+#: ../data/org.gnome.five-or-more.gschema.xml.h:3
 msgid "Ball style"
 msgstr "Estilo de bola"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:4
+#: ../data/org.gnome.five-or-more.gschema.xml.h:4
 msgid "Ball style. The filename of the images to use for the balls."
 msgstr "Estilo de bola. El nombre de archivo de las imágenes de las bolas."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:5
+#: ../data/org.gnome.five-or-more.gschema.xml.h:5
 msgid "Background color"
 msgstr "Color de fondo"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:6
+#: ../data/org.gnome.five-or-more.gschema.xml.h:6
 msgid "Background color. The hex specification of the background color."
 msgstr "Color de fondo. El valor hexadecimal del color de fondo."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:7
+#: ../data/org.gnome.five-or-more.gschema.xml.h:7
 msgid "Time between moves"
 msgstr "Demora entre movimientos"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:8
+#: ../data/org.gnome.five-or-more.gschema.xml.h:8
 msgid "Time between moves in milliseconds."
 msgstr "Tiempo entre jugadas en milisegundos."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:9
+#: ../data/org.gnome.five-or-more.gschema.xml.h:9
 msgid "Game score"
 msgstr "Puntuación"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:10
+#: ../data/org.gnome.five-or-more.gschema.xml.h:10
 msgid "Game score from last saved session."
 msgstr "Puntuación de la última sesión guardada."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:11
+#: ../data/org.gnome.five-or-more.gschema.xml.h:11
 msgid "Game field"
 msgstr "Campo de juego"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:12
+#: ../data/org.gnome.five-or-more.gschema.xml.h:12
 msgid "Game field from last saved session."
 msgstr "Campo de juego de la última sesión guardada."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:13
+#: ../data/org.gnome.five-or-more.gschema.xml.h:13
 msgid "Game preview"
 msgstr "Previsualización del juego"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:14
+#: ../data/org.gnome.five-or-more.gschema.xml.h:14
 msgid "Game preview from last saved session."
 msgstr "Previsualización de la última sesión guardada."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:15
+#: ../data/org.gnome.five-or-more.gschema.xml.h:15
 msgid "Width of the window in pixels"
 msgstr "Anchura de la ventana en píxeles"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:16
+#: ../data/org.gnome.five-or-more.gschema.xml.h:16
 msgid "Height of the window in pixels"
 msgstr "Altura de la ventana en píxeles"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:17
+#: ../data/org.gnome.five-or-more.gschema.xml.h:17
 msgid "true if the window is maximized"
 msgstr "cierto si la ventana está maximizada"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:18
+#: ../data/org.gnome.five-or-more.gschema.xml.h:18
 msgid "true if the window is fullscren"
 msgstr "cierto si la ventana está en pantalla completa"
 
