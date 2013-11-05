@@ -10,14 +10,15 @@
 # Ilkka Tuohela <hile@iki.fi>, 2005-2009.
 # Timo Jyrinki <timo.jyrinki@iki.fi>, 2008.
 # Jiri Grönroos <jiri.gronroos@iki.fi>, 2012, 2013.
+# Lasse Liehu <lasse.liehu@gmail.com>, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-"
 "or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-03-24 18:45+0000\n"
-"PO-Revision-Date: 2013-03-26 20:24+0200\n"
-"Last-Translator: Jiri Grönroos <jiri.gronroos+l10n@iki.fi>\n"
+"POT-Creation-Date: 2013-08-25 13:33+0000\n"
+"PO-Revision-Date: 2013-10-28 16:24+0200\n"
+"Last-Translator: Lasse Liehu <lasse.liehu@gmail.com>\n"
 "Language-Team: Finnish <gnome-fi-laatu@lists.sourceforge.net>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
@@ -29,7 +30,7 @@ msgstr ""
 "X-POT-Import-Date: 2012-03-05 14:46:29+0000\n"
 
 #: ../data/glines.desktop.in.in.h:1 ../src/glines.c:1170 ../src/glines.c:1173
-#: ../src/glines.c:1662
+#: ../src/glines.c:1661
 msgid "Five or More"
 msgstr "Viisi tai enemmän"
 
@@ -191,7 +192,7 @@ msgstr "tosi jos ikkuna on suurennettu"
 
 #: ../data/org.gnome.five-or-more.gschema.xml.in.h:18
 msgid "true if the window is fullscren"
-msgstr ""
+msgstr "tosi jos ikkuna on koko näytön tilassa"
 
 #. Score dialog column header for the score time (e.g. 1 minute)
 #: ../src/games-scores-dialog.c:136
