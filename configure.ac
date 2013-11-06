@@ -67,10 +67,7 @@ PKG_CHECK_MODULES(FIVE_OR_MORE, [
 ])
 
 AC_PATH_PROG(APPDATA_VALIDATE, appdata-validate)
-AM_CONDITIONAL([VALIDATE_APPDATA], [test -n "${APPDATA_VALIDATE}"])
-
 AC_PATH_PROG(DESKTOP_FILE_VALIDATE, desktop-file-validate)
-AM_CONDITIONAL([VALIDATE_DESKTOP_FILE], [test -n "${DESKTOP_FILE_VALIDATE}"])
 
 dnl ###########################################################################
 dnl Internationalization
