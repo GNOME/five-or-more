@@ -23,21 +23,19 @@
 #include <glib.h>
 #include <glib-object.h>
 
+#include <errno.h>
+#include <fcntl.h>
 #include <string.h>
 #include <stdlib.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <unistd.h>
 
 #include "games-score.h"
 #include "games-scores.h"
 #include "games-scores-backend.h"
 
-#ifdef ENABLE_SETGID
-#include "games-setgid-io.h"
-#endif
-
 struct GamesScoresBackendPrivate {
-#ifdef ENABLE_SETGID
-  gboolean setgid_io_initialized;
-#endif
   GList *scores_list;
   GamesScoreStyle style;
   time_t timestamp;
@@ -50,9 +48,7 @@ G_DEFINE_TYPE (GamesScoresBackend, games_scores_backend, G_TYPE_OBJECT);
 void
 games_scores_backend_startup (void)
 {
-#ifdef ENABLE_SETGID
-  setgid_io_init ();
-#endif
+  /* Retained for compatibility */
 }
 
 static void
@@ -90,28 +86,27 @@ games_scores_backend_new (GamesScoreStyle style,
                           char *name)
 {
   GamesScoresBackend *backend;
-  gchar *fullname;
+  char *pkguserdatadir;
 
   backend = GAMES_SCORES_BACKEND (g_object_new (GAMES_TYPE_SCORES_BACKEND,
                                                 NULL));
 
-  if (name[0] == '\0')                /* Name is "" */
-    fullname = g_strjoin (".", base_name, "scores", NULL);
-  else
-    fullname = g_strjoin (".", base_name, name, "scores", NULL);
-
   backend->priv->timestamp = 0;
   backend->priv->style = style;
   backend->priv->scores_list = NULL;
-  backend->priv->filename = g_build_filename (SCORESDIR, fullname, NULL);
-  g_free (fullname);
+  pkguserdatadir = g_build_filename (g_get_user_data_dir (), base_name, NULL);
+  backend->priv->filename = g_build_filename (pkguserdatadir, name, NULL);
 
+  if (access (pkguserdatadir, O_RDWR) == -1) {
+    /* Don't return NULL because games-scores.c does not
+     * expect it, and can't do anything about it anyway. */
+    mkdir (pkguserdatadir, 0775);
+  }
   backend->priv->fd = -1;
 
   return backend;
 }
 
-#ifdef ENABLE_SETGID
 
 /* Get a lock on the scores file. Block until it is available. 
  * This also supplies the file descriptor we need. The return value
@@ -120,23 +115,29 @@ static gboolean
 games_scores_backend_get_lock (GamesScoresBackend * self)
 {
   gint error;
+  struct flock lock;
 
   if (self->priv->fd != -1) {
     /* Assume we already have the lock and rewind the file to
      * the beginning. */
-    setgid_io_seek (self->priv->fd, 0, SEEK_SET);
+    lseek (self->priv->fd, 0, SEEK_SET);
     return TRUE;                /* Assume we already have the lock. */
   }
 
-  self->priv->fd = setgid_io_open (self->priv->filename, O_RDWR);
+  self->priv->fd = open (self->priv->filename, O_RDWR | O_CREAT, 0755);
   if (self->priv->fd == -1) {
     return FALSE;
   }
 
-  error = setgid_io_lock (self->priv->fd);
+  lock.l_type = F_WRLCK;
+  lock.l_whence = SEEK_SET;
+  lock.l_start = 0;
+  lock.l_len = 0;
+
+  error = fcntl (self->priv->fd, F_SETLKW, &lock);
 
   if (error == -1) {
-    setgid_io_close (self->priv->fd);
+    close (self->priv->fd);
     self->priv->fd = -1;
     return FALSE;
   }
@@ -149,18 +150,23 @@ games_scores_backend_get_lock (GamesScoresBackend * self)
 static void
 games_scores_backend_release_lock (GamesScoresBackend * self)
 {
+  struct flock lock;
+
   /* We don't have a lock, ignore this call. */
   if (self->priv->fd == -1)
     return;
 
-  setgid_io_unlock (self->priv->fd);
+  lock.l_type = F_UNLCK;
+  lock.l_whence = SEEK_SET;
+  lock.l_start = 0;
+  lock.l_len = 0;
 
-  setgid_io_close (self->priv->fd);
+  fcntl (self->priv->fd, F_SETLKW, &lock);
+
+  close (self->priv->fd);
 
   self->priv->fd = -1;
 }
-
-#endif /* ENABLE_SETGID */
 
 /**
  * games_scores_backend_get_scores:
@@ -175,12 +181,10 @@ games_scores_backend_release_lock (GamesScoresBackend * self)
 GList *
 games_scores_backend_get_scores (GamesScoresBackend * self)
 {
-#ifdef ENABLE_SETGID
   gchar *buffer;
   gchar *eol;
   gchar *scorestr;
   gchar *timestr;
-  gchar *namestr;
   GamesScore *newscore;
   struct stat info;
   int error;
@@ -188,11 +192,12 @@ games_scores_backend_get_scores (GamesScoresBackend * self)
   GList *t;
   
   /* Check for a change in the scores file and update if necessary. */
-  error = setgid_io_stat (self->priv->filename, &info);
+  error = stat (self->priv->filename, &info);
 
   /* If an error occurs then we give up on the file and return NULL. */
-  if (error != 0)
+  if (error != 0) {
     return NULL;
+  }
 
   if ((info.st_mtime > self->priv->timestamp) || (self->priv->scores_list == NULL)) {
     self->priv->timestamp = info.st_mtime;
@@ -220,7 +225,7 @@ games_scores_backend_get_scores (GamesScoresBackend * self)
     length = 0;
     do {
       target -= length;
-      length = setgid_io_read (self->priv->fd, buffer, info.st_size);
+      length = read (self->priv->fd, buffer, info.st_size);
       if (length == -1) {
         games_scores_backend_release_lock (self);
         g_free (buffer);
@@ -243,11 +248,7 @@ games_scores_backend_get_scores (GamesScoresBackend * self)
       if (timestr == NULL)
         break;
       *timestr++ = '\0';
-      namestr = strchr (timestr, ' ');
-      if (namestr == NULL)
-        break;
-      *namestr++ = '\0';
-      /* At this point we have three strings, all null terminated. All
+      /* At this point we have two strings, both null terminated. All
        * part of the original buffer. */
       switch (self->priv->style) {
       case GAMES_SCORES_STYLE_PLAIN_DESCENDING:
@@ -261,7 +262,6 @@ games_scores_backend_get_scores (GamesScoresBackend * self)
       default:
         g_assert_not_reached ();
       }
-      games_score_set_name (newscore, namestr);
       games_score_set_time (newscore, g_ascii_strtoull (timestr, NULL, 10));
       self->priv->scores_list = g_list_append (self->priv->scores_list, newscore);
       /* Setup again for the next time around. */
@@ -275,15 +275,11 @@ games_scores_backend_get_scores (GamesScoresBackend * self)
   /* FIXME: Sort the scores! We shouldn't rely on the file being sorted. */
 
   return self->priv->scores_list;
-#else
-  return NULL;
-#endif /* ENABLE_SETGID */
 }
 
 gboolean
 games_scores_backend_set_scores (GamesScoresBackend * self, GList * list)
 {
-#ifdef ENABLE_SETGID
   GList *s;
   GamesScore *d;
   gchar *buffer;
@@ -299,7 +295,6 @@ games_scores_backend_set_scores (GamesScoresBackend * self, GList * list)
   while (s != NULL) {
     gdouble rscore;
     guint64 rtime;
-    const gchar *rname;
 
     d = (GamesScore *) s->data;
     rscore = 0.0;
@@ -316,12 +311,11 @@ games_scores_backend_set_scores (GamesScoresBackend * self, GList * list)
       g_assert_not_reached ();
     }
     rtime = games_score_get_time (d);
-    rname = games_score_get_name(d);
 
-    buffer = g_strdup_printf ("%s %"G_GUINT64_FORMAT" %s\n",
+    buffer = g_strdup_printf ("%s %"G_GUINT64_FORMAT"\n",
                               g_ascii_dtostr (dtostrbuf, sizeof (dtostrbuf),
-                                              rscore), rtime, rname);
-    setgid_io_write (self->priv->fd, buffer, strlen (buffer));
+                                              rscore), rtime);
+    write (self->priv->fd, buffer, strlen (buffer));
     output_length += strlen (buffer);
     /* Ignore any errors and blunder on. */
     g_free (buffer);
@@ -330,7 +324,7 @@ games_scores_backend_set_scores (GamesScoresBackend * self, GList * list)
   }
 
   /* Remove any content in the file that hasn't yet been overwritten. */
-  setgid_io_truncate (self->priv->fd, output_length--);
+  ftruncate (self->priv->fd, output_length--);
 
   /* Update the timestamp so we don't reread the scores unnecessarily. */
   self->priv->timestamp = time (NULL);
@@ -338,15 +332,10 @@ games_scores_backend_set_scores (GamesScoresBackend * self, GList * list)
   games_scores_backend_release_lock (self);
 
   return TRUE;
-#else
-  return FALSE;
-#endif /* ENABLE_SETGID */
 }
 
 void
 games_scores_backend_discard_scores (GamesScoresBackend * self)
 {
-#ifdef ENABLE_SETGID
   games_scores_backend_release_lock (self);
-#endif
 }

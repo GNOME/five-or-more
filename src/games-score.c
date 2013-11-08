@@ -29,7 +29,6 @@ struct GamesScorePrivate {
     gdouble time_double;		/* minutes.seconds */
   } value;
   time_t time;
-  gchar *name;
 };
 
 /**
@@ -75,19 +74,6 @@ games_score_new_time (gdouble value)
   GamesScore *score = g_object_new (GAMES_TYPE_SCORE, NULL);
   score->priv->value.time_double = value;
   return score;
-}
-
-const gchar *
-games_score_get_name (GamesScore *score)
-{
-  return score->priv->name;
-}
-
-void
-games_score_set_name (GamesScore *score, const gchar *name)
-{
-  g_free (score->priv->name);
-  score->priv->name = g_strdup (name);
 }
 
 time_t
@@ -156,8 +142,6 @@ games_score_finalize (GObject * object)
 {
   GamesScore *score = GAMES_SCORE (object);
 
-  g_free (score->priv->name);
-
   G_OBJECT_CLASS (games_score_parent_class)->finalize (object);
 }
 
@@ -179,13 +163,4 @@ games_score_init (GamesScore *score)
   score->priv = G_TYPE_INSTANCE_GET_PRIVATE (score, GAMES_TYPE_SCORE, GamesScorePrivate);
 
   score->priv->time = time (NULL);
-  /* FIXME: We don't handle the "Unknown" case. */
-  name = g_get_real_name ();
-  if (name[0] == '\0' || g_utf8_validate (name, -1, NULL) != TRUE) {
-    name = g_get_user_name ();
-    if (g_utf8_validate (name, -1, NULL) != TRUE) {
-      name = "";
-    }
-  }
-  score->priv->name = g_strdup (name);
 }

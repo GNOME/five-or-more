@@ -55,8 +55,6 @@ GType        games_score_get_type           (void);
 GamesScore  *games_score_new                (void);
 GamesScore  *games_score_new_plain          (guint32 value);
 GamesScore  *games_score_new_time           (gdouble value);
-const gchar *games_score_get_name           (GamesScore *score);
-void         games_score_set_name           (GamesScore *score, const gchar *name);
 time_t       games_score_get_time           (GamesScore *score);
 void         games_score_set_time           (GamesScore *score, time_t time);
 guint32      games_score_get_value_as_plain (GamesScore *score);

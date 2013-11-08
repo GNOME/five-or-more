@@ -36,18 +36,14 @@ struct GamesScoresDialogPrivate {
   GtkWidget *catbar;
   GtkListStore *list;
   GtkTreeView *treeview;
-  GtkCellRenderer *namerenderer;
   GtkTreeViewColumn *column;
-  GtkTreeViewColumn *namecolumn;
   GtkTreeViewColumn *timecolumn;
   GamesScores *scores;
   GHashTable *categories;
   GHashTable *catindices;
   gint catcounter;
   gint hilight;
-  gint sethilight;
   gboolean preservehilight;
-  gulong cursor_handler_id;
 
   /* FIXME: This should be a property. */
   gint style;
@@ -199,83 +195,6 @@ GtkWidget * games_scores_dialog_new (GtkWindow *parent_window, GamesScores *scor
   return (GtkWidget *)dialog;
 }
 
-/* Retrieve the edited name from a new high score. */
-static void games_scores_dialog_name_edited (GtkCellRendererText *cell, 
-					     gchar *path, gchar *new_text, 
-					     GamesScoresDialog *self)
-{
-  GtkTreeIter iter;
-  gchar *old_name = NULL;
-
-  gtk_tree_model_get_iter_from_string (GTK_TREE_MODEL (self->priv->list), 
-				       &iter, path);
-
-  /* Get old name for comparison */
-  gtk_tree_model_get (GTK_TREE_MODEL (self->priv->list),
-                      &iter, 0, &old_name, -1);
-                           
-  gtk_list_store_set (self->priv->list, &iter, 0, new_text, -1);
-
-  games_scores_update_score_name (self->priv->scores, new_text, old_name);
-}
-
-/* Prevent editing of any cell in the high score list but the one we set. */
-static void games_scores_dialog_cursor_changed (GtkTreeView *treeview, 
-						GamesScoresDialog *self)
-{
-  g_object_set (self->priv->namerenderer, "editable", FALSE, NULL);
-}    
-
-/* These contortions are to ensure that only the single most-recent
- * entry can be edited. */
-static gboolean games_scores_dialog_set_edit (GamesScoresDialog *self)
-{
-  GtkTreePath *path;
-  GtkTreeSelection *selection;
-
-  /* Just in case we've been closed as soon as we're created. */
-  if (!gtk_widget_get_realized (GTK_WIDGET (self)))
-    return FALSE;
-
-  /* Temporarily disable the code that prevents editing when the
-   * cursor changes position. */
-  g_signal_handler_block (self->priv->treeview, 
-			    self->priv->cursor_handler_id); 
-  g_object_set (self->priv->namerenderer, "editable", TRUE, NULL);
-  selection = gtk_tree_view_get_selection (self->priv->treeview);
-  path = gtk_tree_path_new_from_indices (self->priv->hilight - 1, -1);
-  gtk_tree_selection_select_path (selection, path);
-  gtk_tree_view_set_cursor (self->priv->treeview, path, 
-			      self->priv->namecolumn, TRUE);
-  g_signal_handler_unblock (self->priv->treeview, 
-			      self->priv->cursor_handler_id); 
-  gtk_tree_path_free (path);
-
-  return FALSE;
-}
-
-/* Yet another part of the puzzle that lets the correct high-score be
- * editable. */
-static void games_scores_dialog_set_hilight_private (GamesScoresDialog *self) 
-{
-  if (self->priv->hilight == 0) {
-    g_object_set (self->priv->namerenderer, "editable", FALSE, NULL);
-    return;
-  }
-
-  if (self->priv->hilight == self->priv->sethilight)
-    return;
-
-  self->priv->sethilight = self->priv->hilight;
-
-  /* We can't set the hilight editable immediately in case we are
-   * still in the process of being created and the editing subwindow
-   * gets put in the wrong place. Attaching to the expose signal
-   * doesn't seem to have the desired effect, so instead we just
-   * wait until all other work is done. */
-  g_idle_add ((GSourceFunc)games_scores_dialog_set_edit, self);
-}
-
 /* Load up the list with the current set of scores. */
 static void games_scores_dialog_redraw (GamesScoresDialog *self) {
   GtkTreeIter iter;
@@ -293,7 +212,6 @@ static void games_scores_dialog_redraw (GamesScoresDialog *self) {
   scorelist = games_scores_get (self->priv->scores);
 
   while (scorelist) {
-    name = games_score_get_name ((GamesScore *)scorelist->data);
     timestamp = games_score_get_time ((GamesScore *)scorelist->data);
     datetime = g_date_time_new_from_unix_local (timestamp);
     time = g_date_time_format (datetime,"%d/%m/%y");
@@ -314,13 +232,11 @@ static void games_scores_dialog_redraw (GamesScoresDialog *self) {
       ss = g_strdup_printf ("%d", score);
     }
     gtk_list_store_append (self->priv->list, &iter);
-    gtk_list_store_set (self->priv->list, &iter, 0, name, 1, time, 2, ss, -1);
+    gtk_list_store_set (self->priv->list, &iter, 0, time, 1, ss, -1);
     g_free (ss);
     g_free (time);
     scorelist = g_list_next (scorelist);
   }
-    
-  games_scores_dialog_set_hilight_private (self);
 }
 
 /* Change the currently viewed score category. There is a little bit
@@ -430,7 +346,6 @@ void games_scores_dialog_set_hilight (GamesScoresDialog *self, guint pos)
     return;
 
   self->priv->hilight = pos;
-  games_scores_dialog_set_hilight_private (self);
 }
 
 /**
@@ -505,7 +420,6 @@ static void games_scores_dialog_init (GamesScoresDialog *self)
   self->priv->catindices = g_hash_table_new (g_direct_hash, g_direct_equal);
   self->priv->catcounter = 0;
   self->priv->hilight = 0;
-  self->priv->sethilight = -1;
   gtk_container_set_border_width (GTK_CONTAINER (self), 5);
   gtk_box_set_spacing (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (self))), 2);
 
@@ -523,7 +437,7 @@ static void games_scores_dialog_init (GamesScoresDialog *self)
   gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (scroll),
 				    GTK_POLICY_AUTOMATIC,
 				    GTK_POLICY_AUTOMATIC);
-  gtk_widget_set_size_request (scroll, 250, 265);
+  gtk_widget_set_size_request (scroll, 200, 265);
   gtk_scrolled_window_set_shadow_type (GTK_SCROLLED_WINDOW (scroll),
 					 GTK_SHADOW_ETCHED_IN);
   gtk_box_pack_end (GTK_BOX (vbox), scroll, TRUE, TRUE, 0);
@@ -554,32 +468,16 @@ static void games_scores_dialog_init (GamesScoresDialog *self)
   g_signal_connect (G_OBJECT (self->priv->combo), "changed", 
 		      G_CALLBACK (games_scores_dialog_change_category), self);
 
-  self->priv->list = gtk_list_store_new (3, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING);
+  self->priv->list = gtk_list_store_new (2, G_TYPE_STRING, G_TYPE_STRING);
 
   listview = gtk_tree_view_new_with_model (GTK_TREE_MODEL (self->priv->list));
   self->priv->treeview = GTK_TREE_VIEW (listview);
-  self->priv->cursor_handler_id = 
-    g_signal_connect (G_OBJECT (self->priv->treeview), 
-			"cursor-changed", 
-			G_CALLBACK (games_scores_dialog_cursor_changed), self);
-  
-  self->priv->namerenderer = gtk_cell_renderer_text_new ();
-  g_signal_connect (self->priv->namerenderer, "edited", 
-		      G_CALLBACK (games_scores_dialog_name_edited), self);
-
-  self->priv->namecolumn = gtk_tree_view_column_new_with_attributes (/* Score dialog column header for the name of the player who recorded the score */
-                                                                     C_("score-dialog", "Name"),
-                                                                     self->priv->namerenderer,
-                                                                     "text", 0,
-                                                                     NULL);
-  gtk_tree_view_append_column (GTK_TREE_VIEW (listview),
-				 GTK_TREE_VIEW_COLUMN (self->priv->namecolumn));
 
   timerenderer = gtk_cell_renderer_text_new ();
   timecolumn = gtk_tree_view_column_new_with_attributes (/* Score dialog column header for the date the score was recorded */
                                                          _("Date"),
                                                          timerenderer,
-                                                         "text", 1,
+                                                         "text", 0,
                                                          NULL);
   g_object_set (G_OBJECT (timerenderer), "xalign", 1.0, NULL);
   gtk_tree_view_append_column (GTK_TREE_VIEW (listview),
@@ -587,7 +485,7 @@ static void games_scores_dialog_init (GamesScoresDialog *self)
   self->priv->timecolumn = timecolumn;
 
   renderer = gtk_cell_renderer_text_new ();
-  column = gtk_tree_view_column_new_with_attributes ("", renderer, "text", 2, NULL);
+  column = gtk_tree_view_column_new_with_attributes ("", renderer, "text", 1, NULL);
   g_object_set (G_OBJECT (renderer), "xalign", 1.0, NULL);
   gtk_tree_view_append_column (GTK_TREE_VIEW (listview),
 				 GTK_TREE_VIEW_COLUMN (column));

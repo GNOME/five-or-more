@@ -75,8 +75,6 @@ void            games_scores_set_category      (GamesScores * self, const gchar 
 gint            games_scores_add_score         (GamesScores * self, GamesScore *score);
 gint            games_scores_add_plain_score   (GamesScores * self, guint32 value);
 gint            games_scores_add_time_score    (GamesScores * self, gdouble value);
-void            games_scores_update_score      (GamesScores * self, gchar * new_name);
-void            games_scores_update_score_name (GamesScores * self, gchar * new_name, gchar * old_name);
 GList *         games_scores_get               (GamesScores * self);
 void            _games_scores_category_foreach (GamesScores * self,
                                                 GamesScoresCategoryForeachFunc func,
