@@ -1,3 +1,75 @@
+3.11.2 - November 16, 2013
+==========================
+
+* Updated translations
+
+3.11.1 - October 27, 2013
+=========================
+
+Updated Dependencies: intltool >= 0.50
+
+* Appdata is now translatable
+* Updated translations
+
+3.10.0 - September 22, 2013
+===========================
+
+* Translation updates
+
+Five or More 3.9.92
+===================
+
+* Add an appdata file for GNOME Software
+* Translation updates
+
+Five or More 3.9.90
+===================
+
+* Fix a crash when starting the game
+* Replace the menu bar with an application menu
+* Fullscreen option has been removed
+* Preferences dialog no longer considered a separate window by GNOME Shell
+* Fix two broken links in user help
+* Translation updates
+
+five-or-more 3.8.0
+==================
+
+ * Translation updates
+
+five-or-more 3.7.92
+====================
+
+ * Desktop file renamed back to glines.desktop
+ * Themes moved in from gnome-games-extra-data
+ * Translation updates
+
+five-or-more 3.7.90
+====================
+
+ * Fixed a crash due to using uninitialized memory
+ * Translation updates
+
+five-or-more 3.7.5
+====================
+
+ * Added keywords to .desktop file
+ * Translation updates
+
+five-or-more 3.7.4
+====================
+
+ * Use the old name 'glines' for the score files.
+
+Contributions from: Kjartan Maraas, Piotr Drąg, Robert Ancell
+
+five-or-more 3.7.2
+====================
+
+ * Build fixes
+
+Contributions from: Piotr Drąg, Robert Ancell, Thomas H.P. Andersen
+
 five-or-more 3.7.0
 ====================
 

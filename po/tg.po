@@ -1,377 +1,367 @@
-# Slovak translation for gnome-games.
-# Copyright (C) 2003, 2005, 2008, 2010, 2011, 2013 Free Software Foundation, Inc.
-# This file is distributed under the same license as the gnome-games package.
-# Stanislav Visnovsky <visnovsky@nenya.ms.mff.cuni.cz>, 2003.
-# Marcel Telka <marcel@telka.sk>, 2005, 2008.
-# Peter Mráz <etkinator@gmail.com>, 2010, 2011.
-# Ján Kyselica <kyselica.jan@gmail.com>, 2013.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Victor Ibragimov <victor.ibragimov@gmail.com>, 2013.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-games\n"
+"Project-Id-Version: Tajik Gnome\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-"
 "or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-09-12 05:47+0000\n"
-"PO-Revision-Date: 2013-09-12 10:03+0100\n"
-"Last-Translator: Ján Kyselica <kyselica.jan@gmail.com>\n"
-"Language-Team: Slovak <gnome-sk-list@gnome.org>\n"
-"Language: sk\n"
+"POT-Creation-Date: 2013-03-18 18:35+0000\n"
+"PO-Revision-Date: 2013-01-19 18:34+0500\n"
+"Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
+"Language-Team: \n"
+"Language: Tajik\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 1 : (n>=2 && n<=4) ? 2 : 0;\n"
+"X-Generator: Poedit 1.5.4\n"
 
-#: ../data/glines.desktop.in.in.h:1 ../data/five-or-more.ui.h:1
-#: ../src/glines.c:1176 ../src/glines.c:1179 ../src/glines.c:1704
+#: ../data/glines.desktop.in.in.h:1 ../src/glines.c:1170 ../src/glines.c:1173
+#: ../src/glines.c:1662
 msgid "Five or More"
-msgstr "Päť a viac"
+msgstr ""
 
 #: ../data/glines.desktop.in.in.h:2
 msgid "Remove colored balls from the board by forming lines"
-msgstr "Odstráňte farebné loptičky z hracej plochy zoradením do radov"
+msgstr ""
 
 #: ../data/glines.desktop.in.in.h:3
 msgid "game;strategy;logic;"
-msgstr "hra;strategická;logická;stratégia;logika;"
+msgstr ""
 
 #: ../data/five-or-more-preferences.ui.h:1
 msgid "Five or More Preferences"
-msgstr "Nastavenia programu Päť a viac"
+msgstr ""
 
 #: ../data/five-or-more-preferences.ui.h:2
 msgid "Appearance"
-msgstr "Vzhľad"
+msgstr "Намуди зоҳирӣ"
 
 #: ../data/five-or-more-preferences.ui.h:3
 msgid "_Image:"
-msgstr "_Obrázok:"
+msgstr "_Тасвир:"
 
 #: ../data/five-or-more-preferences.ui.h:4
 msgid "B_ackground color:"
-msgstr "_Farba pozadia:"
+msgstr ""
 
 #: ../data/five-or-more-preferences.ui.h:5
 msgid "Board Size"
-msgstr "Veľkosť hracej plochy"
+msgstr ""
 
 #: ../data/five-or-more-preferences.ui.h:6
 msgid "_Small"
-msgstr "_Malá"
+msgstr "_Хурд"
 
 #: ../data/five-or-more-preferences.ui.h:7
 msgid "_Medium"
-msgstr "_Stredná"
+msgstr "_Миёна"
 
-# veľkosť hracej plochy
 #: ../data/five-or-more-preferences.ui.h:8
 msgid "_Large"
-msgstr "_Veľká"
+msgstr "_Калон"
 
 #: ../data/five-or-more-preferences.ui.h:9
 msgid "General"
-msgstr "Všeobecné"
+msgstr "Умумӣ"
 
 #: ../data/five-or-more-preferences.ui.h:10
 msgid "_Use fast moves"
-msgstr "_Použiť rýchle pohyby"
+msgstr ""
+
+#: ../data/five-or-more.ui.h:1
+msgid "Five or more"
+msgstr ""
 
 #: ../data/five-or-more.ui.h:2
-msgid "Next:"
-msgstr "Ďalšie:"
+msgid "_Game"
+msgstr "_Бозӣ"
 
 #: ../data/five-or-more.ui.h:3
+msgid "Scores"
+msgstr ""
+
+#: ../data/five-or-more.ui.h:4
+msgid "_Settings"
+msgstr "_Танзимот"
+
+#: ../data/five-or-more.ui.h:5
+msgid "_Help"
+msgstr "_Кӯмак"
+
+#. Help contents menu item
+#: ../data/five-or-more.ui.h:7 ../src/games-stock.c:247
+msgid "_Contents"
+msgstr "_Мундариҷа"
+
+#: ../data/five-or-more.ui.h:8
+msgid "Next:"
+msgstr "Навбатӣ:"
+
+#: ../data/five-or-more.ui.h:9
 msgid "0"
 msgstr "0"
 
-#: ../data/five-or-more.ui.h:4
+#: ../data/five-or-more.ui.h:10
 msgid "Score:"
-msgstr "Skóre:"
-
-#: ../data/menu.ui.h:1 ../src/games-scores-dialog.c:470
-msgid "New Game"
-msgstr "Nová hra"
-
-#: ../data/menu.ui.h:2
-msgid "Scores"
-msgstr "Skóre"
-
-#: ../data/menu.ui.h:3 ../src/glines.c:176
-msgid "Preferences"
-msgstr "Nastavenia"
-
-#: ../data/menu.ui.h:4
-msgid "Help"
-msgstr "Pomocník"
-
-#: ../data/menu.ui.h:5
-msgid "About"
-msgstr "O programe"
-
-#: ../data/menu.ui.h:6
-msgid "Quit"
-msgstr "Ukončiť"
+msgstr ""
 
 #: ../data/org.gnome.five-or-more.gschema.xml.in.h:1
 msgid "Playing field size"
-msgstr "Veľkosť hracieho poľa"
+msgstr ""
 
 #: ../data/org.gnome.five-or-more.gschema.xml.in.h:2
 msgid ""
 "Playing field size. 1=Small, 2=Medium, 3=Large. Any other value is invalid."
 msgstr ""
-"Veľkosť hracieho poľa. 1=Malá, 2=Stredná, 3=Veľká. Všetky ostatné hodnoty sú "
-"neplatné."
 
 #: ../data/org.gnome.five-or-more.gschema.xml.in.h:3
 msgid "Ball style"
-msgstr "Štýl loptičiek"
+msgstr ""
 
 #: ../data/org.gnome.five-or-more.gschema.xml.in.h:4
 msgid "Ball style. The filename of the images to use for the balls."
 msgstr ""
-"Štýl loptičiek. Súbor s obrázkami, ktoré sa májú použiť na zobrazenie "
-"loptičiek."
 
 #: ../data/org.gnome.five-or-more.gschema.xml.in.h:5
 msgid "Background color"
-msgstr "Farba pozadia"
+msgstr "Ранги пасзамина"
 
 #: ../data/org.gnome.five-or-more.gschema.xml.in.h:6
 msgid "Background color. The hex specification of the background color."
-msgstr "Farba pozadia. Farba pozadia v šestnástkovej sústave."
+msgstr ""
 
 #: ../data/org.gnome.five-or-more.gschema.xml.in.h:7
 msgid "Time between moves"
-msgstr "Čas medzi ťahmi"
+msgstr ""
 
 #: ../data/org.gnome.five-or-more.gschema.xml.in.h:8
 msgid "Time between moves in milliseconds."
-msgstr "Čas medzi ťahmi v milisekundách."
+msgstr ""
 
 #: ../data/org.gnome.five-or-more.gschema.xml.in.h:9
 msgid "Game score"
-msgstr "Nahrané body"
+msgstr ""
 
 #: ../data/org.gnome.five-or-more.gschema.xml.in.h:10
 msgid "Game score from last saved session."
-msgstr "Nahrané body poslednej uloženej relácie."
+msgstr ""
 
 #: ../data/org.gnome.five-or-more.gschema.xml.in.h:11
 msgid "Game field"
-msgstr "Hracie pole"
+msgstr ""
 
 #: ../data/org.gnome.five-or-more.gschema.xml.in.h:12
 msgid "Game field from last saved session."
-msgstr "Hracie pole poslednej uloženej relácie."
+msgstr ""
 
 #: ../data/org.gnome.five-or-more.gschema.xml.in.h:13
 msgid "Game preview"
-msgstr "Náhľad hry"
+msgstr ""
 
 #: ../data/org.gnome.five-or-more.gschema.xml.in.h:14
 msgid "Game preview from last saved session."
-msgstr "Náhľad hry poslednej uloženej relácie."
+msgstr ""
 
 #: ../data/org.gnome.five-or-more.gschema.xml.in.h:15
 msgid "Width of the window in pixels"
-msgstr "Šírka okna v pixeloch."
+msgstr ""
 
 #: ../data/org.gnome.five-or-more.gschema.xml.in.h:16
 msgid "Height of the window in pixels"
-msgstr "Výška okna v pixeloch."
+msgstr ""
 
 #: ../data/org.gnome.five-or-more.gschema.xml.in.h:17
 msgid "true if the window is maximized"
-msgstr "true, ak je okno maximalizované"
+msgstr ""
 
 #: ../data/org.gnome.five-or-more.gschema.xml.in.h:18
 msgid "true if the window is fullscren"
-msgstr "true, ak je okno v celoobrazovkovom režime"
+msgstr ""
 
 #. Score dialog column header for the score time (e.g. 1 minute)
 #: ../src/games-scores-dialog.c:136
 msgctxt "score-dialog"
 msgid "Time"
-msgstr "Čas"
+msgstr "Вақт"
 
 #. Score dialog column header for the score value (e.g. 30 moves)
 #: ../src/games-scores-dialog.c:142
 msgctxt "score-dialog"
 msgid "Score"
-msgstr "Skóre"
+msgstr ""
 
 #. Score format for time based scores.  %1$d is the time in minutes, %2$d is the time in seconds
 #: ../src/games-scores-dialog.c:307
 #, c-format
 msgctxt "score-dialog"
 msgid "%1$dm %2$ds"
-msgstr "%1$dm %2$ds"
+msgstr ""
 
-# PK: je to nezivotne?
-# PM:  ide o meno hráča (bol to pôvodný preklad)
+#: ../src/games-scores-dialog.c:470
+msgid "New Game"
+msgstr "Бозии нав"
+
 #. Score dialog column header for the name of the player who recorded the score
 #: ../src/games-scores-dialog.c:571
 msgctxt "score-dialog"
 msgid "Name"
-msgstr "Meno"
+msgstr "Ном"
 
 #. Score dialog column header for the date the score was recorded
 #: ../src/games-scores-dialog.c:580
 msgid "Date"
-msgstr "Dátum"
+msgstr "Сана"
 
 #: ../src/games-stock.c:41
 msgid "View help for this game"
-msgstr "Zobraziť pomocníka pre túto hru"
+msgstr ""
 
 #: ../src/games-stock.c:42
 msgid "End the current game"
-msgstr "Ukončiť aktuálnu hru"
+msgstr ""
 
 #: ../src/games-stock.c:43
 msgid "Toggle fullscreen mode"
-msgstr "Prepnúť celoobrazovkový režim"
+msgstr ""
 
 #: ../src/games-stock.c:44
 msgid "Get a hint for your next move"
-msgstr "Zobraziť radu pre ďalší ťah"
+msgstr ""
 
 #: ../src/games-stock.c:45
 msgid "Leave fullscreen mode"
-msgstr "Opustiť celoobrazovkový režim"
+msgstr ""
 
-# PŠ: chýba preklad "multiplayer"
 #: ../src/games-stock.c:46
 msgid "Start a new multiplayer network game"
-msgstr "Spustiť novú sieťovú hru pre viac hráčov"
+msgstr ""
 
 #: ../src/games-stock.c:47
 msgid "End the current network game and return to network server"
-msgstr "Koniec aktuálnej sieťovej hry a návrat na sieťový server"
+msgstr ""
 
 #: ../src/games-stock.c:48
 msgid "Start a new game"
-msgstr "Začať novú hru"
+msgstr ""
 
 #: ../src/games-stock.c:49
 msgid "Pause the game"
-msgstr "Pozastaviť hru"
+msgstr ""
 
 #: ../src/games-stock.c:50
 msgid "Show a list of players in the network game"
-msgstr "Zobraziť zoznam hráčov v sieťovej hre"
+msgstr ""
 
 #: ../src/games-stock.c:51
 msgid "Redo the undone move"
-msgstr "Opakovať vrátený ťah"
+msgstr ""
 
 #: ../src/games-stock.c:52
 msgid "Restart the game"
-msgstr "Začať hru odznova"
+msgstr ""
 
 #: ../src/games-stock.c:53
 msgid "Resume the paused game"
-msgstr "Pokračovať v pozastavenej hre"
+msgstr ""
 
 #: ../src/games-stock.c:54
 msgid "View the scores"
-msgstr "Zobraziť tabuľku najlepších"
+msgstr ""
 
 #: ../src/games-stock.c:55
 msgid "Undo the last move"
-msgstr "Vrátiť posledný ťah"
+msgstr ""
 
 #: ../src/games-stock.c:56
 msgid "About this game"
-msgstr "O tejto hre"
+msgstr ""
 
 #: ../src/games-stock.c:57
 msgid "Close this window"
-msgstr "Zavrieť toto okno"
+msgstr ""
 
 #: ../src/games-stock.c:58
 msgid "Configure the game"
-msgstr "Nastaviť hru"
+msgstr ""
 
 #: ../src/games-stock.c:59
 msgid "Quit this game"
-msgstr "Ukončiť túto hru"
-
-#: ../src/games-stock.c:247
-msgid "_Contents"
-msgstr "Ob_sah"
+msgstr ""
 
 #: ../src/games-stock.c:248
 msgid "_Fullscreen"
-msgstr "Na _celú obrazovku"
+msgstr "_Экрани пурра"
 
 #: ../src/games-stock.c:249
 msgid "_Hint"
-msgstr "_Rada"
+msgstr ""
 
 #. Translators: This "_New" is for the menu item 'Game->New', implies "New Game"
 #: ../src/games-stock.c:251
 msgid "_New"
-msgstr "_Nová"
+msgstr "_Нав"
 
 #. Translators: This "_New Game" is for the game-over dialogue
 #: ../src/games-stock.c:253
 msgid "_New Game"
-msgstr "_Nová hra"
+msgstr "_Бозии нав"
 
 #: ../src/games-stock.c:254
 msgid "_Redo Move"
-msgstr "Z_opakovať vrátený ťah"
+msgstr ""
 
 #. Translators: this is the "Reset" scores button in a scores dialogue
 #: ../src/games-stock.c:256
 msgid "_Reset"
-msgstr "_Vynulovať"
+msgstr "_Танзими дубора"
 
 #. Translators: "_Restart" is the menu item 'Game->Restart', implies "Restart Game"
 #: ../src/games-stock.c:258
 msgid "_Restart"
-msgstr "Hrať _odznova"
+msgstr "_Бозоғозидан"
 
 #: ../src/games-stock.c:259
 msgid "_Undo Move"
-msgstr "_Vrátiť ťah"
+msgstr "_Лағв кардани интиқолдиҳӣ"
 
 #: ../src/games-stock.c:260
 msgid "_Deal"
-msgstr "_Zobrať kartu"
+msgstr ""
 
 #: ../src/games-stock.c:261
 msgid "_Leave Fullscreen"
-msgstr "_Opustiť celoobrazovkový režim"
+msgstr ""
 
 #: ../src/games-stock.c:262
 msgid "Network _Game"
-msgstr "_Sieťová hra"
+msgstr ""
 
 #: ../src/games-stock.c:263
 msgid "L_eave Game"
-msgstr "O_pustiť hru"
+msgstr ""
 
 #: ../src/games-stock.c:264
 msgid "Player _List"
-msgstr "_Zoznam hráčov"
+msgstr ""
 
 #: ../src/games-stock.c:265
 msgid "_Pause"
-msgstr "_Pozastaviť"
+msgstr "_Таваққуф кардан"
 
 #: ../src/games-stock.c:266
 msgid "Res_ume"
-msgstr "Po_kračovať"
+msgstr ""
 
 #: ../src/games-stock.c:267
 msgid "_Scores"
-msgstr "_Skóre"
+msgstr ""
 
 #: ../src/games-stock.c:268
 msgid "_End Game"
-msgstr "_Koniec hry"
+msgstr ""
 
 #. %s is replaced with the name of the game in gnome-games.
 #: ../src/games-stock.c:317
@@ -382,10 +372,6 @@ msgid ""
 "Foundation; either version %d of the License, or (at your option) any later "
 "version."
 msgstr ""
-"%s je slobodný softvér; môžete ho ďalej šíriť a upravovať podľa ustanovení "
-"licencie GNU General Public Licence (Všeobecná zverejňovacia licencia GNU), "
-"vydávanej nadáciou Free Software Foundation a to buď podľa %d. verzie tejto "
-"Licencie, alebo (podľa vášho uváženia) ktorejkoľvek neskoršej verzie."
 
 #: ../src/games-stock.c:322
 #, c-format
@@ -395,9 +381,6 @@ msgid ""
 "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
 "details."
 msgstr ""
-"%s je šírený v nádeji, že bude užitočný, avšak BEZ AKEJKOĽVEK ZÁRUKY; "
-"neposkytujú sa ani odvodené záruky PREDAJNOSTI alebo VHODNOSTI PRE URČITÝ "
-"ÚČEL. Ďalšie podrobnosti hľadajte v licencii GNU General Public License."
 
 #: ../src/games-stock.c:327
 #, c-format
@@ -406,38 +389,35 @@ msgid ""
 "%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
 "Fifth Floor, Boston, MA  02110-1301  USA"
 msgstr ""
-"Kópiu GNU General Public License (Všeobecnej zverejňovacej licencie GNU) ste "
-"mali dostať spolu s %s; ak sa tak nestalo, požiadajte o ňu na adrese Free "
-"Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA "
-"02110-1301, USA."
 
 #: ../src/games-stock.c:331
 msgid ""
 "You should have received a copy of the GNU General Public License along with "
 "this program.  If not, see <http://www.gnu.org/licenses/>."
 msgstr ""
-"Kópiu licencie GNU General Public License (Všeobecnej zverejňovacej licencie "
-"GNU) ste mali dostať spolu s programom. Ak sa tak nestalo, navštívte <http://"
-"www.gnu.org/licenses/>."
 
 #: ../src/glines.c:78
 msgctxt "board size"
 msgid "Small"
-msgstr "Malá"
+msgstr "Хурд"
 
 #: ../src/glines.c:79
 msgctxt "board size"
 msgid "Medium"
-msgstr "Stredná"
+msgstr "Миёна"
 
 #: ../src/glines.c:80
 msgctxt "board size"
 msgid "Large"
-msgstr "Veľká"
+msgstr "Калон"
 
 #: ../src/glines.c:170
 msgid "Could not load theme"
-msgstr "Nepodarilo sa načítať tému"
+msgstr ""
+
+#: ../src/glines.c:176
+msgid "Preferences"
+msgstr "Хусусиятҳо"
 
 #: ../src/glines.c:196
 #, c-format
@@ -447,10 +427,6 @@ msgid ""
 "\n"
 "The default theme will be loaded instead."
 msgstr ""
-"Nepodarilo sa nájsť súbor:\n"
-"%s\n"
-"\n"
-"Namiesto toho bude načítaná predvolená téma."
 
 #: ../src/glines.c:203
 #, c-format
@@ -460,50 +436,39 @@ msgid ""
 "\n"
 "Please check that Five or More is installed correctly."
 msgstr ""
-"Nepodarilo sa nájsť súbor:\n"
-"%s\n"
-"\n"
-"Prosím, overte, či je program Päť a viac správne nainštalovaný."
 
 #: ../src/glines.c:408
 msgid "Match five objects of the same type in a row to score!"
 msgstr ""
-"Zarovnajte päť objektov rovnakého typu do jedného radu, aby ste získali body!"
+
+#: ../src/glines.c:470
+msgid "GNOME Five or More"
+msgstr ""
 
 #: ../src/glines.c:472
-msgid "GNOME Five or More"
-msgstr "GNOME Päť a viac"
-
-#: ../src/glines.c:474
 msgid "_Board size:"
-msgstr "_Veľkosť hracieho poľa:"
+msgstr ""
 
-#: ../src/glines.c:491
+#: ../src/glines.c:489
 msgid "Game Over!"
-msgstr "Koniec hry!"
+msgstr ""
 
 #. Can't move there!
-#: ../src/glines.c:648
+#: ../src/glines.c:646
 msgid "You can't move there!"
-msgstr "Tam nemôžete ťahať!"
+msgstr ""
 
-#: ../src/glines.c:1181
+#: ../src/glines.c:1175
 msgid ""
 "GNOME port of the once-popular Color Lines game.\n"
 "\n"
 "Five or More is a part of GNOME Games."
 msgstr ""
-"GNOME verzia populárnej hry Color Lines.\n"
-"\n"
-"Hra Päť a viac je súčasťou Hier GNOME."
 
-#: ../src/glines.c:1187
+#: ../src/glines.c:1181
 msgid "translator-credits"
 msgstr ""
-"Stanislav Višňovský (visnovsky@nenya.ms.mff.cuni.cz)\n"
-"Marcel Telka <marcel@telka.sk>\n"
-"Peter Mráz <etkinator@gmail.com>"
 
-#: ../src/glines.c:1190
+#: ../src/glines.c:1184
 msgid "GNOME Games web site"
-msgstr "Webové stránky Hier GNOME"
+msgstr ""

@@ -1,4 +1,4 @@
-AC_INIT(five-or-more, 3.7.0)
+AC_INIT([five-or-more],[3.11.2])
 AM_INIT_AUTOMAKE([1.11 no-dist-gzip dist-xz foreign])
 AM_SILENT_RULES([yes])
 AM_MAINTAINER_MODE
@@ -25,6 +25,9 @@ PKG_CHECK_MODULES(FIVE_OR_MORE, [
   gee-1.0 >= $GEE_REQUIRED
 ])
 
+AC_PATH_PROG([APPDATA_VALIDATE], [appdata-validate], [/bin/true])
+AC_PATH_PROG([DESKTOP_FILE_VALIDATE], [desktop-file-validate], [/bin/true])
+
 dnl ###########################################################################
 dnl GResources
 dnl ###########################################################################
@@ -36,7 +39,7 @@ dnl ###########################################################################
 dnl Internationalization
 dnl ###########################################################################
 
-IT_PROG_INTLTOOL([0.35.0])
+IT_PROG_INTLTOOL([0.50])
 AC_SUBST(GETTEXT_PACKAGE, five-or-more)
 AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE,"$GETTEXT_PACKAGE", [The gettext package name])
 
@@ -50,13 +53,13 @@ dnl ###########################################################################
 dnl Files to generate
 dnl ###########################################################################
 
-AC_OUTPUT([
+AC_CONFIG_FILES([
 Makefile
 po/Makefile.in
 data/Makefile
 data/icons/Makefile
-data/five-or-more.desktop.in
 help/Makefile
 src/Makefile
 src/five-or-more.gresource.xml
 ])
+AC_OUTPUT

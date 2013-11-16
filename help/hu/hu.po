@@ -1,33 +1,26 @@
-# French translation of glines documentation.
-# Copyright (C) 2007-2012 Free Software Foundation, Inc.
-# This file is distributed under the same license as the glines documentation package.
+# Hungarian translation of five-or-more help
+# Copyright (C) 2013. Free Software Foundation, Inc.
+# This file is distributed under the same license as the five-or-more help.
 #
-#
-# Jonathan Ernst <jonathan@ernstfamily.ch>, 2007.
-# Claude Paroz <claude@2xlibre.net>, 2007-2009.
-# Bruno Brouard <annoa.b@gmail.com>, 2012.
-#
+# Gabor Kelemen <kelemeng at gnome dot hu>, 2013.
 msgid ""
 msgstr ""
-"Project-Id-Version: glines documentation\n"
+"Project-Id-Version: five-or-more master\n"
 "POT-Creation-Date: 2013-08-18 14:33+0000\n"
-"PO-Revision-Date: 2013-08-22 10:11+0200\n"
-"Last-Translator: Alain Lojewski <allomervan@gmail.com>\n"
-"Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2013-09-24 17:03+0200\n"
+"Last-Translator: Gabor Kelemen <kelemeng at gnome dot hu>\n"
+"Language-Team: Hungarian <openscope at googlegroups dot com>\n"
+"Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 1.5\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
 msgid "translator-credits"
-msgstr ""
-"Jonathan Ernst <jonathan@ernstfamily.ch>, 2007\n"
-"Claude Paroz <claude@2xlibre.net>, 2007-2009\n"
-"Bruno Brouard <annoa.b@gmail.com>, 2008, 2012\n"
-"Alain Lojewski <allomervan@gmail.com>, 2012"
+msgstr "Kelemen Gábor <kelemeng at gnome dot hu>, 2013"
 
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
@@ -62,12 +55,12 @@ msgstr ""
 #: C/index.page:7(info/title)
 msgctxt "link"
 msgid "Five or More"
-msgstr "Cinq ou plus"
+msgstr "Öt vagy több"
 
 #: C/index.page:8(info/title)
 msgctxt "text"
 msgid "Five or More"
-msgstr "Cinq ou plus"
+msgstr "Öt vagy több"
 
 #: C/index.page:12(credit/name) C/change-board-size.page:8(credit/name)
 #: C/change-theme.page:8(credit/name) C/fast-moves.page:9(credit/name)
@@ -88,16 +81,18 @@ msgstr "Tiffany Antopolski"
 #: C/develop.page:15(license/p) C/documentation.page:13(license/p)
 #: C/translate.page:19(license/p)
 msgid "Creative Commons Share Alike 3.0"
-msgstr ""
-"Creative Commons Paternité-Partage des Conditions Initiales à l'Identique 3.0"
+msgstr "Creative Commons Share Alike 3.0"
 
 #: C/index.page:25(page/title)
+#| msgid ""
+#| "<media type=\"image\" src=\"figures/logo32.png\">Five or More logo</"
+#| "media>Five or More"
 msgid ""
 "<media type=\"image\" src=\"figures/logo32.png\">Five or More logo</media> "
 "Five or More"
 msgstr ""
-"<media type=\"image\" src=\"figures/logo32.png\">Logo de Cinq ou plus</"
-"media> Cinq ou plus"
+"<media type=\"image\" src=\"figures/logo32.png\">Öt vagy több logója</media> "
+"Öt vagy több"
 
 #: C/index.page:28(page/p)
 msgid ""
@@ -108,29 +103,29 @@ msgid ""
 "they disappear. The goal is to vanish as many objects as possible. The game "
 "is over when the entire board is full."
 msgstr ""
-"<app>Cinq ou plus</app> est un concept d'entraînement cérébral qui donne "
-"l'impression d'être simple. Le but est de placer au moins cinq objets de la "
-"même <link xref=\"change-theme#images\">couleur ou forme</link> de façon à "
-"former une ligne droite. La ligne peut être horizontale, verticale ou en "
-"diagonale. Une fois que cinq objets ou plus sont alignés, ils disparaissent. "
-"Le but est de faire disparaître le plus d'objets possible. Le jeu prend fin "
-"lorsque le tableau est plein."
+"Az <app>Öt vagy több</app> egy félrevezetően egyszerű agytorna. A cél "
+"legalább öt azonos <link xref=\"change-theme#images\">színű vagy formájú<"
+"/link> objektumot egyenes vonalba helyezni. A vonal lehet vízszintes, "
+"függőleges vagy átlós. Amikor öt vagy több objektum egy vonalba kerül, "
+"eltűnnek. A cél minél több objektum eltüntetése. A játéknak akkor van vége, "
+"amikor a teljes tábla megtelik."
 
 #: C/index.page:33(section/title)
 msgid "Game Play"
-msgstr "Partie"
+msgstr "Játékmenet"
 
 #: C/index.page:37(section/title)
+#| msgid "Useful tips"
 msgid "Useful Tips"
-msgstr "Astuces utiles"
+msgstr "Hasznos tippek"
 
 #: C/index.page:41(section/title)
 msgid "Advanced"
-msgstr "Avancée"
+msgstr "Speciális"
 
 #: C/index.page:45(section/title)
 msgid "Get Involved"
-msgstr "Comment s'impliquer"
+msgstr "Közreműködés"
 
 #: C/bug-filing.page:13(credit/years)
 #: C/change-board-size.page:10(credit/years) C/develop.page:12(credit/years)
@@ -143,7 +138,7 @@ msgstr "2011"
 
 #: C/bug-filing.page:20(page/title)
 msgid "Report a Problem"
-msgstr "Signaler un problème"
+msgstr "Hiba jelentése"
 
 #: C/bug-filing.page:21(page/p)
 msgid ""
@@ -152,19 +147,18 @@ msgid ""
 "report</em>. To file a bug, go to <link href=\"https://bugzilla.gnome.org/\"/"
 ">."
 msgstr ""
-"<app>Cinq ou plus</app> est maintenu par une communauté de volontaires. "
-"Votre contribution est la bienvenue. Si vous remarquez un problème, vous "
-"pouvez remplir un <em>rapport d'anomalie</em> en allant sur <link href="
-"\"https://bugzilla.gnome.org/\"/>."
+"Az <app>Öt vagy többet</app> egy önkéntes közösség tartja karban. "
+"Közreműködését szívesen fogadjuk! Ha hibát tapasztal, <em>bejelentheti</em> "
+"a <link href=\"https://bugzilla.gnome.org/\"/> oldalon."
 
 #: C/bug-filing.page:24(page/p)
 msgid ""
 "This is a bug tracking system where users and developers can file details "
 "about bugs, crashes and request enhancements."
 msgstr ""
-"Il s'agit d'un système de suivi de bogues où les utilisateurs et les "
-"développeurs peuvent fournir des détails sur des bogues, des plantages et "
-"des propositions d'améliorations."
+"Ez egy hibakövető rendszer, ahová a felhasználók és fejlesztők beküldhetik a "
+"hibákkal, összeomlásokkal kapcsolatos adatokat, és továbbfejlesztéseket "
+"kérhetnek."
 
 #: C/bug-filing.page:27(page/p)
 msgid ""
@@ -173,13 +167,20 @@ msgid ""
 "receive updates by e-mail about the status of your bug. If you don't already "
 "have an account, just click on the <gui>New Account</gui> link to create one."
 msgstr ""
-"Pour participer, vous devez posséder un compte qui vous donne la possibilité "
-"de déposer des bogues et faire des commentaires. Vous devez également vous "
-"inscrire afin de recevoir les mises à jour du statut de votre bogue par "
-"courriel. Si vous n'avez pas encore de compte, il suffit de cliquer sur le "
-"lien <gui>New Account</gui> (nouveau compte) pour en créer un."
+"A részvételhez létre kell hoznia egy fiókot, amely lehetővé teszi a "
+"hozzáférést, hibajelentések beküldését és a hibákhoz való hozzászólást. A "
+"regisztráció után a hozzászólásokat e-mailben is megkaphatja. Ha még nincs "
+"fiókja, akkor a <gui>New Account</gui> hivatkozásra kattintva létrehozhat "
+"egyet."
 
 #: C/bug-filing.page:31(page/p)
+#| msgid ""
+#| "Once you have an account, log in, click on <guiseq><gui>File a Bug</"
+#| "gui><gui>Applications</gui><gui>gnome-games</gui></guiseq>. Before "
+#| "reporting a bug, please read the <link href=\"https://bugzilla.gnome.org/"
+#| "page.cgi?id=bug-writing.html\">bug writing guidelines</link>, and please "
+#| "<link href=\"https://bugzilla.gnome.org/browse.cgi?product=gnome-games"
+#| "\">browse</link> for the bug to see if it already exists."
 msgid ""
 "Once you have an account, log in, click on <guiseq><gui>File a Bug</"
 "gui><gui>Applications</gui><gui>five-or-more</gui></guiseq>. Before "
@@ -188,15 +189,12 @@ msgid ""
 "<link href=\"https://bugzilla.gnome.org/browse.cgi?product=five-or-more"
 "\">browse</link> for the bug to see if it already exists."
 msgstr ""
-"Une fois en possession de votre compte, connectez-vous (bouton « log in » "
-"dans la barre du haut ou du bas). Cliquez alors successivement sur "
-"<guiseq><gui>File a Bug (Déclarer un bogue)</gui><gui>Applications</"
-"gui><gui>five-or-more</gui></guiseq>. Avant de signaler une anomalie, lisez "
-"le <link href=\"https://bugzilla.gnome.org/page.cgi?id=bug-writing.html"
-"\">guide de rédaction des rapport de bogues</link> et faites une <link href="
-"\"https://bugzilla.gnome.org/browse.cgi?product=five-or-more\">recherche</"
-"link> au sujet de l'anomalie au cas où quelque chose de similaire existerait "
-"déjà."
+"Ha létrehozta fiókját, jelentkezzen be, kattintson a <guiseq><gui>File a "
+"Bug</gui><gui>Applications</gui><gui>five-or-more</gui></guiseq> "
+"hivatkozásokra. Hiba jelentése előtt olvassa el a <link href=\"https://"
+"bugzilla.gnome.org/page.cgi?id=bug-writing.html\">hibajelentés-írási "
+"irányelveket</link>, és <link href=\"https://bugzilla.gnome.org/browse.cgi?"
+"product=five-or-more\">ellenőrizze</link>, hogy nincs-e már a hiba bejelentve."
 
 #: C/bug-filing.page:39(page/p)
 msgid ""
@@ -204,18 +202,17 @@ msgid ""
 "<gui>Severity</gui> menu. Fill in the Summary and Description sections and "
 "click <gui>Commit</gui>."
 msgstr ""
-"Si vous demandez une nouvelle fonctionnalité, choisissez <gui>enhancement</"
-"gui> (amélioration) dans le menu <gui>Severity</gui> (sévérité). Remplissez "
-"les rubriques « Summary » (résumé) et « Description » puis cliquez sur "
-"<gui>Commit</gui> (soumettre)."
+"Ha új szolgáltatást kér, válassza az <gui>enhancement</gui> lehetőséget a "
+"<gui>Severity</gui> menüben. Töltse ki a Summary és Description szakaszokat, "
+"és kattintson a <gui>Commit</gui> gombra."
 
 #: C/bug-filing.page:43(page/p)
 msgid ""
 "Your report will be given an ID number, and its status will be updated as it "
 "is being dealt with."
 msgstr ""
-"Votre signalement recevra un numéro d'identification, et son statut sera mis "
-"à jour quand il sera traité."
+"A hibajelentés kapni fog egy azonosítószámot, az állapota pedig a "
+"feldolgozása során frissülni fog."
 
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
@@ -255,69 +252,69 @@ msgstr "Michael Hill"
 
 #: C/change-board-size.page:22(page/title)
 msgid "Change board size"
-msgstr "Modification de la taille du plateau"
+msgstr "Játéktábla méretének megváltoztatása"
 
 #: C/change-board-size.page:23(page/p)
 msgid "To change the board size:"
-msgstr "Pour modifier la taille du plateau :"
+msgstr "A játéktábla méretének megváltoztatása:"
 
 #: C/change-board-size.page:25(item/p)
 msgid "Click <guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq>"
 msgstr ""
-"Cliquez sur <guiseq><gui>Paramètres</gui><gui>Préférences</gui></guiseq>"
+"Válassza a <guiseq><gui>Beállítások</gui><gui>Beállítások</gui></guiseq> "
+"menüpontot."
 
 #: C/change-board-size.page:26(item/p)
 msgid ""
 "Under <gui>Board Size</gui>, select <gui>Small</gui>, <gui>Medium</gui>, or "
 "<gui>Large</gui>."
 msgstr ""
-"Sous <gui>Taille du plateau</gui>, sélectionnez <gui>Petite</gui>, "
-"<gui>Moyenne</gui> ou <gui>Grande</gui>."
+"A <gui>Táblaméret</gui> alatt válassza a <gui>Kicsi</gui>, <gui>Közepes</gui> "
+"vagy <gui>Nagy</gui> lehetőségek egyikét."
 
 #: C/change-board-size.page:31(note/p)
 msgid ""
 "While a larger board gives you more space, there are also more objects in "
 "play for each turn."
 msgstr ""
-"Un plateau plus grand vous donne plus d'espace, il y a également plus "
-"d'objets en jeu à chaque tour."
+"Míg egy nagyobb tábla több helyet biztosít, minden körben több objektum is "
+"van játékban."
 
 #: C/change-board-size.page:36(section/title)
 msgid "Board parameters"
-msgstr "Paramètres du plateau"
+msgstr "Tábla paraméterei"
 
 #: C/change-board-size.page:37(section/p)
 msgid "The 3 different board sizes have the following parameters:"
-msgstr ""
-"Les 3 différentes tailles de plateau possèdent les paramètres suivants :"
+msgstr "A 3 különböző táblaméret a következő paraméterekkel rendelkezik:"
 
 #: C/change-board-size.page:41(td/p)
 msgid "<em>Size</em>"
-msgstr "<em>Taille</em>"
+msgstr "<em>Méret</em>"
 
 #: C/change-board-size.page:42(td/p)
 msgid "<em>Width</em>"
-msgstr "<em>Largeur</em>"
+msgstr "<em>Szélesség</em>"
 
 #: C/change-board-size.page:43(td/p)
 msgid "<em>Height</em>"
-msgstr "<em>Hauteur</em>"
+msgstr "<em>Magasság</em>"
 
 #: C/change-board-size.page:44(td/p)
 msgid "<em>Number of types</em>"
-msgstr "<em>Nombre de types d'objet</em>"
+msgstr "<em>Típusok száma</em>"
 
 #: C/change-board-size.page:45(td/p)
 msgid "<em>New objects per turn</em>"
-msgstr "<em>Nombre d'objets par tour</em>"
+msgstr "<em>Új objektumok körönként</em>"
 
 #: C/change-board-size.page:46(td/p)
 msgid "<em>Number of cells</em>"
-msgstr "<em>Nombre de cellules</em>"
+msgstr "<em>Cellák száma</em>"
 
 #: C/change-board-size.page:50(td/p)
 msgid "Small"
-msgstr "Petite"
+msgstr "Kicsi"
 
 #: C/change-board-size.page:51(td/p) C/change-board-size.page:52(td/p)
 #: C/change-board-size.page:60(td/p) C/change-board-size.page:65(td/p)
@@ -339,7 +336,7 @@ msgstr "49"
 
 #: C/change-board-size.page:59(td/p)
 msgid "Medium"
-msgstr "Moyenne"
+msgstr "Közepes"
 
 #: C/change-board-size.page:59(td/p) C/scores.page:49(td/p)
 msgid "9"
@@ -351,7 +348,7 @@ msgstr "81"
 
 #: C/change-board-size.page:64(td/p)
 msgid "Large"
-msgstr "Grande"
+msgstr "Nagy"
 
 #: C/change-board-size.page:64(td/p)
 msgid "20"
@@ -367,19 +364,19 @@ msgstr "300"
 
 #: C/change-board-size.page:73(section/title)
 msgid "The 3 board sizes"
-msgstr "Les 3 tailles de plateau"
+msgstr "A 3 táblaméret"
 
 #: C/change-board-size.page:79(media/p)
 msgid "<app>Five or More</app> Small board"
-msgstr "Petit plateau de <app>Cinq ou plus</app>"
+msgstr "<app>Öt vagy több</app> kis tábla"
 
 #: C/change-board-size.page:84(media/p)
 msgid "<app>Five or More</app> medium size board"
-msgstr "Plateau moyen de <app>Cinq ou plus</app>"
+msgstr "<app>Öt vagy több</app> közepes tábla"
 
 #: C/change-board-size.page:89(media/p)
 msgid "<app>Five or More</app> large size board"
-msgstr "Grand plateau de <app>Cinq ou plus</app>"
+msgstr "<app>Öt vagy több</app> nagy tábla"
 
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
@@ -422,68 +419,69 @@ msgstr "2012"
 
 #: C/change-theme.page:19(page/title)
 msgid "Change the look and feel"
-msgstr "Modification de l'apparence"
+msgstr "A megjelenés megváltoztatása"
 
 #: C/change-theme.page:20(page/p)
 msgid "To change the appearance of the pieces and the board:"
-msgstr "Pour modifier l'apparence des pièces et du plateau :"
+msgstr "A figurák és a tábla megjelenésének megváltoztatása:"
 
 #: C/change-theme.page:23(item/p) C/fast-moves.page:28(item/p)
 msgid "Click <guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq>."
 msgstr ""
-"Cliquez sur <guiseq><gui>Paramètres</gui><gui>Préférences</gui></guiseq>."
+"Válassza a <guiseq><gui>Beállítások</gui><gui>Beállítások</gui></guiseq> "
+"menüpontot."
 
 #: C/change-theme.page:26(item/p)
 msgid ""
 "Select <gui>balls</gui> or <gui>shapes</gui> from the <gui>Image</gui> drop "
 "down menu to change the playing pieces."
 msgstr ""
-"Sélectionnez <gui>balles</gui> ou <gui>formes</gui> dans le menu déroulant "
-"<gui>Image</gui> pour modifier les pièces du jeu."
+"A <gui>Kép</gui> legördülő menüből válassza a <gui>labdák</gui> vagy <gui>"
+"alakzatok</gui> pontot a figurák megváltoztatásához."
 
 #: C/change-theme.page:28(item/p)
 msgid ""
 "Click on the colored box next to <gui>Image background</gui> to access the "
 "color palette."
 msgstr ""
-"Cliquez sur la boîte colorée à côté de <gui>Couleur d'arrière-plan</gui> "
-"pour accéder à la palette des couleurs."
+"Kattintson a <gui>Kép háttere</gui> melletti színes négyzetre a színpaletta "
+"eléréséhez."
 
 #: C/change-theme.page:32(item/p) C/fast-moves.page:30(item/p)
 msgid "Click <gui>Close</gui>."
-msgstr "Cliquez sur <gui>Fermer</gui>."
+msgstr "Nyomja meg a <gui>Bezárás</gui> gombot."
 
 #: C/change-theme.page:36(section/title)
 msgid "Images available"
-msgstr "Objets disponibles"
+msgstr "Elérhető képek"
 
 #: C/change-theme.page:38(media/p)
 msgid "Five or More with different balls"
-msgstr "Cinq ou plus avec des balles différentes"
+msgstr "Az Öt vagy több különböző labdákkal."
 
 #: C/change-theme.page:42(media/p)
 msgid "<app>Five or More</app> with different shapes"
-msgstr "<app>Cinq ou plus</app> avec des formes différentes"
+msgstr "Az <app>Öt vagy több</app> különböző alakzatokkal"
 
 #: C/change-theme.page:47(section/title)
 msgid "Background colors available"
-msgstr "Couleurs d'arrière-plan disponibles"
+msgstr "Elérhető háttérszínek"
 
 #: C/change-theme.page:50(media/p)
 msgid "Five or More color palette"
-msgstr "Palette des couleurs de Cinq ou plus"
+msgstr "Az Öt vagy több színpalettája"
 
 #: C/develop.page:19(page/title)
 msgid "Help develop"
-msgstr "Aide au développement"
+msgstr "Segítsen a fejlesztésben"
 
 #: C/develop.page:20(page/p)
 msgid ""
 "The <app>GNOME Games</app> are developed and maintained by a volunteer "
 "community. You are welcome to participate."
 msgstr ""
-"Les <app>jeux GNOME</app> sont développés et maintenus par une communauté de "
-"volontaires. Votre contribution est la bienvenue."
+"A <app>GNOME játékokat</app> egy önkéntes közösség fejleszti és tartja "
+"karban. Közreműködését szívesen fogadjuk!"
 
 #: C/develop.page:23(page/p)
 msgid ""
@@ -494,24 +492,24 @@ msgid ""
 "href=\"http://mail.gnome.org/mailman/listinfo/games-list\">mailing list</"
 "link>."
 msgstr ""
-"Si vous voulez <link href=\"https://live.gnome.org/GnomeGames/Contributing"
-"\">aider au développement des <app>jeux GNOME</app></link>, vous pouvez vous "
-"mettre en contact avec les développeurs en utilisant <link href=\"https://"
-"cbe005.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</"
-"link> ou via notre <link href=\"http://mail.gnome.org/mailman/listinfo/games-"
-"list\">liste de diffusion</link>."
+"Ha szeretne <link href=\"https://live.gnome.org/GnomeGames/Contributing"
+"\">közreműködni a <app>GNOME játékok</app> fejlesztésében</link>, akkor a "
+"fejlesztőkkel a kapcsolatot <link href=\"https://cbe005.chat.mibbit.com/?"
+"url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">IRC</link>-n vagy a <link href="
+"\"http://mail.gnome.org/mailman/listinfo/games-list\">levelezőlistán</link> "
+"veheti fel."
 
 #: C/documentation.page:17(page/title)
 msgid "Help write documentation"
-msgstr "Contribution à l'écriture du manuel d'aide"
+msgstr "Segítsen dokumentációt írni"
 
 #: C/documentation.page:19(page/p)
 msgid ""
 "The <app>GNOME Games</app> documentation is maintained by a volunteer "
 "community. You are welcome to participate."
 msgstr ""
-"La documentation des <app>jeux GNOME</app> est maintenue par une communauté "
-"de volontaires. Votre contribution est la bienvenue."
+"A <app>GNOME játékok</app> dokumentációját egy önkéntes közösség tartja "
+"karban. Közreműködését szívesen fogadjuk!"
 
 #: C/documentation.page:22(page/p)
 msgid ""
@@ -520,94 +518,92 @@ msgid ""
 "gnome.org%2Fdocs\">irc</link>, or via our <link href=\"http://mail.gnome.org/"
 "mailman/listinfo/gnome-doc-list\">mailing list</link>."
 msgstr ""
-"Pour contribuer au projet de documentation, n'hésitez pas à prendre contact "
-"avec nous en utilisant <link href=\"https://cbe003.chat.mibbit.com/?url=irc"
-"%3A%2F%2Firc.gnome.org%2Fdocs\">irc</link> ou via notre <link href=\"http://"
-"mail.gnome.org/mailman/listinfo/gnome-doc-list\">liste de diffusion</link>."
+"A dokumentációs projekthez csatlakozáshoz keresse fel nyugodtan az <link "
+"href=\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fdocs"
+"\">irc</link> csatornát vagy a <link href=\"http://mail.gnome.org/mailman/"
+"listinfo/gnome-doc-list\">levelezőlistát</link>."
 
 #: C/documentation.page:26(page/p)
 msgid ""
 "Our <link href=\"https://live.gnome.org/DocumentationProject/Contributing"
 "\">wiki</link> page contains useful information."
 msgstr ""
-"Notre page <link href=\"https://live.gnome.org/DocumentationProject/"
-"Contributing\">wiki</link> contient des informations utiles."
+"A projekt <link href=\"https://live.gnome.org/DocumentationProject/"
+"Contributing\">wiki</link> oldala tartalmazza a legfontosabb információkat."
 
 #: C/fast-moves.page:25(page/title)
 msgid "Change speed"
-msgstr "Modification de la vitesse"
+msgstr "Sebesség megváltoztatása"
 
 #: C/fast-moves.page:26(page/p)
 msgid "To speed up object movements:"
-msgstr "Pour augmenter la vitesse de déplacement des objets :"
+msgstr "Az objektummozgások felgyorsítása:"
 
 #: C/fast-moves.page:29(item/p)
 msgid "Under <gui>General</gui>, select <gui>Use fast moves</gui>."
 msgstr ""
-"Sous <gui>Général</gui>, sélectionnez <gui>Utiliser des déplacements "
-"rapides</gui>."
+"Az <gui>Általános</gui> alatt válassza a <gui>Gyors lépések használata</gui> "
+"pontot."
 
 #: C/fast-moves.page:33(note/p)
 msgid ""
 "Any changes you make are instantly applied and remembered for the next time "
 "you run <app>Five or More</app>."
 msgstr ""
-"Toute modification est immédiatement appliquée et enregistrée pour le "
-"prochain lancement de <app>Cinq ou plus</app>."
+"A változtatások azonnal alkalmazásra kerülnek, és az <app>Öt vagy több</app> "
+"következő futtatásakor is érvényben lesznek."
 
 #: C/legal.xml:3(p/link)
 msgid "Creative Commons Attribution-ShareAlike 3.0 Unported License"
-msgstr ""
-"licence Creative Commons Paternité-Partage des Conditions Initiales à "
-"l'Identique 3.0 Unported"
+msgstr "Creative Commons Attribution-ShareAlike 3.0 Unported License"
 
 #: C/legal.xml:3(license/p)
 msgid "This work is licensed under a <_:link-1/>."
-msgstr "Cette œuvre est distribuée sous <_:link-1/>."
+msgstr "Ez a munka a <_:link-1/> feltételei szerint használható."
 
 #: C/license.page:9(info/desc)
 msgid "Legal information."
-msgstr "Informations légales."
+msgstr "Jogi információk."
 
 #: C/license.page:12(page/title)
 msgid "License"
-msgstr "Licence"
+msgstr "Licenc"
 
 #: C/license.page:13(page/p)
 msgid ""
 "This work is distributed under a CreativeCommons Attribution-Share Alike 3.0 "
 "Unported license."
 msgstr ""
-"Cette œuvre est distribuée sous licence Creative Commons Paternité-Partage "
-"des Conditions Initiales à l'Identique 3.0 Unported."
+"Ez a mű a CreativeCommons Attribution-Share Alike 3.0 Unported licenc "
+"feltételei szerint terjeszthető."
 
 #: C/license.page:21(page/p)
 msgid "You are free:"
-msgstr "Vous êtes libre :"
+msgstr "Jogában áll:"
 
 #: C/license.page:26(item/title)
 msgid "<em>To share</em>"
-msgstr "<em>de partager</em>"
+msgstr "<em>Megosztani</em>"
 
 #: C/license.page:27(item/p)
 msgid "To copy, distribute and transmit the work."
-msgstr "de reproduire, distribuer et communiquer cette création,"
+msgstr "Másolni, terjeszteni és továbbítani a művet."
 
 #: C/license.page:30(item/title)
 msgid "<em>To remix</em>"
-msgstr "<em>de modifier</em>"
+msgstr "<em>Feldolgozni</em>"
 
 #: C/license.page:31(item/p)
 msgid "To adapt the work."
-msgstr "d'adapter cette création,"
+msgstr "Módosítani a művet."
 
 #: C/license.page:34(page/p)
 msgid "Under the following conditions:"
-msgstr "selon les conditions suivantes :"
+msgstr "A következő feltételek szerint:"
 
 #: C/license.page:39(item/title)
 msgid "<em>Attribution</em>"
-msgstr "<em>Paternité</em>"
+msgstr "<em>Nevezd meg!</em>"
 
 #: C/license.page:40(item/p)
 msgid ""
@@ -615,23 +611,20 @@ msgid ""
 "licensor (but not in any way that suggests that they endorse you or your use "
 "of the work)."
 msgstr ""
-"Vous devez citer le nom de l'auteur original de la manière indiquée par "
-"l'auteur de l'œuvre ou le titulaire des droits qui vous confère cette "
-"autorisation (mais pas d'une manière qui suggérerait qu'ils vous soutiennent "
-"ou approuvent votre utilisation de l'œuvre)."
+"A szerző vagy a jogosult által meghatározott módon fel kell tüntetned a "
+"műhöz kapcsolódó információkat (pl. a szerző nevét vagy álnevét, a Mű címét)."
 
 #: C/license.page:47(item/title)
 msgid "<em>Share Alike</em>"
-msgstr "<em>Partage des conditions initiales à l'identique</em>"
+msgstr "<em>Így add tovább!</em>"
 
 #: C/license.page:48(item/p)
 msgid ""
 "If you alter, transform, or build upon this work, you may distribute the "
 "resulting work only under the same, similar or a compatible license."
 msgstr ""
-"Si vous modifiez, transformez ou adaptez cette création, vous n'avez le "
-"droit de distribuer la création qui en résulte que sous un contrat identique "
-"à celui-ci."
+"Ha megváltoztatja, átalakítja, feldolgozza ezt a művet, az így létrejött "
+"alkotást csak a jelenlegivel megegyező licenc alatt terjesztheti."
 
 #: C/license.page:54(page/p)
 msgid ""
@@ -640,10 +633,10 @@ msgid ""
 "link>, or read the full <link href=\"http://creativecommons.org/licenses/by-"
 "sa/3.0/\">Commons Deed</link>."
 msgstr ""
-"Pour prendre connaissance du texte complet de la licence, consultez le <link "
-"href=\"http://creativecommons.org/licenses/by-sa/3.0/legalcode\">site Web "
-"CreativeCommons</link> ou lisez in extenso le <link href=\"http://"
-"creativecommons.org/licenses/by-sa/3.0/\">contrat Commons</link>."
+"A licenc teljes szövegéért lásd a <link href=\"http://creativecommons.org/"
+"licenses/by-sa/3.0/legalcode\">CreativeCommons weboldalát</link>, vagy a "
+"teljes <link href=\"http://creativecommons.org/licenses/by-sa/3.0/\">Commons "
+"összefoglalót</link>."
 
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
@@ -658,69 +651,65 @@ msgstr ""
 
 #: C/play.page:21(page/title)
 msgid "How to Play"
-msgstr "Déroulement d'une partie"
+msgstr "Hogyan kell játszani?"
 
 #: C/play.page:23(page/p)
 msgid ""
 "To start a new game click <guiseq><gui>Game</gui><gui>New</gui></guiseq>."
 msgstr ""
-"Pour démarrer une nouvelle partie, cliquez sur <guiseq><gui>Jeu</"
-"gui><gui>Nouveau</gui></guiseq>."
+"Új játék indításához válassza a <guiseq><gui>Játék</gui><gui>Új</gui></guiseq>"
+" menüpontot."
 
 #: C/play.page:27(section/title)
 msgid "Using the mouse"
-msgstr "Utilisation de la souris"
+msgstr "Az egér használatával"
 
 #: C/play.page:31(item/p)
 msgid ""
 "Click on the object you want to move. The selected object will begin "
 "spinning."
 msgstr ""
-"Cliquez sur l'objet que vous voulez déplacer. L'objet sélectionné se met à "
-"tourner."
+"Kattintson a mozgatni kívánt objektumra. A kiválasztott objektum pörögni kezd."
 
 #: C/play.page:35(item/p)
 msgid "Click on the destination cell."
-msgstr "Cliquez sur la cellule cible."
+msgstr "Kattintson a cél cellára."
 
 #: C/play.page:43(section/title)
 msgid "Using the keyboard"
-msgstr "Utilisation du clavier"
+msgstr "A billentyűzet használatával"
 
 #: C/play.page:46(item/p)
 msgid ""
 "Press any of the arrow keys. An outline around a cell will appear on the "
 "board."
 msgstr ""
-"Appuyez sur une des touches fléchées. Un contour autour d'une cellule "
-"apparaît sur le plateau."
+"Nyomja meg bármely nyílbillentyűt. A táblán megjelenik egy körvonal az egyik "
+"cella körül."
 
 #: C/play.page:48(item/p)
 msgid "Using the arrow keys, navigate to the object you want to move."
-msgstr ""
-"En utilisant les touches fléchées, naviguez vers l'objet que vous voulez "
-"déplacer."
+msgstr "A nyílbillentyűkkel léptesse a körvonalat a mozgatandó objektumra."
 
 #: C/play.page:50(item/p)
 msgid ""
 "To select the object, press the <key>Enter</key> or <key>Spacebar</key>. The "
 "selected object will begin spinning."
 msgstr ""
-"Pour sélectionner l'objet, appuyez sur <key>Entrée</key> ou la <key>barre "
-"d'espace</key>. L'objet sélectionné se met à tourner."
+"Az objektum kiválasztásához nyomja meg az <key>Entert</key> vagy a <key>"
+"szóközt</key>. A kijelölt objektum forogni kezd."
 
 #: C/play.page:52(item/p)
 msgid ""
 "Move to the destination cell, and again press the <key>Enter</key> or "
 "<key>Spacebar</key>. The chosen object will move to the destination cell."
 msgstr ""
-"Déplacez-vous vers la cellule cible et appuyez à nouveau sur <key>Entrée</"
-"key> ou la <key>barre d'espace</key>. L'objet sélectionné se déplace vers la "
-"cellule de destination."
+"Lépjen a cél cellára, majd nyomja meg újra az <key>Enter</key> vagy a <key>"
+"szóköz</key> billentyűt. A kijelölt objektum a cél cellába lesz mozgatva."
 
 #: C/play.page:61(section/title)
 msgid "Video demonstration"
-msgstr "Démonstration vidéo"
+msgstr "Videobemutató"
 
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
@@ -770,15 +759,15 @@ msgstr ""
 
 #: C/rules.page:17(page/title)
 msgid "Rules"
-msgstr "Règles"
+msgstr "Szabályok"
 
 #: C/rules.page:19(item/p)
 msgid ""
 "At the start of the game there are either 3 or 7 objects placed on your "
 "board, depending on the <link xref=\"change-board-size\">board size</link>."
 msgstr ""
-"Au début du jeu, il y a 3 ou 7 objets disposés sur le plateau en fonction de "
-"la <link xref=\"change-board-size\">taille du plateau</link>."
+"A játék kezdetén 3 vagy 7 objektum van a táblán elhelyezve, a <link "
+"xref=\"change-board-size\">táblamérettől</link> függően."
 
 #: C/rules.page:22(item/p)
 msgid ""
@@ -787,19 +776,18 @@ msgid ""
 "also depends on the board. A preview of the objects to be placed on the "
 "board appears in the upper left corner of the game window."
 msgstr ""
-"À chaque fois que vous <link xref=\"play\">déplacez un objet</link>, des "
-"objets supplémentaires sont placés aléatoirement sur le plateau. Le nombre "
-"de nouveaux objets placés à chaque tour dépend de la taille du plateau. Une "
-"prévisualisation des objets qui vont être placés apparaît dans le coin "
-"supérieur gauche de la fenêtre du jeu."
+"Egy <link xref=\"play\">objektum mozgatása</link> után újabb objektumok "
+"jelennek meg véletlenszerűen a táblán. Az egyes körökben elhelyezett új "
+"objektumok száma szintén a tábla méretétől függ. A táblán elhelyezendő "
+"objektumok előnézete a játékablak bal felső sarkában jelenik meg."
 
 #: C/rules.page:27(item/p)
 msgid ""
 "There must be a clear path from the original position of the object to the "
 "destination cell (i.e you can not jump over objects)."
 msgstr ""
-"Le chemin entre la position initiale de l'objet et la cellule de destination "
-"doit être libre (c.-à-d. vous ne pouvez pas sauter par dessus des objets)."
+"Az objektum eredeti pozíciója és a cél cella között szabad útnak kell lennie, "
+"azaz nem lehet más objektumokat átugrani."
 
 #: C/rules.page:30(item/p)
 msgid ""
@@ -807,62 +795,61 @@ msgid ""
 "objects will disappear from the game board. When this happens you will have "
 "an extra move without additional objects being added to the board."
 msgstr ""
-"Une ligne droite horizontale, verticale ou diagonale de cinq objets "
-"similaires ou plus disparaît automatiquement du plateau de jeu dès qu'elle "
-"est créée. Lorsque cela se produit, vous bénéficiez d'un mouvement "
-"supplémentaire sans ajout d'objets sur le plateau."
+"Öt vagy több hasonló objektumból álló vízszintes, függőleges vagy átlós vonal "
+"eltűnik a játéktábláról. Ha ez megtörténik, akkor lesz egy extra lépése, "
+"amikor nem kerülnek új objektumok a táblára."
 
 #: C/rules.page:34(item/p)
 msgid ""
 "The more objects you clear, the longer the game will go on. The longer you "
 "play, the higher your <link xref=\"scores\">score</link>."
 msgstr ""
-"Plus vous effacez d'objets, plus la partie est longue. Plus vous jouez "
-"longtemps, plus votre <link xref=\"scores\">score</link> augmente."
+"Minél több objektumot távolít el, annál tovább tart a játék. Minél tovább "
+"játszik, annál több <link xref=\"scores\">pontot</link> kap."
 
 #: C/rules.page:37(item/p)
 msgid ""
 "The game is over when the board is full, since no object can be moved at "
 "that point."
 msgstr ""
-"La partie est terminée lorsque le plateau est plein, puisqu'aucun objet ne "
-"peut plus alors être déplacé."
+"Ha a tábla megtelik, a játék véget ér, mert ekkor már egy objektum sem "
+"mozgatható."
 
 #: C/rules.page:45(media/p)
 msgid "Example horizontal alignment"
-msgstr "Exemple d'alignement horizontal"
+msgstr "Példa vízszintes elrendezés"
 
 #: C/rules.page:50(media/p)
 msgid "Example vertical alignment"
-msgstr "Exemple d'alignement vertical"
+msgstr "Példa függőleges elrendezés"
 
 #: C/rules.page:55(media/p)
 msgid "Example diagonal alignment"
-msgstr "Exemple d'alignement en diagonale"
+msgstr "Példa átlós elrendezés"
 
 #: C/rules.page:60(media/p)
 msgid "<app>Five or More</app> game over position."
-msgstr "Position de fin de partie de <app>Cinq ou plus</app>."
+msgstr "Vége az <app>Öt vagy több</app> játéknak."
 
 #: C/scores.page:20(page/title)
 msgid "Scoring"
-msgstr "Scores"
+msgstr "Pontozás"
 
 #: C/scores.page:21(page/p)
 msgid ""
 "You score points by creating lines of 5 or more objects. The number of "
 "points depends on the number of objects that disappear."
 msgstr ""
-"Vous marquez des points en créant des lignes de 5 objets ou plus. Le nombre "
-"de points dépend du nombre d'objets composant la ligne qui disparaît."
+"Az 5 vagy több objektumból álló sorok létrehozásáért pontokat kap. A pontok "
+"száma az eltűnő objektumok számától függ."
 
 #: C/scores.page:27(td/p)
 msgid "<em>Number of objects</em>"
-msgstr "<em>Nombre d'objets</em>"
+msgstr "<em>Objektumok száma</em>"
 
 #: C/scores.page:28(td/p)
 msgid "<em>Number of points</em>"
-msgstr "<em>Nombre de points</em>"
+msgstr "<em>Pontszám</em>"
 
 #: C/scores.page:34(td/p) C/scores.page:53(td/p)
 msgid "10"
@@ -929,8 +916,8 @@ msgid ""
 "You can view the high scores by clicking <guiseq><gui>Game</gui><gui>Scores</"
 "gui></guiseq>."
 msgstr ""
-"Vous pouvez afficher les meilleurs scores en cliquant sur <guiseq><gui>Jeu</"
-"gui><gui>Scores</gui></guiseq>."
+"A toplistát a <guiseq><gui>Játék</gui><gui>Pontszám</gui></guiseq> menüpont "
+"kiválasztásával érheti el."
 
 #: C/scores.page:78(note/p)
 msgid ""
@@ -938,17 +925,16 @@ msgid ""
 "You can select the <gui>Board Size</gui> of interest using the drop down "
 "menu."
 msgstr ""
-"Les scores de <app>Cinq ou plus</app> sont enregistrés en fonction de la "
-"taille du plateau. Sélectionnez la <gui>taille du plateau</gui> "
-"correspondante au score qui vous intéresse dans le menu déroulant."
+"Az <app>Öt vagy több</app> pontszámok a tábla mérete szerint kerülnek "
+"rögzítésre. Az Önt érdeklő táblaméretet a legördülő menüből választhatja ki."
 
 #: C/shortcuts.page:17(page/title)
 msgid "Keyboard shortcuts"
-msgstr "Raccourcis clavier"
+msgstr "Gyorsbillentyűk"
 
 #: C/shortcuts.page:20(td/p)
 msgid "New game"
-msgstr "Nouvelle partie"
+msgstr "Új játék"
 
 #: C/shortcuts.page:21(td/p)
 msgid "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
@@ -956,7 +942,7 @@ msgstr "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
 
 #: C/shortcuts.page:24(td/p)
 msgid "Help"
-msgstr "Manuel d'aide"
+msgstr "Súgó"
 
 #: C/shortcuts.page:25(td/p)
 msgid "<key>F1</key>"
@@ -964,7 +950,7 @@ msgstr "<key>F1</key>"
 
 #: C/shortcuts.page:28(td/p)
 msgid "Quit"
-msgstr "Quitter"
+msgstr "Kilépés"
 
 #: C/shortcuts.page:29(td/p)
 msgid "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
@@ -972,7 +958,7 @@ msgstr "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
 
 #: C/strategy.page:17(page/title)
 msgid "Strategy"
-msgstr "Stratégie"
+msgstr "Stratégia"
 
 #: C/strategy.page:19(page/p)
 msgid ""
@@ -980,14 +966,13 @@ msgid ""
 "strategic elements do exist. Here are some things to try and keep in mind as "
 "you play:"
 msgstr ""
-"Il n'y a pas de stratégie universelle pour <app>Cinq ou plus</app>, mais "
-"quelques éléments de stratégie existent. Voici ce que vous devez garder à "
-"l'esprit lorsque vous jouez :"
+"Nincs univerzális stratégia az <app>Öt vagy több</app> játékhoz, de létezik "
+"néhány stratégiai elem. Néhány, a játék során észben tartandó tanács:"
 
 #: C/strategy.page:22(item/p)
 msgid "Try to set at least three same objects with your every move."
 msgstr ""
-"Essayez de rassembler au moins trois objets identiques à chaque mouvement."
+"Próbáljon legalább három hasonló objektumot sorba állítani minden lépéssel."
 
 #: C/strategy.page:23(item/p)
 msgid ""
@@ -995,9 +980,9 @@ msgid ""
 "think ahead. Pay attention to the collection of <gui>Next</gui> objects, "
 "because knowing these will influence your moves."
 msgstr ""
-"Le plateau peut se remplir rapidement d'objets donc il vaut mieux anticiper. "
-"Observez bien l'ensemble des objets <gui>suivants</gui> parce que leur "
-"connaissance influe sur vos déplacements."
+"A tábla gyorsan megtelhet objektumokkal, így érdemes előre gondolkodni. "
+"Figyelje a <gui>Következő</gui> objektumok listáját, és ennek ismeretében "
+"lépjen."
 
 #: C/strategy.page:24(item/p)
 msgid ""
@@ -1005,13 +990,13 @@ msgid ""
 "can line up 2 and 3 with a space in between, and then connect them by "
 "placing the sixth object between them."
 msgstr ""
-"Essayez d'aligner plus de 5 objets. Par exemple, s'il y a 6 objets "
-"identiques, vous pouvez en aligner 2, laisser un espace, puis en aligner 3 "
-"et enfin connecter le tout en plaçant le sixième dans l'espace."
+"Próbáljon meg 5-nél több objektumot sorba állítani. 6 objektumot például "
+"érdemes úgy sorba állítani, hogy egy 2 és 3 objektum közti résbe helyezi el a "
+"hatodikat."
 
 #: C/translate.page:23(page/title)
 msgid "Help translate"
-msgstr "Contribution à la traduction"
+msgstr "Segítsen a fordításban"
 
 #: C/translate.page:25(page/p)
 msgid ""
@@ -1019,18 +1004,19 @@ msgid ""
 "translated by a world-wide volunteer community. You are welcome to "
 "participate."
 msgstr ""
-"L'interface utilisateur et la documentation des <app>jeux GNOME</app> est "
-"actuellement traduite par une communauté de volontaires dans le monde "
-"entier. Votre contribution est la bienvenue."
+"A <app>GNOME játékok</app> felhasználói felületét és súgóját egy világszintű "
+"önkéntes közösség fordítja. Közreműködését szívesen fogadjuk!"
 
 #: C/translate.page:28(page/p)
+#| msgid ""
+#| "There are <link href=\"http://l10n.gnome.org/module/gnome-games/\">many "
+#| "languages</link> for which translations are still needed."
 msgid ""
 "There are <link href=\"http://l10n.gnome.org/module/five-or-more/\">many "
 "languages</link> for which translations are still needed."
 msgstr ""
-"Il y a de <link href=\"http://l10n.gnome.org/module/five-or-more/"
-"\">nombreuses langues</link> pour lesquelles nous avons encore besoin de "
-"traductions."
+"<link href=\"http://l10n.gnome.org/module/five-or-more/\">Számos nyelv van</"
+"link>, amelyhez még szükség van fordításokra."
 
 #: C/translate.page:30(page/p)
 msgid ""
@@ -1039,10 +1025,10 @@ msgid ""
 "teams/\">translation team</link> for your language. This will give you the "
 "ability to upload new translations."
 msgstr ""
-"Pour commencer à traduire, vous devez <link href=\"http:l10n.gnome.org"
-"\">créer un compte</link> et rejoindre <link href=\"http://l10n.gnome.org/"
-"teams/\">l'équipe de traduction</link> de votre langue. Ce compte va vous "
-"permettre de téléverser de nouvelles traductions."
+"A fordítás elkezdéséhez <link href=\"http://l10n.gnome.org\">létre kell "
+"hoznia egy fiókot</link>, és csatlakoznia kell a nyelvének megfelelő <link "
+"href=\"http://l10n.gnome.org/teams/\">fordítócsapathoz</link>. Ez lehetővé "
+"teszi Önnek az új fordítások feltöltését."
 
 #: C/translate.page:34(page/p)
 msgid ""
@@ -1051,11 +1037,10 @@ msgid ""
 "channel are located worldwide, so you may not get an immediate response as a "
 "result of timezone differences."
 msgstr ""
-"Vous pouvez discuter avec d'autres traducteurs de GNOME par le canal <link "
-"href=\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fi18n"
-"\">irc</link>. Les personnes abonnées à ce canal sont disséminées dans le "
-"monde entier, vous n'aurez donc probablement pas de réponse rapide à cause "
-"des décalages horaires."
+"A GNOME fordítókkal <link href=\"https://cbe003.chat.mibbit.com/?url=irc%3A"
+"%2F%2Firc.gnome.org%2Fi18n\">IRC-en</link> is cseveghet. A csatornán a világ "
+"minden részéről vannak emberek, így előfordulhat, hogy az időzóna-eltérések "
+"miatt nem kap azonnal választ."
 
 #: C/translate.page:38(page/p)
 msgid ""
@@ -1063,19 +1048,21 @@ msgid ""
 "<link href=\"http://mail.gnome.org/mailman/listinfo/gnome-i18n\">mailing "
 "list</link>."
 msgstr ""
-"Vous pouvez aussi joindre par courriel l'équipe d'internationalisation en "
-"utilisant leur <link href=\"http://mail.gnome.org/mailman/listinfo/gnome-i18n"
-"\">liste de diffusion</link>."
+"Ennek alternatívájaként megkeresheti a nemzetközi fordítócsapatot <link href="
+"\"http://mail.gnome.org/mailman/listinfo/gnome-i18n\">levelezőlistán</link> "
+"is. A magyar csapat <link href=\"http://l10n.gnome.org/languages/hu/"
+"\">kezdőoldalán</link> megtalálja a magyar levelezőlista címét és a "
+"fordítások megkezdéséhez szükséges információkat."
 
 #~ msgid ""
 #~ "To file your bug, choose the component <gui>glines</gui> in the "
 #~ "<gui>Component</gui> menu."
 #~ msgstr ""
-#~ "Pour déposer votre bogue, choisissez le composant <gui>glines</gui> dans "
-#~ "le menu <gui>Component</gui> (composant)."
+#~ "A hiba bejelentéséhez válassza ki a <gui>glines</gui> összetevőt a "
+#~ "<gui>Component</gui> menüben."
 
 #~ msgid "Fullscreen"
-#~ msgstr "Plein écran"
+#~ msgstr "Teljes képernyő"
 
 #~ msgid "<key>F11</key>"
 #~ msgstr "<key>F11</key>"

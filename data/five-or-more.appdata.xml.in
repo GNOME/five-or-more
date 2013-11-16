@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2013 Michael Catanzaro -->
+<application>
+ <id type="desktop">glines.desktop</id>
+ <licence>CC0</licence>
+ <description>
+  <_p>
+   Five or More is the GNOME port of a once-popular computer game. Align five or
+   more objects of the same color into a line to cause them to disappear and
+   score points. Earn many more points by lining up as many objects as possible
+   before clearing them.
+  </_p>
+  <_p>
+   More objects appear after every turn. Play for as long as possible, until the
+   board is completely full!
+  </_p>
+ </description>
+ <screenshots>
+  <screenshot type="default" width="1200" height="675">https://people.gnome.org/~mcatanzaro/five-or-more.png</screenshot>
+ </screenshots>
+ <url type="homepage">https://wiki.gnome.org/Five%20or%20more</url>
+ <updatecontact>games_list_at_gnome.org</updatecontact>
+</application>
