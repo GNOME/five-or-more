@@ -1173,7 +1173,6 @@ game_about_callback (GSimpleAction *action,
                                  "Lanka Rathnayaka",
     NULL
   };
-  gchar *license = games_get_license (_("Five or More"));
 
   gtk_show_about_dialog (GTK_WINDOW (app),
                          "program-name", _("Five or More"),
@@ -1181,15 +1180,14 @@ game_about_callback (GSimpleAction *action,
                          "comments", _("GNOME port of the once-popular Color Lines game\n\nFive or More is a part of GNOME Games."),
                          "copyright",
                          "Copyright \xc2\xa9 1997-2008 Free Software Foundation, Inc.",
-                         "license", license,
+                         "license-type", GTK_LICENSE_GPL_2_0,
                          "authors", authors,
                          "documenters", documenters,
                          "translator-credits", _("translator-credits"),
                          "logo-icon-name", "five-or-more",
                          "website", "http://www.gnome.org/projects/gnome-games/",
                          "website-label", _("GNOME Games web site"),
-                         "wrap-license", TRUE, NULL);
-  g_free (license);
+                         NULL);
 }
 
 static void
