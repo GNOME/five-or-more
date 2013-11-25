@@ -4,98 +4,72 @@
   <object class="GtkAccelGroup" id="accelgroup"/>
   <object class="GtkApplicationWindow" id="glines_window">
     <property name="can_focus">False</property>
-    <property name="title" translatable="yes">Five or More</property>
     <property name="default_width">320</property>
     <property name="default_height">400</property>
     <property name="icon_name">glines</property>
     <accel-groups>
       <group name="accelgroup"/>
     </accel-groups>
-    <child>
-      <object class="GtkBox" id="vbox">
+    <child type="titlebar">
+      <object class="GtkHeaderBar" id="headerbar">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
-        <property name="orientation">vertical</property>
+        <property name="show_close_button">True</property>
+        <property name="show_fallback_app_menu">True</property>
+        <property name="spacing">6</property>
+        <property name="title" translatable="yes">Five or More</property>
         <child>
-          <placeholder/>
-        </child>
-        <child>
-          <object class="GtkBox" id="top_box">
+          <object class="GtkBox" id="preview_hbox">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
+            <property name="orientation">horizontal</property>
             <child>
               <object class="GtkLabel" id="labelNext">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="xpad">6</property>
+                <property name="xpad">2</property>
                 <property name="label" translatable="yes">Next:</property>
                 <attributes>
                   <attribute name="weight" value="bold"/>
                 </attributes>
               </object>
               <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
-                <property name="position">0</property>
-              </packing>
-            </child>
-            <child>
-              <placeholder/>
-            </child>
-            <child>
-              <object class="GtkLabel" id="scorelabel">
-                <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="xpad">6</property>
-                <property name="label" translatable="yes">0</property>
-              </object>
-              <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
-                <property name="pack_type">end</property>
-                <property name="position">2</property>
-              </packing>
-            </child>
-            <child>
-              <object class="GtkLabel" id="labelScore">
-                <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="label" translatable="yes">Score:</property>
-                <attributes>
-                  <attribute name="weight" value="bold"/>
-                </attributes>
-              </object>
-              <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
-                <property name="pack_type">end</property>
-                <property name="position">3</property>
+                <property name="pack_type">start</property>
               </packing>
             </child>
           </object>
-          <packing>
-            <property name="expand">False</property>
-            <property name="fill">False</property>
-            <property name="position">1</property>
-          </packing>
         </child>
         <child>
-          <placeholder/>
-        </child>
-        <child>
-          <object class="GtkStatusbar" id="statusbar">
+          <object class="GtkLabel" id="labelScore">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="orientation">vertical</property>
-            <property name="spacing">2</property>
+            <property name="label" translatable="yes">Score:</property>
+            <attributes>
+              <attribute name="weight" value="bold"/>
+            </attributes>
           </object>
           <packing>
-            <property name="expand">False</property>
-            <property name="fill">True</property>
             <property name="pack_type">end</property>
-            <property name="position">4</property>
           </packing>
         </child>
+        <child>
+          <object class="GtkLabel" id="scorelabel">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="xpad">6</property>
+            <property name="label" translatable="yes">0</property>
+          </object>
+          <packing>
+            <property name="pack_type">end</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="GtkBox" id="vbox">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="orientation">vertical</property>
       </object>
     </child>
   </object>
