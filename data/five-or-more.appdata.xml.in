@@ -18,6 +18,6 @@
  <screenshots>
   <screenshot type="default" width="1200" height="675">https://people.gnome.org/~mcatanzaro/five-or-more.png</screenshot>
  </screenshots>
- <url type="homepage">https://wiki.gnome.org/Five%20or%20more</url>
+ <url type="homepage">https://wiki.gnome.org/Apps/Five%20or%20more</url>
  <updatecontact>games_list_at_gnome.org</updatecontact>
 </application>
