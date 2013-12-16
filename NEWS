@@ -1,3 +1,12 @@
+3.11.3 - December 16, 2013
+==========================
+
+Updated Dependencies: GTK+ >= 3.10
+
+* Use a GtkHeaderBar
+* Fix preview area disappearing when selecting another window 
+* Updated translations
+
 3.11.2 - November 16, 2013
 ==========================
 
