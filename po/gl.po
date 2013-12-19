@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games-master-po-gl-54590\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-01 13:54+0100\n"
-"PO-Revision-Date: 2013-11-01 13:56+0200\n"
+"POT-Creation-Date: 2013-12-19 01:11+0100\n"
+"PO-Revision-Date: 2013-12-19 01:12+0200\n"
 "Last-Translator: Fran Dieguez <frandieguez@gnome.org>\n"
 "Language-Team: gnome-l10n-gl@gnome.org\n"
 "Language: gl\n"
@@ -88,7 +88,7 @@ msgid "_Use fast moves"
 msgstr "_Usar movementos rápidos"
 
 #: ../data/five-or-more.ui.h:1 ../data/glines.desktop.in.h:1
-#: ../src/glines.c:1176 ../src/glines.c:1179 ../src/glines.c:1704
+#: ../src/glines.c:1180 ../src/glines.c:1684
 msgid "Five or More"
 msgstr "Cinco ou Máis"
 
@@ -97,12 +97,12 @@ msgid "Next:"
 msgstr "Seguinte:"
 
 #: ../data/five-or-more.ui.h:3
-msgid "0"
-msgstr "0"
-
-#: ../data/five-or-more.ui.h:4
 msgid "Score:"
 msgstr "Puntuación:"
+
+#: ../data/five-or-more.ui.h:4
+msgid "0"
+msgstr "0"
 
 #: ../data/glines.desktop.in.h:2
 msgid "Remove colored balls from the board by forming lines"
@@ -120,7 +120,7 @@ msgstr "Xogo novo"
 msgid "Scores"
 msgstr "Puntuacións"
 
-#: ../data/menu.ui.h:3 ../src/glines.c:176
+#: ../data/menu.ui.h:3 ../src/glines.c:175
 msgid "Preferences"
 msgstr "Preferencias"
 
@@ -439,26 +439,26 @@ msgstr ""
 "Debeu recibir unha copia da Licenza pública xeral GNU xunto con este "
 "programa; en caso contrario, olle <http://www.gnu.org/licenses/>."
 
-#: ../src/glines.c:78
+#: ../src/glines.c:81
 msgctxt "board size"
 msgid "Small"
 msgstr "Pequeno"
 
-#: ../src/glines.c:79
+#: ../src/glines.c:82
 msgctxt "board size"
 msgid "Medium"
 msgstr "Medio"
 
-#: ../src/glines.c:80
+#: ../src/glines.c:83
 msgctxt "board size"
 msgid "Large"
 msgstr "Grande"
 
-#: ../src/glines.c:170
+#: ../src/glines.c:169
 msgid "Could not load theme"
 msgstr "Non foi posíbel baixar o tema"
 
-#: ../src/glines.c:196
+#: ../src/glines.c:195
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -471,7 +471,7 @@ msgstr ""
 "\n"
 "En vez diso instalarase o tema predeterminado."
 
-#: ../src/glines.c:203
+#: ../src/glines.c:202
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -484,38 +484,38 @@ msgstr ""
 "\n"
 "Verifique que o Cinco ou Máis está instalado correctamente."
 
-#: ../src/glines.c:408
+#: ../src/glines.c:413
 msgid "Match five objects of the same type in a row to score!"
 msgstr "Para puntuar ten que xuntar cinco obxectos do mesmo tipo nunha fila!"
 
-#: ../src/glines.c:472
+#: ../src/glines.c:474
 msgid "GNOME Five or More"
 msgstr "GNOME Cinco ou Máis"
 
-#: ../src/glines.c:474
+#: ../src/glines.c:476
 msgid "_Board size:"
 msgstr "_Tamaño do taboleiro:"
 
-#: ../src/glines.c:491
+#: ../src/glines.c:493
 msgid "Game Over!"
 msgstr "Fin da partida!"
 
 #. Can't move there!
-#: ../src/glines.c:648
+#: ../src/glines.c:650
 msgid "You can't move there!"
 msgstr "Non pode moverse aí!"
 
-#: ../src/glines.c:1181
+#: ../src/glines.c:1182
 msgid ""
-"GNOME port of the once-popular Color Lines game.\n"
+"GNOME port of the once-popular Color Lines game\n"
 "\n"
 "Five or More is a part of GNOME Games."
 msgstr ""
-"Adaptación para o GNOME do popular xogo Color Lines.\n"
+"Adaptación para GNOME do popular xogo Color Lines\n"
 "\n"
-"O Cinco ou Máis forma parte do GNOME Games."
+"Cinco ou Máis forma parte do dos Xogos de GNOME."
 
-#: ../src/glines.c:1187
+#: ../src/glines.c:1188
 msgid "translator-credits"
 msgstr ""
 "Leandro Regueiro <leandro.regueiro@gmail.com>, 2012.\n"
@@ -531,7 +531,7 @@ msgstr ""
 "Proxecto Trasno - Adaptación do software libre á lingua galega:  Se desexas\n"
 "colaborar connosco, podes atopar máis información en http://www.trasno.net"
 
-#: ../src/glines.c:1190
+#: ../src/glines.c:1191
 msgid "GNOME Games web site"
 msgstr "Sitio web do GNOME Games"
 
