@@ -21,14 +21,15 @@
 # Rodrigo Padula de Oliveira <contato@rodrigopadula.com>, 2011.
 # Flamarion Jorge <jorge.flamarion@gmail.com>, 2011.
 # Djavan Fagundes <djavan@comum.org>, 2012.
+# Rafael Ferreira <rafael.f.f1@gmail.com>, 2013.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: five-or-more\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-"
 "or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-08-18 15:00+0000\n"
-"PO-Revision-Date: 2013-08-18 21:01-0300\n"
+"POT-Creation-Date: 2013-12-19 00:12+0000\n"
+"PO-Revision-Date: 2013-12-19 02:00-0300\n"
 "Last-Translator: Rafael Ferreira <rafael.f.f1@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
 "Language: pt_BR\n"
@@ -39,18 +40,25 @@ msgstr ""
 "X-Generator: Poedit 1.5.7\n"
 "X-Project-Style: gnome\n"
 
-#: ../data/glines.desktop.in.in.h:1 ../data/five-or-more.ui.h:1
-#: ../src/glines.c:1176 ../src/glines.c:1179 ../src/glines.c:1704
-msgid "Five or More"
-msgstr "Cinco ou Mais"
+#: ../data/five-or-more.appdata.xml.in.h:1
+msgid ""
+"Five or More is the GNOME port of a once-popular computer game. Align five "
+"or more objects of the same color into a line to cause them to disappear and "
+"score points. Earn many more points by lining up as many objects as possible "
+"before clearing them."
+msgstr ""
+"Cinco ou Mais é uma versão para o GNOME de um jogo de computador que certa "
+"vez foi popular. Alinhe cinco ou mais objetos da mesma cor em uma linha para "
+"fazê-los desaparecer e pontuar. Ganhe muito mais pontos alinhando a maior "
+"quantidade de objetos possível antes de apagá-los."
 
-#: ../data/glines.desktop.in.in.h:2
-msgid "Remove colored balls from the board by forming lines"
-msgstr "Remova bolas coloridas do tabuleiro formando linhas"
-
-#: ../data/glines.desktop.in.in.h:3
-msgid "game;strategy;logic;"
-msgstr "game;jogo;estratégia;lógica;"
+#: ../data/five-or-more.appdata.xml.in.h:2
+msgid ""
+"More objects appear after every turn. Play for as long as possible, until "
+"the board is completely full!"
+msgstr ""
+"Mais objetos aparecem após cada turno. Jogo o máximo que conseguir, até que "
+"tabuleiro esteja completamente cheio."
 
 #: ../data/five-or-more-preferences.ui.h:1
 msgid "Five or More Preferences"
@@ -92,17 +100,30 @@ msgstr "General"
 msgid "_Use fast moves"
 msgstr "_Usar movimentos rápidos"
 
+#: ../data/five-or-more.ui.h:1 ../data/glines.desktop.in.h:1
+#: ../src/glines.c:1180 ../src/glines.c:1684
+msgid "Five or More"
+msgstr "Cinco ou Mais"
+
 #: ../data/five-or-more.ui.h:2
 msgid "Next:"
 msgstr "Próxima:"
 
 #: ../data/five-or-more.ui.h:3
+msgid "Score:"
+msgstr "Pontuação:"
+
+#: ../data/five-or-more.ui.h:4
 msgid "0"
 msgstr "0"
 
-#: ../data/five-or-more.ui.h:4
-msgid "Score:"
-msgstr "Pontuação:"
+#: ../data/glines.desktop.in.h:2
+msgid "Remove colored balls from the board by forming lines"
+msgstr "Remova bolas coloridas do tabuleiro formando linhas"
+
+#: ../data/glines.desktop.in.h:3
+msgid "game;strategy;logic;"
+msgstr "game;jogo;estratégia;lógica;"
 
 #: ../data/menu.ui.h:1 ../src/games-scores-dialog.c:470
 msgid "New Game"
@@ -112,7 +133,7 @@ msgstr "Novo jogo"
 msgid "Scores"
 msgstr "Pontuações"
 
-#: ../data/menu.ui.h:3 ../src/glines.c:176
+#: ../data/menu.ui.h:3 ../src/glines.c:175
 msgid "Preferences"
 msgstr "Preferências"
 
@@ -128,78 +149,78 @@ msgstr "Sobre"
 msgid "Quit"
 msgstr "Sair"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:1
+#: ../data/org.gnome.five-or-more.gschema.xml.h:1
 msgid "Playing field size"
 msgstr "Tamanho do campo de jogo"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:2
+#: ../data/org.gnome.five-or-more.gschema.xml.h:2
 msgid ""
 "Playing field size. 1=Small, 2=Medium, 3=Large. Any other value is invalid."
 msgstr ""
 "Tamanho do campo de jogo. 1=Pequeno, 2=Médio, 3=Grande. Qualquer outro valor "
 "é inválido."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:3
+#: ../data/org.gnome.five-or-more.gschema.xml.h:3
 msgid "Ball style"
 msgstr "Estilo da bola"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:4
+#: ../data/org.gnome.five-or-more.gschema.xml.h:4
 msgid "Ball style. The filename of the images to use for the balls."
 msgstr "Estilo da bola. O nome do arquivo das imagens para usar para as bolas."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:5
+#: ../data/org.gnome.five-or-more.gschema.xml.h:5
 msgid "Background color"
 msgstr "Cor de fundo"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:6
+#: ../data/org.gnome.five-or-more.gschema.xml.h:6
 msgid "Background color. The hex specification of the background color."
 msgstr "Cor de fundo. A especificação hexadecimal da cor de fundo."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:7
+#: ../data/org.gnome.five-or-more.gschema.xml.h:7
 msgid "Time between moves"
 msgstr "Tempo entre jogadas"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:8
+#: ../data/org.gnome.five-or-more.gschema.xml.h:8
 msgid "Time between moves in milliseconds."
 msgstr "Tempo entre jogadas em milissegundos."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:9
+#: ../data/org.gnome.five-or-more.gschema.xml.h:9
 msgid "Game score"
 msgstr "Pontuação do jogo"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:10
+#: ../data/org.gnome.five-or-more.gschema.xml.h:10
 msgid "Game score from last saved session."
 msgstr "Pontuação do jogo da última sessão salva."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:11
+#: ../data/org.gnome.five-or-more.gschema.xml.h:11
 msgid "Game field"
 msgstr "Campo do jogo"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:12
+#: ../data/org.gnome.five-or-more.gschema.xml.h:12
 msgid "Game field from last saved session."
 msgstr "Campo do jogo da última sessão salva."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:13
+#: ../data/org.gnome.five-or-more.gschema.xml.h:13
 msgid "Game preview"
 msgstr "Visualização do jogo"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:14
+#: ../data/org.gnome.five-or-more.gschema.xml.h:14
 msgid "Game preview from last saved session."
 msgstr "Visualização do jogo da última sessão salva."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:15
+#: ../data/org.gnome.five-or-more.gschema.xml.h:15
 msgid "Width of the window in pixels"
 msgstr "A largura da janela em pixels."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:16
+#: ../data/org.gnome.five-or-more.gschema.xml.h:16
 msgid "Height of the window in pixels"
 msgstr "A altura da janela em pixels."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:17
+#: ../data/org.gnome.five-or-more.gschema.xml.h:17
 msgid "true if the window is maximized"
 msgstr "verdadeiro se a janela estiver maximizada"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:18
+#: ../data/org.gnome.five-or-more.gschema.xml.h:18
 msgid "true if the window is fullscren"
 msgstr "verdadeiro se a janela estiver em tela cheia"
 
@@ -430,26 +451,26 @@ msgstr ""
 "Você deve ter recebido uma cópia da Licença Pública Geral GNU junto com este "
 "programa. Caso contrário, veja <http://www.gnu.org/licenses/>."
 
-#: ../src/glines.c:78
+#: ../src/glines.c:81
 msgctxt "board size"
 msgid "Small"
 msgstr "Pequeno"
 
-#: ../src/glines.c:79
+#: ../src/glines.c:82
 msgctxt "board size"
 msgid "Medium"
 msgstr "Médio"
 
-#: ../src/glines.c:80
+#: ../src/glines.c:83
 msgctxt "board size"
 msgid "Large"
 msgstr "Grande"
 
-#: ../src/glines.c:170
+#: ../src/glines.c:169
 msgid "Could not load theme"
 msgstr "Não foi possível carregar o tema"
 
-#: ../src/glines.c:196
+#: ../src/glines.c:195
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -462,7 +483,7 @@ msgstr ""
 "\n"
 "O tema padrão será carregado em seu lugar."
 
-#: ../src/glines.c:203
+#: ../src/glines.c:202
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -475,30 +496,30 @@ msgstr ""
 "\n"
 "Por favor verifique se o Cinco ou Mais está instalado corretamente."
 
-#: ../src/glines.c:408
+#: ../src/glines.c:413
 msgid "Match five objects of the same type in a row to score!"
 msgstr "Junte cinco objetos do mesmo tipo em uma linha para marcar pontos!"
 
-#: ../src/glines.c:472
+#: ../src/glines.c:474
 msgid "GNOME Five or More"
 msgstr "GNOME Cinco ou Mais"
 
-#: ../src/glines.c:474
+#: ../src/glines.c:476
 msgid "_Board size:"
 msgstr "Tamanho do ta_buleiro:"
 
-#: ../src/glines.c:491
+#: ../src/glines.c:493
 msgid "Game Over!"
 msgstr "Fim do jogo!"
 
 #. Can't move there!
-#: ../src/glines.c:648
+#: ../src/glines.c:650
 msgid "You can't move there!"
 msgstr "Você não pode mover para lá!"
 
-#: ../src/glines.c:1181
+#: ../src/glines.c:1182
 msgid ""
-"GNOME port of the once-popular Color Lines game.\n"
+"GNOME port of the once-popular Color Lines game\n"
 "\n"
 "Five or More is a part of GNOME Games."
 msgstr ""
@@ -506,7 +527,7 @@ msgstr ""
 "\n"
 "Cinco ou mais faz parte do GNOME Games."
 
-#: ../src/glines.c:1187
+#: ../src/glines.c:1188
 msgid "translator-credits"
 msgstr ""
 "Sandro Nunes Henrique <sandro@conectiva.com.br>\n"
@@ -525,7 +546,7 @@ msgstr ""
 "Rodrigo Padula de Oliveira <contato@rodrigopadula.com>\n"
 "Rafael Ferreira <rafael.f.f1@gmail.com>"
 
-#: ../src/glines.c:1190
+#: ../src/glines.c:1191
 msgid "GNOME Games web site"
 msgstr "Site do GNOME Games"
 
