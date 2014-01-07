@@ -38,6 +38,17 @@
           </object>
         </child>
         <child>
+          <object class="GtkLabel" id="scorelabel">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="xpad">6</property>
+            <property name="label" translatable="yes">0</property>
+          </object>
+          <packing>
+            <property name="pack_type">end</property>
+          </packing>
+        </child>
+        <child>
           <object class="GtkLabel" id="labelScore">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
@@ -45,17 +56,6 @@
             <attributes>
               <attribute name="weight" value="bold"/>
             </attributes>
-          </object>
-          <packing>
-            <property name="pack_type">end</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkLabel" id="scorelabel">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="xpad">6</property>
-            <property name="label" translatable="yes">0</property>
           </object>
           <packing>
             <property name="pack_type">end</property>
