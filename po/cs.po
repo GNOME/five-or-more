@@ -16,15 +16,15 @@
 # Petr Pulc <petrpulc@gmail.com>, 2009.
 # Andre Klapper <ak-47@gmx.net>, 2009.
 # Petr Kovar <pknbe@volny.cz>, 2008, 2012.
-# Marek Černocký <marek@manet.cz>, 2010, 2011, 2012, 2013.
+# Marek Černocký <marek@manet.cz>, 2010, 2011, 2012, 2013, 2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: five-or-more master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-"
 "or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-08-11 16:36+0000\n"
-"PO-Revision-Date: 2013-08-14 19:07+0200\n"
+"POT-Creation-Date: 2014-01-17 04:09+0000\n"
+"PO-Revision-Date: 2014-01-17 18:02+0100\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -35,18 +35,25 @@ msgstr ""
 "X-Generator: Gtranslator 2.91.6\n"
 "X-Project-Style: gnome\n"
 
-#: ../data/glines.desktop.in.in.h:1 ../data/five-or-more.ui.h:1
-#: ../src/glines.c:1176 ../src/glines.c:1179 ../src/glines.c:1703
-msgid "Five or More"
-msgstr "Pět nebo víc"
+#: ../data/five-or-more.appdata.xml.in.h:1
+msgid ""
+"Five or More is the GNOME port of a once-popular computer game. Align five "
+"or more objects of the same color into a line to cause them to disappear and "
+"score points. Earn many more points by lining up as many objects as possible "
+"before clearing them."
+msgstr ""
+"Pět nebo víc je port pro GNOME podle dřívější populární počítačové hry. "
+"Vyrovnáním pěti nebo více objektů stejné barvy do řady způsobíte, že tyto "
+"objekty zmizí a navýší se vám skóre. Více bodů získáte, když se budete "
+"snažit před vymazáním seřadit objektů co nejvíce."
 
-#: ../data/glines.desktop.in.in.h:2
-msgid "Remove colored balls from the board by forming lines"
-msgstr "Odstraňovat barevné koule z hrací desky tvořením úseček"
-
-#: ../data/glines.desktop.in.in.h:3
-msgid "game;strategy;logic;"
-msgstr "hra;strategická;logická;"
+#: ../data/five-or-more.appdata.xml.in.h:2
+msgid ""
+"More objects appear after every turn. Play for as long as possible, until "
+"the board is completely full!"
+msgstr ""
+"Po každém tahu se objeví nové objekty. Hrajte, co nejdéle to půjde, dokud "
+"nebude hrací plocha plná."
 
 #: ../data/five-or-more-preferences.ui.h:1
 msgid "Five or More Preferences"
@@ -88,6 +95,11 @@ msgstr "Obecné"
 msgid "_Use fast moves"
 msgstr "Používat _rychlé tahy"
 
+#: ../data/five-or-more.ui.h:1 ../data/glines.desktop.in.h:1
+#: ../src/glines.c:1180 ../src/glines.c:1683
+msgid "Five or More"
+msgstr "Pět nebo víc"
+
 #: ../data/five-or-more.ui.h:2
 msgid "Next:"
 msgstr "Následující:"
@@ -100,7 +112,15 @@ msgstr "0"
 msgid "Score:"
 msgstr "Skóre:"
 
-#: ../data/menu.ui.h:1 ../src/games-scores-dialog.c:470
+#: ../data/glines.desktop.in.h:2
+msgid "Remove colored balls from the board by forming lines"
+msgstr "Odstraňovat barevné koule z hrací desky tvořením úseček"
+
+#: ../data/glines.desktop.in.h:3
+msgid "game;strategy;logic;"
+msgstr "hra;strategická;logická;"
+
+#: ../data/menu.ui.h:1 ../src/games-scores-dialog.c:385
 msgid "New Game"
 msgstr "Nová hra"
 
@@ -108,12 +128,11 @@ msgstr "Nová hra"
 msgid "Scores"
 msgstr "Skóre"
 
-#: ../data/menu.ui.h:3 ../src/glines.c:176
+#: ../data/menu.ui.h:3 ../src/glines.c:175
 msgid "Preferences"
 msgstr "Předvolby"
 
 #: ../data/menu.ui.h:4
-#| msgid "_Help"
 msgid "Help"
 msgstr "Nápověda"
 
@@ -125,108 +144,102 @@ msgstr "O aplikaci"
 msgid "Quit"
 msgstr "Ukončit"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:1
+#: ../data/org.gnome.five-or-more.gschema.xml.h:1
 msgid "Playing field size"
 msgstr "Velikost hracího pole"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:2
+#: ../data/org.gnome.five-or-more.gschema.xml.h:2
 msgid ""
 "Playing field size. 1=Small, 2=Medium, 3=Large. Any other value is invalid."
 msgstr ""
 "Velikost hracího pole. 1=malá, 2=střední, 3=velká. Jiné hodnoty nejsou "
 "platné."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:3
+#: ../data/org.gnome.five-or-more.gschema.xml.h:3
 msgid "Ball style"
 msgstr "Styl koule"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:4
+#: ../data/org.gnome.five-or-more.gschema.xml.h:4
 msgid "Ball style. The filename of the images to use for the balls."
 msgstr "Styl koule. Název souboru obrázků, které budou použity pro koule."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:5
+#: ../data/org.gnome.five-or-more.gschema.xml.h:5
 msgid "Background color"
 msgstr "Barva pozadí"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:6
+#: ../data/org.gnome.five-or-more.gschema.xml.h:6
 msgid "Background color. The hex specification of the background color."
 msgstr "Barva pozadí. Šestnáctková specifikace barvy pozadí."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:7
+#: ../data/org.gnome.five-or-more.gschema.xml.h:7
 msgid "Time between moves"
 msgstr "Čas mezi tahy"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:8
+#: ../data/org.gnome.five-or-more.gschema.xml.h:8
 msgid "Time between moves in milliseconds."
 msgstr "Čas mezi tahy v milisekundách."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:9
+#: ../data/org.gnome.five-or-more.gschema.xml.h:9
 msgid "Game score"
 msgstr "Skóre hry"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:10
+#: ../data/org.gnome.five-or-more.gschema.xml.h:10
 msgid "Game score from last saved session."
 msgstr "Skóre hry z posledního uloženého sezení."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:11
+#: ../data/org.gnome.five-or-more.gschema.xml.h:11
 msgid "Game field"
 msgstr "Herní pole"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:12
+#: ../data/org.gnome.five-or-more.gschema.xml.h:12
 msgid "Game field from last saved session."
 msgstr "Herní pole z posledního uloženého sezení."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:13
+#: ../data/org.gnome.five-or-more.gschema.xml.h:13
 msgid "Game preview"
 msgstr "Náhled hry"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:14
+#: ../data/org.gnome.five-or-more.gschema.xml.h:14
 msgid "Game preview from last saved session."
 msgstr "Náhled hry z posledního uloženého sezení."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:15
+#: ../data/org.gnome.five-or-more.gschema.xml.h:15
 msgid "Width of the window in pixels"
 msgstr "Šířka okna v pixelech."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:16
+#: ../data/org.gnome.five-or-more.gschema.xml.h:16
 msgid "Height of the window in pixels"
 msgstr "Výška okna v pixelech."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:17
+#: ../data/org.gnome.five-or-more.gschema.xml.h:17
 msgid "true if the window is maximized"
 msgstr "Zapnuto, pokud je okno maximalizováno"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:18
+#: ../data/org.gnome.five-or-more.gschema.xml.h:18
 msgid "true if the window is fullscren"
 msgstr "Zapnuto, pokud je okno v režimu celé obrazovky"
 
 #. Score dialog column header for the score time (e.g. 1 minute)
-#: ../src/games-scores-dialog.c:136
+#: ../src/games-scores-dialog.c:132
 msgctxt "score-dialog"
 msgid "Time"
 msgstr "Čas"
 
 #. Score dialog column header for the score value (e.g. 30 moves)
-#: ../src/games-scores-dialog.c:142
+#: ../src/games-scores-dialog.c:138
 msgctxt "score-dialog"
 msgid "Score"
 msgstr "Skóre"
 
 #. Score format for time based scores.  %1$d is the time in minutes, %2$d is the time in seconds
-#: ../src/games-scores-dialog.c:307
+#: ../src/games-scores-dialog.c:225
 #, c-format
 msgctxt "score-dialog"
 msgid "%1$dm %2$ds"
 msgstr "%1$d min %2$d sec"
 
-#. Score dialog column header for the name of the player who recorded the score
-#: ../src/games-scores-dialog.c:571
-msgctxt "score-dialog"
-msgid "Name"
-msgstr "Jméno"
-
 #. Score dialog column header for the date the score was recorded
-#: ../src/games-scores-dialog.c:580
+#: ../src/games-scores-dialog.c:478
 msgid "Date"
 msgstr "Datum"
 
@@ -428,26 +441,26 @@ msgstr ""
 "License. Pokud se tak nestalo, podívejte se na <http://www.gnu.org/licenses/"
 ">."
 
-#: ../src/glines.c:78
+#: ../src/glines.c:81
 msgctxt "board size"
 msgid "Small"
 msgstr "Malé"
 
-#: ../src/glines.c:79
+#: ../src/glines.c:82
 msgctxt "board size"
 msgid "Medium"
 msgstr "Střední"
 
-#: ../src/glines.c:80
+#: ../src/glines.c:83
 msgctxt "board size"
 msgid "Large"
 msgstr "Velké"
 
-#: ../src/glines.c:170
+#: ../src/glines.c:169
 msgid "Could not load theme"
 msgstr "Nelze načíst motiv"
 
-#: ../src/glines.c:196
+#: ../src/glines.c:195
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -460,7 +473,7 @@ msgstr ""
 "\n"
 "Bude místo něj načten výchozí motiv."
 
-#: ../src/glines.c:203
+#: ../src/glines.c:202
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -473,38 +486,38 @@ msgstr ""
 "\n"
 "Zkontrolujte prosím, že je hra Pět nebo víc správně nainstalována."
 
-#: ../src/glines.c:408
+#: ../src/glines.c:413
 msgid "Match five objects of the same type in a row to score!"
 msgstr "Seřazením pěti objektů stejného typu do řady získáte body!"
 
-#: ../src/glines.c:472
+#: ../src/glines.c:474
 msgid "GNOME Five or More"
 msgstr "GNOME Pět nebo víc"
 
-#: ../src/glines.c:474
+#: ../src/glines.c:476
 msgid "_Board size:"
 msgstr "Velikost hrací _desky:"
 
-#: ../src/glines.c:491
+#: ../src/glines.c:493
 msgid "Game Over!"
 msgstr "Konec hry!"
 
 #. Can't move there!
-#: ../src/glines.c:648
+#: ../src/glines.c:650
 msgid "You can't move there!"
 msgstr "Tam nemůžete táhnout!"
 
-#: ../src/glines.c:1181
+#: ../src/glines.c:1182
 msgid ""
-"GNOME port of the once-popular Color Lines game.\n"
+"GNOME port of the once-popular Color Lines game\n"
 "\n"
 "Five or More is a part of GNOME Games."
 msgstr ""
-"Port kdysi oblíbené hry Barevné linie pro prostředí GNOME.\n"
+"Port kdysi oblíbené hry Barevné linie pro prostředí GNOME\n"
 "\n"
 "Pět nebo víc je součástí her GNOME."
 
-#: ../src/glines.c:1187
+#: ../src/glines.c:1188
 msgid "translator-credits"
 msgstr ""
 "Jirka Lébl\n"
@@ -520,7 +533,3 @@ msgstr ""
 "Marek Lisý <marek.lisy@centrum.cz>\n"
 "Petr Pulc <petrpulc@gmail.com>\n"
 "Marek Černocký <marek@manet.cz>"
-
-#: ../src/glines.c:1190
-msgid "GNOME Games web site"
-msgstr "Webové stránky her GNOME"
