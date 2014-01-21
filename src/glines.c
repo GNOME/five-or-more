@@ -409,8 +409,7 @@ start_game (void)
 {
   char string[20];
 
-  set_status_message (_
-                         ("Match five objects of the same type in a row to score!"));
+  set_status_message (_("Match five objects of the same type in a row to score!"));
   refresh_screen ();
   active = -1;
   target = -1;
