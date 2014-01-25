@@ -1,14 +1,14 @@
 # Norwegian bokmål translation of five-or-more.
 # Copyright © 1998-2002 Free Software Foundation, Inc.
-# Kjartan Maraas <kmaraas@gnome.org>, 1998-2013.
+# Kjartan Maraas <kmaraas@gnome.org>, 1998-2014.
 # Terance Edward Sola <terance@lyse.net>, 2005.
 # Torstein Adolf Winterseth <kvikende@fsfe.org>, 2010.
 msgid ""
 msgstr ""
-"Project-Id-Version: five-or-more 3.9.x\n"
+"Project-Id-Version: five-or-more 3.11.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-12 01:00+0200\n"
-"PO-Revision-Date: 2013-08-12 01:01+0200\n"
+"POT-Creation-Date: 2014-01-25 12:20+0100\n"
+"PO-Revision-Date: 2014-01-25 12:22+0100\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian bokmål <i18n-nb@lister.ping.uio.no>\n"
 "Language: nb\n"
@@ -17,18 +17,19 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../data/glines.desktop.in.in.h:1 ../data/five-or-more.ui.h:1
-#: ../src/glines.c:1176 ../src/glines.c:1179 ../src/glines.c:1703
-msgid "Five or More"
-msgstr "Fem eller flere"
+#: ../data/five-or-more.appdata.xml.in.h:1
+msgid ""
+"Five or More is the GNOME port of a once-popular computer game. Align five "
+"or more objects of the same color into a line to cause them to disappear and "
+"score points. Earn many more points by lining up as many objects as possible "
+"before clearing them."
+msgstr "Fem eller flere er GNOME versjonen av et tidligere populært dataspill. Plasser fem eller flere objekter med samme farge på en linje for å få dem bort og motta poeng. Få flere poeng ved å få så mange objekter som mulig på linje før du tar dem bort."
 
-#: ../data/glines.desktop.in.in.h:2
-msgid "Remove colored balls from the board by forming lines"
-msgstr "Fjern fargede baller fra brettet ved å lage linjer"
-
-#: ../data/glines.desktop.in.in.h:3
-msgid "game;strategy;logic;"
-msgstr "spill;strategi;logikk;"
+#: ../data/five-or-more.appdata.xml.in.h:2
+msgid ""
+"More objects appear after every turn. Play for as long as possible, until "
+"the board is completely full!"
+msgstr "Flere objekter kommer til syne for hvert trekk. Spill så lenge som mulig til brettet er helt fullt."
 
 #: ../data/five-or-more-preferences.ui.h:1
 msgid "Five or More Preferences"
@@ -70,6 +71,11 @@ msgstr "Generelt"
 msgid "_Use fast moves"
 msgstr "Br_uk raske trekk"
 
+#: ../data/five-or-more.ui.h:1 ../data/glines.desktop.in.h:1
+#: ../src/glines.c:1179 ../src/glines.c:1682
+msgid "Five or More"
+msgstr "Fem eller flere"
+
 #: ../data/five-or-more.ui.h:2
 msgid "Next:"
 msgstr "Neste:"
@@ -82,7 +88,15 @@ msgstr "0"
 msgid "Score:"
 msgstr "Poeng:"
 
-#: ../data/menu.ui.h:1 ../src/games-scores-dialog.c:470
+#: ../data/glines.desktop.in.h:2
+msgid "Remove colored balls from the board by forming lines"
+msgstr "Fjern fargede baller fra brettet ved å lage linjer"
+
+#: ../data/glines.desktop.in.h:3
+msgid "game;strategy;logic;"
+msgstr "spill;strategi;logikk;"
+
+#: ../data/menu.ui.h:1 ../src/games-scores-dialog.c:385
 msgid "New Game"
 msgstr "Nytt spill"
 
@@ -90,7 +104,7 @@ msgstr "Nytt spill"
 msgid "Scores"
 msgstr "Poeng"
 
-#: ../data/menu.ui.h:3 ../src/glines.c:176
+#: ../data/menu.ui.h:3 ../src/glines.c:175
 msgid "Preferences"
 msgstr "Brukervalg"
 
@@ -106,108 +120,102 @@ msgstr "Om"
 msgid "Quit"
 msgstr "Avslutt"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:1
+#: ../data/org.gnome.five-or-more.gschema.xml.h:1
 msgid "Playing field size"
 msgstr "Størrelse på spillefeltet"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:2
+#: ../data/org.gnome.five-or-more.gschema.xml.h:2
 msgid ""
 "Playing field size. 1=Small, 2=Medium, 3=Large. Any other value is invalid."
 msgstr ""
 "Størrelse på spillbrett. 1=Liten, 2=Medium, 3=Stor. Alle andre verdier er "
 "ugyldige."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:3
+#: ../data/org.gnome.five-or-more.gschema.xml.h:3
 msgid "Ball style"
 msgstr "Ballstil"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:4
+#: ../data/org.gnome.five-or-more.gschema.xml.h:4
 msgid "Ball style. The filename of the images to use for the balls."
 msgstr "Ballstil. Filnavn på bildene som skal brukes for ballene."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:5
+#: ../data/org.gnome.five-or-more.gschema.xml.h:5
 msgid "Background color"
 msgstr "Bakgrunnsfarge"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:6
+#: ../data/org.gnome.five-or-more.gschema.xml.h:6
 msgid "Background color. The hex specification of the background color."
 msgstr "Bakgrunnsfarge. Heksadesimal spesifikasjon av bakgrunnsfargen."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:7
+#: ../data/org.gnome.five-or-more.gschema.xml.h:7
 msgid "Time between moves"
 msgstr "Tid mellom trekk"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:8
+#: ../data/org.gnome.five-or-more.gschema.xml.h:8
 msgid "Time between moves in milliseconds."
 msgstr "Tid mellom trekk i millisekunder."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:9
+#: ../data/org.gnome.five-or-more.gschema.xml.h:9
 msgid "Game score"
 msgstr "Poengsum for spill"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:10
+#: ../data/org.gnome.five-or-more.gschema.xml.h:10
 msgid "Game score from last saved session."
 msgstr "Poengsum fra sist lagrede økt."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:11
+#: ../data/org.gnome.five-or-more.gschema.xml.h:11
 msgid "Game field"
 msgstr "Spillefelt"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:12
+#: ../data/org.gnome.five-or-more.gschema.xml.h:12
 msgid "Game field from last saved session."
 msgstr "Spillfelt fra sist lagrede økt."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:13
+#: ../data/org.gnome.five-or-more.gschema.xml.h:13
 msgid "Game preview"
 msgstr "Forhåndsvisning av spill"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:14
+#: ../data/org.gnome.five-or-more.gschema.xml.h:14
 msgid "Game preview from last saved session."
 msgstr "Forhåndsvisning av spillet fra sist lagrede økt."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:15
+#: ../data/org.gnome.five-or-more.gschema.xml.h:15
 msgid "Width of the window in pixels"
 msgstr "Bredden på vinduet i piksler"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:16
+#: ../data/org.gnome.five-or-more.gschema.xml.h:16
 msgid "Height of the window in pixels"
 msgstr "Høyden på vinduet i piksler"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:17
+#: ../data/org.gnome.five-or-more.gschema.xml.h:17
 msgid "true if the window is maximized"
 msgstr "«true» hvis vinduet er maksimert"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:18
+#: ../data/org.gnome.five-or-more.gschema.xml.h:18
 msgid "true if the window is fullscren"
 msgstr "«true» hvis vinduet er fullskjerm"
 
 #. Score dialog column header for the score time (e.g. 1 minute)
-#: ../src/games-scores-dialog.c:136
+#: ../src/games-scores-dialog.c:132
 msgctxt "score-dialog"
 msgid "Time"
 msgstr "Tid"
 
 #. Score dialog column header for the score value (e.g. 30 moves)
-#: ../src/games-scores-dialog.c:142
+#: ../src/games-scores-dialog.c:138
 msgctxt "score-dialog"
 msgid "Score"
 msgstr "Poeng"
 
 #. Score format for time based scores.  %1$d is the time in minutes, %2$d is the time in seconds
-#: ../src/games-scores-dialog.c:307
+#: ../src/games-scores-dialog.c:225
 #, c-format
 msgctxt "score-dialog"
 msgid "%1$dm %2$ds"
 msgstr "%1$dm %2$ds"
 
-#. Score dialog column header for the name of the player who recorded the score
-#: ../src/games-scores-dialog.c:571
-msgctxt "score-dialog"
-msgid "Name"
-msgstr "Navn"
-
 #. Score dialog column header for the date the score was recorded
-#: ../src/games-scores-dialog.c:580
+#: ../src/games-scores-dialog.c:478
 msgid "Date"
 msgstr "Dato"
 
@@ -408,26 +416,26 @@ msgstr ""
 "Du skal ha mottatt en kopi av GNU General Public License sammen med %s. Hvis "
 "ikke se på <http://www.gnu.org/licenses/>."
 
-#: ../src/glines.c:78
+#: ../src/glines.c:81
 msgctxt "board size"
 msgid "Small"
 msgstr "Liten"
 
-#: ../src/glines.c:79
+#: ../src/glines.c:82
 msgctxt "board size"
 msgid "Medium"
 msgstr "Middels"
 
-#: ../src/glines.c:80
+#: ../src/glines.c:83
 msgctxt "board size"
 msgid "Large"
 msgstr "Stor"
 
-#: ../src/glines.c:170
+#: ../src/glines.c:169
 msgid "Could not load theme"
 msgstr "Kunne ikke laste tema"
 
-#: ../src/glines.c:196
+#: ../src/glines.c:195
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -440,7 +448,7 @@ msgstr ""
 "\n"
 "Forvalgt tema vil bli lastet i stedet."
 
-#: ../src/glines.c:203
+#: ../src/glines.c:202
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -453,34 +461,34 @@ msgstr ""
 "\n"
 "Vennligst sjekk at Fem eller flere er korrekt installert."
 
-#: ../src/glines.c:408
+#: ../src/glines.c:412
 msgid "Match five objects of the same type in a row to score!"
 msgstr "Få fem objekter med samme farge på rad for å vinne!"
 
-#: ../src/glines.c:472
+#: ../src/glines.c:473
 msgid "GNOME Five or More"
 msgstr "GNOME Fem eller flere"
 
-#: ../src/glines.c:474
+#: ../src/glines.c:475
 msgid "_Board size:"
 msgstr "Størrelse på _brett"
 
-#: ../src/glines.c:491
+#: ../src/glines.c:492
 msgid "Game Over!"
 msgstr "Spillet er over!"
 
 #. Can't move there!
-#: ../src/glines.c:648
+#: ../src/glines.c:649
 msgid "You can't move there!"
 msgstr "Kan ikke gå dit!"
 
 #: ../src/glines.c:1181
 msgid ""
-"GNOME port of the once-popular Color Lines game.\n"
+"GNOME port of the once-popular Color Lines game\n"
 "\n"
 "Five or More is a part of GNOME Games."
 msgstr ""
-"GNOME port av det tidligere populære Color Lines-spillet.\n"
+"GNOME versjon av det tidligere populære Color Lines-spillet.\n"
 "\n"
 "Fem eller flere er en del av GNOME spill."
 
@@ -490,7 +498,3 @@ msgstr ""
 "Kjartan Maraas <kmaraas@gnome.org>\n"
 "Espen Stefansen <espens@svn.gnome.org>\n"
 "Torstein Adolf Winterseth <kvikende@fsfe.org>"
-
-#: ../src/glines.c:1190
-msgid "GNOME Games web site"
-msgstr "GNOME spill nettsted"
