@@ -4,34 +4,41 @@
 # Copyright (C) 2005 THE PACKAGE'S COPYRIGHT HOLDER
 # Gil 'Dolfin' Osher <dolfin@rpg.org.il>, 2002,2003
 # Yaron Shahrabani <sh.yaron@gmail.com>, 2010.
+# Yosef Or Boczko <yoseforb@gmail.com>, 2014.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.HEAD.he\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-21 13:17+0300\n"
-"PO-Revision-Date: 2013-08-21 13:17+0200\n"
-"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
-"Language-Team: Gezer (Hebrew)\n"
+"POT-Creation-Date: 2014-01-26 02:42+0200\n"
+"PO-Revision-Date: 2014-01-26 02:55+0200\n"
+"Last-Translator: Yosef Or Boczko <yoseforb@gmail.com>\n"
+"Language-Team: עברית <>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Gtranslator 2.91.6\n"
 "X-Launchpad-Export-Date: 2008-01-13 04:36+0000\n"
 
-#: ../data/glines.desktop.in.in.h:1 ../data/five-or-more.ui.h:1
-#: ../src/glines.c:1176 ../src/glines.c:1179 ../src/glines.c:1704
-msgid "Five or More"
-msgstr "חמש או יותר"
+#: ../data/five-or-more.appdata.xml.in.h:1
+msgid ""
+"Five or More is the GNOME port of a once-popular computer game. Align five "
+"or more objects of the same color into a line to cause them to disappear and "
+"score points. Earn many more points by lining up as many objects as possible "
+"before clearing them."
+msgstr ""
+"חמש או יותר הוא גרסת GNOME למשחק מחשב פופולרי. יישור חמישה עצמים או יותר "
+"מאותו הצבע לשורה גורם להם להיעלם ולצבירת נקודות. ניתן להרוויח הרבה יותר "
+"נקודות על ידי סידור עצמים רבים ככל האפשר לפני פינויים."
 
-#: ../data/glines.desktop.in.in.h:2
-msgid "Remove colored balls from the board by forming lines"
-msgstr "הסרת כדורים צבעוניים מהלוח על־ידי יצירת שורות"
-
-#: ../data/glines.desktop.in.in.h:3
-msgid "game;strategy;logic;"
-msgstr "משחק;אסטרטגיה;היגיון;הגיון;"
+#: ../data/five-or-more.appdata.xml.in.h:2
+msgid ""
+"More objects appear after every turn. Play for as long as possible, until "
+"the board is completely full!"
+msgstr ""
+"יותר עצמים יופיעו אחרי כל תור. שחק זמן רב ככל האפשר עד שהלוח יתמלא לגמרי!"
 
 #: ../data/five-or-more-preferences.ui.h:1
 msgid "Five or More Preferences"
@@ -73,6 +80,11 @@ msgstr "כללי"
 msgid "_Use fast moves"
 msgstr "_שימוש במהלכים מהירים"
 
+#: ../data/five-or-more.ui.h:1 ../data/glines.desktop.in.h:1
+#: ../src/glines.c:1179 ../src/glines.c:1682
+msgid "Five or More"
+msgstr "חמש או יותר"
+
 #: ../data/five-or-more.ui.h:2
 msgid "Next:"
 msgstr "הבא:"
@@ -85,7 +97,15 @@ msgstr "0"
 msgid "Score:"
 msgstr "תוצאה:"
 
-#: ../data/menu.ui.h:1 ../src/games-scores-dialog.c:470
+#: ../data/glines.desktop.in.h:2
+msgid "Remove colored balls from the board by forming lines"
+msgstr "הסרת כדורים צבעוניים מהלוח על־ידי יצירת שורות"
+
+#: ../data/glines.desktop.in.h:3
+msgid "game;strategy;logic;"
+msgstr "משחק;אסטרטגיה;היגיון;הגיון;"
+
+#: ../data/menu.ui.h:1 ../src/games-scores-dialog.c:385
 msgid "New Game"
 msgstr "משחק חדש"
 
@@ -93,7 +113,7 @@ msgstr "משחק חדש"
 msgid "Scores"
 msgstr "תוצאות"
 
-#: ../data/menu.ui.h:3 ../src/glines.c:176
+#: ../data/menu.ui.h:3 ../src/glines.c:175
 msgid "Preferences"
 msgstr "העדפות"
 
@@ -109,107 +129,101 @@ msgstr "על אודות"
 msgid "Quit"
 msgstr "יציאה"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:1
+#: ../data/org.gnome.five-or-more.gschema.xml.h:1
 msgid "Playing field size"
 msgstr "Playing field size"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:2
+#: ../data/org.gnome.five-or-more.gschema.xml.h:2
 msgid ""
 "Playing field size. 1=Small, 2=Medium, 3=Large. Any other value is invalid."
 msgstr ""
 "Playing field size. 1=Small, 2=Medium, 3=Large. Any other value is invalid."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:3
+#: ../data/org.gnome.five-or-more.gschema.xml.h:3
 msgid "Ball style"
 msgstr "Ball style"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:4
+#: ../data/org.gnome.five-or-more.gschema.xml.h:4
 msgid "Ball style. The filename of the images to use for the balls."
 msgstr "Ball style. The filename of the images to use for the balls."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:5
+#: ../data/org.gnome.five-or-more.gschema.xml.h:5
 msgid "Background color"
 msgstr "Background color"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:6
+#: ../data/org.gnome.five-or-more.gschema.xml.h:6
 msgid "Background color. The hex specification of the background color."
 msgstr "Background color. The hex specification of the background color."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:7
+#: ../data/org.gnome.five-or-more.gschema.xml.h:7
 msgid "Time between moves"
 msgstr "Time between moves"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:8
+#: ../data/org.gnome.five-or-more.gschema.xml.h:8
 msgid "Time between moves in milliseconds."
 msgstr "Time between moves in milliseconds."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:9
+#: ../data/org.gnome.five-or-more.gschema.xml.h:9
 msgid "Game score"
 msgstr "Game score"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:10
+#: ../data/org.gnome.five-or-more.gschema.xml.h:10
 msgid "Game score from last saved session."
 msgstr "Game score from last saved session."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:11
+#: ../data/org.gnome.five-or-more.gschema.xml.h:11
 msgid "Game field"
 msgstr "Game field"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:12
+#: ../data/org.gnome.five-or-more.gschema.xml.h:12
 msgid "Game field from last saved session."
 msgstr "Game field from last saved session."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:13
+#: ../data/org.gnome.five-or-more.gschema.xml.h:13
 msgid "Game preview"
 msgstr "Game preview"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:14
+#: ../data/org.gnome.five-or-more.gschema.xml.h:14
 msgid "Game preview from last saved session."
 msgstr "Game preview from last saved session."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:15
+#: ../data/org.gnome.five-or-more.gschema.xml.h:15
 msgid "Width of the window in pixels"
 msgstr "Width of the window in pixels"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:16
+#: ../data/org.gnome.five-or-more.gschema.xml.h:16
 msgid "Height of the window in pixels"
 msgstr "Height of the window in pixels"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:17
+#: ../data/org.gnome.five-or-more.gschema.xml.h:17
 msgid "true if the window is maximized"
 msgstr "true if the window is maximized"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:18
+#: ../data/org.gnome.five-or-more.gschema.xml.h:18
 msgid "true if the window is fullscren"
 msgstr "true if the window is fullscren"
 
 #. Score dialog column header for the score time (e.g. 1 minute)
-#: ../src/games-scores-dialog.c:136
+#: ../src/games-scores-dialog.c:132
 msgctxt "score-dialog"
 msgid "Time"
 msgstr "זמן"
 
 #. Score dialog column header for the score value (e.g. 30 moves)
-#: ../src/games-scores-dialog.c:142
+#: ../src/games-scores-dialog.c:138
 msgctxt "score-dialog"
 msgid "Score"
 msgstr "ניקוד"
 
 #. Score format for time based scores.  %1$d is the time in minutes, %2$d is the time in seconds
-#: ../src/games-scores-dialog.c:307
+#: ../src/games-scores-dialog.c:225
 #, c-format
 msgctxt "score-dialog"
 msgid "%1$dm %2$ds"
 msgstr "%1$dדק׳ %2$dשנ׳"
 
-#. Score dialog column header for the name of the player who recorded the score
-#: ../src/games-scores-dialog.c:571
-msgctxt "score-dialog"
-msgid "Name"
-msgstr "שם"
-
 #. Score dialog column header for the date the score was recorded
-#: ../src/games-scores-dialog.c:580
+#: ../src/games-scores-dialog.c:478
 msgid "Date"
 msgstr "תאריך"
 
@@ -411,26 +425,26 @@ msgstr ""
 "You should have received a copy of the GNU General Public License along with "
 "this program.  If not, see <http://www.gnu.org/licenses/>."
 
-#: ../src/glines.c:78
+#: ../src/glines.c:81
 msgctxt "board size"
 msgid "Small"
 msgstr "קטן"
 
-#: ../src/glines.c:79
+#: ../src/glines.c:82
 msgctxt "board size"
 msgid "Medium"
 msgstr "בינוני"
 
-#: ../src/glines.c:80
+#: ../src/glines.c:83
 msgctxt "board size"
 msgid "Large"
 msgstr "גדול"
 
-#: ../src/glines.c:170
+#: ../src/glines.c:169
 msgid "Could not load theme"
 msgstr "לא ניתן לטעון את ערכת הנושא"
 
-#: ../src/glines.c:196
+#: ../src/glines.c:195
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -443,7 +457,7 @@ msgstr ""
 "\n"
 "ערכת נושא ברירת המחדל תטען במקומו."
 
-#: ../src/glines.c:203
+#: ../src/glines.c:202
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -456,34 +470,34 @@ msgstr ""
 "\n"
 "נא לוודא כי המשחק \"חמש או יותר\" מותקן כראוי."
 
-#: ../src/glines.c:408
+#: ../src/glines.c:412
 msgid "Match five objects of the same type in a row to score!"
 msgstr "התאם חמישה עצמים זהים בשורה כדי לקבל ניקוד!"
 
-#: ../src/glines.c:472
+#: ../src/glines.c:473
 msgid "GNOME Five or More"
 msgstr "חמש או יותר - GNOME Five or More"
 
-#: ../src/glines.c:474
+#: ../src/glines.c:475
 msgid "_Board size:"
 msgstr "גודל ה_לוח"
 
-#: ../src/glines.c:491
+#: ../src/glines.c:492
 msgid "Game Over!"
 msgstr "המשחק הסתיים!"
 
 #. Can't move there!
-#: ../src/glines.c:648
+#: ../src/glines.c:649
 msgid "You can't move there!"
 msgstr "לא ניתן לזוז לשם!"
 
 #: ../src/glines.c:1181
 msgid ""
-"GNOME port of the once-popular Color Lines game.\n"
+"GNOME port of the once-popular Color Lines game\n"
 "\n"
 "Five or More is a part of GNOME Games."
 msgstr ""
-"גירסת GNOME למשחק השורות הצבעוניות הפופולארי\n"
+"גרסת GNOME למשחק השורות הצבעוניות הפופולרי\n"
 "‏חמש או יותר הוא חלק מחבילת משחקי GNOME."
 
 #: ../src/glines.c:1187
@@ -496,13 +510,17 @@ msgstr ""
 "‏Yaniv Abir https://launchpad.net/~yanivabir\n"
 "‏dod_basim https://launchpad.net/~yoav-prat\n"
 "ירון שהרבני <sh.yaron@gmail.com>\n"
+"יוסף אור בוצ׳קו <yoseforb@gnome.org>\n"
 "\n"
 "פרויקט תרגום GNOME לעברית:\n"
 "‏http://gnome-il.berlios.de"
 
-#: ../src/glines.c:1190
-msgid "GNOME Games web site"
-msgstr "אתר משחקי GNOME"
+#~ msgctxt "score-dialog"
+#~ msgid "Name"
+#~ msgstr "שם"
+
+#~ msgid "GNOME Games web site"
+#~ msgstr "אתר משחקי GNOME"
 
 #~ msgid "Five or more"
 #~ msgstr "חמש או יותר"
