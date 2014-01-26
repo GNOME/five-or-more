@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.HEAD.he\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-26 02:42+0200\n"
-"PO-Revision-Date: 2014-01-26 02:55+0200\n"
+"POT-Creation-Date: 2014-01-26 21:50+0200\n"
+"PO-Revision-Date: 2014-01-26 21:51+0200\n"
 "Last-Translator: Yosef Or Boczko <yoseforb@gmail.com>\n"
 "Language-Team: עברית <>\n"
 "Language: he\n"
@@ -475,8 +475,8 @@ msgid "Match five objects of the same type in a row to score!"
 msgstr "התאם חמישה עצמים זהים בשורה כדי לקבל ניקוד!"
 
 #: ../src/glines.c:473
-msgid "GNOME Five or More"
-msgstr "חמש או יותר - GNOME Five or More"
+msgid "Five or More Scores"
+msgstr "תוצאות חמש או יותר"
 
 #: ../src/glines.c:475
 msgid "_Board size:"
@@ -488,7 +488,7 @@ msgstr "המשחק הסתיים!"
 
 #. Can't move there!
 #: ../src/glines.c:649
-msgid "You can't move there!"
+msgid "You can’t move there!"
 msgstr "לא ניתן לזוז לשם!"
 
 #: ../src/glines.c:1181
@@ -514,6 +514,9 @@ msgstr ""
 "\n"
 "פרויקט תרגום GNOME לעברית:\n"
 "‏http://gnome-il.berlios.de"
+
+#~ msgid "GNOME Five or More"
+#~ msgstr "חמש או יותר - GNOME Five or More"
 
 #~ msgctxt "score-dialog"
 #~ msgid "Name"
