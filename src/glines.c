@@ -646,7 +646,7 @@ cell_clicked (GtkWidget * widget, int fx, int fy)
         set_inmove (1);
       } else {
         /* Can't move there! */
-        set_status_message (_("You can't move there!"));
+        set_status_message (_("You can’t move there!"));
         reset_pathsearch ();
         target = -1;
       }
