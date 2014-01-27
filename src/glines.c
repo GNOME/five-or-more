@@ -1385,14 +1385,20 @@ game_props_callback (void)
     size_radio = GTK_WIDGET (gtk_builder_get_object (builder_preferences, "radiobutton_small"));
     g_signal_connect (size_radio, "clicked",
                       G_CALLBACK (size_callback), GINT_TO_POINTER (1));
+    if (game_size == SMALL)
+      gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (size_radio), TRUE);
 
     size_radio = GTK_WIDGET (gtk_builder_get_object (builder_preferences, "radiobutton_medium"));
     g_signal_connect (size_radio, "clicked",
                       G_CALLBACK (size_callback), GINT_TO_POINTER (2));
+    if (game_size == MEDIUM)
+      gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (size_radio), TRUE);
 
     size_radio = GTK_WIDGET (gtk_builder_get_object (builder_preferences, "radiobutton_large"));
     g_signal_connect (size_radio, "clicked",
                       G_CALLBACK (size_callback), GINT_TO_POINTER (3));
+    if (game_size == LARGE)
+      gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (size_radio), TRUE);
 
     fast_moves_checkbutton = GTK_WIDGET (gtk_builder_get_object (builder_preferences, "checkbutton_fast_moves"));
     if (move_timeout == 10) {
