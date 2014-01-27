@@ -100,6 +100,7 @@ static GRand *rgen;
 static GtkWidget *draw_area;
 static GtkWidget *app, *headerbar, *pref_dialog, *gridframe;
 static GtkWidget *preview_widgets[MAXNPIECES];
+static GtkWidget *new_game_button;
 
 static gint window_width = 0, window_height = 0;
 static gboolean window_is_fullscreen = FALSE, window_is_maximized = FALSE;
@@ -417,6 +418,7 @@ start_game (void)
   g_snprintf (string, 19, "%d", score);
   gtk_label_set_text (GTK_LABEL (scorelabel), string);
   set_inmove (0);
+  gtk_widget_hide (new_game_button);
 }
 
 static void
@@ -492,7 +494,7 @@ game_over (void)
   set_status_message (_("Game Over!"));
   pos = games_scores_add_plain_score (highscores, score);
   show_scores (pos);
-  return;
+  gtk_widget_show (new_game_button);
 }
 
 static int
@@ -1517,7 +1519,7 @@ static void
 startup_cb (GApplication *application)
 {
   gchar *ui_path;
-  GtkWidget *vbox;
+  GtkWidget *hbox;
   GtkWidget *preview_hbox;
   guint i;
   GError *error = NULL;
@@ -1580,6 +1582,7 @@ startup_cb (GApplication *application)
     gtk_window_fullscreen (GTK_WINDOW (app));
   if (g_settings_get_boolean (settings, "window-is-maximized"))
     gtk_window_maximize (GTK_WINDOW (app));
+  gtk_container_set_border_width (GTK_CONTAINER (app), 20);
   gtk_application_add_window (GTK_APPLICATION (application), GTK_WINDOW (app));
 
   headerbar = GTK_WIDGET (gtk_builder_get_object (builder, "headerbar"));
@@ -1599,7 +1602,7 @@ startup_cb (GApplication *application)
 
   scorelabel = GTK_WIDGET (gtk_builder_get_object (builder, "scorelabel"));
 
-  vbox = GTK_WIDGET (gtk_builder_get_object (builder, "vbox"));
+  hbox = GTK_WIDGET (gtk_builder_get_object (builder, "hbox"));
   draw_area = gtk_drawing_area_new ();
   g_signal_connect (draw_area, "button-press-event",
                     G_CALLBACK (button_press_event), NULL);
@@ -1609,10 +1612,11 @@ startup_cb (GApplication *application)
                     G_CALLBACK (configure_event_callback), NULL);
   g_signal_connect (draw_area, "draw",
                     G_CALLBACK (field_draw_callback), NULL);
+  gtk_widget_set_size_request (draw_area, 400, 400);
   gridframe = games_grid_frame_new (hfieldsize, vfieldsize);
   games_grid_frame_set_padding (GAMES_GRID_FRAME (gridframe), 1, 1);
   gtk_container_add (GTK_CONTAINER (gridframe), draw_area);
-  gtk_box_pack_start (GTK_BOX (vbox), gridframe, TRUE, TRUE, 0);
+  gtk_box_pack_start (GTK_BOX (hbox), gridframe, TRUE, FALSE, 0);
 
   gtk_widget_set_events (draw_area,
                          gtk_widget_get_events (draw_area) |
@@ -1620,6 +1624,8 @@ startup_cb (GApplication *application)
 
   gtk_widget_set_can_focus (draw_area, TRUE);
   gtk_widget_grab_focus (draw_area);
+
+  new_game_button = GTK_WIDGET (gtk_builder_get_object (builder, "new_game_button"));
 
   load_properties ();
 
