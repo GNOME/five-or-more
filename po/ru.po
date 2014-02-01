@@ -389,7 +389,8 @@ msgstr "%s распространяется в надежде на то, что 
 
 #: ../src/games-stock.c:327
 #, c-format
-msgid "You should have received a copy of the GNU General Public License along with %s; if not, see <http://www.gnu.org/licenses/>."
+msgid "You should have received a copy of the GNU General Public License along with %s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA"
+msgstr "Вы должны получить копию GNU General Public License вместе с %s. Если этого не произошло, напишите to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA."
 
 #: ../src/games-stock.c:331
 msgid "You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>."
