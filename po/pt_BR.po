@@ -22,22 +22,23 @@
 # Flamarion Jorge <jorge.flamarion@gmail.com>, 2011.
 # Djavan Fagundes <djavan@comum.org>, 2012.
 # Rafael Ferreira <rafael.f.f1@gmail.com>, 2013.
+# Fábio Nogueira <fnogueira@gnome.org>, 2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: five-or-more\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-"
 "or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-12-19 00:12+0000\n"
-"PO-Revision-Date: 2013-12-19 02:00-0300\n"
-"Last-Translator: Rafael Ferreira <rafael.f.f1@gmail.com>\n"
+"POT-Creation-Date: 2014-01-27 04:32+0000\n"
+"PO-Revision-Date: 2014-01-30 13:14-0300\n"
+"Last-Translator: Fábio Nogueira <deb-user-ba@ubuntu.com>\n"
 "Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 1.5.7\n"
+"X-Generator: Poedit 1.5.4\n"
 "X-Project-Style: gnome\n"
 
 #: ../data/five-or-more.appdata.xml.in.h:1
@@ -101,7 +102,7 @@ msgid "_Use fast moves"
 msgstr "_Usar movimentos rápidos"
 
 #: ../data/five-or-more.ui.h:1 ../data/glines.desktop.in.h:1
-#: ../src/glines.c:1180 ../src/glines.c:1684
+#: ../src/glines.c:1181 ../src/glines.c:1694
 msgid "Five or More"
 msgstr "Cinco ou Mais"
 
@@ -110,12 +111,12 @@ msgid "Next:"
 msgstr "Próxima:"
 
 #: ../data/five-or-more.ui.h:3
-msgid "Score:"
-msgstr "Pontuação:"
-
-#: ../data/five-or-more.ui.h:4
 msgid "0"
 msgstr "0"
+
+#: ../data/five-or-more.ui.h:4
+msgid "Score:"
+msgstr "Pontuação:"
 
 #: ../data/glines.desktop.in.h:2
 msgid "Remove colored balls from the board by forming lines"
@@ -125,7 +126,7 @@ msgstr "Remova bolas coloridas do tabuleiro formando linhas"
 msgid "game;strategy;logic;"
 msgstr "game;jogo;estratégia;lógica;"
 
-#: ../data/menu.ui.h:1 ../src/games-scores-dialog.c:470
+#: ../data/menu.ui.h:1 ../src/games-scores-dialog.c:385
 msgid "New Game"
 msgstr "Novo jogo"
 
@@ -133,7 +134,7 @@ msgstr "Novo jogo"
 msgid "Scores"
 msgstr "Pontuações"
 
-#: ../data/menu.ui.h:3 ../src/glines.c:175
+#: ../data/menu.ui.h:3 ../src/glines.c:176
 msgid "Preferences"
 msgstr "Preferências"
 
@@ -225,32 +226,26 @@ msgid "true if the window is fullscren"
 msgstr "verdadeiro se a janela estiver em tela cheia"
 
 #. Score dialog column header for the score time (e.g. 1 minute)
-#: ../src/games-scores-dialog.c:136
+#: ../src/games-scores-dialog.c:132
 msgctxt "score-dialog"
 msgid "Time"
 msgstr "Tempo"
 
 #. Score dialog column header for the score value (e.g. 30 moves)
-#: ../src/games-scores-dialog.c:142
+#: ../src/games-scores-dialog.c:138
 msgctxt "score-dialog"
 msgid "Score"
 msgstr "Pontuação"
 
 #. Score format for time based scores.  %1$d is the time in minutes, %2$d is the time in seconds
-#: ../src/games-scores-dialog.c:307
+#: ../src/games-scores-dialog.c:225
 #, c-format
 msgctxt "score-dialog"
 msgid "%1$dm %2$ds"
 msgstr "%1$dm %2$ds"
 
-#. Score dialog column header for the name of the player who recorded the score
-#: ../src/games-scores-dialog.c:571
-msgctxt "score-dialog"
-msgid "Name"
-msgstr "Nome"
-
 #. Score dialog column header for the date the score was recorded
-#: ../src/games-scores-dialog.c:580
+#: ../src/games-scores-dialog.c:478
 msgid "Date"
 msgstr "Data"
 
@@ -466,11 +461,11 @@ msgctxt "board size"
 msgid "Large"
 msgstr "Grande"
 
-#: ../src/glines.c:169
+#: ../src/glines.c:170
 msgid "Could not load theme"
 msgstr "Não foi possível carregar o tema"
 
-#: ../src/glines.c:195
+#: ../src/glines.c:196
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -483,7 +478,7 @@ msgstr ""
 "\n"
 "O tema padrão será carregado em seu lugar."
 
-#: ../src/glines.c:202
+#: ../src/glines.c:203
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -500,24 +495,26 @@ msgstr ""
 msgid "Match five objects of the same type in a row to score!"
 msgstr "Junte cinco objetos do mesmo tipo em uma linha para marcar pontos!"
 
-#: ../src/glines.c:474
-msgid "GNOME Five or More"
-msgstr "GNOME Cinco ou Mais"
+#: ../src/glines.c:475
+#| msgid "Five or More"
+msgid "Five or More Scores"
+msgstr "Pontuações de Cinco ou Mais"
 
-#: ../src/glines.c:476
+#: ../src/glines.c:477
 msgid "_Board size:"
 msgstr "Tamanho do ta_buleiro:"
 
-#: ../src/glines.c:493
+#: ../src/glines.c:494
 msgid "Game Over!"
 msgstr "Fim do jogo!"
 
 #. Can't move there!
-#: ../src/glines.c:650
-msgid "You can't move there!"
+#: ../src/glines.c:651
+#| msgid "You can't move there!"
+msgid "You can’t move there!"
 msgstr "Você não pode mover para lá!"
 
-#: ../src/glines.c:1182
+#: ../src/glines.c:1183
 msgid ""
 "GNOME port of the once-popular Color Lines game\n"
 "\n"
@@ -527,7 +524,7 @@ msgstr ""
 "\n"
 "Cinco ou mais faz parte do GNOME Games."
 
-#: ../src/glines.c:1188
+#: ../src/glines.c:1189
 msgid "translator-credits"
 msgstr ""
 "Sandro Nunes Henrique <sandro@conectiva.com.br>\n"
@@ -536,7 +533,7 @@ msgstr ""
 "Alexandre Folle de Menezes <afmenez@terra.com.br>\n"
 "Maurício de Lemos Rodrigues Collares Neto <mauricioc@myrealbox.com>\n"
 "Welther José O. Esteves <weltherjoe@yahoo.com.br>\n"
-"Raphael Higino <In memoriam>\n"
+"Raphael Higino (In memoriam) <In memoriam>\n"
 "Og Maciel <ogmaciel@ubuntu.com>\n"
 "Andre Noel <andrenoel@ubuntu.com>\n"
 "Vladimir Melo <vmelo@gnome.org>\n"
@@ -546,9 +543,15 @@ msgstr ""
 "Rodrigo Padula de Oliveira <contato@rodrigopadula.com>\n"
 "Rafael Ferreira <rafael.f.f1@gmail.com>"
 
-#: ../src/glines.c:1191
-msgid "GNOME Games web site"
-msgstr "Site do GNOME Games"
+#~ msgctxt "score-dialog"
+#~ msgid "Name"
+#~ msgstr "Nome"
+
+#~ msgid "GNOME Five or More"
+#~ msgstr "GNOME Cinco ou Mais"
+
+#~ msgid "GNOME Games web site"
+#~ msgstr "Site do GNOME Games"
 
 #~ msgid "Five or more"
 #~ msgstr "Cinco ou mais"
