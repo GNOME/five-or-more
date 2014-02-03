@@ -1,3 +1,14 @@
+3.11.5 - February 3, 2014
+=========================
+
+* The size radio button in Preferences now always indicates the correct size
+* A new game button now appears in the window after the game has ended
+* Scores are now stored in the home directory, instead of in /var/games
+* The binary no longer needs to be setgid in order for scores to work
+* The outdated Classic and Pulse themes have been removed
+* The default window size has been increased
+* Updated translations
+
 3.11.4 - January 12, 2014
 =========================
 
