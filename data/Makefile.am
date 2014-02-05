@@ -18,7 +18,7 @@ gsettings_SCHEMAS = org.gnome.five-or-more.gschema.xml
 
 man_MANS = five-or-more.6
 
-desktop_in_files = glines.desktop.in
+desktop_in_files = five-or-more.desktop.in
 desktopdir = $(datadir)/applications
 desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
 @INTLTOOL_DESKTOP_RULE@

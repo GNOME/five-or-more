@@ -1545,7 +1545,7 @@ startup_cb (GApplication *application)
 
   settings = g_settings_new ("org.gnome.five-or-more");
 
-  highscores = games_scores_new ("glines",
+  highscores = games_scores_new ("five-or-more",
                                  scorecats, G_N_ELEMENTS (scorecats),
                                  "board size", NULL,
                                  0 /* default category */,
@@ -1672,12 +1672,6 @@ main (int argc, char *argv[])
   games_scores_startup ();
 
   rgen = g_rand_new ();
-
-  /* 
-   * Required for proper app menu because the binary doesn't match the desktop file.
-   * Has to be before the call to g_option_context_parse.
-   */
-  g_set_prgname ("glines");
 
   context = g_option_context_new (NULL);
   g_option_context_set_translation_domain (context, GETTEXT_PACKAGE);
