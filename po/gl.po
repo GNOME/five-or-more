@@ -10,13 +10,13 @@
 # Antón Méixome <meixome@mancomun.org>, 2009.
 # Fran Diéguez <frandieguez@gnome.org>, 2009, 2010, 2011.
 # Leandro Regueiro <leandro.regueiro@gmail.com>, 2012.
-# Fran Dieguez <frandieguez@gnome.org>, 2011, 2012, 2013.
+# Fran Dieguez <frandieguez@gnome.org>, 2011, 2012, 2013, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games-master-po-gl-54590\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-19 01:11+0100\n"
-"PO-Revision-Date: 2013-12-19 01:12+0200\n"
+"POT-Creation-Date: 2014-02-07 02:27+0100\n"
+"PO-Revision-Date: 2014-02-07 02:27+0200\n"
 "Last-Translator: Fran Dieguez <frandieguez@gnome.org>\n"
 "Language-Team: gnome-l10n-gl@gnome.org\n"
 "Language: gl\n"
@@ -46,6 +46,19 @@ msgid ""
 msgstr ""
 "Aparecerán máis obxectos despois de cada turno. Xogue tanto como poida, até "
 "que o taboleiro estea completamente completo!"
+
+#: ../data/five-or-more.desktop.in.h:1 ../data/five-or-more.ui.h:1
+#: ../src/glines.c:1181 ../src/glines.c:1688
+msgid "Five or More"
+msgstr "Cinco ou Máis"
+
+#: ../data/five-or-more.desktop.in.h:2
+msgid "Remove colored balls from the board by forming lines"
+msgstr "Retirar as bólas de cores do taboleiro formando liñas"
+
+#: ../data/five-or-more.desktop.in.h:3
+msgid "game;strategy;logic;"
+msgstr "xogo;estratexia;lóxica;"
 
 #: ../data/five-or-more-preferences.ui.h:1
 msgid "Five or More Preferences"
@@ -87,32 +100,19 @@ msgstr "Xeral"
 msgid "_Use fast moves"
 msgstr "_Usar movementos rápidos"
 
-#: ../data/five-or-more.ui.h:1 ../data/glines.desktop.in.h:1
-#: ../src/glines.c:1180 ../src/glines.c:1684
-msgid "Five or More"
-msgstr "Cinco ou Máis"
-
 #: ../data/five-or-more.ui.h:2
 msgid "Next:"
 msgstr "Seguinte:"
 
 #: ../data/five-or-more.ui.h:3
-msgid "Score:"
-msgstr "Puntuación:"
-
-#: ../data/five-or-more.ui.h:4
 msgid "0"
 msgstr "0"
 
-#: ../data/glines.desktop.in.h:2
-msgid "Remove colored balls from the board by forming lines"
-msgstr "Retirar as bólas de cores do taboleiro formando liñas"
+#: ../data/five-or-more.ui.h:4
+msgid "Score:"
+msgstr "Puntuación:"
 
-#: ../data/glines.desktop.in.h:3
-msgid "game;strategy;logic;"
-msgstr "xogo;estratexia;lóxica;"
-
-#: ../data/menu.ui.h:1 ../src/games-scores-dialog.c:470
+#: ../data/menu.ui.h:1 ../src/games-scores-dialog.c:385
 msgid "New Game"
 msgstr "Xogo novo"
 
@@ -120,7 +120,7 @@ msgstr "Xogo novo"
 msgid "Scores"
 msgstr "Puntuacións"
 
-#: ../data/menu.ui.h:3 ../src/glines.c:175
+#: ../data/menu.ui.h:3 ../src/glines.c:176
 msgid "Preferences"
 msgstr "Preferencias"
 
@@ -213,32 +213,26 @@ msgid "true if the window is fullscren"
 msgstr "verdadeiro se a xanela está en en pantalla completa"
 
 #. Score dialog column header for the score time (e.g. 1 minute)
-#: ../src/games-scores-dialog.c:136
+#: ../src/games-scores-dialog.c:132
 msgctxt "score-dialog"
 msgid "Time"
 msgstr "Tempo"
 
 #. Score dialog column header for the score value (e.g. 30 moves)
-#: ../src/games-scores-dialog.c:142
+#: ../src/games-scores-dialog.c:138
 msgctxt "score-dialog"
 msgid "Score"
 msgstr "Puntuación"
 
 #. Score format for time based scores.  %1$d is the time in minutes, %2$d is the time in seconds
-#: ../src/games-scores-dialog.c:307
+#: ../src/games-scores-dialog.c:225
 #, c-format
 msgctxt "score-dialog"
 msgid "%1$dm %2$ds"
 msgstr "%1$dm %2$ds"
 
-#. Score dialog column header for the name of the player who recorded the score
-#: ../src/games-scores-dialog.c:571
-msgctxt "score-dialog"
-msgid "Name"
-msgstr "Nome"
-
 #. Score dialog column header for the date the score was recorded
-#: ../src/games-scores-dialog.c:580
+#: ../src/games-scores-dialog.c:478
 msgid "Date"
 msgstr "Data"
 
@@ -454,11 +448,11 @@ msgctxt "board size"
 msgid "Large"
 msgstr "Grande"
 
-#: ../src/glines.c:169
+#: ../src/glines.c:170
 msgid "Could not load theme"
 msgstr "Non foi posíbel baixar o tema"
 
-#: ../src/glines.c:195
+#: ../src/glines.c:196
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -471,7 +465,7 @@ msgstr ""
 "\n"
 "En vez diso instalarase o tema predeterminado."
 
-#: ../src/glines.c:202
+#: ../src/glines.c:203
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -488,24 +482,24 @@ msgstr ""
 msgid "Match five objects of the same type in a row to score!"
 msgstr "Para puntuar ten que xuntar cinco obxectos do mesmo tipo nunha fila!"
 
-#: ../src/glines.c:474
-msgid "GNOME Five or More"
-msgstr "GNOME Cinco ou Máis"
+#: ../src/glines.c:475
+msgid "Five or More Scores"
+msgstr "Puntuacións de Cinco ou Máis"
 
-#: ../src/glines.c:476
+#: ../src/glines.c:477
 msgid "_Board size:"
 msgstr "_Tamaño do taboleiro:"
 
-#: ../src/glines.c:493
+#: ../src/glines.c:494
 msgid "Game Over!"
 msgstr "Fin da partida!"
 
 #. Can't move there!
-#: ../src/glines.c:650
-msgid "You can't move there!"
+#: ../src/glines.c:651
+msgid "You can’t move there!"
 msgstr "Non pode moverse aí!"
 
-#: ../src/glines.c:1182
+#: ../src/glines.c:1183
 msgid ""
 "GNOME port of the once-popular Color Lines game\n"
 "\n"
@@ -515,15 +509,15 @@ msgstr ""
 "\n"
 "Cinco ou Máis forma parte do dos Xogos de GNOME."
 
-#: ../src/glines.c:1188
+#: ../src/glines.c:1189
 msgid "translator-credits"
 msgstr ""
+"Fran Diéguez <frandieguez@ubuntu.com>, 2009-2014;\n"
 "Leandro Regueiro <leandro.regueiro@gmail.com>, 2012.\n"
-"Fran Diéguez <frandieguez@ubuntu.com>, 2009, 2010, 2011, 2012;\n"
 "Antón Méixome <meixome@mancomun.org>, 2009.\n"
 "Suso Baleato <suso.baleato@xunta.es>, 2009.\n"
-"Mancomún - Centro de Referencia e Servizos de Software Libre <g11n@mancomun."
-"org>, 2009.\n"
+"Mancomún - Centro de Referencia e Servizos de Software Libre "
+"<g11n@mancomun.org>, 2009.\n"
 "Ignacio Casal Quinteiro <icq@svn.gnome.org>, 2008.\n"
 "Ignacio Casal Quinteiro <nacho.resa@gmail.com>, 2005, 2006.\n"
 "Jesús Bravo Álvarez <jba@pobox.com>, 2000.\n"
@@ -531,9 +525,15 @@ msgstr ""
 "Proxecto Trasno - Adaptación do software libre á lingua galega:  Se desexas\n"
 "colaborar connosco, podes atopar máis información en http://www.trasno.net"
 
-#: ../src/glines.c:1191
-msgid "GNOME Games web site"
-msgstr "Sitio web do GNOME Games"
+#~ msgctxt "score-dialog"
+#~ msgid "Name"
+#~ msgstr "Nome"
+
+#~ msgid "GNOME Five or More"
+#~ msgstr "GNOME Cinco ou Máis"
+
+#~ msgid "GNOME Games web site"
+#~ msgstr "Sitio web do GNOME Games"
 
 #~ msgid "Five or more"
 #~ msgstr "Cinco ou máis"
