@@ -23,8 +23,8 @@ msgstr ""
 "Project-Id-Version: five-or-more master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-"
 "or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-01-17 04:09+0000\n"
-"PO-Revision-Date: 2014-01-17 18:02+0100\n"
+"POT-Creation-Date: 2014-02-08 06:09+0000\n"
+"PO-Revision-Date: 2014-02-08 7:27+0100\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -54,6 +54,19 @@ msgid ""
 msgstr ""
 "Po každém tahu se objeví nové objekty. Hrajte, co nejdéle to půjde, dokud "
 "nebude hrací plocha plná."
+
+#: ../data/five-or-more.desktop.in.h:1 ../data/five-or-more.ui.h:1
+#: ../src/glines.c:1181 ../src/glines.c:1688
+msgid "Five or More"
+msgstr "Pět nebo víc"
+
+#: ../data/five-or-more.desktop.in.h:2
+msgid "Remove colored balls from the board by forming lines"
+msgstr "Odstraňovat barevné koule z hrací desky tvořením úseček"
+
+#: ../data/five-or-more.desktop.in.h:3
+msgid "game;strategy;logic;"
+msgstr "hra;strategická;logická;"
 
 #: ../data/five-or-more-preferences.ui.h:1
 msgid "Five or More Preferences"
@@ -95,11 +108,6 @@ msgstr "Obecné"
 msgid "_Use fast moves"
 msgstr "Používat _rychlé tahy"
 
-#: ../data/five-or-more.ui.h:1 ../data/glines.desktop.in.h:1
-#: ../src/glines.c:1180 ../src/glines.c:1683
-msgid "Five or More"
-msgstr "Pět nebo víc"
-
 #: ../data/five-or-more.ui.h:2
 msgid "Next:"
 msgstr "Následující:"
@@ -112,14 +120,6 @@ msgstr "0"
 msgid "Score:"
 msgstr "Skóre:"
 
-#: ../data/glines.desktop.in.h:2
-msgid "Remove colored balls from the board by forming lines"
-msgstr "Odstraňovat barevné koule z hrací desky tvořením úseček"
-
-#: ../data/glines.desktop.in.h:3
-msgid "game;strategy;logic;"
-msgstr "hra;strategická;logická;"
-
 #: ../data/menu.ui.h:1 ../src/games-scores-dialog.c:385
 msgid "New Game"
 msgstr "Nová hra"
@@ -128,7 +128,7 @@ msgstr "Nová hra"
 msgid "Scores"
 msgstr "Skóre"
 
-#: ../data/menu.ui.h:3 ../src/glines.c:175
+#: ../data/menu.ui.h:3 ../src/glines.c:176
 msgid "Preferences"
 msgstr "Předvolby"
 
@@ -456,11 +456,11 @@ msgctxt "board size"
 msgid "Large"
 msgstr "Velké"
 
-#: ../src/glines.c:169
+#: ../src/glines.c:170
 msgid "Could not load theme"
 msgstr "Nelze načíst motiv"
 
-#: ../src/glines.c:195
+#: ../src/glines.c:196
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -473,7 +473,7 @@ msgstr ""
 "\n"
 "Bude místo něj načten výchozí motiv."
 
-#: ../src/glines.c:202
+#: ../src/glines.c:203
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -490,24 +490,24 @@ msgstr ""
 msgid "Match five objects of the same type in a row to score!"
 msgstr "Seřazením pěti objektů stejného typu do řady získáte body!"
 
-#: ../src/glines.c:474
-msgid "GNOME Five or More"
-msgstr "GNOME Pět nebo víc"
+#: ../src/glines.c:475
+msgid "Five or More Scores"
+msgstr "Skóre Pět nebo víc"
 
-#: ../src/glines.c:476
+#: ../src/glines.c:477
 msgid "_Board size:"
 msgstr "Velikost hrací _desky:"
 
-#: ../src/glines.c:493
+#: ../src/glines.c:494
 msgid "Game Over!"
 msgstr "Konec hry!"
 
 #. Can't move there!
-#: ../src/glines.c:650
-msgid "You can't move there!"
+#: ../src/glines.c:651
+msgid "You can’t move there!"
 msgstr "Tam nemůžete táhnout!"
 
-#: ../src/glines.c:1182
+#: ../src/glines.c:1183
 msgid ""
 "GNOME port of the once-popular Color Lines game\n"
 "\n"
@@ -517,7 +517,7 @@ msgstr ""
 "\n"
 "Pět nebo víc je součástí her GNOME."
 
-#: ../src/glines.c:1188
+#: ../src/glines.c:1189
 msgid "translator-credits"
 msgstr ""
 "Jirka Lébl\n"
