@@ -74,6 +74,7 @@
             <property name="can_focus">True</property>
             <property name="relief">GTK_RELIEF_NONE</property>
             <property name="valign">GTK_ALIGN_END</property>
+            <property name="action-name">app.new</property>
             <child>
               <object class="GtkImage" id="new_game_button_image">
                 <property name="visible">True</property>
