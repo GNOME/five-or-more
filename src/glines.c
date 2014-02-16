@@ -1626,11 +1626,10 @@ startup_cb (GApplication *application)
                     G_CALLBACK (configure_event_callback), NULL);
   g_signal_connect (draw_area, "draw",
                     G_CALLBACK (field_draw_callback), NULL);
-  gtk_widget_set_size_request (draw_area, 400, 400);
   gridframe = games_grid_frame_new (hfieldsize, vfieldsize);
   games_grid_frame_set_padding (GAMES_GRID_FRAME (gridframe), 1, 1);
   gtk_container_add (GTK_CONTAINER (gridframe), draw_area);
-  gtk_box_pack_start (GTK_BOX (hbox), gridframe, TRUE, FALSE, 0);
+  gtk_box_pack_start (GTK_BOX (hbox), gridframe, TRUE, TRUE, 0);
 
   gtk_widget_set_events (draw_area,
                          gtk_widget_get_events (draw_area) |
