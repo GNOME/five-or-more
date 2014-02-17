@@ -470,12 +470,9 @@ static void
 show_scores (gint pos)
 {
   static GtkWidget *dialog;
-  gint result;
 
   if (dialog == NULL) {
     dialog = games_scores_dialog_new (GTK_WINDOW (app), highscores, _("Five or More Scores"));
-    games_scores_dialog_set_buttons (GAMES_SCORES_DIALOG (dialog),
-                                     GAMES_SCORES_NEW_GAME_BUTTON | GAMES_SCORES_CLOSE_BUTTON);
     games_scores_dialog_set_category_description (GAMES_SCORES_DIALOG
                                                   (dialog), _("_Board size:"));
   }
@@ -485,13 +482,8 @@ show_scores (gint pos)
   }
 
   gtk_window_present (GTK_WINDOW (dialog));
-  result = gtk_dialog_run (GTK_DIALOG (dialog));
+  gtk_dialog_run (GTK_DIALOG (dialog));
   gtk_widget_hide (dialog);
-
-  if (result == GTK_RESPONSE_ACCEPT) {
-    reset_game ();
-    start_game ();
-  }
 }
 
 static void
