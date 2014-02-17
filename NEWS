@@ -1,3 +1,13 @@
+3.11.90 - February 16, 2014
+===========================
+
+* The game view is no longer far too small when playing with a Large field
+  (regression in 3.11.5).
+* The new game button now works.
+* The new game button now has a tooltip.
+* The desktop file has been renamed to gnome-chess.desktop
+* Updated translations
+
 3.11.5 - February 3, 2014
 =========================
 
