@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: five-or-more 3.11.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-25 12:20+0100\n"
-"PO-Revision-Date: 2014-01-25 12:22+0100\n"
+"POT-Creation-Date: 2014-02-19 23:28+0100\n"
+"PO-Revision-Date: 2014-02-19 23:29+0100\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian bokmål <i18n-nb@lister.ping.uio.no>\n"
 "Language: nb\n"
@@ -23,13 +23,32 @@ msgid ""
 "or more objects of the same color into a line to cause them to disappear and "
 "score points. Earn many more points by lining up as many objects as possible "
 "before clearing them."
-msgstr "Fem eller flere er GNOME versjonen av et tidligere populært dataspill. Plasser fem eller flere objekter med samme farge på en linje for å få dem bort og motta poeng. Få flere poeng ved å få så mange objekter som mulig på linje før du tar dem bort."
+msgstr ""
+"Fem eller flere er GNOME versjonen av et tidligere populært dataspill. "
+"Plasser fem eller flere objekter med samme farge på en linje for å få dem "
+"bort og motta poeng. Få flere poeng ved å få så mange objekter som mulig på "
+"linje før du tar dem bort."
 
 #: ../data/five-or-more.appdata.xml.in.h:2
 msgid ""
 "More objects appear after every turn. Play for as long as possible, until "
 "the board is completely full!"
-msgstr "Flere objekter kommer til syne for hvert trekk. Spill så lenge som mulig til brettet er helt fullt."
+msgstr ""
+"Flere objekter kommer til syne for hvert trekk. Spill så lenge som mulig til "
+"brettet er helt fullt."
+
+#: ../data/five-or-more.desktop.in.h:1 ../data/five-or-more.ui.h:1
+#: ../src/glines.c:1181 ../src/glines.c:1687
+msgid "Five or More"
+msgstr "Fem eller flere"
+
+#: ../data/five-or-more.desktop.in.h:2
+msgid "Remove colored balls from the board by forming lines"
+msgstr "Fjern fargede baller fra brettet ved å lage linjer"
+
+#: ../data/five-or-more.desktop.in.h:3
+msgid "game;strategy;logic;"
+msgstr "spill;strategi;logikk;"
 
 #: ../data/five-or-more-preferences.ui.h:1
 msgid "Five or More Preferences"
@@ -71,11 +90,6 @@ msgstr "Generelt"
 msgid "_Use fast moves"
 msgstr "Br_uk raske trekk"
 
-#: ../data/five-or-more.ui.h:1 ../data/glines.desktop.in.h:1
-#: ../src/glines.c:1179 ../src/glines.c:1682
-msgid "Five or More"
-msgstr "Fem eller flere"
-
 #: ../data/five-or-more.ui.h:2
 msgid "Next:"
 msgstr "Neste:"
@@ -88,13 +102,9 @@ msgstr "0"
 msgid "Score:"
 msgstr "Poeng:"
 
-#: ../data/glines.desktop.in.h:2
-msgid "Remove colored balls from the board by forming lines"
-msgstr "Fjern fargede baller fra brettet ved å lage linjer"
-
-#: ../data/glines.desktop.in.h:3
-msgid "game;strategy;logic;"
-msgstr "spill;strategi;logikk;"
+#: ../data/five-or-more.ui.h:5 ../src/games-stock.c:48
+msgid "Start a new game"
+msgstr "Start et nytt spill"
 
 #: ../data/menu.ui.h:1 ../src/games-scores-dialog.c:385
 msgid "New Game"
@@ -104,7 +114,7 @@ msgstr "Nytt spill"
 msgid "Scores"
 msgstr "Poeng"
 
-#: ../data/menu.ui.h:3 ../src/glines.c:175
+#: ../data/menu.ui.h:3 ../src/glines.c:176
 msgid "Preferences"
 msgstr "Brukervalg"
 
@@ -246,10 +256,6 @@ msgstr "Start et nytt spill med flere spillere over nettverket"
 #: ../src/games-stock.c:47
 msgid "End the current network game and return to network server"
 msgstr "Avslutt aktivt nettverksspill og gå tilbake til nettverkstjener"
-
-#: ../src/games-stock.c:48
-msgid "Start a new game"
-msgstr "Start et nytt spill"
 
 #: ../src/games-stock.c:49
 msgid "Pause the game"
@@ -431,11 +437,11 @@ msgctxt "board size"
 msgid "Large"
 msgstr "Stor"
 
-#: ../src/glines.c:169
+#: ../src/glines.c:170
 msgid "Could not load theme"
 msgstr "Kunne ikke laste tema"
 
-#: ../src/glines.c:195
+#: ../src/glines.c:196
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -448,7 +454,7 @@ msgstr ""
 "\n"
 "Forvalgt tema vil bli lastet i stedet."
 
-#: ../src/glines.c:202
+#: ../src/glines.c:203
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -461,28 +467,28 @@ msgstr ""
 "\n"
 "Vennligst sjekk at Fem eller flere er korrekt installert."
 
-#: ../src/glines.c:412
+#: ../src/glines.c:413
 msgid "Match five objects of the same type in a row to score!"
 msgstr "Få fem objekter med samme farge på rad for å vinne!"
 
-#: ../src/glines.c:473
-msgid "GNOME Five or More"
-msgstr "GNOME Fem eller flere"
-
 #: ../src/glines.c:475
+msgid "Five or More Scores"
+msgstr "Poeng for Fem eller flere"
+
+#: ../src/glines.c:477
 msgid "_Board size:"
 msgstr "Størrelse på _brett"
 
-#: ../src/glines.c:492
+#: ../src/glines.c:494
 msgid "Game Over!"
 msgstr "Spillet er over!"
 
 #. Can't move there!
-#: ../src/glines.c:649
-msgid "You can't move there!"
-msgstr "Kan ikke gå dit!"
+#: ../src/glines.c:651
+msgid "You can’t move there!"
+msgstr "Kan ikke flytte dit!"
 
-#: ../src/glines.c:1181
+#: ../src/glines.c:1183
 msgid ""
 "GNOME port of the once-popular Color Lines game\n"
 "\n"
@@ -492,7 +498,7 @@ msgstr ""
 "\n"
 "Fem eller flere er en del av GNOME spill."
 
-#: ../src/glines.c:1187
+#: ../src/glines.c:1189
 msgid "translator-credits"
 msgstr ""
 "Kjartan Maraas <kmaraas@gnome.org>\n"
