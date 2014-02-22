@@ -8,15 +8,15 @@
 # Vytautas Povilaitis <punktyras@nkm.lt>, 2007.
 # Gintautas Miliauskas <gintas@akl.lt>, 2006, 2007, 2008, 2010.
 # Algimantas Margevičius <gymka@mail.ru>, 2011.
-# Aurimas Černius <aurisc4@gmail.com>, 2010, 2013.
+# Aurimas Černius <aurisc4@gmail.com>, 2010, 2013, 2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: lt\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-"
 "or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-08-11 16:36+0000\n"
-"PO-Revision-Date: 2013-08-27 23:43+0300\n"
+"POT-Creation-Date: 2014-02-22 17:54+0000\n"
+"PO-Revision-Date: 2014-02-22 19:59+0200\n"
 "Last-Translator: Aurimas Černius <aurisc4@gmail.com>\n"
 "Language-Team: Lietuvių <gnome-lt@lists.akl.lt>\n"
 "Language: lt\n"
@@ -27,16 +27,36 @@ msgstr ""
 "%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Gtranslator 2.91.6\n"
 
-#: ../data/glines.desktop.in.in.h:1 ../data/five-or-more.ui.h:1
-#: ../src/glines.c:1176 ../src/glines.c:1179 ../src/glines.c:1703
+#: ../data/five-or-more.appdata.xml.in.h:1
+msgid ""
+"Five or More is the GNOME port of a once-popular computer game. Align five "
+"or more objects of the same color into a line to cause them to disappear and "
+"score points. Earn many more points by lining up as many objects as possible "
+"before clearing them."
+msgstr ""
+"Penketas ar daugiau yra kadaise populiaraus kompiuterinio žaidimo GNOME "
+"variantas. Sudėliokite penkis ar daugiau tos pačios spalvos objektų į vieną "
+"eilę, kad jie išnyktų, ir gaukite už tai taškus. Gaukite daug daugiau taškų "
+"sudėdami į eilę kiek galima daugiau objektų prieš juos išvalydami."
+
+#: ../data/five-or-more.appdata.xml.in.h:2
+msgid ""
+"More objects appear after every turn. Play for as long as possible, until "
+"the board is completely full!"
+msgstr ""
+"Po kiekvieno ėjimo atsiranda daugiau objektų. Žaiskite kiek galima ilgiau "
+"iki lenta užsipildys!"
+
+#: ../data/five-or-more.desktop.in.h:1 ../data/five-or-more.ui.h:1
+#: ../src/glines.c:1181 ../src/glines.c:1687
 msgid "Five or More"
 msgstr "Penketas ar daugiau"
 
-#: ../data/glines.desktop.in.in.h:2
+#: ../data/five-or-more.desktop.in.h:2
 msgid "Remove colored balls from the board by forming lines"
 msgstr "Pašalinti nuo lentos spalvotus rutulius sukūrus iš jų linijas"
 
-#: ../data/glines.desktop.in.in.h:3
+#: ../data/five-or-more.desktop.in.h:3
 msgid "game;strategy;logic;"
 msgstr "žaidimas;strategija;logika;"
 
@@ -92,7 +112,11 @@ msgstr "0"
 msgid "Score:"
 msgstr "Taškai:"
 
-#: ../data/menu.ui.h:1 ../src/games-scores-dialog.c:470
+#: ../data/five-or-more.ui.h:5 ../src/games-stock.c:48
+msgid "Start a new game"
+msgstr "Pradėti naują žaidimą"
+
+#: ../data/menu.ui.h:1 ../src/games-scores-dialog.c:385
 msgid "New Game"
 msgstr "Naujas žaidimas"
 
@@ -105,7 +129,6 @@ msgid "Preferences"
 msgstr "Nustatymai"
 
 #: ../data/menu.ui.h:4
-#| msgid "_Help"
 msgid "Help"
 msgstr "Žinynas"
 
@@ -117,110 +140,104 @@ msgstr "Apie"
 msgid "Quit"
 msgstr "Išeiti"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:1
+#: ../data/org.gnome.five-or-more.gschema.xml.h:1
 msgid "Playing field size"
 msgstr "Žaidimo lauko dydis"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:2
+#: ../data/org.gnome.five-or-more.gschema.xml.h:2
 msgid ""
 "Playing field size. 1=Small, 2=Medium, 3=Large. Any other value is invalid."
 msgstr ""
 "Žaidimo lauko dydis. 1=mažas, 2=vidutinis, 3=didelis. Kitos reikšmės "
 "netinkamos."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:3
+#: ../data/org.gnome.five-or-more.gschema.xml.h:3
 msgid "Ball style"
 msgstr "Rutulio stilius"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:4
+#: ../data/org.gnome.five-or-more.gschema.xml.h:4
 msgid "Ball style. The filename of the images to use for the balls."
 msgstr ""
 "Rutulio stilius. Failas, saugantis paveikslėlius, iš kurių suformuojami "
 "rutuliai."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:5
+#: ../data/org.gnome.five-or-more.gschema.xml.h:5
 msgid "Background color"
 msgstr "Fono spalva"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:6
+#: ../data/org.gnome.five-or-more.gschema.xml.h:6
 msgid "Background color. The hex specification of the background color."
 msgstr "Fono spalva. Šešioliktainis kodas, nurodantis fono spalvą."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:7
+#: ../data/org.gnome.five-or-more.gschema.xml.h:7
 msgid "Time between moves"
 msgstr "Pauzė tarp ėjimų"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:8
+#: ../data/org.gnome.five-or-more.gschema.xml.h:8
 msgid "Time between moves in milliseconds."
 msgstr "Laikas tarp ėjimų milisekundėmis."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:9
+#: ../data/org.gnome.five-or-more.gschema.xml.h:9
 msgid "Game score"
 msgstr "Žaidimas rezultatai"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:10
+#: ../data/org.gnome.five-or-more.gschema.xml.h:10
 msgid "Game score from last saved session."
 msgstr "Paskutinės išsaugotos sesijos žaidimo rezultatai."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:11
+#: ../data/org.gnome.five-or-more.gschema.xml.h:11
 msgid "Game field"
 msgstr "Žaidimo laukas"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:12
+#: ../data/org.gnome.five-or-more.gschema.xml.h:12
 msgid "Game field from last saved session."
 msgstr "Paskutinės išsaugotos sesijos žaidimo laukas."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:13
+#: ../data/org.gnome.five-or-more.gschema.xml.h:13
 msgid "Game preview"
 msgstr "Žaidimo peržiūra"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:14
+#: ../data/org.gnome.five-or-more.gschema.xml.h:14
 msgid "Game preview from last saved session."
 msgstr "Paskutinės išsaugotos sesijos žaidimo peržiūra."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:15
+#: ../data/org.gnome.five-or-more.gschema.xml.h:15
 msgid "Width of the window in pixels"
 msgstr "Lango plotis pikseliais"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:16
+#: ../data/org.gnome.five-or-more.gschema.xml.h:16
 msgid "Height of the window in pixels"
 msgstr "Lango aukštis pikseliais"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:17
+#: ../data/org.gnome.five-or-more.gschema.xml.h:17
 msgid "true if the window is maximized"
 msgstr "teigiama, jei langas yra išdidintas"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:18
+#: ../data/org.gnome.five-or-more.gschema.xml.h:18
 msgid "true if the window is fullscren"
 msgstr "teigiama, jei langas yra visamo ekrano veiksenoje"
 
 #. Score dialog column header for the score time (e.g. 1 minute)
-#: ../src/games-scores-dialog.c:136
+#: ../src/games-scores-dialog.c:132
 msgctxt "score-dialog"
 msgid "Time"
 msgstr "Laikas"
 
 #. Score dialog column header for the score value (e.g. 30 moves)
-#: ../src/games-scores-dialog.c:142
+#: ../src/games-scores-dialog.c:138
 msgctxt "score-dialog"
 msgid "Score"
 msgstr "Taškai"
 
 #. Score format for time based scores.  %1$d is the time in minutes, %2$d is the time in seconds
-#: ../src/games-scores-dialog.c:307
+#: ../src/games-scores-dialog.c:225
 #, c-format
 msgctxt "score-dialog"
 msgid "%1$dm %2$ds"
 msgstr "%1$dm %2$ds"
 
-#. Score dialog column header for the name of the player who recorded the score
-#: ../src/games-scores-dialog.c:571
-msgctxt "score-dialog"
-msgid "Name"
-msgstr "Vardas"
-
 #. Score dialog column header for the date the score was recorded
-#: ../src/games-scores-dialog.c:580
+#: ../src/games-scores-dialog.c:478
 msgid "Date"
 msgstr "Data"
 
@@ -251,10 +268,6 @@ msgstr "Pradėti naują tinklinį keleto žaidėjų žaidimą"
 #: ../src/games-stock.c:47
 msgid "End the current network game and return to network server"
 msgstr "Baigti einamąjį tinklo žaidimą ir grįžti prie tinklo serverio"
-
-#: ../src/games-stock.c:48
-msgid "Start a new game"
-msgstr "Pradėti naują žaidimą"
 
 #: ../src/games-stock.c:49
 msgid "Pause the game"
@@ -421,17 +434,17 @@ msgstr ""
 "licencijos kopija; jei ne – jos ieškokite adresu <http://www.gnu.org/"
 "licenses/>."
 
-#: ../src/glines.c:78
+#: ../src/glines.c:81
 msgctxt "board size"
 msgid "Small"
 msgstr "Mažas"
 
-#: ../src/glines.c:79
+#: ../src/glines.c:82
 msgctxt "board size"
 msgid "Medium"
 msgstr "Vidutiniškas"
 
-#: ../src/glines.c:80
+#: ../src/glines.c:83
 msgctxt "board size"
 msgid "Large"
 msgstr "Didelis"
@@ -466,38 +479,44 @@ msgstr ""
 "\n"
 "Patikrinkite, ar „Penketas ar daugiau“ yra įdiegtas tinkamai."
 
-#: ../src/glines.c:408
+#: ../src/glines.c:413
 msgid "Match five objects of the same type in a row to score!"
 msgstr "Norėdami gauti taškų surinkite penkis vienos spalvos rutulius eilėje!"
 
-#: ../src/glines.c:472
-msgid "GNOME Five or More"
-msgstr "GNOME penketas ar daugiau"
+#: ../src/glines.c:475
+#| msgid "Five or More"
+msgid "Five or More Scores"
+msgstr "Taškai už penketą ar daugiau"
 
-#: ../src/glines.c:474
+#: ../src/glines.c:477
 msgid "_Board size:"
 msgstr "Lentos _dydis:"
 
-#: ../src/glines.c:491
+#: ../src/glines.c:494
 msgid "Game Over!"
 msgstr "Žaidimas baigtas!"
 
 #. Can't move there!
-#: ../src/glines.c:648
-msgid "You can't move there!"
+#: ../src/glines.c:651
+#| msgid "You can't move there!"
+msgid "You can’t move there!"
 msgstr "Negalima ten perkelti!"
 
-#: ../src/glines.c:1181
+#: ../src/glines.c:1183
+#| msgid ""
+#| "GNOME port of the once-popular Color Lines game.\n"
+#| "\n"
+#| "Five or More is a part of GNOME Games."
 msgid ""
-"GNOME port of the once-popular Color Lines game.\n"
+"GNOME port of the once-popular Color Lines game\n"
 "\n"
 "Five or More is a part of GNOME Games."
 msgstr ""
 "Kažkada populiaraus Color Lines žaidimo GNOME variantas.\n"
 "\n"
-"Five or More yra GNOME Games dalis."
+"Penketas ar daugiau yra GNOME žaidimų dalis."
 
-#: ../src/glines.c:1187
+#: ../src/glines.c:1189
 msgid "translator-credits"
 msgstr ""
 "Paskutinieji vertėjai:\n"
@@ -507,8 +526,4 @@ msgstr ""
 "Ankstesnieji vertėjai:\n"
 "Tomas Kuliavas <tokul@users.sf.net>,\n"
 "Gediminas Paulauskas <menesis@chatsubo.lt>"
-
-#: ../src/glines.c:1190
-msgid "GNOME Games web site"
-msgstr "GNOME Games tinklalapis"
 
