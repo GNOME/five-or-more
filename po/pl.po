@@ -15,14 +15,14 @@
 # Tomasz Dominikowski <dominikowski@gmail.com>, 2008.
 # Joanna Mazgaj <jmazgaj@aviary.pl>, 2009-2010.
 # Wojciech Kapusta <wkapusta@aviary.pl>, 2009.
-# Piotr Drąg <piotrdrag@gmail.com>, 2010-2013.
-# Aviary.pl <gnomepl@aviary.pl>, 2007-2013.
+# Piotr Drąg <piotrdrag@gmail.com>, 2010-2014.
+# Aviary.pl <gnomepl@aviary.pl>, 2007-2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: five-or-more\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-20 21:59+0200\n"
-"PO-Revision-Date: 2013-08-20 22:00+0200\n"
+"POT-Creation-Date: 2014-03-16 18:04+0100\n"
+"PO-Revision-Date: 2014-03-16 18:05+0100\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <gnomepl@aviary.pl>\n"
 "Language: pl\n"
@@ -34,16 +34,36 @@ msgstr ""
 "X-Poedit-Language: Polish\n"
 "X-Poedit-Country: Poland\n"
 
-#: ../data/glines.desktop.in.in.h:1 ../data/five-or-more.ui.h:1
-#: ../src/glines.c:1176 ../src/glines.c:1179 ../src/glines.c:1704
+#: ../data/five-or-more.appdata.xml.in.h:1
+msgid ""
+"Five or More is the GNOME port of a once-popular computer game. Align five "
+"or more objects of the same color into a line to cause them to disappear and "
+"score points. Earn many more points by lining up as many objects as possible "
+"before clearing them."
+msgstr ""
+"Gra w kulki jest portem niegdyś popularnej gry w kolorowe linie dla "
+"środowiska GNOME. Dopasowanie pięciu lub więcej obiektów tego samego koloru "
+"w jednej linii powoduje ich zniknięcie i zaliczenie punktów. Im więcej "
+"obiektów w linii, tym więcej punktów."
+
+#: ../data/five-or-more.appdata.xml.in.h:2
+msgid ""
+"More objects appear after every turn. Play for as long as possible, until "
+"the board is completely full!"
+msgstr ""
+"Po każdej rundzie pojawia się więcej obiektów. Można grać, dopóki cała "
+"plansza się nie zapełni!"
+
+#: ../data/five-or-more.desktop.in.h:1 ../data/five-or-more.ui.h:1
+#: ../src/glines.c:1181 ../src/glines.c:1687
 msgid "Five or More"
 msgstr "Kulki"
 
-#: ../data/glines.desktop.in.in.h:2
+#: ../data/five-or-more.desktop.in.h:2
 msgid "Remove colored balls from the board by forming lines"
 msgstr "Usuwanie kolorowych kul poprzez układanie ich w linie"
 
-#: ../data/glines.desktop.in.in.h:3
+#: ../data/five-or-more.desktop.in.h:3
 msgid "game;strategy;logic;"
 msgstr "gra;gierka;strategiczna;strategia;logiczna;logika;"
 
@@ -99,7 +119,11 @@ msgstr "0"
 msgid "Score:"
 msgstr "Punkty:"
 
-#: ../data/menu.ui.h:1 ../src/games-scores-dialog.c:470
+#: ../data/five-or-more.ui.h:5 ../src/games-stock.c:48
+msgid "Start a new game"
+msgstr "Rozpoczęcie nowej gry"
+
+#: ../data/menu.ui.h:1 ../src/games-scores-dialog.c:385
 msgid "New Game"
 msgstr "Nowa gra"
 
@@ -123,107 +147,101 @@ msgstr "O grze"
 msgid "Quit"
 msgstr "Zakończ"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:1
+#: ../data/org.gnome.five-or-more.gschema.xml.h:1
 msgid "Playing field size"
 msgstr "Wielkość pola"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:2
+#: ../data/org.gnome.five-or-more.gschema.xml.h:2
 msgid ""
 "Playing field size. 1=Small, 2=Medium, 3=Large. Any other value is invalid."
 msgstr ""
 "Rozmiar pól. 1 = mały, 2 = średni, 3 = duży. Inne wartości są nieprawidłowe."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:3
+#: ../data/org.gnome.five-or-more.gschema.xml.h:3
 msgid "Ball style"
 msgstr "Wzór kuli"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:4
+#: ../data/org.gnome.five-or-more.gschema.xml.h:4
 msgid "Ball style. The filename of the images to use for the balls."
 msgstr "Wzór kuli. Nazwa pliku obrazu kul."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:5
+#: ../data/org.gnome.five-or-more.gschema.xml.h:5
 msgid "Background color"
 msgstr "Kolor tła"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:6
+#: ../data/org.gnome.five-or-more.gschema.xml.h:6
 msgid "Background color. The hex specification of the background color."
 msgstr "Kolor tła. Szesnastkowy zapis koloru tła."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:7
+#: ../data/org.gnome.five-or-more.gschema.xml.h:7
 msgid "Time between moves"
 msgstr "Czas pomiędzy posunięciami"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:8
+#: ../data/org.gnome.five-or-more.gschema.xml.h:8
 msgid "Time between moves in milliseconds."
 msgstr "Czas pomiędzy posunięciami w milisekundach."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:9
+#: ../data/org.gnome.five-or-more.gschema.xml.h:9
 msgid "Game score"
 msgstr "Punktacja gry"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:10
+#: ../data/org.gnome.five-or-more.gschema.xml.h:10
 msgid "Game score from last saved session."
 msgstr "Wynik gry z ostatniej zapisanej sesji."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:11
+#: ../data/org.gnome.five-or-more.gschema.xml.h:11
 msgid "Game field"
 msgstr "Pole gry"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:12
+#: ../data/org.gnome.five-or-more.gschema.xml.h:12
 msgid "Game field from last saved session."
 msgstr "Pole gry z ostatniej zapisanej sesji."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:13
+#: ../data/org.gnome.five-or-more.gschema.xml.h:13
 msgid "Game preview"
 msgstr "Podgląd gry"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:14
+#: ../data/org.gnome.five-or-more.gschema.xml.h:14
 msgid "Game preview from last saved session."
 msgstr "Podgląd gry z ostatniej zapisanej sesji."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:15
+#: ../data/org.gnome.five-or-more.gschema.xml.h:15
 msgid "Width of the window in pixels"
 msgstr "Szerokość okna w pikselach"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:16
+#: ../data/org.gnome.five-or-more.gschema.xml.h:16
 msgid "Height of the window in pixels"
 msgstr "Wysokość okna w pikselach"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:17
+#: ../data/org.gnome.five-or-more.gschema.xml.h:17
 msgid "true if the window is maximized"
 msgstr "Wartość \"true\" oznacza, że okno jest zmaksymalizowane"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:18
+#: ../data/org.gnome.five-or-more.gschema.xml.h:18
 msgid "true if the window is fullscren"
 msgstr "Wartość \"true\" oznacza, że okno jest pełnoekranowe"
 
 #. Score dialog column header for the score time (e.g. 1 minute)
-#: ../src/games-scores-dialog.c:136
+#: ../src/games-scores-dialog.c:132
 msgctxt "score-dialog"
 msgid "Time"
 msgstr "Czas"
 
 #. Score dialog column header for the score value (e.g. 30 moves)
-#: ../src/games-scores-dialog.c:142
+#: ../src/games-scores-dialog.c:138
 msgctxt "score-dialog"
 msgid "Score"
 msgstr "Wynik"
 
 #. Score format for time based scores.  %1$d is the time in minutes, %2$d is the time in seconds
-#: ../src/games-scores-dialog.c:307
+#: ../src/games-scores-dialog.c:225
 #, c-format
 msgctxt "score-dialog"
 msgid "%1$dm %2$ds"
 msgstr "%1$dm %2$ds"
 
-#. Score dialog column header for the name of the player who recorded the score
-#: ../src/games-scores-dialog.c:571
-msgctxt "score-dialog"
-msgid "Name"
-msgstr "Gracz"
-
 #. Score dialog column header for the date the score was recorded
-#: ../src/games-scores-dialog.c:580
+#: ../src/games-scores-dialog.c:478
 msgid "Date"
 msgstr "Data"
 
@@ -254,10 +272,6 @@ msgstr "Rozpoczyna nową grę sieciową dla wielu graczy"
 #: ../src/games-stock.c:47
 msgid "End the current network game and return to network server"
 msgstr "Kończy bieżącą grę sieciową i powraca do serwera sieciowego"
-
-#: ../src/games-stock.c:48
-msgid "Start a new game"
-msgstr "Rozpoczęcie nowej gry"
 
 #: ../src/games-stock.c:49
 msgid "Pause the game"
@@ -388,7 +402,7 @@ msgid ""
 "Foundation; either version %d of the License, or (at your option) any later "
 "version."
 msgstr ""
-"%s jest wolnym oprogramowaniem; można go rozprowadzać dalej i/lub "
+"Gra %s jest wolnym oprogramowaniem; można ją rozprowadzać dalej i/lub "
 "modyfikować na warunkach Powszechnej Licencji Publicznej GNU, wydanej przez "
 "Fundację Wolnego Oprogramowania - według wersji %d tej Licencji lub którejś "
 "z późniejszych wersji."
@@ -401,7 +415,7 @@ msgid ""
 "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
 "details."
 msgstr ""
-"Program %s rozpowszechniany jest z nadzieją, iż będzie on użyteczny - jednak "
+"Gra %s rozpowszechniana jest z nadzieją, iż będzie ona użyteczna - jednak "
 "BEZ JAKIEJKOLWIEK GWARANCJI, nawet domyślnej gwarancji PRZYDATNOŚCI "
 "HANDLOWEJ albo PRZYDATNOŚCI DO OKREŚLONYCH ZASTOSOWAŃ. W celu uzyskania "
 "bliższych informacji należy zapoznać się z Powszechną Licencją Publiczną GNU."
@@ -413,7 +427,7 @@ msgid ""
 "%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
 "Fifth Floor, Boston, MA  02110-1301  USA"
 msgstr ""
-"Z pewnością wraz z %s dostarczono także egzemplarz Powszechnej Licencji "
+"Z pewnością wraz z grą %s dostarczono także egzemplarz Powszechnej Licencji "
 "Publicznej GNU (GNU General Public License); jeśli nie - proszę napisać do "
 "Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA "
 "02110-130159 USA"
@@ -423,21 +437,21 @@ msgid ""
 "You should have received a copy of the GNU General Public License along with "
 "this program.  If not, see <http://www.gnu.org/licenses/>."
 msgstr ""
-"Z pewnością wraz z niniejszym programem dostarczono także egzemplarz "
-"Powszechnej Licencji Publicznej GNU (GNU General Public License); jeśli nie "
-"- proszę odwiedzić stronę internetową <http://www.gnu.org/licenses/>."
+"Z pewnością wraz z niniejszą grą dostarczono także egzemplarz Powszechnej "
+"Licencji Publicznej GNU (GNU General Public License); jeśli nie - proszę "
+"odwiedzić stronę internetową <http://www.gnu.org/licenses/>."
 
-#: ../src/glines.c:78
+#: ../src/glines.c:81
 msgctxt "board size"
 msgid "Small"
 msgstr "Mała"
 
-#: ../src/glines.c:79
+#: ../src/glines.c:82
 msgctxt "board size"
 msgid "Medium"
 msgstr "Średnia"
 
-#: ../src/glines.c:80
+#: ../src/glines.c:83
 msgctxt "board size"
 msgid "Large"
 msgstr "Duża"
@@ -472,31 +486,31 @@ msgstr ""
 "\n"
 "Proszę się upewnić, że gra \"Kulki\" została prawidłowo zainstalowana."
 
-#: ../src/glines.c:408
+#: ../src/glines.c:413
 msgid "Match five objects of the same type in a row to score!"
 msgstr ""
 "Należy ustawić w linii pięć kulek tego samego koloru, aby zdobyć punkty."
 
-#: ../src/glines.c:472
-msgid "GNOME Five or More"
-msgstr "GNOME Kulki"
+#: ../src/glines.c:475
+msgid "Five or More Scores"
+msgstr "Wyniki gry Kulki"
 
-#: ../src/glines.c:474
+#: ../src/glines.c:477
 msgid "_Board size:"
 msgstr "_Rozmiar planszy:"
 
-#: ../src/glines.c:491
+#: ../src/glines.c:494
 msgid "Game Over!"
 msgstr "Koniec gry!"
 
 #. Can't move there!
-#: ../src/glines.c:648
-msgid "You can't move there!"
+#: ../src/glines.c:651
+msgid "You can’t move there!"
 msgstr "Nie można się tam ruszyć!"
 
-#: ../src/glines.c:1181
+#: ../src/glines.c:1183
 msgid ""
-"GNOME port of the once-popular Color Lines game.\n"
+"GNOME port of the once-popular Color Lines game\n"
 "\n"
 "Five or More is a part of GNOME Games."
 msgstr ""
@@ -504,7 +518,7 @@ msgstr ""
 "\n"
 "Gra Kulki jest częścią gier GNOME."
 
-#: ../src/glines.c:1187
+#: ../src/glines.c:1189
 msgid "translator-credits"
 msgstr ""
 "Zbigniew Chyla <chyla@alice.ci.pwr.wroc.pl>, 1998-2002\n"
@@ -518,9 +532,5 @@ msgstr ""
 "Tomasz Dominikowski <dominikowski@gmail.com>, 2008\n"
 "Joanna Mazgaj <jmazgaj@aviary.pl>, 2009-2010\n"
 "Wojciech Kapusta <wkapusta@aviary.pl>, 2009\n"
-"Piotr Drąg <piotrdrag@gmail.com>, 2010-2013\n"
-"Aviary.pl <gnomepl@aviary.pl>, 2007-2013"
-
-#: ../src/glines.c:1190
-msgid "GNOME Games web site"
-msgstr "Witryna gier GNOME"
+"Piotr Drąg <piotrdrag@gmail.com>, 2010-2014\n"
+"Aviary.pl <gnomepl@aviary.pl>, 2007-2014"
