@@ -1,19 +1,19 @@
 # Serbian translation of gnome-games
-# Courtesy of Prevod.org team (http://prevod.org/) -- 2003—2012.
+# Courtesy of Prevod.org team (http://prevod.org/) -- 2003—2014.
 # This file is distributed under the same license as the gnome-games package.
 # Maintainer: Душан Марјановић <madafaka@bsd.org.yu>
 # Reviewed on 2005-08-03 by: Игор Несторовић <igor@prevod.org>
 # Translated by: Милош Поповић <gpopac@gmail.com>
 # Translated on 2010-08-25 by: Бранко Кокановић <branko.kokanovic@gmail.com>
 # Милош Поповић <gpopac@gmai, 2010.
-# Мирослав Николић <miroslavnikolic@rocketmail.com>, 2011, 2012, 2013.
+# Мирослав Николић <miroslavnikolic@rocketmail.com>, 2011—2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: Гномове игре\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-"
 "or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-08-11 16:36+0000\n"
-"PO-Revision-Date: 2013-09-05 07:16+0200\n"
+"POT-Creation-Date: 2014-03-17 17:54+0000\n"
+"PO-Revision-Date: 2014-03-17 20:25+0200\n"
 "Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: Serbian <gnom@prevod.org>\n"
 "Language: sr\n"
@@ -24,16 +24,36 @@ msgstr ""
 "n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Project-Style: gnome\n"
 
-#: ../data/glines.desktop.in.in.h:1 ../data/five-or-more.ui.h:1
-#: ../src/glines.c:1176 ../src/glines.c:1179 ../src/glines.c:1703
+#: ../data/five-or-more.appdata.xml.in.h:1
+msgid ""
+"Five or More is the GNOME port of a once-popular computer game. Align five "
+"or more objects of the same color into a line to cause them to disappear and "
+"score points. Earn many more points by lining up as many objects as possible "
+"before clearing them."
+msgstr ""
+"Пет или више је Гномова изведба некад популарне рачунарске игре. Поређајте "
+"пет или више предмета исте боје у низу да би нестали а ви освојили поене. "
+"Зарадите што више поена повезивањем што је могуће више предмета пре него ли "
+"их почистите."
+
+#: ../data/five-or-more.appdata.xml.in.h:2
+msgid ""
+"More objects appear after every turn. Play for as long as possible, until "
+"the board is completely full!"
+msgstr ""
+"Након сваког покушаја појављује се више предмета. Играјте што дуже можете, "
+"све док се табла потпуно не испуни!"
+
+#: ../data/five-or-more.desktop.in.h:1 ../data/five-or-more.ui.h:1
+#: ../src/glines.c:1181 ../src/glines.c:1687
 msgid "Five or More"
 msgstr "Пет или више"
 
-#: ../data/glines.desktop.in.in.h:2
+#: ../data/five-or-more.desktop.in.h:2
 msgid "Remove colored balls from the board by forming lines"
-msgstr "Уклањајте обојене лопте са табле формирајући линије"
+msgstr "Уклањајте обојене лоптице са табле образујући линије"
 
-#: ../data/glines.desktop.in.in.h:3
+#: ../data/five-or-more.desktop.in.h:3
 msgid "game;strategy;logic;"
 msgstr "игра;стратегија;логика;"
 
@@ -51,7 +71,7 @@ msgstr "_Слика:"
 
 #: ../data/five-or-more-preferences.ui.h:4
 msgid "B_ackground color:"
-msgstr "Боја п_озадине:"
+msgstr "Боја _позадине:"
 
 #: ../data/five-or-more-preferences.ui.h:5
 msgid "Board Size"
@@ -89,7 +109,11 @@ msgstr "0"
 msgid "Score:"
 msgstr "Разултат:"
 
-#: ../data/menu.ui.h:1 ../src/games-scores-dialog.c:470
+#: ../data/five-or-more.ui.h:5 ../src/games-stock.c:48
+msgid "Start a new game"
+msgstr "Започните нову игру"
+
+#: ../data/menu.ui.h:1 ../src/games-scores-dialog.c:385
 msgid "New Game"
 msgstr "Нова игра"
 
@@ -102,7 +126,6 @@ msgid "Preferences"
 msgstr "Поставке"
 
 #: ../data/menu.ui.h:4
-#| msgid "_Help"
 msgid "Help"
 msgstr "Помоћ"
 
@@ -114,122 +137,116 @@ msgstr "О програму"
 msgid "Quit"
 msgstr "Изађи"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:1
+#: ../data/org.gnome.five-or-more.gschema.xml.h:1
 msgid "Playing field size"
 msgstr "Величина поља за игру"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:2
+#: ../data/org.gnome.five-or-more.gschema.xml.h:2
 msgid ""
 "Playing field size. 1=Small, 2=Medium, 3=Large. Any other value is invalid."
 msgstr ""
 "Величина поља за игру. 1=мало, 2=средње, 3=велико. Друге вредности нису "
 "могуће."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:3
+#: ../data/org.gnome.five-or-more.gschema.xml.h:3
 msgid "Ball style"
-msgstr "Стил лопте"
+msgstr "Изглед лоптице"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:4
+#: ../data/org.gnome.five-or-more.gschema.xml.h:4
 msgid "Ball style. The filename of the images to use for the balls."
-msgstr "Стил лопте. Назив датотеке са сликама које користити за лопте."
+msgstr "Изглед лоптице. Назив датотеке слика које ће се користити за лоптице."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:5
+#: ../data/org.gnome.five-or-more.gschema.xml.h:5
 msgid "Background color"
 msgstr "Боја позадине"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:6
+#: ../data/org.gnome.five-or-more.gschema.xml.h:6
 msgid "Background color. The hex specification of the background color."
 msgstr "Боја позадине. Хексадекадна вредност за боју позадине."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:7
+#: ../data/org.gnome.five-or-more.gschema.xml.h:7
 msgid "Time between moves"
 msgstr "Време између потеза"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:8
+#: ../data/org.gnome.five-or-more.gschema.xml.h:8
 msgid "Time between moves in milliseconds."
 msgstr "Време између потеза у милисекундама."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:9
+#: ../data/org.gnome.five-or-more.gschema.xml.h:9
 msgid "Game score"
 msgstr "Резултат игре"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:10
+#: ../data/org.gnome.five-or-more.gschema.xml.h:10
 msgid "Game score from last saved session."
 msgstr "Резултат из последње сачуване игре."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:11
+#: ../data/org.gnome.five-or-more.gschema.xml.h:11
 msgid "Game field"
 msgstr "Поље за игру"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:12
+#: ../data/org.gnome.five-or-more.gschema.xml.h:12
 msgid "Game field from last saved session."
 msgstr "Поље за игру из последње сачуване игре."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:13
+#: ../data/org.gnome.five-or-more.gschema.xml.h:13
 msgid "Game preview"
 msgstr "Преглед игре"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:14
+#: ../data/org.gnome.five-or-more.gschema.xml.h:14
 msgid "Game preview from last saved session."
 msgstr "Преглед игре из последње сачуване игре."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:15
+#: ../data/org.gnome.five-or-more.gschema.xml.h:15
 msgid "Width of the window in pixels"
 msgstr "Ширина прозора у тачкама"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:16
+#: ../data/org.gnome.five-or-more.gschema.xml.h:16
 msgid "Height of the window in pixels"
 msgstr "Висина прозора у тачкама"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:17
+#: ../data/org.gnome.five-or-more.gschema.xml.h:17
 msgid "true if the window is maximized"
 msgstr "изабрано ако је прозор увећан"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:18
+#: ../data/org.gnome.five-or-more.gschema.xml.h:18
 msgid "true if the window is fullscren"
 msgstr "изабрано ако је прозор преко целог екрана"
 
 #. Score dialog column header for the score time (e.g. 1 minute)
-#: ../src/games-scores-dialog.c:136
+#: ../src/games-scores-dialog.c:132
 msgctxt "score-dialog"
 msgid "Time"
 msgstr "Време"
 
 #. Score dialog column header for the score value (e.g. 30 moves)
-#: ../src/games-scores-dialog.c:142
+#: ../src/games-scores-dialog.c:138
 msgctxt "score-dialog"
 msgid "Score"
 msgstr "Резултат"
 
 #. Score format for time based scores.  %1$d is the time in minutes, %2$d is the time in seconds
-#: ../src/games-scores-dialog.c:307
+#: ../src/games-scores-dialog.c:225
 #, c-format
 msgctxt "score-dialog"
 msgid "%1$dm %2$ds"
 msgstr "%dм %dс"
 
-#. Score dialog column header for the name of the player who recorded the score
-#: ../src/games-scores-dialog.c:571
-msgctxt "score-dialog"
-msgid "Name"
-msgstr "Име"
-
 #. Score dialog column header for the date the score was recorded
-#: ../src/games-scores-dialog.c:580
+#: ../src/games-scores-dialog.c:478
 msgid "Date"
 msgstr "Датум"
 
 #: ../src/games-stock.c:41
 msgid "View help for this game"
-msgstr "Прикажи помоћ за ову игру"
+msgstr "Прегледајте помоћ за ову игру"
 
 #: ../src/games-stock.c:42
 msgid "End the current game"
-msgstr "Заврши игру у току"
+msgstr "Завршите тренутну игру"
 
 #: ../src/games-stock.c:43
 msgid "Toggle fullscreen mode"
-msgstr "Искључује/укључује приказ преко целог екрана"
+msgstr "Пребацујте режим приказа преко целог екрана"
 
 #: ../src/games-stock.c:44
 msgid "Get a hint for your next move"
@@ -237,27 +254,23 @@ msgstr "Потражите савет за следећи потез"
 
 #: ../src/games-stock.c:45
 msgid "Leave fullscreen mode"
-msgstr "Напустите режим преко целог екрана"
+msgstr "Напустите режим приказа преко целог екрана"
 
 #: ../src/games-stock.c:46
 msgid "Start a new multiplayer network game"
-msgstr "Започни нову игру са више играча у мрежи"
+msgstr "Започните нову игру са више играча на мрежи"
 
 #: ../src/games-stock.c:47
 msgid "End the current network game and return to network server"
-msgstr "Заврши тренутну мрежну игру и врати се на мрежни сервер"
-
-#: ../src/games-stock.c:48
-msgid "Start a new game"
-msgstr "Започните нову игру"
+msgstr "Завршите тренутну игру на мрежи и вратите се на мрежни сервер"
 
 #: ../src/games-stock.c:49
 msgid "Pause the game"
-msgstr "Паузирај игру"
+msgstr "Паузирајте игру"
 
 #: ../src/games-stock.c:50
 msgid "Show a list of players in the network game"
-msgstr "Прикажи списак играча у мрежној игри"
+msgstr "Прикажите списак играча у игри на мрежи"
 
 #: ../src/games-stock.c:51
 msgid "Redo the undone move"
@@ -269,11 +282,11 @@ msgstr "Поново покрените игру"
 
 #: ../src/games-stock.c:53
 msgid "Resume the paused game"
-msgstr "Настави паузирану игру"
+msgstr "Наставите паузирану игру"
 
 #: ../src/games-stock.c:54
 msgid "View the scores"
-msgstr "Прегледај резултате"
+msgstr "Прегледајте резултате"
 
 #: ../src/games-stock.c:55
 msgid "Undo the last move"
@@ -289,11 +302,11 @@ msgstr "Затворите овај прозор"
 
 #: ../src/games-stock.c:58
 msgid "Configure the game"
-msgstr "Подеси игру"
+msgstr "Подесите игру"
 
 #: ../src/games-stock.c:59
 msgid "Quit this game"
-msgstr "Изађи из ове игре"
+msgstr "Изађите из ове игре"
 
 #: ../src/games-stock.c:247
 msgid "_Contents"
@@ -345,7 +358,7 @@ msgstr "_Напусти цео екран"
 
 #: ../src/games-stock.c:262
 msgid "Network _Game"
-msgstr "_Мрежна игра"
+msgstr "Игра на _мрежи"
 
 #: ../src/games-stock.c:263
 msgid "L_eave Game"
@@ -357,7 +370,7 @@ msgstr "Списак _играча"
 
 #: ../src/games-stock.c:265
 msgid "_Pause"
-msgstr "_Пауза"
+msgstr "_Паузирај"
 
 #: ../src/games-stock.c:266
 msgid "Res_ume"
@@ -380,9 +393,9 @@ msgid ""
 "Foundation; either version %d of the License, or (at your option) any later "
 "version."
 msgstr ""
-"%s је слободан софтвер; можете га прослеђивати и/или мењати под условима ГНУ "
-"Опште јавне лиценце коју је објавила Задужбина слободног софтвера; било "
-"верзије %d лиценце или (по вашем избору) било које новије верзије."
+"%s је слободан софтвер; можете га прослеђивати и/или мењати под условима "
+"Гнуове опште јавне лиценце коју је објавила Задужбина слободног софтвера; "
+"било издања %d лиценце или (по вашем избору) било којег новијег издања."
 
 #: ../src/games-stock.c:322
 #, c-format
@@ -394,7 +407,7 @@ msgid ""
 msgstr ""
 "%s се расподељује у нади да ће бити користан, али БЕЗ ИКАКВЕ ГАРАНЦИЈЕ; чак "
 "и без примењене гаранције ТРЖИШНЕ ВРЕДНОСТИ или ПРИЛАГОЂЕНОСТИ ОДРЕЂЕНОЈ "
-"НАМЕНИ.  Погледајте ГНУ Општу јавну лиценцу за више детаља."
+"НАМЕНИ.  Погледајте Гнуову општу јавну лиценцу за више детаља."
 
 #: ../src/games-stock.c:327
 #, c-format
@@ -403,7 +416,7 @@ msgid ""
 "%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
 "Fifth Floor, Boston, MA  02110-1301  USA"
 msgstr ""
-"Требали сте да примите примерак ГНУ Опште јавне лиценце уз %s; ако нисте, "
+"Требали сте да примите примерак Гнуове опште јавне лиценце уз %s; ако нисте, "
 "пишите Задужбини слободног софтва на адресу: „Free Software Foundation, "
 "Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA“"
 
@@ -412,20 +425,20 @@ msgid ""
 "You should have received a copy of the GNU General Public License along with "
 "this program.  If not, see <http://www.gnu.org/licenses/>."
 msgstr ""
-"Требали сте да примите примерак Гнуове опште јавне лиценце уз овај програм.  "
-"Ако нисте, погледајте <http://www.gnu.org/licenses/>."
+"Требали сте да примите примерак Гнуове опште јавне лиценце уз овај програм. "
+" Ако нисте, погледајте <http://www.gnu.org/licenses/>."
 
-#: ../src/glines.c:78
+#: ../src/glines.c:81
 msgctxt "board size"
 msgid "Small"
 msgstr "Мала"
 
-#: ../src/glines.c:79
+#: ../src/glines.c:82
 msgctxt "board size"
 msgid "Medium"
 msgstr "Средња"
 
-#: ../src/glines.c:80
+#: ../src/glines.c:83
 msgctxt "board size"
 msgid "Large"
 msgstr "Велика"
@@ -458,48 +471,61 @@ msgstr ""
 "Не могу да пронађем датотеку:\n"
 "%s\n"
 "\n"
-"Проверите да ли је Пет или више исправно инсталиран."
+"Проверите да ли је исправно инсталирана ова игрица."
 
-#: ../src/glines.c:408
+#: ../src/glines.c:413
 msgid "Match five objects of the same type in a row to score!"
-msgstr "Повежите пет предмета исте врсте у низу да би освојили поене!"
+msgstr "Повежите пет предмета исте врсте у низу да освојите поене!"
 
-#: ../src/glines.c:472
-msgid "GNOME Five or More"
-msgstr "Гномово Пет или више"
+#: ../src/glines.c:475
+#| msgid "Five or More"
+msgid "Five or More Scores"
+msgstr "Резултати за Пет или више"
 
-#: ../src/glines.c:474
+#: ../src/glines.c:477
 msgid "_Board size:"
 msgstr "_Величина табле:"
 
-#: ../src/glines.c:491
+#: ../src/glines.c:494
 msgid "Game Over!"
 msgstr "Игра је готова!"
 
 #. Can't move there!
-#: ../src/glines.c:648
-msgid "You can't move there!"
-msgstr "Немогућ потез!"
+#: ../src/glines.c:651
+#| msgid "You can't move there!"
+msgid "You can’t move there!"
+msgstr "То је немогућ потез!"
 
-#: ../src/glines.c:1181
+#: ../src/glines.c:1183
+#| msgid ""
+#| "GNOME port of the once-popular Color Lines game.\n"
+#| "\n"
+#| "Five or More is a part of GNOME Games."
 msgid ""
-"GNOME port of the once-popular Color Lines game.\n"
+"GNOME port of the once-popular Color Lines game\n"
 "\n"
 "Five or More is a part of GNOME Games."
 msgstr ""
-"Гном изведба некад популарне игре Линије.\n"
+"Гномова изведба некад популарне игре Линије.\n"
 "\n"
 "Пет или више је део Гномових игара."
 
-#: ../src/glines.c:1187
+#: ../src/glines.c:1189
 msgid "translator-credits"
 msgstr ""
 "Душан Марјановић <madafaka@root.co.yu>\n"
-"Милош Поповић <gpopac@gmail.com>\n"
+"Милош Поповић    <gpopac@gmail.com>\n"
 "Бранко Кокановић <branko.kokanovic@gmail.com>\n"
+"Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
 "\n"
 "http://prevod.org — превод на српски језик"
 
-#: ../src/glines.c:1190
-msgid "GNOME Games web site"
-msgstr "Веб сајт Гномових игара"
+#~ msgctxt "score-dialog"
+#~ msgid "Name"
+#~ msgstr "Име"
+
+#~ msgid "GNOME Five or More"
+#~ msgstr "Гномово Пет или више"
+
+#~ msgid "GNOME Games web site"
+#~ msgstr "Веб сајт Гномових игара"
