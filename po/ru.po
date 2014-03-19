@@ -16,37 +16,57 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games trunk\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-09-05 05:22+0000\n"
-"PO-Revision-Date: 2013-09-09 20:24+0300\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-"
+"or-more&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2014-03-19 05:53+0000\n"
+"PO-Revision-Date: 2014-03-19 22:02+0300\n"
 "Last-Translator: Yuri Myasoedov <omerta13@yandex.ru>\n"
 "Language-Team: русский <gnome-cyr@gnome.org>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 1.5.7\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Poedit 1.5.4\n"
 
-#: ../data/glines.desktop.in.in.h:1
-#: ../data/five-or-more.ui.h:1
-#: ../src/glines.c:1176
-#: ../src/glines.c:1179
-#: ../src/glines.c:1704
+#: ../data/five-or-more.appdata.xml.in.h:1
+msgid ""
+"Five or More is the GNOME port of a once-popular computer game. Align five "
+"or more objects of the same color into a line to cause them to disappear and "
+"score points. Earn many more points by lining up as many objects as possible "
+"before clearing them."
+msgstr ""
+"«Пять или более» — это порт для GNOME некогда популярной компьютерной игры. "
+"Выстраивайте в линию пять или более объектов одного цвета, чтобы они исчезли "
+"и вам были начислены очки. Получайте как можно больше очков, выстраивая в "
+"линию максимально возможное количество объектов."
+
+#: ../data/five-or-more.appdata.xml.in.h:2
+msgid ""
+"More objects appear after every turn. Play for as long as possible, until "
+"the board is completely full!"
+msgstr ""
+"После каждого хода появляются новые объекты. Игра продолжается до тех пор, "
+"пока игровая доска не заполнится объектами."
+
+#: ../data/five-or-more.desktop.in.h:1 ../data/five-or-more.ui.h:1
+#: ../src/glines.c:1181 ../src/glines.c:1687
 msgid "Five or More"
-msgstr "Цветные линии"
+msgstr "Пять или более"
 
-#: ../data/glines.desktop.in.in.h:2
+#: ../data/five-or-more.desktop.in.h:2
 msgid "Remove colored balls from the board by forming lines"
-msgstr "Убирайте разноцветные шарики с поля, выстраивая прямые линии одного цвета"
+msgstr ""
+"Убирайте разноцветные шарики с поля, выстраивая прямые линии одного цвета"
 
-#: ../data/glines.desktop.in.in.h:3
+#: ../data/five-or-more.desktop.in.h:3
 msgid "game;strategy;logic;"
 msgstr "игра;стратегия;логическая;"
 
 #: ../data/five-or-more-preferences.ui.h:1
 msgid "Five or More Preferences"
-msgstr "Параметры игры «Цветные линии»"
+msgstr "Параметры игры «Пять или более»"
 
 #: ../data/five-or-more-preferences.ui.h:2
 msgid "Appearance"
@@ -96,8 +116,11 @@ msgstr "0"
 msgid "Score:"
 msgstr "Счёт:"
 
-#: ../data/menu.ui.h:1
-#: ../src/games-scores-dialog.c:470
+#: ../data/five-or-more.ui.h:5 ../src/games-stock.c:48
+msgid "Start a new game"
+msgstr "Начать новую игру"
+
+#: ../data/menu.ui.h:1 ../src/games-scores-dialog.c:385
 msgid "New Game"
 msgstr "Новая игра"
 
@@ -105,8 +128,7 @@ msgstr "Новая игра"
 msgid "Scores"
 msgstr "Результаты"
 
-#: ../data/menu.ui.h:3
-#: ../src/glines.c:176
+#: ../data/menu.ui.h:3 ../src/glines.c:176
 msgid "Preferences"
 msgstr "Параметры"
 
@@ -122,105 +144,102 @@ msgstr "О программе"
 msgid "Quit"
 msgstr "Закончить"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:1
+#: ../data/org.gnome.five-or-more.gschema.xml.h:1
 msgid "Playing field size"
 msgstr "Размер игрового поля"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:2
-msgid "Playing field size. 1=Small, 2=Medium, 3=Large. Any other value is invalid."
-msgstr "Размер игрового поля. 1 - маленькое, 2 - среднее, 3 - большое. Другие значения некорректны."
+#: ../data/org.gnome.five-or-more.gschema.xml.h:2
+msgid ""
+"Playing field size. 1=Small, 2=Medium, 3=Large. Any other value is invalid."
+msgstr ""
+"Размер игрового поля. 1 - маленькое, 2 - среднее, 3 - большое. Другие "
+"значения некорректны."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:3
+#: ../data/org.gnome.five-or-more.gschema.xml.h:3
 msgid "Ball style"
 msgstr "Стиль шариков"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:4
+#: ../data/org.gnome.five-or-more.gschema.xml.h:4
 msgid "Ball style. The filename of the images to use for the balls."
 msgstr "Стиль шариков. Это имя файла изображения шариков."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:5
+#: ../data/org.gnome.five-or-more.gschema.xml.h:5
 msgid "Background color"
 msgstr "Цвет фона"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:6
+#: ../data/org.gnome.five-or-more.gschema.xml.h:6
 msgid "Background color. The hex specification of the background color."
 msgstr "Цвет фона. Это шестнадцатеричное число, определяющее цвет фона."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:7
+#: ../data/org.gnome.five-or-more.gschema.xml.h:7
 msgid "Time between moves"
 msgstr "Время между прыжками шариков"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:8
+#: ../data/org.gnome.five-or-more.gschema.xml.h:8
 msgid "Time between moves in milliseconds."
 msgstr "Время между прыжками шарика в миллисекундах"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:9
+#: ../data/org.gnome.five-or-more.gschema.xml.h:9
 msgid "Game score"
 msgstr "Результаты игры"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:10
+#: ../data/org.gnome.five-or-more.gschema.xml.h:10
 msgid "Game score from last saved session."
 msgstr "Таблица результатов из последнего сохраненного сеанса игры."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:11
+#: ../data/org.gnome.five-or-more.gschema.xml.h:11
 msgid "Game field"
 msgstr "Игровое поле"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:12
+#: ../data/org.gnome.five-or-more.gschema.xml.h:12
 msgid "Game field from last saved session."
 msgstr "Игровое поле из последнего сохраненного сеанса игры."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:13
+#: ../data/org.gnome.five-or-more.gschema.xml.h:13
 msgid "Game preview"
 msgstr "Просмотр игры"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:14
+#: ../data/org.gnome.five-or-more.gschema.xml.h:14
 msgid "Game preview from last saved session."
 msgstr "Просмотр игры из последнего сохраненного сеанса игры."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:15
+#: ../data/org.gnome.five-or-more.gschema.xml.h:15
 msgid "Width of the window in pixels"
 msgstr "Ширина окна в пикселах"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:16
+#: ../data/org.gnome.five-or-more.gschema.xml.h:16
 msgid "Height of the window in pixels"
 msgstr "Высота окна в пикселах"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:17
+#: ../data/org.gnome.five-or-more.gschema.xml.h:17
 msgid "true if the window is maximized"
 msgstr "истинно, если окно имеет максимальный размер"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:18
+#: ../data/org.gnome.five-or-more.gschema.xml.h:18
 msgid "true if the window is fullscren"
 msgstr "истинно, если окно раскрыто на полный экран"
 
 #. Score dialog column header for the score time (e.g. 1 minute)
-#: ../src/games-scores-dialog.c:136
+#: ../src/games-scores-dialog.c:132
 msgctxt "score-dialog"
 msgid "Time"
 msgstr "Время"
 
 #. Score dialog column header for the score value (e.g. 30 moves)
-#: ../src/games-scores-dialog.c:142
+#: ../src/games-scores-dialog.c:138
 msgctxt "score-dialog"
 msgid "Score"
 msgstr "Очки"
 
 #. Score format for time based scores.  %1$d is the time in minutes, %2$d is the time in seconds
-#: ../src/games-scores-dialog.c:307
+#: ../src/games-scores-dialog.c:225
 #, c-format
 msgctxt "score-dialog"
 msgid "%1$dm %2$ds"
 msgstr "%1$dмин. %2$dс"
 
-#. Score dialog column header for the name of the player who recorded the score
-#: ../src/games-scores-dialog.c:571
-msgctxt "score-dialog"
-msgid "Name"
-msgstr "Имя"
-
 #. Score dialog column header for the date the score was recorded
-#: ../src/games-scores-dialog.c:580
+#: ../src/games-scores-dialog.c:478
 msgid "Date"
 msgstr "Дата"
 
@@ -251,10 +270,6 @@ msgstr "Начать новую сетевую игру с нескольким�
 #: ../src/games-stock.c:47
 msgid "End the current network game and return to network server"
 msgstr "Закончить сетевую игру и вернуться к игровому серверу"
-
-#: ../src/games-stock.c:48
-msgid "Start a new game"
-msgstr "Начать новую игру"
 
 #: ../src/games-stock.c:49
 msgid "Pause the game"
@@ -379,34 +394,61 @@ msgstr "_Закончить игру"
 #. %s is replaced with the name of the game in gnome-games.
 #: ../src/games-stock.c:317
 #, c-format
-msgid "%s is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version %d of the License, or (at your option) any later version."
-msgstr "%s ― свободное программное обеспечение. Вы можете распространять или изменять его при условиях соответствия GNU General Public License опубликованной Free Software Foundation; либо версии %d лицензии, либо (на ваше усмотрение) любой более поздней версии."
+msgid ""
+"%s is free software; you can redistribute it and/or modify it under the "
+"terms of the GNU General Public License as published by the Free Software "
+"Foundation; either version %d of the License, or (at your option) any later "
+"version."
+msgstr ""
+"%s ― свободное программное обеспечение. Вы можете распространять или "
+"изменять его при условиях соответствия GNU General Public License "
+"опубликованной Free Software Foundation; либо версии %d лицензии, либо (на "
+"ваше усмотрение) любой более поздней версии."
 
 #: ../src/games-stock.c:322
 #, c-format
-msgid "%s is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details."
-msgstr "%s распространяется в надежде на то, что приложение будет полезно, но БЕЗ ВСЯКИХ ГАРАНТИЙ; не гарантируется даже ПРИГОДНОСТЬ или СООТВЕТСТВИЕ КАКИМ-ЛИБО ТРЕБОВАНИЯМ. Для получения дополнительной информации ознакомьтесь с GNU General Public License."
+msgid ""
+"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+"details."
+msgstr ""
+"%s распространяется в надежде на то, что приложение будет полезно, но БЕЗ "
+"ВСЯКИХ ГАРАНТИЙ; не гарантируется даже ПРИГОДНОСТЬ или СООТВЕТСТВИЕ КАКИМ-"
+"ЛИБО ТРЕБОВАНИЯМ. Для получения дополнительной информации ознакомьтесь с GNU "
+"General Public License."
 
 #: ../src/games-stock.c:327
 #, c-format
-msgid "You should have received a copy of the GNU General Public License along with %s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA"
-msgstr "Вы должны получить копию GNU General Public License вместе с %s. Если этого не произошло, напишите to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA."
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
+"Fifth Floor, Boston, MA  02110-1301  USA"
+msgstr ""
+"Вы должны получить копию GNU General Public License вместе с %s. Если этого "
+"не произошло, напишите to the Free Software Foundation, Inc., 59 Temple "
+"Place, Suite 330, Boston, MA  02111-1307  USA."
 
 #: ../src/games-stock.c:331
-msgid "You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>."
-msgstr "Вы должны получить копию GNU General Public License вместе с этой программой. Если этого не произошло, посмотрите <http://www.gnu.org/licenses/>."
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"this program.  If not, see <http://www.gnu.org/licenses/>."
+msgstr ""
+"Вы должны получить копию GNU General Public License вместе с этой "
+"программой. Если этого не произошло, посмотрите <http://www.gnu.org/licenses/"
+">."
 
-#: ../src/glines.c:78
+#: ../src/glines.c:81
 msgctxt "board size"
 msgid "Small"
 msgstr "Маленькая"
 
-#: ../src/glines.c:79
+#: ../src/glines.c:82
 msgctxt "board size"
 msgid "Medium"
 msgstr "Средняя"
 
-#: ../src/glines.c:80
+#: ../src/glines.c:83
 msgctxt "board size"
 msgid "Large"
 msgstr "Большая"
@@ -438,40 +480,46 @@ msgstr ""
 "Не удалось найти файл:\n"
 "%s\n"
 "\n"
-"Проверьте установку игры Цветные линии"
+"Проверьте установку игры «Пять или более»"
 
-#: ../src/glines.c:408
+#: ../src/glines.c:413
 msgid "Match five objects of the same type in a row to score!"
-msgstr "Соберите пять шариков одинакового цвета в одну линию"
+msgstr "Соберите пять шариков одинакового цвета в одну линию!"
 
-#: ../src/glines.c:472
-msgid "GNOME Five or More"
-msgstr "Цветные линии"
+#: ../src/glines.c:475
+#| msgid "Five or More"
+msgid "Five or More Scores"
+msgstr "Счёт «Пять или более»"
 
-#: ../src/glines.c:474
+#: ../src/glines.c:477
 msgid "_Board size:"
 msgstr "Размер _доски:"
 
-#: ../src/glines.c:491
+#: ../src/glines.c:494
 msgid "Game Over!"
 msgstr "Игра окончена!"
 
 #. Can't move there!
-#: ../src/glines.c:648
-msgid "You can't move there!"
-msgstr "Сюда нельзя попасть!"
+#: ../src/glines.c:651
+#| msgid "You can't move there!"
+msgid "You can’t move there!"
+msgstr "Невозможно переместить сюда!"
 
-#: ../src/glines.c:1181
+#: ../src/glines.c:1183
+#| msgid ""
+#| "GNOME port of the once-popular Color Lines game.\n"
+#| "\n"
+#| "Five or More is a part of GNOME Games."
 msgid ""
-"GNOME port of the once-popular Color Lines game.\n"
+"GNOME port of the once-popular Color Lines game\n"
 "\n"
 "Five or More is a part of GNOME Games."
 msgstr ""
-"Популярная игра Цветные линии для GNOME.\n"
+"Порт популярной игры «Цветные линии» для GNOME.\n"
 "\n"
-"Цветные линии являются частью пакета GNOME Games."
+"«Пять или более» является частью пакета GNOME Games."
 
-#: ../src/glines.c:1187
+#: ../src/glines.c:1189
 msgid "translator-credits"
 msgstr ""
 "Валек Филиппов aka frob\n"
@@ -480,6 +528,12 @@ msgstr ""
 "Михаил Яхонтов\n"
 "Леонид Кантер"
 
-#: ../src/glines.c:1190
-msgid "GNOME Games web site"
-msgstr "Веб-сайт GNOME Games"
+#~ msgctxt "score-dialog"
+#~ msgid "Name"
+#~ msgstr "Имя"
+
+#~ msgid "GNOME Five or More"
+#~ msgstr "Цветные линии"
+
+#~ msgid "GNOME Games web site"
+#~ msgstr "Веб-сайт GNOME Games"
