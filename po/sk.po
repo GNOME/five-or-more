@@ -12,7 +12,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-"
 "or-more&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2014-02-17 05:49+0000\n"
-"PO-Revision-Date: 2014-03-22 23:02+0100\n"
+"PO-Revision-Date: 2014-03-22 23:22+0100\n"
 "Last-Translator: Peter Mráz <etkinator@gmail.com>\n"
 "Language-Team: Slovak <gnome-sk-list@gnome.org>\n"
 "Language: sk\n"
@@ -238,60 +238,59 @@ msgstr "Dátum"
 
 #: ../src/games-stock.c:41
 msgid "View help for this game"
-msgstr "Zobraziť pomocníka pre túto hru"
+msgstr "Zobrazí pomocníka pre túto hru"
 
 #: ../src/games-stock.c:42
 msgid "End the current game"
-msgstr "Ukončiť aktuálnu hru"
+msgstr "Ukončí aktuálnu hru"
 
 #: ../src/games-stock.c:43
 msgid "Toggle fullscreen mode"
-msgstr "Prepnúť celoobrazovkový režim"
+msgstr "Prepne celoobrazovkový režim"
 
 #: ../src/games-stock.c:44
 msgid "Get a hint for your next move"
-msgstr "Zobraziť radu pre ďalší ťah"
+msgstr "Zobrazí radu pre ďalší ťah"
 
 #: ../src/games-stock.c:45
 msgid "Leave fullscreen mode"
-msgstr "Opustiť celoobrazovkový režim"
+msgstr "Opustí celoobrazovkový režim"
 
-# PŠ: chýba preklad "multiplayer"
 #: ../src/games-stock.c:46
 msgid "Start a new multiplayer network game"
-msgstr "Spustiť novú sieťovú hru pre viac hráčov"
+msgstr "Spustí novú sieťovú hru pre viac hráčov"
 
 #: ../src/games-stock.c:47
 msgid "End the current network game and return to network server"
-msgstr "Koniec aktuálnej sieťovej hry a návrat na sieťový server"
+msgstr "Ukončí aktuálnu sieťovú hru a vráti sa na sieťový server"
 
 #: ../src/games-stock.c:49
 msgid "Pause the game"
-msgstr "Pozastaviť hru"
+msgstr "Pozastaví hru"
 
 #: ../src/games-stock.c:50
 msgid "Show a list of players in the network game"
-msgstr "Zobraziť zoznam hráčov v sieťovej hre"
+msgstr "Zobrazí zoznam hráčov v sieťovej hre"
 
 #: ../src/games-stock.c:51
 msgid "Redo the undone move"
-msgstr "Opakovať vrátený ťah"
+msgstr "Zopakuje vrátený ťah"
 
 #: ../src/games-stock.c:52
 msgid "Restart the game"
-msgstr "Začať hru odznova"
+msgstr "Začne hru odznova"
 
 #: ../src/games-stock.c:53
 msgid "Resume the paused game"
-msgstr "Pokračovať v pozastavenej hre"
+msgstr "Pokračuje v pozastavenej hre"
 
 #: ../src/games-stock.c:54
 msgid "View the scores"
-msgstr "Zobraziť tabuľku najlepších"
+msgstr "Zobrazí tabuľku najlepších"
 
 #: ../src/games-stock.c:55
 msgid "Undo the last move"
-msgstr "Vrátiť posledný ťah"
+msgstr "Vráti posledný ťah"
 
 #: ../src/games-stock.c:56
 msgid "About this game"
@@ -299,15 +298,15 @@ msgstr "O tejto hre"
 
 #: ../src/games-stock.c:57
 msgid "Close this window"
-msgstr "Zavrieť toto okno"
+msgstr "Zavrie toto okno"
 
 #: ../src/games-stock.c:58
 msgid "Configure the game"
-msgstr "Nastaviť hru"
+msgstr "Mení nastavenie hry"
 
 #: ../src/games-stock.c:59
 msgid "Quit this game"
-msgstr "Ukončiť túto hru"
+msgstr "Ukončí túto hru"
 
 #: ../src/games-stock.c:247
 msgid "_Contents"
