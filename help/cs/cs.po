@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games gnome-2-28\n"
-"POT-Creation-Date: 2013-08-27 01:30+0000\n"
+"POT-Creation-Date: 2014-03-23 20:25+0000\n"
 "PO-Revision-Date: 2013-07-25 21:04+0200\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
@@ -25,121 +25,34 @@ msgctxt "_"
 msgid "translator-credits"
 msgstr "Marek Černocký <marek@manet.cz>, 2009, 2013"
 
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#.
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/index.page:6(media)
-msgctxt "_"
-msgid "external ref='figures/logo.png' md5='83ba6ff888acbdea3ad599b055ed7710'"
-msgstr "external ref='figures/logo.png' md5='83ba6ff888acbdea3ad599b055ed7710'"
-
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#.
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/index.page:26(media)
-msgctxt "_"
-msgid ""
-"external ref='figures/logo32.png' md5='51b65eea63f1a6c26a4c5d628dba406c'"
-msgstr ""
-"external ref='figures/logo32.png' md5='51b65eea63f1a6c26a4c5d628dba406c'"
-
-#: C/index.page:7(info/title)
-msgctxt "link"
-msgid "Five or More"
-msgstr "Pět nebo víc"
-
-#: C/index.page:8(info/title)
-msgctxt "text"
-msgid "Five or More"
-msgstr "Pět nebo víc"
-
-#: C/index.page:12(credit/name) C/change-board-size.page:8(credit/name)
-#: C/change-theme.page:8(credit/name) C/fast-moves.page:9(credit/name)
-#: C/play.page:9(credit/name) C/scores.page:9(credit/name)
-msgid "Lahiru lanka"
-msgstr "Lahiru lanka"
-
-#: C/index.page:16(credit/name) C/bug-filing.page:11(credit/name)
-#: C/change-board-size.page:13(credit/name)
-#: C/change-theme.page:13(credit/name) C/develop.page:10(credit/name)
-#: C/documentation.page:8(credit/name) C/fast-moves.page:14(credit/name)
-#: C/scores.page:14(credit/name) C/shortcuts.page:9(credit/name)
-#: C/strategy.page:9(credit/name) C/translate.page:10(credit/name)
+#. (itstool) path: credit/name
+#: C/bug-filing.page:11 C/change-board-size.page:13 C/change-theme.page:13
+#: C/develop.page:10 C/documentation.page:8 C/fast-moves.page:14
+#: C/index.page:16 C/scores.page:14 C/shortcuts.page:9 C/strategy.page:9
+#: C/translate.page:10
 msgid "Tiffany Antopolski"
 msgstr "Tiffany Antopolski"
 
-#: C/index.page:20(license/p) C/bug-filing.page:16(license/p)
-#: C/develop.page:15(license/p) C/documentation.page:13(license/p)
-#: C/translate.page:19(license/p)
-msgid "Creative Commons Share Alike 3.0"
-msgstr "Creative Commons Share Alike 3.0"
-
-#: C/index.page:25(page/title)
-msgid ""
-"<media type=\"image\" src=\"figures/logo32.png\">Five or More logo</media> "
-"Five or More"
-msgstr ""
-"<media type=\"image\" src=\"figures/logo32.png\">Logo hry Pět nebo víc</"
-"media> Pět nebo víc"
-
-#: C/index.page:28(page/p)
-msgid ""
-"<app>Five or More</app> is a deceptively simple brain workout. The goal is "
-"to place at least five objects of the same <link xref=\"change-theme#images"
-"\">color or shape</link> into a straight line. The line can be horizontal, "
-"vertical or diagonal. Once five or more objects are grouped into a line, "
-"they disappear. The goal is to vanish as many objects as possible. The game "
-"is over when the entire board is full."
-msgstr ""
-"<app>Pět nebo víc</app> je zdánlivě jednoduchá hra na procvičení mozkových "
-"závitů. Cílem je umístit nejméně pět hracích kamenů stejné <link xref="
-"\"change-theme#images\">barvy nebo tvaru</link> do přímé řady. Je jedno, "
-"jestli vodorovně, svisle nebo úhlopříčně. Jakmile seskupíte pět nebo více "
-"kamenů do jedné řady, tyto kameny zmizí. Musíte se snažit takto vymazat co "
-"nejvíce kamenů půjde. Až se totiž celá hrací deska zaplní, hra končí."
-
-#: C/index.page:33(section/title)
-msgid "Game Play"
-msgstr "Hraní hry"
-
-#: C/index.page:37(section/title)
-msgid "Useful Tips"
-msgstr "Užitečné tipy"
-
-#: C/index.page:41(section/title)
-msgid "Advanced"
-msgstr "Pokročilé"
-
-#: C/index.page:45(section/title)
-msgid "Get Involved"
-msgstr "Zapojte se"
-
-#: C/bug-filing.page:13(credit/years)
-#: C/change-board-size.page:10(credit/years) C/develop.page:12(credit/years)
-#: C/documentation.page:10(credit/years) C/fast-moves.page:11(credit/years)
-#: C/play.page:11(credit/years) C/rules.page:11(credit/years)
-#: C/scores.page:11(credit/years) C/shortcuts.page:11(credit/years)
-#: C/translate.page:12(credit/years)
+#. (itstool) path: credit/years
+#: C/bug-filing.page:13 C/change-board-size.page:10 C/develop.page:12
+#: C/documentation.page:10 C/fast-moves.page:11 C/play.page:11 C/rules.page:11
+#: C/scores.page:11 C/shortcuts.page:11 C/translate.page:12
 msgid "2011"
 msgstr "2011"
 
-#: C/bug-filing.page:20(page/title)
+#. (itstool) path: license/p
+#: C/bug-filing.page:16 C/develop.page:15 C/documentation.page:13
+#: C/index.page:20 C/translate.page:19
+msgid "Creative Commons Share Alike 3.0"
+msgstr "Creative Commons Share Alike 3.0"
+
+#. (itstool) path: page/title
+#: C/bug-filing.page:20
 msgid "Report a Problem"
 msgstr "Hlaste problémy"
 
-#: C/bug-filing.page:21(page/p)
+#. (itstool) path: page/p
+#: C/bug-filing.page:21
 msgid ""
 "<app>Five or More</app> is maintained by a volunteer community. You are "
 "welcome to participate. If you notice a problem you can file a <em>bug "
@@ -150,7 +63,8 @@ msgstr ""
 "účast bude vítána. Pokud si povšimnete nějakého problému, můžete vyplnit "
 "<em>chybové hlášení</em> na <link href=\"https://bugzilla.gnome.org/\"/>."
 
-#: C/bug-filing.page:24(page/p)
+#. (itstool) path: page/p
+#: C/bug-filing.page:24
 msgid ""
 "This is a bug tracking system where users and developers can file details "
 "about bugs, crashes and request enhancements."
@@ -159,7 +73,8 @@ msgstr ""
 "podrobnosti k dané chybě nebo žádosti o vylepšení. Komunikace probíhá v "
 "angličtině."
 
-#: C/bug-filing.page:27(page/p)
+#. (itstool) path: page/p
+#: C/bug-filing.page:27
 msgid ""
 "To participate you need an account which will give you the ability to gain "
 "access, file bugs, and make comments. Also, you need to register so you can "
@@ -171,7 +86,8 @@ msgstr ""
 "tomu, aby vám přicházely na e-mail informace o stavu vaší chyby. Jestli účet "
 "zatím nemáte, stačí pro vytvoření kliknout na odkaz <gui>Nový účet</gui>."
 
-#: C/bug-filing.page:31(page/p)
+#. (itstool) path: page/p
+#: C/bug-filing.page:31
 msgid ""
 "Once you have an account, log in, click on <guiseq><gui>File a Bug</"
 "gui><gui>Applications</gui><gui>five-or-more</gui></guiseq>. Before "
@@ -187,7 +103,8 @@ msgstr ""
 "a <link href=\"https://bugzilla.gnome.org/browse.cgi?product=five-or-more"
 "\">podívejte</link> se prosím, jestli stejnou chybu nenahlásil už někdo jiný."
 
-#: C/bug-filing.page:39(page/p)
+#. (itstool) path: page/p
+#: C/bug-filing.page:39
 msgid ""
 "If you are requesting a new feature, choose <gui>enhancement</gui> in the "
 "<gui>Severity</gui> menu. Fill in the Summary and Description sections and "
@@ -197,7 +114,8 @@ msgstr ""
 "položku <gui>enhancement</gui>. Vyplňte pole Summary a Description a "
 "klikněte na <gui>Commit</gui>."
 
-#: C/bug-filing.page:43(page/p)
+#. (itstool) path: page/p
+#: C/bug-filing.page:43
 msgid ""
 "Your report will be given an ID number, and its status will be updated as it "
 "is being dealt with."
@@ -205,55 +123,69 @@ msgstr ""
 "Vaše hlášení dostane přiděleno identifikační číslo a jak bude postupně "
 "řešeno, bude se měnit jeho stav."
 
+#. (itstool) path: media
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/change-board-size.page:78(media)
+#: C/change-board-size.page:78
 msgctxt "_"
 msgid "external ref='figures/small.png' md5='cc59a29333b3b145c9e7928872c714bc'"
 msgstr ""
 "external ref='figures/small.png' md5='cc59a29333b3b145c9e7928872c714bc'"
 
+#. (itstool) path: media
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/change-board-size.page:83(media)
+#: C/change-board-size.page:83
 msgctxt "_"
 msgid ""
 "external ref='figures/medium.png' md5='ae122a301d215d40fff80717211b0915'"
 msgstr ""
 "external ref='figures/medium.png' md5='ae122a301d215d40fff80717211b0915'"
 
+#. (itstool) path: media
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/change-board-size.page:88(media)
+#: C/change-board-size.page:88
 msgctxt "_"
 msgid "external ref='figures/large.png' md5='14942e047fbbc3538ababbfa888fa4e6'"
 msgstr ""
 "external ref='figures/large.png' md5='14942e047fbbc3538ababbfa888fa4e6'"
 
-#: C/change-board-size.page:17(credit/name) C/fast-moves.page:18(credit/name)
-#: C/play.page:14(credit/name) C/translate.page:15(credit/name)
+#. (itstool) path: credit/name
+#: C/change-board-size.page:8 C/change-theme.page:8 C/fast-moves.page:9
+#: C/index.page:12 C/play.page:9 C/scores.page:9
+msgid "Lahiru lanka"
+msgstr "Lahiru lanka"
+
+#. (itstool) path: credit/name
+#: C/change-board-size.page:17 C/fast-moves.page:18 C/play.page:14
+#: C/translate.page:15
 msgid "Michael Hill"
 msgstr "Michael Hill"
 
-#: C/change-board-size.page:22(page/title)
+#. (itstool) path: page/title
+#: C/change-board-size.page:22
 msgid "Change board size"
 msgstr "Jak změnit velikost hrací desky"
 
-#: C/change-board-size.page:23(page/p)
+#. (itstool) path: page/p
+#: C/change-board-size.page:23
 msgid "To change the board size:"
 msgstr "Když chcete změnit velikost hrací desky:"
 
-#: C/change-board-size.page:25(item/p)
+#. (itstool) path: item/p
+#: C/change-board-size.page:25
 msgid "Click <guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq>"
 msgstr "Klikněte na <guiseq><gui>Nastavení</gui><gui>Předvolby</gui></guiseq>"
 
-#: C/change-board-size.page:26(item/p)
+#. (itstool) path: item/p
+#: C/change-board-size.page:26
 msgid ""
 "Under <gui>Board Size</gui>, select <gui>Small</gui>, <gui>Medium</gui>, or "
 "<gui>Large</gui>."
@@ -261,7 +193,8 @@ msgstr ""
 "Pod <gui>Velikost hrací desky</gui> si vyberte z <gui>Malá</gui>, "
 "<gui>Střední</gui> nebo <gui>Velká</gui>."
 
-#: C/change-board-size.page:31(note/p)
+#. (itstool) path: note/p
+#: C/change-board-size.page:31
 msgid ""
 "While a larger board gives you more space, there are also more objects in "
 "play for each turn."
@@ -269,120 +202,145 @@ msgstr ""
 "Protože větší hrací deska poskytuje více místa, rozhazuje se na ni v každém "
 "tahu také více kamenů."
 
-#: C/change-board-size.page:36(section/title)
+#. (itstool) path: section/title
+#: C/change-board-size.page:36
 msgid "Board parameters"
 msgstr "Parametry hrací desky"
 
-#: C/change-board-size.page:37(section/p)
+#. (itstool) path: section/p
+#: C/change-board-size.page:37
 msgid "The 3 different board sizes have the following parameters:"
 msgstr "Tři různě velké hrací desky mají následující parametry:"
 
-#: C/change-board-size.page:41(td/p)
+#. (itstool) path: td/p
+#: C/change-board-size.page:41
 msgid "<em>Size</em>"
 msgstr "<em>Velikost</em>"
 
-#: C/change-board-size.page:42(td/p)
+#. (itstool) path: td/p
+#: C/change-board-size.page:42
 msgid "<em>Width</em>"
 msgstr "<em>Šířka</em>"
 
-#: C/change-board-size.page:43(td/p)
+#. (itstool) path: td/p
+#: C/change-board-size.page:43
 msgid "<em>Height</em>"
 msgstr "<em>Výška</em>"
 
-#: C/change-board-size.page:44(td/p)
+#. (itstool) path: td/p
+#: C/change-board-size.page:44
 msgid "<em>Number of types</em>"
 msgstr "<em>Počet typů</em>"
 
-#: C/change-board-size.page:45(td/p)
+#. (itstool) path: td/p
+#: C/change-board-size.page:45
 msgid "<em>New objects per turn</em>"
 msgstr "<em>Nových kamenů v tahu</em>"
 
-#: C/change-board-size.page:46(td/p)
+#. (itstool) path: td/p
+#: C/change-board-size.page:46
 msgid "<em>Number of cells</em>"
 msgstr "<em>Počet polí</em>"
 
-#: C/change-board-size.page:50(td/p)
+#. (itstool) path: td/p
+#: C/change-board-size.page:50
 msgid "Small"
 msgstr "Malá"
 
-#: C/change-board-size.page:51(td/p) C/change-board-size.page:52(td/p)
-#: C/change-board-size.page:60(td/p) C/change-board-size.page:65(td/p)
-#: C/scores.page:41(td/p)
+#. (itstool) path: td/p
+#: C/change-board-size.page:51 C/change-board-size.page:52
+#: C/change-board-size.page:60 C/change-board-size.page:65 C/scores.page:41
 msgid "7"
 msgstr "7"
 
-#: C/change-board-size.page:53(td/p) C/scores.page:33(td/p)
+#. (itstool) path: td/p
+#: C/change-board-size.page:53 C/scores.page:33
 msgid "5"
 msgstr "5"
 
-#: C/change-board-size.page:54(td/p) C/change-board-size.page:60(td/p)
+#. (itstool) path: td/p
+#: C/change-board-size.page:54 C/change-board-size.page:60
 msgid "3"
 msgstr "3"
 
-#: C/change-board-size.page:55(td/p)
+#. (itstool) path: td/p
+#: C/change-board-size.page:55
 msgid "49"
 msgstr "49"
 
-#: C/change-board-size.page:59(td/p)
+#. (itstool) path: td/p
+#: C/change-board-size.page:59
 msgid "Medium"
 msgstr "Střední"
 
-#: C/change-board-size.page:59(td/p) C/scores.page:49(td/p)
+#. (itstool) path: td/p
+#: C/change-board-size.page:59 C/scores.page:49
 msgid "9"
 msgstr "9"
 
-#: C/change-board-size.page:60(td/p)
+#. (itstool) path: td/p
+#: C/change-board-size.page:60
 msgid "81"
 msgstr "81"
 
-#: C/change-board-size.page:64(td/p)
+#. (itstool) path: td/p
+#: C/change-board-size.page:64
 msgid "Large"
 msgstr "Velká"
 
-#: C/change-board-size.page:64(td/p)
+#. (itstool) path: td/p
+#: C/change-board-size.page:64
 msgid "20"
 msgstr "20"
 
-#: C/change-board-size.page:64(td/p)
+#. (itstool) path: td/p
+#: C/change-board-size.page:64
 msgid "15"
 msgstr "15"
 
-#: C/change-board-size.page:65(td/p)
+#. (itstool) path: td/p
+#: C/change-board-size.page:65
 msgid "300"
 msgstr "300"
 
-#: C/change-board-size.page:73(section/title)
+#. (itstool) path: section/title
+#: C/change-board-size.page:73
 msgid "The 3 board sizes"
 msgstr "Tři velikosti hrací desky"
 
-#: C/change-board-size.page:79(media/p)
+#. (itstool) path: media/p
+#: C/change-board-size.page:79
 msgid "<app>Five or More</app> Small board"
 msgstr "Malá hrací deska hry <application>Pět nebo víc</application>"
 
-#: C/change-board-size.page:84(media/p)
+#. (itstool) path: media/p
+#: C/change-board-size.page:84
 msgid "<app>Five or More</app> medium size board"
 msgstr "Střední hrací deska hry <application>Pět nebo víc</application>"
 
-#: C/change-board-size.page:89(media/p)
+#. (itstool) path: media/p
+#: C/change-board-size.page:89
 msgid "<app>Five or More</app> large size board"
 msgstr "Velká hrací deska hry <application>Pět nebo víc</application>"
 
+#. (itstool) path: media
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/change-theme.page:37(media)
+#: C/change-theme.page:37
 msgctxt "_"
 msgid ""
 "external ref='figures/color-balls.png' md5='ac9b26a5c770a7e118c84d82b43fbcaa'"
 msgstr ""
 "external ref='figures/color-balls.png' md5='ac9b26a5c770a7e118c84d82b43fbcaa'"
 
+#. (itstool) path: media
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/change-theme.page:41(media)
+#: C/change-theme.page:41
 msgctxt "_"
 msgid ""
 "external ref='figures/color-shapes.png' "
@@ -391,34 +349,40 @@ msgstr ""
 "external ref='figures/color-shapes.png' "
 "md5='12b538f0d29c55aa93c8fd6adec58ffc'"
 
+#. (itstool) path: media
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/change-theme.page:49(media)
+#: C/change-theme.page:49
 msgctxt "_"
 msgid ""
 "external ref='figures/pickcolor.png' md5='51d82564630d095c45865aff5518e6fc'"
 msgstr ""
 "external ref='figures/pickcolor.png' md5='51d82564630d095c45865aff5518e6fc'"
 
-#: C/change-theme.page:10(credit/years) C/strategy.page:11(credit/years)
+#. (itstool) path: credit/years
+#: C/change-theme.page:10 C/strategy.page:11
 msgid "2012"
 msgstr "2012"
 
-#: C/change-theme.page:19(page/title)
+#. (itstool) path: page/title
+#: C/change-theme.page:19
 msgid "Change the look and feel"
 msgstr "Jak změnit vzhled"
 
-#: C/change-theme.page:20(page/p)
+#. (itstool) path: page/p
+#: C/change-theme.page:20
 msgid "To change the appearance of the pieces and the board:"
 msgstr "Pokud si chcete změnit vzhled hracích kamenů a hrací desky:"
 
-#: C/change-theme.page:23(item/p) C/fast-moves.page:28(item/p)
+#. (itstool) path: item/p
+#: C/change-theme.page:23 C/fast-moves.page:28
 msgid "Click <guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq>."
 msgstr "Klikněte na <guiseq><gui>Nastavení</gui><gui>Předvolby</gui></guiseq>."
 
-#: C/change-theme.page:26(item/p)
+#. (itstool) path: item/p
+#: C/change-theme.page:26
 msgid ""
 "Select <gui>balls</gui> or <gui>shapes</gui> from the <gui>Image</gui> drop "
 "down menu to change the playing pieces."
@@ -426,7 +390,8 @@ msgstr ""
 "Výběrem <gui>kuliček</gui> nebo <gui>tvarů</gui> v robalovací nabídce "
 "<gui>Obrázek</gui> změňte hrací kameny."
 
-#: C/change-theme.page:28(item/p)
+#. (itstool) path: item/p
+#: C/change-theme.page:28
 msgid ""
 "Click on the colored box next to <gui>Image background</gui> to access the "
 "color palette."
@@ -434,35 +399,43 @@ msgstr ""
 "Kliknutím na barevný obdélníček vedle <gui>Barva pozadí</gui> se dostanete k "
 "barevné paletě."
 
-#: C/change-theme.page:32(item/p) C/fast-moves.page:30(item/p)
+#. (itstool) path: item/p
+#: C/change-theme.page:32 C/fast-moves.page:30
 msgid "Click <gui>Close</gui>."
 msgstr "Klikněte na <gui>Zavřít</gui>."
 
-#: C/change-theme.page:36(section/title)
+#. (itstool) path: section/title
+#: C/change-theme.page:36
 msgid "Images available"
 msgstr "Dostupné obrázky"
 
-#: C/change-theme.page:38(media/p)
+#. (itstool) path: media/p
+#: C/change-theme.page:38
 msgid "Five or More with different balls"
 msgstr "Hra <app>Pět nebo víc</app> s různými kuličkami"
 
-#: C/change-theme.page:42(media/p)
+#. (itstool) path: media/p
+#: C/change-theme.page:42
 msgid "<app>Five or More</app> with different shapes"
 msgstr "Hra <app>Pět nebo víc</app> s různými tvary"
 
-#: C/change-theme.page:47(section/title)
+#. (itstool) path: section/title
+#: C/change-theme.page:47
 msgid "Background colors available"
 msgstr "Dostupné barvy pozadí"
 
-#: C/change-theme.page:50(media/p)
+#. (itstool) path: media/p
+#: C/change-theme.page:50
 msgid "Five or More color palette"
 msgstr "Barevná paleta ve hře <app>Pět nebo víc</app>"
 
-#: C/develop.page:19(page/title)
+#. (itstool) path: page/title
+#: C/develop.page:19
 msgid "Help develop"
 msgstr "Pomozte s vývojem"
 
-#: C/develop.page:20(page/p)
+#. (itstool) path: page/p
+#: C/develop.page:20
 msgid ""
 "The <app>GNOME Games</app> are developed and maintained by a volunteer "
 "community. You are welcome to participate."
@@ -470,27 +443,30 @@ msgstr ""
 "<app>Hry GNOME</app> jsou vyvíjeny a udržovány komunitou dobrovolníků. Vaše "
 "případná účast bude vítána."
 
-#: C/develop.page:23(page/p)
+#. (itstool) path: page/p
+#: C/develop.page:23
 msgid ""
-"If you would like to <link href=\"https://live.gnome.org/GnomeGames/"
+"If you would like to <link href=\"https://wiki.gnome.org/Apps/Games/"
 "Contributing\">help develop <app>GNOME Games</app></link>, you can get in "
 "touch with the developers using <link href=\"https://cbe005.chat.mibbit.com/?"
 "url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, or via our <link "
 "href=\"http://mail.gnome.org/mailman/listinfo/games-list\">mailing list</"
 "link>."
 msgstr ""
-"Jestli chcete <link href=\"https://live.gnome.org/GnomeGames/Contributing"
-"\">pomoci s vývojem <app>her GNOME</app></link>, můžete se s vývojáři "
+"Jestli chcete <link href=\"https://wiki.gnome.org/Apps/Games/Contributing\">"
+"pomoci s vývojem <app>her GNOME</app></link>, můžete se s vývojáři "
 "kontaktovat na <link href=\"https://cbe005.chat.mibbit.com/?url=irc%3A%2F"
 "%2Firc.gnome.org%2Fgnome-games\">IRC</link> nebo přes <link href=\"http://"
 "mail.gnome.org/mailman/listinfo/games-list\">poštovní konferenci</link>. Ke "
 "komunikaci se používá angličtina."
 
-#: C/documentation.page:17(page/title)
+#. (itstool) path: page/title
+#: C/documentation.page:17
 msgid "Help write documentation"
 msgstr "Pomozte psát dokumentaci"
 
-#: C/documentation.page:19(page/p)
+#. (itstool) path: page/p
+#: C/documentation.page:19
 msgid ""
 "The <app>GNOME Games</app> documentation is maintained by a volunteer "
 "community. You are welcome to participate."
@@ -498,7 +474,8 @@ msgstr ""
 "O dokumentaci <app>her GNOME</app> se stará komunitou dobrovolníků. Vaše "
 "případná účast bude vítána."
 
-#: C/documentation.page:22(page/p)
+#. (itstool) path: page/p
+#: C/documentation.page:22
 msgid ""
 "To contribute to the Documentation Project, feel free to get in touch with "
 "us using <link href=\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc."
@@ -511,27 +488,32 @@ msgstr ""
 "gnome.org/mailman/listinfo/gnome-doc-list\">poštovní konferenci</link>. Ke "
 "komunikaci se používá angličtina."
 
-#: C/documentation.page:26(page/p)
+#. (itstool) path: page/p
+#: C/documentation.page:26
 msgid ""
-"Our <link href=\"https://live.gnome.org/DocumentationProject/Contributing"
+"Our <link href=\"https://wiki.gnome.org/DocumentationProject/Contributing"
 "\">wiki</link> page contains useful information."
 msgstr ""
-"Užitečné informace obsahuje naše <link href=\"https://live.gnome.org/"
-"DocumentationProject/Contributing\">wikistránka</link>."
+"Užitečné informace obsahuje naše <link href=\"https://wiki.gnome.org/DocumentationProject/Contributing"
+"\">wikistránka</link>."
 
-#: C/fast-moves.page:25(page/title)
+#. (itstool) path: page/title
+#: C/fast-moves.page:25
 msgid "Change speed"
 msgstr "Jak změnit rychlost"
 
-#: C/fast-moves.page:26(page/p)
+#. (itstool) path: page/p
+#: C/fast-moves.page:26
 msgid "To speed up object movements:"
 msgstr "Pro zrychlení přesunu kamenů:"
 
-#: C/fast-moves.page:29(item/p)
+#. (itstool) path: item/p
+#: C/fast-moves.page:29
 msgid "Under <gui>General</gui>, select <gui>Use fast moves</gui>."
 msgstr "V <gui>Obecné</gui> zaškrtněte <gui>Používat rychlé tahy</gui>."
 
-#: C/fast-moves.page:33(note/p)
+#. (itstool) path: note/p
+#: C/fast-moves.page:33
 msgid ""
 "Any changes you make are instantly applied and remembered for the next time "
 "you run <app>Five or More</app>."
@@ -539,23 +521,108 @@ msgstr ""
 "Změny v nastavení se okamžitě promítnou do hry a zůstanou zachované i pro "
 "další spuštění <app>Pět nebo víc</app>."
 
-#: C/legal.xml:3(p/link)
+#. (itstool) path: media
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.page:6
+msgctxt "_"
+msgid "external ref='figures/logo.png' md5='83ba6ff888acbdea3ad599b055ed7710'"
+msgstr "external ref='figures/logo.png' md5='83ba6ff888acbdea3ad599b055ed7710'"
+
+#. (itstool) path: media
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.page:26
+msgctxt "_"
+msgid ""
+"external ref='figures/logo32.png' md5='51b65eea63f1a6c26a4c5d628dba406c'"
+msgstr ""
+"external ref='figures/logo32.png' md5='51b65eea63f1a6c26a4c5d628dba406c'"
+
+#. (itstool) path: info/title
+#: C/index.page:7
+msgctxt "link"
+msgid "Five or More"
+msgstr "Pět nebo víc"
+
+#. (itstool) path: info/title
+#: C/index.page:8
+msgctxt "text"
+msgid "Five or More"
+msgstr "Pět nebo víc"
+
+#. (itstool) path: page/title
+#: C/index.page:25
+msgid ""
+"<media type=\"image\" src=\"figures/logo32.png\">Five or More logo</media> "
+"Five or More"
+msgstr ""
+"<media type=\"image\" src=\"figures/logo32.png\">Logo hry Pět nebo víc</"
+"media> Pět nebo víc"
+
+#. (itstool) path: page/p
+#: C/index.page:28
+msgid ""
+"<app>Five or More</app> is a deceptively simple brain workout. The goal is "
+"to place at least five objects of the same <link xref=\"change-theme#images"
+"\">color or shape</link> into a straight line. The line can be horizontal, "
+"vertical or diagonal. Once five or more objects are grouped into a line, "
+"they disappear. The goal is to vanish as many objects as possible. The game "
+"is over when the entire board is full."
+msgstr ""
+"<app>Pět nebo víc</app> je zdánlivě jednoduchá hra na procvičení mozkových "
+"závitů. Cílem je umístit nejméně pět hracích kamenů stejné <link xref="
+"\"change-theme#images\">barvy nebo tvaru</link> do přímé řady. Je jedno, "
+"jestli vodorovně, svisle nebo úhlopříčně. Jakmile seskupíte pět nebo více "
+"kamenů do jedné řady, tyto kameny zmizí. Musíte se snažit takto vymazat co "
+"nejvíce kamenů půjde. Až se totiž celá hrací deska zaplní, hra končí."
+
+#. (itstool) path: section/title
+#: C/index.page:33
+msgid "Game Play"
+msgstr "Hraní hry"
+
+#. (itstool) path: section/title
+#: C/index.page:37
+msgid "Useful Tips"
+msgstr "Užitečné tipy"
+
+#. (itstool) path: section/title
+#: C/index.page:41
+msgid "Advanced"
+msgstr "Pokročilé"
+
+#. (itstool) path: section/title
+#: C/index.page:45
+msgid "Get Involved"
+msgstr "Zapojte se"
+
+#. (itstool) path: p/link
+#: C/legal.xml:3
 msgid "Creative Commons Attribution-ShareAlike 3.0 Unported License"
 msgstr "Creative Commons Attribution-ShareAlike 3.0 Unported License"
 
-#: C/legal.xml:3(license/p)
+#. (itstool) path: license/p
+#: C/legal.xml:3
 msgid "This work is licensed under a <_:link-1/>."
 msgstr "Tato práce je licencována pod <_:link-1/>."
 
-#: C/license.page:9(info/desc)
+#. (itstool) path: info/desc
+#: C/license.page:9
 msgid "Legal information."
 msgstr "Právní informace."
 
-#: C/license.page:12(page/title)
+#. (itstool) path: page/title
+#: C/license.page:12
 msgid "License"
 msgstr "Licence"
 
-#: C/license.page:13(page/p)
+#. (itstool) path: page/p
+#: C/license.page:13
 msgid ""
 "This work is distributed under a CreativeCommons Attribution-Share Alike 3.0 "
 "Unported license."
@@ -563,35 +630,43 @@ msgstr ""
 "Tato práce je šířena pod licencí CreativeCommons Attribution-Share Alike 3.0 "
 "Unported license."
 
-#: C/license.page:21(page/p)
+#. (itstool) path: page/p
+#: C/license.page:21
 msgid "You are free:"
 msgstr "Můžete volně:"
 
-#: C/license.page:26(item/title)
+#. (itstool) path: item/title
+#: C/license.page:26
 msgid "<em>To share</em>"
 msgstr "<em>Sdílet</em>"
 
-#: C/license.page:27(item/p)
+#. (itstool) path: item/p
+#: C/license.page:27
 msgid "To copy, distribute and transmit the work."
 msgstr "Kopírovat, šířit a rozesílat dílo."
 
-#: C/license.page:30(item/title)
+#. (itstool) path: item/title
+#: C/license.page:30
 msgid "<em>To remix</em>"
 msgstr "<em>Měnit</em>"
 
-#: C/license.page:31(item/p)
+#. (itstool) path: item/p
+#: C/license.page:31
 msgid "To adapt the work."
 msgstr "Přizpůsobovat dílo."
 
-#: C/license.page:34(page/p)
+#. (itstool) path: page/p
+#: C/license.page:34
 msgid "Under the following conditions:"
 msgstr "Za následujících podmínek:"
 
-#: C/license.page:39(item/title)
+#. (itstool) path: item/title
+#: C/license.page:39
 msgid "<em>Attribution</em>"
 msgstr "<em>Označení</em>"
 
-#: C/license.page:40(item/p)
+#. (itstool) path: item/p
+#: C/license.page:40
 msgid ""
 "You must attribute the work in the manner specified by the author or "
 "licensor (but not in any way that suggests that they endorse you or your use "
@@ -600,11 +675,13 @@ msgstr ""
 "Musíte dílo označit v souladu s požadavky autora nebo licence (ale ne žádným "
 "způsobem, který předpokládá, že podporují vás nebo vaše použití díla)."
 
-#: C/license.page:47(item/title)
+#. (itstool) path: item/title
+#: C/license.page:47
 msgid "<em>Share Alike</em>"
 msgstr "<em>Stejné sdílení</em>"
 
-#: C/license.page:48(item/p)
+#. (itstool) path: item/p
+#: C/license.page:48
 msgid ""
 "If you alter, transform, or build upon this work, you may distribute the "
 "resulting work only under the same, similar or a compatible license."
@@ -612,7 +689,8 @@ msgstr ""
 "Pokud dílo změníte, převedete nebo na něm založíte jiné, můžete výsledek "
 "této práce šířit pouze pod stejnou, podobnou nebo kompatibilní licencí."
 
-#: C/license.page:54(page/p)
+#. (itstool) path: page/p
+#: C/license.page:54
 msgid ""
 "For the full text of the license, see the <link href=\"http://"
 "creativecommons.org/licenses/by-sa/3.0/legalcode\">CreativeCommons website</"
@@ -624,48 +702,56 @@ msgstr ""
 "nebo si přečtěte <link href=\"http://creativecommons.org/licenses/by-sa/3.0/"
 "\">výtah dokumentu pro neprávníky</link>."
 
+#. (itstool) path: media
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/play.page:63(media)
+#: C/play.page:63
 msgctxt "_"
 msgid ""
 "external ref='figures/glines-demo.ogv' md5='f9222aaac4ad0df37975c8ac77fbe1cc'"
 msgstr ""
 "external ref='figures/glines-demo.ogv' md5='f9222aaac4ad0df37975c8ac77fbe1cc'"
 
-#: C/play.page:21(page/title)
+#. (itstool) path: page/title
+#: C/play.page:21
 msgid "How to Play"
 msgstr "Jak hrát"
 
-#: C/play.page:23(page/p)
+#. (itstool) path: page/p
+#: C/play.page:23
 msgid ""
 "To start a new game click <guiseq><gui>Game</gui><gui>New</gui></guiseq>."
 msgstr ""
 "Novou hru začnete kliknutím na <guiseq><gui>Hra</gui><gui>Nová</gui></"
 "guiseq>."
 
-#: C/play.page:27(section/title)
+#. (itstool) path: section/title
+#: C/play.page:27
 msgid "Using the mouse"
 msgstr "Používání myši"
 
-#: C/play.page:31(item/p)
+#. (itstool) path: item/p
+#: C/play.page:31
 msgid ""
 "Click on the object you want to move. The selected object will begin "
 "spinning."
 msgstr ""
 "Klikněte na kámen, který chcete přesunout. Vybraný kámen se začne točit."
 
-#: C/play.page:35(item/p)
+#. (itstool) path: item/p
+#: C/play.page:35
 msgid "Click on the destination cell."
 msgstr "Klikněte na cílové pole."
 
-#: C/play.page:43(section/title)
+#. (itstool) path: section/title
+#: C/play.page:43
 msgid "Using the keyboard"
 msgstr "Používání klávesnice"
 
-#: C/play.page:46(item/p)
+#. (itstool) path: item/p
+#: C/play.page:46
 msgid ""
 "Press any of the arrow keys. An outline around a cell will appear on the "
 "board."
@@ -673,12 +759,14 @@ msgstr ""
 "Zmáčkněte libovolnou kurzorovou šipku. Na hrací desce se kolem některého "
 "pole objeví zvýrazněný obrys."
 
-#: C/play.page:48(item/p)
+#. (itstool) path: item/p
+#: C/play.page:48
 msgid "Using the arrow keys, navigate to the object you want to move."
 msgstr ""
 "Použijte kurzorové šipky k zacílení hracího kamenu, který chcete přesunout."
 
-#: C/play.page:50(item/p)
+#. (itstool) path: item/p
+#: C/play.page:50
 msgid ""
 "To select the object, press the <key>Enter</key> or <key>Spacebar</key>. The "
 "selected object will begin spinning."
@@ -686,7 +774,8 @@ msgstr ""
 "Zmáčknutím <key>Enter</key> nebo <key>mezerníku</key> kámen vyberte. Kámen "
 "se začne točit."
 
-#: C/play.page:52(item/p)
+#. (itstool) path: item/p
+#: C/play.page:52
 msgid ""
 "Move to the destination cell, and again press the <key>Enter</key> or "
 "<key>Spacebar</key>. The chosen object will move to the destination cell."
@@ -694,48 +783,53 @@ msgstr ""
 "Přesuňte se na cílové pole a znovu zmáčkněte <key>Enter</key> nebo "
 "<key>mezerník</key>. Zvolený kámen se přesune na cílové pole."
 
-#: C/play.page:61(section/title)
+#. (itstool) path: section/title
+#: C/play.page:61
 msgid "Video demonstration"
 msgstr "Videoukázka"
 
+#. (itstool) path: media
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/rules.page:44(media)
+#: C/rules.page:44
 msgctxt "_"
 msgid ""
 "external ref='figures/horizontal.png' md5='069cf4ce8408b1cc5e6337f2527c4d2e'"
 msgstr ""
 "external ref='figures/horizontal.png' md5='069cf4ce8408b1cc5e6337f2527c4d2e'"
 
+#. (itstool) path: media
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/rules.page:49(media)
+#: C/rules.page:49
 msgctxt "_"
 msgid ""
 "external ref='figures/vertical.png' md5='9f17201dac1c4c78a572ac17dce45ce0'"
 msgstr ""
 "external ref='figures/vertical.png' md5='9f17201dac1c4c78a572ac17dce45ce0'"
 
+#. (itstool) path: media
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/rules.page:54(media)
+#: C/rules.page:54
 msgctxt "_"
 msgid ""
 "external ref='figures/diagonal.png' md5='8654cd0cc269ac9ed0f8fb8bce02a8fc'"
 msgstr ""
 "external ref='figures/diagonal.png' md5='8654cd0cc269ac9ed0f8fb8bce02a8fc'"
 
+#. (itstool) path: media
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/rules.page:59(media)
+#: C/rules.page:59
 msgctxt "_"
 msgid ""
 "external ref='figures/glines-gameover.png' "
@@ -744,11 +838,13 @@ msgstr ""
 "external ref='figures/glines-gameover.png' "
 "md5='ab35873b1818aa94499cc7fcca646db6'"
 
-#: C/rules.page:17(page/title)
+#. (itstool) path: page/title
+#: C/rules.page:17
 msgid "Rules"
 msgstr "Pravidla"
 
-#: C/rules.page:19(item/p)
+#. (itstool) path: item/p
+#: C/rules.page:19
 msgid ""
 "At the start of the game there are either 3 or 7 objects placed on your "
 "board, depending on the <link xref=\"change-board-size\">board size</link>."
@@ -756,7 +852,8 @@ msgstr ""
 "Na začátku hry jsou na hrací desce rozmístěny 3 kameny nebo 7 kamenů, v "
 "závislosti na <link xref=\"change-board-size\">velikosti hrací desky</link>."
 
-#: C/rules.page:22(item/p)
+#. (itstool) path: item/p
+#: C/rules.page:22
 msgid ""
 "Each time you <link xref=\"play\">move an object</link>, additional objects "
 "are placed randomly on the board. The number of new objects placed each turn "
@@ -768,7 +865,8 @@ msgstr ""
 "způsobem na velikosti hrací desky. Náhled kamenů, které budou rozmístěny, "
 "můžete vidět v levém horním rohu okna hry."
 
-#: C/rules.page:27(item/p)
+#. (itstool) path: item/p
+#: C/rules.page:27
 msgid ""
 "There must be a clear path from the original position of the object to the "
 "destination cell (i.e you can not jump over objects)."
@@ -776,7 +874,8 @@ msgstr ""
 "Při přesunu musí mezi počátečním a cílovým polem hracího kamenu vést volná "
 "cesta (tj. nemůžete kameny přeskakovat)."
 
-#: C/rules.page:30(item/p)
+#. (itstool) path: item/p
+#: C/rules.page:30
 msgid ""
 "A straight horizontal, vertical or diagonal line of five or more similar "
 "objects will disappear from the game board. When this happens you will have "
@@ -786,7 +885,8 @@ msgstr ""
 "kamenů z hrací desky zmizí. Když k tomu dojde, získáváte navíc tah, aniž by "
 "na desku přibyly nové kameny."
 
-#: C/rules.page:34(item/p)
+#. (itstool) path: item/p
+#: C/rules.page:34
 msgid ""
 "The more objects you clear, the longer the game will go on. The longer you "
 "play, the higher your <link xref=\"scores\">score</link>."
@@ -794,7 +894,8 @@ msgstr ""
 "Čím víc kamenů odstraníte, tím déle bude hra pokračovat. A čím déle budete "
 "hrát, tím vyšší bude vaše <link xref=\"scores\">skóre</link>."
 
-#: C/rules.page:37(item/p)
+#. (itstool) path: item/p
+#: C/rules.page:37
 msgid ""
 "The game is over when the board is full, since no object can be moved at "
 "that point."
@@ -802,27 +903,33 @@ msgstr ""
 "Hra končí v okamžiku, kdy je hrací deska plná, protože v tu chvíli není "
 "možný již žádný tah."
 
-#: C/rules.page:45(media/p)
+#. (itstool) path: media/p
+#: C/rules.page:45
 msgid "Example horizontal alignment"
 msgstr "Příklad vodorovného uspořádání"
 
-#: C/rules.page:50(media/p)
+#. (itstool) path: media/p
+#: C/rules.page:50
 msgid "Example vertical alignment"
 msgstr "Příklad svislého uspořádání"
 
-#: C/rules.page:55(media/p)
+#. (itstool) path: media/p
+#: C/rules.page:55
 msgid "Example diagonal alignment"
 msgstr "Příklad úhlopříčného uspořádání"
 
-#: C/rules.page:60(media/p)
+#. (itstool) path: media/p
+#: C/rules.page:60
 msgid "<app>Five or More</app> game over position."
 msgstr "Stav na konci hry <app>Pět nebo víc</app>."
 
-#: C/scores.page:20(page/title)
+#. (itstool) path: page/title
+#: C/scores.page:20
 msgid "Scoring"
 msgstr "Skóre"
 
-#: C/scores.page:21(page/p)
+#. (itstool) path: page/p
+#: C/scores.page:21
 msgid ""
 "You score points by creating lines of 5 or more objects. The number of "
 "points depends on the number of objects that disappear."
@@ -830,75 +937,93 @@ msgstr ""
 "Body získáváte za vytvoření řady 5 nebo více stejných kamenů. Počet bodů "
 "závisí na počtu kamenů, které zmizí."
 
-#: C/scores.page:27(td/p)
+#. (itstool) path: td/p
+#: C/scores.page:27
 msgid "<em>Number of objects</em>"
 msgstr "<em>Počet kamenů</em>"
 
-#: C/scores.page:28(td/p)
+#. (itstool) path: td/p
+#: C/scores.page:28
 msgid "<em>Number of points</em>"
 msgstr "<em>Počet bodů</em>"
 
-#: C/scores.page:34(td/p) C/scores.page:53(td/p)
+#. (itstool) path: td/p
+#: C/scores.page:34 C/scores.page:53
 msgid "10"
 msgstr "10"
 
-#: C/scores.page:37(td/p)
+#. (itstool) path: td/p
+#: C/scores.page:37
 msgid "6"
 msgstr "6"
 
-#: C/scores.page:38(td/p) C/scores.page:61(td/p)
+#. (itstool) path: td/p
+#: C/scores.page:38 C/scores.page:61
 msgid "12"
 msgstr "12"
 
-#: C/scores.page:42(td/p)
+#. (itstool) path: td/p
+#: C/scores.page:42
 msgid "18"
 msgstr "18"
 
-#: C/scores.page:45(td/p)
+#. (itstool) path: td/p
+#: C/scores.page:45
 msgid "8"
 msgstr "8"
 
-#: C/scores.page:46(td/p)
+#. (itstool) path: td/p
+#: C/scores.page:46
 msgid "28"
 msgstr "28"
 
-#: C/scores.page:50(td/p)
+#. (itstool) path: td/p
+#: C/scores.page:50
 msgid "42"
 msgstr "42"
 
-#: C/scores.page:54(td/p)
+#. (itstool) path: td/p
+#: C/scores.page:54
 msgid "82"
 msgstr "82"
 
-#: C/scores.page:57(td/p)
+#. (itstool) path: td/p
+#: C/scores.page:57
 msgid "11"
 msgstr "11"
 
-#: C/scores.page:58(td/p)
+#. (itstool) path: td/p
+#: C/scores.page:58
 msgid "108"
 msgstr "108"
 
-#: C/scores.page:62(td/p)
+#. (itstool) path: td/p
+#: C/scores.page:62
 msgid "138"
 msgstr "138"
 
-#: C/scores.page:65(td/p)
+#. (itstool) path: td/p
+#: C/scores.page:65
 msgid "13"
 msgstr "13"
 
-#: C/scores.page:66(td/p)
+#. (itstool) path: td/p
+#: C/scores.page:66
 msgid "172"
 msgstr "172"
 
-#: C/scores.page:69(td/p)
+#. (itstool) path: td/p
+#: C/scores.page:69
 msgid "14"
 msgstr "14"
 
-#: C/scores.page:70(td/p)
+#. (itstool) path: td/p
+#: C/scores.page:70
 msgid "210"
 msgstr "210"
 
-#: C/scores.page:76(note/p)
+#. (itstool) path: note/p
+#: C/scores.page:76
 msgid ""
 "You can view the high scores by clicking <guiseq><gui>Game</gui><gui>Scores</"
 "gui></guiseq>."
@@ -906,7 +1031,8 @@ msgstr ""
 "Nejvyšší skóre si můžete zobrazit kliknutím na <guiseq><gui>Hra</"
 "gui><gui>Skóre</gui></guiseq>."
 
-#: C/scores.page:78(note/p)
+#. (itstool) path: note/p
+#: C/scores.page:78
 msgid ""
 "The <app>Five or More</app> scores are recorded according to the board size. "
 "You can select the <gui>Board Size</gui> of interest using the drop down "
@@ -916,39 +1042,48 @@ msgstr ""
 "desky. V rozbalovací nabídce si můžete vybrat <gui>Velikost hrací desky</"
 "gui>, která vás zajímá."
 
-#: C/shortcuts.page:17(page/title)
+#. (itstool) path: page/title
+#: C/shortcuts.page:17
 msgid "Keyboard shortcuts"
 msgstr "Klávesové zkratky"
 
-#: C/shortcuts.page:20(td/p)
+#. (itstool) path: td/p
+#: C/shortcuts.page:20
 msgid "New game"
 msgstr "Nová hra"
 
-#: C/shortcuts.page:21(td/p)
+#. (itstool) path: td/p
+#: C/shortcuts.page:21
 msgid "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
 msgstr "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
 
-#: C/shortcuts.page:24(td/p)
+#. (itstool) path: td/p
+#: C/shortcuts.page:24
 msgid "Help"
 msgstr "Nápověda"
 
-#: C/shortcuts.page:25(td/p)
+#. (itstool) path: td/p
+#: C/shortcuts.page:25
 msgid "<key>F1</key>"
 msgstr "<key>F1</key>"
 
-#: C/shortcuts.page:28(td/p)
+#. (itstool) path: td/p
+#: C/shortcuts.page:28
 msgid "Quit"
 msgstr "Ukončit"
 
-#: C/shortcuts.page:29(td/p)
+#. (itstool) path: td/p
+#: C/shortcuts.page:29
 msgid "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
 msgstr "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
 
-#: C/strategy.page:17(page/title)
+#. (itstool) path: page/title
+#: C/strategy.page:17
 msgid "Strategy"
 msgstr "Strategie"
 
-#: C/strategy.page:19(page/p)
+#. (itstool) path: page/p
+#: C/strategy.page:19
 msgid ""
 "There is no universal strategy for <app>Five or More</app>, but some "
 "strategic elements do exist. Here are some things to try and keep in mind as "
@@ -958,11 +1093,13 @@ msgstr ""
 "určité strategické postupy existují. Zde je pár věcí, které můžete vyzkoušet "
 "a je dobré je mít při hraní na paměti:"
 
-#: C/strategy.page:22(item/p)
+#. (itstool) path: item/p
+#: C/strategy.page:22
 msgid "Try to set at least three same objects with your every move."
 msgstr "V každé tahu se snažte získat seřazené alespoň tři hrací kameny."
 
-#: C/strategy.page:23(item/p)
+#. (itstool) path: item/p
+#: C/strategy.page:23
 msgid ""
 "The board can quickly become very crowded with objects, so it is best to "
 "think ahead. Pay attention to the collection of <gui>Next</gui> objects, "
@@ -972,7 +1109,8 @@ msgstr ""
 "myslet dopředu. Všímejte si sady <gui>Následujících</gui> kamenů, protože "
 "tahle znalost může pomoci ovlivnit vaše tahy."
 
-#: C/strategy.page:24(item/p)
+#. (itstool) path: item/p
+#: C/strategy.page:24
 msgid ""
 "Try to line up more than 5 objects. For example, if you have 6 objects, you "
 "can line up 2 and 3 with a space in between, and then connect them by "
@@ -982,11 +1120,13 @@ msgstr ""
 "kamenů, vytvořte řadu ze 2 a ze 3 s místem mezi nimi a v následujícím tahu "
 "je umístěním kamenu mezi ně spojte do šestice."
 
-#: C/translate.page:23(page/title)
+#. (itstool) path: page/title
+#: C/translate.page:23
 msgid "Help translate"
 msgstr "Pomozte překládat"
 
-#: C/translate.page:25(page/p)
+#. (itstool) path: page/p
+#: C/translate.page:25
 msgid ""
 "The <app>GNOME Games</app> user interface and documentation is being "
 "translated by a world-wide volunteer community. You are welcome to "
@@ -995,7 +1135,8 @@ msgstr ""
 "Uživatelské rozhraní a dokumentaci <app>her GNOME</app> překládá komunita "
 "dobrovolníků z celého světa. Vaše případná účast bude vítána."
 
-#: C/translate.page:28(page/p)
+#. (itstool) path: page/p
+#: C/translate.page:28
 msgid ""
 "There are <link href=\"http://l10n.gnome.org/module/five-or-more/\">many "
 "languages</link> for which translations are still needed."
@@ -1003,7 +1144,8 @@ msgstr ""
 "Stále je <link href=\"http://l10n.gnome.org/module/quadrapassel/\">řada "
 "jazyků</link>, do kterých je třeba překlad udělat."
 
-#: C/translate.page:30(page/p)
+#. (itstool) path: page/p
+#: C/translate.page:30
 msgid ""
 "To start translating you will need to <link href=\"http:l10n.gnome.org"
 "\">create an account</link> and join the <link href=\"http://l10n.gnome.org/"
@@ -1015,7 +1157,8 @@ msgstr ""
 "teams/\">překladatelskému týmu</link> svého jazyka. Pak budete moci odesílat "
 "své nové překlady."
 
-#: C/translate.page:34(page/p)
+#. (itstool) path: page/p
+#: C/translate.page:34
 msgid ""
 "You can chat with GNOME translators using <link href=\"https://cbe003.chat."
 "mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fi18n\">irc</link>. People on the "
@@ -1027,7 +1170,8 @@ msgstr ""
 "Lidé na tomto kanále jsou z celého světa, tak počítejte s tím, že kvůli "
 "rozdílným časovým pásmům, nemusí reagovat hned."
 
-#: C/translate.page:38(page/p)
+#. (itstool) path: page/p
+#: C/translate.page:38
 msgid ""
 "Alternatively, you can contact the Internationalization Team using their "
 "<link href=\"http://mail.gnome.org/mailman/listinfo/gnome-i18n\">mailing "
