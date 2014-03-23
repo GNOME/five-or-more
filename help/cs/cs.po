@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games gnome-2-28\n"
-"POT-Creation-Date: 2014-03-23 20:25+0000\n"
+"POT-Creation-Date: 2014-03-23 20:30+0000\n"
 "PO-Revision-Date: 2013-07-25 21:04+0200\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
@@ -26,7 +26,7 @@ msgid "translator-credits"
 msgstr "Marek Černocký <marek@manet.cz>, 2009, 2013"
 
 #. (itstool) path: credit/name
-#: C/bug-filing.page:11 C/change-board-size.page:13 C/change-theme.page:13
+#: C/bug-filing.page:10 C/change-board-size.page:13 C/change-theme.page:13
 #: C/develop.page:10 C/documentation.page:8 C/fast-moves.page:14
 #: C/index.page:16 C/scores.page:14 C/shortcuts.page:9 C/strategy.page:9
 #: C/translate.page:10
@@ -34,25 +34,25 @@ msgid "Tiffany Antopolski"
 msgstr "Tiffany Antopolski"
 
 #. (itstool) path: credit/years
-#: C/bug-filing.page:13 C/change-board-size.page:10 C/develop.page:12
+#: C/bug-filing.page:12 C/change-board-size.page:10 C/develop.page:12
 #: C/documentation.page:10 C/fast-moves.page:11 C/play.page:11 C/rules.page:11
 #: C/scores.page:11 C/shortcuts.page:11 C/translate.page:12
 msgid "2011"
 msgstr "2011"
 
 #. (itstool) path: license/p
-#: C/bug-filing.page:16 C/develop.page:15 C/documentation.page:13
+#: C/bug-filing.page:15 C/develop.page:15 C/documentation.page:13
 #: C/index.page:20 C/translate.page:19
 msgid "Creative Commons Share Alike 3.0"
 msgstr "Creative Commons Share Alike 3.0"
 
 #. (itstool) path: page/title
-#: C/bug-filing.page:20
+#: C/bug-filing.page:19
 msgid "Report a Problem"
 msgstr "Hlaste problémy"
 
 #. (itstool) path: page/p
-#: C/bug-filing.page:21
+#: C/bug-filing.page:20
 msgid ""
 "<app>Five or More</app> is maintained by a volunteer community. You are "
 "welcome to participate. If you notice a problem you can file a <em>bug "
@@ -64,7 +64,7 @@ msgstr ""
 "<em>chybové hlášení</em> na <link href=\"https://bugzilla.gnome.org/\"/>."
 
 #. (itstool) path: page/p
-#: C/bug-filing.page:24
+#: C/bug-filing.page:23
 msgid ""
 "This is a bug tracking system where users and developers can file details "
 "about bugs, crashes and request enhancements."
@@ -74,7 +74,7 @@ msgstr ""
 "angličtině."
 
 #. (itstool) path: page/p
-#: C/bug-filing.page:27
+#: C/bug-filing.page:26
 msgid ""
 "To participate you need an account which will give you the ability to gain "
 "access, file bugs, and make comments. Also, you need to register so you can "
@@ -87,7 +87,7 @@ msgstr ""
 "zatím nemáte, stačí pro vytvoření kliknout na odkaz <gui>Nový účet</gui>."
 
 #. (itstool) path: page/p
-#: C/bug-filing.page:31
+#: C/bug-filing.page:30
 msgid ""
 "Once you have an account, log in, click on <guiseq><gui>File a Bug</"
 "gui><gui>Applications</gui><gui>five-or-more</gui></guiseq>. Before "
@@ -104,7 +104,7 @@ msgstr ""
 "\">podívejte</link> se prosím, jestli stejnou chybu nenahlásil už někdo jiný."
 
 #. (itstool) path: page/p
-#: C/bug-filing.page:39
+#: C/bug-filing.page:38
 msgid ""
 "If you are requesting a new feature, choose <gui>enhancement</gui> in the "
 "<gui>Severity</gui> menu. Fill in the Summary and Description sections and "
@@ -115,7 +115,7 @@ msgstr ""
 "klikněte na <gui>Commit</gui>."
 
 #. (itstool) path: page/p
-#: C/bug-filing.page:43
+#: C/bug-filing.page:42
 msgid ""
 "Your report will be given an ID number, and its status will be updated as it "
 "is being dealt with."
@@ -453,8 +453,8 @@ msgid ""
 "href=\"http://mail.gnome.org/mailman/listinfo/games-list\">mailing list</"
 "link>."
 msgstr ""
-"Jestli chcete <link href=\"https://wiki.gnome.org/Apps/Games/Contributing\">"
-"pomoci s vývojem <app>her GNOME</app></link>, můžete se s vývojáři "
+"Jestli chcete <link href=\"https://wiki.gnome.org/Apps/Games/Contributing"
+"\">pomoci s vývojem <app>her GNOME</app></link>, můžete se s vývojáři "
 "kontaktovat na <link href=\"https://cbe005.chat.mibbit.com/?url=irc%3A%2F"
 "%2Firc.gnome.org%2Fgnome-games\">IRC</link> nebo přes <link href=\"http://"
 "mail.gnome.org/mailman/listinfo/games-list\">poštovní konferenci</link>. Ke "
@@ -494,8 +494,8 @@ msgid ""
 "Our <link href=\"https://wiki.gnome.org/DocumentationProject/Contributing"
 "\">wiki</link> page contains useful information."
 msgstr ""
-"Užitečné informace obsahuje naše <link href=\"https://wiki.gnome.org/DocumentationProject/Contributing"
-"\">wikistránka</link>."
+"Užitečné informace obsahuje naše <link href=\"https://wiki.gnome.org/"
+"DocumentationProject/Contributing\">wikistránka</link>."
 
 #. (itstool) path: page/title
 #: C/fast-moves.page:25
@@ -1147,12 +1147,12 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/translate.page:30
 msgid ""
-"To start translating you will need to <link href=\"http:l10n.gnome.org"
+"To start translating you will need to <link href=\"http://l10n.gnome.org"
 "\">create an account</link> and join the <link href=\"http://l10n.gnome.org/"
 "teams/\">translation team</link> for your language. This will give you the "
 "ability to upload new translations."
 msgstr ""
-"Jestli chcete překládat, musíte si <link href=\"http:l10n.gnome.org"
+"Jestli chcete překládat, musíte si <link href=\"http://l10n.gnome.org"
 "\">vytvořit účet</link> a přidat se k <link href=\"http://l10n.gnome.org/"
 "teams/\">překladatelskému týmu</link> svého jazyka. Pak budete moci odesílat "
 "své nové překlady."
