@@ -1584,8 +1584,6 @@ startup_cb (GApplication *application)
   g_signal_connect (GTK_WINDOW (app), "configure-event", G_CALLBACK (window_configure_event_cb), NULL);
   g_signal_connect (GTK_WINDOW (app), "window-state-event", G_CALLBACK (window_state_event_cb), NULL);
   gtk_window_set_default_size (GTK_WINDOW (app), g_settings_get_int (settings, "window-width"), g_settings_get_int (settings, "window-height"));
-  if (g_settings_get_boolean (settings, "window-is-fullscreen"))
-    gtk_window_fullscreen (GTK_WINDOW (app));
   if (g_settings_get_boolean (settings, "window-is-maximized"))
     gtk_window_maximize (GTK_WINDOW (app));
   gtk_container_set_border_width (GTK_CONTAINER (app), 20);
@@ -1651,7 +1649,6 @@ shutdown_cb (GApplication *application)
   g_settings_set_int (settings, "window-width", window_width);
   g_settings_set_int (settings, "window-height", window_height);
   g_settings_set_boolean (settings, "window-is-maximized", window_is_maximized);
-  g_settings_set_boolean (settings, "window-is-fullscreen", window_is_fullscreen); 
 }
 
 int
