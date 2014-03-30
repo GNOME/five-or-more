@@ -1,4 +1,5 @@
 <page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
       type="topic" style="task"
       id="play">
   <info>
@@ -60,7 +61,7 @@
 
   <title>Video demonstration</title>
 
-    <media type="video" mime="application/ogg" src="figures/glines-demo.ogv">
+    <media type="video" mime="application/ogg" src="figures/glines-demo.ogv" its:translate="no">
     </media>
     
   </section>

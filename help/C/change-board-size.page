@@ -1,4 +1,5 @@
 <page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
       type="topic" style="task"
       id="change-board-size">
   <info>
@@ -75,18 +76,18 @@
   <table>
     <tr>
       <td>
-        <media type="image" src="figures/small.png" height="200">
-          <p><app>Five or More</app> Small board</p>
+        <media type="image" src="figures/small.png" height="200" its:translate="no">
+          <p its:translate="yes"><app>Five or More</app> Small board</p>
         </media>
       </td>
       <td>
-         <media type="image" src="figures/medium.png" height="200">
-          <p><app>Five or More</app> medium size board</p>
+         <media type="image" src="figures/medium.png" height="200" its:translate="no">
+          <p its:translate="yes"><app>Five or More</app> medium size board</p>
         </media>
       </td>
       <td>
-        <media type="image" src="figures/large.png" height="200">
-          <p><app>Five or More</app> large size board</p>
+        <media type="image" src="figures/large.png" height="200" its:translate="no">
+          <p its:translate="yes"><app>Five or More</app> large size board</p>
         </media>
       </td>
     </tr>

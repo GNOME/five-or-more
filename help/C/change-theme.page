@@ -1,4 +1,5 @@
 <page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
       type="topic" style="task"
       id="change-theme">
   <info>
@@ -34,20 +35,19 @@
 
 <section id="images">
 <title>Images available</title>
-  <media type="image" src="figures/color-balls.png" width="300" style="floatleft">
-  <p>Five or More with different balls</p>
+  <media type="image" src="figures/color-balls.png" width="300" style="floatleft" its:translate="no">
+  <p its:translate="yes">Five or More with different balls</p>
 </media>
 
-<media type="image" src="figures/color-shapes.png" width="300">
-<p><app>Five or More</app> with different shapes</p>
+<media type="image" src="figures/color-shapes.png" width="300" its:translate="no">
+<p its:translate="yes"><app>Five or More</app> with different shapes</p>
 </media>
 </section>
 
 <section id="colors">
 <title>Background colors available</title>
- <media type="image" src="figures/pickcolor.png" width="200
-">
-<p>Five or More color palette</p>
+ <media type="image" src="figures/pickcolor.png" width="200" its:translate="no">
+<p its:translate="yes">Five or More color palette</p>
 </media>
 </section>
 </page>

@@ -1,4 +1,5 @@
 <page xmlns="http://projectmallard.org/1.0/"
+      xmlns:its="http://www.w3.org/2005/11/its"
       type="topic" style="task"
       id="rules">
   <info>
@@ -41,23 +42,23 @@
 <table>
  <tr>
   <td>
-  <media type="image" src="figures/horizontal.png" width="200">
-    <p>Example horizontal alignment</p>
+  <media type="image" src="figures/horizontal.png" width="200" its:translate="no">
+    <p its:translate="yes">Example horizontal alignment</p>
   </media>
    </td>
    <td>
-  <media type="image" src="figures/vertical.png" width="200">
-    <p>Example vertical alignment</p>
+  <media type="image" src="figures/vertical.png" width="200" its:translate="no">
+    <p its:translate="yes">Example vertical alignment</p>
   </media>
    </td>
    <td>
-  <media type="image" src="figures/diagonal.png" width="200">
-    <p>Example diagonal alignment</p>
+  <media type="image" src="figures/diagonal.png" width="200" its:translate="no">
+    <p its:translate="yes">Example diagonal alignment</p>
   </media>
    </td>
    <td>
-  <media type="image" src="figures/glines-gameover.png" width="200">
-    <p><app>Five or More</app> game over position.</p>
+  <media type="image" src="figures/glines-gameover.png" width="200" its:translate="no">
+    <p its:translate="yes"><app>Five or More</app> game over position.</p>
   </media>
     </td>
    </tr>
