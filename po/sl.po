@@ -5,22 +5,23 @@
 # Matej Erman <matej.erman@guest.arnes.si>, 2002.
 # Tadej Janež <tadej_janez@email.si>, 2003.
 # Matic Žgur <mr.zgur@gmail.com>, 2006-2007.
-# Matej Urbančič <mateju@svn.gnome.org>, 2007-2013.
+# Matej Urbančič <mateju@svn.gnome.org>, 2007-2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: five-or-more master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-"
 "or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-12-19 00:12+0000\n"
-"PO-Revision-Date: 2013-12-23 20:14+0100\n"
+"POT-Creation-Date: 2014-03-31 17:08+0000\n"
+"PO-Revision-Date: 2014-03-31 22:36+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: sl_SI\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n%100==4 ? 3 : 0);\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
+"%100==4 ? 3 : 0);\n"
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Generator: Poedit 1.5.4\n"
 
@@ -43,6 +44,19 @@ msgid ""
 msgstr ""
 "Na vsaki novi ravni je več predmetov. Igra se konča, ko je zapolnjeno vsako "
 "mesto na plošči."
+
+#: ../data/five-or-more.desktop.in.h:1 ../data/five-or-more.ui.h:1
+#: ../src/glines.c:1181 ../src/glines.c:1687
+msgid "Five or More"
+msgstr "Pet ali več"
+
+#: ../data/five-or-more.desktop.in.h:2
+msgid "Remove colored balls from the board by forming lines"
+msgstr "Odstrani barvne kroglice s plošče s postavljanjem kroglic v vrste"
+
+#: ../data/five-or-more.desktop.in.h:3
+msgid "game;strategy;logic;"
+msgstr "igra;strateška;logika;"
 
 #: ../data/five-or-more-preferences.ui.h:1
 msgid "Five or More Preferences"
@@ -84,32 +98,23 @@ msgstr "Splošno"
 msgid "_Use fast moves"
 msgstr "_Uporabi hitre poteze"
 
-#: ../data/five-or-more.ui.h:1 ../data/glines.desktop.in.h:1
-#: ../src/glines.c:1180 ../src/glines.c:1684
-msgid "Five or More"
-msgstr "Pet ali več"
-
 #: ../data/five-or-more.ui.h:2
 msgid "Next:"
 msgstr "Naslednje:"
 
 #: ../data/five-or-more.ui.h:3
-msgid "Score:"
-msgstr "Rezultat:"
-
-#: ../data/five-or-more.ui.h:4
 msgid "0"
 msgstr "0"
 
-#: ../data/glines.desktop.in.h:2
-msgid "Remove colored balls from the board by forming lines"
-msgstr "Odstrani barvne kroglice s plošče s postavljanjem kroglic v vrste"
+#: ../data/five-or-more.ui.h:4
+msgid "Score:"
+msgstr "Rezultat:"
 
-#: ../data/glines.desktop.in.h:3
-msgid "game;strategy;logic;"
-msgstr "igra;strateška;logika;"
+#: ../data/five-or-more.ui.h:5 ../src/games-stock.c:48
+msgid "Start a new game"
+msgstr "Začni novo igro"
 
-#: ../data/menu.ui.h:1 ../src/games-scores-dialog.c:470
+#: ../data/menu.ui.h:1 ../src/games-scores-dialog.c:385
 msgid "New Game"
 msgstr "Nova igra"
 
@@ -117,7 +122,7 @@ msgstr "Nova igra"
 msgid "Scores"
 msgstr "Rezultati"
 
-#: ../data/menu.ui.h:3 ../src/glines.c:175
+#: ../data/menu.ui.h:3 ../src/glines.c:176
 msgid "Preferences"
 msgstr "Možnosti"
 
@@ -209,32 +214,26 @@ msgid "true if the window is fullscren"
 msgstr "prav, če je okno razpeto čez celoten zaslon"
 
 #. Score dialog column header for the score time (e.g. 1 minute)
-#: ../src/games-scores-dialog.c:136
+#: ../src/games-scores-dialog.c:132
 msgctxt "score-dialog"
 msgid "Time"
 msgstr "Čas"
 
 #. Score dialog column header for the score value (e.g. 30 moves)
-#: ../src/games-scores-dialog.c:142
+#: ../src/games-scores-dialog.c:138
 msgctxt "score-dialog"
 msgid "Score"
 msgstr "Rezultat"
 
 #. Score format for time based scores.  %1$d is the time in minutes, %2$d is the time in seconds
-#: ../src/games-scores-dialog.c:307
+#: ../src/games-scores-dialog.c:225
 #, c-format
 msgctxt "score-dialog"
 msgid "%1$dm %2$ds"
 msgstr "%1$dm %2$ds"
 
-#. Score dialog column header for the name of the player who recorded the score
-#: ../src/games-scores-dialog.c:571
-msgctxt "score-dialog"
-msgid "Name"
-msgstr "Ime"
-
 #. Score dialog column header for the date the score was recorded
-#: ../src/games-scores-dialog.c:580
+#: ../src/games-scores-dialog.c:478
 msgid "Date"
 msgstr "Datum"
 
@@ -265,10 +264,6 @@ msgstr "Začni novo omrežno igro"
 #: ../src/games-stock.c:47
 msgid "End the current network game and return to network server"
 msgstr "Zaključi trenutno omrežno igro in se vrni na omrežni strežnik"
-
-#: ../src/games-stock.c:48
-msgid "Start a new game"
-msgstr "Začni novo igro"
 
 #: ../src/games-stock.c:49
 msgid "Pause the game"
@@ -451,11 +446,11 @@ msgctxt "board size"
 msgid "Large"
 msgstr "Velika"
 
-#: ../src/glines.c:169
+#: ../src/glines.c:170
 msgid "Could not load theme"
 msgstr "Ni mogoče naložiti teme"
 
-#: ../src/glines.c:195
+#: ../src/glines.c:196
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -468,7 +463,7 @@ msgstr ""
 "\n"
 "Naložena bo privzeta tema."
 
-#: ../src/glines.c:202
+#: ../src/glines.c:203
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -485,24 +480,24 @@ msgstr ""
 msgid "Match five objects of the same type in a row to score!"
 msgstr "Za pridobitev točk postavite v vrsto pet kroglic iste barve!"
 
-#: ../src/glines.c:474
-msgid "GNOME Five or More"
-msgstr "Pet ali več za GNOME"
+#: ../src/glines.c:475
+msgid "Five or More Scores"
+msgstr "Rezultati igre Pet ali ve"
 
-#: ../src/glines.c:476
+#: ../src/glines.c:477
 msgid "_Board size:"
 msgstr "_Velikost plošče:"
 
-#: ../src/glines.c:493
+#: ../src/glines.c:494
 msgid "Game Over!"
 msgstr "Konec igre!"
 
 #. Can't move there!
-#: ../src/glines.c:650
-msgid "You can't move there!"
-msgstr "Ta premik ni možen!"
+#: ../src/glines.c:651
+msgid "You can’t move there!"
+msgstr "Ta premik ni dovoljen!"
 
-#: ../src/glines.c:1182
+#: ../src/glines.c:1183
 msgid ""
 "GNOME port of the once-popular Color Lines game\n"
 "\n"
@@ -512,7 +507,7 @@ msgstr ""
 "\n"
 "Igra Pet ali več je del iger GNOME."
 
-#: ../src/glines.c:1188
+#: ../src/glines.c:1189
 msgid "translator-credits"
 msgstr ""
 "Matic Žgur <mr.zgur@gmail.com>\n"
@@ -520,9 +515,15 @@ msgstr ""
 "Tadej Janež <tadej_janez@email.si>\n"
 "Matej Urbančič <mateju@svn.gnome.org>"
 
-#: ../src/glines.c:1191
-msgid "GNOME Games web site"
-msgstr "Spletna stran GNOME iger"
+#~ msgctxt "score-dialog"
+#~ msgid "Name"
+#~ msgstr "Ime"
+
+#~ msgid "GNOME Five or More"
+#~ msgstr "Pet ali več za GNOME"
+
+#~ msgid "GNOME Games web site"
+#~ msgstr "Spletna stran GNOME iger"
 
 #~ msgid "Five or more"
 #~ msgstr "Pet ali več"
