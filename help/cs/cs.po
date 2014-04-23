@@ -464,7 +464,7 @@ msgstr "Pět nebo víc"
 #. (itstool) path: media/span
 #: C/index.page:27
 msgid "Five or More logo"
-msgstr "Logo Pět nebo víc"
+msgstr "Logo hry Pět nebo víc"
 
 #. (itstool) path: page/title
 #: C/index.page:26
