@@ -15,11 +15,14 @@ dnl ###########################################################################
 dnl Dependencies
 dnl ###########################################################################
 
+GLIB_REQUIRED=2.32
 GTK_REQUIRED=3.12.0
 RSVG_REQUIRED=2.32.0
 
 PKG_CHECK_MODULES(FIVE_OR_MORE, [
   gmodule-2.0
+  glib-2.0 >= $GLIB_REQUIRED
+  gio-2.0 >= $GLIB_REQUIRED
   gtk+-3.0 >= $GTK_REQUIRED
   librsvg-2.0 >= $RSVG_REQUIRED
 ])
