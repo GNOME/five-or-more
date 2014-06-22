@@ -8,5 +8,4 @@ data/five-or-more.desktop.in
 [type: gettext/glade]data/menu.ui
 data/org.gnome.five-or-more.gschema.xml
 src/games-scores-dialog.c
-src/games-stock.c
 src/glines.c
