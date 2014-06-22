@@ -42,7 +42,6 @@
 #include "games-gridframe.h"
 #include "games-scores.h"
 #include "games-scores-dialog.h"
-#include "games-stock.h"
 
 #define KEY_BACKGROUND_COLOR  "background-color"
 #define KEY_BALL_THEME        "ball-theme"
@@ -1552,8 +1551,6 @@ startup_cb (GApplication *application)
                                  GAMES_SCORES_STYLE_PLAIN_DESCENDING);
 
   init_config ();
-
-  games_stock_init ();
 
   builder = gtk_builder_new ();
 

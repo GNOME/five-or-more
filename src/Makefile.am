@@ -15,8 +15,6 @@ five_or_more_SOURCES =	\
 	games-scores-dialog.h	\
 	games-scores-backend.c	\
 	games-scores-backend.h \
-	games-stock.c	\
-	games-stock.h	\
 	glines.c	\
 	glines.h
 
