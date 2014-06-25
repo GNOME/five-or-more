@@ -318,9 +318,9 @@ refresh_preview_surfaces (void)
   }
 
   for (i = 0; i < 7; i++) {
-    preview_surfaces[i] = gdk_window_create_similar_surface (gtk_widget_get_window (widget),
-                                                             CAIRO_CONTENT_COLOR_ALPHA,
-                                                             PREVIEW_IMAGE_WIDTH, PREVIEW_IMAGE_HEIGHT);
+    preview_surfaces[i] = gdk_window_create_similar_image_surface (gtk_widget_get_window (widget),
+                                                                   CAIRO_FORMAT_ARGB32,
+                                                                   PREVIEW_IMAGE_WIDTH, PREVIEW_IMAGE_HEIGHT, 1);
     cr = cairo_create (preview_surfaces[i]);
     gdk_cairo_set_source_rgba (cr, &bg);
     gdk_cairo_rectangle (cr, &preview_rect);
