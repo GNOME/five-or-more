@@ -31,7 +31,7 @@
               <object class="GtkLabel" id="appearance">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="xalign">0</property>
+                <property name="halign">start</property>
                 <property name="label" translatable="yes">Appearance</property>
                 <attributes>
                   <attribute name="weight" value="bold"/>
@@ -47,7 +47,7 @@
               <object class="GtkGrid" id="grid1">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="margin_left">12</property>
+                <property name="margin_start">12</property>
                 <property name="hexpand">True</property>
                 <property name="row_spacing">6</property>
                 <property name="column_spacing">12</property>
@@ -55,7 +55,7 @@
                   <object class="GtkLabel" id="label1">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="xalign">0</property>
+                    <property name="halign">start</property>
                     <property name="label" translatable="yes">_Image:</property>
                     <property name="use_underline">True</property>
                   </object>
@@ -70,7 +70,7 @@
                   <object class="GtkLabel" id="label2">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="xalign">0</property>
+                    <property name="halign">start</property>
                     <property name="label" translatable="yes">B_ackground color:</property>
                     <property name="use_underline">True</property>
                     <property name="mnemonic_widget">colorbutton1</property>
@@ -112,7 +112,7 @@
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="margin_top">12</property>
-                <property name="xalign">0</property>
+                <property name="halign">start</property>
                 <property name="label" translatable="yes">Board Size</property>
                 <attributes>
                   <attribute name="weight" value="bold"/>
@@ -136,10 +136,10 @@
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">False</property>
-                    <property name="margin_left">12</property>
+                    <property name="margin_start">12</property>
                     <property name="use_action_appearance">False</property>
                     <property name="use_underline">True</property>
-                    <property name="xalign">0</property>
+                    <property name="halign">start</property>
                     <property name="active">True</property>
                     <property name="draw_indicator">True</property>
                   </object>
@@ -155,10 +155,10 @@
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">False</property>
-                    <property name="margin_left">12</property>
+                    <property name="margin_start">12</property>
                     <property name="use_action_appearance">False</property>
                     <property name="use_underline">True</property>
-                    <property name="xalign">0</property>
+                    <property name="halign">start</property>
                     <property name="draw_indicator">True</property>
                     <property name="group">radiobutton_small</property>
                   </object>
@@ -174,10 +174,10 @@
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">False</property>
-                    <property name="margin_left">12</property>
+                    <property name="margin_start">12</property>
                     <property name="use_action_appearance">False</property>
                     <property name="use_underline">True</property>
-                    <property name="xalign">0</property>
+                    <property name="halign">start</property>
                     <property name="draw_indicator">True</property>
                     <property name="group">radiobutton_small</property>
                   </object>
@@ -199,7 +199,7 @@
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="margin_top">12</property>
-                <property name="xalign">0</property>
+                <property name="halign">start</property>
                 <property name="label" translatable="yes">General</property>
                 <attributes>
                   <attribute name="weight" value="bold"/>
@@ -217,10 +217,10 @@
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">False</property>
-                <property name="margin_left">12</property>
+                <property name="margin_start">12</property>
                 <property name="use_action_appearance">False</property>
                 <property name="use_underline">True</property>
-                <property name="xalign">0</property>
+                <property name="halign">start</property>
                 <property name="draw_indicator">True</property>
               </object>
               <packing>
