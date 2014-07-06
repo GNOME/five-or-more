@@ -36,7 +36,7 @@
 #include <gdk-pixbuf/gdk-pixbuf.h>
 #include <gdk/gdkkeysyms.h>
 
-#include "glines.h"
+#include "five-or-more.h"
 #include "games-file-list.h"
 #include "games-preimage.h"
 #include "games-gridframe.h"
@@ -1072,7 +1072,7 @@ animate (gpointer gp)
   GtkWidget *widget = GTK_WIDGET (gp);
   int x, y;
   int newactive = 0;
-    
+
   x = active % hfieldsize;
   y = active / hfieldsize;
 
@@ -1506,7 +1506,7 @@ window_configure_event_cb (GtkWidget *widget, GdkEventConfigure *event)
     window_width = event->width;
     window_height = event->height;
   }
-  
+
   return FALSE;
 }
 
@@ -1687,7 +1687,7 @@ main (int argc, char *argv[])
   g_signal_connect (application, "activate", G_CALLBACK (activate_cb), NULL);
   g_signal_connect (application, "shutdown", G_CALLBACK (shutdown_cb), NULL);
 
-  status = g_application_run (G_APPLICATION (application), argc, argv);  
+  status = g_application_run (G_APPLICATION (application), argc, argv);
 
   if (ball_preimage)
     g_object_unref (ball_preimage);

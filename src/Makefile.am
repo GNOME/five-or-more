@@ -1,6 +1,8 @@
 bin_PROGRAMS = five-or-more
 
 five_or_more_SOURCES =	\
+	five-or-more.c	\
+	five-or-more.h	\
 	games-file-list.c	\
 	games-file-list.h	\
 	games-gridframe.c	\
@@ -14,9 +16,7 @@ five_or_more_SOURCES =	\
 	games-scores-dialog.c	\
 	games-scores-dialog.h	\
 	games-scores-backend.c	\
-	games-scores-backend.h \
-	glines.c	\
-	glines.h
+	games-scores-backend.h
 
 five_or_more_CPPFLAGS = \
 	-I$(top_srcdir) \
