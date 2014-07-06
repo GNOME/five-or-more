@@ -98,7 +98,6 @@ static GRand *rgen;
 
 static GtkWidget *draw_area;
 static GtkWidget *app, *headerbar, *pref_dialog, *gridframe;
-static GtkWidget *preview_widgets[MAXNPIECES];
 static GtkWidget *new_game_button;
 
 static gint window_width = 0, window_height = 0;
@@ -280,7 +279,7 @@ refresh_preview_surfaces (void)
 {
   guint i;
   GdkPixbuf *scaled = NULL;
-  GtkWidget *widget = preview_widgets[0];
+  GtkWidget *widget = GTK_WIDGET (preview_images[0]);
   GtkStyleContext *context;
   GdkRGBA bg;
   cairo_t *cr;
@@ -1591,14 +1590,9 @@ startup_cb (GApplication *application)
   preview_hbox = GTK_WIDGET (gtk_builder_get_object (builder, "preview_hbox"));
 
   for (i = 0; i < MAXNPIECES; i++) {
-    // FIXME This array of drawing areas is used just so we can get the style
-    // context from the first one in refresh_preview_surfaces() -- remove it
-    preview_widgets[i] = gtk_drawing_area_new ();
-    gtk_box_pack_start (GTK_BOX (preview_hbox), preview_widgets[i], TRUE, TRUE, 0);
-    gtk_widget_realize (preview_widgets[i]);
-
     preview_images[i] = GTK_IMAGE (gtk_image_new ());
     gtk_box_pack_start (GTK_BOX (preview_hbox), GTK_WIDGET (preview_images[i]), FALSE, FALSE, 0);
+    gtk_widget_realize (GTK_WIDGET (preview_images[i]));
   }
 
   scorelabel = GTK_WIDGET (gtk_builder_get_object (builder, "scorelabel"));
