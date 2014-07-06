@@ -695,10 +695,8 @@ button_press_event (GtkWidget * widget, GdkEvent * event)
     draw_box (draw_area, cursor_x, cursor_y);
   }
 
-  /* FIXMEchpe: why not use event->[xy] here? */
-  gtk_widget_get_pointer (widget, &x, &y);
-  fx = x / boxsize;
-  fy = y / boxsize;
+  fx = event->button.x / boxsize;
+  fy = event->button.y / boxsize;
 
   /* If we click on the outer border pixels, the previous calculation
    * will be wrong and we must correct. */
@@ -1285,7 +1283,7 @@ bg_color_callback (GtkWidget * widget, gpointer data)
   GdkRGBA c;
   char str[64];
 
-  gtk_color_button_get_rgba (GTK_COLOR_BUTTON (widget), &c);
+  gtk_color_chooser_get_rgba (GTK_COLOR_CHOOSER (widget), &c);
 
   g_snprintf (str, sizeof (str), "#%04x%04x%04x", (int) (c.red * 65535 + 0.5), (int) (c.green * 65535 + 0.5), (int) (c.blue * 65535 + 0.5));
 
@@ -1384,7 +1382,7 @@ game_props_callback (GSimpleAction *action,
                       G_CALLBACK (set_selection), NULL);
 
     color_button = GTK_WIDGET (gtk_builder_get_object (builder_preferences, "colorbutton1"));
-    gtk_color_button_set_rgba (GTK_COLOR_BUTTON (color_button), &backgnd.color);
+    gtk_color_chooser_set_rgba (GTK_COLOR_CHOOSER (color_button), &backgnd.color);
     g_signal_connect (color_button, "color-set",
                       G_CALLBACK (bg_color_callback), NULL);
 
