@@ -98,7 +98,6 @@ static GRand *rgen;
 
 static GtkWidget *draw_area;
 static GtkWidget *app, *headerbar, *pref_dialog, *gridframe;
-static GtkWidget *new_game_button;
 
 static gint window_width = 0, window_height = 0;
 static gboolean window_is_fullscreen = FALSE, window_is_maximized = FALSE;
@@ -416,7 +415,6 @@ start_game (void)
   g_snprintf (string, 19, "%d", score);
   gtk_label_set_text (GTK_LABEL (scorelabel), string);
   set_inmove (0);
-  gtk_widget_hide (new_game_button);
 }
 
 static void
@@ -492,7 +490,6 @@ game_over (void)
   set_status_message (_("Game Over!"));
   pos = games_scores_add_plain_score (highscores, score);
   show_scores (pos);
-  gtk_widget_show (new_game_button);
 }
 
 static int
@@ -1523,6 +1520,7 @@ startup_cb (GApplication *application)
   gchar *ui_path;
   GtkWidget *hbox;
   GtkWidget *preview_hbox;
+  GtkWidget *new_game_button;
   guint i;
   GError *error = NULL;
 
