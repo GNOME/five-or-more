@@ -71,21 +71,16 @@
         <property name="orientation">horizontal</property>
         <child>
           <object class="GtkButton" id="new_game_button">
-            <property name="visible">False</property>
-            <property name="can_focus">True</property>
-            <property name="relief">GTK_RELIEF_NONE</property>
-            <property name="valign">GTK_ALIGN_END</property>
-            <property name="action-name">app.new</property>
-            <property name="tooltip-text" translatable="yes">Start a new game</property>
-            <child>
-              <object class="GtkImage" id="new_game_button_image">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="icon-name">view-refresh-symbolic</property>
-                <property name="icon-size">6</property>
-              </object>
-            </child>
-          </object>
+                <property name="use_underline">True</property>
+                <property name="label" translatable="yes">_New Game</property>
+                <property name="halign">center</property>
+                <property name="valign">end</property>
+                <property name="action-name">app.new-game</property>
+                <property name="tooltip-text" translatable="yes">Start a new puzzle</property>
+                <property name="width-request">120</property>
+                <property name="height-request">60</property>
+            </object>
           <packing>
             <property name="expand">False</property>
             <property name="fill">False</property>
