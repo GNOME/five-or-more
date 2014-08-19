@@ -1525,7 +1525,7 @@ startup_cb (GApplication *application)
   GError *error = NULL;
 
   GActionEntry app_actions[] = {
-    { "new", game_new_callback },
+    { "new-game", game_new_callback },
     { "scores", game_top_ten_callback },
     { "preferences", game_props_callback },
     { "help", game_help_callback },
