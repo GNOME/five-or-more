@@ -5,10 +5,10 @@
 # Torstein Adolf Winterseth <kvikende@fsfe.org>, 2010.
 msgid ""
 msgstr ""
-"Project-Id-Version: five-or-more 3.11.x\n"
+"Project-Id-Version: five-or-more 3.13.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-19 23:28+0100\n"
-"PO-Revision-Date: 2014-02-19 23:29+0100\n"
+"POT-Creation-Date: 2014-08-23 12:11+0200\n"
+"PO-Revision-Date: 2014-08-23 12:12+0200\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian bokmål <i18n-nb@lister.ping.uio.no>\n"
 "Language: nb\n"
@@ -38,7 +38,7 @@ msgstr ""
 "brettet er helt fullt."
 
 #: ../data/five-or-more.desktop.in.h:1 ../data/five-or-more.ui.h:1
-#: ../src/glines.c:1181 ../src/glines.c:1687
+#: ../src/five-or-more.c:1174 ../src/five-or-more.c:1671
 msgid "Five or More"
 msgstr "Fem eller flere"
 
@@ -50,9 +50,10 @@ msgstr "Fjern fargede baller fra brettet ved å lage linjer"
 msgid "game;strategy;logic;"
 msgstr "spill;strategi;logikk;"
 
-#: ../data/five-or-more-preferences.ui.h:1
-msgid "Five or More Preferences"
-msgstr "Brukervalg for fem eller flere"
+#: ../data/five-or-more-preferences.ui.h:1 ../data/menu.ui.h:3
+#: ../src/five-or-more.c:173
+msgid "Preferences"
+msgstr "Brukervalg"
 
 #: ../data/five-or-more-preferences.ui.h:2
 msgid "Appearance"
@@ -102,9 +103,13 @@ msgstr "0"
 msgid "Score:"
 msgstr "Poeng:"
 
-#: ../data/five-or-more.ui.h:5 ../src/games-stock.c:48
-msgid "Start a new game"
-msgstr "Start et nytt spill"
+#: ../data/five-or-more.ui.h:5
+msgid "_New Game"
+msgstr "_Nytt spill"
+
+#: ../data/five-or-more.ui.h:6
+msgid "Start a new puzzle"
+msgstr "Start et nytt puslespill"
 
 #: ../data/menu.ui.h:1 ../src/games-scores-dialog.c:385
 msgid "New Game"
@@ -113,10 +118,6 @@ msgstr "Nytt spill"
 #: ../data/menu.ui.h:2
 msgid "Scores"
 msgstr "Poeng"
-
-#: ../data/menu.ui.h:3 ../src/glines.c:176
-msgid "Preferences"
-msgstr "Brukervalg"
 
 #: ../data/menu.ui.h:4
 msgid "Help"
@@ -201,9 +202,88 @@ msgstr "Høyden på vinduet i piksler"
 msgid "true if the window is maximized"
 msgstr "«true» hvis vinduet er maksimert"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:18
-msgid "true if the window is fullscren"
-msgstr "«true» hvis vinduet er fullskjerm"
+#: ../src/five-or-more.c:80
+msgctxt "board size"
+msgid "Small"
+msgstr "Liten"
+
+#: ../src/five-or-more.c:81
+msgctxt "board size"
+msgid "Medium"
+msgstr "Middels"
+
+#: ../src/five-or-more.c:82
+msgctxt "board size"
+msgid "Large"
+msgstr "Stor"
+
+#: ../src/five-or-more.c:167
+msgid "Could not load theme"
+msgstr "Kunne ikke laste tema"
+
+#: ../src/five-or-more.c:193
+#, c-format
+msgid ""
+"Unable to locate file:\n"
+"%s\n"
+"\n"
+"The default theme will be loaded instead."
+msgstr ""
+"Kan ikke finne filen:\n"
+"%s\n"
+"\n"
+"Forvalgt tema vil bli lastet i stedet."
+
+#: ../src/five-or-more.c:200
+#, c-format
+msgid ""
+"Unable to locate file:\n"
+"%s\n"
+"\n"
+"Please check that Five or More is installed correctly."
+msgstr ""
+"Kan ikke finne filen:\n"
+"%s\n"
+"\n"
+"Vennligst sjekk at Fem eller flere er korrekt installert."
+
+#: ../src/five-or-more.c:410
+msgid "Match five objects of the same type in a row to score!"
+msgstr "Få fem objekter med samme farge på rad for å vinne!"
+
+#: ../src/five-or-more.c:471
+msgid "Five or More Scores"
+msgstr "Poeng for Fem eller flere"
+
+#: ../src/five-or-more.c:473
+msgid "_Board size:"
+msgstr "Størrelse på _brett"
+
+#: ../src/five-or-more.c:490
+msgid "Game Over!"
+msgstr "Spillet er over!"
+
+#. Can't move there!
+#: ../src/five-or-more.c:646
+msgid "You can’t move there!"
+msgstr "Kan ikke flytte dit!"
+
+#: ../src/five-or-more.c:1176
+msgid ""
+"GNOME port of the once-popular Color Lines game\n"
+"\n"
+"Five or More is a part of GNOME Games."
+msgstr ""
+"GNOME versjon av det tidligere populære Color Lines-spillet.\n"
+"\n"
+"Fem eller flere er en del av GNOME spill."
+
+#: ../src/five-or-more.c:1182
+msgid "translator-credits"
+msgstr ""
+"Kjartan Maraas <kmaraas@gnome.org>\n"
+"Espen Stefansen <espens@svn.gnome.org>\n"
+"Torstein Adolf Winterseth <kvikende@fsfe.org>"
 
 #. Score dialog column header for the score time (e.g. 1 minute)
 #: ../src/games-scores-dialog.c:132
@@ -228,279 +308,3 @@ msgstr "%1$dm %2$ds"
 #: ../src/games-scores-dialog.c:478
 msgid "Date"
 msgstr "Dato"
-
-#: ../src/games-stock.c:41
-msgid "View help for this game"
-msgstr "Vis hjelp for dette spillet"
-
-#: ../src/games-stock.c:42
-msgid "End the current game"
-msgstr "Avslutt dette spillet"
-
-#: ../src/games-stock.c:43
-msgid "Toggle fullscreen mode"
-msgstr "Slå av/på fullskjermmodus"
-
-#: ../src/games-stock.c:44
-msgid "Get a hint for your next move"
-msgstr "Hint for ditt neste trekk"
-
-#: ../src/games-stock.c:45
-msgid "Leave fullscreen mode"
-msgstr "Avslutt fullskjerm"
-
-#: ../src/games-stock.c:46
-msgid "Start a new multiplayer network game"
-msgstr "Start et nytt spill med flere spillere over nettverket"
-
-#: ../src/games-stock.c:47
-msgid "End the current network game and return to network server"
-msgstr "Avslutt aktivt nettverksspill og gå tilbake til nettverkstjener"
-
-#: ../src/games-stock.c:49
-msgid "Pause the game"
-msgstr "Paus spillet"
-
-#: ../src/games-stock.c:50
-msgid "Show a list of players in the network game"
-msgstr "Vis en liste over spillere på nettverksspillet"
-
-#: ../src/games-stock.c:51
-msgid "Redo the undone move"
-msgstr "Gjenopprett angret trekk"
-
-#: ../src/games-stock.c:52
-msgid "Restart the game"
-msgstr "Start spillet på nytt"
-
-#: ../src/games-stock.c:53
-msgid "Resume the paused game"
-msgstr "Start spillet igjen"
-
-#: ../src/games-stock.c:54
-msgid "View the scores"
-msgstr "Vis poeng"
-
-#: ../src/games-stock.c:55
-msgid "Undo the last move"
-msgstr "Angre forrige trekk"
-
-#: ../src/games-stock.c:56
-msgid "About this game"
-msgstr "Om dette spillet"
-
-#: ../src/games-stock.c:57
-msgid "Close this window"
-msgstr "Lukk dette vinduet"
-
-#: ../src/games-stock.c:58
-msgid "Configure the game"
-msgstr "Sett opp spillet"
-
-#: ../src/games-stock.c:59
-msgid "Quit this game"
-msgstr "Avslutt spillet"
-
-#: ../src/games-stock.c:247
-msgid "_Contents"
-msgstr "_Innhold"
-
-#: ../src/games-stock.c:248
-msgid "_Fullscreen"
-msgstr "_Fullskjerm"
-
-#: ../src/games-stock.c:249
-msgid "_Hint"
-msgstr "_Hint"
-
-#. Translators: This "_New" is for the menu item 'Game->New', implies "New Game"
-#: ../src/games-stock.c:251
-msgid "_New"
-msgstr "_Nytt"
-
-#. Translators: This "_New Game" is for the game-over dialogue
-#: ../src/games-stock.c:253
-msgid "_New Game"
-msgstr "_Nytt spill"
-
-#: ../src/games-stock.c:254
-msgid "_Redo Move"
-msgstr "_Gjenopprett trekk"
-
-#. Translators: this is the "Reset" scores button in a scores dialogue
-#: ../src/games-stock.c:256
-msgid "_Reset"
-msgstr "_Nullstill"
-
-#. Translators: "_Restart" is the menu item 'Game->Restart', implies "Restart Game"
-#: ../src/games-stock.c:258
-msgid "_Restart"
-msgstr "Sta_rt på nytt"
-
-#: ../src/games-stock.c:259
-msgid "_Undo Move"
-msgstr "_Angre trekk"
-
-#: ../src/games-stock.c:260
-msgid "_Deal"
-msgstr "_Del ut"
-
-#: ../src/games-stock.c:261
-msgid "_Leave Fullscreen"
-msgstr "_Forlat fullskjerm"
-
-#: ../src/games-stock.c:262
-msgid "Network _Game"
-msgstr "Nettver_ksspill"
-
-#: ../src/games-stock.c:263
-msgid "L_eave Game"
-msgstr "F_orlat spill"
-
-#: ../src/games-stock.c:264
-msgid "Player _List"
-msgstr "Spiller_liste"
-
-#: ../src/games-stock.c:265
-msgid "_Pause"
-msgstr "_Pause"
-
-#: ../src/games-stock.c:266
-msgid "Res_ume"
-msgstr "Fort_sett"
-
-#: ../src/games-stock.c:267
-msgid "_Scores"
-msgstr "_Poeng"
-
-#: ../src/games-stock.c:268
-msgid "_End Game"
-msgstr "A_vslutt spill"
-
-#. %s is replaced with the name of the game in gnome-games.
-#: ../src/games-stock.c:317
-#, c-format
-msgid ""
-"%s is free software; you can redistribute it and/or modify it under the "
-"terms of the GNU General Public License as published by the Free Software "
-"Foundation; either version %d of the License, or (at your option) any later "
-"version."
-msgstr ""
-"%s er fri programvare. Du kan redistribuere og/eller endre programmet under "
-"betingelsene gitt i GNU General Public License som utgitt av Free Software "
-"Foundation; enten versjon %d av lisensen, eller (hvis du ønsker det) enhver "
-"senere versjon."
-
-#: ../src/games-stock.c:322
-#, c-format
-msgid ""
-"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
-"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
-"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
-"details."
-msgstr ""
-"%s distribueres i håp om at programmet er nyttig, men UTEN NOEN GARANTI, "
-"ikke engang implisitt garanti om at det er SALGBART eller PASSER ET BESTEMT "
-"FORMÅL. Se GNU General Public License for detaljer."
-
-#: ../src/games-stock.c:327
-#, c-format
-msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
-"Fifth Floor, Boston, MA  02110-1301  USA"
-msgstr ""
-"Du skal ha mottatt en kopi av GNU General Public License sammen med %s. Hvis "
-"ikke så skriv til Free Software Foundation, Inc., 51 Franklin Street, Fifth "
-"Floor, Boston, MA  02110-1301  USA."
-
-#: ../src/games-stock.c:331
-msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"this program.  If not, see <http://www.gnu.org/licenses/>."
-msgstr ""
-"Du skal ha mottatt en kopi av GNU General Public License sammen med %s. Hvis "
-"ikke se på <http://www.gnu.org/licenses/>."
-
-#: ../src/glines.c:81
-msgctxt "board size"
-msgid "Small"
-msgstr "Liten"
-
-#: ../src/glines.c:82
-msgctxt "board size"
-msgid "Medium"
-msgstr "Middels"
-
-#: ../src/glines.c:83
-msgctxt "board size"
-msgid "Large"
-msgstr "Stor"
-
-#: ../src/glines.c:170
-msgid "Could not load theme"
-msgstr "Kunne ikke laste tema"
-
-#: ../src/glines.c:196
-#, c-format
-msgid ""
-"Unable to locate file:\n"
-"%s\n"
-"\n"
-"The default theme will be loaded instead."
-msgstr ""
-"Kan ikke finne filen:\n"
-"%s\n"
-"\n"
-"Forvalgt tema vil bli lastet i stedet."
-
-#: ../src/glines.c:203
-#, c-format
-msgid ""
-"Unable to locate file:\n"
-"%s\n"
-"\n"
-"Please check that Five or More is installed correctly."
-msgstr ""
-"Kan ikke finne filen:\n"
-"%s\n"
-"\n"
-"Vennligst sjekk at Fem eller flere er korrekt installert."
-
-#: ../src/glines.c:413
-msgid "Match five objects of the same type in a row to score!"
-msgstr "Få fem objekter med samme farge på rad for å vinne!"
-
-#: ../src/glines.c:475
-msgid "Five or More Scores"
-msgstr "Poeng for Fem eller flere"
-
-#: ../src/glines.c:477
-msgid "_Board size:"
-msgstr "Størrelse på _brett"
-
-#: ../src/glines.c:494
-msgid "Game Over!"
-msgstr "Spillet er over!"
-
-#. Can't move there!
-#: ../src/glines.c:651
-msgid "You can’t move there!"
-msgstr "Kan ikke flytte dit!"
-
-#: ../src/glines.c:1183
-msgid ""
-"GNOME port of the once-popular Color Lines game\n"
-"\n"
-"Five or More is a part of GNOME Games."
-msgstr ""
-"GNOME versjon av det tidligere populære Color Lines-spillet.\n"
-"\n"
-"Fem eller flere er en del av GNOME spill."
-
-#: ../src/glines.c:1189
-msgid "translator-credits"
-msgstr ""
-"Kjartan Maraas <kmaraas@gnome.org>\n"
-"Espen Stefansen <espens@svn.gnome.org>\n"
-"Torstein Adolf Winterseth <kvikende@fsfe.org>"
