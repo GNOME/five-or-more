@@ -1409,6 +1409,8 @@ game_props_callback (GSimpleAction *action,
     g_signal_connect (fast_moves_checkbutton, "clicked",
                       G_CALLBACK (set_fast_moves_callback), NULL);
 
+    g_object_unref (G_OBJECT (builder_preferences));
+
     pref_dialog_done = TRUE;
   }
 
@@ -1620,6 +1622,8 @@ startup_cb (GApplication *application)
   load_properties ();
 
   gtk_builder_connect_signals (builder, NULL);
+
+  g_object_unref (G_OBJECT (builder));
 }
 
 static void
