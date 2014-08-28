@@ -4,15 +4,15 @@
 # Copyright (C) 2005 THE PACKAGE'S COPYRIGHT HOLDER
 # Gil 'Dolfin' Osher <dolfin@rpg.org.il>, 2002,2003
 # Yaron Shahrabani <sh.yaron@gmail.com>, 2010.
-# Yosef Or Boczko <yoseforb@gmail.com>, 2014.
+# Yosef Or Boczko <yoseforb@gnome.org>, 2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.HEAD.he\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-26 21:50+0200\n"
-"PO-Revision-Date: 2014-01-26 21:51+0200\n"
-"Last-Translator: Yosef Or Boczko <yoseforb@gmail.com>\n"
+"POT-Creation-Date: 2014-08-29 01:39+0300\n"
+"PO-Revision-Date: 2014-08-29 01:39+0300\n"
+"Last-Translator: Yosef Or Boczko <yoseforb@gnome.org>\n"
 "Language-Team: עברית <>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
@@ -40,9 +40,23 @@ msgid ""
 msgstr ""
 "יותר עצמים יופיעו אחרי כל תור. שחק זמן רב ככל האפשר עד שהלוח יתמלא לגמרי!"
 
-#: ../data/five-or-more-preferences.ui.h:1
-msgid "Five or More Preferences"
-msgstr "העדפות ׳חמש או יותר׳"
+#: ../data/five-or-more.desktop.in.h:1 ../data/five-or-more.ui.h:1
+#: ../src/five-or-more.c:1174 ../src/five-or-more.c:1674
+msgid "Five or More"
+msgstr "חמש או יותר"
+
+#: ../data/five-or-more.desktop.in.h:2
+msgid "Remove colored balls from the board by forming lines"
+msgstr "הסרת כדורים צבעוניים מהלוח על־ידי יצירת שורות"
+
+#: ../data/five-or-more.desktop.in.h:3
+msgid "game;strategy;logic;"
+msgstr "משחק;אסטרטגיה;היגיון;הגיון;"
+
+#: ../data/five-or-more-preferences.ui.h:1 ../data/menu.ui.h:3
+#: ../src/five-or-more.c:173
+msgid "Preferences"
+msgstr "העדפות"
 
 #: ../data/five-or-more-preferences.ui.h:2
 msgid "Appearance"
@@ -80,11 +94,6 @@ msgstr "כללי"
 msgid "_Use fast moves"
 msgstr "_שימוש במהלכים מהירים"
 
-#: ../data/five-or-more.ui.h:1 ../data/glines.desktop.in.h:1
-#: ../src/glines.c:1179 ../src/glines.c:1682
-msgid "Five or More"
-msgstr "חמש או יותר"
-
 #: ../data/five-or-more.ui.h:2
 msgid "Next:"
 msgstr "הבא:"
@@ -97,13 +106,13 @@ msgstr "0"
 msgid "Score:"
 msgstr "תוצאה:"
 
-#: ../data/glines.desktop.in.h:2
-msgid "Remove colored balls from the board by forming lines"
-msgstr "הסרת כדורים צבעוניים מהלוח על־ידי יצירת שורות"
+#: ../data/five-or-more.ui.h:5
+msgid "_New Game"
+msgstr "_משחק חדש"
 
-#: ../data/glines.desktop.in.h:3
-msgid "game;strategy;logic;"
-msgstr "משחק;אסטרטגיה;היגיון;הגיון;"
+#: ../data/five-or-more.ui.h:6
+msgid "Start a new puzzle"
+msgstr "התחלת לוח חדש"
 
 #: ../data/menu.ui.h:1 ../src/games-scores-dialog.c:385
 msgid "New Game"
@@ -112,10 +121,6 @@ msgstr "משחק חדש"
 #: ../data/menu.ui.h:2
 msgid "Scores"
 msgstr "תוצאות"
-
-#: ../data/menu.ui.h:3 ../src/glines.c:175
-msgid "Preferences"
-msgstr "העדפות"
 
 #: ../data/menu.ui.h:4
 msgid "Help"
@@ -199,9 +204,95 @@ msgstr "Height of the window in pixels"
 msgid "true if the window is maximized"
 msgstr "true if the window is maximized"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:18
-msgid "true if the window is fullscren"
-msgstr "true if the window is fullscren"
+#: ../src/five-or-more.c:80
+msgctxt "board size"
+msgid "Small"
+msgstr "קטן"
+
+#: ../src/five-or-more.c:81
+msgctxt "board size"
+msgid "Medium"
+msgstr "בינוני"
+
+#: ../src/five-or-more.c:82
+msgctxt "board size"
+msgid "Large"
+msgstr "גדול"
+
+#: ../src/five-or-more.c:167
+msgid "Could not load theme"
+msgstr "לא ניתן לטעון את ערכת הנושא"
+
+#: ../src/five-or-more.c:193
+#, c-format
+msgid ""
+"Unable to locate file:\n"
+"%s\n"
+"\n"
+"The default theme will be loaded instead."
+msgstr ""
+"לא מצליח למצוא את הקובץ:\n"
+"%s\n"
+"\n"
+"ערכת נושא ברירת המחדל תטען במקומו."
+
+#: ../src/five-or-more.c:200
+#, c-format
+msgid ""
+"Unable to locate file:\n"
+"%s\n"
+"\n"
+"Please check that Five or More is installed correctly."
+msgstr ""
+"לא ניתן למצוא את הקובץ:\n"
+"%s\n"
+"\n"
+"נא לוודא כי המשחק \"חמש או יותר\" מותקן כראוי."
+
+#: ../src/five-or-more.c:410
+msgid "Match five objects of the same type in a row to score!"
+msgstr "התאם חמישה עצמים זהים בשורה כדי לקבל ניקוד!"
+
+#: ../src/five-or-more.c:471
+msgid "Five or More Scores"
+msgstr "תוצאות חמש או יותר"
+
+#: ../src/five-or-more.c:473
+msgid "_Board size:"
+msgstr "גודל ה_לוח"
+
+#: ../src/five-or-more.c:490
+msgid "Game Over!"
+msgstr "המשחק הסתיים!"
+
+#. Can't move there!
+#: ../src/five-or-more.c:646
+msgid "You can’t move there!"
+msgstr "לא ניתן לזוז לשם!"
+
+#: ../src/five-or-more.c:1176
+msgid ""
+"GNOME port of the once-popular Color Lines game\n"
+"\n"
+"Five or More is a part of GNOME Games."
+msgstr ""
+"גרסת GNOME למשחק השורות הצבעוניות הפופולרי\n"
+"‏חמש או יותר הוא חלק מחבילת משחקי GNOME."
+
+#: ../src/five-or-more.c:1182
+msgid "translator-credits"
+msgstr ""
+"גיל אשר <dolfin@rpg.org.il>\n"
+"יאיר הרשקוביץ <yairhr@gmail.com>\n"
+"‏Hezy Amiel https://launchpad.net/~hezy\n"
+"‏Revan https://launchpad.net/~mark125\n"
+"‏Yaniv Abir https://launchpad.net/~yanivabir\n"
+"‏dod_basim https://launchpad.net/~yoav-prat\n"
+"ירון שהרבני <sh.yaron@gmail.com>\n"
+"יוסף אור בוצ׳קו <yoseforb@gnome.org>\n"
+"\n"
+"פרויקט תרגום GNOME לעברית:\n"
+"‏http://gnome-il.berlios.de"
 
 #. Score dialog column header for the score time (e.g. 1 minute)
 #: ../src/games-scores-dialog.c:132
@@ -227,293 +318,154 @@ msgstr "%1$dדק׳ %2$dשנ׳"
 msgid "Date"
 msgstr "תאריך"
 
-#: ../src/games-stock.c:41
-msgid "View help for this game"
-msgstr "הצגת עזרה עבור משחק זה"
+#~ msgid "Five or More Preferences"
+#~ msgstr "העדפות ׳חמש או יותר׳"
 
-#: ../src/games-stock.c:42
-msgid "End the current game"
-msgstr "סיים את המשחק הנוכחי"
+#~ msgid "true if the window is fullscren"
+#~ msgstr "true if the window is fullscren"
 
-#: ../src/games-stock.c:43
-msgid "Toggle fullscreen mode"
-msgstr "הכנס למצב מסך מלא"
+#~ msgid "View help for this game"
+#~ msgstr "הצגת עזרה עבור משחק זה"
 
-#: ../src/games-stock.c:44
-msgid "Get a hint for your next move"
-msgstr "קבלת רמז למהלך הבא שלך"
+#~ msgid "End the current game"
+#~ msgstr "סיים את המשחק הנוכחי"
 
-#: ../src/games-stock.c:45
-msgid "Leave fullscreen mode"
-msgstr "צא ממצב מסך מלא"
+#~ msgid "Toggle fullscreen mode"
+#~ msgstr "הכנס למצב מסך מלא"
 
-#: ../src/games-stock.c:46
-msgid "Start a new multiplayer network game"
-msgstr "התחלת משחק רשת מרובה משתתפים חדש"
+#~ msgid "Get a hint for your next move"
+#~ msgstr "קבלת רמז למהלך הבא שלך"
 
-#: ../src/games-stock.c:47
-msgid "End the current network game and return to network server"
-msgstr "סיום משחק הרשת הנוכחי וחזרה לשרת הרשת"
+#~ msgid "Leave fullscreen mode"
+#~ msgstr "צא ממצב מסך מלא"
 
-#: ../src/games-stock.c:48
-msgid "Start a new game"
-msgstr "התחלת משחק חדש"
+#~ msgid "Start a new multiplayer network game"
+#~ msgstr "התחלת משחק רשת מרובה משתתפים חדש"
 
-#: ../src/games-stock.c:49
-msgid "Pause the game"
-msgstr "השהיית המשחק"
+#~ msgid "End the current network game and return to network server"
+#~ msgstr "סיום משחק הרשת הנוכחי וחזרה לשרת הרשת"
 
-#: ../src/games-stock.c:50
-msgid "Show a list of players in the network game"
-msgstr "הצגת רשימת השחקנים במשחק הרשת"
+#~ msgid "Pause the game"
+#~ msgstr "השהיית המשחק"
 
-#: ../src/games-stock.c:51
-msgid "Redo the undone move"
-msgstr "ביצוע חוזר של המהלך המבוטל"
+#~ msgid "Show a list of players in the network game"
+#~ msgstr "הצגת רשימת השחקנים במשחק הרשת"
 
-#: ../src/games-stock.c:52
-msgid "Restart the game"
-msgstr "התחלת המשחק מחדש"
+#~ msgid "Redo the undone move"
+#~ msgstr "ביצוע חוזר של המהלך המבוטל"
 
-#: ../src/games-stock.c:53
-msgid "Resume the paused game"
-msgstr "המשך משחק מושהה"
+#~ msgid "Restart the game"
+#~ msgstr "התחלת המשחק מחדש"
 
-#: ../src/games-stock.c:54
-msgid "View the scores"
-msgstr "הצגת התוצאות"
+#~ msgid "Resume the paused game"
+#~ msgstr "המשך משחק מושהה"
 
-#: ../src/games-stock.c:55
-msgid "Undo the last move"
-msgstr "ביטול המהלך האחרון"
+#~ msgid "View the scores"
+#~ msgstr "הצגת התוצאות"
 
-#: ../src/games-stock.c:56
-msgid "About this game"
-msgstr "על אודות משחק זה"
+#~ msgid "Undo the last move"
+#~ msgstr "ביטול המהלך האחרון"
 
-#: ../src/games-stock.c:57
-msgid "Close this window"
-msgstr "סגירת החלון"
+#~ msgid "About this game"
+#~ msgstr "על אודות משחק זה"
 
-#: ../src/games-stock.c:58
-msgid "Configure the game"
-msgstr "עיצוב המשחק"
+#~ msgid "Close this window"
+#~ msgstr "סגירת החלון"
 
-#: ../src/games-stock.c:59
-msgid "Quit this game"
-msgstr "יציאה ממשחק זה"
+#~ msgid "Configure the game"
+#~ msgstr "עיצוב המשחק"
 
-#: ../src/games-stock.c:247
-msgid "_Contents"
-msgstr "_תכנים"
+#~ msgid "Quit this game"
+#~ msgstr "יציאה ממשחק זה"
 
-#: ../src/games-stock.c:248
-msgid "_Fullscreen"
-msgstr "מסך מ_לא"
+#~ msgid "_Contents"
+#~ msgstr "_תכנים"
 
-#: ../src/games-stock.c:249
-msgid "_Hint"
-msgstr "_רמז"
+#~ msgid "_Fullscreen"
+#~ msgstr "מסך מ_לא"
 
-#. Translators: This "_New" is for the menu item 'Game->New', implies "New Game"
-#: ../src/games-stock.c:251
-msgid "_New"
-msgstr "_חדש"
+#~ msgid "_Hint"
+#~ msgstr "_רמז"
 
-#. Translators: This "_New Game" is for the game-over dialogue
-#: ../src/games-stock.c:253
-msgid "_New Game"
-msgstr "_משחק חדש"
+#~ msgid "_New"
+#~ msgstr "_חדש"
 
-#: ../src/games-stock.c:254
-msgid "_Redo Move"
-msgstr "_חזרה על המהלך"
+#~ msgid "_Redo Move"
+#~ msgstr "_חזרה על המהלך"
 
-#. Translators: this is the "Reset" scores button in a scores dialogue
-#: ../src/games-stock.c:256
-msgid "_Reset"
-msgstr "_איפוס"
+#~ msgid "_Reset"
+#~ msgstr "_איפוס"
 
-#. Translators: "_Restart" is the menu item 'Game->Restart', implies "Restart Game"
-#: ../src/games-stock.c:258
-msgid "_Restart"
-msgstr "ה_תחלה מחדש"
+#~ msgid "_Restart"
+#~ msgstr "ה_תחלה מחדש"
 
-#: ../src/games-stock.c:259
-msgid "_Undo Move"
-msgstr "_ביטול מהלך"
+#~ msgid "_Undo Move"
+#~ msgstr "_ביטול מהלך"
 
-#: ../src/games-stock.c:260
-msgid "_Deal"
-msgstr "_חלוקה"
+#~ msgid "_Deal"
+#~ msgstr "_חלוקה"
 
-#: ../src/games-stock.c:261
-msgid "_Leave Fullscreen"
-msgstr "י_ציאה ממסך מלא"
+#~ msgid "_Leave Fullscreen"
+#~ msgstr "י_ציאה ממסך מלא"
 
-#: ../src/games-stock.c:262
-msgid "Network _Game"
-msgstr "_משחק רשת"
+#~ msgid "Network _Game"
+#~ msgstr "_משחק רשת"
 
-#: ../src/games-stock.c:263
-msgid "L_eave Game"
-msgstr "י_ציאה מהמשחק"
+#~ msgid "L_eave Game"
+#~ msgstr "י_ציאה מהמשחק"
 
-#: ../src/games-stock.c:264
-msgid "Player _List"
-msgstr "_רשימת שחקנים"
+#~ msgid "Player _List"
+#~ msgstr "_רשימת שחקנים"
 
-#: ../src/games-stock.c:265
-msgid "_Pause"
-msgstr "ה_שהייה"
+#~ msgid "_Pause"
+#~ msgstr "ה_שהייה"
 
-#: ../src/games-stock.c:266
-msgid "Res_ume"
-msgstr "המש_ך"
+#~ msgid "Res_ume"
+#~ msgstr "המש_ך"
 
-#: ../src/games-stock.c:267
-msgid "_Scores"
-msgstr "_תוצאות"
+#~ msgid "_Scores"
+#~ msgstr "_תוצאות"
 
-#: ../src/games-stock.c:268
-msgid "_End Game"
-msgstr "_סיום המשחק"
+#~ msgid "_End Game"
+#~ msgstr "_סיום המשחק"
 
-#. %s is replaced with the name of the game in gnome-games.
-#: ../src/games-stock.c:317
-#, c-format
-msgid ""
-"%s is free software; you can redistribute it and/or modify it under the "
-"terms of the GNU General Public License as published by the Free Software "
-"Foundation; either version %d of the License, or (at your option) any later "
-"version."
-msgstr ""
-"%s is free software; you can redistribute it and/or modify it under the "
-"terms of the GNU General Public License as published by the Free Software "
-"Foundation; either version %d of the License, or (at your option) any later "
-"version."
+#~ msgid ""
+#~ "%s is free software; you can redistribute it and/or modify it under the "
+#~ "terms of the GNU General Public License as published by the Free Software "
+#~ "Foundation; either version %d of the License, or (at your option) any "
+#~ "later version."
+#~ msgstr ""
+#~ "%s is free software; you can redistribute it and/or modify it under the "
+#~ "terms of the GNU General Public License as published by the Free Software "
+#~ "Foundation; either version %d of the License, or (at your option) any "
+#~ "later version."
 
-#: ../src/games-stock.c:322
-#, c-format
-msgid ""
-"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
-"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
-"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
-"details."
-msgstr ""
-"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
-"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
-"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
-"details."
+#~ msgid ""
+#~ "%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+#~ "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+#~ "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+#~ "details."
+#~ msgstr ""
+#~ "%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+#~ "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+#~ "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+#~ "details."
 
-#: ../src/games-stock.c:327
-#, c-format
-msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
-"Fifth Floor, Boston, MA  02110-1301  USA"
-msgstr ""
-"You should have received a copy of the GNU General Public License along with "
-"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
-"Fifth Floor, Boston, MA  02110-1301  USA"
+#~ msgid ""
+#~ "You should have received a copy of the GNU General Public License along "
+#~ "with %s; if not, write to the Free Software Foundation, Inc., 51 Franklin "
+#~ "Street, Fifth Floor, Boston, MA  02110-1301  USA"
+#~ msgstr ""
+#~ "You should have received a copy of the GNU General Public License along "
+#~ "with %s; if not, write to the Free Software Foundation, Inc., 51 Franklin "
+#~ "Street, Fifth Floor, Boston, MA  02110-1301  USA"
 
-#: ../src/games-stock.c:331
-msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"this program.  If not, see <http://www.gnu.org/licenses/>."
-msgstr ""
-"You should have received a copy of the GNU General Public License along with "
-"this program.  If not, see <http://www.gnu.org/licenses/>."
-
-#: ../src/glines.c:81
-msgctxt "board size"
-msgid "Small"
-msgstr "קטן"
-
-#: ../src/glines.c:82
-msgctxt "board size"
-msgid "Medium"
-msgstr "בינוני"
-
-#: ../src/glines.c:83
-msgctxt "board size"
-msgid "Large"
-msgstr "גדול"
-
-#: ../src/glines.c:169
-msgid "Could not load theme"
-msgstr "לא ניתן לטעון את ערכת הנושא"
-
-#: ../src/glines.c:195
-#, c-format
-msgid ""
-"Unable to locate file:\n"
-"%s\n"
-"\n"
-"The default theme will be loaded instead."
-msgstr ""
-"לא מצליח למצוא את הקובץ:\n"
-"%s\n"
-"\n"
-"ערכת נושא ברירת המחדל תטען במקומו."
-
-#: ../src/glines.c:202
-#, c-format
-msgid ""
-"Unable to locate file:\n"
-"%s\n"
-"\n"
-"Please check that Five or More is installed correctly."
-msgstr ""
-"לא ניתן למצוא את הקובץ:\n"
-"%s\n"
-"\n"
-"נא לוודא כי המשחק \"חמש או יותר\" מותקן כראוי."
-
-#: ../src/glines.c:412
-msgid "Match five objects of the same type in a row to score!"
-msgstr "התאם חמישה עצמים זהים בשורה כדי לקבל ניקוד!"
-
-#: ../src/glines.c:473
-msgid "Five or More Scores"
-msgstr "תוצאות חמש או יותר"
-
-#: ../src/glines.c:475
-msgid "_Board size:"
-msgstr "גודל ה_לוח"
-
-#: ../src/glines.c:492
-msgid "Game Over!"
-msgstr "המשחק הסתיים!"
-
-#. Can't move there!
-#: ../src/glines.c:649
-msgid "You can’t move there!"
-msgstr "לא ניתן לזוז לשם!"
-
-#: ../src/glines.c:1181
-msgid ""
-"GNOME port of the once-popular Color Lines game\n"
-"\n"
-"Five or More is a part of GNOME Games."
-msgstr ""
-"גרסת GNOME למשחק השורות הצבעוניות הפופולרי\n"
-"‏חמש או יותר הוא חלק מחבילת משחקי GNOME."
-
-#: ../src/glines.c:1187
-msgid "translator-credits"
-msgstr ""
-"גיל אשר <dolfin@rpg.org.il>\n"
-"יאיר הרשקוביץ <yairhr@gmail.com>\n"
-"‏Hezy Amiel https://launchpad.net/~hezy\n"
-"‏Revan https://launchpad.net/~mark125\n"
-"‏Yaniv Abir https://launchpad.net/~yanivabir\n"
-"‏dod_basim https://launchpad.net/~yoav-prat\n"
-"ירון שהרבני <sh.yaron@gmail.com>\n"
-"יוסף אור בוצ׳קו <yoseforb@gnome.org>\n"
-"\n"
-"פרויקט תרגום GNOME לעברית:\n"
-"‏http://gnome-il.berlios.de"
+#~ msgid ""
+#~ "You should have received a copy of the GNU General Public License along "
+#~ "with this program.  If not, see <http://www.gnu.org/licenses/>."
+#~ msgstr ""
+#~ "You should have received a copy of the GNU General Public License along "
+#~ "with this program.  If not, see <http://www.gnu.org/licenses/>."
 
 #~ msgid "GNOME Five or More"
 #~ msgstr "חמש או יותר - GNOME Five or More"
