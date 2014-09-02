@@ -1,5 +1,5 @@
 # Brazilian Portuguese translation of five-or-more.
-# Copyright (C) 1999-2013 Free Software Foundation, Inc.
+# Copyright (C) 1999-2014 Free Software Foundation, Inc.
 # This file is distributed under the same license as the five-or-more package.
 # Sandro Nunes Henrique <sandro@conectiva.com.br>, 1999.
 # Cândida Nunes da Silva <candida@zaz.com.br>, 2000-2001.
@@ -23,22 +23,23 @@
 # Djavan Fagundes <djavan@comum.org>, 2012.
 # Rafael Ferreira <rafael.f.f1@gmail.com>, 2013.
 # Fábio Nogueira <fnogueira@gnome.org>, 2014.
+# Enrico Nicoletto <liverig@gmail.com>, 2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: five-or-more\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-"
 "or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-01-27 04:32+0000\n"
-"PO-Revision-Date: 2014-01-30 13:14-0300\n"
-"Last-Translator: Fábio Nogueira <deb-user-ba@ubuntu.com>\n"
+"POT-Creation-Date: 2014-09-02 04:50+0000\n"
+"PO-Revision-Date: 2014-09-02 09:45-0300\n"
+"Last-Translator: Enrico Nicoletto <liverig@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.6.5\n"
 "X-Project-Style: gnome\n"
 
 #: ../data/five-or-more.appdata.xml.in.h:1
@@ -61,9 +62,23 @@ msgstr ""
 "Mais objetos aparecem após cada turno. Jogo o máximo que conseguir, até que "
 "tabuleiro esteja completamente cheio."
 
-#: ../data/five-or-more-preferences.ui.h:1
-msgid "Five or More Preferences"
-msgstr "Preferências do Cinco ou Mais"
+#: ../data/five-or-more.desktop.in.h:1 ../data/five-or-more.ui.h:1
+#: ../src/five-or-more.c:1174 ../src/five-or-more.c:1674
+msgid "Five or More"
+msgstr "Cinco ou Mais"
+
+#: ../data/five-or-more.desktop.in.h:2
+msgid "Remove colored balls from the board by forming lines"
+msgstr "Remova bolas coloridas do tabuleiro formando linhas"
+
+#: ../data/five-or-more.desktop.in.h:3
+msgid "game;strategy;logic;"
+msgstr "game;jogo;estratégia;lógica;"
+
+#: ../data/five-or-more-preferences.ui.h:1 ../data/menu.ui.h:3
+#: ../src/five-or-more.c:173
+msgid "Preferences"
+msgstr "Preferências"
 
 #: ../data/five-or-more-preferences.ui.h:2
 msgid "Appearance"
@@ -101,11 +116,6 @@ msgstr "General"
 msgid "_Use fast moves"
 msgstr "_Usar movimentos rápidos"
 
-#: ../data/five-or-more.ui.h:1 ../data/glines.desktop.in.h:1
-#: ../src/glines.c:1181 ../src/glines.c:1694
-msgid "Five or More"
-msgstr "Cinco ou Mais"
-
 #: ../data/five-or-more.ui.h:2
 msgid "Next:"
 msgstr "Próxima:"
@@ -118,13 +128,14 @@ msgstr "0"
 msgid "Score:"
 msgstr "Pontuação:"
 
-#: ../data/glines.desktop.in.h:2
-msgid "Remove colored balls from the board by forming lines"
-msgstr "Remova bolas coloridas do tabuleiro formando linhas"
+#: ../data/five-or-more.ui.h:5
+msgid "_New Game"
+msgstr "_Novo jogo"
 
-#: ../data/glines.desktop.in.h:3
-msgid "game;strategy;logic;"
-msgstr "game;jogo;estratégia;lógica;"
+#: ../data/five-or-more.ui.h:6
+#| msgid "Start a new game"
+msgid "Start a new puzzle"
+msgstr "Inicia um novo quebra-cabeça"
 
 #: ../data/menu.ui.h:1 ../src/games-scores-dialog.c:385
 msgid "New Game"
@@ -133,10 +144,6 @@ msgstr "Novo jogo"
 #: ../data/menu.ui.h:2
 msgid "Scores"
 msgstr "Pontuações"
-
-#: ../data/menu.ui.h:3 ../src/glines.c:176
-msgid "Preferences"
-msgstr "Preferências"
 
 #: ../data/menu.ui.h:4
 msgid "Help"
@@ -221,9 +228,100 @@ msgstr "A altura da janela em pixels."
 msgid "true if the window is maximized"
 msgstr "verdadeiro se a janela estiver maximizada"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:18
-msgid "true if the window is fullscren"
-msgstr "verdadeiro se a janela estiver em tela cheia"
+#: ../src/five-or-more.c:80
+msgctxt "board size"
+msgid "Small"
+msgstr "Pequeno"
+
+#: ../src/five-or-more.c:81
+msgctxt "board size"
+msgid "Medium"
+msgstr "Médio"
+
+#: ../src/five-or-more.c:82
+msgctxt "board size"
+msgid "Large"
+msgstr "Grande"
+
+#: ../src/five-or-more.c:167
+msgid "Could not load theme"
+msgstr "Não foi possível carregar o tema"
+
+#: ../src/five-or-more.c:193
+#, c-format
+msgid ""
+"Unable to locate file:\n"
+"%s\n"
+"\n"
+"The default theme will be loaded instead."
+msgstr ""
+"Não foi possível localizar o arquivo:\n"
+"%s\n"
+"\n"
+"O tema padrão será carregado em seu lugar."
+
+#: ../src/five-or-more.c:200
+#, c-format
+msgid ""
+"Unable to locate file:\n"
+"%s\n"
+"\n"
+"Please check that Five or More is installed correctly."
+msgstr ""
+"Não foi possível localizar o arquivo:\n"
+"%s\n"
+"\n"
+"Por favor verifique se o Cinco ou Mais está instalado corretamente."
+
+#: ../src/five-or-more.c:410
+msgid "Match five objects of the same type in a row to score!"
+msgstr "Junte cinco objetos do mesmo tipo em uma linha para marcar pontos!"
+
+#: ../src/five-or-more.c:471
+msgid "Five or More Scores"
+msgstr "Pontuações de Cinco ou Mais"
+
+#: ../src/five-or-more.c:473
+msgid "_Board size:"
+msgstr "Tamanho do ta_buleiro:"
+
+#: ../src/five-or-more.c:490
+msgid "Game Over!"
+msgstr "Fim do jogo!"
+
+#. Can't move there!
+#: ../src/five-or-more.c:646
+msgid "You can’t move there!"
+msgstr "Você não pode mover para lá!"
+
+#: ../src/five-or-more.c:1176
+msgid ""
+"GNOME port of the once-popular Color Lines game\n"
+"\n"
+"Five or More is a part of GNOME Games."
+msgstr ""
+"Versão para GNOME do popular jogo Color Lines.\n"
+"\n"
+"Cinco ou mais faz parte do GNOME Games."
+
+#: ../src/five-or-more.c:1182
+msgid "translator-credits"
+msgstr ""
+"Sandro Nunes Henrique <sandro@conectiva.com.br>\n"
+"Cândida Nunes da Silva <candida@zaz.com.br>\n"
+"Gustavo Noronha Silva <kov@debian.org>\n"
+"Alexandre Folle de Menezes <afmenez@terra.com.br>\n"
+"Maurício de Lemos Rodrigues Collares Neto <mauricioc@myrealbox.com>\n"
+"Welther José O. Esteves <weltherjoe@yahoo.com.br>\n"
+"Raphael Higino (In memoriam) <In memoriam>\n"
+"Og Maciel <ogmaciel@ubuntu.com>\n"
+"Andre Noel <andrenoel@ubuntu.com>\n"
+"Vladimir Melo <vmelo@gnome.org>\n"
+"Daniel S. Koda <danielskoda@gmail.com>\n"
+"Felipe Borges <felipe10borges@gmail.com>\n"
+"Sérgio Cipolla <secipolla@gmail.com>\n"
+"Rodrigo Padula de Oliveira <contato@rodrigopadula.com>\n"
+"Rafael Ferreira <rafael.f.f1@gmail.com>"
 
 #. Score dialog column header for the score time (e.g. 1 minute)
 #: ../src/games-scores-dialog.c:132
@@ -249,299 +347,154 @@ msgstr "%1$dm %2$ds"
 msgid "Date"
 msgstr "Data"
 
-#: ../src/games-stock.c:41
-msgid "View help for this game"
-msgstr "Vê a ajuda para este jogo"
+#~ msgid "Five or More Preferences"
+#~ msgstr "Preferências do Cinco ou Mais"
 
-#: ../src/games-stock.c:42
-msgid "End the current game"
-msgstr "Finaliza o jogo atual"
+#~ msgid "true if the window is fullscren"
+#~ msgstr "verdadeiro se a janela estiver em tela cheia"
 
-#: ../src/games-stock.c:43
-msgid "Toggle fullscreen mode"
-msgstr "Alternar para modo tela cheia"
+#~ msgid "View help for this game"
+#~ msgstr "Vê a ajuda para este jogo"
 
-#: ../src/games-stock.c:44
-msgid "Get a hint for your next move"
-msgstr "Obtém uma dica para sua próxima jogada"
+#~ msgid "End the current game"
+#~ msgstr "Finaliza o jogo atual"
 
-#: ../src/games-stock.c:45
-msgid "Leave fullscreen mode"
-msgstr "Sai do modo tela cheia"
+#~ msgid "Toggle fullscreen mode"
+#~ msgstr "Alternar para modo tela cheia"
 
-#: ../src/games-stock.c:46
-msgid "Start a new multiplayer network game"
-msgstr "Inicia um novo jogo multi-jogadores via rede"
+#~ msgid "Get a hint for your next move"
+#~ msgstr "Obtém uma dica para sua próxima jogada"
 
-#: ../src/games-stock.c:47
-msgid "End the current network game and return to network server"
-msgstr "Finaliza o jogo via rede atual e retorna ao servidor de rede"
+#~ msgid "Leave fullscreen mode"
+#~ msgstr "Sai do modo tela cheia"
 
-#: ../src/games-stock.c:48
-msgid "Start a new game"
-msgstr "Inicia um novo jogo"
+#~ msgid "Start a new multiplayer network game"
+#~ msgstr "Inicia um novo jogo multi-jogadores via rede"
 
-#: ../src/games-stock.c:49
-msgid "Pause the game"
-msgstr "Pausa o jogo"
+#~ msgid "End the current network game and return to network server"
+#~ msgstr "Finaliza o jogo via rede atual e retorna ao servidor de rede"
 
-#: ../src/games-stock.c:50
-msgid "Show a list of players in the network game"
-msgstr "Mostra uma lista de jogadores na rede"
+#~ msgid "Pause the game"
+#~ msgstr "Pausa o jogo"
 
-#: ../src/games-stock.c:51
-msgid "Redo the undone move"
-msgstr "Refaz o movimento desfeito"
+#~ msgid "Show a list of players in the network game"
+#~ msgstr "Mostra uma lista de jogadores na rede"
 
-#: ../src/games-stock.c:52
-msgid "Restart the game"
-msgstr "Reinicia o jogo"
+#~ msgid "Redo the undone move"
+#~ msgstr "Refaz o movimento desfeito"
 
-#: ../src/games-stock.c:53
-msgid "Resume the paused game"
-msgstr "Continua o jogo pausado"
+#~ msgid "Restart the game"
+#~ msgstr "Reinicia o jogo"
 
-#: ../src/games-stock.c:54
-msgid "View the scores"
-msgstr "Vê as pontuações"
+#~ msgid "Resume the paused game"
+#~ msgstr "Continua o jogo pausado"
 
-#: ../src/games-stock.c:55
-msgid "Undo the last move"
-msgstr "Desfaz o último movimento"
+#~ msgid "View the scores"
+#~ msgstr "Vê as pontuações"
 
-#: ../src/games-stock.c:56
-msgid "About this game"
-msgstr "Sobre este jogo"
+#~ msgid "Undo the last move"
+#~ msgstr "Desfaz o último movimento"
 
-#: ../src/games-stock.c:57
-msgid "Close this window"
-msgstr "Fechar esta janela"
+#~ msgid "About this game"
+#~ msgstr "Sobre este jogo"
 
-#: ../src/games-stock.c:58
-msgid "Configure the game"
-msgstr "Configura o jogo"
+#~ msgid "Close this window"
+#~ msgstr "Fechar esta janela"
 
-#: ../src/games-stock.c:59
-msgid "Quit this game"
-msgstr "Sai deste jogo"
+#~ msgid "Configure the game"
+#~ msgstr "Configura o jogo"
 
-#: ../src/games-stock.c:247
-msgid "_Contents"
-msgstr "S_umário"
+#~ msgid "Quit this game"
+#~ msgstr "Sai deste jogo"
 
-#: ../src/games-stock.c:248
-msgid "_Fullscreen"
-msgstr "_Tela cheia"
+#~ msgid "_Contents"
+#~ msgstr "S_umário"
 
-#: ../src/games-stock.c:249
-msgid "_Hint"
-msgstr "_Dica"
+#~ msgid "_Fullscreen"
+#~ msgstr "_Tela cheia"
 
-#. Translators: This "_New" is for the menu item 'Game->New', implies "New Game"
-#: ../src/games-stock.c:251
-msgid "_New"
-msgstr "_Novo"
+#~ msgid "_Hint"
+#~ msgstr "_Dica"
 
-#. Translators: This "_New Game" is for the game-over dialogue
-#: ../src/games-stock.c:253
-msgid "_New Game"
-msgstr "_Novo jogo"
+#~ msgid "_New"
+#~ msgstr "_Novo"
 
-#: ../src/games-stock.c:254
-msgid "_Redo Move"
-msgstr "_Refazer movimento"
+#~ msgid "_Redo Move"
+#~ msgstr "_Refazer movimento"
 
-#. Translators: this is the "Reset" scores button in a scores dialogue
-#: ../src/games-stock.c:256
-msgid "_Reset"
-msgstr "_Restaurar"
+#~ msgid "_Reset"
+#~ msgstr "_Restaurar"
 
-#. Translators: "_Restart" is the menu item 'Game->Restart', implies "Restart Game"
-#: ../src/games-stock.c:258
-msgid "_Restart"
-msgstr "_Reiniciar"
+#~ msgid "_Restart"
+#~ msgstr "_Reiniciar"
 
-#: ../src/games-stock.c:259
-msgid "_Undo Move"
-msgstr "_Desfazer movimento"
+#~ msgid "_Undo Move"
+#~ msgstr "_Desfazer movimento"
 
-#: ../src/games-stock.c:260
-msgid "_Deal"
-msgstr "_Distribuir"
+#~ msgid "_Deal"
+#~ msgstr "_Distribuir"
 
-#: ../src/games-stock.c:261
-msgid "_Leave Fullscreen"
-msgstr "Sair de tela c_heia"
+#~ msgid "_Leave Fullscreen"
+#~ msgstr "Sair de tela c_heia"
 
-#: ../src/games-stock.c:262
-msgid "Network _Game"
-msgstr "Jo_go via rede"
+#~ msgid "Network _Game"
+#~ msgstr "Jo_go via rede"
 
-#: ../src/games-stock.c:263
-msgid "L_eave Game"
-msgstr "D_eixar jogo"
+#~ msgid "L_eave Game"
+#~ msgstr "D_eixar jogo"
 
-#: ../src/games-stock.c:264
-msgid "Player _List"
-msgstr "_Lista de jogadores"
+#~ msgid "Player _List"
+#~ msgstr "_Lista de jogadores"
 
-#: ../src/games-stock.c:265
-msgid "_Pause"
-msgstr "_Pausar"
+#~ msgid "_Pause"
+#~ msgstr "_Pausar"
 
-#: ../src/games-stock.c:266
-msgid "Res_ume"
-msgstr "Contin_uar"
+#~ msgid "Res_ume"
+#~ msgstr "Contin_uar"
 
-#: ../src/games-stock.c:267
-msgid "_Scores"
-msgstr "_Pontuações"
+#~ msgid "_Scores"
+#~ msgstr "_Pontuações"
 
-#: ../src/games-stock.c:268
-msgid "_End Game"
-msgstr "_Finalizar jogo"
+#~ msgid "_End Game"
+#~ msgstr "_Finalizar jogo"
 
-#. %s is replaced with the name of the game in gnome-games.
-#: ../src/games-stock.c:317
-#, c-format
-msgid ""
-"%s is free software; you can redistribute it and/or modify it under the "
-"terms of the GNU General Public License as published by the Free Software "
-"Foundation; either version %d of the License, or (at your option) any later "
-"version."
-msgstr ""
-"%s é software livre; você pode redistribui-lo e/ou modificá-lo sob os termos "
-"da Licença Pública Geral GNU publicada pela Free Software Foundation; "
-"qualquer versão %d da Licença, ou (de acordo com sua opinião) qualquer "
-"versão mais recente."
+#~ msgid ""
+#~ "%s is free software; you can redistribute it and/or modify it under the "
+#~ "terms of the GNU General Public License as published by the Free Software "
+#~ "Foundation; either version %d of the License, or (at your option) any "
+#~ "later version."
+#~ msgstr ""
+#~ "%s é software livre; você pode redistribui-lo e/ou modificá-lo sob os "
+#~ "termos da Licença Pública Geral GNU publicada pela Free Software "
+#~ "Foundation; qualquer versão %d da Licença, ou (de acordo com sua opinião) "
+#~ "qualquer versão mais recente."
 
-#: ../src/games-stock.c:322
-#, c-format
-msgid ""
-"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
-"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
-"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
-"details."
-msgstr ""
-"%s é distribuído na esperança de que seja útil, mas SEM NENHUMA GARANTIA; "
-"sem mesmo implicar garantias de COMERCIABILIDADE ou ADAPTAÇÃO A UM PROPÓSITO "
-"PARTICULAR. Veja a Licença Pública Geral GNU (GPL) para mais detalhes."
+#~ msgid ""
+#~ "%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+#~ "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+#~ "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+#~ "details."
+#~ msgstr ""
+#~ "%s é distribuído na esperança de que seja útil, mas SEM NENHUMA GARANTIA; "
+#~ "sem mesmo implicar garantias de COMERCIABILIDADE ou ADAPTAÇÃO A UM "
+#~ "PROPÓSITO PARTICULAR. Veja a Licença Pública Geral GNU (GPL) para mais "
+#~ "detalhes."
 
-#: ../src/games-stock.c:327
-#, c-format
-msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
-"Fifth Floor, Boston, MA  02110-1301  USA"
-msgstr ""
-"Você deve ter recebido uma cópia da Licença Pública Geral GNU (GPL) junto "
-"com %s; caso contrário, escreva para a Free Software Foundation, Inc., 51 "
-"Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA"
+#~ msgid ""
+#~ "You should have received a copy of the GNU General Public License along "
+#~ "with %s; if not, write to the Free Software Foundation, Inc., 51 Franklin "
+#~ "Street, Fifth Floor, Boston, MA  02110-1301  USA"
+#~ msgstr ""
+#~ "Você deve ter recebido uma cópia da Licença Pública Geral GNU (GPL) junto "
+#~ "com %s; caso contrário, escreva para a Free Software Foundation, Inc., 51 "
+#~ "Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA"
 
-#: ../src/games-stock.c:331
-msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"this program.  If not, see <http://www.gnu.org/licenses/>."
-msgstr ""
-"Você deve ter recebido uma cópia da Licença Pública Geral GNU junto com este "
-"programa. Caso contrário, veja <http://www.gnu.org/licenses/>."
-
-#: ../src/glines.c:81
-msgctxt "board size"
-msgid "Small"
-msgstr "Pequeno"
-
-#: ../src/glines.c:82
-msgctxt "board size"
-msgid "Medium"
-msgstr "Médio"
-
-#: ../src/glines.c:83
-msgctxt "board size"
-msgid "Large"
-msgstr "Grande"
-
-#: ../src/glines.c:170
-msgid "Could not load theme"
-msgstr "Não foi possível carregar o tema"
-
-#: ../src/glines.c:196
-#, c-format
-msgid ""
-"Unable to locate file:\n"
-"%s\n"
-"\n"
-"The default theme will be loaded instead."
-msgstr ""
-"Não foi possível localizar o arquivo:\n"
-"%s\n"
-"\n"
-"O tema padrão será carregado em seu lugar."
-
-#: ../src/glines.c:203
-#, c-format
-msgid ""
-"Unable to locate file:\n"
-"%s\n"
-"\n"
-"Please check that Five or More is installed correctly."
-msgstr ""
-"Não foi possível localizar o arquivo:\n"
-"%s\n"
-"\n"
-"Por favor verifique se o Cinco ou Mais está instalado corretamente."
-
-#: ../src/glines.c:413
-msgid "Match five objects of the same type in a row to score!"
-msgstr "Junte cinco objetos do mesmo tipo em uma linha para marcar pontos!"
-
-#: ../src/glines.c:475
-#| msgid "Five or More"
-msgid "Five or More Scores"
-msgstr "Pontuações de Cinco ou Mais"
-
-#: ../src/glines.c:477
-msgid "_Board size:"
-msgstr "Tamanho do ta_buleiro:"
-
-#: ../src/glines.c:494
-msgid "Game Over!"
-msgstr "Fim do jogo!"
-
-#. Can't move there!
-#: ../src/glines.c:651
-#| msgid "You can't move there!"
-msgid "You can’t move there!"
-msgstr "Você não pode mover para lá!"
-
-#: ../src/glines.c:1183
-msgid ""
-"GNOME port of the once-popular Color Lines game\n"
-"\n"
-"Five or More is a part of GNOME Games."
-msgstr ""
-"Versão para GNOME do popular jogo Color Lines.\n"
-"\n"
-"Cinco ou mais faz parte do GNOME Games."
-
-#: ../src/glines.c:1189
-msgid "translator-credits"
-msgstr ""
-"Sandro Nunes Henrique <sandro@conectiva.com.br>\n"
-"Cândida Nunes da Silva <candida@zaz.com.br>\n"
-"Gustavo Noronha Silva <kov@debian.org>\n"
-"Alexandre Folle de Menezes <afmenez@terra.com.br>\n"
-"Maurício de Lemos Rodrigues Collares Neto <mauricioc@myrealbox.com>\n"
-"Welther José O. Esteves <weltherjoe@yahoo.com.br>\n"
-"Raphael Higino (In memoriam) <In memoriam>\n"
-"Og Maciel <ogmaciel@ubuntu.com>\n"
-"Andre Noel <andrenoel@ubuntu.com>\n"
-"Vladimir Melo <vmelo@gnome.org>\n"
-"Daniel S. Koda <danielskoda@gmail.com>\n"
-"Felipe Borges <felipe10borges@gmail.com>\n"
-"Sérgio Cipolla <secipolla@gmail.com>\n"
-"Rodrigo Padula de Oliveira <contato@rodrigopadula.com>\n"
-"Rafael Ferreira <rafael.f.f1@gmail.com>"
+#~ msgid ""
+#~ "You should have received a copy of the GNU General Public License along "
+#~ "with this program.  If not, see <http://www.gnu.org/licenses/>."
+#~ msgstr ""
+#~ "Você deve ter recebido uma cópia da Licença Pública Geral GNU junto com "
+#~ "este programa. Caso contrário, veja <http://www.gnu.org/licenses/>."
 
 #~ msgctxt "score-dialog"
 #~ msgid "Name"
