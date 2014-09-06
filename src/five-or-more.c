@@ -1596,6 +1596,7 @@ startup_cb (GApplication *application)
 
   hbox = GTK_WIDGET (gtk_builder_get_object (builder, "hbox"));
   draw_area = gtk_drawing_area_new ();
+  gtk_widget_set_size_request (draw_area, 300, 300);
   g_signal_connect (draw_area, "button-press-event",
                     G_CALLBACK (button_press_event), NULL);
   g_signal_connect (draw_area, "key-press-event",
