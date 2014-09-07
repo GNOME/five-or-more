@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: lv\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-"
 "or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-03-07 05:54+0000\n"
-"PO-Revision-Date: 2014-03-07 21:05+0200\n"
+"POT-Creation-Date: 2014-09-07 04:46+0000\n"
+"PO-Revision-Date: 2014-09-07 18:13+0300\n"
 "Last-Translator: Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>\n"
 "Language-Team: Latvian <lata-l10n@googlegroups.com>\n"
 "Language: lv\n"
@@ -32,21 +32,21 @@ msgid ""
 "score points. Earn many more points by lining up as many objects as possible "
 "before clearing them."
 msgstr ""
-"“Vismaz pieci” ir GNOME variants kādreiz populārai datorspēlei. Saliec vismaz "
-"piecus vienas krāsas objektus vienā rindā, lai tie pazustu un dotu punktus. "
-"Lai nopelnītu daudz vairāk punktus, pirms objektus noņemt, tos rindā saliec "
-"pēc iespējas vairāk."
+"“Vismaz pieci” ir GNOME variants kādreiz populārai datorspēlei. Saliec "
+"vismaz piecus vienas krāsas objektus vienā rindā, lai tie pazustu un dotu "
+"punktus. Lai nopelnītu daudz vairāk punktus, pirms objektus noņemt, tos "
+"rindā saliec pēc iespējas vairāk."
 
 #: ../data/five-or-more.appdata.xml.in.h:2
 msgid ""
 "More objects appear after every turn. Play for as long as possible, until "
 "the board is completely full!"
 msgstr ""
-"Pēc katra gājiena parādās arvien jauni objekti. Spēlē līdz galdiņš ir pavisam "
-"pilns!"
+"Pēc katra gājiena parādās arvien jauni objekti. Spēlē līdz galdiņš ir "
+"pavisam pilns!"
 
 #: ../data/five-or-more.desktop.in.h:1 ../data/five-or-more.ui.h:1
-#: ../src/glines.c:1181 ../src/glines.c:1687
+#: ../src/five-or-more.c:1174 ../src/five-or-more.c:1675
 msgid "Five or More"
 msgstr "Vismaz pieci"
 
@@ -58,9 +58,10 @@ msgstr "Noņemt krāsainās bumbas no galda, veidojot līnijas"
 msgid "game;strategy;logic;"
 msgstr "spēle;stratēģija;loģika;"
 
-#: ../data/five-or-more-preferences.ui.h:1
-msgid "Five or More Preferences"
-msgstr "“Vismaz pieci” iestatījumi"
+#: ../data/five-or-more-preferences.ui.h:1 ../data/menu.ui.h:3
+#: ../src/five-or-more.c:173
+msgid "Preferences"
+msgstr "Iestatījumi"
 
 #: ../data/five-or-more-preferences.ui.h:2
 msgid "Appearance"
@@ -110,9 +111,14 @@ msgstr "0"
 msgid "Score:"
 msgstr "Rezultāts:"
 
-#: ../data/five-or-more.ui.h:5 ../src/games-stock.c:48
-msgid "Start a new game"
-msgstr "Sākt jaunu spēli"
+#: ../data/five-or-more.ui.h:5
+msgid "_New Game"
+msgstr "Jau_na spēle"
+
+#: ../data/five-or-more.ui.h:6
+#| msgid "Start a new game"
+msgid "Start a new puzzle"
+msgstr "Sākt jaunu mīklu"
 
 #: ../data/menu.ui.h:1 ../src/games-scores-dialog.c:385
 msgid "New Game"
@@ -121,10 +127,6 @@ msgstr "Jauna spēle"
 #: ../data/menu.ui.h:2
 msgid "Scores"
 msgstr "Rezultāti"
-
-#: ../data/menu.ui.h:3 ../src/glines.c:176
-msgid "Preferences"
-msgstr "Iestatījumi"
 
 #: ../data/menu.ui.h:4
 msgid "Help"
@@ -208,9 +210,88 @@ msgstr "Galvenā loga augstums pikseļos"
 msgid "true if the window is maximized"
 msgstr "patiess, ja logs ir maksimizēts"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:18
-msgid "true if the window is fullscren"
-msgstr "patiess, ja logs ir pilnekrāna"
+#: ../src/five-or-more.c:80
+msgctxt "board size"
+msgid "Small"
+msgstr "Mazs"
+
+#: ../src/five-or-more.c:81
+msgctxt "board size"
+msgid "Medium"
+msgstr "Vidējs"
+
+#: ../src/five-or-more.c:82
+msgctxt "board size"
+msgid "Large"
+msgstr "Liels"
+
+#: ../src/five-or-more.c:167
+msgid "Could not load theme"
+msgstr "Nevarēja ielādēt motīvu"
+
+#: ../src/five-or-more.c:193
+#, c-format
+msgid ""
+"Unable to locate file:\n"
+"%s\n"
+"\n"
+"The default theme will be loaded instead."
+msgstr ""
+"Nevar atrast datni:\n"
+"%s\n"
+"\n"
+"Tā vietā tiks ielādēts noklusējuma motīvs."
+
+#: ../src/five-or-more.c:200
+#, c-format
+msgid ""
+"Unable to locate file:\n"
+"%s\n"
+"\n"
+"Please check that Five or More is installed correctly."
+msgstr ""
+"Nespēj atrast datni:\n"
+"%s\n"
+"\n"
+"Lūdzu, pārliecinies, ka “Vismaz pieci” ir pareizi uzinstalēts."
+
+#: ../src/five-or-more.c:410
+msgid "Match five objects of the same type in a row to score!"
+msgstr "Savieto piecus viena veida objektus rindā, lai gūtu punktus!"
+
+#: ../src/five-or-more.c:471
+msgid "Five or More Scores"
+msgstr "“Vismaz pieci” rezultāti"
+
+#: ../src/five-or-more.c:473
+msgid "_Board size:"
+msgstr "_Galdiņa izmērs:"
+
+#: ../src/five-or-more.c:490
+msgid "Game Over!"
+msgstr "Spēles Beigas!"
+
+#. Can't move there!
+#: ../src/five-or-more.c:646
+msgid "You can’t move there!"
+msgstr "Nevar iet uz šejieni!"
+
+#: ../src/five-or-more.c:1176
+msgid ""
+"GNOME port of the once-popular Color Lines game\n"
+"\n"
+"Five or More is a part of GNOME Games."
+msgstr ""
+"GNOME ports kādreiz tik populārajai Color Lines spēlei\n"
+"\n"
+"“Vismaz pieci” ir daļa no GNOME Games."
+
+#: ../src/five-or-more.c:1182
+msgid "translator-credits"
+msgstr ""
+"Raivis Dejus <orvils@gmail.com>\n"
+"Sandra Zabarovska <sandra.zabarovska@gmail.com>\n"
+"Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>"
 
 #. Score dialog column header for the score time (e.g. 1 minute)
 #: ../src/games-scores-dialog.c:132
@@ -236,285 +317,152 @@ msgstr "%1$dm %2$ds"
 msgid "Date"
 msgstr "Datums"
 
-#: ../src/games-stock.c:41
-msgid "View help for this game"
-msgstr "Skatīt šīs spēles palīdzību"
+#~ msgid "Five or More Preferences"
+#~ msgstr "“Vismaz pieci” iestatījumi"
 
-#: ../src/games-stock.c:42
-msgid "End the current game"
-msgstr "Pārtraukt šo spēli"
+#~ msgid "true if the window is fullscren"
+#~ msgstr "patiess, ja logs ir pilnekrāna"
 
-#: ../src/games-stock.c:43
-msgid "Toggle fullscreen mode"
-msgstr "Pārslēgt pilnekrāna režīmu"
+#~ msgid "View help for this game"
+#~ msgstr "Skatīt šīs spēles palīdzību"
 
-#: ../src/games-stock.c:44
-msgid "Get a hint for your next move"
-msgstr "Saņem padomu par nākamo gājienu"
+#~ msgid "End the current game"
+#~ msgstr "Pārtraukt šo spēli"
 
-#: ../src/games-stock.c:45
-msgid "Leave fullscreen mode"
-msgstr "Pamest pilnekrāna režīmu"
+#~ msgid "Toggle fullscreen mode"
+#~ msgstr "Pārslēgt pilnekrāna režīmu"
 
-#: ../src/games-stock.c:46
-msgid "Start a new multiplayer network game"
-msgstr "Sākt jaunu tīkla spēli"
+#~ msgid "Get a hint for your next move"
+#~ msgstr "Saņem padomu par nākamo gājienu"
 
-#: ../src/games-stock.c:47
-msgid "End the current network game and return to network server"
-msgstr "Beigt pašreizējo tīkla spēli un atgriezties pie servera"
+#~ msgid "Leave fullscreen mode"
+#~ msgstr "Pamest pilnekrāna režīmu"
 
-#: ../src/games-stock.c:49
-msgid "Pause the game"
-msgstr "Pauzēt spēli"
+#~ msgid "Start a new multiplayer network game"
+#~ msgstr "Sākt jaunu tīkla spēli"
 
-#: ../src/games-stock.c:50
-msgid "Show a list of players in the network game"
-msgstr "Rādīt spēlētāju sarakstu tīkla spēlē"
+#~ msgid "End the current network game and return to network server"
+#~ msgstr "Beigt pašreizējo tīkla spēli un atgriezties pie servera"
 
-#: ../src/games-stock.c:51
-msgid "Redo the undone move"
-msgstr "Atsaukt gājiena atsaukšanu"
+#~ msgid "Pause the game"
+#~ msgstr "Pauzēt spēli"
 
-#: ../src/games-stock.c:52
-msgid "Restart the game"
-msgstr "Pārstartēt spēli"
+#~ msgid "Show a list of players in the network game"
+#~ msgstr "Rādīt spēlētāju sarakstu tīkla spēlē"
 
-#: ../src/games-stock.c:53
-msgid "Resume the paused game"
-msgstr "Turpināt pauzēto spēli"
+#~ msgid "Redo the undone move"
+#~ msgstr "Atsaukt gājiena atsaukšanu"
 
-#: ../src/games-stock.c:54
-msgid "View the scores"
-msgstr "Apskatīt rezultātus"
+#~ msgid "Restart the game"
+#~ msgstr "Pārstartēt spēli"
 
-#: ../src/games-stock.c:55
-msgid "Undo the last move"
-msgstr "Atsaukt pēdējo gājienu"
+#~ msgid "Resume the paused game"
+#~ msgstr "Turpināt pauzēto spēli"
 
-#: ../src/games-stock.c:56
-msgid "About this game"
-msgstr "Par šo spēli"
+#~ msgid "View the scores"
+#~ msgstr "Apskatīt rezultātus"
 
-#: ../src/games-stock.c:57
-msgid "Close this window"
-msgstr "Aizvērt šo logu"
+#~ msgid "Undo the last move"
+#~ msgstr "Atsaukt pēdējo gājienu"
 
-#: ../src/games-stock.c:58
-msgid "Configure the game"
-msgstr "Konfigurēt spēli"
+#~ msgid "About this game"
+#~ msgstr "Par šo spēli"
 
-#: ../src/games-stock.c:59
-msgid "Quit this game"
-msgstr "Iziet no spēles"
+#~ msgid "Close this window"
+#~ msgstr "Aizvērt šo logu"
 
-#: ../src/games-stock.c:247
-msgid "_Contents"
-msgstr "_Saturs"
+#~ msgid "Configure the game"
+#~ msgstr "Konfigurēt spēli"
 
-#: ../src/games-stock.c:248
-msgid "_Fullscreen"
-msgstr "_Pilnekrāna"
+#~ msgid "Quit this game"
+#~ msgstr "Iziet no spēles"
 
-#: ../src/games-stock.c:249
-msgid "_Hint"
-msgstr "_Padoms"
+#~ msgid "_Contents"
+#~ msgstr "_Saturs"
 
-#. Translators: This "_New" is for the menu item 'Game->New', implies "New Game"
-#: ../src/games-stock.c:251
-msgid "_New"
-msgstr "Jau_na"
+#~ msgid "_Fullscreen"
+#~ msgstr "_Pilnekrāna"
 
-#. Translators: This "_New Game" is for the game-over dialogue
-#: ../src/games-stock.c:253
-msgid "_New Game"
-msgstr "Jau_na spēle"
+#~ msgid "_Hint"
+#~ msgstr "_Padoms"
 
-#: ../src/games-stock.c:254
-msgid "_Redo Move"
-msgstr "Atkā_rtot darbību"
+#~ msgid "_New"
+#~ msgstr "Jau_na"
 
-#. Translators: this is the "Reset" scores button in a scores dialogue
-#: ../src/games-stock.c:256
-msgid "_Reset"
-msgstr "_Atstatīt"
+#~ msgid "_Redo Move"
+#~ msgstr "Atkā_rtot darbību"
 
-#. Translators: "_Restart" is the menu item 'Game->Restart', implies "Restart Game"
-#: ../src/games-stock.c:258
-msgid "_Restart"
-msgstr "Pā_rstartēt"
+#~ msgid "_Reset"
+#~ msgstr "_Atstatīt"
 
-#: ../src/games-stock.c:259
-msgid "_Undo Move"
-msgstr "Atsa_ukt gājienu"
+#~ msgid "_Restart"
+#~ msgstr "Pā_rstartēt"
 
-#: ../src/games-stock.c:260
-msgid "_Deal"
-msgstr "_Dalīt"
+#~ msgid "_Undo Move"
+#~ msgstr "Atsa_ukt gājienu"
 
-#: ../src/games-stock.c:261
-msgid "_Leave Fullscreen"
-msgstr "Pamest pi_lnekrāna režīmu"
+#~ msgid "_Deal"
+#~ msgstr "_Dalīt"
 
-#: ../src/games-stock.c:262
-msgid "Network _Game"
-msgstr "Tīkla _spēle"
+#~ msgid "_Leave Fullscreen"
+#~ msgstr "Pamest pi_lnekrāna režīmu"
 
-#: ../src/games-stock.c:263
-msgid "L_eave Game"
-msgstr "Pam_est spēli"
+#~ msgid "Network _Game"
+#~ msgstr "Tīkla _spēle"
 
-#: ../src/games-stock.c:264
-msgid "Player _List"
-msgstr "Spē_lētāju saraksts"
+#~ msgid "L_eave Game"
+#~ msgstr "Pam_est spēli"
 
-#: ../src/games-stock.c:265
-msgid "_Pause"
-msgstr "_Pauzēt"
+#~ msgid "Player _List"
+#~ msgstr "Spē_lētāju saraksts"
 
-#: ../src/games-stock.c:266
-msgid "Res_ume"
-msgstr "T_urpināt"
+#~ msgid "_Pause"
+#~ msgstr "_Pauzēt"
 
-#: ../src/games-stock.c:267
-msgid "_Scores"
-msgstr "Re_zultāti"
+#~ msgid "Res_ume"
+#~ msgstr "T_urpināt"
 
-#: ../src/games-stock.c:268
-msgid "_End Game"
-msgstr "B_eigt spēli"
+#~ msgid "_Scores"
+#~ msgstr "Re_zultāti"
 
-#. %s is replaced with the name of the game in gnome-games.
-#: ../src/games-stock.c:317
-#, c-format
-msgid ""
-"%s is free software; you can redistribute it and/or modify it under the "
-"terms of the GNU General Public License as published by the Free Software "
-"Foundation; either version %d of the License, or (at your option) any later "
-"version."
-msgstr ""
-"%s ir brīvā programmatūra; jūs varat izplatīt un/vai modificēt to saskaņā ar "
-"GNU Vispārējās Publiskās Licences %d vai kādas vēlākas versijas noteikumiem."
+#~ msgid "_End Game"
+#~ msgstr "B_eigt spēli"
 
-#: ../src/games-stock.c:322
-#, c-format
-msgid ""
-"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
-"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
-"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
-"details."
-msgstr ""
-"%s tiek izplatīts ar cerību, ka tas būs noderīgs. Tas tiek izplatīts BEZ "
-"jebkādas garantijas vai iekļautas ražotāja atbildības par šo produktu. "
-"Sīkāku informāciju meklējiet GNU Vispārējās Publiskās Licences tekstā."
+#~ msgid ""
+#~ "%s is free software; you can redistribute it and/or modify it under the "
+#~ "terms of the GNU General Public License as published by the Free Software "
+#~ "Foundation; either version %d of the License, or (at your option) any "
+#~ "later version."
+#~ msgstr ""
+#~ "%s ir brīvā programmatūra; jūs varat izplatīt un/vai modificēt to saskaņā "
+#~ "ar GNU Vispārējās Publiskās Licences %d vai kādas vēlākas versijas "
+#~ "noteikumiem."
 
-#: ../src/games-stock.c:327
-#, c-format
-msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
-"Fifth Floor, Boston, MA  02110-1301  USA"
-msgstr ""
-"GNU Vispārējās Publiskās Licence ir pieejama kopā ar %s instalāciju. Ja tā "
-"jums nav pieejama, jūs to varat iegūt no Free Software Foundation, Inc., 51 "
-"Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA"
+#~ msgid ""
+#~ "%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+#~ "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+#~ "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+#~ "details."
+#~ msgstr ""
+#~ "%s tiek izplatīts ar cerību, ka tas būs noderīgs. Tas tiek izplatīts BEZ "
+#~ "jebkādas garantijas vai iekļautas ražotāja atbildības par šo produktu. "
+#~ "Sīkāku informāciju meklējiet GNU Vispārējās Publiskās Licences tekstā."
 
-#: ../src/games-stock.c:331
-msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"this program.  If not, see <http://www.gnu.org/licenses/>."
-msgstr ""
-"Jums vajadzēja saņemt GNU Vispārējo Publisko Licenci ar šo programmu. Ja nē, "
-"skatiet <http://www.gnu.org/licenses/>."
+#~ msgid ""
+#~ "You should have received a copy of the GNU General Public License along "
+#~ "with %s; if not, write to the Free Software Foundation, Inc., 51 Franklin "
+#~ "Street, Fifth Floor, Boston, MA  02110-1301  USA"
+#~ msgstr ""
+#~ "GNU Vispārējās Publiskās Licence ir pieejama kopā ar %s instalāciju. Ja "
+#~ "tā jums nav pieejama, jūs to varat iegūt no Free Software Foundation, "
+#~ "Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA"
 
-#: ../src/glines.c:81
-msgctxt "board size"
-msgid "Small"
-msgstr "Mazs"
-
-#: ../src/glines.c:82
-msgctxt "board size"
-msgid "Medium"
-msgstr "Vidējs"
-
-#: ../src/glines.c:83
-msgctxt "board size"
-msgid "Large"
-msgstr "Liels"
-
-#: ../src/glines.c:170
-msgid "Could not load theme"
-msgstr "Nevarēja ielādēt motīvu"
-
-#: ../src/glines.c:196
-#, c-format
-msgid ""
-"Unable to locate file:\n"
-"%s\n"
-"\n"
-"The default theme will be loaded instead."
-msgstr ""
-"Nevar atrast datni:\n"
-"%s\n"
-"\n"
-"Tā vietā tiks ielādēts noklusējuma motīvs."
-
-#: ../src/glines.c:203
-#, c-format
-msgid ""
-"Unable to locate file:\n"
-"%s\n"
-"\n"
-"Please check that Five or More is installed correctly."
-msgstr ""
-"Nespēj atrast datni:\n"
-"%s\n"
-"\n"
-"Lūdzu, pārliecinies, ka “Vismaz pieci” ir pareizi uzinstalēts."
-
-#: ../src/glines.c:413
-msgid "Match five objects of the same type in a row to score!"
-msgstr "Savieto piecus viena veida objektus rindā, lai gūtu punktus!"
-
-#: ../src/glines.c:475
-#| msgid "Five or More"
-msgid "Five or More Scores"
-msgstr "“Vismaz pieci” rezultāti"
-
-#: ../src/glines.c:477
-msgid "_Board size:"
-msgstr "_Galdiņa izmērs:"
-
-#: ../src/glines.c:494
-msgid "Game Over!"
-msgstr "Spēles Beigas!"
-
-#. Can't move there!
-#: ../src/glines.c:651
-#| msgid "You can't move there!"
-msgid "You can’t move there!"
-msgstr "Nevar iet uz šejieni!"
-
-#: ../src/glines.c:1183
-#| msgid ""
-#| "GNOME port of the once-popular Color Lines game.\n"
-#| "\n"
-#| "Five or More is a part of GNOME Games."
-msgid ""
-"GNOME port of the once-popular Color Lines game\n"
-"\n"
-"Five or More is a part of GNOME Games."
-msgstr ""
-"GNOME ports kādreiz tik populārajai Color Lines spēlei\n"
-"\n"
-"“Vismaz pieci” ir daļa no GNOME Games."
-
-#: ../src/glines.c:1189
-msgid "translator-credits"
-msgstr ""
-"Raivis Dejus <orvils@gmail.com>\n"
-"Sandra Zabarovska <sandra.zabarovska@gmail.com>\n"
-"Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>"
+#~ msgid ""
+#~ "You should have received a copy of the GNU General Public License along "
+#~ "with this program.  If not, see <http://www.gnu.org/licenses/>."
+#~ msgstr ""
+#~ "Jums vajadzēja saņemt GNU Vispārējo Publisko Licenci ar šo programmu. Ja "
+#~ "nē, skatiet <http://www.gnu.org/licenses/>."
 
 #~ msgctxt "score-dialog"
 #~ msgid "Name"
