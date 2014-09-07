@@ -21,8 +21,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: five-or-more\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-16 18:04+0100\n"
-"PO-Revision-Date: 2014-03-16 18:05+0100\n"
+"POT-Creation-Date: 2014-09-07 04:22+0200\n"
+"PO-Revision-Date: 2014-09-07 04:24+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <gnomepl@aviary.pl>\n"
 "Language: pl\n"
@@ -55,7 +55,7 @@ msgstr ""
 "plansza się nie zapełni!"
 
 #: ../data/five-or-more.desktop.in.h:1 ../data/five-or-more.ui.h:1
-#: ../src/glines.c:1181 ../src/glines.c:1687
+#: ../src/five-or-more.c:1174 ../src/five-or-more.c:1675
 msgid "Five or More"
 msgstr "Kulki"
 
@@ -67,9 +67,10 @@ msgstr "Usuwanie kolorowych kul poprzez układanie ich w linie"
 msgid "game;strategy;logic;"
 msgstr "gra;gierka;strategiczna;strategia;logiczna;logika;"
 
-#: ../data/five-or-more-preferences.ui.h:1
-msgid "Five or More Preferences"
-msgstr "Preferencje gry Kulki"
+#: ../data/five-or-more-preferences.ui.h:1 ../data/menu.ui.h:3
+#: ../src/five-or-more.c:173
+msgid "Preferences"
+msgstr "Preferencje"
 
 #: ../data/five-or-more-preferences.ui.h:2
 msgid "Appearance"
@@ -119,9 +120,13 @@ msgstr "0"
 msgid "Score:"
 msgstr "Punkty:"
 
-#: ../data/five-or-more.ui.h:5 ../src/games-stock.c:48
-msgid "Start a new game"
-msgstr "Rozpoczęcie nowej gry"
+#: ../data/five-or-more.ui.h:5
+msgid "_New Game"
+msgstr "_Nowa gra"
+
+#: ../data/five-or-more.ui.h:6
+msgid "Start a new puzzle"
+msgstr "Rozpoczyna nową grę"
 
 #: ../data/menu.ui.h:1 ../src/games-scores-dialog.c:385
 msgid "New Game"
@@ -130,10 +135,6 @@ msgstr "Nowa gra"
 #: ../data/menu.ui.h:2
 msgid "Scores"
 msgstr "Punkty"
-
-#: ../data/menu.ui.h:3 ../src/glines.c:176
-msgid "Preferences"
-msgstr "Preferencje"
 
 #: ../data/menu.ui.h:4
 msgid "Help"
@@ -217,9 +218,99 @@ msgstr "Wysokość okna w pikselach"
 msgid "true if the window is maximized"
 msgstr "Wartość \"true\" oznacza, że okno jest zmaksymalizowane"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:18
-msgid "true if the window is fullscren"
-msgstr "Wartość \"true\" oznacza, że okno jest pełnoekranowe"
+#: ../src/five-or-more.c:80
+msgctxt "board size"
+msgid "Small"
+msgstr "Mała"
+
+#: ../src/five-or-more.c:81
+msgctxt "board size"
+msgid "Medium"
+msgstr "Średnia"
+
+#: ../src/five-or-more.c:82
+msgctxt "board size"
+msgid "Large"
+msgstr "Duża"
+
+#: ../src/five-or-more.c:167
+msgid "Could not load theme"
+msgstr "Nie można wczytać motywu"
+
+#: ../src/five-or-more.c:193
+#, c-format
+msgid ""
+"Unable to locate file:\n"
+"%s\n"
+"\n"
+"The default theme will be loaded instead."
+msgstr ""
+"Nie można odnaleźć pliku:\n"
+"%s\n"
+"\n"
+"Zostanie wczytany motyw domyślny."
+
+#: ../src/five-or-more.c:200
+#, c-format
+msgid ""
+"Unable to locate file:\n"
+"%s\n"
+"\n"
+"Please check that Five or More is installed correctly."
+msgstr ""
+"Nie można odnaleźć pliku:\n"
+"%s\n"
+"\n"
+"Proszę się upewnić, że gra \"Kulki\" została prawidłowo zainstalowana."
+
+#: ../src/five-or-more.c:410
+msgid "Match five objects of the same type in a row to score!"
+msgstr ""
+"Należy ustawić w linii pięć kulek tego samego koloru, aby zdobyć punkty."
+
+#: ../src/five-or-more.c:471
+msgid "Five or More Scores"
+msgstr "Wyniki gry Kulki"
+
+#: ../src/five-or-more.c:473
+msgid "_Board size:"
+msgstr "_Rozmiar planszy:"
+
+#: ../src/five-or-more.c:490
+msgid "Game Over!"
+msgstr "Koniec gry!"
+
+#. Can't move there!
+#: ../src/five-or-more.c:646
+msgid "You can’t move there!"
+msgstr "Nie można tam przenieść!"
+
+#: ../src/five-or-more.c:1176
+msgid ""
+"GNOME port of the once-popular Color Lines game\n"
+"\n"
+"Five or More is a part of GNOME Games."
+msgstr ""
+"Port niegdyś popularnej gry w kolorowe linie.\n"
+"\n"
+"Gra Kulki jest częścią gier GNOME."
+
+#: ../src/five-or-more.c:1182
+msgid "translator-credits"
+msgstr ""
+"Zbigniew Chyla <chyla@alice.ci.pwr.wroc.pl>, 1998-2002\n"
+"Marcin Gorycki <mgo@olicom.dk>, 1999\n"
+"Tomasz Kłoczko <kloczek@rudy.mif.pg.gda.pl>, 2000\n"
+"Artur Flinta <aflinta@gmail.com>, 2003-2007\n"
+"Bartosz Kosiorek <gang65@poczta.onet.pl>, 2005-2008\n"
+"Michał Bentkowski <mr.ecik@gmail.com>, 2006\n"
+"Andrzej Polatyński <andrzej@datatel.net.pl>, 2006\n"
+"Wadim Dziedzic <wdziedzic@aviary.pl>, 2007-2009\n"
+"Tomasz Dominikowski <dominikowski@gmail.com>, 2008\n"
+"Joanna Mazgaj <jmazgaj@aviary.pl>, 2009-2010\n"
+"Wojciech Kapusta <wkapusta@aviary.pl>, 2009\n"
+"Piotr Drąg <piotrdrag@gmail.com>, 2010-2014\n"
+"Aviary.pl <gnomepl@aviary.pl>, 2007-2014"
 
 #. Score dialog column header for the score time (e.g. 1 minute)
 #: ../src/games-scores-dialog.c:132
@@ -244,293 +335,3 @@ msgstr "%1$dm %2$ds"
 #: ../src/games-scores-dialog.c:478
 msgid "Date"
 msgstr "Data"
-
-#: ../src/games-stock.c:41
-msgid "View help for this game"
-msgstr "Wyświetla pomoc dla tej gry"
-
-#: ../src/games-stock.c:42
-msgid "End the current game"
-msgstr "Kończy bieżącą grę"
-
-#: ../src/games-stock.c:43
-msgid "Toggle fullscreen mode"
-msgstr "Przełącza tryb pełnoekranowy"
-
-#: ../src/games-stock.c:44
-msgid "Get a hint for your next move"
-msgstr "Wyświetla podpowiedź kolejnego ruchu"
-
-#: ../src/games-stock.c:45
-msgid "Leave fullscreen mode"
-msgstr "Wyłącza tryb pełnoekranowy"
-
-#: ../src/games-stock.c:46
-msgid "Start a new multiplayer network game"
-msgstr "Rozpoczyna nową grę sieciową dla wielu graczy"
-
-#: ../src/games-stock.c:47
-msgid "End the current network game and return to network server"
-msgstr "Kończy bieżącą grę sieciową i powraca do serwera sieciowego"
-
-#: ../src/games-stock.c:49
-msgid "Pause the game"
-msgstr "Wstrzymuje grę"
-
-#: ../src/games-stock.c:50
-msgid "Show a list of players in the network game"
-msgstr "Wyświetla listę graczy w grze sieciowej"
-
-#: ../src/games-stock.c:51
-msgid "Redo the undone move"
-msgstr "Powtarza cofnięty ruch"
-
-#: ../src/games-stock.c:52
-msgid "Restart the game"
-msgstr "Rozpoczęcie gry od nowa"
-
-#: ../src/games-stock.c:53
-msgid "Resume the paused game"
-msgstr "Kontynuuje grę"
-
-#: ../src/games-stock.c:54
-msgid "View the scores"
-msgstr "Wyświetla wyniki"
-
-#: ../src/games-stock.c:55
-msgid "Undo the last move"
-msgstr "Cofa ostatni ruch"
-
-#: ../src/games-stock.c:56
-msgid "About this game"
-msgstr "Wyświetla informacje o grze"
-
-#: ../src/games-stock.c:57
-msgid "Close this window"
-msgstr "Zamyka to okno"
-
-#: ../src/games-stock.c:58
-msgid "Configure the game"
-msgstr "Konfiguruje grę"
-
-#: ../src/games-stock.c:59
-msgid "Quit this game"
-msgstr "Kończy działanie gry"
-
-#: ../src/games-stock.c:247
-msgid "_Contents"
-msgstr "_Spis treści"
-
-#: ../src/games-stock.c:248
-msgid "_Fullscreen"
-msgstr "_Pełny ekran"
-
-#: ../src/games-stock.c:249
-msgid "_Hint"
-msgstr "_Podpowiedź"
-
-#. Translators: This "_New" is for the menu item 'Game->New', implies "New Game"
-#: ../src/games-stock.c:251
-msgid "_New"
-msgstr "_Nowa"
-
-#. Translators: This "_New Game" is for the game-over dialogue
-#: ../src/games-stock.c:253
-msgid "_New Game"
-msgstr "_Nowa gra"
-
-#: ../src/games-stock.c:254
-msgid "_Redo Move"
-msgstr "_Powtórz ruch"
-
-#. Translators: this is the "Reset" scores button in a scores dialogue
-#: ../src/games-stock.c:256
-msgid "_Reset"
-msgstr "Z_resetuj"
-
-#. Translators: "_Restart" is the menu item 'Game->Restart', implies "Restart Game"
-#: ../src/games-stock.c:258
-msgid "_Restart"
-msgstr "_Zacznij od początku"
-
-#: ../src/games-stock.c:259
-msgid "_Undo Move"
-msgstr "_Cofnij ruch"
-
-#: ../src/games-stock.c:260
-msgid "_Deal"
-msgstr "Roz_daj"
-
-#: ../src/games-stock.c:261
-msgid "_Leave Fullscreen"
-msgstr "_Opuść tryb pełnoekranowy"
-
-#: ../src/games-stock.c:262
-msgid "Network _Game"
-msgstr "_Gra sieciowa"
-
-#: ../src/games-stock.c:263
-msgid "L_eave Game"
-msgstr "Op_uść grę"
-
-#: ../src/games-stock.c:264
-msgid "Player _List"
-msgstr "Lis_ta graczy"
-
-#: ../src/games-stock.c:265
-msgid "_Pause"
-msgstr "_Wstrzymaj"
-
-#: ../src/games-stock.c:266
-msgid "Res_ume"
-msgstr "_Ponów"
-
-#: ../src/games-stock.c:267
-msgid "_Scores"
-msgstr "_Wyniki"
-
-#: ../src/games-stock.c:268
-msgid "_End Game"
-msgstr "_Koniec gry"
-
-#. %s is replaced with the name of the game in gnome-games.
-#: ../src/games-stock.c:317
-#, c-format
-msgid ""
-"%s is free software; you can redistribute it and/or modify it under the "
-"terms of the GNU General Public License as published by the Free Software "
-"Foundation; either version %d of the License, or (at your option) any later "
-"version."
-msgstr ""
-"Gra %s jest wolnym oprogramowaniem; można ją rozprowadzać dalej i/lub "
-"modyfikować na warunkach Powszechnej Licencji Publicznej GNU, wydanej przez "
-"Fundację Wolnego Oprogramowania - według wersji %d tej Licencji lub którejś "
-"z późniejszych wersji."
-
-#: ../src/games-stock.c:322
-#, c-format
-msgid ""
-"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
-"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
-"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
-"details."
-msgstr ""
-"Gra %s rozpowszechniana jest z nadzieją, iż będzie ona użyteczna - jednak "
-"BEZ JAKIEJKOLWIEK GWARANCJI, nawet domyślnej gwarancji PRZYDATNOŚCI "
-"HANDLOWEJ albo PRZYDATNOŚCI DO OKREŚLONYCH ZASTOSOWAŃ. W celu uzyskania "
-"bliższych informacji należy zapoznać się z Powszechną Licencją Publiczną GNU."
-
-#: ../src/games-stock.c:327
-#, c-format
-msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
-"Fifth Floor, Boston, MA  02110-1301  USA"
-msgstr ""
-"Z pewnością wraz z grą %s dostarczono także egzemplarz Powszechnej Licencji "
-"Publicznej GNU (GNU General Public License); jeśli nie - proszę napisać do "
-"Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA "
-"02110-130159 USA"
-
-#: ../src/games-stock.c:331
-msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"this program.  If not, see <http://www.gnu.org/licenses/>."
-msgstr ""
-"Z pewnością wraz z niniejszą grą dostarczono także egzemplarz Powszechnej "
-"Licencji Publicznej GNU (GNU General Public License); jeśli nie - proszę "
-"odwiedzić stronę internetową <http://www.gnu.org/licenses/>."
-
-#: ../src/glines.c:81
-msgctxt "board size"
-msgid "Small"
-msgstr "Mała"
-
-#: ../src/glines.c:82
-msgctxt "board size"
-msgid "Medium"
-msgstr "Średnia"
-
-#: ../src/glines.c:83
-msgctxt "board size"
-msgid "Large"
-msgstr "Duża"
-
-#: ../src/glines.c:170
-msgid "Could not load theme"
-msgstr "Nie można wczytać motywu"
-
-#: ../src/glines.c:196
-#, c-format
-msgid ""
-"Unable to locate file:\n"
-"%s\n"
-"\n"
-"The default theme will be loaded instead."
-msgstr ""
-"Nie można odnaleźć pliku:\n"
-"%s\n"
-"\n"
-"Zostanie wczytany motyw domyślny."
-
-#: ../src/glines.c:203
-#, c-format
-msgid ""
-"Unable to locate file:\n"
-"%s\n"
-"\n"
-"Please check that Five or More is installed correctly."
-msgstr ""
-"Nie można odnaleźć pliku:\n"
-"%s\n"
-"\n"
-"Proszę się upewnić, że gra \"Kulki\" została prawidłowo zainstalowana."
-
-#: ../src/glines.c:413
-msgid "Match five objects of the same type in a row to score!"
-msgstr ""
-"Należy ustawić w linii pięć kulek tego samego koloru, aby zdobyć punkty."
-
-#: ../src/glines.c:475
-msgid "Five or More Scores"
-msgstr "Wyniki gry Kulki"
-
-#: ../src/glines.c:477
-msgid "_Board size:"
-msgstr "_Rozmiar planszy:"
-
-#: ../src/glines.c:494
-msgid "Game Over!"
-msgstr "Koniec gry!"
-
-#. Can't move there!
-#: ../src/glines.c:651
-msgid "You can’t move there!"
-msgstr "Nie można się tam ruszyć!"
-
-#: ../src/glines.c:1183
-msgid ""
-"GNOME port of the once-popular Color Lines game\n"
-"\n"
-"Five or More is a part of GNOME Games."
-msgstr ""
-"Port niegdyś popularnej gry w kolorowe linie.\n"
-"\n"
-"Gra Kulki jest częścią gier GNOME."
-
-#: ../src/glines.c:1189
-msgid "translator-credits"
-msgstr ""
-"Zbigniew Chyla <chyla@alice.ci.pwr.wroc.pl>, 1998-2002\n"
-"Marcin Gorycki <mgo@olicom.dk>, 1999\n"
-"Tomasz Kłoczko <kloczek@rudy.mif.pg.gda.pl>, 2000\n"
-"Artur Flinta <aflinta@gmail.com>, 2003-2007\n"
-"Bartosz Kosiorek <gang65@poczta.onet.pl>, 2005-2008\n"
-"Michał Bentkowski <mr.ecik@gmail.com>, 2006\n"
-"Andrzej Polatyński <andrzej@datatel.net.pl>, 2006\n"
-"Wadim Dziedzic <wdziedzic@aviary.pl>, 2007-2009\n"
-"Tomasz Dominikowski <dominikowski@gmail.com>, 2008\n"
-"Joanna Mazgaj <jmazgaj@aviary.pl>, 2009-2010\n"
-"Wojciech Kapusta <wkapusta@aviary.pl>, 2009\n"
-"Piotr Drąg <piotrdrag@gmail.com>, 2010-2014\n"
-"Aviary.pl <gnomepl@aviary.pl>, 2007-2014"
