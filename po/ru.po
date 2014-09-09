@@ -11,15 +11,15 @@
 # Yuri Kozlov <yuray@komyakino.ru>, 2010.
 # Valek Filippov <frob@df.ru> 2000-2002
 # Nickolay V. Shmyrev <nshmyrev@yandex.ru>
-# Yuri Myasoedov <omerta13@yandex.ru>, 2012.
+# Yuri Myasoedov <ymyasoedov@yandex.ru>, 2012-2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games trunk\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-"
 "or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-03-19 05:53+0000\n"
-"PO-Revision-Date: 2014-03-19 22:02+0300\n"
+"POT-Creation-Date: 2014-09-09 04:47+0000\n"
+"PO-Revision-Date: 2014-09-09 12:48+0300\n"
 "Last-Translator: Yuri Myasoedov <omerta13@yandex.ru>\n"
 "Language-Team: русский <gnome-cyr@gnome.org>\n"
 "Language: ru\n"
@@ -51,7 +51,7 @@ msgstr ""
 "пока игровая доска не заполнится объектами."
 
 #: ../data/five-or-more.desktop.in.h:1 ../data/five-or-more.ui.h:1
-#: ../src/glines.c:1181 ../src/glines.c:1687
+#: ../src/five-or-more.c:1174 ../src/five-or-more.c:1675
 msgid "Five or More"
 msgstr "Пять или более"
 
@@ -64,9 +64,10 @@ msgstr ""
 msgid "game;strategy;logic;"
 msgstr "игра;стратегия;логическая;"
 
-#: ../data/five-or-more-preferences.ui.h:1
-msgid "Five or More Preferences"
-msgstr "Параметры игры «Пять или более»"
+#: ../data/five-or-more-preferences.ui.h:1 ../data/menu.ui.h:3
+#: ../src/five-or-more.c:173
+msgid "Preferences"
+msgstr "Параметры"
 
 #: ../data/five-or-more-preferences.ui.h:2
 msgid "Appearance"
@@ -116,9 +117,14 @@ msgstr "0"
 msgid "Score:"
 msgstr "Счёт:"
 
-#: ../data/five-or-more.ui.h:5 ../src/games-stock.c:48
-msgid "Start a new game"
-msgstr "Начать новую игру"
+#: ../data/five-or-more.ui.h:5
+msgid "_New Game"
+msgstr "_Новая игра"
+
+#: ../data/five-or-more.ui.h:6
+#| msgid "Start a new game"
+msgid "Start a new puzzle"
+msgstr "Начать новую головоломку"
 
 #: ../data/menu.ui.h:1 ../src/games-scores-dialog.c:385
 msgid "New Game"
@@ -128,21 +134,17 @@ msgstr "Новая игра"
 msgid "Scores"
 msgstr "Результаты"
 
-#: ../data/menu.ui.h:3 ../src/glines.c:176
-msgid "Preferences"
-msgstr "Параметры"
-
 #: ../data/menu.ui.h:4
 msgid "Help"
 msgstr "Справка"
 
 #: ../data/menu.ui.h:5
 msgid "About"
-msgstr "О программе"
+msgstr "О приложении"
 
 #: ../data/menu.ui.h:6
 msgid "Quit"
-msgstr "Закончить"
+msgstr "Завершить"
 
 #: ../data/org.gnome.five-or-more.gschema.xml.h:1
 msgid "Playing field size"
@@ -215,9 +217,89 @@ msgstr "Высота окна в пикселах"
 msgid "true if the window is maximized"
 msgstr "истинно, если окно имеет максимальный размер"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:18
-msgid "true if the window is fullscren"
-msgstr "истинно, если окно раскрыто на полный экран"
+#: ../src/five-or-more.c:80
+msgctxt "board size"
+msgid "Small"
+msgstr "Маленькая"
+
+#: ../src/five-or-more.c:81
+msgctxt "board size"
+msgid "Medium"
+msgstr "Средняя"
+
+#: ../src/five-or-more.c:82
+msgctxt "board size"
+msgid "Large"
+msgstr "Большая"
+
+#: ../src/five-or-more.c:167
+msgid "Could not load theme"
+msgstr "Не удалось загрузить тему"
+
+#: ../src/five-or-more.c:193
+#, c-format
+msgid ""
+"Unable to locate file:\n"
+"%s\n"
+"\n"
+"The default theme will be loaded instead."
+msgstr ""
+"Не удалось найти файл:\n"
+"%s\n"
+"Вместо него будет загружена тема по умолчанию."
+
+#: ../src/five-or-more.c:200
+#, c-format
+msgid ""
+"Unable to locate file:\n"
+"%s\n"
+"\n"
+"Please check that Five or More is installed correctly."
+msgstr ""
+"Не удалось найти файл:\n"
+"%s\n"
+"\n"
+"Проверьте установку игры «Пять или более»"
+
+#: ../src/five-or-more.c:410
+msgid "Match five objects of the same type in a row to score!"
+msgstr "Соберите пять шариков одинакового цвета в одну линию!"
+
+#: ../src/five-or-more.c:471
+msgid "Five or More Scores"
+msgstr "Счёт «Пять или более»"
+
+#: ../src/five-or-more.c:473
+msgid "_Board size:"
+msgstr "Размер _доски:"
+
+#: ../src/five-or-more.c:490
+msgid "Game Over!"
+msgstr "Игра окончена!"
+
+#. Can't move there!
+#: ../src/five-or-more.c:646
+msgid "You can’t move there!"
+msgstr "Невозможно переместить сюда!"
+
+#: ../src/five-or-more.c:1176
+msgid ""
+"GNOME port of the once-popular Color Lines game\n"
+"\n"
+"Five or More is a part of GNOME Games."
+msgstr ""
+"Порт популярной игры «Цветные линии» для GNOME.\n"
+"\n"
+"«Пять или более» является частью пакета GNOME Games."
+
+#: ../src/five-or-more.c:1182
+msgid "translator-credits"
+msgstr ""
+"Валек Филиппов aka frob\n"
+"Дмитрий Мастрюков\n"
+"Вячеслав Диконов\n"
+"Михаил Яхонтов\n"
+"Леонид Кантер"
 
 #. Score dialog column header for the score time (e.g. 1 minute)
 #: ../src/games-scores-dialog.c:132
@@ -242,298 +324,3 @@ msgstr "%1$dмин. %2$dс"
 #: ../src/games-scores-dialog.c:478
 msgid "Date"
 msgstr "Дата"
-
-#: ../src/games-stock.c:41
-msgid "View help for this game"
-msgstr "Показать справку по игре"
-
-#: ../src/games-stock.c:42
-msgid "End the current game"
-msgstr "Закончить текущую игру"
-
-#: ../src/games-stock.c:43
-msgid "Toggle fullscreen mode"
-msgstr "Переключиться в полноэкранный режим"
-
-#: ../src/games-stock.c:44
-msgid "Get a hint for your next move"
-msgstr "Получить подсказку на следующий ход"
-
-#: ../src/games-stock.c:45
-msgid "Leave fullscreen mode"
-msgstr "Выйти из полноэкранного режима"
-
-#: ../src/games-stock.c:46
-msgid "Start a new multiplayer network game"
-msgstr "Начать новую сетевую игру с несколькими участниками"
-
-#: ../src/games-stock.c:47
-msgid "End the current network game and return to network server"
-msgstr "Закончить сетевую игру и вернуться к игровому серверу"
-
-#: ../src/games-stock.c:49
-msgid "Pause the game"
-msgstr "Приостановить игру"
-
-#: ../src/games-stock.c:50
-msgid "Show a list of players in the network game"
-msgstr "Показывать список игроков в сетевой игре"
-
-#: ../src/games-stock.c:51
-msgid "Redo the undone move"
-msgstr "Вернуть отменённый ход"
-
-#: ../src/games-stock.c:52
-msgid "Restart the game"
-msgstr "Начать игру заново"
-
-#: ../src/games-stock.c:53
-msgid "Resume the paused game"
-msgstr "Продолжить остановленную игру"
-
-#: ../src/games-stock.c:54
-msgid "View the scores"
-msgstr "Просмотреть результаты"
-
-#: ../src/games-stock.c:55
-msgid "Undo the last move"
-msgstr "Отменить последний ход"
-
-#: ../src/games-stock.c:56
-msgid "About this game"
-msgstr "Об игре"
-
-#: ../src/games-stock.c:57
-msgid "Close this window"
-msgstr "Закрыть это окно"
-
-#: ../src/games-stock.c:58
-msgid "Configure the game"
-msgstr "Настроить игру"
-
-#: ../src/games-stock.c:59
-msgid "Quit this game"
-msgstr "Выйти из игры"
-
-#: ../src/games-stock.c:247
-msgid "_Contents"
-msgstr "_Содержание"
-
-#: ../src/games-stock.c:248
-msgid "_Fullscreen"
-msgstr "На _весь экран"
-
-#: ../src/games-stock.c:249
-msgid "_Hint"
-msgstr "_Подсказка"
-
-#. Translators: This "_New" is for the menu item 'Game->New', implies "New Game"
-#: ../src/games-stock.c:251
-msgid "_New"
-msgstr "_Новая игра"
-
-#. Translators: This "_New Game" is for the game-over dialogue
-#: ../src/games-stock.c:253
-msgid "_New Game"
-msgstr "_Новая игра"
-
-#: ../src/games-stock.c:254
-msgid "_Redo Move"
-msgstr "_Возвратить"
-
-#. Translators: this is the "Reset" scores button in a scores dialogue
-#: ../src/games-stock.c:256
-msgid "_Reset"
-msgstr "_Сброс"
-
-#. Translators: "_Restart" is the menu item 'Game->Restart', implies "Restart Game"
-#: ../src/games-stock.c:258
-msgid "_Restart"
-msgstr "_Начать заново"
-
-#: ../src/games-stock.c:259
-msgid "_Undo Move"
-msgstr "_Отменить"
-
-#: ../src/games-stock.c:260
-msgid "_Deal"
-msgstr "С_дать"
-
-#: ../src/games-stock.c:261
-msgid "_Leave Fullscreen"
-msgstr "Выйти из _полноэкранного режима"
-
-#: ../src/games-stock.c:262
-msgid "Network _Game"
-msgstr "Новая _сетевая игра"
-
-#: ../src/games-stock.c:263
-msgid "L_eave Game"
-msgstr "Вый_ти из игры"
-
-#: ../src/games-stock.c:264
-msgid "Player _List"
-msgstr "_Список игроков"
-
-#: ../src/games-stock.c:265
-msgid "_Pause"
-msgstr "_Пауза"
-
-#: ../src/games-stock.c:266
-msgid "Res_ume"
-msgstr "_Продолжить"
-
-#: ../src/games-stock.c:267
-msgid "_Scores"
-msgstr "_Результаты"
-
-#: ../src/games-stock.c:268
-msgid "_End Game"
-msgstr "_Закончить игру"
-
-#. %s is replaced with the name of the game in gnome-games.
-#: ../src/games-stock.c:317
-#, c-format
-msgid ""
-"%s is free software; you can redistribute it and/or modify it under the "
-"terms of the GNU General Public License as published by the Free Software "
-"Foundation; either version %d of the License, or (at your option) any later "
-"version."
-msgstr ""
-"%s ― свободное программное обеспечение. Вы можете распространять или "
-"изменять его при условиях соответствия GNU General Public License "
-"опубликованной Free Software Foundation; либо версии %d лицензии, либо (на "
-"ваше усмотрение) любой более поздней версии."
-
-#: ../src/games-stock.c:322
-#, c-format
-msgid ""
-"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
-"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
-"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
-"details."
-msgstr ""
-"%s распространяется в надежде на то, что приложение будет полезно, но БЕЗ "
-"ВСЯКИХ ГАРАНТИЙ; не гарантируется даже ПРИГОДНОСТЬ или СООТВЕТСТВИЕ КАКИМ-"
-"ЛИБО ТРЕБОВАНИЯМ. Для получения дополнительной информации ознакомьтесь с GNU "
-"General Public License."
-
-#: ../src/games-stock.c:327
-#, c-format
-msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
-"Fifth Floor, Boston, MA  02110-1301  USA"
-msgstr ""
-"Вы должны получить копию GNU General Public License вместе с %s. Если этого "
-"не произошло, напишите to the Free Software Foundation, Inc., 59 Temple "
-"Place, Suite 330, Boston, MA  02111-1307  USA."
-
-#: ../src/games-stock.c:331
-msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"this program.  If not, see <http://www.gnu.org/licenses/>."
-msgstr ""
-"Вы должны получить копию GNU General Public License вместе с этой "
-"программой. Если этого не произошло, посмотрите <http://www.gnu.org/licenses/"
-">."
-
-#: ../src/glines.c:81
-msgctxt "board size"
-msgid "Small"
-msgstr "Маленькая"
-
-#: ../src/glines.c:82
-msgctxt "board size"
-msgid "Medium"
-msgstr "Средняя"
-
-#: ../src/glines.c:83
-msgctxt "board size"
-msgid "Large"
-msgstr "Большая"
-
-#: ../src/glines.c:170
-msgid "Could not load theme"
-msgstr "Не удалось загрузить тему"
-
-#: ../src/glines.c:196
-#, c-format
-msgid ""
-"Unable to locate file:\n"
-"%s\n"
-"\n"
-"The default theme will be loaded instead."
-msgstr ""
-"Не удалось найти файл:\n"
-"%s\n"
-"Вместо него будет загружена тема по умолчанию."
-
-#: ../src/glines.c:203
-#, c-format
-msgid ""
-"Unable to locate file:\n"
-"%s\n"
-"\n"
-"Please check that Five or More is installed correctly."
-msgstr ""
-"Не удалось найти файл:\n"
-"%s\n"
-"\n"
-"Проверьте установку игры «Пять или более»"
-
-#: ../src/glines.c:413
-msgid "Match five objects of the same type in a row to score!"
-msgstr "Соберите пять шариков одинакового цвета в одну линию!"
-
-#: ../src/glines.c:475
-#| msgid "Five or More"
-msgid "Five or More Scores"
-msgstr "Счёт «Пять или более»"
-
-#: ../src/glines.c:477
-msgid "_Board size:"
-msgstr "Размер _доски:"
-
-#: ../src/glines.c:494
-msgid "Game Over!"
-msgstr "Игра окончена!"
-
-#. Can't move there!
-#: ../src/glines.c:651
-#| msgid "You can't move there!"
-msgid "You can’t move there!"
-msgstr "Невозможно переместить сюда!"
-
-#: ../src/glines.c:1183
-#| msgid ""
-#| "GNOME port of the once-popular Color Lines game.\n"
-#| "\n"
-#| "Five or More is a part of GNOME Games."
-msgid ""
-"GNOME port of the once-popular Color Lines game\n"
-"\n"
-"Five or More is a part of GNOME Games."
-msgstr ""
-"Порт популярной игры «Цветные линии» для GNOME.\n"
-"\n"
-"«Пять или более» является частью пакета GNOME Games."
-
-#: ../src/glines.c:1189
-msgid "translator-credits"
-msgstr ""
-"Валек Филиппов aka frob\n"
-"Дмитрий Мастрюков\n"
-"Вячеслав Диконов\n"
-"Михаил Яхонтов\n"
-"Леонид Кантер"
-
-#~ msgctxt "score-dialog"
-#~ msgid "Name"
-#~ msgstr "Имя"
-
-#~ msgid "GNOME Five or More"
-#~ msgstr "Цветные линии"
-
-#~ msgid "GNOME Games web site"
-#~ msgstr "Веб-сайт GNOME Games"
