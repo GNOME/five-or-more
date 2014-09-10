@@ -15,8 +15,8 @@ msgstr ""
 "Project-Id-Version: lt\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-"
 "or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-02-22 17:54+0000\n"
-"PO-Revision-Date: 2014-02-22 19:59+0200\n"
+"POT-Creation-Date: 2014-09-10 16:50+0000\n"
+"PO-Revision-Date: 2014-09-10 19:54+0300\n"
 "Last-Translator: Aurimas Černius <aurisc4@gmail.com>\n"
 "Language-Team: Lietuvių <gnome-lt@lists.akl.lt>\n"
 "Language: lt\n"
@@ -48,7 +48,7 @@ msgstr ""
 "iki lenta užsipildys!"
 
 #: ../data/five-or-more.desktop.in.h:1 ../data/five-or-more.ui.h:1
-#: ../src/glines.c:1181 ../src/glines.c:1687
+#: ../src/five-or-more.c:1174 ../src/five-or-more.c:1675
 msgid "Five or More"
 msgstr "Penketas ar daugiau"
 
@@ -60,9 +60,10 @@ msgstr "Pašalinti nuo lentos spalvotus rutulius sukūrus iš jų linijas"
 msgid "game;strategy;logic;"
 msgstr "žaidimas;strategija;logika;"
 
-#: ../data/five-or-more-preferences.ui.h:1
-msgid "Five or More Preferences"
-msgstr "Penketas ar daugiau nustatymai"
+#: ../data/five-or-more-preferences.ui.h:1 ../data/menu.ui.h:3
+#: ../src/five-or-more.c:173
+msgid "Preferences"
+msgstr "Nustatymai"
 
 #: ../data/five-or-more-preferences.ui.h:2
 msgid "Appearance"
@@ -112,9 +113,14 @@ msgstr "0"
 msgid "Score:"
 msgstr "Taškai:"
 
-#: ../data/five-or-more.ui.h:5 ../src/games-stock.c:48
-msgid "Start a new game"
-msgstr "Pradėti naują žaidimą"
+#: ../data/five-or-more.ui.h:5
+msgid "_New Game"
+msgstr "_Naujas žaidimas"
+
+#: ../data/five-or-more.ui.h:6
+#| msgid "Start a new game"
+msgid "Start a new puzzle"
+msgstr "Pradėti naują galvosūkį"
 
 #: ../data/menu.ui.h:1 ../src/games-scores-dialog.c:385
 msgid "New Game"
@@ -123,10 +129,6 @@ msgstr "Naujas žaidimas"
 #: ../data/menu.ui.h:2
 msgid "Scores"
 msgstr "Taškai"
-
-#: ../data/menu.ui.h:3 ../src/glines.c:176
-msgid "Preferences"
-msgstr "Nustatymai"
 
 #: ../data/menu.ui.h:4
 msgid "Help"
@@ -213,9 +215,92 @@ msgstr "Lango aukštis pikseliais"
 msgid "true if the window is maximized"
 msgstr "teigiama, jei langas yra išdidintas"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:18
-msgid "true if the window is fullscren"
-msgstr "teigiama, jei langas yra visamo ekrano veiksenoje"
+#: ../src/five-or-more.c:80
+msgctxt "board size"
+msgid "Small"
+msgstr "Mažas"
+
+#: ../src/five-or-more.c:81
+msgctxt "board size"
+msgid "Medium"
+msgstr "Vidutiniškas"
+
+#: ../src/five-or-more.c:82
+msgctxt "board size"
+msgid "Large"
+msgstr "Didelis"
+
+#: ../src/five-or-more.c:167
+msgid "Could not load theme"
+msgstr "Nepavyko įkelti temos"
+
+#: ../src/five-or-more.c:193
+#, c-format
+msgid ""
+"Unable to locate file:\n"
+"%s\n"
+"\n"
+"The default theme will be loaded instead."
+msgstr ""
+"Nepavyko rasti failo:\n"
+"%s\n"
+"\n"
+"Vietoje to bus įkelta numatytoji tema."
+
+#: ../src/five-or-more.c:200
+#, c-format
+msgid ""
+"Unable to locate file:\n"
+"%s\n"
+"\n"
+"Please check that Five or More is installed correctly."
+msgstr ""
+"Nepavyko aptikti failo:\n"
+"%s\n"
+"\n"
+"Patikrinkite, ar „Penketas ar daugiau“ yra įdiegtas tinkamai."
+
+#: ../src/five-or-more.c:410
+msgid "Match five objects of the same type in a row to score!"
+msgstr "Norėdami gauti taškų surinkite penkis vienos spalvos rutulius eilėje!"
+
+#: ../src/five-or-more.c:471
+msgid "Five or More Scores"
+msgstr "Taškai už penketą ar daugiau"
+
+#: ../src/five-or-more.c:473
+msgid "_Board size:"
+msgstr "Lentos _dydis:"
+
+#: ../src/five-or-more.c:490
+msgid "Game Over!"
+msgstr "Žaidimas baigtas!"
+
+#. Can't move there!
+#: ../src/five-or-more.c:646
+msgid "You can’t move there!"
+msgstr "Negalima ten perkelti!"
+
+#: ../src/five-or-more.c:1176
+msgid ""
+"GNOME port of the once-popular Color Lines game\n"
+"\n"
+"Five or More is a part of GNOME Games."
+msgstr ""
+"Kažkada populiaraus Color Lines žaidimo GNOME variantas.\n"
+"\n"
+"Penketas ar daugiau yra GNOME žaidimų dalis."
+
+#: ../src/five-or-more.c:1182
+msgid "translator-credits"
+msgstr ""
+"Paskutinieji vertėjai:\n"
+"Žygimantas Beručka <zygis@gnome.org>,\n"
+"Justina Klingaitė <justina.klingaite@gmail.com>\n"
+"\n"
+"Ankstesnieji vertėjai:\n"
+"Tomas Kuliavas <tokul@users.sf.net>,\n"
+"Gediminas Paulauskas <menesis@chatsubo.lt>"
 
 #. Score dialog column header for the score time (e.g. 1 minute)
 #: ../src/games-scores-dialog.c:132
@@ -240,290 +325,4 @@ msgstr "%1$dm %2$ds"
 #: ../src/games-scores-dialog.c:478
 msgid "Date"
 msgstr "Data"
-
-#: ../src/games-stock.c:41
-msgid "View help for this game"
-msgstr "Rodyti šio žaidimo žinyną"
-
-#: ../src/games-stock.c:42
-msgid "End the current game"
-msgstr "Pabaigti dabartinį žaidimą "
-
-#: ../src/games-stock.c:43
-msgid "Toggle fullscreen mode"
-msgstr "Keisti viso ekrano veikseną"
-
-#: ../src/games-stock.c:44
-msgid "Get a hint for your next move"
-msgstr "Gauti kito ėjimo patarimą"
-
-#: ../src/games-stock.c:45
-msgid "Leave fullscreen mode"
-msgstr "Išjungti viso ekrano veikseną"
-
-#: ../src/games-stock.c:46
-msgid "Start a new multiplayer network game"
-msgstr "Pradėti naują tinklinį keleto žaidėjų žaidimą"
-
-#: ../src/games-stock.c:47
-msgid "End the current network game and return to network server"
-msgstr "Baigti einamąjį tinklo žaidimą ir grįžti prie tinklo serverio"
-
-#: ../src/games-stock.c:49
-msgid "Pause the game"
-msgstr "Sustabdyti žaidimą"
-
-#: ../src/games-stock.c:50
-msgid "Show a list of players in the network game"
-msgstr "Parodyti tinklo žaidimo žaidėjų sąrašą"
-
-#: ../src/games-stock.c:51
-msgid "Redo the undone move"
-msgstr "Atšaukti paskutinį ėjimą"
-
-#: ../src/games-stock.c:52
-msgid "Restart the game"
-msgstr "Perkrauti žaidimą"
-
-#: ../src/games-stock.c:53
-msgid "Resume the paused game"
-msgstr "Tęsti sustabdytą žaidimą"
-
-#: ../src/games-stock.c:54
-msgid "View the scores"
-msgstr "Rodyti taškus"
-
-#: ../src/games-stock.c:55
-msgid "Undo the last move"
-msgstr "Atšaukti paskutinį ėjimą"
-
-#: ../src/games-stock.c:56
-msgid "About this game"
-msgstr "Apie šį žaidimą"
-
-#: ../src/games-stock.c:57
-msgid "Close this window"
-msgstr "Užverti šį langą"
-
-#: ../src/games-stock.c:58
-msgid "Configure the game"
-msgstr "Konfigūruoti žaidimą"
-
-#: ../src/games-stock.c:59
-msgid "Quit this game"
-msgstr "Palikti šį žaidimą"
-
-#: ../src/games-stock.c:247
-msgid "_Contents"
-msgstr "_Turinys"
-
-#: ../src/games-stock.c:248
-msgid "_Fullscreen"
-msgstr "_Visame ekrane"
-
-#: ../src/games-stock.c:249
-msgid "_Hint"
-msgstr "_Užuomina"
-
-#. Translators: This "_New" is for the menu item 'Game->New', implies "New Game"
-#: ../src/games-stock.c:251
-msgid "_New"
-msgstr "_Naujas"
-
-#. Translators: This "_New Game" is for the game-over dialogue
-#: ../src/games-stock.c:253
-msgid "_New Game"
-msgstr "_Naujas žaidimas"
-
-#: ../src/games-stock.c:254
-msgid "_Redo Move"
-msgstr "A_tstatyti ėjimą"
-
-#. Translators: this is the "Reset" scores button in a scores dialogue
-#: ../src/games-stock.c:256
-msgid "_Reset"
-msgstr "_Atstatyti"
-
-#. Translators: "_Restart" is the menu item 'Game->Restart', implies "Restart Game"
-#: ../src/games-stock.c:258
-msgid "_Restart"
-msgstr "_Perkrauti"
-
-#: ../src/games-stock.c:259
-msgid "_Undo Move"
-msgstr "_Atšaukti ėjimą"
-
-#: ../src/games-stock.c:260
-msgid "_Deal"
-msgstr "_Dalinti"
-
-#: ../src/games-stock.c:261
-msgid "_Leave Fullscreen"
-msgstr "_Palikti viso ekrano veikseną"
-
-#: ../src/games-stock.c:262
-msgid "Network _Game"
-msgstr "Tinklinis _žaidimas"
-
-#: ../src/games-stock.c:263
-msgid "L_eave Game"
-msgstr "Pa_likti žaidimą"
-
-#: ../src/games-stock.c:264
-msgid "Player _List"
-msgstr "Žaidėjų _sąrašas"
-
-#: ../src/games-stock.c:265
-msgid "_Pause"
-msgstr "_Pauzė"
-
-#: ../src/games-stock.c:266
-msgid "Res_ume"
-msgstr "Ats_tatyti"
-
-#: ../src/games-stock.c:267
-msgid "_Scores"
-msgstr "_Taškai"
-
-#: ../src/games-stock.c:268
-msgid "_End Game"
-msgstr "_Pabaigti žaidimą"
-
-#. %s is replaced with the name of the game in gnome-games.
-#: ../src/games-stock.c:317
-#, c-format
-msgid ""
-"%s is free software; you can redistribute it and/or modify it under the "
-"terms of the GNU General Public License as published by the Free Software "
-"Foundation; either version %d of the License, or (at your option) any later "
-"version."
-msgstr ""
-"%s yra laisva programinė įranga; galite ją platinti ir/ar keisti ją pagal "
-"GNU General Public License sąlygas, išdėstytas Free Software Foundation; "
-"gali būti naudojama %d ar (pageidaujant) bet kuri vėlesnė licensijos versija."
-
-#: ../src/games-stock.c:322
-#, c-format
-msgid ""
-"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
-"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
-"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
-"details."
-msgstr ""
-"%s programa platinama tikintis, kad ji bus naudinga , bet BE JOKIŲ "
-"GARANTIJŲ; netgi be numanomos garantijos, kad JI TIKS NURODYTAM TIKSLUI. "
-"Daugiau detalių nurodyta GNU General Public License."
-
-#: ../src/games-stock.c:327
-#, c-format
-msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
-"Fifth Floor, Boston, MA  02110-1301  USA"
-msgstr ""
-"Turėjote gauti GNU General Public License (GNU Bendroji Viešoji Licensija) "
-"kopiją su %s; jei ne, parašykite Free Software Foundation, Inc., 51 Franklin "
-"Street, Fifth Floor, Boston, MA  02110-1301  USA"
-
-#: ../src/games-stock.c:331
-msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"this program.  If not, see <http://www.gnu.org/licenses/>."
-msgstr ""
-"Jūs turėjote kartu su šia programa gauti ir GNU Bendrosios Viešosios "
-"licencijos kopija; jei ne – jos ieškokite adresu <http://www.gnu.org/"
-"licenses/>."
-
-#: ../src/glines.c:81
-msgctxt "board size"
-msgid "Small"
-msgstr "Mažas"
-
-#: ../src/glines.c:82
-msgctxt "board size"
-msgid "Medium"
-msgstr "Vidutiniškas"
-
-#: ../src/glines.c:83
-msgctxt "board size"
-msgid "Large"
-msgstr "Didelis"
-
-#: ../src/glines.c:170
-msgid "Could not load theme"
-msgstr "Nepavyko įkelti temos"
-
-#: ../src/glines.c:196
-#, c-format
-msgid ""
-"Unable to locate file:\n"
-"%s\n"
-"\n"
-"The default theme will be loaded instead."
-msgstr ""
-"Nepavyko rasti failo:\n"
-"%s\n"
-"\n"
-"Vietoje to bus įkelta numatytoji tema."
-
-#: ../src/glines.c:203
-#, c-format
-msgid ""
-"Unable to locate file:\n"
-"%s\n"
-"\n"
-"Please check that Five or More is installed correctly."
-msgstr ""
-"Nepavyko aptikti failo:\n"
-"%s\n"
-"\n"
-"Patikrinkite, ar „Penketas ar daugiau“ yra įdiegtas tinkamai."
-
-#: ../src/glines.c:413
-msgid "Match five objects of the same type in a row to score!"
-msgstr "Norėdami gauti taškų surinkite penkis vienos spalvos rutulius eilėje!"
-
-#: ../src/glines.c:475
-#| msgid "Five or More"
-msgid "Five or More Scores"
-msgstr "Taškai už penketą ar daugiau"
-
-#: ../src/glines.c:477
-msgid "_Board size:"
-msgstr "Lentos _dydis:"
-
-#: ../src/glines.c:494
-msgid "Game Over!"
-msgstr "Žaidimas baigtas!"
-
-#. Can't move there!
-#: ../src/glines.c:651
-#| msgid "You can't move there!"
-msgid "You can’t move there!"
-msgstr "Negalima ten perkelti!"
-
-#: ../src/glines.c:1183
-#| msgid ""
-#| "GNOME port of the once-popular Color Lines game.\n"
-#| "\n"
-#| "Five or More is a part of GNOME Games."
-msgid ""
-"GNOME port of the once-popular Color Lines game\n"
-"\n"
-"Five or More is a part of GNOME Games."
-msgstr ""
-"Kažkada populiaraus Color Lines žaidimo GNOME variantas.\n"
-"\n"
-"Penketas ar daugiau yra GNOME žaidimų dalis."
-
-#: ../src/glines.c:1189
-msgid "translator-credits"
-msgstr ""
-"Paskutinieji vertėjai:\n"
-"Žygimantas Beručka <zygis@gnome.org>,\n"
-"Justina Klingaitė <justina.klingaite@gmail.com>\n"
-"\n"
-"Ankstesnieji vertėjai:\n"
-"Tomas Kuliavas <tokul@users.sf.net>,\n"
-"Gediminas Paulauskas <menesis@chatsubo.lt>"
 
