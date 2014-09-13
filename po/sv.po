@@ -1,5 +1,5 @@
 # Swedish messages for gnome-games.
-# Copyright (C) 1999-2014 Free Software Foundation, Inc.
+# Copyright © 1999-2014 Free Software Foundation, Inc.
 # Andreas Persenius <ndap@swipnet.se>, 1999.
 # Andreas Hyden <a.hyden@cyberpoint.se>
 # Martin Norbäck <d95mback@dtek.chalmers.se>, 2000.
@@ -12,8 +12,8 @@ msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-"
 "or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-03-26 13:23+0000\n"
-"PO-Revision-Date: 2014-03-31 20:24+0100\n"
+"POT-Creation-Date: 2014-08-31 04:50+0000\n"
+"PO-Revision-Date: 2014-08-31 10:46+0100\n"
 "Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
@@ -44,7 +44,7 @@ msgstr ""
 "brädet är helt fullt!"
 
 #: ../data/five-or-more.desktop.in.h:1 ../data/five-or-more.ui.h:1
-#: ../src/glines.c:1181 ../src/glines.c:1684
+#: ../src/five-or-more.c:1174 ../src/five-or-more.c:1674
 msgid "Five or More"
 msgstr "Fem eller mer"
 
@@ -56,9 +56,10 @@ msgstr "Ta bort färgade bollar från brädet genom att skapa linjer"
 msgid "game;strategy;logic;"
 msgstr "spel;strategi;logik;"
 
-#: ../data/five-or-more-preferences.ui.h:1
-msgid "Five or More Preferences"
-msgstr "Inställningar för Fem eller mer"
+#: ../data/five-or-more-preferences.ui.h:1 ../data/menu.ui.h:3
+#: ../src/five-or-more.c:173
+msgid "Preferences"
+msgstr "Inställningar"
 
 #: ../data/five-or-more-preferences.ui.h:2
 msgid "Appearance"
@@ -108,9 +109,13 @@ msgstr "0"
 msgid "Score:"
 msgstr "Poäng:"
 
-#: ../data/five-or-more.ui.h:5 ../src/games-stock.c:48
-msgid "Start a new game"
-msgstr "Starta ett nytt spel"
+#: ../data/five-or-more.ui.h:5
+msgid "_New Game"
+msgstr "_Nytt spel"
+
+#: ../data/five-or-more.ui.h:6
+msgid "Start a new puzzle"
+msgstr "Starta ett nytt pussel"
 
 #: ../data/menu.ui.h:1 ../src/games-scores-dialog.c:385
 msgid "New Game"
@@ -119,10 +124,6 @@ msgstr "Nytt spel"
 #: ../data/menu.ui.h:2
 msgid "Scores"
 msgstr "Poäng"
-
-#: ../data/menu.ui.h:3 ../src/glines.c:176
-msgid "Preferences"
-msgstr "Inställningar"
 
 #: ../data/menu.ui.h:4
 msgid "Help"
@@ -207,6 +208,95 @@ msgstr "Höjden på fönstret i bildpunkter"
 msgid "true if the window is maximized"
 msgstr "sant om fönstret är maximerat"
 
+#: ../src/five-or-more.c:80
+msgctxt "board size"
+msgid "Small"
+msgstr "Liten"
+
+#: ../src/five-or-more.c:81
+msgctxt "board size"
+msgid "Medium"
+msgstr "Mellan"
+
+#: ../src/five-or-more.c:82
+msgctxt "board size"
+msgid "Large"
+msgstr "Stor"
+
+#: ../src/five-or-more.c:167
+msgid "Could not load theme"
+msgstr "Kunde inte läsa in tema"
+
+#: ../src/five-or-more.c:193
+#, c-format
+msgid ""
+"Unable to locate file:\n"
+"%s\n"
+"\n"
+"The default theme will be loaded instead."
+msgstr ""
+"Kan inte lokalisera filen:\n"
+"%s\n"
+"\n"
+"Standardtemat kommer att läsas in istället."
+
+#: ../src/five-or-more.c:200
+#, c-format
+msgid ""
+"Unable to locate file:\n"
+"%s\n"
+"\n"
+"Please check that Five or More is installed correctly."
+msgstr ""
+"Kan inte lokalisera filen:\n"
+"%s\n"
+"\n"
+"Kontrollera att Fem eller mer är korrekt installerat."
+
+#: ../src/five-or-more.c:410
+msgid "Match five objects of the same type in a row to score!"
+msgstr "Matcha fem objekt på rad av samma typ för att få poäng!"
+
+#: ../src/five-or-more.c:471
+msgid "Five or More Scores"
+msgstr "Poäng för Fem eller mer"
+
+#: ../src/five-or-more.c:473
+msgid "_Board size:"
+msgstr "_Brädstorlek:"
+
+#: ../src/five-or-more.c:490
+msgid "Game Over!"
+msgstr "Spelet är slut!"
+
+#. Can't move there!
+#: ../src/five-or-more.c:646
+msgid "You can’t move there!"
+msgstr "Du kan inte flytta dit!"
+
+#: ../src/five-or-more.c:1176
+msgid ""
+"GNOME port of the once-popular Color Lines game\n"
+"\n"
+"Five or More is a part of GNOME Games."
+msgstr ""
+"GNOME-portering av det en gång populära färglinjespelet\n"
+"\n"
+"Fem eller mer är en del av GNOME Games."
+
+#: ../src/five-or-more.c:1182
+msgid "translator-credits"
+msgstr ""
+"Daniel Nylander <po@danielnylander.se>\n"
+"Christian Rose\n"
+"Martin Norbäck\n"
+"Andreas Hydén\n"
+"Andreas Persenius\n"
+"Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
+"\n"
+"Skicka synpunkter på översättningen till\n"
+"<tp-sv@listor.tp-sv.se>."
+
 #. Score dialog column header for the score time (e.g. 1 minute)
 #: ../src/games-scores-dialog.c:132
 msgctxt "score-dialog"
@@ -230,286 +320,3 @@ msgstr "%1$dm %2$ds"
 #: ../src/games-scores-dialog.c:478
 msgid "Date"
 msgstr "Datum"
-
-#: ../src/games-stock.c:41
-msgid "View help for this game"
-msgstr "Visa hjälp för detta spel"
-
-#: ../src/games-stock.c:42
-msgid "End the current game"
-msgstr "Avsluta det aktuella spelet"
-
-#: ../src/games-stock.c:43
-msgid "Toggle fullscreen mode"
-msgstr "Växla helskärmsläge"
-
-#: ../src/games-stock.c:44
-msgid "Get a hint for your next move"
-msgstr "Få tips angående ditt nästa drag"
-
-#: ../src/games-stock.c:45
-msgid "Leave fullscreen mode"
-msgstr "Lämna helskärmsläge"
-
-#: ../src/games-stock.c:46
-msgid "Start a new multiplayer network game"
-msgstr "Starta ett nytt nätverksspel med flera spelare"
-
-#: ../src/games-stock.c:47
-msgid "End the current network game and return to network server"
-msgstr "Avsluta aktuellt nätverksspel och återvänd till nätverksservern"
-
-#: ../src/games-stock.c:49
-msgid "Pause the game"
-msgstr "Gör paus i spelet"
-
-#: ../src/games-stock.c:50
-msgid "Show a list of players in the network game"
-msgstr "Visa en lista på spelare i nätverksspelet"
-
-#: ../src/games-stock.c:51
-msgid "Redo the undone move"
-msgstr "Gör om det ångrade draget"
-
-#: ../src/games-stock.c:52
-msgid "Restart the game"
-msgstr "Starta om spelet"
-
-#: ../src/games-stock.c:53
-msgid "Resume the paused game"
-msgstr "Återuppta det pausade spelet"
-
-#: ../src/games-stock.c:54
-msgid "View the scores"
-msgstr "Visa poänglistan"
-
-#: ../src/games-stock.c:55
-msgid "Undo the last move"
-msgstr "Ångra det senaste draget"
-
-#: ../src/games-stock.c:56
-msgid "About this game"
-msgstr "Om detta spel"
-
-#: ../src/games-stock.c:57
-msgid "Close this window"
-msgstr "Stäng det här fönstret"
-
-#: ../src/games-stock.c:58
-msgid "Configure the game"
-msgstr "Konfigurera spelet"
-
-#: ../src/games-stock.c:59
-msgid "Quit this game"
-msgstr "Avsluta detta spel"
-
-#: ../src/games-stock.c:247
-msgid "_Contents"
-msgstr "_Innehåll"
-
-#: ../src/games-stock.c:248
-msgid "_Fullscreen"
-msgstr "_Helskärm"
-
-#: ../src/games-stock.c:249
-msgid "_Hint"
-msgstr "_Tips"
-
-#. Translators: This "_New" is for the menu item 'Game->New', implies "New Game"
-#: ../src/games-stock.c:251
-msgid "_New"
-msgstr "_Nytt"
-
-#. Translators: This "_New Game" is for the game-over dialogue
-#: ../src/games-stock.c:253
-msgid "_New Game"
-msgstr "_Nytt spel"
-
-#: ../src/games-stock.c:254
-msgid "_Redo Move"
-msgstr "_Gör om drag"
-
-#. Translators: this is the "Reset" scores button in a scores dialogue
-#: ../src/games-stock.c:256
-msgid "_Reset"
-msgstr "N_ollställ"
-
-#. Translators: "_Restart" is the menu item 'Game->Restart', implies "Restart Game"
-#: ../src/games-stock.c:258
-msgid "_Restart"
-msgstr "Starta _om"
-
-#: ../src/games-stock.c:259
-msgid "_Undo Move"
-msgstr "_Ångra drag"
-
-#: ../src/games-stock.c:260
-msgid "_Deal"
-msgstr "_Ge"
-
-#: ../src/games-stock.c:261
-msgid "_Leave Fullscreen"
-msgstr "_Lämna helskärmsläge"
-
-#: ../src/games-stock.c:262
-msgid "Network _Game"
-msgstr "Nätver_ksspel"
-
-#: ../src/games-stock.c:263
-msgid "L_eave Game"
-msgstr "Läm_na spel"
-
-#: ../src/games-stock.c:264
-msgid "Player _List"
-msgstr "Spelar_lista"
-
-#: ../src/games-stock.c:265
-msgid "_Pause"
-msgstr "Gör _paus"
-
-#: ../src/games-stock.c:266
-msgid "Res_ume"
-msgstr "_Återuppta"
-
-#: ../src/games-stock.c:267
-msgid "_Scores"
-msgstr "_Poänglista"
-
-#: ../src/games-stock.c:268
-msgid "_End Game"
-msgstr "_Avsluta spel"
-
-#. %s is replaced with the name of the game in gnome-games.
-#: ../src/games-stock.c:317
-#, c-format
-msgid ""
-"%s is free software; you can redistribute it and/or modify it under the "
-"terms of the GNU General Public License as published by the Free Software "
-"Foundation; either version %d of the License, or (at your option) any later "
-"version."
-msgstr ""
-"%s är fri programvara. Du kan distribuera det och/eller modifiera det under "
-"villkoren i GNU General Public License, publicerad av Free Software "
-"Foundation, antingen version %d av licensen eller (om du så vill) någon "
-"senare version."
-
-#: ../src/games-stock.c:322
-#, c-format
-msgid ""
-"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
-"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
-"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
-"details."
-msgstr ""
-"%s distribueras i hopp om att det ska vara användbart, men UTAN NÅGON SOM "
-"HELST GARANTI, även utan underförstådd garanti om SÄLJBARHET eller "
-"LÄMPLIGHET FÖR NÅGOT SPECIELLT ÄNDAMÅL. Se GNU General Public License för "
-"ytterligare information."
-
-#: ../src/games-stock.c:327
-#, c-format
-msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
-"Fifth Floor, Boston, MA  02110-1301  USA"
-msgstr ""
-"Du bör ha fått en kopia av GNU General Public License tillsammans med %s. Om "
-"inte, skriv till Free Software Foundation, Inc., 51 Franklin Street, Fifth "
-"Floor, Boston, MA  02110-1301, USA"
-
-#: ../src/games-stock.c:331
-msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"this program.  If not, see <http://www.gnu.org/licenses/>."
-msgstr ""
-"Du bör ha fått en kopia av GNU General Public License tillsammans med detta "
-"program. Om inte, se <http://www.gnu.org/licenses/>."
-
-#: ../src/glines.c:81
-msgctxt "board size"
-msgid "Small"
-msgstr "Liten"
-
-#: ../src/glines.c:82
-msgctxt "board size"
-msgid "Medium"
-msgstr "Mellan"
-
-#: ../src/glines.c:83
-msgctxt "board size"
-msgid "Large"
-msgstr "Stor"
-
-#: ../src/glines.c:170
-msgid "Could not load theme"
-msgstr "Kunde inte läsa in tema"
-
-#: ../src/glines.c:196
-#, c-format
-msgid ""
-"Unable to locate file:\n"
-"%s\n"
-"\n"
-"The default theme will be loaded instead."
-msgstr ""
-"Kan inte lokalisera filen:\n"
-"%s\n"
-"\n"
-"Standardtemat kommer att läsas in istället."
-
-#: ../src/glines.c:203
-#, c-format
-msgid ""
-"Unable to locate file:\n"
-"%s\n"
-"\n"
-"Please check that Five or More is installed correctly."
-msgstr ""
-"Kan inte lokalisera filen:\n"
-"%s\n"
-"\n"
-"Kontrollera att Fem eller mer är korrekt installerat."
-
-#: ../src/glines.c:413
-msgid "Match five objects of the same type in a row to score!"
-msgstr "Matcha fem objekt på rad av samma typ för att få poäng!"
-
-#: ../src/glines.c:475
-msgid "Five or More Scores"
-msgstr "Poäng för Fem eller mer"
-
-#: ../src/glines.c:477
-msgid "_Board size:"
-msgstr "_Brädstorlek:"
-
-#: ../src/glines.c:494
-msgid "Game Over!"
-msgstr "Spelet är slut!"
-
-#. Can't move there!
-#: ../src/glines.c:651
-msgid "You can’t move there!"
-msgstr "Du kan inte flytta dit!"
-
-#: ../src/glines.c:1183
-msgid ""
-"GNOME port of the once-popular Color Lines game\n"
-"\n"
-"Five or More is a part of GNOME Games."
-msgstr ""
-"GNOME-portering av det en gång populära färglinjespelet\n"
-"\n"
-"Fem eller mer är en del av GNOME Games."
-
-#: ../src/glines.c:1189
-msgid "translator-credits"
-msgstr ""
-"Daniel Nylander <po@danielnylander.se>\n"
-"Christian Rose\n"
-"Martin Norbäck\n"
-"Andreas Hydén\n"
-"Andreas Persenius\n"
-"Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
-"\n"
-"Skicka synpunkter på översättningen till\n"
-"<tp-sv@listor.tp-sv.se>."
