@@ -12,8 +12,8 @@ msgstr ""
 "Project-Id-Version: five-or-more master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-"
 "or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-03-31 17:08+0000\n"
-"PO-Revision-Date: 2014-03-31 22:36+0100\n"
+"POT-Creation-Date: 2014-09-14 16:56+0000\n"
+"PO-Revision-Date: 2014-09-14 20:27+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: sl_SI\n"
@@ -46,7 +46,7 @@ msgstr ""
 "mesto na plošči."
 
 #: ../data/five-or-more.desktop.in.h:1 ../data/five-or-more.ui.h:1
-#: ../src/glines.c:1181 ../src/glines.c:1687
+#: ../src/five-or-more.c:1174 ../src/five-or-more.c:1675
 msgid "Five or More"
 msgstr "Pet ali več"
 
@@ -58,9 +58,10 @@ msgstr "Odstrani barvne kroglice s plošče s postavljanjem kroglic v vrste"
 msgid "game;strategy;logic;"
 msgstr "igra;strateška;logika;"
 
-#: ../data/five-or-more-preferences.ui.h:1
-msgid "Five or More Preferences"
-msgstr "Nastavitve igre Pet ali več"
+#: ../data/five-or-more-preferences.ui.h:1 ../data/menu.ui.h:3
+#: ../src/five-or-more.c:173
+msgid "Preferences"
+msgstr "Možnosti"
 
 #: ../data/five-or-more-preferences.ui.h:2
 msgid "Appearance"
@@ -110,8 +111,12 @@ msgstr "0"
 msgid "Score:"
 msgstr "Rezultat:"
 
-#: ../data/five-or-more.ui.h:5 ../src/games-stock.c:48
-msgid "Start a new game"
+#: ../data/five-or-more.ui.h:5
+msgid "_New Game"
+msgstr "_Nova Igra"
+
+#: ../data/five-or-more.ui.h:6
+msgid "Start a new puzzle"
 msgstr "Začni novo igro"
 
 #: ../data/menu.ui.h:1 ../src/games-scores-dialog.c:385
@@ -121,10 +126,6 @@ msgstr "Nova igra"
 #: ../data/menu.ui.h:2
 msgid "Scores"
 msgstr "Rezultati"
-
-#: ../data/menu.ui.h:3 ../src/glines.c:176
-msgid "Preferences"
-msgstr "Možnosti"
 
 #: ../data/menu.ui.h:4
 msgid "Help"
@@ -209,9 +210,89 @@ msgstr "Višina okna v točkah"
 msgid "true if the window is maximized"
 msgstr "prav, če je okno razpeto."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:18
-msgid "true if the window is fullscren"
-msgstr "prav, če je okno razpeto čez celoten zaslon"
+#: ../src/five-or-more.c:80
+msgctxt "board size"
+msgid "Small"
+msgstr "Majhna"
+
+#: ../src/five-or-more.c:81
+msgctxt "board size"
+msgid "Medium"
+msgstr "Srednja"
+
+#: ../src/five-or-more.c:82
+msgctxt "board size"
+msgid "Large"
+msgstr "Velika"
+
+#: ../src/five-or-more.c:167
+msgid "Could not load theme"
+msgstr "Ni mogoče naložiti teme"
+
+#: ../src/five-or-more.c:193
+#, c-format
+msgid ""
+"Unable to locate file:\n"
+"%s\n"
+"\n"
+"The default theme will be loaded instead."
+msgstr ""
+"Ni mogoče najti datoteke:\n"
+"%s\n"
+"\n"
+"Naložena bo privzeta tema."
+
+#: ../src/five-or-more.c:200
+#, c-format
+msgid ""
+"Unable to locate file:\n"
+"%s\n"
+"\n"
+"Please check that Five or More is installed correctly."
+msgstr ""
+"Ni mogoče najti datoteke:\n"
+"%s\n"
+"\n"
+"Preverite, ali je igra Pet ali več pravilno nameščena."
+
+#: ../src/five-or-more.c:410
+msgid "Match five objects of the same type in a row to score!"
+msgstr "Za pridobitev točk postavite v vrsto pet kroglic iste barve!"
+
+#: ../src/five-or-more.c:471
+msgid "Five or More Scores"
+msgstr "Rezultati igre Pet ali ve"
+
+#: ../src/five-or-more.c:473
+msgid "_Board size:"
+msgstr "_Velikost plošče:"
+
+#: ../src/five-or-more.c:490
+msgid "Game Over!"
+msgstr "Konec igre!"
+
+#. Can't move there!
+#: ../src/five-or-more.c:646
+msgid "You can’t move there!"
+msgstr "Ta premik ni dovoljen!"
+
+#: ../src/five-or-more.c:1176
+msgid ""
+"GNOME port of the once-popular Color Lines game\n"
+"\n"
+"Five or More is a part of GNOME Games."
+msgstr ""
+"Predelava nekdaj popularne igre Color Lines za GNOME\n"
+"\n"
+"Igra Pet ali več je del iger GNOME."
+
+#: ../src/five-or-more.c:1182
+msgid "translator-credits"
+msgstr ""
+"Matic Žgur <mr.zgur@gmail.com>\n"
+"Matej Erman <matej.erman@guest.arnes.si>\n"
+"Tadej Janež <tadej_janez@email.si>\n"
+"Matej Urbančič <mateju@svn.gnome.org>"
 
 #. Score dialog column header for the score time (e.g. 1 minute)
 #: ../src/games-scores-dialog.c:132
@@ -237,283 +318,155 @@ msgstr "%1$dm %2$ds"
 msgid "Date"
 msgstr "Datum"
 
-#: ../src/games-stock.c:41
-msgid "View help for this game"
-msgstr "Poglejte pomoč za to igro"
+#~ msgid "Five or More Preferences"
+#~ msgstr "Nastavitve igre Pet ali več"
 
-#: ../src/games-stock.c:42
-msgid "End the current game"
-msgstr "Končaj trenutno igro"
+#~ msgid "true if the window is fullscren"
+#~ msgstr "prav, če je okno razpeto čez celoten zaslon"
 
-#: ../src/games-stock.c:43
-msgid "Toggle fullscreen mode"
-msgstr "Preklopi celozaslonski način"
+#~ msgid "View help for this game"
+#~ msgstr "Poglejte pomoč za to igro"
 
-#: ../src/games-stock.c:44
-msgid "Get a hint for your next move"
-msgstr "Namig za vašo naslednjo potezo"
+#~ msgid "End the current game"
+#~ msgstr "Končaj trenutno igro"
 
-#: ../src/games-stock.c:45
-msgid "Leave fullscreen mode"
-msgstr "Zapusti celozaslonski način"
+#~ msgid "Toggle fullscreen mode"
+#~ msgstr "Preklopi celozaslonski način"
 
-#: ../src/games-stock.c:46
-msgid "Start a new multiplayer network game"
-msgstr "Začni novo omrežno igro"
+#~ msgid "Get a hint for your next move"
+#~ msgstr "Namig za vašo naslednjo potezo"
 
-#: ../src/games-stock.c:47
-msgid "End the current network game and return to network server"
-msgstr "Zaključi trenutno omrežno igro in se vrni na omrežni strežnik"
+#~ msgid "Leave fullscreen mode"
+#~ msgstr "Zapusti celozaslonski način"
 
-#: ../src/games-stock.c:49
-msgid "Pause the game"
-msgstr "Premor igranja"
+#~ msgid "Start a new multiplayer network game"
+#~ msgstr "Začni novo omrežno igro"
 
-#: ../src/games-stock.c:50
-msgid "Show a list of players in the network game"
-msgstr "Pokaži seznam igralcev v omrežni igri"
+#~ msgid "End the current network game and return to network server"
+#~ msgstr "Zaključi trenutno omrežno igro in se vrni na omrežni strežnik"
 
-#: ../src/games-stock.c:51
-msgid "Redo the undone move"
-msgstr "Obnovi razveljavljeno potezo"
+#~ msgid "Pause the game"
+#~ msgstr "Premor igranja"
 
-#: ../src/games-stock.c:52
-msgid "Restart the game"
-msgstr "Znova začni igro"
+#~ msgid "Show a list of players in the network game"
+#~ msgstr "Pokaži seznam igralcev v omrežni igri"
 
-#: ../src/games-stock.c:53
-msgid "Resume the paused game"
-msgstr "Nadaljevanje prekinjene igre"
+#~ msgid "Redo the undone move"
+#~ msgstr "Obnovi razveljavljeno potezo"
 
-#: ../src/games-stock.c:54
-msgid "View the scores"
-msgstr "Pokaže rezultate"
+#~ msgid "Restart the game"
+#~ msgstr "Znova začni igro"
 
-#: ../src/games-stock.c:55
-msgid "Undo the last move"
-msgstr "Razveljavi zadnjo potezo"
+#~ msgid "Resume the paused game"
+#~ msgstr "Nadaljevanje prekinjene igre"
 
-#: ../src/games-stock.c:56
-msgid "About this game"
-msgstr "O tej igri"
+#~ msgid "View the scores"
+#~ msgstr "Pokaže rezultate"
 
-#: ../src/games-stock.c:57
-msgid "Close this window"
-msgstr "Zapri trenutno okno"
+#~ msgid "Undo the last move"
+#~ msgstr "Razveljavi zadnjo potezo"
 
-#: ../src/games-stock.c:58
-msgid "Configure the game"
-msgstr "Nastavi igro"
+#~ msgid "About this game"
+#~ msgstr "O tej igri"
 
-#: ../src/games-stock.c:59
-msgid "Quit this game"
-msgstr "Končaj igro"
+#~ msgid "Close this window"
+#~ msgstr "Zapri trenutno okno"
 
-#: ../src/games-stock.c:247
-msgid "_Contents"
-msgstr "_Vsebina"
+#~ msgid "Configure the game"
+#~ msgstr "Nastavi igro"
 
-#: ../src/games-stock.c:248
-msgid "_Fullscreen"
-msgstr "_Celozaslonski način"
+#~ msgid "Quit this game"
+#~ msgstr "Končaj igro"
 
-#: ../src/games-stock.c:249
-msgid "_Hint"
-msgstr "_Namig"
+#~ msgid "_Contents"
+#~ msgstr "_Vsebina"
 
-#. Translators: This "_New" is for the menu item 'Game->New', implies "New Game"
-#: ../src/games-stock.c:251
-msgid "_New"
-msgstr "_Nova"
+#~ msgid "_Fullscreen"
+#~ msgstr "_Celozaslonski način"
 
-#. Translators: This "_New Game" is for the game-over dialogue
-#: ../src/games-stock.c:253
-msgid "_New Game"
-msgstr "_Nova Igra"
+#~ msgid "_Hint"
+#~ msgstr "_Namig"
 
-#: ../src/games-stock.c:254
-msgid "_Redo Move"
-msgstr "_Obnovi potezo"
+#~ msgid "_New"
+#~ msgstr "_Nova"
 
-#. Translators: this is the "Reset" scores button in a scores dialogue
-#: ../src/games-stock.c:256
-msgid "_Reset"
-msgstr "_Ponastavi"
+#~ msgid "_Redo Move"
+#~ msgstr "_Obnovi potezo"
 
-#. Translators: "_Restart" is the menu item 'Game->Restart', implies "Restart Game"
-#: ../src/games-stock.c:258
-msgid "_Restart"
-msgstr "_Ponoven zagon"
+#~ msgid "_Reset"
+#~ msgstr "_Ponastavi"
 
-#: ../src/games-stock.c:259
-msgid "_Undo Move"
-msgstr "_Razveljavi potezo"
+#~ msgid "_Restart"
+#~ msgstr "_Ponoven zagon"
 
-#: ../src/games-stock.c:260
-msgid "_Deal"
-msgstr "Razd_eli"
+#~ msgid "_Undo Move"
+#~ msgstr "_Razveljavi potezo"
 
-#: ../src/games-stock.c:261
-msgid "_Leave Fullscreen"
-msgstr "_Zapusti celozaslonski način"
+#~ msgid "_Deal"
+#~ msgstr "Razd_eli"
 
-#: ../src/games-stock.c:262
-msgid "Network _Game"
-msgstr "_Omrežna igra"
+#~ msgid "_Leave Fullscreen"
+#~ msgstr "_Zapusti celozaslonski način"
 
-#: ../src/games-stock.c:263
-msgid "L_eave Game"
-msgstr "_Zapusti igro"
+#~ msgid "Network _Game"
+#~ msgstr "_Omrežna igra"
 
-#: ../src/games-stock.c:264
-msgid "Player _List"
-msgstr "_Seznam igralcev"
+#~ msgid "L_eave Game"
+#~ msgstr "_Zapusti igro"
 
-#: ../src/games-stock.c:265
-msgid "_Pause"
-msgstr "_Premor"
+#~ msgid "Player _List"
+#~ msgstr "_Seznam igralcev"
 
-#: ../src/games-stock.c:266
-msgid "Res_ume"
-msgstr "Na_daljuj"
+#~ msgid "_Pause"
+#~ msgstr "_Premor"
 
-#: ../src/games-stock.c:267
-msgid "_Scores"
-msgstr "_Točke"
+#~ msgid "Res_ume"
+#~ msgstr "Na_daljuj"
 
-#: ../src/games-stock.c:268
-msgid "_End Game"
-msgstr "_Končaj igro"
+#~ msgid "_Scores"
+#~ msgstr "_Točke"
 
-#. %s is replaced with the name of the game in gnome-games.
-#: ../src/games-stock.c:317
-#, c-format
-msgid ""
-"%s is free software; you can redistribute it and/or modify it under the "
-"terms of the GNU General Public License as published by the Free Software "
-"Foundation; either version %d of the License, or (at your option) any later "
-"version."
-msgstr ""
-"%s je prosta programska oprema; lahko jo razširjate in spreminjate pod "
-"pogoji Splošnega javnega dovoljenja GNU, kot je to objavljeno preko Free "
-"Software Foundation; različice %d ali katerekoli kasnejše."
+#~ msgid "_End Game"
+#~ msgstr "_Končaj igro"
 
-#: ../src/games-stock.c:322
-#, c-format
-msgid ""
-"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
-"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
-"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
-"details."
-msgstr ""
-"%s se razširja v upanju, da bo uporabljen, vendar BREZ VSAKRŠNEGA JAMSTVA; "
-"tudi brez posredne zagotovitve CENOVNE VREDNOSTI ali PRIMERNOSTI ZA DOLOČEN "
-"NAMEN.  Za podrobnosti si oglejte besedilo Splošnega javnega dovoljenja GNU."
+#~ msgid ""
+#~ "%s is free software; you can redistribute it and/or modify it under the "
+#~ "terms of the GNU General Public License as published by the Free Software "
+#~ "Foundation; either version %d of the License, or (at your option) any "
+#~ "later version."
+#~ msgstr ""
+#~ "%s je prosta programska oprema; lahko jo razširjate in spreminjate pod "
+#~ "pogoji Splošnega javnega dovoljenja GNU, kot je to objavljeno preko Free "
+#~ "Software Foundation; različice %d ali katerekoli kasnejše."
 
-#: ../src/games-stock.c:327
-#, c-format
-msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
-"Fifth Floor, Boston, MA  02110-1301  USA"
-msgstr ""
-"Skupaj s tem programom %s bi morali prejeti izvod Splošnega javnega "
-"dovoljenja GNU (GNU General Public License); v kolikor ga niste, pišite na "
-"Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  "
-"02110-1301  USA"
+#~ msgid ""
+#~ "%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+#~ "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+#~ "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+#~ "details."
+#~ msgstr ""
+#~ "%s se razširja v upanju, da bo uporabljen, vendar BREZ VSAKRŠNEGA "
+#~ "JAMSTVA; tudi brez posredne zagotovitve CENOVNE VREDNOSTI ali PRIMERNOSTI "
+#~ "ZA DOLOČEN NAMEN.  Za podrobnosti si oglejte besedilo Splošnega javnega "
+#~ "dovoljenja GNU."
 
-#: ../src/games-stock.c:331
-msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"this program.  If not, see <http://www.gnu.org/licenses/>."
-msgstr ""
-"Skupaj s programom bi morali prejeti tudi kopijo Splošnega javnega "
-"dovoljenja GNU. V kolikor je niste, si oglejte <http://www.gnu.org/licenses/"
-">."
+#~ msgid ""
+#~ "You should have received a copy of the GNU General Public License along "
+#~ "with %s; if not, write to the Free Software Foundation, Inc., 51 Franklin "
+#~ "Street, Fifth Floor, Boston, MA  02110-1301  USA"
+#~ msgstr ""
+#~ "Skupaj s tem programom %s bi morali prejeti izvod Splošnega javnega "
+#~ "dovoljenja GNU (GNU General Public License); v kolikor ga niste, pišite "
+#~ "na Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, "
+#~ "Boston, MA  02110-1301  USA"
 
-#: ../src/glines.c:81
-msgctxt "board size"
-msgid "Small"
-msgstr "Majhna"
-
-#: ../src/glines.c:82
-msgctxt "board size"
-msgid "Medium"
-msgstr "Srednja"
-
-#: ../src/glines.c:83
-msgctxt "board size"
-msgid "Large"
-msgstr "Velika"
-
-#: ../src/glines.c:170
-msgid "Could not load theme"
-msgstr "Ni mogoče naložiti teme"
-
-#: ../src/glines.c:196
-#, c-format
-msgid ""
-"Unable to locate file:\n"
-"%s\n"
-"\n"
-"The default theme will be loaded instead."
-msgstr ""
-"Ni mogoče najti datoteke:\n"
-"%s\n"
-"\n"
-"Naložena bo privzeta tema."
-
-#: ../src/glines.c:203
-#, c-format
-msgid ""
-"Unable to locate file:\n"
-"%s\n"
-"\n"
-"Please check that Five or More is installed correctly."
-msgstr ""
-"Ni mogoče najti datoteke:\n"
-"%s\n"
-"\n"
-"Preverite, ali je igra Pet ali več pravilno nameščena."
-
-#: ../src/glines.c:413
-msgid "Match five objects of the same type in a row to score!"
-msgstr "Za pridobitev točk postavite v vrsto pet kroglic iste barve!"
-
-#: ../src/glines.c:475
-msgid "Five or More Scores"
-msgstr "Rezultati igre Pet ali ve"
-
-#: ../src/glines.c:477
-msgid "_Board size:"
-msgstr "_Velikost plošče:"
-
-#: ../src/glines.c:494
-msgid "Game Over!"
-msgstr "Konec igre!"
-
-#. Can't move there!
-#: ../src/glines.c:651
-msgid "You can’t move there!"
-msgstr "Ta premik ni dovoljen!"
-
-#: ../src/glines.c:1183
-msgid ""
-"GNOME port of the once-popular Color Lines game\n"
-"\n"
-"Five or More is a part of GNOME Games."
-msgstr ""
-"Predelava nekdaj popularne igre Color Lines za GNOME\n"
-"\n"
-"Igra Pet ali več je del iger GNOME."
-
-#: ../src/glines.c:1189
-msgid "translator-credits"
-msgstr ""
-"Matic Žgur <mr.zgur@gmail.com>\n"
-"Matej Erman <matej.erman@guest.arnes.si>\n"
-"Tadej Janež <tadej_janez@email.si>\n"
-"Matej Urbančič <mateju@svn.gnome.org>"
+#~ msgid ""
+#~ "You should have received a copy of the GNU General Public License along "
+#~ "with this program.  If not, see <http://www.gnu.org/licenses/>."
+#~ msgstr ""
+#~ "Skupaj s programom bi morali prejeti tudi kopijo Splošnega javnega "
+#~ "dovoljenja GNU. V kolikor je niste, si oglejte <http://www.gnu.org/"
+#~ "licenses/>."
 
 #~ msgctxt "score-dialog"
 #~ msgid "Name"
