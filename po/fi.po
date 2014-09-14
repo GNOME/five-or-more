@@ -8,15 +8,15 @@
 # Sami Pesonen <sampeson@iki.fi>, 2002-2005.
 # Ilkka Tuohela <hile@iki.fi>, 2005-2009.
 # Timo Jyrinki <timo.jyrinki@iki.fi>, 2008.
-# Jiri Grönroos <jiri.gronroos+l10n@iki.fi>, 2012, 2013.
+# Jiri Grönroos <jiri.gronroos+l10n@iki.fi>, 2012, 2013, 2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-"
 "or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-08-11 16:36+0000\n"
-"PO-Revision-Date: 2013-09-04 20:29+0300\n"
+"POT-Creation-Date: 2014-09-11 16:46+0000\n"
+"PO-Revision-Date: 2014-09-12 00:19+0300\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos+l10n@iki.fi>\n"
 "Language-Team: suomi <gnome-fi-laatu@lists.sourceforge.net>\n"
 "Language: fi\n"
@@ -28,22 +28,43 @@ msgstr ""
 "X-Generator: Gtranslator 2.91.6\n"
 "X-POT-Import-Date: 2012-03-05 14:46:29+0000\n"
 
-#: ../data/glines.desktop.in.in.h:1 ../data/five-or-more.ui.h:1
-#: ../src/glines.c:1176 ../src/glines.c:1179 ../src/glines.c:1703
+#: ../data/five-or-more.appdata.xml.in.h:1
+msgid ""
+"Five or More is the GNOME port of a once-popular computer game. Align five "
+"or more objects of the same color into a line to cause them to disappear and "
+"score points. Earn many more points by lining up as many objects as possible "
+"before clearing them."
+msgstr ""
+"Viisi tai enemmän on Gnomen versio aikoinaan suositusta tietokonepelistä. "
+"Järjestä viisi tai enemmän samaa väriä olevia kohteita riviin, jolloin ne "
+"katoavat ja saat pisteitä. Mitä enemmän saat poistettua kohteita kerralla, "
+"sitä enemmän saat pisteitä."
+
+#: ../data/five-or-more.appdata.xml.in.h:2
+msgid ""
+"More objects appear after every turn. Play for as long as possible, until "
+"the board is completely full!"
+msgstr ""
+"Joka vuoron jälkeen pelialueelle ilmestyy lisää kohteita. Pelaa niin kauan "
+"kuin pystyt - mieluiten niin että lauta täyttyy!"
+
+#: ../data/five-or-more.desktop.in.h:1 ../data/five-or-more.ui.h:1
+#: ../src/five-or-more.c:1174 ../src/five-or-more.c:1675
 msgid "Five or More"
 msgstr "Viisi tai enemmän"
 
-#: ../data/glines.desktop.in.in.h:2
+#: ../data/five-or-more.desktop.in.h:2
 msgid "Remove colored balls from the board by forming lines"
-msgstr "Poista värilliset pallot laudalta muodostamalla jonoja"
+msgstr "Poista värilliset pallot laudalta muodostamalla rivejä"
 
-#: ../data/glines.desktop.in.in.h:3
+#: ../data/five-or-more.desktop.in.h:3
 msgid "game;strategy;logic;"
 msgstr "game;strategy;logic;strategia;logiikka;peli;"
 
-#: ../data/five-or-more-preferences.ui.h:1
-msgid "Five or More Preferences"
-msgstr "Viisi tai enemmän -asetukset"
+#: ../data/five-or-more-preferences.ui.h:1 ../data/menu.ui.h:3
+#: ../src/five-or-more.c:173
+msgid "Preferences"
+msgstr "Asetukset"
 
 #: ../data/five-or-more-preferences.ui.h:2
 msgid "Appearance"
@@ -93,7 +114,16 @@ msgstr "0"
 msgid "Score:"
 msgstr "Pisteet:"
 
-#: ../data/menu.ui.h:1 ../src/games-scores-dialog.c:470
+#: ../data/five-or-more.ui.h:5
+msgid "_New Game"
+msgstr "_Uusi peli"
+
+#: ../data/five-or-more.ui.h:6
+#| msgid "Start a new game"
+msgid "Start a new puzzle"
+msgstr "Aloita uusi peli"
+
+#: ../data/menu.ui.h:1 ../src/games-scores-dialog.c:385
 msgid "New Game"
 msgstr "Uusi peli"
 
@@ -101,348 +131,109 @@ msgstr "Uusi peli"
 msgid "Scores"
 msgstr "Pisteet"
 
-#: ../data/menu.ui.h:3 ../src/glines.c:176
-msgid "Preferences"
-msgstr "Asetukset"
-
 #: ../data/menu.ui.h:4
-#| msgid "_Help"
 msgid "Help"
 msgstr "Ohje"
 
 #: ../data/menu.ui.h:5
-#| msgid "_About"
 msgid "About"
 msgstr "Tietoja"
 
 #: ../data/menu.ui.h:6
-#| msgid "_Quit"
 msgid "Quit"
 msgstr "Lopeta"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:1
+#: ../data/org.gnome.five-or-more.gschema.xml.h:1
 msgid "Playing field size"
 msgstr "Pelikentän koko"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:2
+#: ../data/org.gnome.five-or-more.gschema.xml.h:2
 msgid ""
 "Playing field size. 1=Small, 2=Medium, 3=Large. Any other value is invalid."
 msgstr ""
 "Käytettävän kentän koko. 1=Pieni, 2=Keskikokoinen, 3=Suuri. Kaikki muut "
 "arvot ovat virheellisiä"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:3
+#: ../data/org.gnome.five-or-more.gschema.xml.h:3
 msgid "Ball style"
 msgstr "Pallon tyyli"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:4
+#: ../data/org.gnome.five-or-more.gschema.xml.h:4
 msgid "Ball style. The filename of the images to use for the balls."
 msgstr "Pallon tyyli. Pallojen kuvatiedostojen nimi."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:5
+#: ../data/org.gnome.five-or-more.gschema.xml.h:5
 msgid "Background color"
 msgstr "Taustan väri"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:6
+#: ../data/org.gnome.five-or-more.gschema.xml.h:6
 msgid "Background color. The hex specification of the background color."
 msgstr "Taustan väri. Heksa-arvo taustan väristä."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:7
+#: ../data/org.gnome.five-or-more.gschema.xml.h:7
 msgid "Time between moves"
 msgstr "Viive siirtojen välillä"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:8
+#: ../data/org.gnome.five-or-more.gschema.xml.h:8
 msgid "Time between moves in milliseconds."
 msgstr "Viive siirtojen välissä millisekunneissa."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:9
+#: ../data/org.gnome.five-or-more.gschema.xml.h:9
 msgid "Game score"
 msgstr "Pelipisteet"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:10
+#: ../data/org.gnome.five-or-more.gschema.xml.h:10
 msgid "Game score from last saved session."
 msgstr "Pelipisteen edellisestä tallennetusta kerrasta."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:11
+#: ../data/org.gnome.five-or-more.gschema.xml.h:11
 msgid "Game field"
 msgstr "Pelikenttä"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:12
+#: ../data/org.gnome.five-or-more.gschema.xml.h:12
 msgid "Game field from last saved session."
 msgstr "Pelikenttä edellisestä tallennetusta kerrasta."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:13
+#: ../data/org.gnome.five-or-more.gschema.xml.h:13
 msgid "Game preview"
 msgstr "Pelin esikatselu"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:14
+#: ../data/org.gnome.five-or-more.gschema.xml.h:14
 msgid "Game preview from last saved session."
 msgstr "Pelin esikatselu edellisestä tallennetusta kerrasta."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:15
+#: ../data/org.gnome.five-or-more.gschema.xml.h:15
 msgid "Width of the window in pixels"
 msgstr "Ikkunan leveys kuvapisteinä"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:16
+#: ../data/org.gnome.five-or-more.gschema.xml.h:16
 msgid "Height of the window in pixels"
 msgstr "Ikkunan korkeus kuvapisteinä"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:17
+#: ../data/org.gnome.five-or-more.gschema.xml.h:17
 msgid "true if the window is maximized"
 msgstr "tosi jos ikkuna on suurennettu"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:18
-msgid "true if the window is fullscren"
-msgstr "tosi jos ikkuna on koko näytön tilassa"
-
-#. Score dialog column header for the score time (e.g. 1 minute)
-#: ../src/games-scores-dialog.c:136
-msgctxt "score-dialog"
-msgid "Time"
-msgstr "Aika"
-
-#. Score dialog column header for the score value (e.g. 30 moves)
-#: ../src/games-scores-dialog.c:142
-msgctxt "score-dialog"
-msgid "Score"
-msgstr "Pisteet"
-
-#. Score format for time based scores.  %1$d is the time in minutes, %2$d is the time in seconds
-#: ../src/games-scores-dialog.c:307
-#, c-format
-msgctxt "score-dialog"
-msgid "%1$dm %2$ds"
-msgstr "%d min %d s"
-
-#. Score dialog column header for the name of the player who recorded the score
-#: ../src/games-scores-dialog.c:571
-msgctxt "score-dialog"
-msgid "Name"
-msgstr "Nimi"
-
-#. Score dialog column header for the date the score was recorded
-#: ../src/games-scores-dialog.c:580
-msgid "Date"
-msgstr "Päiväys"
-
-#: ../src/games-stock.c:41
-msgid "View help for this game"
-msgstr "Näytä tämän pelin ohjeet"
-
-#: ../src/games-stock.c:42
-msgid "End the current game"
-msgstr "Lopeta nykyinen peli"
-
-#: ../src/games-stock.c:43
-msgid "Toggle fullscreen mode"
-msgstr "Koko näytön tila päälle/pois"
-
-#: ../src/games-stock.c:44
-msgid "Get a hint for your next move"
-msgstr "Anna vinkki seuraavasta siirrosta"
-
-#: ../src/games-stock.c:45
-msgid "Leave fullscreen mode"
-msgstr "Poistu koko näytön tilasta"
-
-#: ../src/games-stock.c:46
-msgid "Start a new multiplayer network game"
-msgstr "Aloita uusi peli monen pelaajan verkkopeli"
-
-#: ../src/games-stock.c:47
-msgid "End the current network game and return to network server"
-msgstr "Lopeta nykyinen verkkopeli ja palaa verkkopalvelimelle"
-
-#: ../src/games-stock.c:48
-msgid "Start a new game"
-msgstr "Aloita uusi peli"
-
-#: ../src/games-stock.c:49
-msgid "Pause the game"
-msgstr "Keskeytä peli"
-
-#: ../src/games-stock.c:50
-msgid "Show a list of players in the network game"
-msgstr "Näytä lista verkkopelin pelaajista"
-
-#: ../src/games-stock.c:51
-msgid "Redo the undone move"
-msgstr "Tee peruttu siirto uudestaan"
-
-#: ../src/games-stock.c:52
-msgid "Restart the game"
-msgstr "Aloita peli uudestaan"
-
-#: ../src/games-stock.c:53
-msgid "Resume the paused game"
-msgstr "Jatka pysäytettyä peliä"
-
-#: ../src/games-stock.c:54
-msgid "View the scores"
-msgstr "Näytä tulokset"
-
-#: ../src/games-stock.c:55
-msgid "Undo the last move"
-msgstr "Peru edellinen siirto"
-
-#: ../src/games-stock.c:56
-msgid "About this game"
-msgstr "Tietoja tästä pelistä"
-
-#: ../src/games-stock.c:57
-msgid "Close this window"
-msgstr "Sulje tämä ikkuna"
-
-#: ../src/games-stock.c:58
-msgid "Configure the game"
-msgstr "Määrittele pelin asetukset"
-
-#: ../src/games-stock.c:59
-msgid "Quit this game"
-msgstr "Lopeta tämä peli"
-
-#: ../src/games-stock.c:247
-msgid "_Contents"
-msgstr "_Sisältö"
-
-#: ../src/games-stock.c:248
-msgid "_Fullscreen"
-msgstr "_Koko näyttö"
-
-#: ../src/games-stock.c:249
-msgid "_Hint"
-msgstr "_Vinkki"
-
-#. Translators: This "_New" is for the menu item 'Game->New', implies "New Game"
-#: ../src/games-stock.c:251
-msgid "_New"
-msgstr "_Uusi"
-
-#. Translators: This "_New Game" is for the game-over dialogue
-#: ../src/games-stock.c:253
-msgid "_New Game"
-msgstr "_Uusi peli"
-
-#: ../src/games-stock.c:254
-msgid "_Redo Move"
-msgstr "_Tee siirto uudestaan"
-
-#. Translators: this is the "Reset" scores button in a scores dialogue
-#: ../src/games-stock.c:256
-msgid "_Reset"
-msgstr "_Alusta"
-
-#. Translators: "_Restart" is the menu item 'Game->Restart', implies "Restart Game"
-#: ../src/games-stock.c:258
-msgid "_Restart"
-msgstr "_Aloita alusta"
-
-#: ../src/games-stock.c:259
-msgid "_Undo Move"
-msgstr "_Peru siirto"
-
-#: ../src/games-stock.c:260
-msgid "_Deal"
-msgstr "J_ako"
-
-#: ../src/games-stock.c:261
-msgid "_Leave Fullscreen"
-msgstr "P_oistu koko näytön tilasta"
-
-#: ../src/games-stock.c:262
-msgid "Network _Game"
-msgstr "_Verkkopeli"
-
-#: ../src/games-stock.c:263
-msgid "L_eave Game"
-msgstr "_Lopeta peli"
-
-#: ../src/games-stock.c:264
-msgid "Player _List"
-msgstr "_Pelaajalista"
-
-#: ../src/games-stock.c:265
-msgid "_Pause"
-msgstr "_Keskeytä"
-
-#: ../src/games-stock.c:266
-msgid "Res_ume"
-msgstr "_Jatka"
-
-#: ../src/games-stock.c:267
-msgid "_Scores"
-msgstr "_Pisteet"
-
-#: ../src/games-stock.c:268
-msgid "_End Game"
-msgstr "_Lopeta peli"
-
-#. %s is replaced with the name of the game in gnome-games.
-#: ../src/games-stock.c:317
-#, c-format
-msgid ""
-"%s is free software; you can redistribute it and/or modify it under the "
-"terms of the GNU General Public License as published by the Free Software "
-"Foundation; either version %d of the License, or (at your option) any later "
-"version."
-msgstr ""
-"%s on vapaa ohjelma; sitä on sallittu levittää edelleen ja muuttaa GNU "
-"yleisen lisenssin (GPL lisenssin) ehtojen mukaan  sellaisina kuin Free "
-"Software Foundation on ne julkaissut; joko lisenssin version %d, tai "
-"(valinnan mukaan) minkä tahansa myöhemmän version mukaisesti."
-
-#: ../src/games-stock.c:322
-#, c-format
-msgid ""
-"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
-"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
-"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
-"details."
-msgstr ""
-"Ohjelmaa %s levitetään siinä toivossa, että se olisi hyödyllinen, mutta "
-"ilman mitään takuuta; ilman edes hiljaista takuuta kaupallisesti "
-"hyväksyttävästä laadusta tai soveltuvuudesta tiettyyn tarkoitukseen. Katso "
-"GPL lisenssistä lisää yksityiskohtia."
-
-#: ../src/games-stock.c:327
-#, c-format
-msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
-"Fifth Floor, Boston, MA  02110-1301  USA"
-msgstr ""
-"Ohjelman %s mukana pitäisi tulla kopio GPL-lisenssistä; jos näin ei ole, "
-"kirjoita osoitteeseen Free Software Foundation Inc., 51 Franklin Street, "
-"Fifth Floor, Boston, MA  02110-1301  USA"
-
-#: ../src/games-stock.c:331
-msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"this program.  If not, see <http://www.gnu.org/licenses/>."
-msgstr ""
-"Tämän ohjelma mukana pitäisi tulla kopio GPL-lisenssistä; jos näin ei ole, "
-"katso lisätietoja sivulta <http://www.gnu.org/licenses/>."
-
-#: ../src/glines.c:78
+#: ../src/five-or-more.c:80
 msgctxt "board size"
 msgid "Small"
 msgstr "Pieni"
 
-#: ../src/glines.c:79
+#: ../src/five-or-more.c:81
 msgctxt "board size"
 msgid "Medium"
 msgstr "Keskikokoinen"
 
-#: ../src/glines.c:80
+#: ../src/five-or-more.c:82
 msgctxt "board size"
 msgid "Large"
 msgstr "Suuri"
 
-#: ../src/glines.c:170
+#: ../src/five-or-more.c:167
 msgid "Could not load theme"
 msgstr "Teemaa ei voi ladata"
 
-#: ../src/glines.c:196
+#: ../src/five-or-more.c:193
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -455,7 +246,7 @@ msgstr ""
 "\n"
 "Sen sijaan käytetään oletusteemaa."
 
-#: ../src/glines.c:203
+#: ../src/five-or-more.c:200
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -468,41 +259,47 @@ msgstr ""
 "\n"
 "Tarkista että Viisi tai enemmän on asennettu oikein."
 
-#: ../src/glines.c:408
+#: ../src/five-or-more.c:410
 msgid "Match five objects of the same type in a row to score!"
 msgstr "Siirrä viisi samanväristä palloa riviin saadaksesi pisteitä!"
 
-#: ../src/glines.c:472
-msgid "GNOME Five or More"
-msgstr "GNOMEn viisi tai enemmän"
+#: ../src/five-or-more.c:471
+#| msgid "Five or More"
+msgid "Five or More Scores"
+msgstr "Viisi tai enemmän -pisteet\t"
 
-#: ../src/glines.c:474
+#: ../src/five-or-more.c:473
 msgid "_Board size:"
 msgstr "_Laudan koko:"
 
-#: ../src/glines.c:491
+#: ../src/five-or-more.c:490
 msgid "Game Over!"
 msgstr "Peli päättyi!"
 
 #. Can't move there!
-#: ../src/glines.c:648
-msgid "You can't move there!"
-msgstr "Ei voi siirtää sinne!"
+#: ../src/five-or-more.c:646
+#| msgid "You can't move there!"
+msgid "You can’t move there!"
+msgstr "Ei voi siirtää siihen!"
 
-#: ../src/glines.c:1181
+#: ../src/five-or-more.c:1176
+#| msgid ""
+#| "GNOME port of the once-popular Color Lines game.\n"
+#| "\n"
+#| "Five or More is a part of GNOME Games."
 msgid ""
-"GNOME port of the once-popular Color Lines game.\n"
+"GNOME port of the once-popular Color Lines game\n"
 "\n"
 "Five or More is a part of GNOME Games."
 msgstr ""
-"GNOMEn käännös kerran kuuluisasta Color Lines -pelistä.\n"
+"Gnomen käännös kerran kuuluisasta Color Lines -pelistä\n"
 "\n"
-"Viisi tai enemmän on osa GNOMEn pelejä."
+"Viisi tai enemmän on osa Gnomen pelejä."
 
-#: ../src/glines.c:1187
+#: ../src/five-or-more.c:1182
 msgid "translator-credits"
 msgstr ""
-"Jiri Grönroos, 2012-2013\n"
+"Jiri Grönroos, 2012-2014\n"
 "Timo Jyrinki, 2008\n"
 "Ilkka Tuohela, 2006-2009\n"
 "Sami Pesonen, 2002-2005\n"
@@ -520,9 +317,188 @@ msgstr ""
 "  Timo Jyrinki https://launchpad.net/~timo-jyrinki\n"
 "  eGetin https://launchpad.net/~egetin"
 
-#: ../src/glines.c:1190
-msgid "GNOME Games web site"
-msgstr "Gnomen pelien verkkosivusto"
+#. Score dialog column header for the score time (e.g. 1 minute)
+#: ../src/games-scores-dialog.c:132
+msgctxt "score-dialog"
+msgid "Time"
+msgstr "Aika"
+
+#. Score dialog column header for the score value (e.g. 30 moves)
+#: ../src/games-scores-dialog.c:138
+msgctxt "score-dialog"
+msgid "Score"
+msgstr "Pisteet"
+
+#. Score format for time based scores.  %1$d is the time in minutes, %2$d is the time in seconds
+#: ../src/games-scores-dialog.c:225
+#, c-format
+msgctxt "score-dialog"
+msgid "%1$dm %2$ds"
+msgstr "%d min %d s"
+
+#. Score dialog column header for the date the score was recorded
+#: ../src/games-scores-dialog.c:478
+msgid "Date"
+msgstr "Päiväys"
+
+#~ msgid "Five or More Preferences"
+#~ msgstr "Viisi tai enemmän -asetukset"
+
+#~ msgid "true if the window is fullscren"
+#~ msgstr "tosi jos ikkuna on koko näytön tilassa"
+
+#~ msgctxt "score-dialog"
+#~ msgid "Name"
+#~ msgstr "Nimi"
+
+#~ msgid "View help for this game"
+#~ msgstr "Näytä tämän pelin ohjeet"
+
+#~ msgid "End the current game"
+#~ msgstr "Lopeta nykyinen peli"
+
+#~ msgid "Toggle fullscreen mode"
+#~ msgstr "Koko näytön tila päälle/pois"
+
+#~ msgid "Get a hint for your next move"
+#~ msgstr "Anna vinkki seuraavasta siirrosta"
+
+#~ msgid "Leave fullscreen mode"
+#~ msgstr "Poistu koko näytön tilasta"
+
+#~ msgid "Start a new multiplayer network game"
+#~ msgstr "Aloita uusi peli monen pelaajan verkkopeli"
+
+#~ msgid "End the current network game and return to network server"
+#~ msgstr "Lopeta nykyinen verkkopeli ja palaa verkkopalvelimelle"
+
+#~ msgid "Pause the game"
+#~ msgstr "Keskeytä peli"
+
+#~ msgid "Show a list of players in the network game"
+#~ msgstr "Näytä lista verkkopelin pelaajista"
+
+#~ msgid "Redo the undone move"
+#~ msgstr "Tee peruttu siirto uudestaan"
+
+#~ msgid "Restart the game"
+#~ msgstr "Aloita peli uudestaan"
+
+#~ msgid "Resume the paused game"
+#~ msgstr "Jatka pysäytettyä peliä"
+
+#~ msgid "View the scores"
+#~ msgstr "Näytä tulokset"
+
+#~ msgid "Undo the last move"
+#~ msgstr "Peru edellinen siirto"
+
+#~ msgid "About this game"
+#~ msgstr "Tietoja tästä pelistä"
+
+#~ msgid "Close this window"
+#~ msgstr "Sulje tämä ikkuna"
+
+#~ msgid "Configure the game"
+#~ msgstr "Määrittele pelin asetukset"
+
+#~ msgid "Quit this game"
+#~ msgstr "Lopeta tämä peli"
+
+#~ msgid "_Contents"
+#~ msgstr "_Sisältö"
+
+#~ msgid "_Fullscreen"
+#~ msgstr "_Koko näyttö"
+
+#~ msgid "_Hint"
+#~ msgstr "_Vinkki"
+
+#~ msgid "_New"
+#~ msgstr "_Uusi"
+
+#~ msgid "_Redo Move"
+#~ msgstr "_Tee siirto uudestaan"
+
+#~ msgid "_Reset"
+#~ msgstr "_Alusta"
+
+#~ msgid "_Restart"
+#~ msgstr "_Aloita alusta"
+
+#~ msgid "_Undo Move"
+#~ msgstr "_Peru siirto"
+
+#~ msgid "_Deal"
+#~ msgstr "J_ako"
+
+#~ msgid "_Leave Fullscreen"
+#~ msgstr "P_oistu koko näytön tilasta"
+
+#~ msgid "Network _Game"
+#~ msgstr "_Verkkopeli"
+
+#~ msgid "L_eave Game"
+#~ msgstr "_Lopeta peli"
+
+#~ msgid "Player _List"
+#~ msgstr "_Pelaajalista"
+
+#~ msgid "_Pause"
+#~ msgstr "_Keskeytä"
+
+#~ msgid "Res_ume"
+#~ msgstr "_Jatka"
+
+#~ msgid "_Scores"
+#~ msgstr "_Pisteet"
+
+#~ msgid "_End Game"
+#~ msgstr "_Lopeta peli"
+
+#~ msgid ""
+#~ "%s is free software; you can redistribute it and/or modify it under the "
+#~ "terms of the GNU General Public License as published by the Free Software "
+#~ "Foundation; either version %d of the License, or (at your option) any "
+#~ "later version."
+#~ msgstr ""
+#~ "%s on vapaa ohjelma; sitä on sallittu levittää edelleen ja muuttaa GNU "
+#~ "yleisen lisenssin (GPL lisenssin) ehtojen mukaan  sellaisina kuin Free "
+#~ "Software Foundation on ne julkaissut; joko lisenssin version %d, tai "
+#~ "(valinnan mukaan) minkä tahansa myöhemmän version mukaisesti."
+
+#~ msgid ""
+#~ "%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+#~ "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+#~ "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+#~ "details."
+#~ msgstr ""
+#~ "Ohjelmaa %s levitetään siinä toivossa, että se olisi hyödyllinen, mutta "
+#~ "ilman mitään takuuta; ilman edes hiljaista takuuta kaupallisesti "
+#~ "hyväksyttävästä laadusta tai soveltuvuudesta tiettyyn tarkoitukseen. "
+#~ "Katso GPL lisenssistä lisää yksityiskohtia."
+
+#~ msgid ""
+#~ "You should have received a copy of the GNU General Public License along "
+#~ "with %s; if not, write to the Free Software Foundation, Inc., 51 Franklin "
+#~ "Street, Fifth Floor, Boston, MA  02110-1301  USA"
+#~ msgstr ""
+#~ "Ohjelman %s mukana pitäisi tulla kopio GPL-lisenssistä; jos näin ei ole, "
+#~ "kirjoita osoitteeseen Free Software Foundation Inc., 51 Franklin Street, "
+#~ "Fifth Floor, Boston, MA  02110-1301  USA"
+
+#~ msgid ""
+#~ "You should have received a copy of the GNU General Public License along "
+#~ "with this program.  If not, see <http://www.gnu.org/licenses/>."
+#~ msgstr ""
+#~ "Tämän ohjelma mukana pitäisi tulla kopio GPL-lisenssistä; jos näin ei "
+#~ "ole, katso lisätietoja sivulta <http://www.gnu.org/licenses/>."
+
+#~ msgid "GNOME Five or More"
+#~ msgstr "GNOMEn viisi tai enemmän"
+
+#~ msgid "GNOME Games web site"
+#~ msgstr "Gnomen pelien verkkosivusto"
 
 #~ msgid "Five or more"
 #~ msgstr "Viisi tai enemmän"
