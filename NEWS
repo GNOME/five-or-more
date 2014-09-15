@@ -1,3 +1,11 @@
+3.13.92 - September 15, 2014
+============================
+
+* Fix insensitive new game menu item (Arnaud Bonatti)
+* Set a reasonable minimum size for the game (Michael Catanzaro)
+* Show the preferences dialog in front of the main window (Robert Roth)
+* Fix some memory leaks (Robert Roth)
+
 3.13.90.1 - August 18, 2014
 ===========================
 
