@@ -11,9 +11,9 @@ msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-"
 "or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-02-17 05:49+0000\n"
-"PO-Revision-Date: 2014-03-22 23:22+0100\n"
-"Last-Translator: Peter Mráz <etkinator@gmail.com>\n"
+"POT-Creation-Date: 2014-09-15 16:46+0000\n"
+"PO-Revision-Date: 2014-09-15 21:55+0100\n"
+"Last-Translator: Dušan Kazik <prescott66@gmail.com>\n"
 "Language-Team: Slovak <gnome-sk-list@gnome.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
@@ -42,7 +42,7 @@ msgstr ""
 "zaplnené."
 
 #: ../data/five-or-more.desktop.in.h:1 ../data/five-or-more.ui.h:1
-#: ../src/glines.c:1181 ../src/glines.c:1687
+#: ../src/five-or-more.c:1174 ../src/five-or-more.c:1675
 msgid "Five or More"
 msgstr "Päť a viac"
 
@@ -54,9 +54,10 @@ msgstr "Odstráňte farebné loptičky z hracej plochy zoradením do radov"
 msgid "game;strategy;logic;"
 msgstr "hra;strategická;logická;stratégia;logika;"
 
-#: ../data/five-or-more-preferences.ui.h:1
-msgid "Five or More Preferences"
-msgstr "Nastavenia programu Päť a viac"
+#: ../data/five-or-more-preferences.ui.h:1 ../data/menu.ui.h:3
+#: ../src/five-or-more.c:173
+msgid "Preferences"
+msgstr "Nastavenia"
 
 #: ../data/five-or-more-preferences.ui.h:2
 msgid "Appearance"
@@ -107,9 +108,15 @@ msgstr "0"
 msgid "Score:"
 msgstr "Skóre:"
 
-#: ../data/five-or-more.ui.h:5 ../src/games-stock.c:48
-msgid "Start a new game"
-msgstr "Začať novú hru"
+#: ../data/five-or-more.ui.h:5
+msgid "_New Game"
+msgstr "_Nová hra"
+
+# tooltip
+#: ../data/five-or-more.ui.h:6
+#| msgid "Start a new game"
+msgid "Start a new puzzle"
+msgstr "Začne novú hru"
 
 #: ../data/menu.ui.h:1 ../src/games-scores-dialog.c:385
 msgid "New Game"
@@ -118,10 +125,6 @@ msgstr "Nová hra"
 #: ../data/menu.ui.h:2
 msgid "Scores"
 msgstr "Skóre"
-
-#: ../data/menu.ui.h:3 ../src/glines.c:176
-msgid "Preferences"
-msgstr "Nastavenia"
 
 #: ../data/menu.ui.h:4
 msgid "Help"
@@ -208,9 +211,90 @@ msgstr "Výška okna v pixeloch."
 msgid "true if the window is maximized"
 msgstr "true, ak je okno maximalizované"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:18
-msgid "true if the window is fullscren"
-msgstr "true, ak je okno v celoobrazovkovom režime"
+#: ../src/five-or-more.c:80
+msgctxt "board size"
+msgid "Small"
+msgstr "Malá"
+
+#: ../src/five-or-more.c:81
+msgctxt "board size"
+msgid "Medium"
+msgstr "Stredná"
+
+#: ../src/five-or-more.c:82
+msgctxt "board size"
+msgid "Large"
+msgstr "Veľká"
+
+#: ../src/five-or-more.c:167
+msgid "Could not load theme"
+msgstr "Nepodarilo sa načítať tému"
+
+#: ../src/five-or-more.c:193
+#, c-format
+msgid ""
+"Unable to locate file:\n"
+"%s\n"
+"\n"
+"The default theme will be loaded instead."
+msgstr ""
+"Nepodarilo sa nájsť súbor:\n"
+"%s\n"
+"\n"
+"Namiesto toho bude načítaná predvolená téma."
+
+#: ../src/five-or-more.c:200
+#, c-format
+msgid ""
+"Unable to locate file:\n"
+"%s\n"
+"\n"
+"Please check that Five or More is installed correctly."
+msgstr ""
+"Nepodarilo sa nájsť súbor:\n"
+"%s\n"
+"\n"
+"Prosím, overte, či je program Päť a viac správne nainštalovaný."
+
+#: ../src/five-or-more.c:410
+msgid "Match five objects of the same type in a row to score!"
+msgstr ""
+"Zarovnajte päť objektov rovnakého typu do jedného radu, aby ste získali body!"
+
+#: ../src/five-or-more.c:471
+msgid "Five or More Scores"
+msgstr "Skóre Päť a viac"
+
+#: ../src/five-or-more.c:473
+msgid "_Board size:"
+msgstr "_Veľkosť hracieho poľa:"
+
+#: ../src/five-or-more.c:490
+msgid "Game Over!"
+msgstr "Koniec hry!"
+
+#. Can't move there!
+#: ../src/five-or-more.c:646
+msgid "You can’t move there!"
+msgstr "Tam nemôžete ťahať!"
+
+#: ../src/five-or-more.c:1176
+msgid ""
+"GNOME port of the once-popular Color Lines game\n"
+"\n"
+"Five or More is a part of GNOME Games."
+msgstr ""
+"GNOME verzia populárnej hry Color Lines\n"
+"\n"
+"Hra Päť a viac je súčasťou Hier GNOME."
+
+#: ../src/five-or-more.c:1182
+msgid "translator-credits"
+msgstr ""
+"Stanislav Višňovský (visnovsky@nenya.ms.mff.cuni.cz)\n"
+"Marcel Telka <marcel@telka.sk>\n"
+"Peter Mráz <etkinator@gmail.com>\n"
+"Dušan Kazik <prescott66@gmail.com>"
 
 #. Score dialog column header for the score time (e.g. 1 minute)
 #: ../src/games-scores-dialog.c:132
@@ -236,287 +320,153 @@ msgstr "%1$dm %2$ds"
 msgid "Date"
 msgstr "Dátum"
 
-#: ../src/games-stock.c:41
-msgid "View help for this game"
-msgstr "Zobrazí pomocníka pre túto hru"
+#~ msgid "Five or More Preferences"
+#~ msgstr "Nastavenia programu Päť a viac"
 
-#: ../src/games-stock.c:42
-msgid "End the current game"
-msgstr "Ukončí aktuálnu hru"
+#~ msgid "true if the window is fullscren"
+#~ msgstr "true, ak je okno v celoobrazovkovom režime"
 
-#: ../src/games-stock.c:43
-msgid "Toggle fullscreen mode"
-msgstr "Prepne celoobrazovkový režim"
+#~ msgid "View help for this game"
+#~ msgstr "Zobrazí pomocníka pre túto hru"
 
-#: ../src/games-stock.c:44
-msgid "Get a hint for your next move"
-msgstr "Zobrazí radu pre ďalší ťah"
+#~ msgid "End the current game"
+#~ msgstr "Ukončí aktuálnu hru"
 
-#: ../src/games-stock.c:45
-msgid "Leave fullscreen mode"
-msgstr "Opustí celoobrazovkový režim"
+#~ msgid "Toggle fullscreen mode"
+#~ msgstr "Prepne celoobrazovkový režim"
 
-#: ../src/games-stock.c:46
-msgid "Start a new multiplayer network game"
-msgstr "Spustí novú sieťovú hru pre viac hráčov"
+#~ msgid "Get a hint for your next move"
+#~ msgstr "Zobrazí radu pre ďalší ťah"
 
-#: ../src/games-stock.c:47
-msgid "End the current network game and return to network server"
-msgstr "Ukončí aktuálnu sieťovú hru a vráti sa na sieťový server"
+#~ msgid "Leave fullscreen mode"
+#~ msgstr "Opustí celoobrazovkový režim"
 
-#: ../src/games-stock.c:49
-msgid "Pause the game"
-msgstr "Pozastaví hru"
+#~ msgid "Start a new multiplayer network game"
+#~ msgstr "Spustí novú sieťovú hru pre viac hráčov"
 
-#: ../src/games-stock.c:50
-msgid "Show a list of players in the network game"
-msgstr "Zobrazí zoznam hráčov v sieťovej hre"
+#~ msgid "End the current network game and return to network server"
+#~ msgstr "Ukončí aktuálnu sieťovú hru a vráti sa na sieťový server"
 
-#: ../src/games-stock.c:51
-msgid "Redo the undone move"
-msgstr "Zopakuje vrátený ťah"
+#~ msgid "Pause the game"
+#~ msgstr "Pozastaví hru"
 
-#: ../src/games-stock.c:52
-msgid "Restart the game"
-msgstr "Začne hru odznova"
+#~ msgid "Show a list of players in the network game"
+#~ msgstr "Zobrazí zoznam hráčov v sieťovej hre"
 
-#: ../src/games-stock.c:53
-msgid "Resume the paused game"
-msgstr "Pokračuje v pozastavenej hre"
+#~ msgid "Redo the undone move"
+#~ msgstr "Zopakuje vrátený ťah"
 
-#: ../src/games-stock.c:54
-msgid "View the scores"
-msgstr "Zobrazí tabuľku najlepších"
+#~ msgid "Restart the game"
+#~ msgstr "Začne hru odznova"
 
-#: ../src/games-stock.c:55
-msgid "Undo the last move"
-msgstr "Vráti posledný ťah"
+#~ msgid "Resume the paused game"
+#~ msgstr "Pokračuje v pozastavenej hre"
 
-#: ../src/games-stock.c:56
-msgid "About this game"
-msgstr "O tejto hre"
+#~ msgid "View the scores"
+#~ msgstr "Zobrazí tabuľku najlepších"
 
-#: ../src/games-stock.c:57
-msgid "Close this window"
-msgstr "Zavrie toto okno"
+#~ msgid "Undo the last move"
+#~ msgstr "Vráti posledný ťah"
 
-#: ../src/games-stock.c:58
-msgid "Configure the game"
-msgstr "Mení nastavenie hry"
+#~ msgid "About this game"
+#~ msgstr "O tejto hre"
 
-#: ../src/games-stock.c:59
-msgid "Quit this game"
-msgstr "Ukončí túto hru"
+#~ msgid "Close this window"
+#~ msgstr "Zavrie toto okno"
 
-#: ../src/games-stock.c:247
-msgid "_Contents"
-msgstr "Ob_sah"
+#~ msgid "Configure the game"
+#~ msgstr "Mení nastavenie hry"
 
-#: ../src/games-stock.c:248
-msgid "_Fullscreen"
-msgstr "Na _celú obrazovku"
+#~ msgid "Quit this game"
+#~ msgstr "Ukončí túto hru"
 
-#: ../src/games-stock.c:249
-msgid "_Hint"
-msgstr "_Rada"
+#~ msgid "_Contents"
+#~ msgstr "Ob_sah"
 
-#. Translators: This "_New" is for the menu item 'Game->New', implies "New Game"
-#: ../src/games-stock.c:251
-msgid "_New"
-msgstr "_Nová"
+#~ msgid "_Fullscreen"
+#~ msgstr "Na _celú obrazovku"
 
-#. Translators: This "_New Game" is for the game-over dialogue
-#: ../src/games-stock.c:253
-msgid "_New Game"
-msgstr "_Nová hra"
+#~ msgid "_Hint"
+#~ msgstr "_Rada"
 
-#: ../src/games-stock.c:254
-msgid "_Redo Move"
-msgstr "Z_opakovať vrátený ťah"
+#~ msgid "_New"
+#~ msgstr "_Nová"
 
-#. Translators: this is the "Reset" scores button in a scores dialogue
-#: ../src/games-stock.c:256
-msgid "_Reset"
-msgstr "_Vynulovať"
+#~ msgid "_Redo Move"
+#~ msgstr "Z_opakovať vrátený ťah"
 
-#. Translators: "_Restart" is the menu item 'Game->Restart', implies "Restart Game"
-#: ../src/games-stock.c:258
-msgid "_Restart"
-msgstr "Hrať _odznova"
+#~ msgid "_Reset"
+#~ msgstr "_Vynulovať"
 
-#: ../src/games-stock.c:259
-msgid "_Undo Move"
-msgstr "_Vrátiť ťah"
+#~ msgid "_Restart"
+#~ msgstr "Hrať _odznova"
 
-#: ../src/games-stock.c:260
-msgid "_Deal"
-msgstr "_Zobrať kartu"
+#~ msgid "_Undo Move"
+#~ msgstr "_Vrátiť ťah"
 
-#: ../src/games-stock.c:261
-msgid "_Leave Fullscreen"
-msgstr "_Opustiť celoobrazovkový režim"
+#~ msgid "_Deal"
+#~ msgstr "_Zobrať kartu"
 
-#: ../src/games-stock.c:262
-msgid "Network _Game"
-msgstr "_Sieťová hra"
+#~ msgid "_Leave Fullscreen"
+#~ msgstr "_Opustiť celoobrazovkový režim"
 
-#: ../src/games-stock.c:263
-msgid "L_eave Game"
-msgstr "O_pustiť hru"
+#~ msgid "Network _Game"
+#~ msgstr "_Sieťová hra"
 
-#: ../src/games-stock.c:264
-msgid "Player _List"
-msgstr "_Zoznam hráčov"
+#~ msgid "L_eave Game"
+#~ msgstr "O_pustiť hru"
 
-#: ../src/games-stock.c:265
-msgid "_Pause"
-msgstr "_Pozastaviť"
+#~ msgid "Player _List"
+#~ msgstr "_Zoznam hráčov"
 
-#: ../src/games-stock.c:266
-msgid "Res_ume"
-msgstr "Po_kračovať"
+#~ msgid "_Pause"
+#~ msgstr "_Pozastaviť"
 
-#: ../src/games-stock.c:267
-msgid "_Scores"
-msgstr "_Skóre"
+#~ msgid "Res_ume"
+#~ msgstr "Po_kračovať"
 
-#: ../src/games-stock.c:268
-msgid "_End Game"
-msgstr "_Koniec hry"
+#~ msgid "_Scores"
+#~ msgstr "_Skóre"
 
-#. %s is replaced with the name of the game in gnome-games.
-#: ../src/games-stock.c:317
-#, c-format
-msgid ""
-"%s is free software; you can redistribute it and/or modify it under the "
-"terms of the GNU General Public License as published by the Free Software "
-"Foundation; either version %d of the License, or (at your option) any later "
-"version."
-msgstr ""
-"%s je slobodný softvér; môžete ho ďalej šíriť a upravovať podľa ustanovení "
-"licencie GNU General Public Licence (Všeobecná zverejňovacia licencia GNU), "
-"vydávanej nadáciou Free Software Foundation a to buď podľa %d. verzie tejto "
-"Licencie, alebo (podľa vášho uváženia) ktorejkoľvek neskoršej verzie."
+#~ msgid "_End Game"
+#~ msgstr "_Koniec hry"
 
-#: ../src/games-stock.c:322
-#, c-format
-msgid ""
-"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
-"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
-"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
-"details."
-msgstr ""
-"%s je šírený v nádeji, že bude užitočný, avšak BEZ AKEJKOĽVEK ZÁRUKY; "
-"neposkytujú sa ani odvodené záruky PREDAJNOSTI alebo VHODNOSTI PRE URČITÝ "
-"ÚČEL. Ďalšie podrobnosti hľadajte v licencii GNU General Public License."
+#~ msgid ""
+#~ "%s is free software; you can redistribute it and/or modify it under the "
+#~ "terms of the GNU General Public License as published by the Free Software "
+#~ "Foundation; either version %d of the License, or (at your option) any "
+#~ "later version."
+#~ msgstr ""
+#~ "%s je slobodný softvér; môžete ho ďalej šíriť a upravovať podľa "
+#~ "ustanovení licencie GNU General Public Licence (Všeobecná zverejňovacia "
+#~ "licencia GNU), vydávanej nadáciou Free Software Foundation a to buď podľa "
+#~ "%d. verzie tejto Licencie, alebo (podľa vášho uváženia) ktorejkoľvek "
+#~ "neskoršej verzie."
 
-#: ../src/games-stock.c:327
-#, c-format
-msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
-"Fifth Floor, Boston, MA  02110-1301  USA"
-msgstr ""
-"Kópiu GNU General Public License (Všeobecnej zverejňovacej licencie GNU) ste "
-"mali dostať spolu s %s; ak sa tak nestalo, požiadajte o ňu na adrese Free "
-"Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA "
-"02110-1301, USA."
+#~ msgid ""
+#~ "%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+#~ "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+#~ "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+#~ "details."
+#~ msgstr ""
+#~ "%s je šírený v nádeji, že bude užitočný, avšak BEZ AKEJKOĽVEK ZÁRUKY; "
+#~ "neposkytujú sa ani odvodené záruky PREDAJNOSTI alebo VHODNOSTI PRE URČITÝ "
+#~ "ÚČEL. Ďalšie podrobnosti hľadajte v licencii GNU General Public License."
 
-#: ../src/games-stock.c:331
-msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"this program.  If not, see <http://www.gnu.org/licenses/>."
-msgstr ""
-"Kópiu licencie GNU General Public License (Všeobecnej zverejňovacej licencie "
-"GNU) ste mali dostať spolu s programom. Ak sa tak nestalo, navštívte <http://"
-"www.gnu.org/licenses/>."
+#~ msgid ""
+#~ "You should have received a copy of the GNU General Public License along "
+#~ "with %s; if not, write to the Free Software Foundation, Inc., 51 Franklin "
+#~ "Street, Fifth Floor, Boston, MA  02110-1301  USA"
+#~ msgstr ""
+#~ "Kópiu GNU General Public License (Všeobecnej zverejňovacej licencie GNU) "
+#~ "ste mali dostať spolu s %s; ak sa tak nestalo, požiadajte o ňu na adrese "
+#~ "Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, "
+#~ "MA 02110-1301, USA."
 
-#: ../src/glines.c:81
-msgctxt "board size"
-msgid "Small"
-msgstr "Malá"
-
-#: ../src/glines.c:82
-msgctxt "board size"
-msgid "Medium"
-msgstr "Stredná"
-
-#: ../src/glines.c:83
-msgctxt "board size"
-msgid "Large"
-msgstr "Veľká"
-
-#: ../src/glines.c:170
-msgid "Could not load theme"
-msgstr "Nepodarilo sa načítať tému"
-
-#: ../src/glines.c:196
-#, c-format
-msgid ""
-"Unable to locate file:\n"
-"%s\n"
-"\n"
-"The default theme will be loaded instead."
-msgstr ""
-"Nepodarilo sa nájsť súbor:\n"
-"%s\n"
-"\n"
-"Namiesto toho bude načítaná predvolená téma."
-
-#: ../src/glines.c:203
-#, c-format
-msgid ""
-"Unable to locate file:\n"
-"%s\n"
-"\n"
-"Please check that Five or More is installed correctly."
-msgstr ""
-"Nepodarilo sa nájsť súbor:\n"
-"%s\n"
-"\n"
-"Prosím, overte, či je program Päť a viac správne nainštalovaný."
-
-#: ../src/glines.c:413
-msgid "Match five objects of the same type in a row to score!"
-msgstr ""
-"Zarovnajte päť objektov rovnakého typu do jedného radu, aby ste získali body!"
-
-#: ../src/glines.c:475
-#| msgid "Five or More"
-msgid "Five or More Scores"
-msgstr "Skóre Päť a viac"
-
-#: ../src/glines.c:477
-msgid "_Board size:"
-msgstr "_Veľkosť hracieho poľa:"
-
-#: ../src/glines.c:494
-msgid "Game Over!"
-msgstr "Koniec hry!"
-
-#. Can't move there!
-#: ../src/glines.c:651
-#| msgid "You can't move there!"
-msgid "You can’t move there!"
-msgstr "Tam nemôžete ťahať!"
-
-#: ../src/glines.c:1183
-#| msgid ""
-#| "GNOME port of the once-popular Color Lines game.\n"
-#| "\n"
-#| "Five or More is a part of GNOME Games."
-msgid ""
-"GNOME port of the once-popular Color Lines game\n"
-"\n"
-"Five or More is a part of GNOME Games."
-msgstr ""
-"GNOME verzia populárnej hry Color Lines\n"
-"\n"
-"Hra Päť a viac je súčasťou Hier GNOME."
-
-#: ../src/glines.c:1189
-msgid "translator-credits"
-msgstr ""
-"Stanislav Višňovský (visnovsky@nenya.ms.mff.cuni.cz)\n"
-"Marcel Telka <marcel@telka.sk>\n"
-"Peter Mráz <etkinator@gmail.com>"
+#~ msgid ""
+#~ "You should have received a copy of the GNU General Public License along "
+#~ "with this program.  If not, see <http://www.gnu.org/licenses/>."
+#~ msgstr ""
+#~ "Kópiu licencie GNU General Public License (Všeobecnej zverejňovacej "
+#~ "licencie GNU) ste mali dostať spolu s programom. Ak sa tak nestalo, "
+#~ "navštívte <http://www.gnu.org/licenses/>."
