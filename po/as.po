@@ -53,7 +53,7 @@ msgstr "শাৰী গঠন কৰি বৰ্ডৰ পৰা ৰঙীন 
 
 #: ../data/five-or-more.desktop.in.h:3
 msgid "game;strategy;logic;"
-msgstr "খেল;কৌশল;যুক্তি"
+msgstr "খেল;কৌশল;যুক্তি;"
 
 #: ../data/five-or-more-preferences.ui.h:1 ../data/menu.ui.h:3
 #: ../src/five-or-more.c:173
