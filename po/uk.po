@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-"
 "or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-02-01 19:08+0000\n"
-"PO-Revision-Date: 2014-03-18 16:37+0300\n"
+"POT-Creation-Date: 2014-09-19 04:46+0000\n"
+"PO-Revision-Date: 2014-09-19 14:37+0300\n"
 "Last-Translator: Daniel Korostil <ted.korostiled@gmail.com>\n"
 "Language-Team: linux.org.ua\n"
 "Language: uk\n"
@@ -30,8 +30,8 @@ msgid ""
 "before clearing them."
 msgstr ""
 "П'ять або більше — у свій час популярна комп'ютерна гра в середовищі GNOME. "
-"Вишикувати п'ять або більше об'єктів однакового кольору в ряд, щоб змусити їх "
-"зникнути і здобути бали. Заробляйте більше балів за шикування якнайбільше "
+"Вишикувати п'ять або більше об'єктів однакового кольору в ряд, щоб змусити "
+"їх зникнути і здобути бали. Заробляйте більше балів за шикування якнайбільше "
 "об'єктів перед їхніх знищенням."
 
 #: ../data/five-or-more.appdata.xml.in.h:2
@@ -42,9 +42,23 @@ msgstr ""
 "Більше об'єктів з'являються після кожного кроку. Грайте якнайдовше, поки "
 "дошка повністю не заповниться!"
 
-#: ../data/five-or-more-preferences.ui.h:1
-msgid "Five or More Preferences"
-msgstr "Параметри гри \"П'ять або більше\""
+#: ../data/five-or-more.desktop.in.h:1 ../data/five-or-more.ui.h:1
+#: ../src/five-or-more.c:1174 ../src/five-or-more.c:1675
+msgid "Five or More"
+msgstr "П'ять або більше"
+
+#: ../data/five-or-more.desktop.in.h:2
+msgid "Remove colored balls from the board by forming lines"
+msgstr "Вилучати кольорові кулі з дошки, формуючи ряди"
+
+#: ../data/five-or-more.desktop.in.h:3
+msgid "game;strategy;logic;"
+msgstr "гра;стратегія;логіка;"
+
+#: ../data/five-or-more-preferences.ui.h:1 ../data/menu.ui.h:3
+#: ../src/five-or-more.c:173
+msgid "Preferences"
+msgstr "Параметри"
 
 #: ../data/five-or-more-preferences.ui.h:2
 msgid "Appearance"
@@ -82,11 +96,6 @@ msgstr "Загальне"
 msgid "_Use fast moves"
 msgstr "_Швидкі ходи"
 
-#: ../data/five-or-more.ui.h:1 ../data/glines.desktop.in.h:1
-#: ../src/glines.c:1181 ../src/glines.c:1694
-msgid "Five or More"
-msgstr "П'ять або більше"
-
 #: ../data/five-or-more.ui.h:2
 msgid "Next:"
 msgstr "Наступні:"
@@ -99,13 +108,14 @@ msgstr "0"
 msgid "Score:"
 msgstr "Рахунок:"
 
-#: ../data/glines.desktop.in.h:2
-msgid "Remove colored balls from the board by forming lines"
-msgstr "Вилучати кольорові кулі з дошки, формуючи ряди"
+#: ../data/five-or-more.ui.h:5
+msgid "_New Game"
+msgstr "_Створити гру"
 
-#: ../data/glines.desktop.in.h:3
-msgid "game;strategy;logic;"
-msgstr "гра;стратегія;логіка;"
+#: ../data/five-or-more.ui.h:6
+#| msgid "Start a new game"
+msgid "Start a new puzzle"
+msgstr "Запустити нову складанку"
 
 #: ../data/menu.ui.h:1 ../src/games-scores-dialog.c:385
 msgid "New Game"
@@ -115,22 +125,15 @@ msgstr "Створити гру"
 msgid "Scores"
 msgstr "Бали"
 
-#: ../data/menu.ui.h:3 ../src/glines.c:176
-msgid "Preferences"
-msgstr "Параметри"
-
 #: ../data/menu.ui.h:4
-#| msgid "_Help"
 msgid "Help"
 msgstr "Довідка"
 
 #: ../data/menu.ui.h:5
-#| msgid "_About"
 msgid "About"
 msgstr "Про програму"
 
 #: ../data/menu.ui.h:6
-#| msgid "_Quit"
 msgid "Quit"
 msgstr "Вийти"
 
@@ -194,12 +197,10 @@ msgid "Game preview from last saved session."
 msgstr "Перегляд гри з останнього збереженого сеансу."
 
 #: ../data/org.gnome.five-or-more.gschema.xml.h:15
-#| msgid "The width of the main window in pixels."
 msgid "Width of the window in pixels"
 msgstr "Ширина вікна у точках"
 
 #: ../data/org.gnome.five-or-more.gschema.xml.h:16
-#| msgid "The height of the main window in pixels."
 msgid "Height of the window in pixels"
 msgstr "Висота вікна у точках"
 
@@ -207,9 +208,89 @@ msgstr "Висота вікна у точках"
 msgid "true if the window is maximized"
 msgstr "вказано, коли вікно розгорнуто"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:18
-msgid "true if the window is fullscren"
-msgstr "вказано, коли вікно на повний екран"
+#: ../src/five-or-more.c:80
+msgctxt "board size"
+msgid "Small"
+msgstr "Мале"
+
+#: ../src/five-or-more.c:81
+msgctxt "board size"
+msgid "Medium"
+msgstr "Середній"
+
+#: ../src/five-or-more.c:82
+msgctxt "board size"
+msgid "Large"
+msgstr "Велике"
+
+#: ../src/five-or-more.c:167
+msgid "Could not load theme"
+msgstr "Неможливо завантажити гру"
+
+#: ../src/five-or-more.c:193
+#, c-format
+msgid ""
+"Unable to locate file:\n"
+"%s\n"
+"\n"
+"The default theme will be loaded instead."
+msgstr ""
+"Не вдалось визначити файл:\n"
+"'%s'\n"
+"\n"
+"Буде завантажено типову тему."
+
+#: ../src/five-or-more.c:200
+#, c-format
+msgid ""
+"Unable to locate file:\n"
+"%s\n"
+"\n"
+"Please check that Five or More is installed correctly."
+msgstr ""
+"Не вдалось знайти файл:\n"
+"%s\n"
+"\n"
+"Перевірте коректність встановлення гри \"П'ять або більше\"."
+
+#: ../src/five-or-more.c:410
+msgid "Match five objects of the same type in a row to score!"
+msgstr "Поставте п'ять кульок одного кольору в ряд, щоб отримати очки!"
+
+#: ../src/five-or-more.c:471
+msgid "Five or More Scores"
+msgstr "Бали"
+
+#: ../src/five-or-more.c:473
+msgid "_Board size:"
+msgstr "Розмір _дошки:"
+
+#: ../src/five-or-more.c:490
+msgid "Game Over!"
+msgstr "Гру закінчено!"
+
+#. Can't move there!
+#: ../src/five-or-more.c:646
+msgid "You can’t move there!"
+msgstr "Ви не можете переміститись сюди!"
+
+#: ../src/five-or-more.c:1176
+msgid ""
+"GNOME port of the once-popular Color Lines game\n"
+"\n"
+"Five or More is a part of GNOME Games."
+msgstr ""
+"Варіант популярної гри «Кольорові ряди» для GNOME\n"
+"\n"
+"«П'ять або більше» — частина ігор GNOME."
+
+#: ../src/five-or-more.c:1182
+msgid "translator-credits"
+msgstr ""
+"Юрій Сирота\n"
+"Максим Дзюманенко <dziumanenko@gmail.com>\n"
+"Wanderlust <wanderlust@ukr.net\n"
+"Daniel Korostil <ted.korostiled@gmail.com>"
 
 #. Score dialog column header for the score time (e.g. 1 minute)
 #: ../src/games-scores-dialog.c:132
@@ -235,293 +316,154 @@ msgstr "%1$dхв %2$dс"
 msgid "Date"
 msgstr "Дата"
 
-#: ../src/games-stock.c:41
-msgid "View help for this game"
-msgstr "Показати довідку з цієї гри"
+#~ msgid "Five or More Preferences"
+#~ msgstr "Параметри гри \"П'ять або більше\""
 
-#: ../src/games-stock.c:42
-msgid "End the current game"
-msgstr "Завершити поточну гру"
+#~ msgid "true if the window is fullscren"
+#~ msgstr "вказано, коли вікно на повний екран"
 
-#: ../src/games-stock.c:43
-msgid "Toggle fullscreen mode"
-msgstr "Перемикнутися у режим на весь екран"
+#~ msgid "View help for this game"
+#~ msgstr "Показати довідку з цієї гри"
 
-#: ../src/games-stock.c:44
-msgid "Get a hint for your next move"
-msgstr "Отримати підказку наступного ходу"
+#~ msgid "End the current game"
+#~ msgstr "Завершити поточну гру"
 
-#: ../src/games-stock.c:45
-msgid "Leave fullscreen mode"
-msgstr "Вийти з повноекранного режиму"
+#~ msgid "Toggle fullscreen mode"
+#~ msgstr "Перемикнутися у режим на весь екран"
 
-#: ../src/games-stock.c:46
-msgid "Start a new multiplayer network game"
-msgstr "Розпочати нову мережну гру з кількома учасниками"
+#~ msgid "Get a hint for your next move"
+#~ msgstr "Отримати підказку наступного ходу"
 
-#: ../src/games-stock.c:47
-msgid "End the current network game and return to network server"
-msgstr "Закінчити мережну гру та повернутись до ігрового сервера"
+#~ msgid "Leave fullscreen mode"
+#~ msgstr "Вийти з повноекранного режиму"
 
-#: ../src/games-stock.c:48
-msgid "Start a new game"
-msgstr "Розпочати нову гру"
+#~ msgid "Start a new multiplayer network game"
+#~ msgstr "Розпочати нову мережну гру з кількома учасниками"
 
-#: ../src/games-stock.c:49
-msgid "Pause the game"
-msgstr "Призупинити гру"
+#~ msgid "End the current network game and return to network server"
+#~ msgstr "Закінчити мережну гру та повернутись до ігрового сервера"
 
-#: ../src/games-stock.c:50
-msgid "Show a list of players in the network game"
-msgstr "Показувати список гравців у мережній грі"
+#~ msgid "Pause the game"
+#~ msgstr "Призупинити гру"
 
-#: ../src/games-stock.c:51
-msgid "Redo the undone move"
-msgstr "Повторити скасований хід"
+#~ msgid "Show a list of players in the network game"
+#~ msgstr "Показувати список гравців у мережній грі"
 
-#: ../src/games-stock.c:52
-msgid "Restart the game"
-msgstr "Перезапустити гру знову"
+#~ msgid "Redo the undone move"
+#~ msgstr "Повторити скасований хід"
 
-#: ../src/games-stock.c:53
-msgid "Resume the paused game"
-msgstr "Продовжити зупинену гру"
+#~ msgid "Restart the game"
+#~ msgstr "Перезапустити гру знову"
 
-#: ../src/games-stock.c:54
-msgid "View the scores"
-msgstr "Показати рахунки"
+#~ msgid "Resume the paused game"
+#~ msgstr "Продовжити зупинену гру"
 
-#: ../src/games-stock.c:55
-msgid "Undo the last move"
-msgstr "Вернути останні хід"
+#~ msgid "View the scores"
+#~ msgstr "Показати рахунки"
 
-#: ../src/games-stock.c:56
-msgid "About this game"
-msgstr "Про гру"
+#~ msgid "Undo the last move"
+#~ msgstr "Вернути останні хід"
 
-#: ../src/games-stock.c:57
-msgid "Close this window"
-msgstr "Закрити це вікно"
+#~ msgid "About this game"
+#~ msgstr "Про гру"
 
-#: ../src/games-stock.c:58
-msgid "Configure the game"
-msgstr "Налаштувати гру"
+#~ msgid "Close this window"
+#~ msgstr "Закрити це вікно"
 
-#: ../src/games-stock.c:59
-msgid "Quit this game"
-msgstr "Вийти з гри"
+#~ msgid "Configure the game"
+#~ msgstr "Налаштувати гру"
 
-#: ../src/games-stock.c:247
-msgid "_Contents"
-msgstr "_Зміст"
+#~ msgid "Quit this game"
+#~ msgstr "Вийти з гри"
 
-#: ../src/games-stock.c:248
-msgid "_Fullscreen"
-msgstr "_На весь екран"
+#~ msgid "_Contents"
+#~ msgstr "_Зміст"
 
-#: ../src/games-stock.c:249
-msgid "_Hint"
-msgstr "_Підказка"
+#~ msgid "_Fullscreen"
+#~ msgstr "_На весь екран"
 
-#. Translators: This "_New" is for the menu item 'Game->New', implies "New Game"
-#: ../src/games-stock.c:251
-msgid "_New"
-msgstr "_Створити"
+#~ msgid "_Hint"
+#~ msgstr "_Підказка"
 
-#. Translators: This "_New Game" is for the game-over dialogue
-#: ../src/games-stock.c:253
-msgid "_New Game"
-msgstr "_Створити гру"
+#~ msgid "_New"
+#~ msgstr "_Створити"
 
-#: ../src/games-stock.c:254
-msgid "_Redo Move"
-msgstr "_Повторити хід"
+#~ msgid "_Redo Move"
+#~ msgstr "_Повторити хід"
 
-#. Translators: this is the "Reset" scores button in a scores dialogue
-#: ../src/games-stock.c:256
-msgid "_Reset"
-msgstr "_Скинути"
+#~ msgid "_Reset"
+#~ msgstr "_Скинути"
 
-#. Translators: "_Restart" is the menu item 'Game->Restart', implies "Restart Game"
-#: ../src/games-stock.c:258
-msgid "_Restart"
-msgstr "_Перезапустити"
+#~ msgid "_Restart"
+#~ msgstr "_Перезапустити"
 
-#: ../src/games-stock.c:259
-msgid "_Undo Move"
-msgstr "_Вернути хід"
+#~ msgid "_Undo Move"
+#~ msgstr "_Вернути хід"
 
-#: ../src/games-stock.c:260
-msgid "_Deal"
-msgstr "З_дати"
+#~ msgid "_Deal"
+#~ msgstr "З_дати"
 
-#: ../src/games-stock.c:261
-msgid "_Leave Fullscreen"
-msgstr "_Вийти з повноекранного режиму"
+#~ msgid "_Leave Fullscreen"
+#~ msgstr "_Вийти з повноекранного режиму"
 
-#: ../src/games-stock.c:262
-msgid "Network _Game"
-msgstr "Нова _мережна гра"
+#~ msgid "Network _Game"
+#~ msgstr "Нова _мережна гра"
 
-#: ../src/games-stock.c:263
-msgid "L_eave Game"
-msgstr "Ви_йти з гри"
+#~ msgid "L_eave Game"
+#~ msgstr "Ви_йти з гри"
 
-#: ../src/games-stock.c:264
-msgid "Player _List"
-msgstr "_Список гравців"
+#~ msgid "Player _List"
+#~ msgstr "_Список гравців"
 
-#: ../src/games-stock.c:265
-msgid "_Pause"
-msgstr "_Пауза"
+#~ msgid "_Pause"
+#~ msgstr "_Пауза"
 
-#: ../src/games-stock.c:266
-msgid "Res_ume"
-msgstr "П_родовжити"
+#~ msgid "Res_ume"
+#~ msgstr "П_родовжити"
 
-#: ../src/games-stock.c:267
-msgid "_Scores"
-msgstr "_Результати"
+#~ msgid "_Scores"
+#~ msgstr "_Результати"
 
-#: ../src/games-stock.c:268
-msgid "_End Game"
-msgstr "_Завершити гру"
+#~ msgid "_End Game"
+#~ msgstr "_Завершити гру"
 
-#. %s is replaced with the name of the game in gnome-games.
-#: ../src/games-stock.c:317
-#, c-format
-msgid ""
-"%s is free software; you can redistribute it and/or modify it under the "
-"terms of the GNU General Public License as published by the Free Software "
-"Foundation; either version %d of the License, or (at your option) any later "
-"version."
-msgstr ""
-"%s ― вільне програмне забезпечення. Ви можете його розповсюджувати чи "
-"змінювати на умовах ліцензії GNU General Public License, що опублікована "
-"Free Software Foundation; або версії %d ліцензії, або (на ваш розсуд) будь-"
-"якій більш пізній версії."
+#~ msgid ""
+#~ "%s is free software; you can redistribute it and/or modify it under the "
+#~ "terms of the GNU General Public License as published by the Free Software "
+#~ "Foundation; either version %d of the License, or (at your option) any "
+#~ "later version."
+#~ msgstr ""
+#~ "%s ― вільне програмне забезпечення. Ви можете його розповсюджувати чи "
+#~ "змінювати на умовах ліцензії GNU General Public License, що опублікована "
+#~ "Free Software Foundation; або версії %d ліцензії, або (на ваш розсуд) "
+#~ "будь-якій більш пізній версії."
 
-#: ../src/games-stock.c:322
-#, c-format
-msgid ""
-"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
-"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
-"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
-"details."
-msgstr ""
-"%s розповсюджується зі сподіванням, що програма буде корисною, але БЕЗ БУДЬ-"
-"ЯКИХ ГАРАНТІЙ; не гарантується навіть ПРИДАТНІСТЬ чи ВІДПОВІДНІСТЬ ПЕВНІЙ "
-"МЕТІ. Для отримання додаткової інформації ознайомтесь з GNU General Public "
-"License."
+#~ msgid ""
+#~ "%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+#~ "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+#~ "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+#~ "details."
+#~ msgstr ""
+#~ "%s розповсюджується зі сподіванням, що програма буде корисною, але БЕЗ "
+#~ "БУДЬ-ЯКИХ ГАРАНТІЙ; не гарантується навіть ПРИДАТНІСТЬ чи ВІДПОВІДНІСТЬ "
+#~ "ПЕВНІЙ МЕТІ. Для отримання додаткової інформації ознайомтесь з GNU "
+#~ "General Public License."
 
-#: ../src/games-stock.c:327
-#, c-format
-msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
-"Fifth Floor, Boston, MA  02110-1301  USA"
-msgstr ""
-"Ви мали отримати копію GNU General Public License разом з %s. Якщо цього не "
-"сталося, напишіть до Free Software Foundation, Inc., 59 Temple Place, Suite "
-"330, Boston, MA  02111-1307  USA."
+#~ msgid ""
+#~ "You should have received a copy of the GNU General Public License along "
+#~ "with %s; if not, write to the Free Software Foundation, Inc., 51 Franklin "
+#~ "Street, Fifth Floor, Boston, MA  02110-1301  USA"
+#~ msgstr ""
+#~ "Ви мали отримати копію GNU General Public License разом з %s. Якщо цього "
+#~ "не сталося, напишіть до Free Software Foundation, Inc., 59 Temple Place, "
+#~ "Suite 330, Boston, MA  02111-1307  USA."
 
-#: ../src/games-stock.c:331
-msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"this program.  If not, see <http://www.gnu.org/licenses/>."
-msgstr ""
-"Ви мали отримати копію GNU General Public License разом з %s. Якщо цього не "
-"сталося, дивіться <http://www.gnu.org/licenses/>."
-
-#: ../src/glines.c:81
-msgctxt "board size"
-msgid "Small"
-msgstr "Мале"
-
-#: ../src/glines.c:82
-msgctxt "board size"
-msgid "Medium"
-msgstr "Середній"
-
-#: ../src/glines.c:83
-msgctxt "board size"
-msgid "Large"
-msgstr "Велике"
-
-#: ../src/glines.c:170
-msgid "Could not load theme"
-msgstr "Неможливо завантажити гру"
-
-#: ../src/glines.c:196
-#, c-format
-msgid ""
-"Unable to locate file:\n"
-"%s\n"
-"\n"
-"The default theme will be loaded instead."
-msgstr ""
-"Не вдалось визначити файл:\n"
-"'%s'\n"
-"\n"
-"Буде завантажено типову тему."
-
-#: ../src/glines.c:203
-#, c-format
-msgid ""
-"Unable to locate file:\n"
-"%s\n"
-"\n"
-"Please check that Five or More is installed correctly."
-msgstr ""
-"Не вдалось знайти файл:\n"
-"%s\n"
-"\n"
-"Перевірте коректність встановлення гри \"П'ять або більше\"."
-
-#: ../src/glines.c:413
-msgid "Match five objects of the same type in a row to score!"
-msgstr "Поставте п'ять кульок одного кольору в ряд, щоб отримати очки!"
-
-#: ../src/glines.c:475
-#| msgid "Five or More"
-msgid "Five or More Scores"
-msgstr "Бали"
-
-#: ../src/glines.c:477
-msgid "_Board size:"
-msgstr "Розмір _дошки:"
-
-#: ../src/glines.c:494
-msgid "Game Over!"
-msgstr "Гру закінчено!"
-
-#. Can't move there!
-#: ../src/glines.c:651
-#| msgid "You can't move there!"
-msgid "You can’t move there!"
-msgstr "Ви не можете переміститись сюди!"
-
-#: ../src/glines.c:1183
-#| msgid ""
-#| "GNOME port of the once-popular Color Lines game.\n"
-#| "\n"
-#| "Five or More is a part of GNOME Games."
-msgid ""
-"GNOME port of the once-popular Color Lines game\n"
-"\n"
-"Five or More is a part of GNOME Games."
-msgstr ""
-"Варіант популярної гри «Кольорові ряди» для GNOME\n"
-"\n"
-"«П'ять або більше» — частина ігор GNOME."
-
-#: ../src/glines.c:1189
-msgid "translator-credits"
-msgstr ""
-"Юрій Сирота\n"
-"Максим Дзюманенко <dziumanenko@gmail.com>\n"
-"Wanderlust <wanderlust@ukr.net\n"
-"Daniel Korostil <ted.korostiled@gmail.com>"
+#~ msgid ""
+#~ "You should have received a copy of the GNU General Public License along "
+#~ "with this program.  If not, see <http://www.gnu.org/licenses/>."
+#~ msgstr ""
+#~ "Ви мали отримати копію GNU General Public License разом з %s. Якщо цього "
+#~ "не сталося, дивіться <http://www.gnu.org/licenses/>."
 
 #~ msgid "Chess"
 #~ msgstr "Шахи"
