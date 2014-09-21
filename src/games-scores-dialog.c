@@ -368,30 +368,30 @@ void games_scores_dialog_set_buttons (GamesScoresDialog *self, guint buttons)
 	buttons = GAMES_SCORES_CLOSE_BUTTON;
 
   if (buttons & GAMES_SCORES_QUIT_BUTTON) {
-	gtk_dialog_add_button (GTK_DIALOG (self), GTK_STOCK_QUIT,
+    gtk_dialog_add_button (GTK_DIALOG (self), _("_Quit"),
 	                       GTK_RESPONSE_REJECT);
-      gtk_dialog_set_default_response (GTK_DIALOG (self), 
+    gtk_dialog_set_default_response (GTK_DIALOG (self),
 	       			         GTK_RESPONSE_REJECT);
   }
 
   if (buttons & GAMES_SCORES_UNDO_BUTTON) {
-	gtk_dialog_add_button (GTK_DIALOG (self), GTK_STOCK_UNDO,
+    gtk_dialog_add_button (GTK_DIALOG (self), _("_Undo"),
 	                       GTK_RESPONSE_DELETE_EVENT);
-      gtk_dialog_set_default_response (GTK_DIALOG (self), 
+    gtk_dialog_set_default_response (GTK_DIALOG (self),
 	       			         GTK_RESPONSE_DELETE_EVENT);
   }
 
   if (buttons & GAMES_SCORES_NEW_GAME_BUTTON) {
-	gtk_dialog_add_button (GTK_DIALOG (self), _("New Game"),
+    gtk_dialog_add_button (GTK_DIALOG (self), _("_New Game"),
 	                       GTK_RESPONSE_ACCEPT);
-      gtk_dialog_set_default_response (GTK_DIALOG (self), 
+    gtk_dialog_set_default_response (GTK_DIALOG (self),
 	       			         GTK_RESPONSE_ACCEPT);
   }
 
   if (buttons & GAMES_SCORES_CLOSE_BUTTON) {
-	gtk_dialog_add_button (GTK_DIALOG (self), GTK_STOCK_CLOSE,
+    gtk_dialog_add_button (GTK_DIALOG (self), _("_Close"),
 	                       GTK_RESPONSE_CLOSE);
-      gtk_dialog_set_default_response (GTK_DIALOG (self), 
+    gtk_dialog_set_default_response (GTK_DIALOG (self),
 	       			         GTK_RESPONSE_CLOSE);
   }
 }

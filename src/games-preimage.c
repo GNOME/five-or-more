@@ -31,8 +31,6 @@
 #include <gdk/gdk.h>
 
 #include <librsvg/rsvg.h>
-#include <librsvg/rsvg-cairo.h>
-
 
 #include "games-preimage.h"
 
@@ -86,8 +84,6 @@ games_preimage_class_init (GamesPreimageClass * klass)
   GObjectClass *oclass = G_OBJECT_CLASS (klass);
 
   oclass->finalize = games_preimage_finalize;
-
-  rsvg_init ();
 }
 
 /**
