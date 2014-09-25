@@ -11,15 +11,14 @@
 # Laszlo Dvornik <dvornik at gnome dot hu>, 2004.
 # Szabolcs Varga <shirokuma at shirokuma dot hu>, 2005.
 # Gabor Kelemen <kelemeng at gnome dot hu>, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2014.
-# Balázs Úr <urbalazs at gmail dot com>, 2013.
-# Balázs Úr <urbalazs@gmail.com>, 2014.
+# Balázs Úr <urbalazs at gmail dot com>, 2013, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-"
 "or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-09-11 16:46+0000\n"
-"PO-Revision-Date: 2014-09-11 19:53+0200\n"
+"POT-Creation-Date: 2014-09-25 04:54+0000\n"
+"PO-Revision-Date: 2014-09-25 17:45+0200\n"
 "Last-Translator: Balázs Úr <urbalazs@gmail.com>\n"
 "Language-Team: Hungarian <openscope at googlegroups dot com>\n"
 "Language: hu\n"
@@ -115,16 +114,15 @@ msgstr "0"
 msgid "Score:"
 msgstr "Pont:"
 
-#: ../data/five-or-more.ui.h:5
+#: ../data/five-or-more.ui.h:5 ../src/games-scores-dialog.c:385
 msgid "_New Game"
 msgstr "Ú_j játék"
 
 #: ../data/five-or-more.ui.h:6
-#| msgid "Start a new game"
 msgid "Start a new puzzle"
 msgstr "Új fejtörő indítása"
 
-#: ../data/menu.ui.h:1 ../src/games-scores-dialog.c:385
+#: ../data/menu.ui.h:1
 msgid "New Game"
 msgstr "Új játék"
 
@@ -319,6 +317,19 @@ msgstr "Pontszám"
 msgctxt "score-dialog"
 msgid "%1$dm %2$ds"
 msgstr "%1$dp %2$dmp"
+
+#: ../src/games-scores-dialog.c:371
+#| msgid "Quit"
+msgid "_Quit"
+msgstr "_Kilépés"
+
+#: ../src/games-scores-dialog.c:378
+msgid "_Undo"
+msgstr "_Visszavonás"
+
+#: ../src/games-scores-dialog.c:392
+msgid "_Close"
+msgstr "_Bezárás"
 
 #. Score dialog column header for the date the score was recorded
 #: ../src/games-scores-dialog.c:478
@@ -2094,9 +2105,6 @@ msgstr "Dátum"
 
 #~ msgid "New game"
 #~ msgstr "Új játék"
-
-#~ msgid "_Undo"
-#~ msgstr "_Visszavonás"
 
 #~ msgid "Undo last action"
 #~ msgstr "Utolsó lépés visszavonása"
