@@ -1,5 +1,5 @@
 # gnome-games Finnish Translation
-# Suomennos: http://www.gnome.fi/
+# Suomennos: https://l10n.gnome.org/teams/fi/
 # Copyright (C) 2002-2009 Free Software Foundation, Inc.
 #
 #
@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-"
 "or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-09-11 16:46+0000\n"
+"POT-Creation-Date: 2014-11-07 05:41+0000\n"
 "PO-Revision-Date: 2014-09-12 00:19+0300\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos+l10n@iki.fi>\n"
 "Language-Team: suomi <gnome-fi-laatu@lists.sourceforge.net>\n"
@@ -119,7 +119,6 @@ msgid "_New Game"
 msgstr "_Uusi peli"
 
 #: ../data/five-or-more.ui.h:6
-#| msgid "Start a new game"
 msgid "Start a new puzzle"
 msgstr "Aloita uusi peli"
 
@@ -264,7 +263,6 @@ msgid "Match five objects of the same type in a row to score!"
 msgstr "Siirrä viisi samanväristä palloa riviin saadaksesi pisteitä!"
 
 #: ../src/five-or-more.c:471
-#| msgid "Five or More"
 msgid "Five or More Scores"
 msgstr "Viisi tai enemmän -pisteet\t"
 
@@ -278,15 +276,10 @@ msgstr "Peli päättyi!"
 
 #. Can't move there!
 #: ../src/five-or-more.c:646
-#| msgid "You can't move there!"
 msgid "You can’t move there!"
 msgstr "Ei voi siirtää siihen!"
 
 #: ../src/five-or-more.c:1176
-#| msgid ""
-#| "GNOME port of the once-popular Color Lines game.\n"
-#| "\n"
-#| "Five or More is a part of GNOME Games."
 msgid ""
 "GNOME port of the once-popular Color Lines game\n"
 "\n"
@@ -304,7 +297,7 @@ msgstr ""
 "Ilkka Tuohela, 2006-2009\n"
 "Sami Pesonen, 2002-2005\n"
 "\n"
-"http://www.gnome.fi/\n"
+"https://l10n.gnome.org/teams/fi/\n"
 "\n"
 "Launchpad Contributions:\n"
 "  Heikki Kulhia https://launchpad.net/~hessuk\n"
