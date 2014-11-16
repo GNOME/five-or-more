@@ -489,7 +489,8 @@ game_over (void)
   int pos;
 
   set_status_message (_("Game Over!"));
-  pos = games_scores_add_plain_score (highscores, score);
+  if (score > 0)
+    pos = games_scores_add_plain_score (highscores, score);
   show_scores (pos);
 }
 
