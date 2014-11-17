@@ -5,10 +5,10 @@
 # Torstein Adolf Winterseth <kvikende@fsfe.org>, 2010.
 msgid ""
 msgstr ""
-"Project-Id-Version: five-or-more 3.13.x\n"
+"Project-Id-Version: five-or-more 3.15.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-08-23 12:11+0200\n"
-"PO-Revision-Date: 2014-08-23 12:12+0200\n"
+"POT-Creation-Date: 2014-11-17 08:06+0100\n"
+"PO-Revision-Date: 2014-11-17 08:06+0100\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian bokmål <i18n-nb@lister.ping.uio.no>\n"
 "Language: nb\n"
@@ -38,7 +38,7 @@ msgstr ""
 "brettet er helt fullt."
 
 #: ../data/five-or-more.desktop.in.h:1 ../data/five-or-more.ui.h:1
-#: ../src/five-or-more.c:1174 ../src/five-or-more.c:1671
+#: ../src/five-or-more.c:1174 ../src/five-or-more.c:1675
 msgid "Five or More"
 msgstr "Fem eller flere"
 
@@ -103,7 +103,7 @@ msgstr "0"
 msgid "Score:"
 msgstr "Poeng:"
 
-#: ../data/five-or-more.ui.h:5
+#: ../data/five-or-more.ui.h:5 ../src/games-scores-dialog.c:385
 msgid "_New Game"
 msgstr "_Nytt spill"
 
@@ -111,7 +111,7 @@ msgstr "_Nytt spill"
 msgid "Start a new puzzle"
 msgstr "Start et nytt puslespill"
 
-#: ../data/menu.ui.h:1 ../src/games-scores-dialog.c:385
+#: ../data/menu.ui.h:1
 msgid "New Game"
 msgstr "Nytt spill"
 
@@ -269,14 +269,8 @@ msgid "You can’t move there!"
 msgstr "Kan ikke flytte dit!"
 
 #: ../src/five-or-more.c:1176
-msgid ""
-"GNOME port of the once-popular Color Lines game\n"
-"\n"
-"Five or More is a part of GNOME Games."
-msgstr ""
-"GNOME versjon av det tidligere populære Color Lines-spillet.\n"
-"\n"
-"Fem eller flere er en del av GNOME spill."
+msgid "GNOME port of the once-popular Color Lines game"
+msgstr "GNOME versjon av det tidligere populære Color Lines-spillet"
 
 #: ../src/five-or-more.c:1182
 msgid "translator-credits"
@@ -303,6 +297,18 @@ msgstr "Poeng"
 msgctxt "score-dialog"
 msgid "%1$dm %2$ds"
 msgstr "%1$dm %2$ds"
+
+#: ../src/games-scores-dialog.c:371
+msgid "_Quit"
+msgstr "A_vslutt"
+
+#: ../src/games-scores-dialog.c:378
+msgid "_Undo"
+msgstr "_Angre"
+
+#: ../src/games-scores-dialog.c:392
+msgid "_Close"
+msgstr "_Lukk"
 
 #. Score dialog column header for the date the score was recorded
 #: ../src/games-scores-dialog.c:478
