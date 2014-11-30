@@ -97,7 +97,8 @@ static gboolean pref_dialog_done = FALSE;
 static GRand *rgen;
 
 static GtkWidget *draw_area;
-static GtkWidget *app, *headerbar, *pref_dialog, *gridframe;
+static GtkWidget *app, *headerbar, *pref_dialog, *gridframe, *restart_game_dialog;
+static GtkWidget *size_radio_s, *size_radio_m, *size_radio_l;
 
 static gint window_width = 0, window_height = 0;
 static gboolean window_is_fullscreen = FALSE, window_is_maximized = FALSE;
@@ -1293,8 +1294,42 @@ bg_color_callback (GtkWidget * widget, gpointer data)
 static void
 size_callback (GtkWidget * widget, gpointer data)
 {
-  if (pref_dialog_done)
-    g_settings_set_int (settings, KEY_SIZE, GPOINTER_TO_INT (data));
+  GtkWidget *size_radio, *content_area, *label;
+
+  game_size = g_settings_get_int (settings, KEY_SIZE);
+  if (pref_dialog_done && game_size != data && !restart_game_dialog) {
+    GtkDialogFlags flags = GTK_DIALOG_DESTROY_WITH_PARENT;
+
+    restart_game_dialog = gtk_message_dialog_new (GTK_WINDOW (pref_dialog),
+						  GTK_MESSAGE_WARNING,
+						  flags,
+						  GTK_BUTTONS_OK_CANCEL,
+						  "Are you sure you want to restart the game?");
+
+    gint result = gtk_dialog_run (GTK_DIALOG (restart_game_dialog));
+    gtk_widget_destroy (restart_game_dialog);
+
+    switch (result) {
+    case GTK_RESPONSE_OK:
+      g_settings_set_int (settings, KEY_SIZE, GPOINTER_TO_INT (data));
+      break;
+    case GTK_RESPONSE_CANCEL:
+      switch (game_size) {
+      case SMALL:
+	size_radio = size_radio_s;
+	break;
+      case MEDIUM:
+	size_radio = size_radio_m;
+	break;
+      case LARGE:
+	size_radio = size_radio_l;
+	break;
+      }
+      gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (size_radio), TRUE);
+    }
+
+    restart_game_dialog = NULL;
+  }
 }
 
 static void
@@ -1384,18 +1419,21 @@ game_props_callback (GSimpleAction *action,
                       G_CALLBACK (bg_color_callback), NULL);
 
     size_radio = GTK_WIDGET (gtk_builder_get_object (builder_preferences, "radiobutton_small"));
+    size_radio_s = size_radio;
     g_signal_connect (size_radio, "clicked",
                       G_CALLBACK (size_callback), GINT_TO_POINTER (1));
     if (game_size == SMALL)
       gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (size_radio), TRUE);
 
     size_radio = GTK_WIDGET (gtk_builder_get_object (builder_preferences, "radiobutton_medium"));
+    size_radio_m = size_radio;
     g_signal_connect (size_radio, "clicked",
                       G_CALLBACK (size_callback), GINT_TO_POINTER (2));
     if (game_size == MEDIUM)
       gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (size_radio), TRUE);
 
     size_radio = GTK_WIDGET (gtk_builder_get_object (builder_preferences, "radiobutton_large"));
+    size_radio_l = size_radio;
     g_signal_connect (size_radio, "clicked",
                       G_CALLBACK (size_callback), GINT_TO_POINTER (3));
     if (game_size == LARGE)
