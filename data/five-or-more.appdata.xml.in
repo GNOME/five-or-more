@@ -4,6 +4,8 @@
  <id type="desktop">five-or-more.desktop</id>
  <metadata_license>CC0-1.0</metadata_license>
  <project_license>GPL-2.0+ and CC-BY-SA-3.0</project_license>
+ <_name>Five or More</_name>
+ <_summary>Remove colored balls from the board by forming lines</_summary>
  <description>
   <_p>
    Five or More is the GNOME port of a once-popular computer game. Align five or
