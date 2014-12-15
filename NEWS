@@ -1,3 +1,16 @@
+3.15.3 - December 15, 2014
+============================
+
+* Updated translations
+* Switch to appstream util validate from appdata validation (Robert Roth)
+* Remove GNOME Games branding from about dialog (Michael Catanzaro)
+* Deprecation fixes (Robert Roth)
+
+3.14.0 - September 22, 2014
+============================
+
+* Many updated translations
+
 3.14.0 - September 22, 2014
 ============================
 
