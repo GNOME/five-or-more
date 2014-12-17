@@ -1304,7 +1304,7 @@ size_callback (GtkWidget * widget, gpointer data)
 						  GTK_MESSAGE_WARNING,
 						  flags,
 						  GTK_BUTTONS_OK_CANCEL,
-						  "Are you sure you want to restart the game?");
+						  _("Are you sure you want to restart the game?"));
 
     gint result = gtk_dialog_run (GTK_DIALOG (restart_game_dialog));
     gtk_widget_destroy (restart_game_dialog);
