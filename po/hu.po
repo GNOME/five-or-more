@@ -17,8 +17,8 @@ msgstr ""
 "Project-Id-Version: gnome-games master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-"
 "or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-11-28 17:37+0000\n"
-"PO-Revision-Date: 2014-11-28 23:51+0100\n"
+"POT-Creation-Date: 2014-12-20 05:41+0000\n"
+"PO-Revision-Date: 2014-12-20 12:11+0100\n"
 "Last-Translator: Balázs Úr <urbalazs@gmail.com>\n"
 "Language-Team: Hungarian <openscope at googlegroups dot com>\n"
 "Language: hu\n"
@@ -28,7 +28,17 @@ msgstr ""
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 1.2\n"
 
-#: ../data/five-or-more.appdata.xml.in.h:1
+#: ../data/five-or-more.appdata.xml.in.h:1 ../data/five-or-more.desktop.in.h:1
+#: ../data/five-or-more.ui.h:1 ../src/five-or-more.c:1175
+#: ../src/five-or-more.c:1718
+msgid "Five or More"
+msgstr "Öt vagy több"
+
+#: ../data/five-or-more.appdata.xml.in.h:2 ../data/five-or-more.desktop.in.h:2
+msgid "Remove colored balls from the board by forming lines"
+msgstr "Színes labdák leszedése a tábláról azok egymás mellé helyezésével"
+
+#: ../data/five-or-more.appdata.xml.in.h:3
 msgid ""
 "Five or More is the GNOME port of a once-popular computer game. Align five "
 "or more objects of the same color into a line to cause them to disappear and "
@@ -40,7 +50,7 @@ msgstr ""
 "pontokat kapjon. A legtöbb pont a lehető legtöbb objektum egy sorba "
 "rendezésével érhető el."
 
-#: ../data/five-or-more.appdata.xml.in.h:2
+#: ../data/five-or-more.appdata.xml.in.h:4
 msgid ""
 "More objects appear after every turn. Play for as long as possible, until "
 "the board is completely full!"
@@ -48,21 +58,12 @@ msgstr ""
 "Minden kör után több objektum jelenik meg. Játsszon amíg csak lehet, amíg a "
 "tábla meg nem telik!"
 
-#: ../data/five-or-more.desktop.in.h:1 ../data/five-or-more.ui.h:1
-#: ../src/five-or-more.c:1174 ../src/five-or-more.c:1675
-msgid "Five or More"
-msgstr "Öt vagy több"
-
-#: ../data/five-or-more.desktop.in.h:2
-msgid "Remove colored balls from the board by forming lines"
-msgstr "Színes labdák leszedése a tábláról azok egymás mellé helyezésével"
-
 #: ../data/five-or-more.desktop.in.h:3
 msgid "game;strategy;logic;"
 msgstr "játék;stratégia;logika;"
 
 #: ../data/five-or-more-preferences.ui.h:1 ../data/menu.ui.h:3
-#: ../src/five-or-more.c:173
+#: ../src/five-or-more.c:174
 msgid "Preferences"
 msgstr "Beállítások"
 
@@ -227,11 +228,11 @@ msgctxt "board size"
 msgid "Large"
 msgstr "Nagy"
 
-#: ../src/five-or-more.c:167
+#: ../src/five-or-more.c:168
 msgid "Could not load theme"
 msgstr "Nem lehet betölteni a témát"
 
-#: ../src/five-or-more.c:193
+#: ../src/five-or-more.c:194
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -244,7 +245,7 @@ msgstr ""
 "\n"
 "Helyette az alapértelmezett téma kerül betöltésre."
 
-#: ../src/five-or-more.c:200
+#: ../src/five-or-more.c:201
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -257,36 +258,32 @@ msgstr ""
 "\n"
 "Ellenőrizze, hogy az Öt vagy több megfelelően van-e telepítve."
 
-#: ../src/five-or-more.c:410
+#: ../src/five-or-more.c:411
 msgid "Match five objects of the same type in a row to score!"
 msgstr "Helyezzen el öt egyszínű objektumot egy sorba!"
 
-#: ../src/five-or-more.c:471
+#: ../src/five-or-more.c:472
 msgid "Five or More Scores"
 msgstr "Öt vagy több pontszámok"
 
-#: ../src/five-or-more.c:473
+#: ../src/five-or-more.c:474
 msgid "_Board size:"
 msgstr "A tábla _mérete:"
 
-#: ../src/five-or-more.c:490
+#: ../src/five-or-more.c:491
 msgid "Game Over!"
 msgstr "Vége a játéknak!"
 
 #. Can't move there!
-#: ../src/five-or-more.c:646
+#: ../src/five-or-more.c:647
 msgid "You can’t move there!"
 msgstr "Nem léphet oda!"
 
-#: ../src/five-or-more.c:1176
-#| msgid ""
-#| "GNOME port of the once-popular Color Lines game\n"
-#| "\n"
-#| "Five or More is a part of GNOME Games."
+#: ../src/five-or-more.c:1177
 msgid "GNOME port of the once-popular Color Lines game"
 msgstr "A népszerű Color Lines játék GNOME-átirata"
 
-#: ../src/five-or-more.c:1182
+#: ../src/five-or-more.c:1183
 msgid "translator-credits"
 msgstr ""
 "Bán Szabolcs <shooby at gnome dot hu>\n"
@@ -296,6 +293,19 @@ msgstr ""
 "Nagy Gergely <greg at gnome dot hu>\n"
 "Tímár András <timar at gnome dot hu>\n"
 "Varga Szabolcs <shirokuma at shirokuma dot hu>"
+
+#: ../src/five-or-more.c:1307
+#| msgid "Do you want to start a new game?"
+msgid "Are you sure you want to restart the game?"
+msgstr "Biztosan újra szeretné indítani a játékot?"
+
+#: ../src/five-or-more.c:1310
+msgid "_Cancel"
+msgstr "_Mégse"
+
+#: ../src/five-or-more.c:1311
+msgid "_Restart"
+msgstr "Ú_jraindítás"
 
 #. Score dialog column header for the score time (e.g. 1 minute)
 #: ../src/games-scores-dialog.c:132
@@ -414,9 +424,6 @@ msgstr "Dátum"
 # aisleriot/dialog.c:112
 #~ msgid "_Reset"
 #~ msgstr "_Visszaállítás"
-
-#~ msgid "_Restart"
-#~ msgstr "Ú_jraindítás"
 
 #~ msgid "_Undo Move"
 #~ msgstr "Mozgatás _visszavonása"
@@ -2366,9 +2373,6 @@ msgstr "Dátum"
 
 #~ msgid "Size:"
 #~ msgstr "Méret:"
-
-#~ msgid "Do you want to start a new game?"
-#~ msgstr "Szeretne új játékot indítani?"
 
 #~ msgid "If you start a new game, your current progress will be lost."
 #~ msgstr "Ha új játékot indít, akkor a jelenlegi állás elvész."
