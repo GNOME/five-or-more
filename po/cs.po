@@ -16,15 +16,15 @@
 # Petr Pulc <petrpulc@gmail.com>, 2009.
 # Andre Klapper <ak-47@gmx.net>, 2009.
 # Petr Kovar <pknbe@volny.cz>, 2008, 2012.
-# Marek Černocký <marek@manet.cz>, 2010, 2011, 2012, 2013, 2014.
+# Marek Černocký <marek@manet.cz>, 2010, 2011, 2012, 2013, 2014, 2015.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: five-or-more master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-"
 "or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-11-01 17:39+0000\n"
-"PO-Revision-Date: 2014-11-02 02:17+0100\n"
+"POT-Creation-Date: 2015-01-07 05:40+0000\n"
+"PO-Revision-Date: 2015-01-07 08:46+0100\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -35,7 +35,17 @@ msgstr ""
 "X-Generator: Gtranslator 2.91.6\n"
 "X-Project-Style: gnome\n"
 
-#: ../data/five-or-more.appdata.xml.in.h:1
+#: ../data/five-or-more.appdata.xml.in.h:1 ../data/five-or-more.desktop.in.h:1
+#: ../data/five-or-more.ui.h:1 ../src/five-or-more.c:1176
+#: ../src/five-or-more.c:1719
+msgid "Five or More"
+msgstr "Pět nebo víc"
+
+#: ../data/five-or-more.appdata.xml.in.h:2 ../data/five-or-more.desktop.in.h:2
+msgid "Remove colored balls from the board by forming lines"
+msgstr "Odstraňovat barevné koule z hrací desky tvořením úseček"
+
+#: ../data/five-or-more.appdata.xml.in.h:3
 msgid ""
 "Five or More is the GNOME port of a once-popular computer game. Align five "
 "or more objects of the same color into a line to cause them to disappear and "
@@ -47,7 +57,7 @@ msgstr ""
 "objekty zmizí a navýší se vám skóre. Více bodů získáte, když se budete "
 "snažit před vymazáním seřadit objektů co nejvíce."
 
-#: ../data/five-or-more.appdata.xml.in.h:2
+#: ../data/five-or-more.appdata.xml.in.h:4
 msgid ""
 "More objects appear after every turn. Play for as long as possible, until "
 "the board is completely full!"
@@ -55,21 +65,12 @@ msgstr ""
 "Po každém tahu se objeví nové objekty. Hrajte, co nejdéle to půjde, dokud "
 "nebude hrací plocha plná."
 
-#: ../data/five-or-more.desktop.in.h:1 ../data/five-or-more.ui.h:1
-#: ../src/five-or-more.c:1174 ../src/five-or-more.c:1675
-msgid "Five or More"
-msgstr "Pět nebo víc"
-
-#: ../data/five-or-more.desktop.in.h:2
-msgid "Remove colored balls from the board by forming lines"
-msgstr "Odstraňovat barevné koule z hrací desky tvořením úseček"
-
 #: ../data/five-or-more.desktop.in.h:3
 msgid "game;strategy;logic;"
 msgstr "hra;strategická;logická;"
 
 #: ../data/five-or-more-preferences.ui.h:1 ../data/menu.ui.h:3
-#: ../src/five-or-more.c:173
+#: ../src/five-or-more.c:174
 msgid "Preferences"
 msgstr "Předvolby"
 
@@ -235,11 +236,11 @@ msgctxt "board size"
 msgid "Large"
 msgstr "Velké"
 
-#: ../src/five-or-more.c:167
+#: ../src/five-or-more.c:168
 msgid "Could not load theme"
 msgstr "Nelze načíst motiv"
 
-#: ../src/five-or-more.c:193
+#: ../src/five-or-more.c:194
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -252,7 +253,7 @@ msgstr ""
 "\n"
 "Bude místo něj načten výchozí motiv."
 
-#: ../src/five-or-more.c:200
+#: ../src/five-or-more.c:201
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -265,33 +266,32 @@ msgstr ""
 "\n"
 "Zkontrolujte prosím, že je hra Pět nebo víc správně nainstalována."
 
-#: ../src/five-or-more.c:410
+#: ../src/five-or-more.c:411
 msgid "Match five objects of the same type in a row to score!"
 msgstr "Seřazením pěti objektů stejného typu do řady získáte body!"
 
-#: ../src/five-or-more.c:471
+#: ../src/five-or-more.c:472
 msgid "Five or More Scores"
 msgstr "Skóre Pět nebo víc"
 
-#: ../src/five-or-more.c:473
+#: ../src/five-or-more.c:474
 msgid "_Board size:"
 msgstr "Velikost hrací _desky:"
 
-#: ../src/five-or-more.c:490
+#: ../src/five-or-more.c:491
 msgid "Game Over!"
 msgstr "Konec hry!"
 
 #. Can't move there!
-#: ../src/five-or-more.c:646
+#: ../src/five-or-more.c:648
 msgid "You can’t move there!"
 msgstr "Tam nemůžete táhnout!"
 
-#: ../src/five-or-more.c:1176
+#: ../src/five-or-more.c:1178
 msgid "GNOME port of the once-popular Color Lines game"
-msgstr ""
-"Port pro prostředí GNOME kdysi oblíbené hry Barevné linie"
+msgstr "Port pro prostředí GNOME kdysi oblíbené hry Barevné linie"
 
-#: ../src/five-or-more.c:1182
+#: ../src/five-or-more.c:1184
 msgid "translator-credits"
 msgstr ""
 "Jirka Lébl\n"
@@ -307,6 +307,18 @@ msgstr ""
 "Marek Lisý <marek.lisy@centrum.cz>\n"
 "Petr Pulc <petrpulc@gmail.com>\n"
 "Marek Černocký <marek@manet.cz>"
+
+#: ../src/five-or-more.c:1308
+msgid "Are you sure you want to restart the game?"
+msgstr "Opravdu chcete hru začít znovu od začátku?"
+
+#: ../src/five-or-more.c:1311
+msgid "_Cancel"
+msgstr "_Zrušit"
+
+#: ../src/five-or-more.c:1312
+msgid "_Restart"
+msgstr "Z_novu od začátku"
 
 #. Score dialog column header for the score time (e.g. 1 minute)
 #: ../src/games-scores-dialog.c:132
