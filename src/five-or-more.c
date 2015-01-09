@@ -109,15 +109,12 @@ static field_props field[MAXFIELDSIZE * MAXFIELDSIZE];
 static GamesPreimage *ball_preimage = NULL;
 /* The tile images with balls rendered on them. */
 static cairo_surface_t *ball_surface = NULL;
-/* The balls rendered to a size appropriate for the preview. */
-static cairo_surface_t *preview_surfaces[7] = { NULL, NULL, NULL, NULL, NULL, NULL, NULL };
 
 static GtkImage* preview_images[MAXNPIECES];
 static GdkPixbuf* preview_pixbufs[MAXNPIECES];
 
 /* A cairo_surface_t of a blank tile. */
 static cairo_surface_t *blank_surface = NULL;
-static cairo_surface_t *blank_preview_surface = NULL;
 
 static GamesFileList *theme_file_list = NULL;
 
@@ -262,6 +259,9 @@ refresh_pixmaps (void)
 
   gdk_cairo_set_source_pixbuf (cr, ball_pixbuf, 0, 0);
   cairo_mask (cr, cairo_get_source (cr));
+  g_object_unref (ball_pixbuf);
+
+  cairo_destroy (cr);
 
   cr_blank = cairo_create (blank_surface);
   gdk_cairo_set_source_rgba (cr_blank, &backgnd.color);
@@ -269,8 +269,6 @@ refresh_pixmaps (void)
   cairo_rectangle (cr_blank, 0, 0, boxsize, boxsize);
   cairo_fill (cr_blank);
 
-  g_object_unref (ball_pixbuf);
-  cairo_destroy (cr);
   cairo_destroy (cr_blank);
 }
 
@@ -284,6 +282,9 @@ refresh_preview_surfaces (void)
   GdkRGBA bg;
   cairo_t *cr;
   GdkRectangle preview_rect;
+  cairo_surface_t *blank_preview_surface = NULL;
+  /* The balls rendered to a size appropriate for the preview. */
+  cairo_surface_t *preview_surface = NULL;
 
   context = gtk_widget_get_style_context (widget);
   gtk_style_context_get_background_color (context, GTK_STATE_FLAG_NORMAL, &bg);
@@ -302,10 +303,6 @@ refresh_preview_surfaces (void)
    * set them as the background for each widget in the preview array.
    * This code assumes that each preview window is identical. */
 
-  for (i = 0; i < 7; i++)
-    if (preview_surfaces[i])
-      cairo_surface_destroy (preview_surfaces[i]);
-
   if (ball_preimage)
     scaled = games_preimage_render (ball_preimage, 4 * PREVIEW_IMAGE_WIDTH,
                                     7 * PREVIEW_IMAGE_HEIGHT);
@@ -317,10 +314,10 @@ refresh_preview_surfaces (void)
   }
 
   for (i = 0; i < 7; i++) {
-    preview_surfaces[i] = gdk_window_create_similar_image_surface (gtk_widget_get_window (widget),
-                                                                   CAIRO_FORMAT_ARGB32,
-                                                                   PREVIEW_IMAGE_WIDTH, PREVIEW_IMAGE_HEIGHT, 1);
-    cr = cairo_create (preview_surfaces[i]);
+    preview_surface = gdk_window_create_similar_image_surface (gtk_widget_get_window (widget),
+                                                               CAIRO_FORMAT_ARGB32,
+                                                               PREVIEW_IMAGE_WIDTH, PREVIEW_IMAGE_HEIGHT, 1);
+    cr = cairo_create (preview_surface);
     gdk_cairo_set_source_rgba (cr, &bg);
     gdk_cairo_rectangle (cr, &preview_rect);
     cairo_fill (cr);
@@ -331,14 +328,12 @@ refresh_preview_surfaces (void)
     if (preview_pixbufs[i])
       g_object_unref (preview_pixbufs[i]);
 
-    preview_pixbufs[i] = gdk_pixbuf_get_from_surface (preview_surfaces[i], 0, 0,
+    preview_pixbufs[i] = gdk_pixbuf_get_from_surface (preview_surface, 0, 0,
                                                       PREVIEW_IMAGE_WIDTH, PREVIEW_IMAGE_HEIGHT);
 
     cairo_destroy (cr);
+    cairo_surface_destroy (preview_surface);
   }
-
-  if (blank_preview_surface)
-    cairo_surface_destroy (blank_preview_surface);
 
   blank_preview_surface = gdk_window_create_similar_surface (gtk_widget_get_window (widget),
                                                              CAIRO_CONTENT_COLOR_ALPHA,
@@ -348,6 +343,7 @@ refresh_preview_surfaces (void)
   gdk_cairo_rectangle (cr, &preview_rect);
   cairo_fill (cr);
 
+  cairo_surface_destroy (blank_preview_surface);
   cairo_destroy (cr);
   g_object_unref (scaled);
 }
@@ -1461,12 +1457,28 @@ game_props_callback (GSimpleAction *action,
   gtk_dialog_run (GTK_DIALOG (pref_dialog));
 }
 
+static void cleanup ()
+{
+  int i = 0;
+
+  for (i = 0; i < G_N_ELEMENTS(preview_images); i++)
+    if (preview_pixbufs[i])
+      g_object_unref (preview_pixbufs[i]);
+
+  if (ball_preimage) {
+    g_object_unref (ball_preimage);
+    ball_preimage = NULL;
+  }
+  g_object_unref (highscores);
+
+}
+
 void
 game_quit_callback (GSimpleAction *action,
                     GVariant *parameter,
                     gpointer user_data)
 {
-  gtk_widget_destroy (app);
+  cleanup ();
 }
 
 void
@@ -1684,6 +1696,7 @@ shutdown_cb (GApplication *application)
   g_settings_set_int (settings, "window-width", window_width);
   g_settings_set_int (settings, "window-height", window_height);
   g_settings_set_boolean (settings, "window-is-maximized", window_is_maximized);
+  cleanup ();
 }
 
 int
@@ -1726,9 +1739,6 @@ main (int argc, char *argv[])
   g_signal_connect (application, "shutdown", G_CALLBACK (shutdown_cb), NULL);
 
   status = g_application_run (G_APPLICATION (application), argc, argv);
-
-  if (ball_preimage)
-    g_object_unref (ball_preimage);
 
   return status;
 }
