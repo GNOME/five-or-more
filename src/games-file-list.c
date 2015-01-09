@@ -187,8 +187,6 @@ games_image_suffix_list_init (void)
     element = g_slist_next (element);
   }
 
-  pixbuf_formats = gdk_pixbuf_get_formats ();
-
   g_slist_free (pixbuf_formats);
 
   g_mutex_unlock (&image_suffix_mutex);
