@@ -1461,14 +1461,11 @@ static void cleanup ()
 {
   int i = 0;
 
-  for (i = 0; i < G_N_ELEMENTS(preview_images); i++)
+  for (i = 0; i < G_N_ELEMENTS (preview_images); i++)
     if (preview_pixbufs[i])
       g_object_unref (preview_pixbufs[i]);
 
-  if (ball_preimage) {
-    g_object_unref (ball_preimage);
-    ball_preimage = NULL;
-  }
+  g_clear_object (&ball_preimage);
   g_object_unref (highscores);
 
 }
