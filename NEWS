@@ -1,3 +1,14 @@
+3.15.4 - January 19, 2015
+============================
+
+* Updated translations
+* Confirm before restarting the game on board size change (Sahil Sareen)
+* Mark new string for translation (Michael Catanzaro)
+* Use imperative verb for the new dialog's action (Michael Catanzaro)
+* Don't enter a score of zero in high scores (Sahil Sareen)
+* Fixed various memory leaks (Robert Roth)
+
+
 3.15.3 - December 15, 2014
 ============================
 
