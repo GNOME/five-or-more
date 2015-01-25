@@ -1294,7 +1294,7 @@ size_callback (GtkWidget * widget, gpointer data)
   GtkWidget *size_radio, *content_area, *label;
 
   game_size = g_settings_get_int (settings, KEY_SIZE);
-  if (pref_dialog_done && game_size != data && !restart_game_dialog) {
+  if (pref_dialog_done && game_size != GPOINTER_TO_INT (data) && !restart_game_dialog) {
     GtkDialogFlags flags = GTK_DIALOG_DESTROY_WITH_PARENT;
 
     restart_game_dialog = gtk_message_dialog_new (GTK_WINDOW (pref_dialog),
