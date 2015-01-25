@@ -1591,6 +1591,8 @@ startup_cb (GApplication *application)
                                    app_actions, G_N_ELEMENTS (app_actions),
                                    application);
 
+  gtk_application_add_accelerator (GTK_APPLICATION (application), "<Primary>N", "app.new-game", NULL);
+
   settings = g_settings_new ("org.gnome.five-or-more");
 
   highscores = games_scores_new ("five-or-more",
