@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: glines docs master\n"
-"POT-Creation-Date: 2013-12-18 18:04+0000\n"
-"PO-Revision-Date: 2014-02-08 11:39+0100\n"
+"POT-Creation-Date: 2014-12-26 05:38+0000\n"
+"PO-Revision-Date: 2015-01-13 10:11+0100\n"
 "Last-Translator: Christian Kirbach <christian.kirbach@gmail.com>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "Language: de\n"
@@ -21,85 +21,478 @@ msgstr ""
 "Mario Blättermann <mario.blaettermann@gmail.com>, 2008-2012.Christian "
 "Kirbach <christian.kirbach@gmail.com>, 2014."
 
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#.
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/index.page:6(media)
-msgctxt "_"
-msgid "external ref='figures/logo.png' md5='83ba6ff888acbdea3ad599b055ed7710'"
-msgstr "original"
+#. (itstool) path: credit/name
+#: C/bug-filing.page:10 C/change-board-size.page:14 C/change-theme.page:14
+#: C/develop.page:10 C/documentation.page:8 C/fast-moves.page:14
+#: C/index.page:17 C/scores.page:14 C/shortcuts.page:9 C/strategy.page:9
+#: C/translate.page:10
+msgid "Tiffany Antopolski"
+msgstr "Tiffany Antopolski"
 
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#.
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/index.page:26(media)
-msgctxt "_"
+#. (itstool) path: credit/years
+#: C/bug-filing.page:12 C/change-board-size.page:11 C/develop.page:12
+#: C/documentation.page:10 C/fast-moves.page:11 C/play.page:12 C/rules.page:12
+#: C/scores.page:11 C/shortcuts.page:11 C/translate.page:12
+msgid "2011"
+msgstr "2011"
+
+#. (itstool) path: license/p
+#: C/bug-filing.page:15 C/develop.page:15 C/documentation.page:13
+#: C/index.page:21 C/translate.page:19
+msgid "Creative Commons Share Alike 3.0"
+msgstr "Creative Commons Share Alike 3.0"
+
+#. (itstool) path: page/title
+#: C/bug-filing.page:19
+msgid "Report a Problem"
+msgstr "Einen Fehlerbericht erstellen"
+
+#. (itstool) path: page/p
+#: C/bug-filing.page:20
 msgid ""
-"external ref='figures/logo32.png' md5='51b65eea63f1a6c26a4c5d628dba406c'"
-msgstr "original"
+"<app>Five or More</app> is maintained by a volunteer community. You are "
+"welcome to participate. If you notice a problem you can file a <em>bug "
+"report</em>. To file a bug, go to <link href=\"https://bugzilla.gnome.org/\"/"
+">."
+msgstr ""
+"<app>Fünf oder mehr</app> wird von einer Gemeinschaft aus Freiwilligen "
+"betreut. Sie sind herzlich eingeladen, sich zu beteiligen. Falls Sie auf ein "
+"Problem stoßen, erstellen Sie einen <em>Fehlerbericht</em>. Besuchen Sie "
+"hierzu <link href=\"https://bugzilla.gnome.org/\"/>."
 
-#: C/index.page:7(info/title)
+#. (itstool) path: page/p
+#: C/bug-filing.page:23
+msgid ""
+"This is a bug tracking system where users and developers can file details "
+"about bugs, crashes and request enhancements."
+msgstr ""
+"Dies ist ein Fehlererfassungssystem, in dem Benutzer und Entwickler Details "
+"über Fehler, Abstürze und Verbesserungswünsche hinterlassen können."
+
+#. (itstool) path: page/p
+#: C/bug-filing.page:26
+msgid ""
+"To participate you need an account which will give you the ability to gain "
+"access, file bugs, and make comments. Also, you need to register so you can "
+"receive updates by e-mail about the status of your bug. If you don't already "
+"have an account, just click on the <gui>New Account</gui> link to create one."
+msgstr ""
+"Dazu benötigen Sie ein Konto, über das Sie Fehler melden und Kommentare "
+"hinterlassen können. Außerdem müssen Sie sich registrieren, um "
+"Statusmeldungen zu Ihrem Fehlerbericht per E-Mail erhalten zu können. Falls "
+"Sie noch nicht über ein Konto verfügen, klicken Sie auf <gui>New Account</"
+"gui>, um eines anzulegen."
+
+#. (itstool) path: page/p
+#: C/bug-filing.page:30
+msgid ""
+"Once you have an account, log in, click on <guiseq><gui>File a Bug</"
+"gui><gui>Applications</gui><gui>five-or-more</gui></guiseq>. Before "
+"reporting a bug, please read the <link href=\"https://bugzilla.gnome.org/"
+"page.cgi?id=bug-writing.html\">bug writing guidelines</link>, and please "
+"<link href=\"https://bugzilla.gnome.org/browse.cgi?product=five-or-more"
+"\">browse</link> for the bug to see if it already exists."
+msgstr ""
+"Sobald die Erstellung des Kontos abgeschlossen ist, klicken Sie auf "
+"<guiseq><gui>File a Bug</gui><gui>Applications</gui><gui>five-or-more</gui></"
+"guiseq>. Bevor Sie einen Fehler melden, lesen Sie bitte die <link href="
+"\"https://bugzilla.gnome.org/page.cgi?id=bug-writing.html\">bug writing "
+"guidelines</link> und <link href=\"https://bugzilla.gnome.org/browse.cgi?"
+"product=gnome-games\">schauen Sie bitte nach</link>, ob der Fehler "
+"vielleicht schon gemeldet wurde."
+
+#. (itstool) path: page/p
+#: C/bug-filing.page:38
+msgid ""
+"If you are requesting a new feature, choose <gui>enhancement</gui> in the "
+"<gui>Severity</gui> menu. Fill in the Summary and Description sections and "
+"click <gui>Commit</gui>."
+msgstr ""
+"Falls Sie eine Anfrage nach einem neuen Funktionsmerkmal stellen, wählen Sie "
+"<gui>enhancement</gui> im Menü <gui>Severity</gui>. Füllen Sie die Felder "
+"»Summary« und »Description« aus und klicken Sie auf <gui>Commit</gui>."
+
+#. (itstool) path: page/p
+#: C/bug-filing.page:42
+msgid ""
+"Your report will be given an ID number, and its status will be updated as it "
+"is being dealt with."
+msgstr ""
+"Ihr Bericht bekommt eine Kennung (ID) zugewiesen und der Status wird mit "
+"laufender Bearbeitung stets aktualisiert."
+
+#. (itstool) path: credit/name
+#: C/change-board-size.page:9 C/change-theme.page:9 C/fast-moves.page:9
+#: C/index.page:13 C/play.page:10 C/scores.page:9
+msgid "Lahiru lanka"
+msgstr "Lahiru lanka"
+
+#. (itstool) path: credit/name
+#: C/change-board-size.page:18 C/fast-moves.page:18 C/play.page:15
+#: C/translate.page:15
+msgid "Michael Hill"
+msgstr "Michael Hill"
+
+#. (itstool) path: page/title
+#: C/change-board-size.page:23
+msgid "Change board size"
+msgstr "Die Spielfeldgröße ändern"
+
+#. (itstool) path: page/p
+#: C/change-board-size.page:24
+msgid "To change the board size:"
+msgstr "So ändern Sie die Spielfeldgröße:"
+
+#. (itstool) path: item/p
+#: C/change-board-size.page:26
+msgid "Click <guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq>"
+msgstr ""
+"Klicken Sie auf <guiseq><gui>Einstellungen</gui><gui>Einstellungen</gui></"
+"guiseq>."
+
+#. (itstool) path: item/p
+#: C/change-board-size.page:27
+msgid ""
+"Under <gui>Board Size</gui>, select <gui>Small</gui>, <gui>Medium</gui>, or "
+"<gui>Large</gui>."
+msgstr ""
+"Wählen Sie <gui>Klein</gui>, <gui>Mittel</gui> oder <gui>Groß</gui> unter "
+"<gui>Spielfeldgröße</gui>."
+
+#. (itstool) path: note/p
+#: C/change-board-size.page:32
+msgid ""
+"While a larger board gives you more space, there are also more objects in "
+"play for each turn."
+msgstr ""
+"Zwar gibt Ihnen ein größeres Spielfeld mehr Raum, aber jeder Zug bringt auch "
+"mehr Objekte ins Spiel."
+
+#. (itstool) path: section/title
+#: C/change-board-size.page:37
+msgid "Board parameters"
+msgstr "Spielfeldparameter"
+
+#. (itstool) path: section/p
+#: C/change-board-size.page:38
+msgid "The 3 different board sizes have the following parameters:"
+msgstr ""
+"Für die drei verschiedenen Spielfeldgrößen stehen die folgenden Parameter "
+"zur Verfügung:"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:42
+msgid "<em>Size</em>"
+msgstr "<em>Größe</em>"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:43
+msgid "<em>Width</em>"
+msgstr "<em>Breite</em>"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:44
+msgid "<em>Height</em>"
+msgstr "<em>Höhe</em>"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:45
+msgid "<em>Number of types</em>"
+msgstr "<em>Anzahl der Typen</em>"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:46
+msgid "<em>New objects per turn</em>"
+msgstr "<em>Neue Objekte pro Zug</em>"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:47
+msgid "<em>Number of cells</em>"
+msgstr "<em>Anzahl der Zellen</em>"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:51
+msgid "Small"
+msgstr "Klein"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:52 C/change-board-size.page:53
+#: C/change-board-size.page:61 C/change-board-size.page:66 C/scores.page:41
+msgid "7"
+msgstr "7"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:54 C/scores.page:33
+msgid "5"
+msgstr "5"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:55 C/change-board-size.page:61
+msgid "3"
+msgstr "3"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:56
+msgid "49"
+msgstr "49"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:60
+msgid "Medium"
+msgstr "Mittel"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:60 C/scores.page:49
+msgid "9"
+msgstr "9"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:61
+msgid "81"
+msgstr "81"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:65
+msgid "Large"
+msgstr "Groß"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:65
+msgid "20"
+msgstr "20"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:65
+msgid "15"
+msgstr "15"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:66
+msgid "300"
+msgstr "300"
+
+#. (itstool) path: section/title
+#: C/change-board-size.page:74
+msgid "The 3 board sizes"
+msgstr "Die drei Spielfeldgrößen"
+
+#. (itstool) path: media/p
+#: C/change-board-size.page:80
+msgid "<app>Five or More</app> Small board"
+msgstr "Kleines Spielfeld in <app>Fünf-oder-mehr</app>"
+
+#. (itstool) path: media/p
+#: C/change-board-size.page:85
+msgid "<app>Five or More</app> medium size board"
+msgstr "Mittleres Spielfeld in <app>Fünf-oder-mehr</app>"
+
+#. (itstool) path: media/p
+#: C/change-board-size.page:90
+msgid "<app>Five or More</app> large size board"
+msgstr "Großes Spielfeld in <app>Fünf-oder-mehr</app>"
+
+#. (itstool) path: credit/years
+#: C/change-theme.page:11 C/strategy.page:11
+msgid "2012"
+msgstr "2012"
+
+#. (itstool) path: page/title
+#: C/change-theme.page:20
+msgid "Change the look and feel"
+msgstr "Das Erscheinungsbild anpassen"
+
+#. (itstool) path: page/p
+#: C/change-theme.page:21
+msgid "To change the appearance of the pieces and the board:"
+msgstr "So ändern Sie die Darstellung der Kugeln und des Spielfelds:"
+
+#. (itstool) path: item/p
+#: C/change-theme.page:24 C/fast-moves.page:28
+msgid "Click <guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq>."
+msgstr ""
+"Klicken Sie auf <guiseq><gui>Einstellungen</gui><gui>Einstellungen</gui></"
+"guiseq>."
+
+#. (itstool) path: item/p
+#: C/change-theme.page:27
+msgid ""
+"Select <gui>balls</gui> or <gui>shapes</gui> from the <gui>Image</gui> drop "
+"down menu to change the playing pieces."
+msgstr ""
+"Wählen Sie <gui>balls</gui> oder <gui>shapes</gui> im Auswahlmenü <gui>Bild</"
+"gui>, um die Spielsteine anzupassen."
+
+#. (itstool) path: item/p
+#: C/change-theme.page:29
+msgid ""
+"Click on the colored box next to <gui>Image background</gui> to access the "
+"color palette."
+msgstr ""
+"Klicken Sie auf das farbige Feld neben <gui>Hintergrundfarbe</gui>, um auf "
+"die Farbpalette zuzugreifen."
+
+#. (itstool) path: item/p
+#: C/change-theme.page:33 C/fast-moves.page:30
+msgid "Click <gui>Close</gui>."
+msgstr "Klicken Sie auf <gui>Schließen</gui>."
+
+#. (itstool) path: section/title
+#: C/change-theme.page:37
+msgid "Images available"
+msgstr "Verfügbare Grafiken"
+
+#. (itstool) path: media/p
+#: C/change-theme.page:39
+msgid "Five or More with different balls"
+msgstr "Fünf oder mehr mit verschiedenen Kugeln"
+
+#. (itstool) path: media/p
+#: C/change-theme.page:43
+msgid "<app>Five or More</app> with different shapes"
+msgstr "<app>Fünf-oder-mehr</app> mit verschiedenen Formen"
+
+#. (itstool) path: section/title
+#: C/change-theme.page:48
+msgid "Background colors available"
+msgstr "Verfügbare Hintergrundfarben"
+
+#. (itstool) path: media/p
+#: C/change-theme.page:50
+msgid "Five or More color palette"
+msgstr "Farbpalette für <app>Fünf oder mehr</app>"
+
+#. (itstool) path: page/title
+#: C/develop.page:19
+msgid "Help develop"
+msgstr "Bei der Entwicklung helfen"
+
+#. (itstool) path: page/p
+#: C/develop.page:20
+msgid ""
+"The <app>GNOME Games</app> are developed and maintained by a volunteer "
+"community. You are welcome to participate."
+msgstr ""
+"Die <app>GNOME Games</app> werden von einer Gemeinschaft aus Freiwilligen "
+"entwickelt und betreut. Sie sind herzlich eingeladen, sich daran zu "
+"beteiligen."
+
+#. (itstool) path: page/p
+#: C/develop.page:23
+#| msgid ""
+#| "If you would like to <link href=\"https://live.gnome.org/GnomeGames/"
+#| "Contributing\">help develop <app>GNOME Games</app></link>, you can get in "
+#| "touch with the developers using <link href=\"https://cbe005.chat.mibbit."
+#| "com/?url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, or via our "
+#| "<link href=\"http://mail.gnome.org/mailman/listinfo/games-list\">mailing "
+#| "list</link>."
+msgid ""
+"If you would like to <link href=\"https://wiki.gnome.org/Apps/Games/"
+"Contributing\">help develop <app>GNOME Games</app></link>, you can get in "
+"touch with the developers using <link href=\"https://cbe005.chat.mibbit.com/?"
+"url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, or via our <link "
+"href=\"http://mail.gnome.org/mailman/listinfo/games-list\">mailing list</"
+"link>."
+msgstr ""
+"Falls Sie <link href=\"https://wiki.gnome.org/Apps/Games/Contributing\">bei "
+"der Entwicklung <app>GNOME Games</app> helfen möchten</link>, können Sie mit "
+"den Entwicklern im <link href=\"https://cbe005.chat.mibbit.com/?url=irc%3A%2F"
+"%2Firc.gnome.org%2Fgnome-games\">IRC</link> oder über deren <link href="
+"\"http://mail.gnome.org/mailman/listinfo/games-list\">Mailingliste</link> "
+"Kontakt aufnehmen."
+
+#. (itstool) path: page/title
+#: C/documentation.page:17
+msgid "Help write documentation"
+msgstr "Beim Schreiben der Dokumentation helfen"
+
+#. (itstool) path: page/p
+#: C/documentation.page:19
+msgid ""
+"The <app>GNOME Games</app> documentation is maintained by a volunteer "
+"community. You are welcome to participate."
+msgstr ""
+"Die Dokumentation der <app>GNOME Games</app> wird von einer Gemeinschaft aus "
+"Freiwilligen betreut. Sie sind herzlich eingeladen, sich daran zu beteiligen."
+
+#. (itstool) path: page/p
+#: C/documentation.page:22
+msgid ""
+"To contribute to the Documentation Project, feel free to get in touch with "
+"us using <link href=\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc."
+"gnome.org%2Fdocs\">irc</link>, or via our <link href=\"http://mail.gnome.org/"
+"mailman/listinfo/gnome-doc-list\">mailing list</link>."
+msgstr ""
+"Falls Sie sich am Dokumentationsprojekt beteiligen wollen, nehmen Sie im "
+"<link href=\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org"
+"%2Fdocs\">IRC</link> oder über die <link href=\"http://mail.gnome.org/"
+"mailman/listinfo/gnome-doc-list\">Mailingliste</link> mit uns Kontakt auf."
+
+#. (itstool) path: page/p
+#: C/documentation.page:26
+#| msgid ""
+#| "Our <link href=\"https://live.gnome.org/DocumentationProject/Contributing"
+#| "\">wiki</link> page contains useful information."
+msgid ""
+"Our <link href=\"https://wiki.gnome.org/DocumentationProject/Contributing"
+"\">wiki</link> page contains useful information."
+msgstr ""
+"Unser <link href=\"https://wiki.gnome.org/DocumentationProject/Contributing"
+"\">Wiki</link> enthält eine Reihe nützlicher Informationen für Sie bereit."
+
+#. (itstool) path: page/title
+#: C/fast-moves.page:25
+msgid "Change speed"
+msgstr "Geschwindigkeit ändern"
+
+#. (itstool) path: page/p
+#: C/fast-moves.page:26
+msgid "To speed up object movements:"
+msgstr "So können Sie die Bewegungen der Objekte beschleunigen:"
+
+#. (itstool) path: item/p
+#: C/fast-moves.page:29
+msgid "Under <gui>General</gui>, select <gui>Use fast moves</gui>."
+msgstr ""
+"Aktivieren Sie die Option <gui>Schnelle Züge verwenden</gui> in "
+"<gui>Allgemein</gui>"
+
+#. (itstool) path: note/p
+#: C/fast-moves.page:33
+msgid ""
+"Any changes you make are instantly applied and remembered for the next time "
+"you run <app>Five or More</app>."
+msgstr ""
+"Jede von Ihnen getätigte Änderung wird unmittelbar angewendet und für den "
+"nächsten Start von <app>Fünf oder mehr</app> gespeichert."
+
+#. (itstool) path: info/title
+#: C/index.page:8
 msgctxt "link"
 msgid "Five or More"
 msgstr "Fünf oder mehr"
 
-#: C/index.page:8(info/title)
+#. (itstool) path: info/title
+#: C/index.page:9
 msgctxt "text"
 msgid "Five or More"
 msgstr "Fünf oder mehr"
 
-#: C/index.page:12(credit/name) C/change-board-size.page:8(credit/name)
-#: C/change-theme.page:8(credit/name) C/fast-moves.page:9(credit/name)
-#: C/play.page:9(credit/name) C/scores.page:9(credit/name)
-msgid "Lahiru lanka"
-msgstr "Lahiru lanka"
+#. (itstool) path: media/span
+#: C/index.page:27
+#| msgctxt "link"
+#| msgid "Five or More"
+msgid "Five or More logo"
+msgstr "Logo von Fünf oder mehr"
 
-#: C/index.page:16(credit/name) C/bug-filing.page:11(credit/name)
-#: C/change-board-size.page:13(credit/name)
-#: C/change-theme.page:13(credit/name) C/develop.page:10(credit/name)
-#: C/documentation.page:8(credit/name) C/fast-moves.page:14(credit/name)
-#: C/scores.page:14(credit/name) C/shortcuts.page:9(credit/name)
-#: C/strategy.page:9(credit/name) C/translate.page:10(credit/name)
-msgid "Tiffany Antopolski"
-msgstr "Tiffany Antopolski"
+#. (itstool) path: page/title
+#: C/index.page:26
+#| msgctxt "link"
+#| msgid "Five or More"
+msgid "<_:media-1/> Five or More"
+msgstr "<_:media-1/> Fünf oder mehr"
 
-#: C/index.page:20(license/p) C/bug-filing.page:16(license/p)
-#: C/develop.page:15(license/p) C/documentation.page:13(license/p)
-#: C/translate.page:19(license/p)
-msgid "Creative Commons Share Alike 3.0"
-msgstr "Creative Commons Share Alike 3.0"
-
-#: C/index.page:25(page/title)
-#| msgid ""
-#| "<media type=\"image\" src=\"figures/logo32.png\">Five or More logo</"
-#| "media>Five or More"
-msgid ""
-"<media type=\"image\" src=\"figures/logo32.png\">Five or More logo</media> "
-"Five or More"
-msgstr ""
-"<media type=\"image\" src=\"figures/logo32.png\">Fünf-oder-mehr-Logo</media> "
-"Fünf oder mehr"
-
-#: C/index.page:28(page/p)
-#| msgid ""
-#| "<key>Five or More</key> is a deceptively simple brain workout. The goal "
-#| "is to place at least five objects of the same <link xref=\"change-"
-#| "theme#images\">color or shape</link> into a straight line. The line can "
-#| "be horizontal, vertical or diagonal. Once five or more objects are "
-#| "grouped into a line, they disappear. The goal is to vanish as many "
-#| "objects as possible. The game is over when the entire board is full."
+#. (itstool) path: page/p
+#: C/index.page:29
 msgid ""
 "<app>Five or More</app> is a deceptively simple brain workout. The goal is "
 "to place at least five objects of the same <link xref=\"change-theme#images"
@@ -117,463 +510,48 @@ msgstr ""
 "verschwinden zu lassen. Das Spiel ist zu Ende sobald das gesamte Spielbrett "
 "belegt ist."
 
-#: C/index.page:33(section/title)
+#. (itstool) path: section/title
+#: C/index.page:34
 msgid "Game Play"
 msgstr "Spielverlauf"
 
-#: C/index.page:37(section/title)
-#| msgid "Useful tips"
+#. (itstool) path: section/title
+#: C/index.page:38
 msgid "Useful Tips"
 msgstr "Nützliche Tipps"
 
-#: C/index.page:41(section/title)
+#. (itstool) path: section/title
+#: C/index.page:42
 msgid "Advanced"
 msgstr "Fortgeschritten"
 
-#: C/index.page:45(section/title)
+#. (itstool) path: section/title
+#: C/index.page:46
 msgid "Get Involved"
 msgstr "Mithelfen"
 
-#: C/bug-filing.page:13(credit/years)
-#: C/change-board-size.page:10(credit/years) C/develop.page:12(credit/years)
-#: C/documentation.page:10(credit/years) C/fast-moves.page:11(credit/years)
-#: C/play.page:11(credit/years) C/rules.page:11(credit/years)
-#: C/scores.page:11(credit/years) C/shortcuts.page:11(credit/years)
-#: C/translate.page:12(credit/years)
-msgid "2011"
-msgstr "2011"
-
-#: C/bug-filing.page:20(page/title)
-msgid "Report a Problem"
-msgstr "Einen Fehlerbericht erstellen"
-
-#: C/bug-filing.page:21(page/p)
-msgid ""
-"<app>Five or More</app> is maintained by a volunteer community. You are "
-"welcome to participate. If you notice a problem you can file a <em>bug "
-"report</em>. To file a bug, go to <link href=\"https://bugzilla.gnome.org/\"/"
-">."
-msgstr ""
-"<app>Fünf oder mehr</app> wird von einer Gemeinschaft aus Freiwilligen "
-"betreut. Sie sind herzlich eingeladen, sich zu beteiligen. Falls Sie auf ein "
-"Problem stoßen, erstellen Sie einen <em>Fehlerbericht</em>. Besuchen Sie "
-"hierzu <link href=\"https://bugzilla.gnome.org/\"/>."
-
-#: C/bug-filing.page:24(page/p)
-msgid ""
-"This is a bug tracking system where users and developers can file details "
-"about bugs, crashes and request enhancements."
-msgstr ""
-"Dies ist ein Fehlererfassungssystem, in dem Benutzer und Entwickler Details "
-"über Fehler, Abstürze und Verbesserungswünsche hinterlassen können."
-
-#: C/bug-filing.page:27(page/p)
-msgid ""
-"To participate you need an account which will give you the ability to gain "
-"access, file bugs, and make comments. Also, you need to register so you can "
-"receive updates by e-mail about the status of your bug. If you don't already "
-"have an account, just click on the <gui>New Account</gui> link to create one."
-msgstr ""
-"Dazu benötigen Sie ein Konto, über das Sie Fehler melden und Kommentare "
-"hinterlassen können. Außerdem müssen Sie sich registrieren, um "
-"Statusmeldungen zu Ihrem Fehlerbericht per E-Mail erhalten zu können. Falls "
-"Sie noch nicht über ein Konto verfügen, klicken Sie auf <gui>New Account</"
-"gui>, um eines anzulegen."
-
-#: C/bug-filing.page:31(page/p)
-#| msgid ""
-#| "Once you have an account, log in, click on <guiseq><gui>File a Bug</"
-#| "gui><gui>Applications</gui><gui>gnome-games</gui></guiseq>. Before "
-#| "reporting a bug, please read the <link href=\"https://bugzilla.gnome.org/"
-#| "page.cgi?id=bug-writing.html\">bug writing guidelines</link>, and please "
-#| "<link href=\"https://bugzilla.gnome.org/browse.cgi?product=gnome-games"
-#| "\">browse</link> for the bug to see if it already exists."
-msgid ""
-"Once you have an account, log in, click on <guiseq><gui>File a Bug</"
-"gui><gui>Applications</gui><gui>five-or-more</gui></guiseq>. Before "
-"reporting a bug, please read the <link href=\"https://bugzilla.gnome.org/"
-"page.cgi?id=bug-writing.html\">bug writing guidelines</link>, and please "
-"<link href=\"https://bugzilla.gnome.org/browse.cgi?product=five-or-more"
-"\">browse</link> for the bug to see if it already exists."
-msgstr ""
-"Sobald die Erstellung des Kontos abgeschlossen ist, klicken Sie auf "
-"<guiseq><gui>File a Bug</gui><gui>Applications</gui><gui>five-or-more</gui></"
-"guiseq>. Bevor Sie einen Fehler melden, lesen Sie bitte die <link href="
-"\"https://bugzilla.gnome.org/page.cgi?id=bug-writing.html\">bug writing "
-"guidelines</link> und <link href=\"https://bugzilla.gnome.org/browse.cgi?"
-"product=gnome-games\">schauen Sie bitte nach</link>, ob der Fehler "
-"vielleicht schon gemeldet wurde."
-
-#: C/bug-filing.page:39(page/p)
-msgid ""
-"If you are requesting a new feature, choose <gui>enhancement</gui> in the "
-"<gui>Severity</gui> menu. Fill in the Summary and Description sections and "
-"click <gui>Commit</gui>."
-msgstr ""
-"Falls Sie eine Anfrage nach einem neuen Funktionsmerkmal stellen, wählen Sie "
-"<gui>enhancement</gui> im Menü <gui>Severity</gui>. Füllen Sie die Felder "
-"»Summary« und »Description« aus und klicken Sie auf <gui>Commit</gui>."
-
-#: C/bug-filing.page:43(page/p)
-msgid ""
-"Your report will be given an ID number, and its status will be updated as it "
-"is being dealt with."
-msgstr ""
-"Ihr Bericht bekommt eine Kennung (ID) zugewiesen und der Status wird mit "
-"laufender Bearbeitung stets aktualisiert."
-
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/change-board-size.page:78(media)
-msgctxt "_"
-msgid "external ref='figures/small.png' md5='cc59a29333b3b145c9e7928872c714bc'"
-msgstr "original"
-
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/change-board-size.page:83(media)
-msgctxt "_"
-msgid ""
-"external ref='figures/medium.png' md5='ae122a301d215d40fff80717211b0915'"
-msgstr "original"
-
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/change-board-size.page:88(media)
-msgctxt "_"
-msgid "external ref='figures/large.png' md5='14942e047fbbc3538ababbfa888fa4e6'"
-msgstr "original"
-
-#: C/change-board-size.page:17(credit/name) C/fast-moves.page:18(credit/name)
-#: C/play.page:14(credit/name) C/translate.page:15(credit/name)
-msgid "Michael Hill"
-msgstr "Michael Hill"
-
-#: C/change-board-size.page:22(page/title)
-msgid "Change board size"
-msgstr "Die Spielfeldgröße ändern"
-
-#: C/change-board-size.page:23(page/p)
-msgid "To change the board size:"
-msgstr "So ändern Sie die Spielfeldgröße:"
-
-#: C/change-board-size.page:25(item/p)
-msgid "Click <guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq>"
-msgstr ""
-"Klicken Sie auf <guiseq><gui>Einstellungen</gui><gui>Einstellungen</gui></"
-"guiseq>."
-
-#: C/change-board-size.page:26(item/p)
-msgid ""
-"Under <gui>Board Size</gui>, select <gui>Small</gui>, <gui>Medium</gui>, or "
-"<gui>Large</gui>."
-msgstr ""
-"Wählen Sie <gui>Klein</gui>, <gui>Mittel</gui> oder <gui>Groß</gui> unter "
-"<gui>Spielfeldgröße</gui>."
-
-#: C/change-board-size.page:31(note/p)
-msgid ""
-"While a larger board gives you more space, there are also more objects in "
-"play for each turn."
-msgstr ""
-"Zwar gibt Ihnen ein größeres Spielfeld mehr Raum, aber jeder Zug bringt auch "
-"mehr Objekte ins Spiel."
-
-#: C/change-board-size.page:36(section/title)
-msgid "Board parameters"
-msgstr "Spielfeldparameter"
-
-#: C/change-board-size.page:37(section/p)
-msgid "The 3 different board sizes have the following parameters:"
-msgstr ""
-"Für die drei verschiedenen Spielfeldgrößen stehen die folgenden Parameter "
-"zur Verfügung:"
-
-#: C/change-board-size.page:41(td/p)
-msgid "<em>Size</em>"
-msgstr "<em>Größe</em>"
-
-#: C/change-board-size.page:42(td/p)
-msgid "<em>Width</em>"
-msgstr "<em>Breite</em>"
-
-#: C/change-board-size.page:43(td/p)
-msgid "<em>Height</em>"
-msgstr "<em>Höhe</em>"
-
-#: C/change-board-size.page:44(td/p)
-msgid "<em>Number of types</em>"
-msgstr "<em>Anzahl der Typen</em>"
-
-#: C/change-board-size.page:45(td/p)
-msgid "<em>New objects per turn</em>"
-msgstr "<em>Neue Objekte pro Zug</em>"
-
-#: C/change-board-size.page:46(td/p)
-msgid "<em>Number of cells</em>"
-msgstr "<em>Anzahl der Zellen</em>"
-
-#: C/change-board-size.page:50(td/p)
-msgid "Small"
-msgstr "Klein"
-
-#: C/change-board-size.page:51(td/p) C/change-board-size.page:52(td/p)
-#: C/change-board-size.page:60(td/p) C/change-board-size.page:65(td/p)
-#: C/scores.page:41(td/p)
-msgid "7"
-msgstr "7"
-
-#: C/change-board-size.page:53(td/p) C/scores.page:33(td/p)
-msgid "5"
-msgstr "5"
-
-#: C/change-board-size.page:54(td/p) C/change-board-size.page:60(td/p)
-msgid "3"
-msgstr "3"
-
-#: C/change-board-size.page:55(td/p)
-msgid "49"
-msgstr "49"
-
-#: C/change-board-size.page:59(td/p)
-msgid "Medium"
-msgstr "Mittel"
-
-#: C/change-board-size.page:59(td/p) C/scores.page:49(td/p)
-msgid "9"
-msgstr "9"
-
-#: C/change-board-size.page:60(td/p)
-msgid "81"
-msgstr "81"
-
-#: C/change-board-size.page:64(td/p)
-msgid "Large"
-msgstr "Groß"
-
-#: C/change-board-size.page:64(td/p)
-msgid "20"
-msgstr "20"
-
-#: C/change-board-size.page:64(td/p)
-msgid "15"
-msgstr "15"
-
-#: C/change-board-size.page:65(td/p)
-msgid "300"
-msgstr "300"
-
-#: C/change-board-size.page:73(section/title)
-msgid "The 3 board sizes"
-msgstr "Die drei Spielfeldgrößen"
-
-#: C/change-board-size.page:79(media/p)
-msgid "<app>Five or More</app> Small board"
-msgstr "Kleines Spielfeld in <app>Fünf-oder-mehr</app>"
-
-#: C/change-board-size.page:84(media/p)
-msgid "<app>Five or More</app> medium size board"
-msgstr "Mittleres Spielfeld in <app>Fünf-oder-mehr</app>"
-
-#: C/change-board-size.page:89(media/p)
-msgid "<app>Five or More</app> large size board"
-msgstr "Großes Spielfeld in <app>Fünf-oder-mehr</app>"
-
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/change-theme.page:37(media)
-msgctxt "_"
-msgid ""
-"external ref='figures/color-balls.png' md5='ac9b26a5c770a7e118c84d82b43fbcaa'"
-msgstr "original"
-
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/change-theme.page:41(media)
-msgctxt "_"
-msgid ""
-"external ref='figures/color-shapes.png' "
-"md5='12b538f0d29c55aa93c8fd6adec58ffc'"
-msgstr "original"
-
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/change-theme.page:49(media)
-msgctxt "_"
-msgid ""
-"external ref='figures/pickcolor.png' md5='51d82564630d095c45865aff5518e6fc'"
-msgstr "original"
-
-#: C/change-theme.page:10(credit/years) C/strategy.page:11(credit/years)
-msgid "2012"
-msgstr "2012"
-
-#: C/change-theme.page:19(page/title)
-msgid "Change the look and feel"
-msgstr "Das Erscheinungsbild anpassen"
-
-#: C/change-theme.page:20(page/p)
-msgid "To change the appearance of the pieces and the board:"
-msgstr "So ändern Sie die Darstellung der Kugeln und des Spielfelds:"
-
-#: C/change-theme.page:23(item/p) C/fast-moves.page:28(item/p)
-msgid "Click <guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq>."
-msgstr ""
-"Klicken Sie auf <guiseq><gui>Einstellungen</gui><gui>Einstellungen</gui></"
-"guiseq>."
-
-#: C/change-theme.page:26(item/p)
-msgid ""
-"Select <gui>balls</gui> or <gui>shapes</gui> from the <gui>Image</gui> drop "
-"down menu to change the playing pieces."
-msgstr ""
-"Wählen Sie <gui>balls</gui> oder <gui>shapes</gui> im Auswahlmenü <gui>Bild</"
-"gui>, um die Spielsteine anzupassen."
-
-#: C/change-theme.page:28(item/p)
-msgid ""
-"Click on the colored box next to <gui>Image background</gui> to access the "
-"color palette."
-msgstr ""
-"Klicken Sie auf das farbige Feld neben <gui>Hintergrundfarbe</gui>, um auf "
-"die Farbpalette zuzugreifen."
-
-#: C/change-theme.page:32(item/p) C/fast-moves.page:30(item/p)
-msgid "Click <gui>Close</gui>."
-msgstr "Klicken Sie auf <gui>Schließen</gui>."
-
-#: C/change-theme.page:36(section/title)
-msgid "Images available"
-msgstr "Verfügbare Grafiken"
-
-#: C/change-theme.page:38(media/p)
-msgid "Five or More with different balls"
-msgstr "Fünf oder mehr mit verschiedenen Kugeln"
-
-#: C/change-theme.page:42(media/p)
-msgid "<app>Five or More</app> with different shapes"
-msgstr "<app>Fünf-oder-mehr</app> mit verschiedenen Formen"
-
-#: C/change-theme.page:47(section/title)
-msgid "Background colors available"
-msgstr "Verfügbare Hintergrundfarben"
-
-#: C/change-theme.page:50(media/p)
-msgid "Five or More color palette"
-msgstr "Farbpalette für <app>Fünf oder mehr</app>"
-
-#: C/develop.page:19(page/title)
-msgid "Help develop"
-msgstr "Bei der Entwicklung helfen"
-
-#: C/develop.page:20(page/p)
-msgid ""
-"The <app>GNOME Games</app> are developed and maintained by a volunteer "
-"community. You are welcome to participate."
-msgstr ""
-"Die <app>GNOME Games</app> werden von einer Gemeinschaft aus Freiwilligen "
-"entwickelt und betreut. Sie sind herzlich eingeladen, sich daran zu "
-"beteiligen."
-
-#: C/develop.page:23(page/p)
-msgid ""
-"If you would like to <link href=\"https://live.gnome.org/GnomeGames/"
-"Contributing\">help develop <app>GNOME Games</app></link>, you can get in "
-"touch with the developers using <link href=\"https://cbe005.chat.mibbit.com/?"
-"url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, or via our <link "
-"href=\"http://mail.gnome.org/mailman/listinfo/games-list\">mailing list</"
-"link>."
-msgstr ""
-"Falls Sie <link href=\"https://live.gnome.org/GnomeGames/Contributing\">bei "
-"der Entwicklung <app>GNOME Games</app> helfen möchten</link>, können Sie mit "
-"den Entwicklern im <link href=\"https://cbe005.chat.mibbit.com/?url=irc%3A%2F"
-"%2Firc.gnome.org%2Fgnome-games\">IRC</link> oder über deren <link href="
-"\"http://mail.gnome.org/mailman/listinfo/games-list\">Mailingliste</link> "
-"Kontakt aufnehmen."
-
-#: C/documentation.page:17(page/title)
-msgid "Help write documentation"
-msgstr "Beim Schreiben der Dokumentation helfen"
-
-#: C/documentation.page:19(page/p)
-msgid ""
-"The <app>GNOME Games</app> documentation is maintained by a volunteer "
-"community. You are welcome to participate."
-msgstr ""
-"Die Dokumentation der <app>GNOME Games</app> wird von einer Gemeinschaft aus "
-"Freiwilligen betreut. Sie sind herzlich eingeladen, sich daran zu beteiligen."
-
-#: C/documentation.page:22(page/p)
-msgid ""
-"To contribute to the Documentation Project, feel free to get in touch with "
-"us using <link href=\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc."
-"gnome.org%2Fdocs\">irc</link>, or via our <link href=\"http://mail.gnome.org/"
-"mailman/listinfo/gnome-doc-list\">mailing list</link>."
-msgstr ""
-"Falls Sie sich am Dokumentationsprojekt beteiligen wollen, nehmen Sie im "
-"<link href=\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org"
-"%2Fdocs\">IRC</link> oder über die <link href=\"http://mail.gnome.org/"
-"mailman/listinfo/gnome-doc-list\">Mailingliste</link> mit uns Kontakt auf."
-
-#: C/documentation.page:26(page/p)
-msgid ""
-"Our <link href=\"https://live.gnome.org/DocumentationProject/Contributing"
-"\">wiki</link> page contains useful information."
-msgstr ""
-"Unser <link href=\"https://live.gnome.org/DocumentationProject/Contributing"
-"\">Wiki</link> enthält eine Reihe nützlicher Informationen für Sie bereit."
-
-#: C/fast-moves.page:25(page/title)
-msgid "Change speed"
-msgstr "Geschwindigkeit ändern"
-
-#: C/fast-moves.page:26(page/p)
-msgid "To speed up object movements:"
-msgstr "So können Sie die Bewegungen der Objekte beschleunigen:"
-
-#: C/fast-moves.page:29(item/p)
-msgid "Under <gui>General</gui>, select <gui>Use fast moves</gui>."
-msgstr ""
-"Aktivieren Sie die Option <gui>Schnelle Züge verwenden</gui> in "
-"<gui>Allgemein</gui>"
-
-#: C/fast-moves.page:33(note/p)
-msgid ""
-"Any changes you make are instantly applied and remembered for the next time "
-"you run <app>Five or More</app>."
-msgstr ""
-"Jede von Ihnen getätigte Änderung wird unmittelbar angewendet und für den "
-"nächsten Start von <app>Fünf oder mehr</app> gespeichert."
-
-#: C/legal.xml:3(p/link)
+#. (itstool) path: p/link
+#: C/legal.xml:3
 msgid "Creative Commons Attribution-ShareAlike 3.0 Unported License"
 msgstr "Creative Commons Attribution-ShareAlike 3.0 Unported License"
 
-#: C/legal.xml:3(license/p)
+#. (itstool) path: license/p
+#: C/legal.xml:3
 msgid "This work is licensed under a <_:link-1/>."
 msgstr "Dieses Werk wird unter einer <_:link-1/> verbreitet."
 
-#: C/license.page:9(info/desc)
+#. (itstool) path: info/desc
+#: C/license.page:9
 msgid "Legal information."
 msgstr "Rechtliche Hinweise."
 
-#: C/license.page:12(page/title)
+#. (itstool) path: page/title
+#: C/license.page:12
 msgid "License"
 msgstr "Lizenz"
 
-#: C/license.page:13(page/p)
+#. (itstool) path: page/p
+#: C/license.page:13
 msgid ""
 "This work is distributed under a CreativeCommons Attribution-Share Alike 3.0 "
 "Unported license."
@@ -581,37 +559,45 @@ msgstr ""
 "Dieses Werk wird unter einer »CreativeCommons Attribution-Share Alike 3.0 "
 "Unported license« verbreitet."
 
-#: C/license.page:21(page/p)
+#. (itstool) path: page/p
+#: C/license.page:21
 msgid "You are free:"
 msgstr "Es ist Ihnen gestattet:"
 
-#: C/license.page:26(item/title)
+#. (itstool) path: item/title
+#: C/license.page:26
 msgid "<em>To share</em>"
 msgstr "<em>Freizugeben</em>"
 
-#: C/license.page:27(item/p)
+#. (itstool) path: item/p
+#: C/license.page:27
 msgid "To copy, distribute and transmit the work."
 msgstr ""
 "Das Werk bzw. den Inhalt zu vervielfältigen, zu verbreiten und öffentlich "
 "zugänglich zu machen."
 
-#: C/license.page:30(item/title)
+#. (itstool) path: item/title
+#: C/license.page:30
 msgid "<em>To remix</em>"
 msgstr "<em>Änderungen vorzunehmen</em>"
 
-#: C/license.page:31(item/p)
+#. (itstool) path: item/p
+#: C/license.page:31
 msgid "To adapt the work."
 msgstr "Abwandlungen und Bearbeitungen des Werkes bzw. Inhaltes anzufertigen."
 
-#: C/license.page:34(page/p)
+#. (itstool) path: page/p
+#: C/license.page:34
 msgid "Under the following conditions:"
 msgstr "Unter den folgenden Bedingungen:"
 
-#: C/license.page:39(item/title)
+#. (itstool) path: item/title
+#: C/license.page:39
 msgid "<em>Attribution</em>"
 msgstr "<em>Weitergabe</em>"
 
-#: C/license.page:40(item/p)
+#. (itstool) path: item/p
+#: C/license.page:40
 msgid ""
 "You must attribute the work in the manner specified by the author or "
 "licensor (but not in any way that suggests that they endorse you or your use "
@@ -621,11 +607,13 @@ msgstr ""
 "Autor oder Lizenzgeber festgelegt wurden (aber nicht so, dass es wie Ihr "
 "Werk aussieht)."
 
-#: C/license.page:47(item/title)
+#. (itstool) path: item/title
+#: C/license.page:47
 msgid "<em>Share Alike</em>"
 msgstr "<em>Unter gleichen Bedingungen</em>"
 
-#: C/license.page:48(item/p)
+#. (itstool) path: item/p
+#: C/license.page:48
 msgid ""
 "If you alter, transform, or build upon this work, you may distribute the "
 "resulting work only under the same, similar or a compatible license."
@@ -636,7 +624,8 @@ msgstr ""
 "unter Verwendung von Lizenzbedingungen weitergeben, die mit denen dieses "
 "Lizenzvertrages identisch, vergleichbar oder kompatibel sind."
 
-#: C/license.page:54(page/p)
+#. (itstool) path: page/p
+#: C/license.page:54
 msgid ""
 "For the full text of the license, see the <link href=\"http://"
 "creativecommons.org/licenses/by-sa/3.0/legalcode\">CreativeCommons website</"
@@ -648,32 +637,26 @@ msgstr ""
 "link>. Oder Sie können den vollständigen <link href=\"http://creativecommons."
 "org/licenses/by-sa/3.0/\">Commons Deed</link> lesen."
 
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/play.page:63(media)
-msgctxt "_"
-msgid ""
-"external ref='figures/glines-demo.ogv' md5='f9222aaac4ad0df37975c8ac77fbe1cc'"
-msgstr "original"
-
-#: C/play.page:21(page/title)
+#. (itstool) path: page/title
+#: C/play.page:22
 msgid "How to Play"
 msgstr "Spielverlauf"
 
-#: C/play.page:23(page/p)
+#. (itstool) path: page/p
+#: C/play.page:24
 msgid ""
 "To start a new game click <guiseq><gui>Game</gui><gui>New</gui></guiseq>."
 msgstr ""
 "Um ein neues Spiel zu starten, klicken Sie auf <guiseq><gui>Spiel</"
 "gui><gui>Neu</gui></guiseq>."
 
-#: C/play.page:27(section/title)
+#. (itstool) path: section/title
+#: C/play.page:28
 msgid "Using the mouse"
 msgstr "Mit der Maus"
 
-#: C/play.page:31(item/p)
+#. (itstool) path: item/p
+#: C/play.page:32
 msgid ""
 "Click on the object you want to move. The selected object will begin "
 "spinning."
@@ -681,15 +664,18 @@ msgstr ""
 "Klicken Sie auf das Objekt, welches Sie bewegen wollen. Das ausgewählte "
 "Objekt beginnt sich zu drehen."
 
-#: C/play.page:35(item/p)
+#. (itstool) path: item/p
+#: C/play.page:36
 msgid "Click on the destination cell."
 msgstr "Klicken Sie auf die gewünschte Zelle."
 
-#: C/play.page:43(section/title)
+#. (itstool) path: section/title
+#: C/play.page:44
 msgid "Using the keyboard"
 msgstr "Mit der Tastatur"
 
-#: C/play.page:46(item/p)
+#. (itstool) path: item/p
+#: C/play.page:47
 msgid ""
 "Press any of the arrow keys. An outline around a cell will appear on the "
 "board."
@@ -697,13 +683,15 @@ msgstr ""
 "Drücken Sie eine der Pfeiltasten. Eine der Zellen auf dem Spielfeld wird "
 "daraufhin umrandet."
 
-#: C/play.page:48(item/p)
+#. (itstool) path: item/p
+#: C/play.page:49
 msgid "Using the arrow keys, navigate to the object you want to move."
 msgstr ""
 "Mit den Pfeiltasten können Sie sich nun zu dem Objekt bewegen, welches Sie "
 "verschieben wollen."
 
-#: C/play.page:50(item/p)
+#. (itstool) path: item/p
+#: C/play.page:51
 msgid ""
 "To select the object, press the <key>Enter</key> or <key>Spacebar</key>. The "
 "selected object will begin spinning."
@@ -711,7 +699,8 @@ msgstr ""
 "Um das Objekt auszuwählen, drücken Sie die <key>Eingabetaste</key> oder die "
 "<key>Leertaste</key>. Das gewählte Objekt beginnt sich zu drehen."
 
-#: C/play.page:52(item/p)
+#. (itstool) path: item/p
+#: C/play.page:53
 msgid ""
 "Move to the destination cell, and again press the <key>Enter</key> or "
 "<key>Spacebar</key>. The chosen object will move to the destination cell."
@@ -720,56 +709,18 @@ msgstr ""
 "<key>Eingabetaste</key> oder die <key>Leertaste</key>. Dadurch wird das "
 "gewählte Objekt zur gewünschten Zelle verschoben."
 
-#: C/play.page:61(section/title)
+#. (itstool) path: section/title
+#: C/play.page:62
 msgid "Video demonstration"
 msgstr "Video-Demonstration"
 
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/rules.page:44(media)
-msgctxt "_"
-msgid ""
-"external ref='figures/horizontal.png' md5='069cf4ce8408b1cc5e6337f2527c4d2e'"
-msgstr "original"
-
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/rules.page:49(media)
-msgctxt "_"
-msgid ""
-"external ref='figures/vertical.png' md5='9f17201dac1c4c78a572ac17dce45ce0'"
-msgstr "original"
-
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/rules.page:54(media)
-msgctxt "_"
-msgid ""
-"external ref='figures/diagonal.png' md5='8654cd0cc269ac9ed0f8fb8bce02a8fc'"
-msgstr "original"
-
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/rules.page:59(media)
-msgctxt "_"
-msgid ""
-"external ref='figures/glines-gameover.png' "
-"md5='ab35873b1818aa94499cc7fcca646db6'"
-msgstr "original"
-
-#: C/rules.page:17(page/title)
+#. (itstool) path: page/title
+#: C/rules.page:18
 msgid "Rules"
 msgstr "Regeln"
 
-#: C/rules.page:19(item/p)
+#. (itstool) path: item/p
+#: C/rules.page:20
 msgid ""
 "At the start of the game there are either 3 or 7 objects placed on your "
 "board, depending on the <link xref=\"change-board-size\">board size</link>."
@@ -778,7 +729,8 @@ msgstr ""
 "Spielfeld, abhängig von der <link xref=\"change-board-size\">Spielfeldgröße</"
 "link>."
 
-#: C/rules.page:22(item/p)
+#. (itstool) path: item/p
+#: C/rules.page:23
 msgid ""
 "Each time you <link xref=\"play\">move an object</link>, additional objects "
 "are placed randomly on the board. The number of new objects placed each turn "
@@ -790,7 +742,8 @@ msgstr ""
 "Spielfeld abhängig. Eine Vorschau der nächsten zu platzierenden Objekte wird "
 "in der linken oberen Ecke des Programmfensters angezeigt."
 
-#: C/rules.page:27(item/p)
+#. (itstool) path: item/p
+#: C/rules.page:28
 msgid ""
 "There must be a clear path from the original position of the object to the "
 "destination cell (i.e you can not jump over objects)."
@@ -798,7 +751,8 @@ msgstr ""
 "Der Weg von der ursprünglichen Position zur Zielposition muss frei sein, das "
 "bedeutet, dass Sie nicht über andere Objekte springen können."
 
-#: C/rules.page:30(item/p)
+#. (itstool) path: item/p
+#: C/rules.page:31
 msgid ""
 "A straight horizontal, vertical or diagonal line of five or more similar "
 "objects will disappear from the game board. When this happens you will have "
@@ -809,7 +763,8 @@ msgstr ""
 "einen zusätzlichen Zug, bei dem keine weiteren Objekte zum Spielfeld "
 "hinzugefügt werden."
 
-#: C/rules.page:34(item/p)
+#. (itstool) path: item/p
+#: C/rules.page:35
 msgid ""
 "The more objects you clear, the longer the game will go on. The longer you "
 "play, the higher your <link xref=\"scores\">score</link>."
@@ -818,7 +773,8 @@ msgstr ""
 "länger Sie spielen, umso höher wird Ihr <link xref=\"scores\">Punktestand</"
 "link>."
 
-#: C/rules.page:37(item/p)
+#. (itstool) path: item/p
+#: C/rules.page:38
 msgid ""
 "The game is over when the board is full, since no object can be moved at "
 "that point."
@@ -826,27 +782,33 @@ msgstr ""
 "Das Spiel ist vorbei, sobald das Spielfeld vollständig gefüllt ist, da dann "
 "kein Objekt mehr bewegt werden kann."
 
-#: C/rules.page:45(media/p)
+#. (itstool) path: media/p
+#: C/rules.page:46
 msgid "Example horizontal alignment"
 msgstr "Beispiel für eine horizontale Anordnung"
 
-#: C/rules.page:50(media/p)
+#. (itstool) path: media/p
+#: C/rules.page:51
 msgid "Example vertical alignment"
 msgstr "Beispiel für eine vertikale Anordnung"
 
-#: C/rules.page:55(media/p)
+#. (itstool) path: media/p
+#: C/rules.page:56
 msgid "Example diagonal alignment"
 msgstr "Beispiel für eine diagonale Anordnung"
 
-#: C/rules.page:60(media/p)
+#. (itstool) path: media/p
+#: C/rules.page:61
 msgid "<app>Five or More</app> game over position."
 msgstr "<application>Fünf-oder-mehr</application>-Endposition"
 
-#: C/scores.page:20(page/title)
+#. (itstool) path: page/title
+#: C/scores.page:20
 msgid "Scoring"
 msgstr "Punkte erzielen"
 
-#: C/scores.page:21(page/p)
+#. (itstool) path: page/p
+#: C/scores.page:21
 msgid ""
 "You score points by creating lines of 5 or more objects. The number of "
 "points depends on the number of objects that disappear."
@@ -855,75 +817,93 @@ msgstr ""
 "Die erzielbaren Punkte hängen von der Anzahl der Objekte ab, die dadurch "
 "entfernt werden."
 
-#: C/scores.page:27(td/p)
+#. (itstool) path: td/p
+#: C/scores.page:27
 msgid "<em>Number of objects</em>"
 msgstr "<em>Anzahl der Objekte</em>"
 
-#: C/scores.page:28(td/p)
+#. (itstool) path: td/p
+#: C/scores.page:28
 msgid "<em>Number of points</em>"
 msgstr "<em>Anzahl der Punkte</em>"
 
-#: C/scores.page:34(td/p) C/scores.page:53(td/p)
+#. (itstool) path: td/p
+#: C/scores.page:34 C/scores.page:53
 msgid "10"
 msgstr "10"
 
-#: C/scores.page:37(td/p)
+#. (itstool) path: td/p
+#: C/scores.page:37
 msgid "6"
 msgstr "6"
 
-#: C/scores.page:38(td/p) C/scores.page:61(td/p)
+#. (itstool) path: td/p
+#: C/scores.page:38 C/scores.page:61
 msgid "12"
 msgstr "12"
 
-#: C/scores.page:42(td/p)
+#. (itstool) path: td/p
+#: C/scores.page:42
 msgid "18"
 msgstr "18"
 
-#: C/scores.page:45(td/p)
+#. (itstool) path: td/p
+#: C/scores.page:45
 msgid "8"
 msgstr "8"
 
-#: C/scores.page:46(td/p)
+#. (itstool) path: td/p
+#: C/scores.page:46
 msgid "28"
 msgstr "28"
 
-#: C/scores.page:50(td/p)
+#. (itstool) path: td/p
+#: C/scores.page:50
 msgid "42"
 msgstr "42"
 
-#: C/scores.page:54(td/p)
+#. (itstool) path: td/p
+#: C/scores.page:54
 msgid "82"
 msgstr "82"
 
-#: C/scores.page:57(td/p)
+#. (itstool) path: td/p
+#: C/scores.page:57
 msgid "11"
 msgstr "11"
 
-#: C/scores.page:58(td/p)
+#. (itstool) path: td/p
+#: C/scores.page:58
 msgid "108"
 msgstr "108"
 
-#: C/scores.page:62(td/p)
+#. (itstool) path: td/p
+#: C/scores.page:62
 msgid "138"
 msgstr "138"
 
-#: C/scores.page:65(td/p)
+#. (itstool) path: td/p
+#: C/scores.page:65
 msgid "13"
 msgstr "13"
 
-#: C/scores.page:66(td/p)
+#. (itstool) path: td/p
+#: C/scores.page:66
 msgid "172"
 msgstr "172"
 
-#: C/scores.page:69(td/p)
+#. (itstool) path: td/p
+#: C/scores.page:69
 msgid "14"
 msgstr "14"
 
-#: C/scores.page:70(td/p)
+#. (itstool) path: td/p
+#: C/scores.page:70
 msgid "210"
 msgstr "210"
 
-#: C/scores.page:76(note/p)
+#. (itstool) path: note/p
+#: C/scores.page:76
 msgid ""
 "You can view the high scores by clicking <guiseq><gui>Game</gui><gui>Scores</"
 "gui></guiseq>."
@@ -931,7 +911,8 @@ msgstr ""
 "Sie können die Punktestände betrachten, indem Sie auf <guiseq><gui>Spiel</"
 "gui><gui>Ergebnisse</gui></guiseq> klicken."
 
-#: C/scores.page:78(note/p)
+#. (itstool) path: note/p
+#: C/scores.page:78
 msgid ""
 "The <app>Five or More</app> scores are recorded according to the board size. "
 "You can select the <gui>Board Size</gui> of interest using the drop down "
@@ -941,39 +922,48 @@ msgstr ""
 "Spielfeldgröße gespeichert. Sie können die gewünschte <gui>Spielfeldgröße</"
 "gui> in der Auswahlliste auswählen."
 
-#: C/shortcuts.page:17(page/title)
+#. (itstool) path: page/title
+#: C/shortcuts.page:17
 msgid "Keyboard shortcuts"
 msgstr "Tastenkürzel"
 
-#: C/shortcuts.page:20(td/p)
+#. (itstool) path: td/p
+#: C/shortcuts.page:20
 msgid "New game"
 msgstr "Neues Spiel"
 
-#: C/shortcuts.page:21(td/p)
+#. (itstool) path: td/p
+#: C/shortcuts.page:21
 msgid "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
 msgstr "<keyseq><key>Strg</key><key>N</key></keyseq>"
 
-#: C/shortcuts.page:24(td/p)
+#. (itstool) path: td/p
+#: C/shortcuts.page:24
 msgid "Help"
 msgstr "Hilfe"
 
-#: C/shortcuts.page:25(td/p)
+#. (itstool) path: td/p
+#: C/shortcuts.page:25
 msgid "<key>F1</key>"
 msgstr "<key>F1</key>"
 
-#: C/shortcuts.page:28(td/p)
+#. (itstool) path: td/p
+#: C/shortcuts.page:28
 msgid "Quit"
 msgstr "Beenden"
 
-#: C/shortcuts.page:29(td/p)
+#. (itstool) path: td/p
+#: C/shortcuts.page:29
 msgid "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
 msgstr "<keyseq><key>Strg</key><key>Q</key></keyseq>"
 
-#: C/strategy.page:17(page/title)
+#. (itstool) path: page/title
+#: C/strategy.page:17
 msgid "Strategy"
 msgstr "Strategie"
 
-#: C/strategy.page:19(page/p)
+#. (itstool) path: page/p
+#: C/strategy.page:19
 msgid ""
 "There is no universal strategy for <app>Five or More</app>, but some "
 "strategic elements do exist. Here are some things to try and keep in mind as "
@@ -983,13 +973,15 @@ msgstr ""
 "gibt es einige strategische Ansätze. Folgendes sollten Sie beim Spiel "
 "bedenken:"
 
-#: C/strategy.page:22(item/p)
+#. (itstool) path: item/p
+#: C/strategy.page:22
 msgid "Try to set at least three same objects with your every move."
 msgstr ""
 "Versuchen Sie, mit jedem Zug mindestens drei gleiche Objekte in eine Linie "
 "zu bringen."
 
-#: C/strategy.page:23(item/p)
+#. (itstool) path: item/p
+#: C/strategy.page:23
 msgid ""
 "The board can quickly become very crowded with objects, so it is best to "
 "think ahead. Pay attention to the collection of <gui>Next</gui> objects, "
@@ -1000,7 +992,8 @@ msgstr ""
 "<gui>nächsten Objekte</gui> und machen Sie Ihre Entscheidung für einen zug "
 "davon abhängig."
 
-#: C/strategy.page:24(item/p)
+#. (itstool) path: item/p
+#: C/strategy.page:24
 msgid ""
 "Try to line up more than 5 objects. For example, if you have 6 objects, you "
 "can line up 2 and 3 with a space in between, and then connect them by "
@@ -1011,11 +1004,13 @@ msgstr ""
 "beziehungsweise drei Objekten und einem Leerfeld dazwischen bilden. Im "
 "nächsten Zug fügen Sie das sechste Objekt ein."
 
-#: C/translate.page:23(page/title)
+#. (itstool) path: page/title
+#: C/translate.page:23
 msgid "Help translate"
 msgstr "Beim Übersetzen helfen"
 
-#: C/translate.page:25(page/p)
+#. (itstool) path: page/p
+#: C/translate.page:25
 msgid ""
 "The <app>GNOME Games</app> user interface and documentation is being "
 "translated by a world-wide volunteer community. You are welcome to "
@@ -1025,10 +1020,8 @@ msgstr ""
 "werden von einer weltweiten Gemeinschaft aus Freiwilligen übersetzt. Sie "
 "sind herzlich eingeladen, sich daran zu beteiligen."
 
-#: C/translate.page:28(page/p)
-#| msgid ""
-#| "There are <link href=\"http://l10n.gnome.org/module/gnome-games/\">many "
-#| "languages</link> for which translations are still needed."
+#. (itstool) path: page/p
+#: C/translate.page:28
 msgid ""
 "There are <link href=\"http://l10n.gnome.org/module/five-or-more/\">many "
 "languages</link> for which translations are still needed."
@@ -1036,19 +1029,26 @@ msgstr ""
 "Übersetzungen sind noch für <link href=\"http://l10n.gnome.org/module/five-"
 "or-more/\">zahlreiche Sprachen</link> nötig."
 
-#: C/translate.page:30(page/p)
+#. (itstool) path: page/p
+#: C/translate.page:30
+#| msgid ""
+#| "To start translating you will need to <link href=\"http:l10n.gnome.org"
+#| "\">create an account</link> and join the <link href=\"http://l10n.gnome."
+#| "org/teams/\">translation team</link> for your language. This will give "
+#| "you the ability to upload new translations."
 msgid ""
-"To start translating you will need to <link href=\"http:l10n.gnome.org"
+"To start translating you will need to <link href=\"http://l10n.gnome.org"
 "\">create an account</link> and join the <link href=\"http://l10n.gnome.org/"
 "teams/\">translation team</link> for your language. This will give you the "
 "ability to upload new translations."
 msgstr ""
-"Um mit der Übersetzung zu beginnen, müssen Sie zunächst <link href=\"http:"
+"Um mit der Übersetzung zu beginnen, müssen Sie zunächst <link href=\"http://"
 "l10n.gnome.org\">ein Konto erstellen</link> und einem <link href=\"http://"
-"l10n.gnome.org/teams/\">Übersetzungstteam</link> für Ihre Sprache beitreten. "
+"l10n.gnome.org/teams/\">Übersetzungsteam</link> für Ihre Sprache beitreten. "
 "So erhalten Sie die Möglichkeit, neue Übersetzungen hochzuladen."
 
-#: C/translate.page:34(page/p)
+#. (itstool) path: page/p
+#: C/translate.page:34
 msgid ""
 "You can chat with GNOME translators using <link href=\"https://cbe003.chat."
 "mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fi18n\">irc</link>. People on the "
@@ -1061,7 +1061,8 @@ msgstr ""
 "aufgrund der unterschiedlichen Zeitzonen nicht unbedingt sofort eine Antwort "
 "erhalten werden."
 
-#: C/translate.page:38(page/p)
+#. (itstool) path: page/p
+#: C/translate.page:38
 msgid ""
 "Alternatively, you can contact the Internationalization Team using their "
 "<link href=\"http://mail.gnome.org/mailman/listinfo/gnome-i18n\">mailing "
@@ -1071,61 +1072,12 @@ msgstr ""
 "\"http://mail.gnome.org/mailman/listinfo/gnome-i18n\">Mailingliste</link> "
 "kontaktieren."
 
+#~ msgctxt "_"
 #~ msgid ""
-#~ "To file your bug, choose the component <gui>glines</gui> in the "
-#~ "<gui>Component</gui> menu."
-#~ msgstr ""
-#~ "Um einen Fehler zu melden, wählen Sie <gui>glines</gui> im "
-#~ "<gui>Component</gui>-Menü."
+#~ "external ref='figures/logo.png' md5='83ba6ff888acbdea3ad599b055ed7710'"
+#~ msgstr "original"
 
-#~ msgid "Fullscreen"
-#~ msgstr "Vollbild"
-
-#~ msgid "<key>F11</key>"
-#~ msgstr "<key>F11</key>"
-
+#~ msgctxt "_"
 #~ msgid ""
-#~ "The <gui>Board Size</gui> section lets you to select a small, medium or "
-#~ "large board. While a board with larger size gives you more space, it also "
-#~ "places more objects on the board per turn."
-#~ msgstr ""
-#~ "Im Abschnitt <gui>Spielfeldgröße</gui> können Sie ein kleines, mittleres "
-#~ "oder großes Spielfeld auswählen. Zwar erhalten Sie mit einem großen "
-#~ "Spielfeld mehr Platz, aber es werden mit jedem Zug auch mehr Objekte "
-#~ "platziert."
-
-#~ msgid "Click <gui>Close</gui>"
-#~ msgstr "Klicken Sie auf <gui>Schließen</gui>"
-
-#~ msgid "Click on the cell you want to move the object to."
-#~ msgstr "Klicken Sie auf die Zelle, zu der Sie das Objekt bewegen wollen."
-
-#~ msgid "Commandline"
-#~ msgstr "Befehlszeile"
-
-#~ msgid "<guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq>."
-#~ msgstr "<guiseq><gui>Einstellungen</gui><gui>Einstellungen</gui></guiseq>."
-
-#~ msgid "tiffany.antopolski@gmail.com"
-#~ msgstr "tiffany.antopolski@gmail.com"
-
-#~ msgid "mdhillca@gmail.com"
-#~ msgstr "mdhillca@gmail.com"
-
-#~ msgid "Ctrl"
-#~ msgstr "Strg"
-
-#~ msgid "N"
-#~ msgstr "N"
-
-#~ msgid "F11"
-#~ msgstr "F11"
-
-#~ msgid "F1"
-#~ msgstr "F1"
-
-#~ msgid "Q"
-#~ msgstr "Q"
-
-#~ msgid "lankakck@.gmailcom"
-#~ msgstr "lankakck@.gmailcom"
+#~ "external ref='figures/logo32.png' md5='51b65eea63f1a6c26a4c5d628dba406c'"
+#~ msgstr "original"
