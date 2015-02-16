@@ -10,9 +10,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.HEAD.he\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-24 20:29+0200\n"
-"PO-Revision-Date: 2014-11-24 20:30+0200\n"
-"Last-Translator: Yosef Or Boczko <yoseforb@gnome.org>\n"
+"POT-Creation-Date: 2015-02-17 00:14+0200\n"
+"PO-Revision-Date: 2015-02-17 00:15+0200\n"
+"Last-Translator: Yosef Or Boczko <yoseforb@gmail.com>\n"
 "Language-Team: עברית <>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,17 @@ msgstr ""
 "X-Generator: Gtranslator 2.91.6\n"
 "X-Launchpad-Export-Date: 2008-01-13 04:36+0000\n"
 
-#: ../data/five-or-more.appdata.xml.in.h:1
+#: ../data/five-or-more.appdata.xml.in.h:1 ../data/five-or-more.desktop.in.h:1
+#: ../data/five-or-more.ui.h:1 ../src/five-or-more.c:1172
+#: ../src/five-or-more.c:1731
+msgid "Five or More"
+msgstr "חמש או יותר"
+
+#: ../data/five-or-more.appdata.xml.in.h:2 ../data/five-or-more.desktop.in.h:2
+msgid "Remove colored balls from the board by forming lines"
+msgstr "הסרת כדורים צבעוניים מהלוח על־ידי יצירת שורות"
+
+#: ../data/five-or-more.appdata.xml.in.h:3
 msgid ""
 "Five or More is the GNOME port of a once-popular computer game. Align five "
 "or more objects of the same color into a line to cause them to disappear and "
@@ -33,28 +43,19 @@ msgstr ""
 "מאותו הצבע לשורה גורם להם להיעלם ולצבירת נקודות. ניתן להרוויח הרבה יותר "
 "נקודות על ידי סידור עצמים רבים ככל האפשר לפני פינויים."
 
-#: ../data/five-or-more.appdata.xml.in.h:2
+#: ../data/five-or-more.appdata.xml.in.h:4
 msgid ""
 "More objects appear after every turn. Play for as long as possible, until "
 "the board is completely full!"
 msgstr ""
 "יותר עצמים יופיעו אחרי כל תור. שחק זמן רב ככל האפשר עד שהלוח יתמלא לגמרי!"
 
-#: ../data/five-or-more.desktop.in.h:1 ../data/five-or-more.ui.h:1
-#: ../src/five-or-more.c:1174 ../src/five-or-more.c:1675
-msgid "Five or More"
-msgstr "חמש או יותר"
-
-#: ../data/five-or-more.desktop.in.h:2
-msgid "Remove colored balls from the board by forming lines"
-msgstr "הסרת כדורים צבעוניים מהלוח על־ידי יצירת שורות"
-
 #: ../data/five-or-more.desktop.in.h:3
 msgid "game;strategy;logic;"
 msgstr "משחק;אסטרטגיה;היגיון;הגיון;"
 
-#: ../data/five-or-more-preferences.ui.h:1 ../data/menu.ui.h:3
-#: ../src/five-or-more.c:173
+#: ../data/five-or-more-preferences.ui.h:1 ../data/menu.ui.h:2
+#: ../src/five-or-more.c:171
 msgid "Preferences"
 msgstr "העדפות"
 
@@ -115,22 +116,18 @@ msgid "Start a new puzzle"
 msgstr "התחלת לוח חדש"
 
 #: ../data/menu.ui.h:1
-msgid "New Game"
-msgstr "משחק חדש"
-
-#: ../data/menu.ui.h:2
 msgid "Scores"
 msgstr "תוצאות"
 
-#: ../data/menu.ui.h:4
+#: ../data/menu.ui.h:3
 msgid "Help"
 msgstr "עזרה"
 
-#: ../data/menu.ui.h:5
+#: ../data/menu.ui.h:4
 msgid "About"
 msgstr "על אודות"
 
-#: ../data/menu.ui.h:6
+#: ../data/menu.ui.h:5
 msgid "Quit"
 msgstr "יציאה"
 
@@ -219,11 +216,11 @@ msgctxt "board size"
 msgid "Large"
 msgstr "גדול"
 
-#: ../src/five-or-more.c:167
+#: ../src/five-or-more.c:165
 msgid "Could not load theme"
 msgstr "לא ניתן לטעון את ערכת הנושא"
 
-#: ../src/five-or-more.c:193
+#: ../src/five-or-more.c:191
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -236,7 +233,7 @@ msgstr ""
 "\n"
 "ערכת נושא ברירת המחדל תטען במקומו."
 
-#: ../src/five-or-more.c:200
+#: ../src/five-or-more.c:198
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -249,32 +246,32 @@ msgstr ""
 "\n"
 "נא לוודא כי המשחק \"חמש או יותר\" מותקן כראוי."
 
-#: ../src/five-or-more.c:410
+#: ../src/five-or-more.c:407
 msgid "Match five objects of the same type in a row to score!"
 msgstr "התאם חמישה עצמים זהים בשורה כדי לקבל ניקוד!"
 
-#: ../src/five-or-more.c:471
+#: ../src/five-or-more.c:468
 msgid "Five or More Scores"
 msgstr "תוצאות חמש או יותר"
 
-#: ../src/five-or-more.c:473
+#: ../src/five-or-more.c:470
 msgid "_Board size:"
 msgstr "גודל ה_לוח"
 
-#: ../src/five-or-more.c:490
+#: ../src/five-or-more.c:487
 msgid "Game Over!"
 msgstr "המשחק הסתיים!"
 
 #. Can't move there!
-#: ../src/five-or-more.c:646
+#: ../src/five-or-more.c:644
 msgid "You can’t move there!"
 msgstr "לא ניתן לזוז לשם!"
 
-#: ../src/five-or-more.c:1176
+#: ../src/five-or-more.c:1174
 msgid "GNOME port of the once-popular Color Lines game"
 msgstr "גרסת GNOME למשחק השורות הצבעוניות הפופולרי"
 
-#: ../src/five-or-more.c:1182
+#: ../src/five-or-more.c:1180
 msgid "translator-credits"
 msgstr ""
 "גיל אשר <dolfin@rpg.org.il>\n"
@@ -288,6 +285,18 @@ msgstr ""
 "\n"
 "פרויקט תרגום GNOME לעברית:\n"
 "‏http://gnome-il.berlios.de"
+
+#: ../src/five-or-more.c:1304
+msgid "Are you sure you want to restart the game?"
+msgstr "האם אכן ברצונך להתחיל מחדש את המשחק?"
+
+#: ../src/five-or-more.c:1307
+msgid "_Cancel"
+msgstr "_ביטול"
+
+#: ../src/five-or-more.c:1308
+msgid "_Restart"
+msgstr "ה_תחלה מחדש"
 
 #. Score dialog column header for the score time (e.g. 1 minute)
 #: ../src/games-scores-dialog.c:132
@@ -324,6 +333,9 @@ msgstr "_סגירה"
 #: ../src/games-scores-dialog.c:478
 msgid "Date"
 msgstr "תאריך"
+
+#~ msgid "New Game"
+#~ msgstr "משחק חדש"
 
 #~ msgid "Five or More Preferences"
 #~ msgstr "העדפות ׳חמש או יותר׳"
@@ -402,9 +414,6 @@ msgstr "תאריך"
 
 #~ msgid "_Reset"
 #~ msgstr "_איפוס"
-
-#~ msgid "_Restart"
-#~ msgstr "ה_תחלה מחדש"
 
 #~ msgid "_Undo Move"
 #~ msgstr "_ביטול מהלך"
@@ -2343,9 +2352,6 @@ msgstr "תאריך"
 
 #~ msgid "Size:"
 #~ msgstr "גודל:"
-
-#~ msgid "Do you want to start a new game?"
-#~ msgstr "האם ברצונך להתחיל משחק חדש?"
 
 #~ msgid "If you start a new game, your current progress will be lost."
 #~ msgstr "אם בחירתך תהיה להתחיל משחק חדש אז התהליך הנוכחי שלך יאבד."
@@ -5159,9 +5165,6 @@ msgstr "תאריך"
 
 #~ msgid "Could not show link"
 #~ msgstr "לא יכול להציג קישור"
-
-#~ msgid "_Cancel"
-#~ msgstr "_ביטול"
 
 #~ msgid "_OK"
 #~ msgstr "_אישור"
