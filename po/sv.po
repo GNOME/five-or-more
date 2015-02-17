@@ -1,19 +1,19 @@
 # Swedish messages for gnome-games.
-# Copyright © 1999-2014 Free Software Foundation, Inc.
+# Copyright © 1999-2015 Free Software Foundation, Inc.
 # Andreas Persenius <ndap@swipnet.se>, 1999.
 # Andreas Hyden <a.hyden@cyberpoint.se>
 # Martin Norbäck <d95mback@dtek.chalmers.se>, 2000.
 # Christian Rose <menthos@menthos.com>, 2000, 2001, 2002, 2003, 2004, 2005.
 # Daniel Nylander <po@danielnylander.se>, 2006, 2007, 2008, 2009, 2010, 2011, 2012.
-# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2014.
+# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2014, 2015.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-"
-"or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-08-31 04:50+0000\n"
-"PO-Revision-Date: 2014-08-31 10:46+0100\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-or-"
+"more&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2015-01-27 05:41+0000\n"
+"PO-Revision-Date: 2015-01-27 23:09+0100\n"
 "Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
@@ -21,43 +21,44 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.7.3\n"
 
-#: ../data/five-or-more.appdata.xml.in.h:1
-msgid ""
-"Five or More is the GNOME port of a once-popular computer game. Align five "
-"or more objects of the same color into a line to cause them to disappear and "
-"score points. Earn many more points by lining up as many objects as possible "
-"before clearing them."
-msgstr ""
-"Fem eller mer är GNOME-porteringen av ett en gång populärt dataspel. Lägg "
-"fem eller fler objekt av samma färg på rad för att få dem att försvinna och "
-"få poäng. Tjäna fler poäng genom att rada upp så många objekt som möjligt "
-"innan du avlägsnar dem."
-
-#: ../data/five-or-more.appdata.xml.in.h:2
-msgid ""
-"More objects appear after every turn. Play for as long as possible, until "
-"the board is completely full!"
-msgstr ""
-"Fler objekt dyker upp efter varje omgång. Spela så länge som möjligt, tills "
-"brädet är helt fullt!"
-
-#: ../data/five-or-more.desktop.in.h:1 ../data/five-or-more.ui.h:1
-#: ../src/five-or-more.c:1174 ../src/five-or-more.c:1674
+#: ../data/five-or-more.appdata.xml.in.h:1 ../data/five-or-more.desktop.in.h:1
+#: ../data/five-or-more.ui.h:1 ../src/five-or-more.c:1172
+#: ../src/five-or-more.c:1731
 msgid "Five or More"
 msgstr "Fem eller mer"
 
-#: ../data/five-or-more.desktop.in.h:2
+#: ../data/five-or-more.appdata.xml.in.h:2 ../data/five-or-more.desktop.in.h:2
 msgid "Remove colored balls from the board by forming lines"
 msgstr "Ta bort färgade bollar från brädet genom att skapa linjer"
+
+#: ../data/five-or-more.appdata.xml.in.h:3
+msgid ""
+"Five or More is the GNOME port of a once-popular computer game. Align five or "
+"more objects of the same color into a line to cause them to disappear and score "
+"points. Earn many more points by lining up as many objects as possible before "
+"clearing them."
+msgstr ""
+"Fem eller mer är GNOME-porteringen av ett en gång populärt dataspel. Lägg fem "
+"eller fler objekt av samma färg på rad för att få dem att försvinna och få "
+"poäng. Tjäna fler poäng genom att rada upp så många objekt som möjligt innan du "
+"avlägsnar dem."
+
+#: ../data/five-or-more.appdata.xml.in.h:4
+msgid ""
+"More objects appear after every turn. Play for as long as possible, until the "
+"board is completely full!"
+msgstr ""
+"Fler objekt dyker upp efter varje omgång. Spela så länge som möjligt, tills "
+"brädet är helt fullt!"
 
 #: ../data/five-or-more.desktop.in.h:3
 msgid "game;strategy;logic;"
 msgstr "spel;strategi;logik;"
 
-#: ../data/five-or-more-preferences.ui.h:1 ../data/menu.ui.h:3
-#: ../src/five-or-more.c:173
+#: ../data/five-or-more-preferences.ui.h:1 ../data/menu.ui.h:2
+#: ../src/five-or-more.c:171
 msgid "Preferences"
 msgstr "Inställningar"
 
@@ -109,7 +110,7 @@ msgstr "0"
 msgid "Score:"
 msgstr "Poäng:"
 
-#: ../data/five-or-more.ui.h:5
+#: ../data/five-or-more.ui.h:5 ../src/games-scores-dialog.c:385
 msgid "_New Game"
 msgstr "_Nytt spel"
 
@@ -117,23 +118,19 @@ msgstr "_Nytt spel"
 msgid "Start a new puzzle"
 msgstr "Starta ett nytt pussel"
 
-#: ../data/menu.ui.h:1 ../src/games-scores-dialog.c:385
-msgid "New Game"
-msgstr "Nytt spel"
-
-#: ../data/menu.ui.h:2
+#: ../data/menu.ui.h:1
 msgid "Scores"
 msgstr "Poäng"
 
-#: ../data/menu.ui.h:4
+#: ../data/menu.ui.h:3
 msgid "Help"
 msgstr "Hjälp"
 
-#: ../data/menu.ui.h:5
+#: ../data/menu.ui.h:4
 msgid "About"
 msgstr "Om"
 
-#: ../data/menu.ui.h:6
+#: ../data/menu.ui.h:5
 msgid "Quit"
 msgstr "A_vsluta"
 
@@ -142,11 +139,9 @@ msgid "Playing field size"
 msgstr "Storlek på spelfältet"
 
 #: ../data/org.gnome.five-or-more.gschema.xml.h:2
-msgid ""
-"Playing field size. 1=Small, 2=Medium, 3=Large. Any other value is invalid."
+msgid "Playing field size. 1=Small, 2=Medium, 3=Large. Any other value is invalid."
 msgstr ""
-"Storlek på spelfältet. 1=litet, 2=mellan, 3=stort. Alla andra värden är "
-"ogiltiga."
+"Storlek på spelfältet. 1=litet, 2=mellan, 3=stort. Alla andra värden är ogiltiga."
 
 #: ../data/org.gnome.five-or-more.gschema.xml.h:3
 msgid "Ball style"
@@ -223,11 +218,11 @@ msgctxt "board size"
 msgid "Large"
 msgstr "Stor"
 
-#: ../src/five-or-more.c:167
+#: ../src/five-or-more.c:165
 msgid "Could not load theme"
 msgstr "Kunde inte läsa in tema"
 
-#: ../src/five-or-more.c:193
+#: ../src/five-or-more.c:191
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -240,7 +235,7 @@ msgstr ""
 "\n"
 "Standardtemat kommer att läsas in istället."
 
-#: ../src/five-or-more.c:200
+#: ../src/five-or-more.c:198
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -253,38 +248,32 @@ msgstr ""
 "\n"
 "Kontrollera att Fem eller mer är korrekt installerat."
 
-#: ../src/five-or-more.c:410
+#: ../src/five-or-more.c:407
 msgid "Match five objects of the same type in a row to score!"
 msgstr "Matcha fem objekt på rad av samma typ för att få poäng!"
 
-#: ../src/five-or-more.c:471
+#: ../src/five-or-more.c:468
 msgid "Five or More Scores"
 msgstr "Poäng för Fem eller mer"
 
-#: ../src/five-or-more.c:473
+#: ../src/five-or-more.c:470
 msgid "_Board size:"
 msgstr "_Brädstorlek:"
 
-#: ../src/five-or-more.c:490
+#: ../src/five-or-more.c:487
 msgid "Game Over!"
 msgstr "Spelet är slut!"
 
 #. Can't move there!
-#: ../src/five-or-more.c:646
+#: ../src/five-or-more.c:644
 msgid "You can’t move there!"
 msgstr "Du kan inte flytta dit!"
 
-#: ../src/five-or-more.c:1176
-msgid ""
-"GNOME port of the once-popular Color Lines game\n"
-"\n"
-"Five or More is a part of GNOME Games."
-msgstr ""
-"GNOME-portering av det en gång populära färglinjespelet\n"
-"\n"
-"Fem eller mer är en del av GNOME Games."
+#: ../src/five-or-more.c:1174
+msgid "GNOME port of the once-popular Color Lines game"
+msgstr "GNOME-portering av det en gång populära färglinjespelet"
 
-#: ../src/five-or-more.c:1182
+#: ../src/five-or-more.c:1180
 msgid "translator-credits"
 msgstr ""
 "Daniel Nylander <po@danielnylander.se>\n"
@@ -296,6 +285,18 @@ msgstr ""
 "\n"
 "Skicka synpunkter på översättningen till\n"
 "<tp-sv@listor.tp-sv.se>."
+
+#: ../src/five-or-more.c:1304
+msgid "Are you sure you want to restart the game?"
+msgstr "Är du säker på att du vill börja om spelet?"
+
+#: ../src/five-or-more.c:1307
+msgid "_Cancel"
+msgstr "_Avbryt"
+
+#: ../src/five-or-more.c:1308
+msgid "_Restart"
+msgstr "Bö_rja om"
 
 #. Score dialog column header for the score time (e.g. 1 minute)
 #: ../src/games-scores-dialog.c:132
@@ -315,6 +316,18 @@ msgstr "Poäng"
 msgctxt "score-dialog"
 msgid "%1$dm %2$ds"
 msgstr "%1$dm %2$ds"
+
+#: ../src/games-scores-dialog.c:371
+msgid "_Quit"
+msgstr "A_vsluta"
+
+#: ../src/games-scores-dialog.c:378
+msgid "_Undo"
+msgstr "Ån_gra"
+
+#: ../src/games-scores-dialog.c:392
+msgid "_Close"
+msgstr "_Stäng"
 
 #. Score dialog column header for the date the score was recorded
 #: ../src/games-scores-dialog.c:478
