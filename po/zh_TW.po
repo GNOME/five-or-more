@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: gnome-games 3.3.91\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-"
 "or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-08-23 16:49+0000\n"
-"PO-Revision-Date: 2014-08-24 16:59+0800\n"
+"POT-Creation-Date: 2015-02-21 05:44+0000\n"
+"PO-Revision-Date: 2015-02-21 16:08+0800\n"
 "Last-Translator: Chao-Hsiung Liao <j_h_liau@yahoo.com.tw>\n"
 "Language-Team: Chinese (traditional)\n"
 "Language: zh_TW\n"
@@ -20,9 +20,19 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 1.6.5\n"
+"X-Generator: Poedit 1.7.4\n"
 
-#: ../data/five-or-more.appdata.xml.in.h:1
+#: ../data/five-or-more.appdata.xml.in.h:1 ../data/five-or-more.desktop.in.h:1
+#: ../data/five-or-more.ui.h:1 ../src/five-or-more.c:1172
+#: ../src/five-or-more.c:1731
+msgid "Five or More"
+msgstr "五子連色棋"
+
+#: ../data/five-or-more.appdata.xml.in.h:2 ../data/five-or-more.desktop.in.h:2
+msgid "Remove colored balls from the board by forming lines"
+msgstr "移動同色的球成一直線令球消失"
+
+#: ../data/five-or-more.appdata.xml.in.h:3
 msgid ""
 "Five or More is the GNOME port of a once-popular computer game. Align five "
 "or more objects of the same color into a line to cause them to disappear and "
@@ -33,27 +43,18 @@ msgstr ""
 "成一線就能讓它們消失並獲得分數。在清除棋子之前只要連結愈多的棋子就能獲得愈多"
 "的分數。"
 
-#: ../data/five-or-more.appdata.xml.in.h:2
+#: ../data/five-or-more.appdata.xml.in.h:4
 msgid ""
 "More objects appear after every turn. Play for as long as possible, until "
 "the board is completely full!"
 msgstr "更多棋子會在每一輪後出現。儘可能玩久一點，直到盤面完全充滿為止！"
 
-#: ../data/five-or-more.desktop.in.h:1 ../data/five-or-more.ui.h:1
-#: ../src/five-or-more.c:1174 ../src/five-or-more.c:1671
-msgid "Five or More"
-msgstr "五子連色棋"
-
-#: ../data/five-or-more.desktop.in.h:2
-msgid "Remove colored balls from the board by forming lines"
-msgstr "移動同色的球成一直線令球消失"
-
 #: ../data/five-or-more.desktop.in.h:3
 msgid "game;strategy;logic;"
 msgstr "game;strategy;logic;遊戲;策略;邏輯;"
 
-#: ../data/five-or-more-preferences.ui.h:1 ../data/menu.ui.h:3
-#: ../src/five-or-more.c:173
+#: ../data/five-or-more-preferences.ui.h:1 ../data/menu.ui.h:2
+#: ../src/five-or-more.c:171
 msgid "Preferences"
 msgstr "偏好設定"
 
@@ -105,32 +106,27 @@ msgstr "0"
 msgid "Score:"
 msgstr "得分："
 
-#: ../data/five-or-more.ui.h:5
+#: ../data/five-or-more.ui.h:5 ../src/games-scores-dialog.c:385
 msgid "_New Game"
 msgstr "開新局(_N)"
 
 #: ../data/five-or-more.ui.h:6
-#| msgid "Start a new game"
 msgid "Start a new puzzle"
 msgstr "開始另一局"
 
-#: ../data/menu.ui.h:1 ../src/games-scores-dialog.c:385
-msgid "New Game"
-msgstr "開新局"
-
-#: ../data/menu.ui.h:2
+#: ../data/menu.ui.h:1
 msgid "Scores"
 msgstr "分數"
 
-#: ../data/menu.ui.h:4
+#: ../data/menu.ui.h:3
 msgid "Help"
 msgstr "求助"
 
-#: ../data/menu.ui.h:5
+#: ../data/menu.ui.h:4
 msgid "About"
 msgstr "關於"
 
-#: ../data/menu.ui.h:6
+#: ../data/menu.ui.h:5
 msgid "Quit"
 msgstr "結束"
 
@@ -218,11 +214,11 @@ msgctxt "board size"
 msgid "Large"
 msgstr "大"
 
-#: ../src/five-or-more.c:167
+#: ../src/five-or-more.c:165
 msgid "Could not load theme"
 msgstr "無法載入主題"
 
-#: ../src/five-or-more.c:193
+#: ../src/five-or-more.c:191
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -235,7 +231,7 @@ msgstr ""
 "\n"
 "會改用預設的主題。"
 
-#: ../src/five-or-more.c:200
+#: ../src/five-or-more.c:198
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -248,38 +244,32 @@ msgstr ""
 "\n"
 "請檢查是否已正確安裝「五子連色棋」。"
 
-#: ../src/five-or-more.c:410
+#: ../src/five-or-more.c:407
 msgid "Match five objects of the same type in a row to score!"
 msgstr "將五個相同顏色的球連成一直線就可以取分！"
 
-#: ../src/five-or-more.c:471
+#: ../src/five-or-more.c:468
 msgid "Five or More Scores"
 msgstr "五子連色棋分數"
 
-#: ../src/five-or-more.c:473
+#: ../src/five-or-more.c:470
 msgid "_Board size:"
 msgstr "棋盤大小(_B):"
 
-#: ../src/five-or-more.c:490
+#: ../src/five-or-more.c:487
 msgid "Game Over!"
 msgstr "玩完了！"
 
 #. Can't move there!
-#: ../src/five-or-more.c:646
+#: ../src/five-or-more.c:644
 msgid "You can’t move there!"
 msgstr "不能移動到那裡！"
 
-#: ../src/five-or-more.c:1176
-msgid ""
-"GNOME port of the once-popular Color Lines game\n"
-"\n"
-"Five or More is a part of GNOME Games."
-msgstr ""
-"將一度流行的 Color Lines 遊戲移植到 GNOME 上。\n"
-"\n"
-"五子連色棋是 GNOME 遊戲的一部分。"
+#: ../src/five-or-more.c:1174
+msgid "GNOME port of the once-popular Color Lines game"
+msgstr "將一度流行的 Color Lines 遊戲移植到 GNOME 上"
 
-#: ../src/five-or-more.c:1182
+#: ../src/five-or-more.c:1180
 msgid "translator-credits"
 msgstr ""
 "如對翻譯有任何意見，請送一封電子郵件給\n"
@@ -288,6 +278,18 @@ msgstr ""
 "\n"
 "Abel Cheung <abel@oaka.org>, 2001-07\n"
 "Fernando <bv1al@journalist.com.tw>, 1999"
+
+#: ../src/five-or-more.c:1304
+msgid "Are you sure you want to restart the game?"
+msgstr "您確定要重新開始遊戲？"
+
+#: ../src/five-or-more.c:1307
+msgid "_Cancel"
+msgstr "取消(_C)"
+
+#: ../src/five-or-more.c:1308
+msgid "_Restart"
+msgstr "再玩(_R)"
 
 #. Score dialog column header for the score time (e.g. 1 minute)
 #: ../src/games-scores-dialog.c:132
@@ -308,10 +310,25 @@ msgctxt "score-dialog"
 msgid "%1$dm %2$ds"
 msgstr "%1$d 分 %2$d 秒"
 
+#: ../src/games-scores-dialog.c:371
+msgid "_Quit"
+msgstr "結束(_Q)"
+
+#: ../src/games-scores-dialog.c:378
+msgid "_Undo"
+msgstr "復原(_U)"
+
+#: ../src/games-scores-dialog.c:392
+msgid "_Close"
+msgstr "關閉(_C)"
+
 #. Score dialog column header for the date the score was recorded
 #: ../src/games-scores-dialog.c:478
 msgid "Date"
 msgstr "日期"
+
+#~ msgid "New Game"
+#~ msgstr "開新局"
 
 #~ msgid "Five or More Preferences"
 #~ msgstr "五子連色棋偏好設定"
@@ -390,12 +407,6 @@ msgstr "日期"
 
 #~ msgid "_Reset"
 #~ msgstr "重設(_R)"
-
-#~ msgid "_Restart"
-#~ msgstr "再玩(_R)"
-
-#~ msgid "_Undo Move"
-#~ msgstr "復原移動(_U)"
 
 #~ msgid "_Deal"
 #~ msgstr "發牌(_D)"
