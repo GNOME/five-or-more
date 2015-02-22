@@ -8,15 +8,15 @@
 # Vytautas Povilaitis <punktyras@nkm.lt>, 2007.
 # Gintautas Miliauskas <gintas@akl.lt>, 2006, 2007, 2008, 2010.
 # Algimantas Margevičius <gymka@mail.ru>, 2011.
-# Aurimas Černius <aurisc4@gmail.com>, 2010, 2013, 2014.
+# Aurimas Černius <aurisc4@gmail.com>, 2010, 2013, 2014, 2015.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: lt\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-"
 "or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-09-10 16:50+0000\n"
-"PO-Revision-Date: 2014-09-10 19:54+0300\n"
+"POT-Creation-Date: 2015-02-22 17:42+0000\n"
+"PO-Revision-Date: 2015-02-23 00:11+0200\n"
 "Last-Translator: Aurimas Černius <aurisc4@gmail.com>\n"
 "Language-Team: Lietuvių <gnome-lt@lists.akl.lt>\n"
 "Language: lt\n"
@@ -27,7 +27,17 @@ msgstr ""
 "%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Gtranslator 2.91.6\n"
 
-#: ../data/five-or-more.appdata.xml.in.h:1
+#: ../data/five-or-more.appdata.xml.in.h:1 ../data/five-or-more.desktop.in.h:1
+#: ../data/five-or-more.ui.h:1 ../src/five-or-more.c:1172
+#: ../src/five-or-more.c:1731
+msgid "Five or More"
+msgstr "Penketas ar daugiau"
+
+#: ../data/five-or-more.appdata.xml.in.h:2 ../data/five-or-more.desktop.in.h:2
+msgid "Remove colored balls from the board by forming lines"
+msgstr "Pašalinti nuo lentos spalvotus rutulius sukūrus iš jų linijas"
+
+#: ../data/five-or-more.appdata.xml.in.h:3
 msgid ""
 "Five or More is the GNOME port of a once-popular computer game. Align five "
 "or more objects of the same color into a line to cause them to disappear and "
@@ -39,7 +49,7 @@ msgstr ""
 "eilę, kad jie išnyktų, ir gaukite už tai taškus. Gaukite daug daugiau taškų "
 "sudėdami į eilę kiek galima daugiau objektų prieš juos išvalydami."
 
-#: ../data/five-or-more.appdata.xml.in.h:2
+#: ../data/five-or-more.appdata.xml.in.h:4
 msgid ""
 "More objects appear after every turn. Play for as long as possible, until "
 "the board is completely full!"
@@ -47,21 +57,12 @@ msgstr ""
 "Po kiekvieno ėjimo atsiranda daugiau objektų. Žaiskite kiek galima ilgiau "
 "iki lenta užsipildys!"
 
-#: ../data/five-or-more.desktop.in.h:1 ../data/five-or-more.ui.h:1
-#: ../src/five-or-more.c:1174 ../src/five-or-more.c:1675
-msgid "Five or More"
-msgstr "Penketas ar daugiau"
-
-#: ../data/five-or-more.desktop.in.h:2
-msgid "Remove colored balls from the board by forming lines"
-msgstr "Pašalinti nuo lentos spalvotus rutulius sukūrus iš jų linijas"
-
 #: ../data/five-or-more.desktop.in.h:3
 msgid "game;strategy;logic;"
 msgstr "žaidimas;strategija;logika;"
 
-#: ../data/five-or-more-preferences.ui.h:1 ../data/menu.ui.h:3
-#: ../src/five-or-more.c:173
+#: ../data/five-or-more-preferences.ui.h:1 ../data/menu.ui.h:2
+#: ../src/five-or-more.c:171
 msgid "Preferences"
 msgstr "Nustatymai"
 
@@ -113,32 +114,27 @@ msgstr "0"
 msgid "Score:"
 msgstr "Taškai:"
 
-#: ../data/five-or-more.ui.h:5
+#: ../data/five-or-more.ui.h:5 ../src/games-scores-dialog.c:385
 msgid "_New Game"
 msgstr "_Naujas žaidimas"
 
 #: ../data/five-or-more.ui.h:6
-#| msgid "Start a new game"
 msgid "Start a new puzzle"
 msgstr "Pradėti naują galvosūkį"
 
-#: ../data/menu.ui.h:1 ../src/games-scores-dialog.c:385
-msgid "New Game"
-msgstr "Naujas žaidimas"
-
-#: ../data/menu.ui.h:2
+#: ../data/menu.ui.h:1
 msgid "Scores"
 msgstr "Taškai"
 
-#: ../data/menu.ui.h:4
+#: ../data/menu.ui.h:3
 msgid "Help"
 msgstr "Žinynas"
 
-#: ../data/menu.ui.h:5
+#: ../data/menu.ui.h:4
 msgid "About"
 msgstr "Apie"
 
-#: ../data/menu.ui.h:6
+#: ../data/menu.ui.h:5
 msgid "Quit"
 msgstr "Išeiti"
 
@@ -230,11 +226,11 @@ msgctxt "board size"
 msgid "Large"
 msgstr "Didelis"
 
-#: ../src/five-or-more.c:167
+#: ../src/five-or-more.c:165
 msgid "Could not load theme"
 msgstr "Nepavyko įkelti temos"
 
-#: ../src/five-or-more.c:193
+#: ../src/five-or-more.c:191
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -247,7 +243,7 @@ msgstr ""
 "\n"
 "Vietoje to bus įkelta numatytoji tema."
 
-#: ../src/five-or-more.c:200
+#: ../src/five-or-more.c:198
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -260,38 +256,36 @@ msgstr ""
 "\n"
 "Patikrinkite, ar „Penketas ar daugiau“ yra įdiegtas tinkamai."
 
-#: ../src/five-or-more.c:410
+#: ../src/five-or-more.c:407
 msgid "Match five objects of the same type in a row to score!"
 msgstr "Norėdami gauti taškų surinkite penkis vienos spalvos rutulius eilėje!"
 
-#: ../src/five-or-more.c:471
+#: ../src/five-or-more.c:468
 msgid "Five or More Scores"
 msgstr "Taškai už penketą ar daugiau"
 
-#: ../src/five-or-more.c:473
+#: ../src/five-or-more.c:470
 msgid "_Board size:"
 msgstr "Lentos _dydis:"
 
-#: ../src/five-or-more.c:490
+#: ../src/five-or-more.c:487
 msgid "Game Over!"
 msgstr "Žaidimas baigtas!"
 
 #. Can't move there!
-#: ../src/five-or-more.c:646
+#: ../src/five-or-more.c:644
 msgid "You can’t move there!"
 msgstr "Negalima ten perkelti!"
 
-#: ../src/five-or-more.c:1176
-msgid ""
-"GNOME port of the once-popular Color Lines game\n"
-"\n"
-"Five or More is a part of GNOME Games."
-msgstr ""
-"Kažkada populiaraus Color Lines žaidimo GNOME variantas.\n"
-"\n"
-"Penketas ar daugiau yra GNOME žaidimų dalis."
+#: ../src/five-or-more.c:1174
+#| msgid ""
+#| "GNOME port of the once-popular Color Lines game\n"
+#| "\n"
+#| "Five or More is a part of GNOME Games."
+msgid "GNOME port of the once-popular Color Lines game"
+msgstr "Color Lines žaidimo GNOME variantas"
 
-#: ../src/five-or-more.c:1182
+#: ../src/five-or-more.c:1180
 msgid "translator-credits"
 msgstr ""
 "Paskutinieji vertėjai:\n"
@@ -301,6 +295,18 @@ msgstr ""
 "Ankstesnieji vertėjai:\n"
 "Tomas Kuliavas <tokul@users.sf.net>,\n"
 "Gediminas Paulauskas <menesis@chatsubo.lt>"
+
+#: ../src/five-or-more.c:1304
+msgid "Are you sure you want to restart the game?"
+msgstr "Ar tikrai norite žaisti iš naujo?"
+
+#: ../src/five-or-more.c:1307
+msgid "_Cancel"
+msgstr "_Atsisakyti"
+
+#: ../src/five-or-more.c:1308
+msgid "_Restart"
+msgstr "_Perleisti"
 
 #. Score dialog column header for the score time (e.g. 1 minute)
 #: ../src/games-scores-dialog.c:132
@@ -321,8 +327,23 @@ msgctxt "score-dialog"
 msgid "%1$dm %2$ds"
 msgstr "%1$dm %2$ds"
 
+#: ../src/games-scores-dialog.c:371
+#| msgid "Quit"
+msgid "_Quit"
+msgstr "_Išeiti"
+
+#: ../src/games-scores-dialog.c:378
+msgid "_Undo"
+msgstr "_Atšaukti"
+
+#: ../src/games-scores-dialog.c:392
+msgid "_Close"
+msgstr "_Užverti"
+
 #. Score dialog column header for the date the score was recorded
 #: ../src/games-scores-dialog.c:478
 msgid "Date"
 msgstr "Data"
 
+#~ msgid "New Game"
+#~ msgstr "Naujas žaidimas"
