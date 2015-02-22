@@ -1,5 +1,5 @@
 # French translation of five-or-more.
-# Copyright (C) 1998-2014 Free Software Foundation, Inc.
+# Copyright (C) 1998-2015 Free Software Foundation, Inc.
 # This file is distributed under the same license as the five-or-more package.
 #
 # Vincent Renardias <vincent@ldsol.com>, 1998-1999.
@@ -16,7 +16,7 @@
 # Pierre Slamich <pierre.slamich@gmail.com>, 2006.
 # Marc Lorber <linux-lorber@club-internet.fr>, 2006
 # Pierre Slamich <pierre.slamich@gmail.com>, 2006.
-# Claude Paroz <claude@2xlibre.net>, 2007-2010.
+# Claude Paroz <claude@2xlibre.net>, 2007-2015.
 # Stéphane Raimbault <stephane.raimbault@gmail.com>, 2007-2008.
 # Didier Vidal <didier-devel@melix.net>, 2007.
 # Pierre Lemaire <pierre.lemaire@kamick.org>, 2008.
@@ -28,8 +28,8 @@ msgstr ""
 "Project-Id-Version: five-or-more HEAD\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-"
 "or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-08-25 04:50+0000\n"
-"PO-Revision-Date: 2014-03-15 22:50+0100\n"
+"POT-Creation-Date: 2015-02-22 17:42+0000\n"
+"PO-Revision-Date: 2015-02-22 18:56+0100\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "Language: fr\n"
@@ -38,7 +38,17 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n>1;\n"
 
-#: ../data/five-or-more.appdata.xml.in.h:1
+#: ../data/five-or-more.appdata.xml.in.h:1 ../data/five-or-more.desktop.in.h:1
+#: ../data/five-or-more.ui.h:1 ../src/five-or-more.c:1172
+#: ../src/five-or-more.c:1731
+msgid "Five or More"
+msgstr "Cinq ou plus"
+
+#: ../data/five-or-more.appdata.xml.in.h:2 ../data/five-or-more.desktop.in.h:2
+msgid "Remove colored balls from the board by forming lines"
+msgstr "Enlever des billes de couleur du plateau en formant des lignes"
+
+#: ../data/five-or-more.appdata.xml.in.h:3
 msgid ""
 "Five or More is the GNOME port of a once-popular computer game. Align five "
 "or more objects of the same color into a line to cause them to disappear and "
@@ -50,7 +60,7 @@ msgstr ""
 "faire disparaître et marquer des points. Plus vous alignez d'objets avant de "
 "les faire disparaître, plus vous gagnez de points."
 
-#: ../data/five-or-more.appdata.xml.in.h:2
+#: ../data/five-or-more.appdata.xml.in.h:4
 msgid ""
 "More objects appear after every turn. Play for as long as possible, until "
 "the board is completely full!"
@@ -58,21 +68,12 @@ msgstr ""
 "De nouveaux objets apparaissent de plus en plus après chaque tour. Jouez le "
 "plus longtemps possible, jusqu'à ce que le plateau soit complètement rempli !"
 
-#: ../data/five-or-more.desktop.in.h:1 ../data/five-or-more.ui.h:1
-#: ../src/five-or-more.c:1174 ../src/five-or-more.c:1671
-msgid "Five or More"
-msgstr "Cinq ou plus"
-
-#: ../data/five-or-more.desktop.in.h:2
-msgid "Remove colored balls from the board by forming lines"
-msgstr "Enlever des billes de couleur du plateau en formant des lignes"
-
 #: ../data/five-or-more.desktop.in.h:3
 msgid "game;strategy;logic;"
 msgstr "jeu;stratégie;logique;"
 
-#: ../data/five-or-more-preferences.ui.h:1 ../data/menu.ui.h:3
-#: ../src/five-or-more.c:173
+#: ../data/five-or-more-preferences.ui.h:1 ../data/menu.ui.h:2
+#: ../src/five-or-more.c:171
 msgid "Preferences"
 msgstr "Préférences"
 
@@ -125,7 +126,7 @@ msgstr "0"
 msgid "Score:"
 msgstr "Score :"
 
-#: ../data/five-or-more.ui.h:5
+#: ../data/five-or-more.ui.h:5 ../src/games-scores-dialog.c:385
 msgid "_New Game"
 msgstr "_Nouvelle partie"
 
@@ -133,23 +134,19 @@ msgstr "_Nouvelle partie"
 msgid "Start a new puzzle"
 msgstr "Commence une nouvelle partie"
 
-#: ../data/menu.ui.h:1 ../src/games-scores-dialog.c:385
-msgid "New Game"
-msgstr "Nouvelle partie"
-
-#: ../data/menu.ui.h:2
+#: ../data/menu.ui.h:1
 msgid "Scores"
 msgstr "Scores"
 
-#: ../data/menu.ui.h:4
+#: ../data/menu.ui.h:3
 msgid "Help"
 msgstr "Aide"
 
-#: ../data/menu.ui.h:5
+#: ../data/menu.ui.h:4
 msgid "About"
 msgstr "À propos"
 
-#: ../data/menu.ui.h:6
+#: ../data/menu.ui.h:5
 msgid "Quit"
 msgstr "Quitter"
 
@@ -241,11 +238,11 @@ msgctxt "board size"
 msgid "Large"
 msgstr "Grande"
 
-#: ../src/five-or-more.c:167
+#: ../src/five-or-more.c:165
 msgid "Could not load theme"
 msgstr "Impossible de charger le thème"
 
-#: ../src/five-or-more.c:193
+#: ../src/five-or-more.c:191
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -258,7 +255,7 @@ msgstr ""
 "\n"
 "Le thème par défaut sera chargé à sa place."
 
-#: ../src/five-or-more.c:200
+#: ../src/five-or-more.c:198
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -271,38 +268,32 @@ msgstr ""
 "\n"
 "Vérifiez que Cinq ou plus est correctement installé."
 
-#: ../src/five-or-more.c:410
+#: ../src/five-or-more.c:407
 msgid "Match five objects of the same type in a row to score!"
 msgstr "Alignez cinq boules de même couleur pour marquer des points !"
 
-#: ../src/five-or-more.c:471
+#: ../src/five-or-more.c:468
 msgid "Five or More Scores"
 msgstr "Scores de Cinq ou plus"
 
-#: ../src/five-or-more.c:473
+#: ../src/five-or-more.c:470
 msgid "_Board size:"
 msgstr "_Taille du plateau :"
 
-#: ../src/five-or-more.c:490
+#: ../src/five-or-more.c:487
 msgid "Game Over!"
 msgstr "Fin de la partie !"
 
 #. Can't move there!
-#: ../src/five-or-more.c:646
+#: ../src/five-or-more.c:644
 msgid "You can’t move there!"
 msgstr "Impossible de se déplacer ici."
 
-#: ../src/five-or-more.c:1176
-msgid ""
-"GNOME port of the once-popular Color Lines game\n"
-"\n"
-"Five or More is a part of GNOME Games."
-msgstr ""
-"Portage GNOME du jeu autrefois célèbre Lignes Colorées\n"
-"\n"
-"Cinq ou plus fait partie des jeux GNOME."
+#: ../src/five-or-more.c:1174
+msgid "GNOME port of the once-popular Color Lines game"
+msgstr "Portage GNOME du jeu autrefois célèbre Lignes Colorées"
 
-#: ../src/five-or-more.c:1182
+#: ../src/five-or-more.c:1180
 msgid "translator-credits"
 msgstr ""
 "Christophe Merlet <redfox@redfoxcenter.org>\n"
@@ -316,6 +307,18 @@ msgstr ""
 "Stéphane Raimbault <stephane.raimbault@gmail.com>\n"
 "Didier Vidal <didier-devel@melix.net>\n"
 "Pierre Lemaire <pierre.lemaire@kamick.org>"
+
+#: ../src/five-or-more.c:1304
+msgid "Are you sure you want to restart the game?"
+msgstr "Voulez-vous vraiment recommencer la partie ?"
+
+#: ../src/five-or-more.c:1307
+msgid "_Cancel"
+msgstr "_Annuler"
+
+#: ../src/five-or-more.c:1308
+msgid "_Restart"
+msgstr "_Recommencer"
 
 #. Score dialog column header for the score time (e.g. 1 minute)
 #: ../src/games-scores-dialog.c:132
@@ -336,157 +339,19 @@ msgctxt "score-dialog"
 msgid "%1$dm %2$ds"
 msgstr "%1$d m %2$d s"
 
+#: ../src/games-scores-dialog.c:371
+msgid "_Quit"
+msgstr "_Quitter"
+
+#: ../src/games-scores-dialog.c:378
+msgid "_Undo"
+msgstr "A_nnuler"
+
+#: ../src/games-scores-dialog.c:392
+msgid "_Close"
+msgstr "_Fermer"
+
 #. Score dialog column header for the date the score was recorded
 #: ../src/games-scores-dialog.c:478
 msgid "Date"
 msgstr "Date"
-
-#~ msgid "Five or More Preferences"
-#~ msgstr "Préférences de Cinq ou plus"
-
-#~ msgid "true if the window is fullscren"
-#~ msgstr "vrai si la fenêtre est en plein écran"
-
-#~ msgid "View help for this game"
-#~ msgstr "Affiche l'aide pour ce jeu"
-
-#~ msgid "End the current game"
-#~ msgstr "Termine la partie en cours"
-
-#~ msgid "Toggle fullscreen mode"
-#~ msgstr "Bascule le mode plein écran"
-
-#~ msgid "Get a hint for your next move"
-#~ msgstr "Affiche une astuce pour votre prochain coup"
-
-#~ msgid "Leave fullscreen mode"
-#~ msgstr "Quitte le mode plein écran"
-
-#~ msgid "Start a new multiplayer network game"
-#~ msgstr "Commencer une nouvelle partie multi-joueurs en réseau"
-
-#~ msgid "End the current network game and return to network server"
-#~ msgstr "Termine le jeu en réseau et retourne sur le serveur du réseau"
-
-#~ msgid "Pause the game"
-#~ msgstr "Suspend la partie"
-
-#~ msgid "Show a list of players in the network game"
-#~ msgstr "Affiche une liste de joueurs dans le jeu en réseau"
-
-#~ msgid "Redo the undone move"
-#~ msgstr "Rétablit le mouvement annulé"
-
-#~ msgid "Restart the game"
-#~ msgstr "Recommence la partie"
-
-#~ msgid "Resume the paused game"
-#~ msgstr "Reprend la partie"
-
-#~ msgid "View the scores"
-#~ msgstr "Affiche les scores"
-
-#~ msgid "Undo the last move"
-#~ msgstr "Annule le dernier mouvement"
-
-#~ msgid "About this game"
-#~ msgstr "À propos de ce jeu"
-
-#~ msgid "Close this window"
-#~ msgstr "Ferme cette fenêtre"
-
-#~ msgid "Configure the game"
-#~ msgstr "Configure le jeu"
-
-#~ msgid "Quit this game"
-#~ msgstr "Quitte ce jeu"
-
-#~ msgid "_Contents"
-#~ msgstr "_Sommaire"
-
-#~ msgid "_Fullscreen"
-#~ msgstr "_Plein écran"
-
-#~ msgid "_Hint"
-#~ msgstr "_Astuce"
-
-#~ msgid "_New"
-#~ msgstr "_Nouveau"
-
-#~ msgid "_Redo Move"
-#~ msgstr "_Rétablir le déplacement"
-
-#~ msgid "_Reset"
-#~ msgstr "_Réinitialiser"
-
-#~ msgid "_Restart"
-#~ msgstr "_Recommencer"
-
-#~ msgid "_Undo Move"
-#~ msgstr "A_nnuler le déplacement"
-
-#~ msgid "_Deal"
-#~ msgstr "_Distribuer"
-
-#~ msgid "_Leave Fullscreen"
-#~ msgstr "_Quitter le plein écran"
-
-#~ msgid "Network _Game"
-#~ msgstr "_Partie en réseau"
-
-#~ msgid "L_eave Game"
-#~ msgstr "_Quitter la partie"
-
-#~ msgid "Player _List"
-#~ msgstr "_Liste des joueurs"
-
-#~ msgid "_Pause"
-#~ msgstr "_Pause"
-
-#~ msgid "Res_ume"
-#~ msgstr "_Continuer"
-
-#~ msgid "_Scores"
-#~ msgstr "_Scores"
-
-#~ msgid "_End Game"
-#~ msgstr "_Fin du jeu"
-
-#~ msgid ""
-#~ "%s is free software; you can redistribute it and/or modify it under the "
-#~ "terms of the GNU General Public License as published by the Free Software "
-#~ "Foundation; either version %d of the License, or (at your option) any "
-#~ "later version."
-#~ msgstr ""
-#~ "%s est un logiciel libre ; vous pouvez le distribuer et/ou le modifier "
-#~ "sous les termes de la Licence Publique Générale GNU telle que publiée par "
-#~ "la Free Software Foundation ; soit la version %d de la licence, ou (à "
-#~ "votre discrétion), toute version suivante."
-
-#~ msgid ""
-#~ "%s is distributed in the hope that it will be useful, but WITHOUT ANY "
-#~ "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
-#~ "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
-#~ "details."
-#~ msgstr ""
-#~ "%s est distribué dans l'espoir qu'il puisse être utile mais SANS AUCUNE "
-#~ "GARANTIE ; sans même une garantie implicite de VALEUR MARCHANDE ou "
-#~ "d'ADÉQUATION À UN BESOIN PARTICULIER. Voir la Licence Publique Générale "
-#~ "GNU pour plus d'informations."
-
-#~ msgid ""
-#~ "You should have received a copy of the GNU General Public License along "
-#~ "with %s; if not, write to the Free Software Foundation, Inc., 51 Franklin "
-#~ "Street, Fifth Floor, Boston, MA  02110-1301  USA"
-#~ msgstr ""
-#~ "Vous devriez avoir reçu une copie de la Licence Publique Générale GNU "
-#~ "avec %s ; si ce n'est pas le cas, écrivez à la Free Software Foundation, "
-#~ "Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA."
-
-#~ msgid ""
-#~ "You should have received a copy of the GNU General Public License along "
-#~ "with this program.  If not, see <http://www.gnu.org/licenses/>."
-#~ msgstr ""
-#~ "Vous devriez avoir reçu une copie de la Licence Publique Générale GNU "
-#~ "avec ce programme ; si ce n'est pas le cas, consultez <http://www.gnu.org/"
-#~ "licenses/>."
