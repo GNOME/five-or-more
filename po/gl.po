@@ -10,24 +10,35 @@
 # Antón Méixome <meixome@mancomun.org>, 2009.
 # Fran Diéguez <frandieguez@gnome.org>, 2009, 2010, 2011.
 # Leandro Regueiro <leandro.regueiro@gmail.com>, 2012.
-# Fran Dieguez <frandieguez@gnome.org>, 2011, 2012, 2013, 2014.
+# Fran Dieguez <frandieguez@gnome.org>, 2011, 2012, 2013, 2014, 2015.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games-master-po-gl-54590\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-09-04 21:37+0200\n"
-"PO-Revision-Date: 2014-09-04 21:37+0200\n"
+"POT-Creation-Date: 2015-03-03 23:31+0100\n"
+"PO-Revision-Date: 2015-03-03 23:32+0100\n"
 "Last-Translator: Fran Dieguez <frandieguez@gnome.org>\n"
-"Language-Team: gnome-l10n-gl@gnome.org\n"
+"Language-Team: Galician <>\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Virtaal 0.7.1\n"
+"X-Generator: Gtranslator 2.91.6\n"
 "X-Project-Style: gnome\n"
 
-#: ../data/five-or-more.appdata.xml.in.h:1
+#: ../data/five-or-more.appdata.xml.in.h:1 ../data/five-or-more.desktop.in.h:1
+#: ../data/five-or-more.ui.h:1 ../src/five-or-more.c:1172
+#: ../src/five-or-more.c:1731
+msgid "Five or More"
+msgstr "Cinco ou Máis"
+
+#: ../data/five-or-more.appdata.xml.in.h:2 ../data/five-or-more.desktop.in.h:2
+msgid "Remove colored balls from the board by forming lines"
+msgstr "Retirar as bólas de cores do taboleiro formando liñas"
+
+#: ../data/five-or-more.appdata.xml.in.h:3
 msgid ""
 "Five or More is the GNOME port of a once-popular computer game. Align five "
 "or more objects of the same color into a line to cause them to disappear and "
@@ -39,7 +50,7 @@ msgstr ""
 "Recolla moitos máis puntos aliñando tantos obxectos como sexa posíbel "
 "facéndoos desaparecer."
 
-#: ../data/five-or-more.appdata.xml.in.h:2
+#: ../data/five-or-more.appdata.xml.in.h:4
 msgid ""
 "More objects appear after every turn. Play for as long as possible, until "
 "the board is completely full!"
@@ -47,21 +58,12 @@ msgstr ""
 "Aparecerán máis obxectos despois de cada turno. Xogue tanto como poida, até "
 "que o taboleiro estea completamente completo!"
 
-#: ../data/five-or-more.desktop.in.h:1 ../data/five-or-more.ui.h:1
-#: ../src/five-or-more.c:1174 ../src/five-or-more.c:1674
-msgid "Five or More"
-msgstr "Cinco ou Máis"
-
-#: ../data/five-or-more.desktop.in.h:2
-msgid "Remove colored balls from the board by forming lines"
-msgstr "Retirar as bólas de cores do taboleiro formando liñas"
-
 #: ../data/five-or-more.desktop.in.h:3
 msgid "game;strategy;logic;"
 msgstr "xogo;estratexia;lóxica;"
 
-#: ../data/five-or-more-preferences.ui.h:1 ../data/menu.ui.h:3
-#: ../src/five-or-more.c:173
+#: ../data/five-or-more-preferences.ui.h:1 ../data/menu.ui.h:2
+#: ../src/five-or-more.c:171
 msgid "Preferences"
 msgstr "Preferencias"
 
@@ -113,7 +115,7 @@ msgstr "0"
 msgid "Score:"
 msgstr "Puntuación:"
 
-#: ../data/five-or-more.ui.h:5
+#: ../data/five-or-more.ui.h:5 ../src/games-scores-dialog.c:385
 msgid "_New Game"
 msgstr "Xogo _novo"
 
@@ -121,23 +123,19 @@ msgstr "Xogo _novo"
 msgid "Start a new puzzle"
 msgstr "Iniciar un novo quebracabezas"
 
-#: ../data/menu.ui.h:1 ../src/games-scores-dialog.c:385
-msgid "New Game"
-msgstr "Xogo novo"
-
-#: ../data/menu.ui.h:2
+#: ../data/menu.ui.h:1
 msgid "Scores"
 msgstr "Puntuacións"
 
-#: ../data/menu.ui.h:4
+#: ../data/menu.ui.h:3
 msgid "Help"
 msgstr "Axuda"
 
-#: ../data/menu.ui.h:5
+#: ../data/menu.ui.h:4
 msgid "About"
 msgstr "Sobre"
 
-#: ../data/menu.ui.h:6
+#: ../data/menu.ui.h:5
 msgid "Quit"
 msgstr "Saír"
 
@@ -228,11 +226,11 @@ msgctxt "board size"
 msgid "Large"
 msgstr "Grande"
 
-#: ../src/five-or-more.c:167
+#: ../src/five-or-more.c:165
 msgid "Could not load theme"
 msgstr "Non foi posíbel baixar o tema"
 
-#: ../src/five-or-more.c:193
+#: ../src/five-or-more.c:191
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -245,7 +243,7 @@ msgstr ""
 "\n"
 "En vez diso instalarase o tema predeterminado."
 
-#: ../src/five-or-more.c:200
+#: ../src/five-or-more.c:198
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -258,38 +256,32 @@ msgstr ""
 "\n"
 "Verifique que o Cinco ou Máis está instalado correctamente."
 
-#: ../src/five-or-more.c:410
+#: ../src/five-or-more.c:407
 msgid "Match five objects of the same type in a row to score!"
 msgstr "Para puntuar ten que xuntar cinco obxectos do mesmo tipo nunha fila!"
 
-#: ../src/five-or-more.c:471
+#: ../src/five-or-more.c:468
 msgid "Five or More Scores"
 msgstr "Puntuacións de Cinco ou Máis"
 
-#: ../src/five-or-more.c:473
+#: ../src/five-or-more.c:470
 msgid "_Board size:"
 msgstr "_Tamaño do taboleiro:"
 
-#: ../src/five-or-more.c:490
+#: ../src/five-or-more.c:487
 msgid "Game Over!"
 msgstr "Fin da partida!"
 
 #. Can't move there!
-#: ../src/five-or-more.c:646
+#: ../src/five-or-more.c:644
 msgid "You can’t move there!"
 msgstr "Non pode moverse aí!"
 
-#: ../src/five-or-more.c:1176
-msgid ""
-"GNOME port of the once-popular Color Lines game\n"
-"\n"
-"Five or More is a part of GNOME Games."
-msgstr ""
-"Adaptación para GNOME do popular xogo Color Lines\n"
-"\n"
-"Cinco ou Máis forma parte do dos Xogos de GNOME."
+#: ../src/five-or-more.c:1174
+msgid "GNOME port of the once-popular Color Lines game"
+msgstr "Adaptación para GNOME do popular xogo Color Lines"
 
-#: ../src/five-or-more.c:1182
+#: ../src/five-or-more.c:1180
 msgid "translator-credits"
 msgstr ""
 "Fran Diéguez <frandieguez@ubuntu.com>, 2009-2014;\n"
@@ -304,6 +296,18 @@ msgstr ""
 "\n"
 "Proxecto Trasno - Adaptación do software libre á lingua galega:  Se desexas\n"
 "colaborar connosco, podes atopar máis información en http://www.trasno.net"
+
+#: ../src/five-or-more.c:1304
+msgid "Are you sure you want to restart the game?"
+msgstr "Ten certeza que quere reiniciar o xogo?"
+
+#: ../src/five-or-more.c:1307
+msgid "_Cancel"
+msgstr "_Cancelar"
+
+#: ../src/five-or-more.c:1308
+msgid "_Restart"
+msgstr "_Reiniciar"
 
 #. Score dialog column header for the score time (e.g. 1 minute)
 #: ../src/games-scores-dialog.c:132
@@ -324,10 +328,25 @@ msgctxt "score-dialog"
 msgid "%1$dm %2$ds"
 msgstr "%1$dm %2$ds"
 
+#: ../src/games-scores-dialog.c:371
+msgid "_Quit"
+msgstr "_Saír"
+
+#: ../src/games-scores-dialog.c:378
+msgid "_Undo"
+msgstr "_Desfacer"
+
+#: ../src/games-scores-dialog.c:392
+msgid "_Close"
+msgstr "Pecha_r"
+
 #. Score dialog column header for the date the score was recorded
 #: ../src/games-scores-dialog.c:478
 msgid "Date"
 msgstr "Data"
+
+#~ msgid "New Game"
+#~ msgstr "Xogo novo"
 
 #~ msgid "Five or More Preferences"
 #~ msgstr "Preferencias do Cincou ou Máis"
@@ -406,9 +425,6 @@ msgstr "Data"
 
 #~ msgid "_Reset"
 #~ msgstr "_Restabelecer"
-
-#~ msgid "_Restart"
-#~ msgstr "_Reiniciar"
 
 #~ msgid "_Undo Move"
 #~ msgstr "_Desfacer movemento"
@@ -2103,9 +2119,6 @@ msgstr "Data"
 #~ msgid "New game"
 #~ msgstr "Nova partida"
 
-#~ msgid "_Undo"
-#~ msgstr "_Desfacer"
-
 #~ msgid "Undo last action"
 #~ msgstr "Desfacer o último movemento"
 
@@ -2373,9 +2386,6 @@ msgstr "Data"
 
 #~ msgid "Size:"
 #~ msgstr "Tamaño:"
-
-#~ msgid "Do you want to start a new game?"
-#~ msgstr "Desexa iniciar un novo xogo?"
 
 #~ msgid "If you start a new game, your current progress will be lost."
 #~ msgstr "Se iniciar un xogo novo, o seu progreso actual perderase."
@@ -5283,12 +5293,6 @@ msgstr "Data"
 
 #~ msgid "Could not show link"
 #~ msgstr "Non foi posíbel mostrar a ligazón"
-
-#~ msgid "_Cancel"
-#~ msgstr "_Cancelar"
-
-#~ msgid "_Close"
-#~ msgstr "Pecha_r"
 
 #~ msgid "_OK"
 #~ msgstr "_Aceptar"
