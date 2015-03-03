@@ -1,19 +1,18 @@
 # Serbian translation of gnome-games
-# Courtesy of Prevod.org team (http://prevod.org/) -- 2003—2014.
+# Courtesy of Prevod.org team (http://prevod.org/) -- 2003—2015.
 # This file is distributed under the same license as the gnome-games package.
-# Maintainer: Dušan Marjanović <madafaka@bsd.org.yu>
-# Reviewed on 2005-08-03 by: Igor Nestorović <igor@prevod.org>
-# Translated by: Miloš Popović <gpopac@gmail.com>
-# Translated on 2010-08-25 by: Branko Kokanović <branko.kokanovic@gmail.com>
+# Dušan Marjanović <madafaka@bsd.org.yu>
+# Igor Nestorović <igor@prevod.org>, 2005.
 # Miloš Popović <gpopac@gmai, 2010.
-# Miroslav Nikolić <miroslavnikolic@rocketmail.com>, 2011—2014.
+# Branko Kokanović <branko.kokanovic@gmail.com>, 2010.
+# Miroslav Nikolić <miroslavnikolic@rocketmail.com>, 2011—2015.
 msgid ""
 msgstr ""
 "Project-Id-Version: Gnomove igre\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-"
 "or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-09-17 16:45+0000\n"
-"PO-Revision-Date: 2014-09-17 20:05+0200\n"
+"POT-Creation-Date: 2015-03-03 17:43+0000\n"
+"PO-Revision-Date: 2015-03-03 19:09+0200\n"
 "Last-Translator: Miroslav Nikolić <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: Serbian <gnom@prevod.org>\n"
 "Language: sr\n"
@@ -24,7 +23,17 @@ msgstr ""
 "n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Project-Style: gnome\n"
 
-#: ../data/five-or-more.appdata.xml.in.h:1
+#: ../data/five-or-more.appdata.xml.in.h:1 ../data/five-or-more.desktop.in.h:1
+#: ../data/five-or-more.ui.h:1 ../src/five-or-more.c:1172
+#: ../src/five-or-more.c:1731
+msgid "Five or More"
+msgstr "Pet ili više"
+
+#: ../data/five-or-more.appdata.xml.in.h:2 ../data/five-or-more.desktop.in.h:2
+msgid "Remove colored balls from the board by forming lines"
+msgstr "Uklanjajte obojene loptice sa table obrazujući linije"
+
+#: ../data/five-or-more.appdata.xml.in.h:3
 msgid ""
 "Five or More is the GNOME port of a once-popular computer game. Align five "
 "or more objects of the same color into a line to cause them to disappear and "
@@ -36,7 +45,7 @@ msgstr ""
 "Zaradite što više poena povezivanjem što je moguće više predmeta pre nego li "
 "ih počistite."
 
-#: ../data/five-or-more.appdata.xml.in.h:2
+#: ../data/five-or-more.appdata.xml.in.h:4
 msgid ""
 "More objects appear after every turn. Play for as long as possible, until "
 "the board is completely full!"
@@ -44,21 +53,12 @@ msgstr ""
 "Nakon svakog pokušaja pojavljuje se više predmeta. Igrajte što duže možete, "
 "sve dok se tabla potpuno ne ispuni!"
 
-#: ../data/five-or-more.desktop.in.h:1 ../data/five-or-more.ui.h:1
-#: ../src/five-or-more.c:1174 ../src/five-or-more.c:1675
-msgid "Five or More"
-msgstr "Pet ili više"
-
-#: ../data/five-or-more.desktop.in.h:2
-msgid "Remove colored balls from the board by forming lines"
-msgstr "Uklanjajte obojene loptice sa table obrazujući linije"
-
 #: ../data/five-or-more.desktop.in.h:3
 msgid "game;strategy;logic;"
 msgstr "igra;strategija;logika;"
 
-#: ../data/five-or-more-preferences.ui.h:1 ../data/menu.ui.h:3
-#: ../src/five-or-more.c:173
+#: ../data/five-or-more-preferences.ui.h:1 ../data/menu.ui.h:2
+#: ../src/five-or-more.c:171
 msgid "Preferences"
 msgstr "Postavke"
 
@@ -110,32 +110,27 @@ msgstr "0"
 msgid "Score:"
 msgstr "Razultat:"
 
-#: ../data/five-or-more.ui.h:5
+#: ../data/five-or-more.ui.h:5 ../src/games-scores-dialog.c:385
 msgid "_New Game"
 msgstr "_Nova igra"
 
 #: ../data/five-or-more.ui.h:6
-#| msgid "Start a new game"
 msgid "Start a new puzzle"
 msgstr "Započnite novu igru"
 
-#: ../data/menu.ui.h:1 ../src/games-scores-dialog.c:385
-msgid "New Game"
-msgstr "Nova igra"
-
-#: ../data/menu.ui.h:2
+#: ../data/menu.ui.h:1
 msgid "Scores"
 msgstr "Rezultati"
 
-#: ../data/menu.ui.h:4
+#: ../data/menu.ui.h:3
 msgid "Help"
 msgstr "Pomoć"
 
-#: ../data/menu.ui.h:5
+#: ../data/menu.ui.h:4
 msgid "About"
 msgstr "O programu"
 
-#: ../data/menu.ui.h:6
+#: ../data/menu.ui.h:5
 msgid "Quit"
 msgstr "Izađi"
 
@@ -225,11 +220,11 @@ msgctxt "board size"
 msgid "Large"
 msgstr "Velika"
 
-#: ../src/five-or-more.c:167
+#: ../src/five-or-more.c:165
 msgid "Could not load theme"
 msgstr "Ne mogu da učitam temu"
 
-#: ../src/five-or-more.c:193
+#: ../src/five-or-more.c:191
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -242,7 +237,7 @@ msgstr ""
 "\n"
 "Učitavam podrazumevanu temu."
 
-#: ../src/five-or-more.c:200
+#: ../src/five-or-more.c:198
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -255,46 +250,57 @@ msgstr ""
 "\n"
 "Proverite da li je ispravno instalirana ova igrica."
 
-#: ../src/five-or-more.c:410
+#: ../src/five-or-more.c:407
 msgid "Match five objects of the same type in a row to score!"
 msgstr "Povežite pet predmeta iste vrste u nizu da osvojite poene!"
 
-#: ../src/five-or-more.c:471
+#: ../src/five-or-more.c:468
 msgid "Five or More Scores"
 msgstr "Rezultati za Pet ili više"
 
-#: ../src/five-or-more.c:473
+#: ../src/five-or-more.c:470
 msgid "_Board size:"
 msgstr "_Veličina table:"
 
-#: ../src/five-or-more.c:490
+#: ../src/five-or-more.c:487
 msgid "Game Over!"
 msgstr "Igra je gotova!"
 
 #. Can't move there!
-#: ../src/five-or-more.c:646
+#: ../src/five-or-more.c:644
 msgid "You can’t move there!"
 msgstr "To je nemoguć potez!"
 
-#: ../src/five-or-more.c:1176
-msgid ""
-"GNOME port of the once-popular Color Lines game\n"
-"\n"
-"Five or More is a part of GNOME Games."
-msgstr ""
-"Gnomova izvedba nekad popularne igre Linije.\n"
-"\n"
-"Pet ili više je deo Gnomovih igara."
+#: ../src/five-or-more.c:1174
+#| msgid ""
+#| "GNOME port of the once-popular Color Lines game\n"
+#| "\n"
+#| "Five or More is a part of GNOME Games."
+msgid "GNOME port of the once-popular Color Lines game"
+msgstr "Gnomova izvedba nekad popularne igre Linije"
 
-#: ../src/five-or-more.c:1182
+#: ../src/five-or-more.c:1180
 msgid "translator-credits"
 msgstr ""
 "Dušan Marjanović <madafaka@root.co.yu>\n"
+"Igor Nestorović <igor@prevod.org>\n"
 "Miloš Popović    <gpopac@gmail.com>\n"
 "Branko Kokanović <branko.kokanovic@gmail.com>\n"
 "Miroslav Nikolić <miroslavnikolic@rocketmail.com>\n"
 "\n"
 "http://prevod.org — prevod na srpski jezik"
+
+#: ../src/five-or-more.c:1304
+msgid "Are you sure you want to restart the game?"
+msgstr "Da li sigurno želite ponovo da pokrenete igru?"
+
+#: ../src/five-or-more.c:1307
+msgid "_Cancel"
+msgstr "_Otkaži"
+
+#: ../src/five-or-more.c:1308
+msgid "_Restart"
+msgstr "_Ponovo pokreni"
 
 #. Score dialog column header for the score time (e.g. 1 minute)
 #: ../src/games-scores-dialog.c:132
@@ -315,10 +321,27 @@ msgctxt "score-dialog"
 msgid "%1$dm %2$ds"
 msgstr "%dm %ds"
 
+#: ../src/games-scores-dialog.c:371
+#| msgid "Quit"
+msgid "_Quit"
+msgstr "_Izađi"
+
+#: ../src/games-scores-dialog.c:378
+#| msgid "_Undo Move"
+msgid "_Undo"
+msgstr "_Opozovi"
+
+#: ../src/games-scores-dialog.c:392
+msgid "_Close"
+msgstr "_Zatvori"
+
 #. Score dialog column header for the date the score was recorded
 #: ../src/games-scores-dialog.c:478
 msgid "Date"
 msgstr "Datum"
+
+#~ msgid "New Game"
+#~ msgstr "Nova igra"
 
 #~ msgid "Five or More Preferences"
 #~ msgstr "Postavke za Pet ili više"
@@ -397,12 +420,6 @@ msgstr "Datum"
 
 #~ msgid "_Reset"
 #~ msgstr "_Ponovo pokreni"
-
-#~ msgid "_Restart"
-#~ msgstr "_Ponovo pokreni"
-
-#~ msgid "_Undo Move"
-#~ msgstr "_Opozovi potez"
 
 #~ msgid "_Deal"
 #~ msgstr "_Deli"
