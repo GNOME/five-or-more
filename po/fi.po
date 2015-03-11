@@ -8,15 +8,15 @@
 # Sami Pesonen <sampeson@iki.fi>, 2002-2005.
 # Ilkka Tuohela <hile@iki.fi>, 2005-2009.
 # Timo Jyrinki <timo.jyrinki@iki.fi>, 2008.
-# Jiri Grönroos <jiri.gronroos+l10n@iki.fi>, 2012, 2013, 2014.
+# Jiri Grönroos <jiri.gronroos+l10n@iki.fi>, 2012, 2013, 2014, 2015.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-"
 "or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-09-11 16:46+0000\n"
-"PO-Revision-Date: 2014-09-12 00:19+0300\n"
+"POT-Creation-Date: 2015-03-09 05:43+0000\n"
+"PO-Revision-Date: 2015-03-09 17:24+0200\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos+l10n@iki.fi>\n"
 "Language-Team: suomi <gnome-fi-laatu@lists.sourceforge.net>\n"
 "Language: fi\n"
@@ -28,7 +28,17 @@ msgstr ""
 "X-Generator: Gtranslator 2.91.6\n"
 "X-POT-Import-Date: 2012-03-05 14:46:29+0000\n"
 
-#: ../data/five-or-more.appdata.xml.in.h:1
+#: ../data/five-or-more.appdata.xml.in.h:1 ../data/five-or-more.desktop.in.h:1
+#: ../data/five-or-more.ui.h:1 ../src/five-or-more.c:1172
+#: ../src/five-or-more.c:1731
+msgid "Five or More"
+msgstr "Viisi tai enemmän"
+
+#: ../data/five-or-more.appdata.xml.in.h:2 ../data/five-or-more.desktop.in.h:2
+msgid "Remove colored balls from the board by forming lines"
+msgstr "Poista värilliset pallot laudalta muodostamalla rivejä"
+
+#: ../data/five-or-more.appdata.xml.in.h:3
 msgid ""
 "Five or More is the GNOME port of a once-popular computer game. Align five "
 "or more objects of the same color into a line to cause them to disappear and "
@@ -40,7 +50,7 @@ msgstr ""
 "katoavat ja saat pisteitä. Mitä enemmän saat poistettua kohteita kerralla, "
 "sitä enemmän saat pisteitä."
 
-#: ../data/five-or-more.appdata.xml.in.h:2
+#: ../data/five-or-more.appdata.xml.in.h:4
 msgid ""
 "More objects appear after every turn. Play for as long as possible, until "
 "the board is completely full!"
@@ -48,21 +58,12 @@ msgstr ""
 "Joka vuoron jälkeen pelialueelle ilmestyy lisää kohteita. Pelaa niin kauan "
 "kuin pystyt - mieluiten niin että lauta täyttyy!"
 
-#: ../data/five-or-more.desktop.in.h:1 ../data/five-or-more.ui.h:1
-#: ../src/five-or-more.c:1174 ../src/five-or-more.c:1675
-msgid "Five or More"
-msgstr "Viisi tai enemmän"
-
-#: ../data/five-or-more.desktop.in.h:2
-msgid "Remove colored balls from the board by forming lines"
-msgstr "Poista värilliset pallot laudalta muodostamalla rivejä"
-
 #: ../data/five-or-more.desktop.in.h:3
 msgid "game;strategy;logic;"
 msgstr "game;strategy;logic;strategia;logiikka;peli;"
 
-#: ../data/five-or-more-preferences.ui.h:1 ../data/menu.ui.h:3
-#: ../src/five-or-more.c:173
+#: ../data/five-or-more-preferences.ui.h:1 ../data/menu.ui.h:2
+#: ../src/five-or-more.c:171
 msgid "Preferences"
 msgstr "Asetukset"
 
@@ -114,32 +115,27 @@ msgstr "0"
 msgid "Score:"
 msgstr "Pisteet:"
 
-#: ../data/five-or-more.ui.h:5
+#: ../data/five-or-more.ui.h:5 ../src/games-scores-dialog.c:385
 msgid "_New Game"
 msgstr "_Uusi peli"
 
 #: ../data/five-or-more.ui.h:6
-#| msgid "Start a new game"
 msgid "Start a new puzzle"
 msgstr "Aloita uusi peli"
 
-#: ../data/menu.ui.h:1 ../src/games-scores-dialog.c:385
-msgid "New Game"
-msgstr "Uusi peli"
-
-#: ../data/menu.ui.h:2
+#: ../data/menu.ui.h:1
 msgid "Scores"
 msgstr "Pisteet"
 
-#: ../data/menu.ui.h:4
+#: ../data/menu.ui.h:3
 msgid "Help"
 msgstr "Ohje"
 
-#: ../data/menu.ui.h:5
+#: ../data/menu.ui.h:4
 msgid "About"
 msgstr "Tietoja"
 
-#: ../data/menu.ui.h:6
+#: ../data/menu.ui.h:5
 msgid "Quit"
 msgstr "Lopeta"
 
@@ -229,11 +225,11 @@ msgctxt "board size"
 msgid "Large"
 msgstr "Suuri"
 
-#: ../src/five-or-more.c:167
+#: ../src/five-or-more.c:165
 msgid "Could not load theme"
 msgstr "Teemaa ei voi ladata"
 
-#: ../src/five-or-more.c:193
+#: ../src/five-or-more.c:191
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -246,7 +242,7 @@ msgstr ""
 "\n"
 "Sen sijaan käytetään oletusteemaa."
 
-#: ../src/five-or-more.c:200
+#: ../src/five-or-more.c:198
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -259,47 +255,39 @@ msgstr ""
 "\n"
 "Tarkista että Viisi tai enemmän on asennettu oikein."
 
-#: ../src/five-or-more.c:410
+#: ../src/five-or-more.c:407
 msgid "Match five objects of the same type in a row to score!"
 msgstr "Siirrä viisi samanväristä palloa riviin saadaksesi pisteitä!"
 
-#: ../src/five-or-more.c:471
-#| msgid "Five or More"
+#: ../src/five-or-more.c:468
 msgid "Five or More Scores"
 msgstr "Viisi tai enemmän -pisteet\t"
 
-#: ../src/five-or-more.c:473
+#: ../src/five-or-more.c:470
 msgid "_Board size:"
 msgstr "_Laudan koko:"
 
-#: ../src/five-or-more.c:490
+#: ../src/five-or-more.c:487
 msgid "Game Over!"
 msgstr "Peli päättyi!"
 
 #. Can't move there!
-#: ../src/five-or-more.c:646
-#| msgid "You can't move there!"
+#: ../src/five-or-more.c:644
 msgid "You can’t move there!"
 msgstr "Ei voi siirtää siihen!"
 
-#: ../src/five-or-more.c:1176
+#: ../src/five-or-more.c:1174
 #| msgid ""
-#| "GNOME port of the once-popular Color Lines game.\n"
+#| "GNOME port of the once-popular Color Lines game\n"
 #| "\n"
 #| "Five or More is a part of GNOME Games."
-msgid ""
-"GNOME port of the once-popular Color Lines game\n"
-"\n"
-"Five or More is a part of GNOME Games."
-msgstr ""
-"Gnomen käännös kerran kuuluisasta Color Lines -pelistä\n"
-"\n"
-"Viisi tai enemmän on osa Gnomen pelejä."
+msgid "GNOME port of the once-popular Color Lines game"
+msgstr "Gnomen käännös kerran kuuluisasta Color Lines -pelistä"
 
-#: ../src/five-or-more.c:1182
+#: ../src/five-or-more.c:1180
 msgid "translator-credits"
 msgstr ""
-"Jiri Grönroos, 2012-2014\n"
+"Jiri Grönroos, 2012-2015\n"
 "Timo Jyrinki, 2008\n"
 "Ilkka Tuohela, 2006-2009\n"
 "Sami Pesonen, 2002-2005\n"
@@ -316,6 +304,19 @@ msgstr ""
 "  Saku Laukkanen https://launchpad.net/~nollapiste\n"
 "  Timo Jyrinki https://launchpad.net/~timo-jyrinki\n"
 "  eGetin https://launchpad.net/~egetin"
+
+#: ../src/five-or-more.c:1304
+#| msgid "Do you want to start a new game?"
+msgid "Are you sure you want to restart the game?"
+msgstr "Haluatko varmasti aloittaa uuden pelin?"
+
+#: ../src/five-or-more.c:1307
+msgid "_Cancel"
+msgstr "_Peru"
+
+#: ../src/five-or-more.c:1308
+msgid "_Restart"
+msgstr "_Aloita alusta"
 
 #. Score dialog column header for the score time (e.g. 1 minute)
 #: ../src/games-scores-dialog.c:132
@@ -336,10 +337,26 @@ msgctxt "score-dialog"
 msgid "%1$dm %2$ds"
 msgstr "%d min %d s"
 
+#: ../src/games-scores-dialog.c:371
+#| msgid "Quit"
+msgid "_Quit"
+msgstr "_Lopeta"
+
+#: ../src/games-scores-dialog.c:378
+msgid "_Undo"
+msgstr "_Peru"
+
+#: ../src/games-scores-dialog.c:392
+msgid "_Close"
+msgstr "_Sulje"
+
 #. Score dialog column header for the date the score was recorded
 #: ../src/games-scores-dialog.c:478
 msgid "Date"
 msgstr "Päiväys"
+
+#~ msgid "New Game"
+#~ msgstr "Uusi peli"
 
 #~ msgid "Five or More Preferences"
 #~ msgstr "Viisi tai enemmän -asetukset"
@@ -422,9 +439,6 @@ msgstr "Päiväys"
 
 #~ msgid "_Reset"
 #~ msgstr "_Alusta"
-
-#~ msgid "_Restart"
-#~ msgstr "_Aloita alusta"
 
 #~ msgid "_Undo Move"
 #~ msgstr "_Peru siirto"
@@ -2102,9 +2116,6 @@ msgstr "Päiväys"
 #~ msgid "New game"
 #~ msgstr "Uusi peli"
 
-#~ msgid "_Undo"
-#~ msgstr "_Peru"
-
 #~ msgid "Undo last action"
 #~ msgstr "Peru edellinen siirto"
 
@@ -2342,10 +2353,6 @@ msgstr "Päiväys"
 
 #~ msgid "Size:"
 #~ msgstr "Koko:"
-
-#~| msgid "Do you want to start a new game with this map?"
-#~ msgid "Do you want to start a new game?"
-#~ msgstr "Haluatko aloittaa uuden pelin?"
 
 #~ msgid "If you start a new game, your current progress will be lost."
 #~ msgstr "Jos aloitat uuden pelin, nykyisen pelisi katoaa."
