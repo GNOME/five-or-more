@@ -1,0 +1,324 @@
+# Bosnian translation for bosnianuniversetranslation
+# Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
+# This file is distributed under the same license as the bosnianuniversetranslation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: bosnianuniversetranslation\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-"
+"or-more&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2015-02-27 05:44+0000\n"
+"PO-Revision-Date: 2015-02-28 15:08+0100\n"
+"Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
+"Language-Team: Bosnian <bs@li.org>\n"
+"Language: bs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Launchpad (build 17341)\n"
+"X-Launchpad-Export-Date: 2015-02-17 06:20+0000\n"
+
+#: ../data/five-or-more.appdata.xml.in.h:1 ../data/five-or-more.desktop.in.h:1
+#: ../data/five-or-more.ui.h:1 ../src/five-or-more.c:1172
+#: ../src/five-or-more.c:1731
+msgid "Five or More"
+msgstr "Pet ili više"
+
+#: ../data/five-or-more.appdata.xml.in.h:2 ../data/five-or-more.desktop.in.h:2
+msgid "Remove colored balls from the board by forming lines"
+msgstr "Uklanjajte obojene lopte sa table formirajući linije"
+
+#: ../data/five-or-more.appdata.xml.in.h:3
+msgid ""
+"Five or More is the GNOME port of a once-popular computer game. Align five "
+"or more objects of the same color into a line to cause them to disappear and "
+"score points. Earn many more points by lining up as many objects as possible "
+"before clearing them."
+msgstr ""
+"Greška prilikom upita za  informacije za  '% s' od strane simboličkih "
+"linkova  '% s':% s."
+
+#: ../data/five-or-more.appdata.xml.in.h:4
+msgid ""
+"More objects appear after every turn. Play for as long as possible, until "
+"the board is completely full!"
+msgstr ""
+"Više objekata se pojavljuje  nakon svakog koraka.Igrajte što je duže moguće, "
+"dok sgod je tabla puna!"
+
+#: ../data/five-or-more.desktop.in.h:3
+msgid "game;strategy;logic;"
+msgstr "igra;strategija;logika;"
+
+#: ../data/five-or-more-preferences.ui.h:1 ../data/menu.ui.h:2
+#: ../src/five-or-more.c:171
+msgid "Preferences"
+msgstr "Podešavanja"
+
+#: ../data/five-or-more-preferences.ui.h:2
+msgid "Appearance"
+msgstr "Izgled"
+
+#: ../data/five-or-more-preferences.ui.h:3
+msgid "_Image:"
+msgstr "_Slika:"
+
+#: ../data/five-or-more-preferences.ui.h:4
+msgid "B_ackground color:"
+msgstr "Boja p_ozadine:"
+
+#: ../data/five-or-more-preferences.ui.h:5
+msgid "Board Size"
+msgstr "Veličina table"
+
+#: ../data/five-or-more-preferences.ui.h:6
+msgid "_Small"
+msgstr "_Malo"
+
+#: ../data/five-or-more-preferences.ui.h:7
+msgid "_Medium"
+msgstr "_Srednja"
+
+#: ../data/five-or-more-preferences.ui.h:8
+msgid "_Large"
+msgstr "_Veliko"
+
+#: ../data/five-or-more-preferences.ui.h:9
+msgid "General"
+msgstr "Opšte"
+
+#: ../data/five-or-more-preferences.ui.h:10
+msgid "_Use fast moves"
+msgstr "_Koristi brze poteze"
+
+#: ../data/five-or-more.ui.h:2
+msgid "Next:"
+msgstr "Sljedeće:"
+
+#: ../data/five-or-more.ui.h:3
+msgid "0"
+msgstr "0"
+
+#: ../data/five-or-more.ui.h:4
+msgid "Score:"
+msgstr "Rezultat:"
+
+#: ../data/five-or-more.ui.h:5 ../src/games-scores-dialog.c:385
+msgid "_New Game"
+msgstr "_Nova igra"
+
+#: ../data/five-or-more.ui.h:6
+msgid "Start a new puzzle"
+msgstr "Započni novu zagonetku"
+
+#: ../data/menu.ui.h:1
+msgid "Scores"
+msgstr "Rezultati"
+
+#: ../data/menu.ui.h:3
+msgid "Help"
+msgstr "Pomoć"
+
+#: ../data/menu.ui.h:4
+msgid "About"
+msgstr "O programu"
+
+#: ../data/menu.ui.h:5
+msgid "Quit"
+msgstr "Izlaz"
+
+#: ../data/org.gnome.five-or-more.gschema.xml.h:1
+msgid "Playing field size"
+msgstr "Veličina polja za igru"
+
+#: ../data/org.gnome.five-or-more.gschema.xml.h:2
+msgid ""
+"Playing field size. 1=Small, 2=Medium, 3=Large. Any other value is invalid."
+msgstr ""
+"Veličina polja za igru. 1=malo, 2=srednje, 3=veliko. Druge vrijednosti nisu "
+"moguće."
+
+#: ../data/org.gnome.five-or-more.gschema.xml.h:3
+msgid "Ball style"
+msgstr "Stil lopte"
+
+#: ../data/org.gnome.five-or-more.gschema.xml.h:4
+msgid "Ball style. The filename of the images to use for the balls."
+msgstr "Stil lopte. Ime datoteke sa slikama koje koristiti za lopte."
+
+#: ../data/org.gnome.five-or-more.gschema.xml.h:5
+msgid "Background color"
+msgstr "Boja pozadine"
+
+#: ../data/org.gnome.five-or-more.gschema.xml.h:6
+msgid "Background color. The hex specification of the background color."
+msgstr "Boja pozadine. Heksadekadna vrijednost za boju pozadine."
+
+#: ../data/org.gnome.five-or-more.gschema.xml.h:7
+msgid "Time between moves"
+msgstr "Vrijeme između poteza"
+
+#: ../data/org.gnome.five-or-more.gschema.xml.h:8
+msgid "Time between moves in milliseconds."
+msgstr "Vrijeme između poteza u milisekundama."
+
+#: ../data/org.gnome.five-or-more.gschema.xml.h:9
+msgid "Game score"
+msgstr "Rezultat igre"
+
+#: ../data/org.gnome.five-or-more.gschema.xml.h:10
+msgid "Game score from last saved session."
+msgstr "Rezultat iz posljednje sačuvane igre."
+
+#: ../data/org.gnome.five-or-more.gschema.xml.h:11
+msgid "Game field"
+msgstr "Polje za igru"
+
+#: ../data/org.gnome.five-or-more.gschema.xml.h:12
+msgid "Game field from last saved session."
+msgstr "Polje za igru iz posljednje sačuvane igre."
+
+#: ../data/org.gnome.five-or-more.gschema.xml.h:13
+msgid "Game preview"
+msgstr "Pregled igre"
+
+#: ../data/org.gnome.five-or-more.gschema.xml.h:14
+msgid "Game preview from last saved session."
+msgstr "Pregled igre iz posljednje sačuvane igre."
+
+#: ../data/org.gnome.five-or-more.gschema.xml.h:15
+msgid "Width of the window in pixels"
+msgstr "Širina prozora u tačkama"
+
+#: ../data/org.gnome.five-or-more.gschema.xml.h:16
+msgid "Height of the window in pixels"
+msgstr "Visina prozora u tačkama"
+
+#: ../data/org.gnome.five-or-more.gschema.xml.h:17
+msgid "true if the window is maximized"
+msgstr "izabrano ako je prozor uvećan"
+
+#: ../src/five-or-more.c:80
+msgctxt "board size"
+msgid "Small"
+msgstr "Mala"
+
+#: ../src/five-or-more.c:81
+msgctxt "board size"
+msgid "Medium"
+msgstr "Srednja"
+
+#: ../src/five-or-more.c:82
+msgctxt "board size"
+msgid "Large"
+msgstr "Velika"
+
+#: ../src/five-or-more.c:165
+msgid "Could not load theme"
+msgstr "Ne mogu da učitam temu"
+
+#: ../src/five-or-more.c:191
+#, c-format
+msgid ""
+"Unable to locate file:\n"
+"%s\n"
+"\n"
+"The default theme will be loaded instead."
+msgstr ""
+"Ne mogu da pronađem datoteku:\n"
+"%s\n"
+"\n"
+"Učitavam podrazumijevanu temu."
+
+#: ../src/five-or-more.c:198
+#, c-format
+msgid ""
+"Unable to locate file:\n"
+"%s\n"
+"\n"
+"Please check that Five or More is installed correctly."
+msgstr ""
+"Ne mogu da pronađem datoteku:\n"
+"%s\n"
+"\n"
+"Provjerite da li je Pet ili više ispravno instaliran."
+
+#: ../src/five-or-more.c:407
+msgid "Match five objects of the same type in a row to score!"
+msgstr "Povežite pet predmeta iste vrste u nizu da bi osvojili poene!"
+
+#: ../src/five-or-more.c:468
+msgid "Five or More Scores"
+msgstr "Pet ili više rezultata"
+
+#: ../src/five-or-more.c:470
+msgid "_Board size:"
+msgstr "_Veličina table:"
+
+#: ../src/five-or-more.c:487
+msgid "Game Over!"
+msgstr "Igra je gotova!"
+
+#. Can't move there!
+#: ../src/five-or-more.c:644
+msgid "You can’t move there!"
+msgstr "Ne možeš se pomjeriti tamo!"
+
+#: ../src/five-or-more.c:1174
+msgid "GNOME port of the once-popular Color Lines game"
+msgstr "GNOME port nekada popularne Color Lines igre"
+
+#: ../src/five-or-more.c:1180
+msgid "translator-credits"
+msgstr ""
+"   Dženana https://launchpad.net/~dkapetanov1\n"
+"  Samir Ribić https://launchpad.net/~megaribi"
+
+#: ../src/five-or-more.c:1304
+msgid "Are you sure you want to restart the game?"
+msgstr "Da li ste sigurni da želite ponovo pokrenuti igru?"
+
+#: ../src/five-or-more.c:1307
+msgid "_Cancel"
+msgstr "_Odustani"
+
+#: ../src/five-or-more.c:1308
+msgid "_Restart"
+msgstr "_Ponovo pokreni"
+
+#. Score dialog column header for the score time (e.g. 1 minute)
+#: ../src/games-scores-dialog.c:132
+msgctxt "score-dialog"
+msgid "Time"
+msgstr "Vrijeme"
+
+#. Score dialog column header for the score value (e.g. 30 moves)
+#: ../src/games-scores-dialog.c:138
+msgctxt "score-dialog"
+msgid "Score"
+msgstr "Rezultat"
+
+#. Score format for time based scores.  %1$d is the time in minutes, %2$d is the time in seconds
+#: ../src/games-scores-dialog.c:225
+#, c-format
+msgctxt "score-dialog"
+msgid "%1$dm %2$ds"
+msgstr "%1$dm %2$ds"
+
+#: ../src/games-scores-dialog.c:371
+msgid "_Quit"
+msgstr "_Izlaz"
+
+#: ../src/games-scores-dialog.c:378
+msgid "_Undo"
+msgstr "_Poništi"
+
+#: ../src/games-scores-dialog.c:392
+msgid "_Close"
+msgstr "_Zatvori"
+
+#. Score dialog column header for the date the score was recorded
+#: ../src/games-scores-dialog.c:478
+msgid "Date"
+msgstr "Datum"
