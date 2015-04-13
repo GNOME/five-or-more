@@ -1,5 +1,5 @@
 AC_PREREQ([2.63])
-AC_INIT([Five or More], [3.16.0], [https://bugzilla.gnome.org/],
+AC_INIT([Five or More], [3.16.1], [https://bugzilla.gnome.org/],
         [five-or-more], [https://wiki.gnome.org/Apps/Five%20or%20more])
 AM_INIT_AUTOMAKE([1.11 no-dist-gzip dist-xz foreign])
 AM_SILENT_RULES([yes])
