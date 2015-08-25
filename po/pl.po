@@ -21,8 +21,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: five-or-more\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-03-02 19:22+0100\n"
-"PO-Revision-Date: 2015-03-02 19:24+0100\n"
+"POT-Creation-Date: 2015-08-25 13:44+0200\n"
+"PO-Revision-Date: 2015-08-25 13:45+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <gnomepl@aviary.pl>\n"
 "Language: pl\n"
@@ -213,7 +213,7 @@ msgstr "Wysokość okna w pikselach"
 
 #: ../data/org.gnome.five-or-more.gschema.xml.h:17
 msgid "true if the window is maximized"
-msgstr "Wartość \"true\" oznacza, że okno jest zmaksymalizowane"
+msgstr "Wartość „true” oznacza, że okno jest zmaksymalizowane"
 
 #: ../src/five-or-more.c:80
 msgctxt "board size"
@@ -258,7 +258,7 @@ msgstr ""
 "Nie można odnaleźć pliku:\n"
 "%s\n"
 "\n"
-"Proszę się upewnić, że gra \"Kulki\" została prawidłowo zainstalowana."
+"Proszę się upewnić, że gra „Kulki” została prawidłowo zainstalowana."
 
 #: ../src/five-or-more.c:407
 msgid "Match five objects of the same type in a row to score!"
@@ -280,7 +280,7 @@ msgstr "Koniec gry!"
 #. Can't move there!
 #: ../src/five-or-more.c:644
 msgid "You can’t move there!"
-msgstr "Nie można tam przenieść!"
+msgstr "Nie można tam przenieść."
 
 #: ../src/five-or-more.c:1174
 msgid "GNOME port of the once-popular Color Lines game"
@@ -332,7 +332,7 @@ msgstr "Wynik"
 #, c-format
 msgctxt "score-dialog"
 msgid "%1$dm %2$ds"
-msgstr "%1$dm %2$ds"
+msgstr "%1$d m %2$d s"
 
 #: ../src/games-scores-dialog.c:371
 msgid "_Quit"
