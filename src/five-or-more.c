@@ -1667,7 +1667,7 @@ startup_cb (GApplication *application)
 
   gtk_widget_set_events (draw_area,
                          gtk_widget_get_events (draw_area) |
-                         GDK_BUTTON_PRESS_MASK | GDK_KEY_PRESS_MASK);
+                         GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK | GDK_KEY_PRESS_MASK);
 
   gtk_widget_set_can_focus (draw_area, TRUE);
   gtk_widget_grab_focus (draw_area);
