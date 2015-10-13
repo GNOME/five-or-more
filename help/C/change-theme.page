@@ -24,9 +24,9 @@
 <item><p>Click <guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq>.</p>
 
 <list>
-<item><p>Select <gui>balls</gui> or <gui>shapes</gui> from the <gui>Image</gui>
+<item><p>Select <gui>balls</gui>, <gui>dots</gui>, <gui>gumball</gui> or <gui>shapes</gui> from the <gui>Image</gui>
  drop down menu to change the playing pieces.</p></item>
-<item><p>Click on the colored box next to <gui>Image background</gui> to access
+<item><p>Click on the colored box next to <gui>Background color</gui> to access
  the color palette.</p></item>
 </list>
 </item>
@@ -37,6 +37,14 @@
 <title>Images available</title>
   <media type="image" src="figures/color-balls.png" width="300" style="floatleft" its:translate="no">
   <p its:translate="yes">Five or More with different balls</p>
+</media>
+
+<media type="image" src="figures/color-dots.png" width="300" its:translate="no">
+<p its:translate="yes"><app>Five or More</app> with different dots</p>
+</media>
+
+<media type="image" src="figures/color-gumball.png" width="300" its:translate="no">
+<p its:translate="yes"><app>Five or More</app> with different gumballs</p>
 </media>
 
 <media type="image" src="figures/color-shapes.png" width="300" its:translate="no">
