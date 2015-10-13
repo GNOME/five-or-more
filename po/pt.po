@@ -2,14 +2,16 @@
 # Copyright © 1998, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013 gnome-games
 # Distributed under the same licence as the gnome-games package
 # Nuno Ferreira <nmrf@rnl.ist.utl.pt>, 1998.
-# Duarte Loreto <happyguy_pt@hotmail.com>, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013.
-# 
+# Pedro Albuquerque <palbuquerque73@openmailbox.com>, 2015.
+# Duarte Loreto <happyguy_pt@hotmail.com>, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2015.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: 3.10\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-23 02:11+0100\n"
-"PO-Revision-Date: 2013-09-23 02:15+0000\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-"
+"or-more&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2015-09-29 05:13+0000\n"
+"PO-Revision-Date: 2015-10-13 09:42+0100\n"
 "Last-Translator: Duarte Loreto <happyguy_pt@hotmail.com>\n"
 "Language-Team: Portuguese <gnome_pt@yahoogroups.com>\n"
 "Language: pt\n"
@@ -17,11 +19,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 2.91.6\n"
 
 #: ../data/glines.desktop.in.in.h:1 ../data/five-or-more.ui.h:1
-#: ../src/glines.c:1176 ../src/glines.c:1179 ../src/glines.c:1704
+#: ../src/glines.c:1176 ../src/glines.c:1179 ../src/glines.c:1710
 msgid "Five or More"
-msgstr "Cinco ou Mais"
+msgstr "Cinco ou mais"
 
 #: ../data/glines.desktop.in.in.h:2
 msgid "Remove colored balls from the board by forming lines"
@@ -33,7 +36,7 @@ msgstr "jogo;estratégia;lógica;"
 
 #: ../data/five-or-more-preferences.ui.h:1
 msgid "Five or More Preferences"
-msgstr "Preferências do Cinco ou Mais"
+msgstr "Preferências do Cinco ou mais"
 
 #: ../data/five-or-more-preferences.ui.h:2
 msgid "Appearance"
@@ -45,11 +48,11 @@ msgstr "_Imagem:"
 
 #: ../data/five-or-more-preferences.ui.h:4
 msgid "B_ackground color:"
-msgstr "C_or de fundo:"
+msgstr "_Cor de fundo:"
 
 #: ../data/five-or-more-preferences.ui.h:5
 msgid "Board Size"
-msgstr "Tamanho do Tabuleiro"
+msgstr "Tamanho do tabuleiro"
 
 #: ../data/five-or-more-preferences.ui.h:6
 msgid "_Small"
@@ -65,7 +68,7 @@ msgstr "_Grande"
 
 #: ../data/five-or-more-preferences.ui.h:9
 msgid "General"
-msgstr "General"
+msgstr "Geral"
 
 #: ../data/five-or-more-preferences.ui.h:10
 msgid "_Use fast moves"
@@ -85,7 +88,7 @@ msgstr "Pontuação:"
 
 #: ../data/menu.ui.h:1 ../src/games-scores-dialog.c:470
 msgid "New Game"
-msgstr "Novo Jogo"
+msgstr "Novo jogo"
 
 #: ../data/menu.ui.h:2
 msgid "Scores"
@@ -125,7 +128,7 @@ msgstr "Estilo de bola"
 #: ../data/org.gnome.five-or-more.gschema.xml.in.h:4
 msgid "Ball style. The filename of the images to use for the balls."
 msgstr ""
-"Estilo de bola. O nome deo ficheiro de imagens a utilizar para as bolas."
+"Estilo de bola. O nome do ficheiro de imagens a utilizar para as bolas."
 
 #: ../data/org.gnome.five-or-more.gschema.xml.in.h:5
 msgid "Background color"
@@ -141,7 +144,7 @@ msgstr "Pausa entre jogadas"
 
 #: ../data/org.gnome.five-or-more.gschema.xml.in.h:8
 msgid "Time between moves in milliseconds."
-msgstr "Pausa, em milisegundos, entre jogadas."
+msgstr "Pausa, em milissegundos, entre jogadas."
 
 #: ../data/org.gnome.five-or-more.gschema.xml.in.h:9
 msgid "Game score"
@@ -215,7 +218,7 @@ msgstr "Data"
 
 #: ../src/games-stock.c:41
 msgid "View help for this game"
-msgstr "Apresentar a ajuda deste jogo"
+msgstr "Mostrar a ajuda deste jogo"
 
 #: ../src/games-stock.c:42
 msgid "End the current game"
@@ -251,7 +254,7 @@ msgstr "Pausar o jogo"
 
 #: ../src/games-stock.c:50
 msgid "Show a list of players in the network game"
-msgstr "Apresentar uma lista de jogadores no jogo em rede"
+msgstr "Mostrar uma lista de jogadores no jogo em rede"
 
 #: ../src/games-stock.c:51
 msgid "Redo the undone move"
@@ -267,7 +270,7 @@ msgstr "Retomar o jogo pausado"
 
 #: ../src/games-stock.c:54
 msgid "View the scores"
-msgstr "Visualizar as pontuações"
+msgstr "Ver as pontuações"
 
 #: ../src/games-stock.c:55
 msgid "Undo the last move"
@@ -295,7 +298,7 @@ msgstr "_Conteúdo"
 
 #: ../src/games-stock.c:248
 msgid "_Fullscreen"
-msgstr "_Ecrã Completo"
+msgstr "_Ecrã completo"
 
 #: ../src/games-stock.c:249
 msgid "_Hint"
@@ -309,11 +312,11 @@ msgstr "_Novo"
 #. Translators: This "_New Game" is for the game-over dialogue
 #: ../src/games-stock.c:253
 msgid "_New Game"
-msgstr "_Novo Jogo"
+msgstr "_Novo jogo"
 
 #: ../src/games-stock.c:254
 msgid "_Redo Move"
-msgstr "_Refazer a Jogada"
+msgstr "_Refazer a jogada"
 
 #. Translators: this is the "Reset" scores button in a scores dialogue
 #: ../src/games-stock.c:256
@@ -327,7 +330,7 @@ msgstr "_Reiniciar"
 
 #: ../src/games-stock.c:259
 msgid "_Undo Move"
-msgstr "_Desfazer a Jogada"
+msgstr "_Desfazer a jogada"
 
 #: ../src/games-stock.c:260
 msgid "_Deal"
@@ -335,19 +338,19 @@ msgstr "_Dar as cartas"
 
 #: ../src/games-stock.c:261
 msgid "_Leave Fullscreen"
-msgstr "_Deixar Ecrã Completo"
+msgstr "_Deixar ecrã completo"
 
 #: ../src/games-stock.c:262
 msgid "Network _Game"
-msgstr "_Jogo em Rede"
+msgstr "_Jogo em rede"
 
 #: ../src/games-stock.c:263
 msgid "L_eave Game"
-msgstr "_Abandonar o Jogo"
+msgstr "_Abandonar o jogo"
 
 #: ../src/games-stock.c:264
 msgid "Player _List"
-msgstr "_Lista de Jogadores"
+msgstr "_Lista de jogadores"
 
 #: ../src/games-stock.c:265
 msgid "_Pause"
@@ -355,7 +358,7 @@ msgstr "_Pausa"
 
 #: ../src/games-stock.c:266
 msgid "Res_ume"
-msgstr "Re_tomar"
+msgstr "Re_Tomar"
 
 #: ../src/games-stock.c:267
 msgid "_Scores"
@@ -363,7 +366,7 @@ msgstr "_Pontuações"
 
 #: ../src/games-stock.c:268
 msgid "_End Game"
-msgstr "_Terminar o Jogo"
+msgstr "_Terminar o jogo"
 
 #. %s is replaced with the name of the game in gnome-games.
 #: ../src/games-stock.c:317
@@ -388,7 +391,7 @@ msgid ""
 "details."
 msgstr ""
 "%s é distribuído na expectativa de que possa ser útil, mas SEM QUALQUER "
-"GARANTIA; nem mesmo a garantia implícita de COMERCIABILIDADE ou ADEQUAÇÃO A "
+"GARANTIA; nem mesmo a garantia implícita de COMERCIALIZAÇÃO ou ADEQUAÇÃO A "
 "UM FIM ESPECÍFICO.  Consulte a Licença Pública Genérica GNU para mais "
 "detalhes."
 
@@ -428,7 +431,7 @@ msgstr "Grande"
 
 #: ../src/glines.c:170
 msgid "Could not load theme"
-msgstr "Incapaz de ler o tema"
+msgstr "Impossível carregar o tema"
 
 #: ../src/glines.c:196
 #, c-format
@@ -438,10 +441,10 @@ msgid ""
 "\n"
 "The default theme will be loaded instead."
 msgstr ""
-"Incapaz de localizar o ficheiro:\n"
+"Impossível localizar o ficheiro:\n"
 "%s\n"
 "\n"
-"Será lido o tema por omissão."
+"Será lido o tema predefinido."
 
 #: ../src/glines.c:203
 #, c-format
@@ -451,10 +454,10 @@ msgid ""
 "\n"
 "Please check that Five or More is installed correctly."
 msgstr ""
-"Incapaz de encontrar o ficheiro:\n"
+"Impossível encontrar o ficheiro:\n"
 "%s\n"
 "\n"
-"Confirme se o Cinco ou Mais está corretamente instalado."
+"Confirme se o Cinco ou mais está corretamente instalado."
 
 #: ../src/glines.c:408
 msgid "Match five objects of the same type in a row to score!"
@@ -462,7 +465,7 @@ msgstr "Coincida cinco objetos do mesmo tipo numa linha para pontuar!"
 
 #: ../src/glines.c:472
 msgid "GNOME Five or More"
-msgstr "GNOME Cinco ou Mais"
+msgstr "GNOME Cinco ou mais"
 
 #: ../src/glines.c:474
 msgid "_Board size:"
@@ -470,7 +473,7 @@ msgstr "_Tamanho do tabuleiro:"
 
 #: ../src/glines.c:491
 msgid "Game Over!"
-msgstr "Jogo Terminado!"
+msgstr "Jogo terminado!"
 
 #. Can't move there!
 #: ../src/glines.c:648
@@ -483,13 +486,15 @@ msgid ""
 "\n"
 "Five or More is a part of GNOME Games."
 msgstr ""
-"Conversão para o GNOME do popular Jogo do Galo.\n"
+"Conversão para o GNOME do popular Jogo do galo.\n"
 "\n"
-"Cinco ou Mais faz parte dos Jogos GNOME."
+"Cinco ou mais faz parte dos Jogos GNOME."
 
 #: ../src/glines.c:1187
 msgid "translator-credits"
-msgstr "Duarte Loreto <happyguy_pt@hotmail.com>"
+msgstr ""
+"Duarte Loreto <happyguy_pt@hotmail.com>\n"
+"Pedro Albuquerque <palbuquerque73@gmail.com>"
 
 #: ../src/glines.c:1190
 msgid "GNOME Games web site"
@@ -7468,15 +7473,15 @@ msgstr "Página dos jogos GNOME"
 #~ "%(move)s White %(piece)s at %1$s takes the black %(victim_piece)s at %2$s "
 #~ "(%(result)s)"
 #~ msgstr ""
-#~ "%(move)s %(piece)s Branco em %1$s toma o %(victim_piece)s Preto em %(end)"
-#~ "s (%(result)s)"
+#~ "%(move)s %(piece)s Branco em %1$s toma o %(victim_piece)s Preto em "
+#~ "%(end)s (%(result)s)"
 
 #~ msgid ""
 #~ "%(move)s Black %(piece)s at %1$s takes the white %(victim_piece)s at %2$s "
 #~ "(%(result)s)"
 #~ msgstr ""
-#~ "%(move)s %(piece)s Preto em %1$s toma o %(victim_piece)s Branco em %(end)"
-#~ "s (%(result)s)"
+#~ "%(move)s %(piece)s Preto em %1$s toma o %(victim_piece)s Branco em "
+#~ "%(end)s (%(result)s)"
 
 #~ msgid "%(move)s White %(piece)s moves from %1$s to %2$s (%(result)s)"
 #~ msgstr "%(move)s %(piece)s Branco é movido de %1$s para %2$s (%(result)s)"
