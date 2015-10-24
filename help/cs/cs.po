@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games gnome-2-28\n"
-"POT-Creation-Date: 2014-04-23 04:47+0000\n"
-"PO-Revision-Date: 2014-04-23 09:38+0100\n"
+"POT-Creation-Date: 2015-10-24 05:21+0000\n"
+"PO-Revision-Date: 2015-10-24 10:29+0200\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -312,16 +312,16 @@ msgstr "Klikněte na <guiseq><gui>Nastavení</gui><gui>Předvolby</gui></guiseq>
 #. (itstool) path: item/p
 #: C/change-theme.page:27
 msgid ""
-"Select <gui>balls</gui> or <gui>shapes</gui> from the <gui>Image</gui> drop "
-"down menu to change the playing pieces."
+"Select <gui>balls</gui>, <gui>dots</gui>, <gui>gumball</gui> or <gui>shapes</"
+"gui> from the <gui>Image</gui> drop down menu to change the playing pieces."
 msgstr ""
-"Výběrem <gui>kuliček</gui> nebo <gui>tvarů</gui> v robalovací nabídce "
-"<gui>Obrázek</gui> změňte hrací kameny."
+"Výběrem <gui>kuliček</gui>, <gui>teček</gui>, <gui>hopskulek</gui> nebo <gui>"
+"tvarů</gui> v robalovací nabídce <gui>Obrázek</gui> změňte hrací kameny."
 
 #. (itstool) path: item/p
 #: C/change-theme.page:29
 msgid ""
-"Click on the colored box next to <gui>Image background</gui> to access the "
+"Click on the colored box next to <gui>Background color</gui> to access the "
 "color palette."
 msgstr ""
 "Kliknutím na barevný obdélníček vedle <gui>Barva pozadí</gui> se dostanete k "
@@ -344,16 +344,26 @@ msgstr "Hra <app>Pět nebo víc</app> s různými kuličkami"
 
 #. (itstool) path: media/p
 #: C/change-theme.page:43
+msgid "<app>Five or More</app> with different dots"
+msgstr "Hra <app>Pět nebo víc</app> s různými tečkami"
+
+#. (itstool) path: media/p
+#: C/change-theme.page:47
+msgid "<app>Five or More</app> with different gumballs"
+msgstr "Hra <app>Pět nebo víc</app> s různými hopskulkami"
+
+#. (itstool) path: media/p
+#: C/change-theme.page:51
 msgid "<app>Five or More</app> with different shapes"
 msgstr "Hra <app>Pět nebo víc</app> s různými tvary"
 
 #. (itstool) path: section/title
-#: C/change-theme.page:48
+#: C/change-theme.page:56
 msgid "Background colors available"
 msgstr "Dostupné barvy pozadí"
 
 #. (itstool) path: media/p
-#: C/change-theme.page:50
+#: C/change-theme.page:58
 msgid "Five or More color palette"
 msgstr "Barevná paleta ve hře <app>Pět nebo víc</app>"
 
