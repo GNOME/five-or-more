@@ -3,13 +3,13 @@
 # Traducción al español del manual de glines / cinco o más
 #
 # Jorge González <jorgegonz@svn.gnome.org>, 2007, 200, 2009.
-# Daniel Mustieles <daniel.mustieles@gmail.com>, 2011, 2012, 2013, 2014.
+# Daniel Mustieles <daniel.mustieles@gmail.com>, 2011, 2012, 2013, 2014, 2015.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: glines.HEAD\n"
-"POT-Creation-Date: 2014-05-08 16:49+0000\n"
-"PO-Revision-Date: 2014-05-10 18:11+0200\n"
+"POT-Creation-Date: 2015-11-16 06:25+0000\n"
+"PO-Revision-Date: 2015-11-17 16:37+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español; Castellano <gnome-es-list@gnome.org>\n"
 "Language: \n"
@@ -23,7 +23,7 @@ msgstr ""
 msgctxt "_"
 msgid "translator-credits"
 msgstr ""
-"Daniel Mustieles <daniel.mustieles@gmail.com>, 2011-2014\n"
+"Daniel Mustieles <daniel.mustieles@gmail.com>, 2011-2015\n"
 "Jorge González <jorgegonz@svn.gnome.org>, 2007-2009"
 
 #. (itstool) path: credit/name
@@ -315,17 +315,24 @@ msgstr "Pulse <guiseq><gui>Editar</gui><gui>Preferencias</gui></guiseq>."
 
 #. (itstool) path: item/p
 #: C/change-theme.page:27
+#| msgid ""
+#| "Select <gui>balls</gui> or <gui>shapes</gui> from the <gui>Image</gui> "
+#| "drop down menu to change the playing pieces."
 msgid ""
-"Select <gui>balls</gui> or <gui>shapes</gui> from the <gui>Image</gui> drop "
-"down menu to change the playing pieces."
+"Select <gui>balls</gui>, <gui>dots</gui>, <gui>gumball</gui> or <gui>shapes</"
+"gui> from the <gui>Image</gui> drop down menu to change the playing pieces."
 msgstr ""
-"Seleccione <gui>bolas</gui> o <gui>formas</gui> en el menú desplegable "
-"<gui>Imagen</gui> para cambiar las fichas del juego."
+"Seleccione <gui>bolas</gui>, <gui>puntos</gui>, <gui>bola de goma</gui> o "
+"<gui>formas</gui> en el menú desplegable <gui>Imagen</gui> para cambiar las "
+"fichas del juego."
 
 #. (itstool) path: item/p
 #: C/change-theme.page:29
+#| msgid ""
+#| "Click on the colored box next to <gui>Image background</gui> to access "
+#| "the color palette."
 msgid ""
-"Click on the colored box next to <gui>Image background</gui> to access the "
+"Click on the colored box next to <gui>Background color</gui> to access the "
 "color palette."
 msgstr ""
 "Pulse en la caja coloreada junto a <gui>Imagen de fondo</gui> para acceder a "
@@ -348,16 +355,28 @@ msgstr "Cinco o más con diferentes bolas"
 
 #. (itstool) path: media/p
 #: C/change-theme.page:43
+#| msgid "<app>Five or More</app> with different shapes"
+msgid "<app>Five or More</app> with different dots"
+msgstr "<app>Cinco o más</app> con diferentes puntos"
+
+#. (itstool) path: media/p
+#: C/change-theme.page:47
+#| msgid "<app>Five or More</app> with different shapes"
+msgid "<app>Five or More</app> with different gumballs"
+msgstr "<app>Cinco o más</app> con diferentes bolas de goma"
+
+#. (itstool) path: media/p
+#: C/change-theme.page:51
 msgid "<app>Five or More</app> with different shapes"
 msgstr "<app>Cinco o más</app> con diferentes formas"
 
 #. (itstool) path: section/title
-#: C/change-theme.page:48
+#: C/change-theme.page:56
 msgid "Background colors available"
 msgstr "Colores de fondo disponibles"
 
 #. (itstool) path: media/p
-#: C/change-theme.page:50
+#: C/change-theme.page:58
 msgid "Five or More color palette"
 msgstr "Paleta de color de Cinco o más"
 
@@ -467,15 +486,11 @@ msgstr "Cinco o más"
 
 #. (itstool) path: media/span
 #: C/index.page:27
-#| msgctxt "link"
-#| msgid "Five or More"
 msgid "Five or More logo"
 msgstr "Logo de Cinco o más"
 
 #. (itstool) path: page/title
 #: C/index.page:26
-#| msgctxt "link"
-#| msgid "Five or More"
 msgid "<_:media-1/> Five or More"
 msgstr "<_:media-1/> Cinco o más"
 
