@@ -4,13 +4,14 @@
 # Nuno Ferreira <nmrf@rnl.ist.utl.pt>, 1998.
 # Duarte Loreto <happyguy_pt@hotmail.com>, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013.
 # Tiago S. <almosthumane@portugalmail.pt>, 2014.
+# Pedro Albuquerque <palbuquerque73@gmail.com>, 2015.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: 3.12\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-"
 "or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-10-06 16:53+0000\n"
+"POT-Creation-Date: 2015-10-19 05:12+0000\n"
 "PO-Revision-Date: 2014-10-08 08:31+0100\n"
 "Last-Translator: Pedro Albuquerque <palbuquerque73@gmail.com>\n"
 "Language-Team: Portuguese <gnome_pt@yahoogroups.com>\n"
@@ -69,7 +70,7 @@ msgstr "_Imagem:"
 
 #: ../data/five-or-more-preferences.ui.h:4
 msgid "B_ackground color:"
-msgstr "C_or de fundo:"
+msgstr "_Cor de fundo:"
 
 #: ../data/five-or-more-preferences.ui.h:5
 msgid "Board Size"
@@ -89,7 +90,7 @@ msgstr "_Grande"
 
 #: ../data/five-or-more-preferences.ui.h:9
 msgid "General"
-msgstr "General"
+msgstr "Geral"
 
 #: ../data/five-or-more-preferences.ui.h:10
 msgid "_Use fast moves"
@@ -112,7 +113,6 @@ msgid "_New Game"
 msgstr "_Novo jogo"
 
 #: ../data/five-or-more.ui.h:6
-#| msgid "Start a new game"
 msgid "Start a new puzzle"
 msgstr "Iniciar um novo jogo"
 
@@ -134,7 +134,7 @@ msgstr "Sobre"
 
 #: ../data/menu.ui.h:6
 msgid "Quit"
-msgstr "_Sair"
+msgstr "Sair"
 
 #: ../data/org.gnome.five-or-more.gschema.xml.h:1
 msgid "Playing field size"
@@ -170,7 +170,7 @@ msgstr "Pausa entre jogadas"
 
 #: ../data/org.gnome.five-or-more.gschema.xml.h:8
 msgid "Time between moves in milliseconds."
-msgstr "Pausa, em milisegundos, entre jogadas."
+msgstr "Pausa, em milissegundos, entre jogadas."
 
 #: ../data/org.gnome.five-or-more.gschema.xml.h:9
 msgid "Game score"
@@ -225,7 +225,7 @@ msgstr "Grande"
 
 #: ../src/five-or-more.c:167
 msgid "Could not load theme"
-msgstr "Incapaz de ler o tema"
+msgstr "Impossível carregar o tema"
 
 #: ../src/five-or-more.c:193
 #, c-format
@@ -235,10 +235,10 @@ msgid ""
 "\n"
 "The default theme will be loaded instead."
 msgstr ""
-"Incapaz de localizar o ficheiro:\n"
+"Impossível localizar o ficheiro:\n"
 "%s\n"
 "\n"
-"Será lido o tema por omissão."
+"Será lido o tema predefinido."
 
 #: ../src/five-or-more.c:200
 #, c-format
@@ -248,7 +248,7 @@ msgid ""
 "\n"
 "Please check that Five or More is installed correctly."
 msgstr ""
-"Incapaz de encontrar o ficheiro:\n"
+"Impossível encontrar o ficheiro:\n"
 "%s\n"
 "\n"
 "Confirme se o Cinco ou mais está corretamente instalado."
@@ -280,13 +280,15 @@ msgid ""
 "\n"
 "Five or More is a part of GNOME Games."
 msgstr ""
-"Conversão para o GNOME do popular Jogo do Color Lines.\n"
+"Conversão para o GNOME do popular jogo Linhas de cores.\n"
 "\n"
 "Cinco ou mais faz parte dos Jogos GNOME."
 
 #: ../src/five-or-more.c:1182
 msgid "translator-credits"
-msgstr "Duarte Loreto <happyguy_pt@hotmail.com>"
+msgstr ""
+"Duarte Loreto <happyguy_pt@hotmail.com>\n"
+"Pedro Albuquerque <palbuquerque73@gmail.com>"
 
 #. Score dialog column header for the score time (e.g. 1 minute)
 #: ../src/games-scores-dialog.c:132
