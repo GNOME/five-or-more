@@ -1,10 +1,11 @@
 AC_PREREQ([2.63])
 AC_INIT([Five or More], [3.19.3], [https://bugzilla.gnome.org/],
         [five-or-more], [https://wiki.gnome.org/Apps/Five%20or%20more])
+AC_CONFIG_MACRO_DIR([m4])
+
 AM_INIT_AUTOMAKE([1.11 no-dist-gzip dist-xz foreign])
 AM_SILENT_RULES([yes])
 AM_MAINTAINER_MODE
-GNOME_MAINTAINER_MODE_DEFINES
 AC_CONFIG_HEADERS([config.h])
 
 AM_PROG_CC_C_O
