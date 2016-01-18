@@ -1,3 +1,10 @@
+3.19.4 - January 18, 2016
+==================
+
+* Updated translations
+* Stop using deprecated gnome-common (Sahil Sareen)
+* Add pre-commit and pre-applypatch hooks (Sahil Sareen)
+
 3.19.3 - December 14, 2015
 ============================
 
