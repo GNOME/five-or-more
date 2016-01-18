@@ -8,14 +8,15 @@
 # KAMAGASAKO Masatoshi <emerald@gnome.gr.jp>, 2003.
 # Satoru SATOH <ss@gnome.gr.jp>, 2006.
 # Shushi KUROSE <md81bird@hitaki.net>, 2012.
-# Jiro Matsuzawa <jmatsuzawa@gnome.org>, 2013.
+# Jiro Matsuzawa <jmatsuzawa@gnome.org>, 2013, 2016.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-games gnome-2-32\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-08-11 16:36+0000\n"
-"PO-Revision-Date: 2013-09-16 09:56+0900\n"
+"Project-Id-Version: five-or-more master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-"
+"or-more&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2016-01-01 18:26+0000\n"
+"PO-Revision-Date: 2016-01-02 13-28+0900\n"
 "Last-Translator: Jiro Matsuzawa <jmatsuzawa@gnome.org>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "Language: ja\n"
@@ -24,22 +25,42 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../data/glines.desktop.in.in.h:1 ../data/five-or-more.ui.h:1
-#: ../src/glines.c:1176 ../src/glines.c:1179 ../src/glines.c:1703
+#: ../data/five-or-more.appdata.xml.in.h:1 ../data/five-or-more.desktop.in.h:1
+#: ../data/five-or-more.ui.h:1 ../src/five-or-more.c:1172
+#: ../src/five-or-more.c:1731
 msgid "Five or More"
 msgstr "Five or More"
 
-#: ../data/glines.desktop.in.in.h:2
+#: ../data/five-or-more.appdata.xml.in.h:2 ../data/five-or-more.desktop.in.h:2
 msgid "Remove colored balls from the board by forming lines"
-msgstr "色の付いた玉を並べて盤面から取り去ってください"
+msgstr "色の付いた石を並べて盤から取り去るゲームです"
 
-#: ../data/glines.desktop.in.in.h:3
+#: ../data/five-or-more.appdata.xml.in.h:3
+msgid ""
+"Five or More is the GNOME port of a once-popular computer game. Align five "
+"or more objects of the same color into a line to cause them to disappear and "
+"score points. Earn many more points by lining up as many objects as possible "
+"before clearing them."
+msgstr ""
+"Five or More は、かつて人気のあったコンピューターゲームの GNOME 版です。"
+"同じ色の石を 5 個以上一列に並べると、石が消えて得点が入ります。"
+"石を消すときにできるだけ多くの石を並べると、その分得点もたくさん入ります。"
+
+#: ../data/five-or-more.appdata.xml.in.h:4
+msgid ""
+"More objects appear after every turn. Play for as long as possible, until "
+"the board is completely full!"
+msgstr ""
+"ターン毎に石は増えていきます。盤が石で一杯になればゲーム終了です。できるだけ長くプレイしましょう。"
+
+#: ../data/five-or-more.desktop.in.h:3
 msgid "game;strategy;logic;"
 msgstr "game;strategy;logic;ゲーム;ストラテジー;ロジック;論理;puzzle;パズル;"
 
-#: ../data/five-or-more-preferences.ui.h:1
-msgid "Five or More Preferences"
-msgstr "Five or More の設定"
+#: ../data/five-or-more-preferences.ui.h:1 ../data/menu.ui.h:2
+#: ../src/five-or-more.c:171
+msgid "Preferences"
+msgstr "設定"
 
 #: ../data/five-or-more-preferences.ui.h:2
 msgid "Appearance"
@@ -59,15 +80,15 @@ msgstr "盤の大きさ"
 
 #: ../data/five-or-more-preferences.ui.h:6
 msgid "_Small"
-msgstr "小さい(_S)"
+msgstr "小(_S)"
 
 #: ../data/five-or-more-preferences.ui.h:7
 msgid "_Medium"
-msgstr "中くらい(_M)"
+msgstr "中(_M)"
 
 #: ../data/five-or-more-preferences.ui.h:8
 msgid "_Large"
-msgstr "大きい(_L)"
+msgstr "大(_L)"
 
 #: ../data/five-or-more-preferences.ui.h:9
 msgid "General"
@@ -79,7 +100,7 @@ msgstr "素早く移動する(_U)"
 
 #: ../data/five-or-more.ui.h:2
 msgid "Next:"
-msgstr "次のライン:"
+msgstr "次:"
 
 #: ../data/five-or-more.ui.h:3
 msgid "0"
@@ -89,324 +110,121 @@ msgstr "0"
 msgid "Score:"
 msgstr "得点:"
 
-#: ../data/menu.ui.h:1 ../src/games-scores-dialog.c:470
-msgid "New Game"
-msgstr "新しいゲーム"
-
-#: ../data/menu.ui.h:2
-msgid "Scores"
-msgstr "得点"
-
-#: ../data/menu.ui.h:3 ../src/glines.c:176
-msgid "Preferences"
-msgstr "設定"
-
-#: ../data/menu.ui.h:4
-msgid "Help"
-msgstr "ヘルプ"
-
-#: ../data/menu.ui.h:5
-msgid "About"
-msgstr "このアプリケーションについて"
-
-#: ../data/menu.ui.h:6
-msgid "Quit"
-msgstr "終了"
-
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:1
-msgid "Playing field size"
-msgstr "プレイするフィールドの大きさ"
-
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:2
-msgid "Playing field size. 1=Small, 2=Medium, 3=Large. Any other value is invalid."
-msgstr "プレイするフィールドの大きさです。指定可能な値: 1=小さい、2=中くらい、3=大きい (それ以外の値は無効です)"
-
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:3
-msgid "Ball style"
-msgstr "玉のスタイル"
-
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:4
-msgid "Ball style. The filename of the images to use for the balls."
-msgstr "玉のスタイルで、玉に使用する画像のファイル名です。"
-
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:5
-msgid "Background color"
-msgstr "背景色"
-
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:6
-msgid "Background color. The hex specification of the background color."
-msgstr "背景色 (16進表記)"
-
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:7
-msgid "Time between moves"
-msgstr "移動する時間"
-
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:8
-msgid "Time between moves in milliseconds."
-msgstr "玉の移動に必要な時間 (ミリ秒単位) です。"
-
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:9
-msgid "Game score"
-msgstr "ゲームの得点"
-
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:10
-msgid "Game score from last saved session."
-msgstr "最後にプレイしたセッションを保存したゲームの得点です。"
-
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:11
-msgid "Game field"
-msgstr "ゲームフィールド"
-
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:12
-msgid "Game field from last saved session."
-msgstr "最後にプレイしたセッションを保存したゲームフィールドです。"
-
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:13
-msgid "Game preview"
-msgstr "ゲームのプレビュー"
-
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:14
-msgid "Game preview from last saved session."
-msgstr "最後にプレイしたセッションを保存したゲームプレビューです。"
-
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:15
-msgid "Width of the window in pixels"
-msgstr "ウィンドウの幅 (ピクセル単位) です。"
-
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:16
-msgid "Height of the window in pixels"
-msgstr "ウィンドウの高さ (ピクセル単位) です。"
-
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:17
-msgid "true if the window is maximized"
-msgstr "ウィンドウが最小化されている場合は TRUE"
-
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:18
-msgid "true if the window is fullscren"
-msgstr "ウィンドウがフルスクリーンの場合は TRUE"
-
-#. Score dialog column header for the score time (e.g. 1 minute)
-#: ../src/games-scores-dialog.c:136
-msgctxt "score-dialog"
-msgid "Time"
-msgstr "タイム"
-
-#. Score dialog column header for the score value (e.g. 30 moves)
-#: ../src/games-scores-dialog.c:142
-msgctxt "score-dialog"
-msgid "Score"
-msgstr "得点"
-
-#. Score format for time based scores.  %1$d is the time in minutes, %2$d is the time in seconds
-#: ../src/games-scores-dialog.c:307
-#, c-format
-msgctxt "score-dialog"
-msgid "%1$dm %2$ds"
-msgstr "%1$d分 %2$d秒"
-
-#. Score dialog column header for the name of the player who recorded the score
-#: ../src/games-scores-dialog.c:571
-msgctxt "score-dialog"
-msgid "Name"
-msgstr "名前"
-
-#. Score dialog column header for the date the score was recorded
-#: ../src/games-scores-dialog.c:580
-msgid "Date"
-msgstr "日付"
-
-#: ../src/games-stock.c:41
-msgid "View help for this game"
-msgstr "このゲームのヘルプを表示します"
-
-#: ../src/games-stock.c:42
-msgid "End the current game"
-msgstr "このゲームを終了します"
-
-#: ../src/games-stock.c:43
-msgid "Toggle fullscreen mode"
-msgstr "フルスクリーンモードを切り替えます"
-
-#: ../src/games-stock.c:44
-msgid "Get a hint for your next move"
-msgstr "次の操作のヒントを得ます"
-
-#: ../src/games-stock.c:45
-msgid "Leave fullscreen mode"
-msgstr "フルスクリーンモードを解除します"
-
-#: ../src/games-stock.c:46
-msgid "Start a new multiplayer network game"
-msgstr "新しいネットワーク対戦ゲームを開始します"
-
-#: ../src/games-stock.c:47
-msgid "End the current network game and return to network server"
-msgstr "現在のネットワーク対戦を終了してネットワークサーバーに戻ります"
-
-#: ../src/games-stock.c:48
-msgid "Start a new game"
-msgstr "新しいゲームを開始します"
-
-#: ../src/games-stock.c:49
-msgid "Pause the game"
-msgstr "ゲームを一時停止します"
-
-#: ../src/games-stock.c:50
-msgid "Show a list of players in the network game"
-msgstr "ネットワーク対戦しているプレイヤーの一覧を表示します"
-
-#: ../src/games-stock.c:51
-msgid "Redo the undone move"
-msgstr "直前の操作を取り消します"
-
-#: ../src/games-stock.c:52
-msgid "Restart the game"
-msgstr "ゲームをやり直します"
-
-#: ../src/games-stock.c:53
-msgid "Resume the paused game"
-msgstr "一時停止していたゲームを再開します"
-
-#: ../src/games-stock.c:54
-msgid "View the scores"
-msgstr "得点を表示します"
-
-#: ../src/games-stock.c:55
-msgid "Undo the last move"
-msgstr "直前の操作を取り消します"
-
-#: ../src/games-stock.c:56
-msgid "About this game"
-msgstr "このゲームの情報を表示します"
-
-#: ../src/games-stock.c:57
-msgid "Close this window"
-msgstr "このウィンドウを閉じます"
-
-#: ../src/games-stock.c:58
-msgid "Configure the game"
-msgstr "このゲームを設定します"
-
-#: ../src/games-stock.c:59
-msgid "Quit this game"
-msgstr "このゲームを終了します"
-
-#: ../src/games-stock.c:247
-msgid "_Contents"
-msgstr "目次(_C)"
-
-#: ../src/games-stock.c:248
-msgid "_Fullscreen"
-msgstr "フルスクリーン(_F)"
-
-#: ../src/games-stock.c:249
-msgid "_Hint"
-msgstr "ヒント(_H)"
-
-#. Translators: This "_New" is for the menu item 'Game->New', implies "New Game"
-#: ../src/games-stock.c:251
-msgid "_New"
-msgstr "新しいゲーム(_N)"
-
-#. Translators: This "_New Game" is for the game-over dialogue
-#: ../src/games-stock.c:253
+#: ../data/five-or-more.ui.h:5 ../src/games-scores-dialog.c:385
 msgid "_New Game"
 msgstr "新しいゲーム(_N)"
 
-#: ../src/games-stock.c:254
-msgid "_Redo Move"
-msgstr "移動をやり直す(_R)"
+#: ../data/five-or-more.ui.h:6
+msgid "Start a new puzzle"
+msgstr "新しいパズルでやり直します"
 
-#. Translators: this is the "Reset" scores button in a scores dialogue
-#: ../src/games-stock.c:256
-msgid "_Reset"
-msgstr "リセット(_R)"
+#: ../data/menu.ui.h:1
+msgid "Scores"
+msgstr "得点"
 
-#. Translators: "_Restart" is the menu item 'Game->Restart', implies "Restart Game"
-#: ../src/games-stock.c:258
-msgid "_Restart"
-msgstr "やり直す(_R)"
+#: ../data/menu.ui.h:3
+msgid "Help"
+msgstr "ヘルプ"
 
-#: ../src/games-stock.c:259
-msgid "_Undo Move"
-msgstr "移動を元に戻す(_U)"
+#: ../data/menu.ui.h:4
+msgid "About"
+msgstr "このアプリケーションについて"
 
-#: ../src/games-stock.c:260
-msgid "_Deal"
-msgstr "カードを引く(_D)"
+#: ../data/menu.ui.h:5
+msgid "Quit"
+msgstr "終了"
 
-#: ../src/games-stock.c:261
-msgid "_Leave Fullscreen"
-msgstr "フルスクリーンの解除(_L)"
+#: ../data/org.gnome.five-or-more.gschema.xml.h:1
+msgid "Playing field size"
+msgstr "プレイするフィールドの大きさ"
 
-#: ../src/games-stock.c:262
-msgid "Network _Game"
-msgstr "ネットワーク対戦(_G)"
+#: ../data/org.gnome.five-or-more.gschema.xml.h:2
+msgid ""
+"Playing field size. 1=Small, 2=Medium, 3=Large. Any other value is invalid."
+msgstr ""
+"プレイするフィールドの大きさです。指定可能な値: 1=小さい、2=中くらい、3=大き"
+"い (それ以外の値は無効です)"
 
-#: ../src/games-stock.c:263
-msgid "L_eave Game"
-msgstr "ゲームから抜ける(_E)"
+#: ../data/org.gnome.five-or-more.gschema.xml.h:3
+msgid "Ball style"
+msgstr "石のスタイル"
 
-#: ../src/games-stock.c:264
-msgid "Player _List"
-msgstr "プレイヤーの一覧(_L)"
+#: ../data/org.gnome.five-or-more.gschema.xml.h:4
+msgid "Ball style. The filename of the images to use for the balls."
+msgstr "石のスタイルで、石に使用する画像のファイル名です。"
 
-#: ../src/games-stock.c:265
-msgid "_Pause"
-msgstr "一時停止(_P)"
+#: ../data/org.gnome.five-or-more.gschema.xml.h:5
+msgid "Background color"
+msgstr "背景色"
 
-#: ../src/games-stock.c:266
-msgid "Res_ume"
-msgstr "再開(_U)"
+#: ../data/org.gnome.five-or-more.gschema.xml.h:6
+msgid "Background color. The hex specification of the background color."
+msgstr "背景色 (16進表記)"
 
-#: ../src/games-stock.c:267
-msgid "_Scores"
-msgstr "得点(_S)"
+#: ../data/org.gnome.five-or-more.gschema.xml.h:7
+msgid "Time between moves"
+msgstr "移動する時間"
 
-#: ../src/games-stock.c:268
-msgid "_End Game"
-msgstr "ゲームの終了(_E)"
+#: ../data/org.gnome.five-or-more.gschema.xml.h:8
+msgid "Time between moves in milliseconds."
+msgstr "石の移動に必要な時間 (ミリ秒単位) です。"
 
-#. %s is replaced with the name of the game in gnome-games.
-#: ../src/games-stock.c:317
-#, c-format
-msgid "%s is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version %d of the License, or (at your option) any later version."
-msgstr "%s はフリーソフトウェアです。フリーソフトウェア財団が提供する GNU 一般公衆利用許諾契約書の第%d版、あるいはそれ以降の版が定める条項の下で本プログラムを再頒布または変更することができます。"
+#: ../data/org.gnome.five-or-more.gschema.xml.h:9
+msgid "Game score"
+msgstr "ゲームの得点"
 
-#: ../src/games-stock.c:322
-#, c-format
-msgid "%s is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details."
-msgstr "%s は有用とは思いますが、その頒布にあたっては市場性及び特定の目的、その適合性についての暗黙の保証を含めて、いかなる保証も行ないません。詳細については GNU 一般公衆利用許諾契約書をご覧ください。"
+#: ../data/org.gnome.five-or-more.gschema.xml.h:10
+msgid "Game score from last saved session."
+msgstr "最後にプレイしたセッションを保存したゲームの得点です。"
 
-#: ../src/games-stock.c:327
-#, c-format
-msgid "You should have received a copy of the GNU General Public License along with %s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA"
-msgstr "あなたは %s と一緒に GNU 一般公衆利用許諾契約書の写しを受け取っているはずです。そうでない場合は、Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA へ手紙を書いてください。"
+#: ../data/org.gnome.five-or-more.gschema.xml.h:11
+msgid "Game field"
+msgstr "ゲームフィールド"
 
-#: ../src/games-stock.c:331
-msgid "You should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>."
-msgstr "あなたは %s と一緒に GNU 一般公衆利用許諾契約書の写しを受け取っているはずです。そうでない場合は、<http://www.gnu.org/licenses/> を参照してください。"
+#: ../data/org.gnome.five-or-more.gschema.xml.h:12
+msgid "Game field from last saved session."
+msgstr "最後にプレイしたセッションを保存したゲームフィールドです。"
 
-#: ../src/glines.c:78
+#: ../data/org.gnome.five-or-more.gschema.xml.h:13
+msgid "Game preview"
+msgstr "ゲームのプレビュー"
+
+#: ../data/org.gnome.five-or-more.gschema.xml.h:14
+msgid "Game preview from last saved session."
+msgstr "最後にプレイしたセッションを保存したゲームプレビューです。"
+
+#: ../data/org.gnome.five-or-more.gschema.xml.h:15
+msgid "Width of the window in pixels"
+msgstr "ウィンドウの幅 (ピクセル単位) です。"
+
+#: ../data/org.gnome.five-or-more.gschema.xml.h:16
+msgid "Height of the window in pixels"
+msgstr "ウィンドウの高さ (ピクセル単位) です。"
+
+#: ../data/org.gnome.five-or-more.gschema.xml.h:17
+msgid "true if the window is maximized"
+msgstr "ウィンドウが最小化されている場合は TRUE"
+
+#: ../src/five-or-more.c:80
 msgctxt "board size"
 msgid "Small"
 msgstr "小さい"
 
-#: ../src/glines.c:79
+#: ../src/five-or-more.c:81
 msgctxt "board size"
 msgid "Medium"
 msgstr "中くらい"
 
-#: ../src/glines.c:80
+#: ../src/five-or-more.c:82
 msgctxt "board size"
 msgid "Large"
 msgstr "大きい"
 
-#: ../src/glines.c:170
+#: ../src/five-or-more.c:165
 msgid "Could not load theme"
 msgstr "テーマを読み込めませんでした"
 
-#: ../src/glines.c:196
+#: ../src/five-or-more.c:191
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -418,7 +236,7 @@ msgstr ""
 "\n"
 "デフォルトのテーマを読み込むことにします。"
 
-#: ../src/glines.c:203
+#: ../src/five-or-more.c:198
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -431,38 +249,33 @@ msgstr ""
 "\n"
 "正しく Five or More がインストールされているか確認してください。"
 
-#: ../src/glines.c:408
+#: ../src/five-or-more.c:407
 msgid "Match five objects of the same type in a row to score!"
-msgstr "横の列で同じ色の石を5個並べると得点が入ります!"
+msgstr "同じ種類の石を5個並べると得点が入ります!"
 
-#: ../src/glines.c:472
-msgid "GNOME Five or More"
-msgstr "GNOME Five or More"
+#: ../src/five-or-more.c:468
+msgid "Five or More Scores"
+msgstr "Five or More の得点"
 
-#: ../src/glines.c:474
+#: ../src/five-or-more.c:470
 msgid "_Board size:"
 msgstr "盤の大きさ(_B):"
 
-#: ../src/glines.c:491
+#: ../src/five-or-more.c:487
 msgid "Game Over!"
 msgstr "ゲームオーバー!"
 
 #. Can't move there!
-#: ../src/glines.c:648
-msgid "You can't move there!"
-msgstr "そこへ移動できません!"
+#: ../src/five-or-more.c:644
+msgid "You can’t move there!"
+msgstr "そこは移動できません!"
 
-#: ../src/glines.c:1181
-msgid ""
-"GNOME port of the once-popular Color Lines game.\n"
-"\n"
-"Five or More is a part of GNOME Games."
+#: ../src/five-or-more.c:1174
+msgid "GNOME port of the once-popular Color Lines game"
 msgstr ""
-"一世を風靡したカラーラインゲームの GNOME 版です。\n"
-"\n"
-"Five or More は GNOME ゲーム集の一部です。"
+"一世を風靡したカラーラインゲームの GNOME 版です。"
 
-#: ../src/glines.c:1187
+#: ../src/five-or-more.c:1180
 msgid "translator-credits"
 msgstr ""
 "相花 毅 <takeshi.aihana@gmail.com>\n"
@@ -475,6 +288,205 @@ msgstr ""
 "松澤 二郎 <jmatsuzawa@gnome.org>\n"
 "日本GNOMEユーザー会 <http://www.gnome.gr.jp>"
 
-#: ../src/glines.c:1190
-msgid "GNOME Games web site"
-msgstr "GNOME ゲーム集のウェブサイト"
+#: ../src/five-or-more.c:1304
+msgid "Are you sure you want to restart the game?"
+msgstr "ゲームを始めからやり直しますが、よろしいですか?"
+
+#: ../src/five-or-more.c:1307
+msgid "_Cancel"
+msgstr "キャンセル(_C)"
+
+#: ../src/five-or-more.c:1308
+msgid "_Restart"
+msgstr "やり直す(_R)"
+
+#. Score dialog column header for the score time (e.g. 1 minute)
+#: ../src/games-scores-dialog.c:132
+msgctxt "score-dialog"
+msgid "Time"
+msgstr "タイム"
+
+#. Score dialog column header for the score value (e.g. 30 moves)
+#: ../src/games-scores-dialog.c:138
+msgctxt "score-dialog"
+msgid "Score"
+msgstr "得点"
+
+#. Score format for time based scores.  %1$d is the time in minutes, %2$d is the time in seconds
+#: ../src/games-scores-dialog.c:225
+#, c-format
+msgctxt "score-dialog"
+msgid "%1$dm %2$ds"
+msgstr "%1$d分 %2$d秒"
+
+#: ../src/games-scores-dialog.c:371
+msgid "_Quit"
+msgstr "終了(_Q)"
+
+#: ../src/games-scores-dialog.c:378
+msgid "_Undo"
+msgstr "元に戻す(_U)"
+
+#: ../src/games-scores-dialog.c:392
+msgid "_Close"
+msgstr "閉じる(_C)"
+
+#. Score dialog column header for the date the score was recorded
+#: ../src/games-scores-dialog.c:478
+msgid "Date"
+msgstr "日付"
+
+#~ msgid "Five or More Preferences"
+#~ msgstr "Five or More の設定"
+
+#~ msgid "New Game"
+#~ msgstr "新しいゲーム"
+
+#~ msgid "true if the window is fullscren"
+#~ msgstr "ウィンドウがフルスクリーンの場合は TRUE"
+
+#~ msgctxt "score-dialog"
+#~ msgid "Name"
+#~ msgstr "名前"
+
+#~ msgid "View help for this game"
+#~ msgstr "このゲームのヘルプを表示します"
+
+#~ msgid "End the current game"
+#~ msgstr "このゲームを終了します"
+
+#~ msgid "Toggle fullscreen mode"
+#~ msgstr "フルスクリーンモードを切り替えます"
+
+#~ msgid "Get a hint for your next move"
+#~ msgstr "次の操作のヒントを得ます"
+
+#~ msgid "Leave fullscreen mode"
+#~ msgstr "フルスクリーンモードを解除します"
+
+#~ msgid "Start a new multiplayer network game"
+#~ msgstr "新しいネットワーク対戦ゲームを開始します"
+
+#~ msgid "End the current network game and return to network server"
+#~ msgstr "現在のネットワーク対戦を終了してネットワークサーバーに戻ります"
+
+#~ msgid "Pause the game"
+#~ msgstr "ゲームを一時停止します"
+
+#~ msgid "Show a list of players in the network game"
+#~ msgstr "ネットワーク対戦しているプレイヤーの一覧を表示します"
+
+#~ msgid "Redo the undone move"
+#~ msgstr "直前の操作を取り消します"
+
+#~ msgid "Restart the game"
+#~ msgstr "ゲームをやり直します"
+
+#~ msgid "Resume the paused game"
+#~ msgstr "一時停止していたゲームを再開します"
+
+#~ msgid "View the scores"
+#~ msgstr "得点を表示します"
+
+#~ msgid "Undo the last move"
+#~ msgstr "直前の操作を取り消します"
+
+#~ msgid "About this game"
+#~ msgstr "このゲームの情報を表示します"
+
+#~ msgid "Close this window"
+#~ msgstr "このウィンドウを閉じます"
+
+#~ msgid "Configure the game"
+#~ msgstr "このゲームを設定します"
+
+#~ msgid "Quit this game"
+#~ msgstr "このゲームを終了します"
+
+#~ msgid "_Contents"
+#~ msgstr "目次(_C)"
+
+#~ msgid "_Fullscreen"
+#~ msgstr "フルスクリーン(_F)"
+
+#~ msgid "_Hint"
+#~ msgstr "ヒント(_H)"
+
+#~ msgid "_New"
+#~ msgstr "新しいゲーム(_N)"
+
+#~ msgid "_Redo Move"
+#~ msgstr "移動をやり直す(_R)"
+
+#~ msgid "_Reset"
+#~ msgstr "リセット(_R)"
+
+#~ msgid "_Deal"
+#~ msgstr "カードを引く(_D)"
+
+#~ msgid "_Leave Fullscreen"
+#~ msgstr "フルスクリーンの解除(_L)"
+
+#~ msgid "Network _Game"
+#~ msgstr "ネットワーク対戦(_G)"
+
+#~ msgid "L_eave Game"
+#~ msgstr "ゲームから抜ける(_E)"
+
+#~ msgid "Player _List"
+#~ msgstr "プレイヤーの一覧(_L)"
+
+#~ msgid "_Pause"
+#~ msgstr "一時停止(_P)"
+
+#~ msgid "Res_ume"
+#~ msgstr "再開(_U)"
+
+#~ msgid "_Scores"
+#~ msgstr "得点(_S)"
+
+#~ msgid "_End Game"
+#~ msgstr "ゲームの終了(_E)"
+
+#~ msgid ""
+#~ "%s is free software; you can redistribute it and/or modify it under the "
+#~ "terms of the GNU General Public License as published by the Free Software "
+#~ "Foundation; either version %d of the License, or (at your option) any "
+#~ "later version."
+#~ msgstr ""
+#~ "%s はフリーソフトウェアです。フリーソフトウェア財団が提供する GNU 一般公衆"
+#~ "利用許諾契約書の第%d版、あるいはそれ以降の版が定める条項の下で本プログラム"
+#~ "を再頒布または変更することができます。"
+
+#~ msgid ""
+#~ "%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+#~ "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+#~ "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+#~ "details."
+#~ msgstr ""
+#~ "%s は有用とは思いますが、その頒布にあたっては市場性及び特定の目的、その適"
+#~ "合性についての暗黙の保証を含めて、いかなる保証も行ないません。詳細について"
+#~ "は GNU 一般公衆利用許諾契約書をご覧ください。"
+
+#~ msgid ""
+#~ "You should have received a copy of the GNU General Public License along "
+#~ "with %s; if not, write to the Free Software Foundation, Inc., 51 Franklin "
+#~ "Street, Fifth Floor, Boston, MA  02110-1301  USA"
+#~ msgstr ""
+#~ "あなたは %s と一緒に GNU 一般公衆利用許諾契約書の写しを受け取っているはず"
+#~ "です。そうでない場合は、Free Software Foundation, Inc., 51 Franklin "
+#~ "Street, Fifth Floor, Boston, MA 02110-1301, USA へ手紙を書いてください。"
+
+#~ msgid ""
+#~ "You should have received a copy of the GNU General Public License along "
+#~ "with this program.  If not, see <http://www.gnu.org/licenses/>."
+#~ msgstr ""
+#~ "あなたは %s と一緒に GNU 一般公衆利用許諾契約書の写しを受け取っているはず"
+#~ "です。そうでない場合は、<http://www.gnu.org/licenses/> を参照してくださ"
+#~ "い。"
+
+#~ msgid "GNOME Five or More"
+#~ msgstr "GNOME Five or More"
+
+#~ msgid "GNOME Games web site"
+#~ msgstr "GNOME ゲーム集のウェブサイト"
