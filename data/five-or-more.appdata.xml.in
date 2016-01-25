@@ -1,33 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2013 Michael Catanzaro -->
-<application>
- <id type="desktop">five-or-more.desktop</id>
- <metadata_license>CC0-1.0</metadata_license>
- <project_license>GPL-2.0+ and CC-BY-SA-3.0</project_license>
- <_name>Five or More</_name>
- <_summary>Remove colored balls from the board by forming lines</_summary>
- <description>
-  <_p>
-   Five or More is the GNOME port of a once-popular computer game. Align five or
-   more objects of the same color into a line to cause them to disappear and
-   score points. Earn many more points by lining up as many objects as possible
-   before clearing them.
-  </_p>
-  <_p>
-   More objects appear after every turn. Play for as long as possible, until the
-   board is completely full!
-  </_p>
- </description>
- <screenshots>
-  <screenshot type="default" width="972" height="524">https://people.gnome.org/~mcatanzaro/five-or-more.png</screenshot>
- </screenshots>
- <url type="homepage">https://wiki.gnome.org/Apps/Five%20or%20more</url>
- <updatecontact>mcatanzaro_at_gnome.org</updatecontact>
- <project_group>GNOME</project_group>
+<component type="desktop">
+  <id>five-or-more.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-2.0+ and CC-BY-SA-3.0</project_license>
+  <_name>Five or More</_name>
+  <_summary>Remove colored balls from the board by forming lines</_summary>
+  <description>
+    <_p>
+      Five or More is the GNOME port of a once-popular computer game. Align five or
+      more objects of the same color into a line to cause them to disappear and
+      score points. Earn many more points by lining up as many objects as possible
+      before clearing them.
+    </_p>
+    <_p>
+      More objects appear after every turn. Play for as long as possible, until the
+      board is completely full!
+    </_p>
+  </description>
+  <screenshots>
+    <screenshot type="default" width="972" height="524">
+      <image>https://people.gnome.org/~mcatanzaro/five-or-more.png</image>
+    </screenshot>
+  </screenshots>
+  <url type="homepage">https://wiki.gnome.org/Apps/Five%20or%20more</url>
+  <url type="bugtracker">https://bugzilla.gnome.org/enter_bug.cgi?product=five-or-more</url>
+  <url type="donation">http://www.gnome.org/friends/</url>
+  <url type="help">https://help.gnome.org/users/five-or-more/stable/</url>
+  <update_contact>mcatanzaro_at_gnome.org</update_contact>
+  <project_group>GNOME</project_group>
   <kudos>
     <kudo>AppMenu</kudo>
     <kudo>HiDpiIcon</kudo>
     <kudo>ModernToolkit</kudo>
     <kudo>UserDocs</kudo>
   </kudos>
-</application>
+  <translation type="gettext">five-or-more</translation>
+</component>
