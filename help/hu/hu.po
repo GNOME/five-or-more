@@ -2,21 +2,21 @@
 # Copyright (C) 2013. Free Software Foundation, Inc.
 # This file is distributed under the same license as the five-or-more help.
 #
-# Gabor Kelemen <kelemeng at gnome dot hu>, 2013, 2014.
+# Gabor Kelemen <kelemeng at gnome dot hu>, 2013, 2014, 2016.
 # Balázs Úr <urbalazs@gmail.com>, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: five-or-more master\n"
-"POT-Creation-Date: 2014-04-01 05:02+0000\n"
-"PO-Revision-Date: 2014-04-01 16:45+0200\n"
-"Last-Translator: Balázs Úr <urbalazs@gmail.com>\n"
+"POT-Creation-Date: 2016-01-26 18:27+0000\n"
+"PO-Revision-Date: 2016-01-27 01:38+0100\n"
+"Last-Translator: Gabor Kelemen <kelemeng at ubuntu dot com>\n"
 "Language-Team: Hungarian <openscope at googlegroups dot com>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 1.2\n"
+"X-Generator: Lokalize 1.5\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -315,17 +315,24 @@ msgstr ""
 
 #. (itstool) path: item/p
 #: C/change-theme.page:27
+#| msgid ""
+#| "Select <gui>balls</gui> or <gui>shapes</gui> from the <gui>Image</gui> "
+#| "drop down menu to change the playing pieces."
 msgid ""
-"Select <gui>balls</gui> or <gui>shapes</gui> from the <gui>Image</gui> drop "
-"down menu to change the playing pieces."
+"Select <gui>balls</gui>, <gui>dots</gui>, <gui>gumball</gui> or <gui>shapes</"
+"gui> from the <gui>Image</gui> drop down menu to change the playing pieces."
 msgstr ""
-"A <gui>Kép</gui> legördülő menüből válassza a <gui>labdák</gui> vagy "
-"<gui>alakzatok</gui> pontot a figurák megváltoztatásához."
+"A <gui>Kép</gui> legördülő menüből válassza a <gui>balls</gui>, <gui>dots<"
+"/gui>, <gui>gumball</gui> vagy <gui>shapes</gui> pontot a labdaképek "
+"megváltoztatásához."
 
 #. (itstool) path: item/p
 #: C/change-theme.page:29
+#| msgid ""
+#| "Click on the colored box next to <gui>Image background</gui> to access "
+#| "the color palette."
 msgid ""
-"Click on the colored box next to <gui>Image background</gui> to access the "
+"Click on the colored box next to <gui>Background color</gui> to access the "
 "color palette."
 msgstr ""
 "Kattintson a <gui>Kép háttere</gui> melletti színes négyzetre a színpaletta "
@@ -348,16 +355,28 @@ msgstr "Az Öt vagy több különböző labdákkal."
 
 #. (itstool) path: media/p
 #: C/change-theme.page:43
+#| msgid "<app>Five or More</app> with different shapes"
+msgid "<app>Five or More</app> with different dots"
+msgstr "Az <app>Öt vagy több</app> különböző pontokkal"
+
+#. (itstool) path: media/p
+#: C/change-theme.page:47
+#| msgid "<app>Five or More</app> with different shapes"
+msgid "<app>Five or More</app> with different gumballs"
+msgstr "Az <app>Öt vagy több</app> különböző gumilabdákkal"
+
+#. (itstool) path: media/p
+#: C/change-theme.page:51
 msgid "<app>Five or More</app> with different shapes"
 msgstr "Az <app>Öt vagy több</app> különböző alakzatokkal"
 
 #. (itstool) path: section/title
-#: C/change-theme.page:48
+#: C/change-theme.page:56
 msgid "Background colors available"
 msgstr "Elérhető háttérszínek"
 
 #. (itstool) path: media/p
-#: C/change-theme.page:50
+#: C/change-theme.page:58
 msgid "Five or More color palette"
 msgstr "Az Öt vagy több színpalettája"
 
@@ -468,15 +487,11 @@ msgstr "Öt vagy több"
 
 #. (itstool) path: media/span
 #: C/index.page:27
-#| msgctxt "link"
-#| msgid "Five or More"
 msgid "Five or More logo"
 msgstr "Öt vagy több logó"
 
 #. (itstool) path: page/title
 #: C/index.page:26
-#| msgctxt "link"
-#| msgid "Five or More"
 msgid "<_:media-1/> Five or More"
 msgstr "<_:media-1/> Öt vagy több"
 
