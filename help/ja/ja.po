@@ -1,0 +1,793 @@
+# Japanese translation for five-or-more.
+# Copyright (C) 2016 five-or-more's COPYRIGHT HOLDER
+# This file is distributed under the same license as the five-or-more package.
+# Jiro Matsuzawa <jmatsuzawa@gnome.org>, 2016.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: five-or-more master\n"
+"POT-Creation-Date: 2016-01-13 18:26+0000\n"
+"PO-Revision-Date: 2016-01-16 21:27+0900\n"
+"Last-Translator: Jiro Matsuzawa <jmatsuzawa@gnome.org>\n"
+"Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
+msgctxt "_"
+msgid "translator-credits"
+msgstr "松澤 二郎 <jmatsuzawa@gnome.org>, 2016"
+
+#. (itstool) path: credit/name
+#: C/bug-filing.page:10 C/change-board-size.page:14 C/change-theme.page:14
+#: C/develop.page:10 C/documentation.page:8 C/fast-moves.page:14
+#: C/index.page:17 C/scores.page:14 C/shortcuts.page:9 C/strategy.page:9
+#: C/translate.page:10
+msgid "Tiffany Antopolski"
+msgstr "Tiffany Antopolski"
+
+#. (itstool) path: credit/years
+#: C/bug-filing.page:12 C/change-board-size.page:11 C/develop.page:12
+#: C/documentation.page:10 C/fast-moves.page:11 C/play.page:12 C/rules.page:12
+#: C/scores.page:11 C/shortcuts.page:11 C/translate.page:12
+msgid "2011"
+msgstr "2011"
+
+#. (itstool) path: license/p
+#: C/bug-filing.page:15 C/develop.page:15 C/documentation.page:13
+#: C/index.page:21 C/translate.page:19
+msgid "Creative Commons Share Alike 3.0"
+msgstr "Creative Commons Share Alike 3.0"
+
+#. (itstool) path: page/title
+#: C/bug-filing.page:19
+msgid "Report a Problem"
+msgstr "問題を報告する"
+
+#. (itstool) path: page/p
+#: C/bug-filing.page:20
+msgid "<app>Five or More</app> is maintained by a volunteer community. You are welcome to participate. If you notice a problem you can file a <em>bug report</em>. To file a bug, go to <link href=\"https://bugzilla.gnome.org/\"/>."
+msgstr "<app>Five or More</app> は、ボランティアコミュニティによりメンテナンスされています。ぜひご参加ください。問題を見つけたときは、<em>バグレポート</em>を送信できます。バグを報告するには、<link href=\"https://bugzilla.gnome.org/\"/> のサイトにアクセスしてください。"
+
+#. (itstool) path: page/p
+#: C/bug-filing.page:23
+msgid "This is a bug tracking system where users and developers can file details about bugs, crashes and request enhancements."
+msgstr "このサイトでバグ管理システムを利用できます。ここからユーザーや開発者は、バグやクラッシュ情報を登録したり、機能追加を要望したりできます。"
+
+#. (itstool) path: page/p
+#: C/bug-filing.page:26
+msgid "To participate you need an account which will give you the ability to gain access, file bugs, and make comments. Also, you need to register so you can receive updates by e-mail about the status of your bug. If you don't already have an account, just click on the <gui>New Account</gui> link to create one."
+msgstr "参加するには、バグの参照やバグ報告、コメントの書き込みを行うアカウントが必要になります。また、報告したバグのステータスについてメールで更新を受信できるように登録する必要があります。まだアカウントを取得していない場合は、<gui>New Account</gui> というリンクから簡単にアカウントを作成できます。"
+
+#. (itstool) path: page/p
+#: C/bug-filing.page:30
+msgid "Once you have an account, log in, click on <guiseq><gui>File a Bug</gui><gui>Applications</gui><gui>five-or-more</gui></guiseq>. Before reporting a bug, please read the <link href=\"https://bugzilla.gnome.org/page.cgi?id=bug-writing.html\">bug writing guidelines</link>, and please <link href=\"https://bugzilla.gnome.org/browse.cgi?product=five-or-more\">browse</link> for the bug to see if it already exists."
+msgstr "アカウントを取得すれば、ログインして、<guiseq><gui>File a Bug</gui><gui>Applications</gui><gui>five-or-more</gui></guiseq> をクリックします。バグを報告する前に、<link href=\"https://bugzilla.gnome.org/page.cgi?id=bug-writing.html\">bug writing guidelines</link> を一読してください。また、<link href=\"https://bugzilla.gnome.org/browse.cgi?product=five-or-more\">browse</link> をクリックして、同じバグがすでに報告されていないか確認してください。"
+
+#. (itstool) path: page/p
+#: C/bug-filing.page:38
+msgid "If you are requesting a new feature, choose <gui>enhancement</gui> in the <gui>Severity</gui> menu. Fill in the Summary and Description sections and click <gui>Commit</gui>."
+msgstr "新しい機能を要望する場合は、<gui>Severity</gui> メニューで <gui>enhancement</gui> を選択します。Summary (概要) と Description (詳細説明) の欄を記入して、<gui>Commit</gui> をクリックします。"
+
+#. (itstool) path: page/p
+#: C/bug-filing.page:42
+msgid "Your report will be given an ID number, and its status will be updated as it is being dealt with."
+msgstr "バグレポートには、ID ナンバーが付与されます。処理されている間はバグの状態が更新されます。"
+
+#. (itstool) path: credit/name
+#: C/change-board-size.page:9 C/change-theme.page:9 C/fast-moves.page:9
+#: C/index.page:13 C/play.page:10 C/scores.page:9
+msgid "Lahiru lanka"
+msgstr "Lahiru lanka"
+
+#. (itstool) path: credit/name
+#: C/change-board-size.page:18 C/fast-moves.page:18 C/play.page:15
+#: C/translate.page:15
+msgid "Michael Hill"
+msgstr "Michael Hill"
+
+#. (itstool) path: page/title
+#: C/change-board-size.page:23
+msgid "Change board size"
+msgstr "盤の大きさを変更する"
+
+#. (itstool) path: page/p
+#: C/change-board-size.page:24
+msgid "To change the board size:"
+msgstr "盤の大きさを変更する方法は次のとおりです。"
+
+#. (itstool) path: item/p
+#: C/change-board-size.page:26
+msgid "Click <guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq>"
+msgstr "<guiseq><gui>設定</gui><gui>設定</gui></guiseq>を選択します。"
+
+#. (itstool) path: item/p
+#: C/change-board-size.page:27
+msgid "Under <gui>Board Size</gui>, select <gui>Small</gui>, <gui>Medium</gui>, or <gui>Large</gui>."
+msgstr "<gui>盤の大きさ</gui>から、<gui>小</gui>、<gui>中</gui>、<gui>大</gui> のいずれかを選択します。"
+
+#. (itstool) path: note/p
+#: C/change-board-size.page:32
+msgid "While a larger board gives you more space, there are also more objects in play for each turn."
+msgstr "大きな盤はスペースも大きくなりますが、ターンごとに増える石の数も多くなります。"
+
+#. (itstool) path: section/title
+#: C/change-board-size.page:37
+msgid "Board parameters"
+msgstr "盤のパラメーター"
+
+#. (itstool) path: section/p
+#: C/change-board-size.page:38
+msgid "The 3 different board sizes have the following parameters:"
+msgstr "3 種類の盤には、それぞれ次のパラメーターが設定されています。"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:42
+msgid "<em>Size</em>"
+msgstr "<em>大きさ</em>"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:43
+msgid "<em>Width</em>"
+msgstr "<em>幅</em>"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:44
+msgid "<em>Height</em>"
+msgstr "<em>高さ</em>"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:45
+msgid "<em>Number of types</em>"
+msgstr "<em>石の種類の数</em>"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:46
+msgid "<em>New objects per turn</em>"
+msgstr "<em>ターンごとに増える石の数</em>"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:47
+msgid "<em>Number of cells</em>"
+msgstr "<em>マスの数</em>"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:51
+msgid "Small"
+msgstr "小"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:52 C/change-board-size.page:53
+#: C/change-board-size.page:61 C/change-board-size.page:66 C/scores.page:41
+msgid "7"
+msgstr "7"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:54 C/scores.page:33
+msgid "5"
+msgstr "5"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:55 C/change-board-size.page:61
+msgid "3"
+msgstr "3"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:56
+msgid "49"
+msgstr "49"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:60
+msgid "Medium"
+msgstr "中"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:60 C/scores.page:49
+msgid "9"
+msgstr "9"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:61
+msgid "81"
+msgstr "81"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:65
+msgid "Large"
+msgstr "大"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:65
+msgid "20"
+msgstr "20"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:65
+msgid "15"
+msgstr "15"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:66
+msgid "300"
+msgstr "300"
+
+#. (itstool) path: section/title
+#: C/change-board-size.page:74
+msgid "The 3 board sizes"
+msgstr "各盤の大きさ"
+
+#. (itstool) path: media/p
+#: C/change-board-size.page:80
+msgid "<app>Five or More</app> Small board"
+msgstr "<app>Five or More</app> の小サイズの盤"
+
+#. (itstool) path: media/p
+#: C/change-board-size.page:85
+msgid "<app>Five or More</app> medium size board"
+msgstr "<app>Five or More</app> の中サイズの盤"
+
+#. (itstool) path: media/p
+#: C/change-board-size.page:90
+msgid "<app>Five or More</app> large size board"
+msgstr "<app>Five or More</app> の大サイズの盤"
+
+#. (itstool) path: credit/years
+#: C/change-theme.page:11 C/strategy.page:11
+msgid "2012"
+msgstr "2012"
+
+#. (itstool) path: page/title
+#: C/change-theme.page:20
+msgid "Change the look and feel"
+msgstr "外観を変更する"
+
+#. (itstool) path: page/p
+#: C/change-theme.page:21
+msgid "To change the appearance of the pieces and the board:"
+msgstr "石と盤の外観を変更する方法は次のとおりです。"
+
+#. (itstool) path: item/p
+#: C/change-theme.page:24 C/fast-moves.page:28
+msgid "Click <guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq>."
+msgstr "<guiseq><gui>設定</gui><gui>設定</gui></guiseq>を選択します。"
+
+#. (itstool) path: item/p
+#: C/change-theme.page:27
+msgid "Select <gui>balls</gui>, <gui>dots</gui>, <gui>gumball</gui> or <gui>shapes</gui> from the <gui>Image</gui> drop down menu to change the playing pieces."
+msgstr "<gui>画像</gui>のドロップダウンリストから、<gui>balls</gui>、<gui>dots</gui>、<gui>gumball</gui>、<gui>shapes</gui> のいずれかを選択すると、石の形状が変わります。"
+
+#. (itstool) path: item/p
+#: C/change-theme.page:29
+msgid "Click on the colored box next to <gui>Background color</gui> to access the color palette."
+msgstr "<gui>背景色</gui>と書かれたラベルの隣のカラーボックスを選択すると、カラーパレットが表示され、色を変更できます。"
+
+#. (itstool) path: item/p
+#: C/change-theme.page:33 C/fast-moves.page:30
+msgid "Click <gui>Close</gui>."
+msgstr "<gui>閉じる</gui>をクリックします。"
+
+#. (itstool) path: section/title
+#: C/change-theme.page:37
+msgid "Images available"
+msgstr "画像設定例"
+
+#. (itstool) path: media/p
+#: C/change-theme.page:39
+msgid "Five or More with different balls"
+msgstr "balls を選択したときの <app>Five or More</app>"
+
+#. (itstool) path: media/p
+#: C/change-theme.page:43
+msgid "<app>Five or More</app> with different dots"
+msgstr "dots を選択したときの <app>Five or More</app>"
+
+#. (itstool) path: media/p
+#: C/change-theme.page:47
+msgid "<app>Five or More</app> with different gumballs"
+msgstr "gumballs を選択したときの <app>Five or More</app>"
+
+#. (itstool) path: media/p
+#: C/change-theme.page:51
+msgid "<app>Five or More</app> with different shapes"
+msgstr "shapes を選択したときの <app>Five or More</app>"
+
+#. (itstool) path: section/title
+#: C/change-theme.page:56
+msgid "Background colors available"
+msgstr "背景色設定例"
+
+#. (itstool) path: media/p
+#: C/change-theme.page:58
+msgid "Five or More color palette"
+msgstr "<app>Five or More</app> のカラーパレット"
+
+#. (itstool) path: page/title
+#: C/develop.page:19
+msgid "Help develop"
+msgstr "開発に協力する"
+
+#. (itstool) path: page/p
+#: C/develop.page:20
+msgid "The <app>GNOME Games</app> are developed and maintained by a volunteer community. You are welcome to participate."
+msgstr "<app>GNOME ゲーム</app>は、ボランティアコミュニティにより開発および維持されています。お気軽にご参加ください。"
+
+#. (itstool) path: page/p
+#: C/develop.page:23
+msgid "If you would like to <link href=\"https://wiki.gnome.org/Apps/Games/Contributing\">help develop <app>GNOME Games</app></link>, you can get in touch with the developers using <link href=\"https://cbe005.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, or via our <link href=\"http://mail.gnome.org/mailman/listinfo/games-list\">mailing list</link>."
+msgstr " <app>GNOME ゲーム</app>の<link href=\"https://wiki.gnome.org/Apps/Games/Contributing\">開発に協力</link>したい場合は、<link href=\"https://cbe005.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">IRC</link> や <link href=\"http://mail.gnome.org/mailman/listinfo/games-list\">メーリングリスト</link>を利用して開発者と連絡を取ることができます。"
+
+#. (itstool) path: page/title
+#: C/documentation.page:17
+msgid "Help write documentation"
+msgstr "ドキュメント作成に協力する"
+
+#. (itstool) path: page/p
+#: C/documentation.page:19
+msgid "The <app>GNOME Games</app> documentation is maintained by a volunteer community. You are welcome to participate."
+msgstr "<app>GNOME ゲーム</app>のドキュメントは、ボランティアコミュニティによりメンテナンスされています。お気軽にご参加ください。"
+
+#. (itstool) path: page/p
+#: C/documentation.page:22
+msgid "To contribute to the Documentation Project, feel free to get in touch with us using <link href=\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fdocs\">irc</link>, or via our <link href=\"http://mail.gnome.org/mailman/listinfo/gnome-doc-list\">mailing list</link>."
+msgstr "ドキュメンテーションプロジェクトに貢献する場合は、<link href=\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fdocs\">IRC</link> や<link href=\"https://mail.gnome.org/mailman/listinfo/gnome-doc-list\">メーリングリスト</link>を利用してお気軽に連絡してください。"
+
+#. (itstool) path: page/p
+#: C/documentation.page:26
+msgid "Our <link href=\"https://wiki.gnome.org/DocumentationProject/Contributing\">wiki</link> page contains useful information."
+msgstr "ドキュメンテーションプロジェクトの <link href=\"https://wiki.gnome.org/DocumentationProject/Contributing\">wiki</link> ページには、役立つ情報があります。"
+
+#. (itstool) path: page/title
+#: C/fast-moves.page:25
+msgid "Change speed"
+msgstr "石の速度を変更する"
+
+#. (itstool) path: page/p
+#: C/fast-moves.page:26
+msgid "To speed up object movements:"
+msgstr "石の移動速度を変更する方法は次のとおりです。"
+
+#. (itstool) path: item/p
+#: C/fast-moves.page:29
+msgid "Under <gui>General</gui>, select <gui>Use fast moves</gui>."
+msgstr "<gui>全般</gui>配下の、<gui>素早く移動する</gui>を選択します。"
+
+#. (itstool) path: note/p
+#: C/fast-moves.page:33
+msgid "Any changes you make are instantly applied and remembered for the next time you run <app>Five or More</app>."
+msgstr "設定を変更すると即座に反映され、記憶されます。次回 <app>Five or More</app> 起動時にも変更内容が適用されます。"
+
+#. (itstool) path: info/title
+#: C/index.page:8
+msgctxt "link"
+msgid "Five or More"
+msgstr "Five or More"
+
+#. (itstool) path: info/title
+#: C/index.page:9
+msgctxt "text"
+msgid "Five or More"
+msgstr "Five or More"
+
+#. (itstool) path: media/span
+#: C/index.page:27
+msgid "Five or More logo"
+msgstr "Five or More ロゴ"
+
+#. (itstool) path: page/title
+#: C/index.page:26
+msgid "<_:media-1/> Five or More"
+msgstr "<_:media-1/> Five or More"
+
+#. (itstool) path: page/p
+#: C/index.page:29
+msgid "<app>Five or More</app> is a deceptively simple brain workout. The goal is to place at least five objects of the same <link xref=\"change-theme#images\">color or shape</link> into a straight line. The line can be horizontal, vertical or diagonal. Once five or more objects are grouped into a line, they disappear. The goal is to vanish as many objects as possible. The game is over when the entire board is full."
+msgstr "<app>Five or More</app> は、一見単純だが実は複雑な脳トレゲームです。ゲームの目的は、<link xref=\"change-theme#images\">色や形</link>に基づいて同じ石を 5 個以上連続して一列に並べることです。並べる方向は、横、縦、斜めのどれでもかまいません。5 つ以上並べると、並べた石が消えます。できるだけ多くの石を消してください。盤が石でいっぱいになればゲームオーバーです。"
+
+#. (itstool) path: section/title
+#: C/index.page:34
+msgid "Game Play"
+msgstr "ゲームプレイ"
+
+#. (itstool) path: section/title
+#: C/index.page:38
+msgid "Useful Tips"
+msgstr "役立つ情報"
+
+#. (itstool) path: section/title
+#: C/index.page:42
+msgid "Advanced"
+msgstr "高度"
+
+#. (itstool) path: section/title
+#: C/index.page:46
+msgid "Get Involved"
+msgstr "参加する"
+
+#. (itstool) path: p/link
+#: C/legal.xml:3
+msgid "Creative Commons Attribution-ShareAlike 3.0 Unported License"
+msgstr "Creative Commons Attribution-ShareAlike 3.0 Unported License"
+
+#. (itstool) path: license/p
+#: C/legal.xml:3
+msgid "This work is licensed under a <_:link-1/>."
+msgstr "This work is licensed under a <_:link-1/>."
+
+#. (itstool) path: info/desc
+#: C/license.page:9
+msgid "Legal information."
+msgstr "Legal information."
+
+#. (itstool) path: page/title
+#: C/license.page:12
+msgid "License"
+msgstr "License"
+
+#. (itstool) path: page/p
+#: C/license.page:13
+msgid "This work is distributed under a CreativeCommons Attribution-Share Alike 3.0 Unported license."
+msgstr "This work is distributed under a CreativeCommons Attribution-Share Alike 3.0 Unported license."
+
+#. (itstool) path: page/p
+#: C/license.page:21
+msgid "You are free:"
+msgstr "You are free:"
+
+#. (itstool) path: item/title
+#: C/license.page:26
+msgid "<em>To share</em>"
+msgstr "<em>To share</em>"
+
+#. (itstool) path: item/p
+#: C/license.page:27
+msgid "To copy, distribute and transmit the work."
+msgstr "To copy, distribute and transmit the work."
+
+#. (itstool) path: item/title
+#: C/license.page:30
+msgid "<em>To remix</em>"
+msgstr "<em>To remix</em>"
+
+#. (itstool) path: item/p
+#: C/license.page:31
+msgid "To adapt the work."
+msgstr "To adapt the work."
+
+#. (itstool) path: page/p
+#: C/license.page:34
+msgid "Under the following conditions:"
+msgstr "Under the following conditions:"
+
+#. (itstool) path: item/title
+#: C/license.page:39
+msgid "<em>Attribution</em>"
+msgstr "<em>Attribution</em>"
+
+#. (itstool) path: item/p
+#: C/license.page:40
+msgid "You must attribute the work in the manner specified by the author or licensor (but not in any way that suggests that they endorse you or your use of the work)."
+msgstr "You must attribute the work in the manner specified by the author or licensor (but not in any way that suggests that they endorse you or your use of the work)."
+
+#. (itstool) path: item/title
+#: C/license.page:47
+msgid "<em>Share Alike</em>"
+msgstr "<em>Share Alike</em>"
+
+#. (itstool) path: item/p
+#: C/license.page:48
+msgid "If you alter, transform, or build upon this work, you may distribute the resulting work only under the same, similar or a compatible license."
+msgstr "If you alter, transform, or build upon this work, you may distribute the resulting work only under the same, similar or a compatible license."
+
+#. (itstool) path: page/p
+#: C/license.page:54
+msgid "For the full text of the license, see the <link href=\"http://creativecommons.org/licenses/by-sa/3.0/legalcode\">CreativeCommons website</link>, or read the full <link href=\"http://creativecommons.org/licenses/by-sa/3.0/\">Commons Deed</link>."
+msgstr "For the full text of the license, see the <link href=\"http://creativecommons.org/licenses/by-sa/3.0/legalcode\">CreativeCommons website</link>, or read the full <link href=\"http://creativecommons.org/licenses/by-sa/3.0/\">Commons Deed</link>."
+
+#. (itstool) path: page/title
+#: C/play.page:22
+msgid "How to Play"
+msgstr "遊び方"
+
+#. (itstool) path: page/p
+#: C/play.page:24
+msgid "To start a new game click <guiseq><gui>Game</gui><gui>New</gui></guiseq>."
+msgstr "ゲームを開始するには、<guiseq><gui>ゲーム</gui><gui>新規</gui></guiseq>をクリックします。"
+
+#. (itstool) path: section/title
+#: C/play.page:28
+msgid "Using the mouse"
+msgstr "マウスを使った操作方法"
+
+#. (itstool) path: item/p
+#: C/play.page:32
+msgid "Click on the object you want to move. The selected object will begin spinning."
+msgstr "動かす石をクリックします。選択した石は回転します。"
+
+#. (itstool) path: item/p
+#: C/play.page:36
+msgid "Click on the destination cell."
+msgstr "移動先のマスをクリックします。"
+
+#. (itstool) path: section/title
+#: C/play.page:44
+msgid "Using the keyboard"
+msgstr "キーボードを使った操作方法"
+
+#. (itstool) path: item/p
+#: C/play.page:47
+msgid "Press any of the arrow keys. An outline around a cell will appear on the board."
+msgstr "矢印キーを押すと、マスの外枠がハイライトされます。"
+
+#. (itstool) path: item/p
+#: C/play.page:49
+msgid "Using the arrow keys, navigate to the object you want to move."
+msgstr "矢印キーを使って、動かす石のマスをハイライトします。"
+
+#. (itstool) path: item/p
+#: C/play.page:51
+msgid "To select the object, press the <key>Enter</key> or <key>Spacebar</key>. The selected object will begin spinning."
+msgstr "石を選択するには、<key>Enter</key> キー、または <key>Space</key> バーを押します。選択した石は回転します。"
+
+#. (itstool) path: item/p
+#: C/play.page:53
+msgid "Move to the destination cell, and again press the <key>Enter</key> or <key>Spacebar</key>. The chosen object will move to the destination cell."
+msgstr "移動先のマスをハイライトし、<key>Enter</key> キー、または <key>Space</key> バーをもう一度押します。選択した石が該当のマスに移動します。"
+
+#. (itstool) path: section/title
+#: C/play.page:62
+msgid "Video demonstration"
+msgstr "動画デモ"
+
+#. (itstool) path: page/title
+#: C/rules.page:18
+msgid "Rules"
+msgstr "ルール"
+
+#. (itstool) path: item/p
+#: C/rules.page:20
+msgid "At the start of the game there are either 3 or 7 objects placed on your board, depending on the <link xref=\"change-board-size\">board size</link>."
+msgstr "ゲーム開始時点で、3 つ、または 7 つの石が盤に配置されています。開始時点の石の数は<link xref=\"change-board-size\">盤の大きさ</link>によって決まります。"
+
+#. (itstool) path: item/p
+#: C/rules.page:23
+msgid "Each time you <link xref=\"play\">move an object</link>, additional objects are placed randomly on the board. The number of new objects placed each turn also depends on the board. A preview of the objects to be placed on the board appears in the upper left corner of the game window."
+msgstr "<link xref=\"play\">石を動かす</link>たびに、新しい石が盤のランダムな位置に追加されます。追加される石の数も、盤の大きさによって変わります。次に追加される石の種類は、ゲームウィンドウの左上隅で確認できます。"
+
+#. (itstool) path: item/p
+#: C/rules.page:28
+msgid "There must be a clear path from the original position of the object to the destination cell (i.e you can not jump over objects)."
+msgstr "石の元の場所と移動先の場所の経路は開けていなければなりません (他の石を飛び越えて移動することはできません)。"
+
+#. (itstool) path: item/p
+#: C/rules.page:31
+msgid "A straight horizontal, vertical or diagonal line of five or more similar objects will disappear from the game board. When this happens you will have an extra move without additional objects being added to the board."
+msgstr "縦、横、斜めのいずれかの方向に、同じ種類の石を 5 つ以上連続して並べると、該当の石が盤から消えます。石を消したときは、追加の石が配置されず、もう一度石を動かすことができます。"
+
+#. (itstool) path: item/p
+#: C/rules.page:35
+msgid "The more objects you clear, the longer the game will go on. The longer you play, the higher your <link xref=\"scores\">score</link>."
+msgstr "石をたくさん消していけば、ゲームが長く続きます。より長くプレイすれば、その分<link xref=\"scores\">スコア</link>も高得点になります。"
+
+#. (itstool) path: item/p
+#: C/rules.page:38
+msgid "The game is over when the board is full, since no object can be moved at that point."
+msgstr "盤が石でいっぱいになって、石を動かせなくなれば、ゲーム終了です。"
+
+#. (itstool) path: media/p
+#: C/rules.page:46
+msgid "Example horizontal alignment"
+msgstr "横に並べた例"
+
+#. (itstool) path: media/p
+#: C/rules.page:51
+msgid "Example vertical alignment"
+msgstr "縦に並べた例"
+
+#. (itstool) path: media/p
+#: C/rules.page:56
+msgid "Example diagonal alignment"
+msgstr "斜めに並べた例"
+
+#. (itstool) path: media/p
+#: C/rules.page:61
+msgid "<app>Five or More</app> game over position."
+msgstr "<app>Five or More</app> ゲームオーバーの状態"
+
+#. (itstool) path: page/title
+#: C/scores.page:20
+msgid "Scoring"
+msgstr "スコア"
+
+#. (itstool) path: page/p
+#: C/scores.page:21
+msgid "You score points by creating lines of 5 or more objects. The number of points depends on the number of objects that disappear."
+msgstr "石を 5 つ以上並べると得点が入ります。得点数は、消した石の数によって変わります。"
+
+#. (itstool) path: td/p
+#: C/scores.page:27
+msgid "<em>Number of objects</em>"
+msgstr "<em>石の数</em>"
+
+#. (itstool) path: td/p
+#: C/scores.page:28
+msgid "<em>Number of points</em>"
+msgstr "<em>得点数</em>"
+
+#. (itstool) path: td/p
+#: C/scores.page:34 C/scores.page:53
+msgid "10"
+msgstr "10"
+
+#. (itstool) path: td/p
+#: C/scores.page:37
+msgid "6"
+msgstr "6"
+
+#. (itstool) path: td/p
+#: C/scores.page:38 C/scores.page:61
+msgid "12"
+msgstr "12"
+
+#. (itstool) path: td/p
+#: C/scores.page:42
+msgid "18"
+msgstr "18"
+
+#. (itstool) path: td/p
+#: C/scores.page:45
+msgid "8"
+msgstr "8"
+
+#. (itstool) path: td/p
+#: C/scores.page:46
+msgid "28"
+msgstr "28"
+
+#. (itstool) path: td/p
+#: C/scores.page:50
+msgid "42"
+msgstr "42"
+
+#. (itstool) path: td/p
+#: C/scores.page:54
+msgid "82"
+msgstr "82"
+
+#. (itstool) path: td/p
+#: C/scores.page:57
+msgid "11"
+msgstr "11"
+
+#. (itstool) path: td/p
+#: C/scores.page:58
+msgid "108"
+msgstr "108"
+
+#. (itstool) path: td/p
+#: C/scores.page:62
+msgid "138"
+msgstr "138"
+
+#. (itstool) path: td/p
+#: C/scores.page:65
+msgid "13"
+msgstr "13"
+
+#. (itstool) path: td/p
+#: C/scores.page:66
+msgid "172"
+msgstr "172"
+
+#. (itstool) path: td/p
+#: C/scores.page:69
+msgid "14"
+msgstr "14"
+
+#. (itstool) path: td/p
+#: C/scores.page:70
+msgid "210"
+msgstr "210"
+
+#. (itstool) path: note/p
+#: C/scores.page:76
+msgid "You can view the high scores by clicking <guiseq><gui>Game</gui><gui>Scores</gui></guiseq>."
+msgstr "<guiseq><gui>ゲーム</gui><gui>スコア</gui></guiseq>をクリックすると、ハイスコアランキングを参照できます。"
+
+#. (itstool) path: note/p
+#: C/scores.page:78
+msgid "The <app>Five or More</app> scores are recorded according to the board size. You can select the <gui>Board Size</gui> of interest using the drop down menu."
+msgstr "<app>Five or More</app> のスコアは、盤の大きさ別に記録されます。調べたい<gui>盤の大きさ</gui>をドロップダウンリストから選択してください。"
+
+#. (itstool) path: page/title
+#: C/shortcuts.page:17
+msgid "Keyboard shortcuts"
+msgstr "キーボードショートカット"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:20
+msgid "New game"
+msgstr "新規ゲーム"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:21
+msgid "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
+msgstr "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:24
+msgid "Help"
+msgstr "ヘルプ"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:25
+msgid "<key>F1</key>"
+msgstr "<key>F1</key>"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:28
+msgid "Quit"
+msgstr "終了"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:29
+msgid "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
+msgstr "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
+
+#. (itstool) path: page/title
+#: C/strategy.page:17
+msgid "Strategy"
+msgstr "コツ"
+
+#. (itstool) path: page/p
+#: C/strategy.page:19
+msgid "There is no universal strategy for <app>Five or More</app>, but some strategic elements do exist. Here are some things to try and keep in mind as you play:"
+msgstr "<app>Five or More</app> の普遍的な定石は知られていませんが、コツはいくつかあります。覚えておくべきコツをいくつか紹介します。"
+
+#. (itstool) path: item/p
+#: C/strategy.page:22
+msgid "Try to set at least three same objects with your every move."
+msgstr "石を動かすときは、同じ種類の石が常に 3 つ以上並ぶようにすること。"
+
+#. (itstool) path: item/p
+#: C/strategy.page:23
+msgid "The board can quickly become very crowded with objects, so it is best to think ahead. Pay attention to the collection of <gui>Next</gui> objects, because knowing these will influence your moves."
+msgstr "盤はすぐに石であふれかえるので、先を見越して石を動かすこと。<gui>次</gui>に追加される石に注意を払って、石の動かし方を考えてください。"
+
+#. (itstool) path: item/p
+#: C/strategy.page:24
+msgid "Try to line up more than 5 objects. For example, if you have 6 objects, you can line up 2 and 3 with a space in between, and then connect them by placing the sixth object between them."
+msgstr "石を 6 つ以上並べるようにすること。たとえば、6 つの列を作る場合、まず石 2 つの列と 3 つの列を、間 1 マス空けて作っておきます。次に、その間のマスを6 番目の石で埋めて繋ぎ合わせれば、石 6 つの列ができあがります。"
+
+#. (itstool) path: page/title
+#: C/translate.page:23
+msgid "Help translate"
+msgstr "翻訳に協力する"
+
+#. (itstool) path: page/p
+#: C/translate.page:25
+msgid "The <app>GNOME Games</app> user interface and documentation is being translated by a world-wide volunteer community. You are welcome to participate."
+msgstr "<app>GNOME ゲーム</app>のユーザーインターフェースとドキュメントは、世界中のボランティアコミュニティによって翻訳されています。お気軽にご参加ください。"
+
+#. (itstool) path: page/p
+#: C/translate.page:28
+msgid "There are <link href=\"http://l10n.gnome.org/module/five-or-more/\">many languages</link> for which translations are still needed."
+msgstr "翻訳が充分でない<link href=\"https://l10n.gnome.org/module/five-or-more/\">言語もたくさんあります</link>。"
+
+#. (itstool) path: page/p
+#: C/translate.page:30
+msgid "To start translating you will need to <link href=\"http://l10n.gnome.org\">create an account</link> and join the <link href=\"http://l10n.gnome.org/teams/\">translation team</link> for your language. This will give you the ability to upload new translations."
+msgstr "翻訳を始めるには、<link href=\"https://l10n.gnome.org\">アカウントを作成</link>し、あなたの言語の<link href=\"https://l10n.gnome.org/teams/\">翻訳チーム</link>に参加する必要があります。その後、新しい翻訳をアップロードできるようになります。"
+
+#. (itstool) path: page/p
+#: C/translate.page:34
+msgid "You can chat with GNOME translators using <link href=\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fi18n\">irc</link>. People on the channel are located worldwide, so you may not get an immediate response as a result of timezone differences."
+msgstr "<link href=\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fi18n\">IRC</link> で、GNOME の翻訳者たちとチャットできます。チャンネルに参加する人々は世界各地に住んでいます。したがって、タイムゾーンの違いにより、ただちに返事を得られないこともあります。"
+
+#. (itstool) path: page/p
+#: C/translate.page:38
+msgid "Alternatively, you can contact the Internationalization Team using their <link href=\"http://mail.gnome.org/mailman/listinfo/gnome-i18n\">mailing list</link>."
+msgstr "あるいは、<link href=\"https://mail.gnome.org/mailman/listinfo/gnome-i18n\">メーリングリスト</link>を利用して、国際化チームに連絡することもできます。"
