@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: packagename\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-24 04:45+0000\n"
-"PO-Revision-Date: 2014-04-24 13:19+0200\n"
+"POT-Creation-Date: 2016-03-14 06:26+0000\n"
+"PO-Revision-Date: 2016-03-14 12:12+0200\n"
 "Last-Translator: Tom Tryfonidis <tomtryf@gmail.com>\n"
 "Language-Team: team@lists.gnome.gr\n"
 "Language: el\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.6.4\n"
+"X-Generator: Poedit 1.8.7\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -317,19 +317,20 @@ msgstr ""
 #. (itstool) path: item/p
 #: C/change-theme.page:27
 msgid ""
-"Select <gui>balls</gui> or <gui>shapes</gui> from the <gui>Image</gui> drop "
-"down menu to change the playing pieces."
+"Select <gui>balls</gui>, <gui>dots</gui>, <gui>gumball</gui> or <gui>shapes</"
+"gui> from the <gui>Image</gui> drop down menu to change the playing pieces."
 msgstr ""
-"Επιλέξτε <gui>μπάλες</gui> ή <gui>σχήματα</gui> από το αναπτυσσόμενο μενού "
-"<gui>Εικόνα</gui> για να αλλάξετε τα κομμάτια που παίζονται."
+"Επιλέξτε <gui>μπάλες</gui>, <gui>τελείες</gui>, <gui>ζαχαρωτά</gui>  ή "
+"<gui>σχήματα</gui> από το αναπτυσσόμενο μενού <gui>Εικόνα</gui> για να "
+"αλλάξετε τα κομμάτια που παίζονται."
 
 #. (itstool) path: item/p
 #: C/change-theme.page:29
 msgid ""
-"Click on the colored box next to <gui>Image background</gui> to access the "
+"Click on the colored box next to <gui>Background color</gui> to access the "
 "color palette."
 msgstr ""
-"Κάντε κλικ στο χρωματισμένο κουτί δίπλα στο <gui>παρασκήνιο εικόνας</gui> "
+"Κάντε κλικ στο χρωματισμένο πλαίσιο δίπλα στο <gui>Χρώμα παρασκηνίου</gui> "
 "για να μπείτε στη παλέτα χρωμάτων."
 
 #. (itstool) path: item/p
@@ -349,16 +350,26 @@ msgstr "Πέντε ή περισσότερα με διαφορετικές μπ�
 
 #. (itstool) path: media/p
 #: C/change-theme.page:43
+msgid "<app>Five or More</app> with different dots"
+msgstr "<app>Πέντε ή περισσότερα</app> με διαφορετικές τελείες"
+
+#. (itstool) path: media/p
+#: C/change-theme.page:47
+msgid "<app>Five or More</app> with different gumballs"
+msgstr "<app>Πέντε ή περισσότερα</app> με διαφορετικά ζαχαρωτά"
+
+#. (itstool) path: media/p
+#: C/change-theme.page:51
 msgid "<app>Five or More</app> with different shapes"
 msgstr "<app>Πέντε ή περισσότερα</app> με διαφορετικά σχήματα"
 
 #. (itstool) path: section/title
-#: C/change-theme.page:48
+#: C/change-theme.page:56
 msgid "Background colors available"
 msgstr "Διαθέσιμα χρώματα παρασκηνίου"
 
 #. (itstool) path: media/p
-#: C/change-theme.page:50
+#: C/change-theme.page:58
 msgid "Five or More color palette"
 msgstr "Χρωματική παλέτα του Πέντε ή περισσότερα"
 
@@ -468,15 +479,11 @@ msgstr "Πέντε ή περισσότερα"
 
 #. (itstool) path: media/span
 #: C/index.page:27
-#| msgctxt "link"
-#| msgid "Five or More"
 msgid "Five or More logo"
 msgstr "Πέντε ή περισσότερα λογότυπο"
 
 #. (itstool) path: page/title
 #: C/index.page:26
-#| msgctxt "link"
-#| msgid "Five or More"
 msgid "<_:media-1/> Five or More"
 msgstr "<_:media-1/> Πέντε ή περισσότερα"
 
