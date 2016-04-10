@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: five-or-more master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-"
 "or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-10-28 06:24+0000\n"
-"PO-Revision-Date: 2015-10-12 13:25+0200\n"
+"POT-Creation-Date: 2016-04-10 17:39+0000\n"
+"PO-Revision-Date: 2016-04-10 20:10+0200\n"
 "Last-Translator: Fabio Tomat <f.t.public@gmail.com>\n"
 "Language-Team: Friulian <fur@li.org>\n"
 "Language: fur\n"
@@ -62,7 +62,7 @@ msgstr "Aspiet"
 
 #: ../data/five-or-more-preferences.ui.h:3
 msgid "_Image:"
-msgstr "_Inmagjin:"
+msgstr "_Imagjin:"
 
 #: ../data/five-or-more-preferences.ui.h:4
 msgid "B_ackground color:"
@@ -145,8 +145,7 @@ msgstr "Stîl balutis"
 
 #: ../data/org.gnome.five-or-more.gschema.xml.h:4
 msgid "Ball style. The filename of the images to use for the balls."
-msgstr ""
-"Stîl des balutis. Il non dal file des inmagjinis di doprâ par lis balutis."
+msgstr "Stîl des balutis. Il non dal file des imagjins di doprâ pes balutis."
 
 #: ../data/org.gnome.five-or-more.gschema.xml.h:5
 msgid "Background color"
