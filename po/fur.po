@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: five-or-more master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-"
 "or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-04-10 17:39+0000\n"
-"PO-Revision-Date: 2016-04-10 20:10+0200\n"
+"POT-Creation-Date: 2016-04-15 17:38+0000\n"
+"PO-Revision-Date: 2016-04-16 01:22+0200\n"
 "Last-Translator: Fabio Tomat <f.t.public@gmail.com>\n"
 "Language-Team: Friulian <fur@li.org>\n"
 "Language: fur\n"
@@ -275,7 +275,7 @@ msgstr "Fabio Tomat <f.t.public@gmail.com>"
 
 #: ../src/five-or-more.c:1304
 msgid "Are you sure you want to restart the game?"
-msgstr "Sêstu sigûr di tornâ a tacâ la partide?"
+msgstr "Sigûrs di tornâ a tacâ la partide?"
 
 #: ../src/five-or-more.c:1307
 msgid "_Cancel"
