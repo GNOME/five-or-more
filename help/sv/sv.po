@@ -4,16 +4,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: five-or-more.DOC\n"
-"POT-Creation-Date: 2016-02-28 18:25+0000\n"
-"PO-Revision-Date: 2016-02-29 13:53+0100\n"
-"Last-Translator: Erik Sköldås <erik.skoldas@tele2.se>\n"
+"POT-Creation-Date: 2016-05-07 05:32+0000\n"
+"PO-Revision-Date: 2016-06-14 21:45+0200\n"
+"Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.8.7\n"
+"X-Generator: Poedit 1.8.8\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -521,12 +521,12 @@ msgstr "Engagera dig"
 #. (itstool) path: p/link
 #: C/legal.xml:3
 msgid "Creative Commons Attribution-ShareAlike 3.0 Unported License"
-msgstr "licensen Creative Commons Erkännande-DelaLika 3.0 Unported"
+msgstr "Creative Commons Erkännande-DelaLika 3.0 Unported"
 
 #. (itstool) path: license/p
 #: C/legal.xml:3
 msgid "This work is licensed under a <_:link-1/>."
-msgstr "Detta verk är licensierat under <_:link-1/>."
+msgstr "Detta verk är licensierat under licensen <_:link-1/>."
 
 #. (itstool) path: info/desc
 #: C/license.page:9
@@ -550,7 +550,7 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/license.page:21
 msgid "You are free:"
-msgstr "Du har rätt:"
+msgstr "Du har tillstånd:"
 
 #. (itstool) path: item/title
 #: C/license.page:26
@@ -575,7 +575,7 @@ msgstr "Att anpassa programmet."
 #. (itstool) path: page/p
 #: C/license.page:34
 msgid "Under the following conditions:"
-msgstr "Under följande förhållanden:"
+msgstr "På följande villkor:"
 
 #. (itstool) path: item/title
 #: C/license.page:39
@@ -596,7 +596,7 @@ msgstr ""
 #. (itstool) path: item/title
 #: C/license.page:47
 msgid "<em>Share Alike</em>"
-msgstr "<em>Dela vidare</em>"
+msgstr "<em>Dela lika</em>"
 
 #. (itstool) path: item/p
 #: C/license.page:48
