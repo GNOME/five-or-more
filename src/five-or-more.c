@@ -1457,25 +1457,12 @@ game_props_callback (GSimpleAction *action,
   gtk_dialog_run (GTK_DIALOG (pref_dialog));
 }
 
-static void cleanup ()
-{
-  int i = 0;
-
-  for (i = 0; i < G_N_ELEMENTS (preview_images); i++)
-    if (preview_pixbufs[i])
-      g_object_unref (preview_pixbufs[i]);
-
-  g_clear_object (&ball_preimage);
-  g_object_unref (highscores);
-
-}
-
 void
 game_quit_callback (GSimpleAction *action,
                     GVariant *parameter,
                     gpointer user_data)
 {
-  cleanup ();
+  g_application_quit (G_APPLICATION (user_data));
 }
 
 void
@@ -1689,10 +1676,18 @@ activate_cb (GApplication *application)
 static void
 shutdown_cb (GApplication *application)
 {
+  int i = 0;
+
+  for (i = 0; i < G_N_ELEMENTS (preview_images); i++)
+    if (preview_pixbufs[i])
+      g_object_unref (preview_pixbufs[i]);
+
+  g_clear_object (&ball_preimage);
+  g_object_unref (highscores);
+
   g_settings_set_int (settings, "window-width", window_width);
   g_settings_set_int (settings, "window-height", window_height);
   g_settings_set_boolean (settings, "window-is-maximized", window_is_maximized);
-  cleanup ();
 }
 
 int
