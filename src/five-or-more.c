@@ -287,7 +287,7 @@ refresh_preview_surfaces (void)
   cairo_surface_t *preview_surface = NULL;
 
   context = gtk_widget_get_style_context (widget);
-  gtk_style_context_get_background_color (context, GTK_STATE_FLAG_NORMAL, &bg);
+  gtk_style_context_get_background_color (context, gtk_style_context_get_state (context), &bg);
 
   /* Like the refresh_pixmaps() function, we may be called before
    * the window is ready. */
