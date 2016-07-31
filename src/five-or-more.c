@@ -1547,13 +1547,10 @@ init_config (void)
 }
 
 static gboolean
-window_configure_event_cb (GtkWidget *widget, GdkEventConfigure *event)
+window_size_allocate_cb (GtkWidget *widget, GdkRectangle *allocation)
 {
   if (!window_is_maximized && !window_is_fullscreen)
-  {
-    window_width = event->width;
-    window_height = event->height;
-  }
+    gtk_window_get_size (GTK_WINDOW (widget), &window_width, &window_height);
 
   return FALSE;
 }
@@ -1629,7 +1626,7 @@ startup_cb (GApplication *application)
 
   app = GTK_WIDGET (gtk_builder_get_object (builder, "glines_window"));
   gtk_window_set_icon_name (GTK_WINDOW (app), "five-or-more");
-  g_signal_connect (GTK_WINDOW (app), "configure-event", G_CALLBACK (window_configure_event_cb), NULL);
+  g_signal_connect (GTK_WINDOW (app), "size-allocate", G_CALLBACK (window_size_allocate_cb), NULL);
   g_signal_connect (GTK_WINDOW (app), "window-state-event", G_CALLBACK (window_state_event_cb), NULL);
   gtk_window_set_default_size (GTK_WINDOW (app), g_settings_get_int (settings, "window-width"), g_settings_get_int (settings, "window-height"));
   if (g_settings_get_boolean (settings, "window-is-maximized"))
