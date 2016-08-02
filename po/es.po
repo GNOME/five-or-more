@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: gnome-games.master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-"
 "or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-12-18 05:42+0000\n"
+"POT-Creation-Date: 2016-05-19 05:37+0000\n"
 "PO-Revision-Date: 2014-12-18 11:19+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español; Castellano <gnome-es-list@gnome.org>\n"
@@ -25,8 +25,8 @@ msgstr ""
 "X-Project-Style: gnome\n"
 
 #: ../data/five-or-more.appdata.xml.in.h:1 ../data/five-or-more.desktop.in.h:1
-#: ../data/five-or-more.ui.h:1 ../src/five-or-more.c:1175
-#: ../src/five-or-more.c:1718
+#: ../data/five-or-more.ui.h:1 ../src/five-or-more.c:1172
+#: ../src/five-or-more.c:1731
 msgid "Five or More"
 msgstr "Cinco o más"
 
@@ -58,8 +58,8 @@ msgstr ""
 msgid "game;strategy;logic;"
 msgstr "juego;estrategia;lógica;"
 
-#: ../data/five-or-more-preferences.ui.h:1 ../data/menu.ui.h:3
-#: ../src/five-or-more.c:174
+#: ../data/five-or-more-preferences.ui.h:1 ../data/menu.ui.h:2
+#: ../src/five-or-more.c:171
 msgid "Preferences"
 msgstr "Preferencias"
 
@@ -120,22 +120,18 @@ msgid "Start a new puzzle"
 msgstr "Iniciar un puzle nuevo"
 
 #: ../data/menu.ui.h:1
-msgid "New Game"
-msgstr "Partida nueva"
-
-#: ../data/menu.ui.h:2
 msgid "Scores"
 msgstr "Puntuación"
 
-#: ../data/menu.ui.h:4
+#: ../data/menu.ui.h:3
 msgid "Help"
 msgstr "Ayuda"
 
-#: ../data/menu.ui.h:5
+#: ../data/menu.ui.h:4
 msgid "About"
 msgstr "Acerca de"
 
-#: ../data/menu.ui.h:6
+#: ../data/menu.ui.h:5
 msgid "Quit"
 msgstr "Salir"
 
@@ -225,11 +221,11 @@ msgctxt "board size"
 msgid "Large"
 msgstr "Grande"
 
-#: ../src/five-or-more.c:168
+#: ../src/five-or-more.c:165
 msgid "Could not load theme"
 msgstr "No se pudo cargar el tema"
 
-#: ../src/five-or-more.c:194
+#: ../src/five-or-more.c:191
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -242,7 +238,7 @@ msgstr ""
 "\n"
 "En su lugar se cargará el tema predeterminado."
 
-#: ../src/five-or-more.c:201
+#: ../src/five-or-more.c:198
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -255,32 +251,32 @@ msgstr ""
 "\n"
 "Compruebe que «Cinco o más» esté instalado correctamente."
 
-#: ../src/five-or-more.c:411
+#: ../src/five-or-more.c:407
 msgid "Match five objects of the same type in a row to score!"
 msgstr "Para puntuar alinee cinco bolas del mismo color en una fila."
 
-#: ../src/five-or-more.c:472
+#: ../src/five-or-more.c:468
 msgid "Five or More Scores"
 msgstr "Puntuación de Cinco o más"
 
-#: ../src/five-or-more.c:474
+#: ../src/five-or-more.c:470
 msgid "_Board size:"
 msgstr "Tamaño del ta_blero:"
 
-#: ../src/five-or-more.c:491
+#: ../src/five-or-more.c:487
 msgid "Game Over!"
 msgstr "Juego terminado"
 
 #. Can't move there!
-#: ../src/five-or-more.c:647
+#: ../src/five-or-more.c:644
 msgid "You can’t move there!"
 msgstr "No puede mover ahí"
 
-#: ../src/five-or-more.c:1177
+#: ../src/five-or-more.c:1174
 msgid "GNOME port of the once-popular Color Lines game"
 msgstr "Adaptación a GNOME del popular juego de líneas de colores"
 
-#: ../src/five-or-more.c:1183
+#: ../src/five-or-more.c:1180
 msgid "translator-credits"
 msgstr ""
 "Daniel Mustieles <daniel.mustieles@gmail.com>, 2008-2012\n"
@@ -289,16 +285,15 @@ msgstr ""
 "Germán Poo Caamaño <gpoo@ubiobio.cl>\n"
 "Pablo Saratxaga <pablo@mandrakesoft.com>"
 
-#: ../src/five-or-more.c:1307
-#| msgid "Are you sure you want to quit?"
+#: ../src/five-or-more.c:1304
 msgid "Are you sure you want to restart the game?"
 msgstr "¿Seguro que quiere reiniciar la partida?"
 
-#: ../src/five-or-more.c:1310
+#: ../src/five-or-more.c:1307
 msgid "_Cancel"
 msgstr "_Cancelar"
 
-#: ../src/five-or-more.c:1311
+#: ../src/five-or-more.c:1308
 msgid "_Restart"
 msgstr "_Reiniciar"
 
@@ -337,6 +332,9 @@ msgstr "_Cerrar"
 #: ../src/games-scores-dialog.c:478
 msgid "Date"
 msgstr "Fecha"
+
+#~ msgid "New Game"
+#~ msgstr "Partida nueva"
 
 #~ msgid "Five or More Preferences"
 #~ msgstr "Preferencias de Cinco o más"
@@ -4863,7 +4861,7 @@ msgstr "Fecha"
 #~ msgstr "un hueco vacío en fundación"
 
 #~ msgid "an empty slot on the tableau"
-#~ msgstr "un un hueco vacío en el tablero"
+#~ msgstr "unhueco vacío en el tablero"
 
 #~ msgid "an empty foundation"
 #~ msgstr "una fundación vacía"
