@@ -3,7 +3,7 @@
 <component type="desktop">
   <id>five-or-more.desktop</id>
   <metadata_license>CC0-1.0</metadata_license>
-  <project_license>GPL-2.0+ and CC-BY-SA-3.0</project_license>
+  <project_license>GPL-3.0+</project_license>
   <_name>Five or More</_name>
   <_summary>Remove colored balls from the board by forming lines</_summary>
   <description>
@@ -19,7 +19,7 @@
     </_p>
   </description>
   <screenshots>
-    <screenshot type="default" width="972" height="524">
+    <screenshot height="524" width="972" type="default">
       <image>https://people.gnome.org/~mcatanzaro/five-or-more.png</image>
     </screenshot>
   </screenshots>
@@ -27,6 +27,7 @@
   <url type="bugtracker">https://bugzilla.gnome.org/enter_bug.cgi?product=five-or-more</url>
   <url type="donation">http://www.gnome.org/friends/</url>
   <url type="help">https://help.gnome.org/users/five-or-more/stable/</url>
+  <url type="translate">https://wiki.gnome.org/TranslationProject</url>
   <update_contact>mcatanzaro_at_gnome.org</update_contact>
   <project_group>GNOME</project_group>
   <kudos>
@@ -36,4 +37,5 @@
     <kudo>UserDocs</kudo>
   </kudos>
   <translation type="gettext">five-or-more</translation>
+  <_developer_name>The GNOME Project</_developer_name>
 </component>
