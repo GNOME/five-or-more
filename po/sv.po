@@ -10,10 +10,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-or-"
-"more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-10-16 17:13+0000\n"
-"PO-Revision-Date: 2015-10-17 00:28+0200\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-"
+"or-more&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2016-08-13 20:27+0000\n"
+"PO-Revision-Date: 2016-08-14 12:06+0200\n"
 "Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
@@ -21,11 +21,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.8.5\n"
+"X-Generator: Poedit 1.8.8\n"
 
 #: ../data/five-or-more.appdata.xml.in.h:1 ../data/five-or-more.desktop.in.h:1
 #: ../data/five-or-more.ui.h:1 ../src/five-or-more.c:1172
-#: ../src/five-or-more.c:1731
+#: ../src/five-or-more.c:1723
 msgid "Five or More"
 msgstr "Fem eller mer"
 
@@ -35,23 +35,27 @@ msgstr "Ta bort färgade bollar från brädet genom att skapa linjer"
 
 #: ../data/five-or-more.appdata.xml.in.h:3
 msgid ""
-"Five or More is the GNOME port of a once-popular computer game. Align five or "
-"more objects of the same color into a line to cause them to disappear and score "
-"points. Earn many more points by lining up as many objects as possible before "
-"clearing them."
+"Five or More is the GNOME port of a once-popular computer game. Align five "
+"or more objects of the same color into a line to cause them to disappear and "
+"score points. Earn many more points by lining up as many objects as possible "
+"before clearing them."
 msgstr ""
-"Fem eller mer är GNOME-porteringen av ett en gång populärt dataspel. Lägg fem "
-"eller fler objekt av samma färg på rad för att få dem att försvinna och få "
-"poäng. Tjäna fler poäng genom att rada upp så många objekt som möjligt innan du "
-"avlägsnar dem."
+"Fem eller mer är GNOME-porteringen av ett en gång populärt dataspel. Lägg "
+"fem eller fler objekt av samma färg på rad för att få dem att försvinna och "
+"få poäng. Tjäna fler poäng genom att rada upp så många objekt som möjligt "
+"innan du avlägsnar dem."
 
 #: ../data/five-or-more.appdata.xml.in.h:4
 msgid ""
-"More objects appear after every turn. Play for as long as possible, until the "
-"board is completely full!"
+"More objects appear after every turn. Play for as long as possible, until "
+"the board is completely full!"
 msgstr ""
 "Fler objekt dyker upp efter varje omgång. Spela så länge som möjligt, tills "
 "brädet är helt fullt!"
+
+#: ../data/five-or-more.appdata.xml.in.h:5
+msgid "The GNOME Project"
+msgstr "GNOME-projektet"
 
 #: ../data/five-or-more.desktop.in.h:3
 msgid "game;strategy;logic;"
@@ -139,9 +143,11 @@ msgid "Playing field size"
 msgstr "Storlek på spelfältet"
 
 #: ../data/org.gnome.five-or-more.gschema.xml.h:2
-msgid "Playing field size. 1=Small, 2=Medium, 3=Large. Any other value is invalid."
+msgid ""
+"Playing field size. 1=Small, 2=Medium, 3=Large. Any other value is invalid."
 msgstr ""
-"Storlek på spelfältet. 1=litet, 2=mellan, 3=stort. Alla andra värden är ogiltiga."
+"Storlek på spelfältet. 1=litet, 2=mellan, 3=stort. Alla andra värden är "
+"ogiltiga."
 
 #: ../data/org.gnome.five-or-more.gschema.xml.h:3
 msgid "Ball style"
