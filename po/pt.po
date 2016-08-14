@@ -3,7 +3,7 @@
 # Distributed under the same licence as the gnome-games package
 # Nuno Ferreira <nmrf@rnl.ist.utl.pt>, 1998.
 # Duarte Loreto <happyguy_pt@hotmail.com>, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013.
-# Tiago S. <almosthumane@portugalmail.pt>, 2014.
+# Tiago Santos <iagofsantos81@sapo.pt>, 2014 - 2016.
 # Pedro Albuquerque <palbuquerque73@openmailbox.com>, 2015.
 #
 msgid ""
@@ -11,20 +11,20 @@ msgstr ""
 "Project-Id-Version: 3.12\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-"
 "or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-06-08 04:56+0000\n"
-"PO-Revision-Date: 2015-06-27 07:02+0100\n"
-"Last-Translator: Pedro Albuquerque <palbuquerque73@openmailbox.com>\n"
+"POT-Creation-Date: 2016-08-13 20:27+0000\n"
+"PO-Revision-Date: 2016-08-14 21:13+0100\n"
+"Last-Translator: Tiago Santos <iagofsantos81@sapo.pt>\n"
 "Language-Team: Português <palbuquerque73@openmailbox.com>\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Gtranslator 2.91.6\n"
+"X-Generator: Poedit 1.8.7.1\n"
 
 #: ../data/five-or-more.appdata.xml.in.h:1 ../data/five-or-more.desktop.in.h:1
 #: ../data/five-or-more.ui.h:1 ../src/five-or-more.c:1172
-#: ../src/five-or-more.c:1731
+#: ../src/five-or-more.c:1723
 msgid "Five or More"
 msgstr "Cinco ou mais"
 
@@ -51,6 +51,10 @@ msgid ""
 msgstr ""
 "Aparecem mais objetos após turno. Jogue durante o máximo de tempo possível "
 "até que o tabuleiro esteja completo."
+
+#: ../data/five-or-more.appdata.xml.in.h:5
+msgid "The GNOME Project"
+msgstr "O Projeto GNOME"
 
 #: ../data/five-or-more.desktop.in.h:3
 msgid "game;strategy;logic;"
@@ -272,10 +276,6 @@ msgid "You can’t move there!"
 msgstr "Não pode mover-se para aí!"
 
 #: ../src/five-or-more.c:1174
-#| msgid ""
-#| "GNOME port of the once-popular Color Lines game\n"
-#| "\n"
-#| "Five or More is a part of GNOME Games."
 msgid "GNOME port of the once-popular Color Lines game"
 msgstr "Conversão para o GNOME do popular jogo Color Lines."
 
@@ -283,7 +283,8 @@ msgstr "Conversão para o GNOME do popular jogo Color Lines."
 msgid "translator-credits"
 msgstr ""
 "Duarte Loreto <happyguy_pt@hotmail.com>\n"
-"Pedro Albuquerque <palbuquerque73@gmail.com>"
+"Pedro Albuquerque <palbuquerque73@gmail.com>\n"
+"Tiago Santos <iagofsantos81@sapo.pt>"
 
 #: ../src/five-or-more.c:1304
 msgid "Are you sure you want to restart the game?"
@@ -317,12 +318,10 @@ msgid "%1$dm %2$ds"
 msgstr "%1$dm %2$ds"
 
 #: ../src/games-scores-dialog.c:371
-#| msgid "Quit"
 msgid "_Quit"
 msgstr "_Sair"
 
 #: ../src/games-scores-dialog.c:378
-#| msgid "_Undo Move"
 msgid "_Undo"
 msgstr "_Desfazer"
 
