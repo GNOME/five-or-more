@@ -16,28 +16,28 @@
 # Petr Pulc <petrpulc@gmail.com>, 2009.
 # Andre Klapper <ak-47@gmx.net>, 2009.
 # Petr Kovar <pknbe@volny.cz>, 2008, 2012.
-# Marek Černocký <marek@manet.cz>, 2010, 2011, 2012, 2013, 2014, 2015.
+# Marek Černocký <marek@manet.cz>, 2010, 2011, 2012, 2013, 2014, 2015, 2016.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: five-or-more master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-"
 "or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-01-07 05:40+0000\n"
-"PO-Revision-Date: 2015-01-07 08:46+0100\n"
+"POT-Creation-Date: 2016-08-13 20:27+0000\n"
+"PO-Revision-Date: 2016-08-14 12:45+0200\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
-"Language-Team: Czech <gnome-cs-list@gnome.org>\n"
+"Language-Team: čeština <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Gtranslator 2.91.6\n"
+"X-Generator: Gtranslator 2.91.7\n"
 "X-Project-Style: gnome\n"
 
 #: ../data/five-or-more.appdata.xml.in.h:1 ../data/five-or-more.desktop.in.h:1
-#: ../data/five-or-more.ui.h:1 ../src/five-or-more.c:1176
-#: ../src/five-or-more.c:1719
+#: ../data/five-or-more.ui.h:1 ../src/five-or-more.c:1172
+#: ../src/five-or-more.c:1723
 msgid "Five or More"
 msgstr "Pět nebo víc"
 
@@ -65,12 +65,16 @@ msgstr ""
 "Po každém tahu se objeví nové objekty. Hrajte, co nejdéle to půjde, dokud "
 "nebude hrací plocha plná."
 
+#: ../data/five-or-more.appdata.xml.in.h:5
+msgid "The GNOME Project"
+msgstr "Projekt GNOME"
+
 #: ../data/five-or-more.desktop.in.h:3
 msgid "game;strategy;logic;"
 msgstr "hra;strategická;logická;"
 
-#: ../data/five-or-more-preferences.ui.h:1 ../data/menu.ui.h:3
-#: ../src/five-or-more.c:174
+#: ../data/five-or-more-preferences.ui.h:1 ../data/menu.ui.h:2
+#: ../src/five-or-more.c:171
 msgid "Preferences"
 msgstr "Předvolby"
 
@@ -131,22 +135,18 @@ msgid "Start a new puzzle"
 msgstr "Začít nový hlavolam"
 
 #: ../data/menu.ui.h:1
-msgid "New Game"
-msgstr "Nová hra"
-
-#: ../data/menu.ui.h:2
 msgid "Scores"
 msgstr "Skóre"
 
-#: ../data/menu.ui.h:4
+#: ../data/menu.ui.h:3
 msgid "Help"
 msgstr "Nápověda"
 
-#: ../data/menu.ui.h:5
+#: ../data/menu.ui.h:4
 msgid "About"
 msgstr "O aplikaci"
 
-#: ../data/menu.ui.h:6
+#: ../data/menu.ui.h:5
 msgid "Quit"
 msgstr "Ukončit"
 
@@ -236,11 +236,11 @@ msgctxt "board size"
 msgid "Large"
 msgstr "Velké"
 
-#: ../src/five-or-more.c:168
+#: ../src/five-or-more.c:165
 msgid "Could not load theme"
 msgstr "Nelze načíst motiv"
 
-#: ../src/five-or-more.c:194
+#: ../src/five-or-more.c:191
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -253,7 +253,7 @@ msgstr ""
 "\n"
 "Bude místo něj načten výchozí motiv."
 
-#: ../src/five-or-more.c:201
+#: ../src/five-or-more.c:198
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -266,32 +266,32 @@ msgstr ""
 "\n"
 "Zkontrolujte prosím, že je hra Pět nebo víc správně nainstalována."
 
-#: ../src/five-or-more.c:411
+#: ../src/five-or-more.c:407
 msgid "Match five objects of the same type in a row to score!"
 msgstr "Seřazením pěti objektů stejného typu do řady získáte body!"
 
-#: ../src/five-or-more.c:472
+#: ../src/five-or-more.c:468
 msgid "Five or More Scores"
 msgstr "Skóre Pět nebo víc"
 
-#: ../src/five-or-more.c:474
+#: ../src/five-or-more.c:470
 msgid "_Board size:"
 msgstr "Velikost hrací _desky:"
 
-#: ../src/five-or-more.c:491
+#: ../src/five-or-more.c:487
 msgid "Game Over!"
 msgstr "Konec hry!"
 
 #. Can't move there!
-#: ../src/five-or-more.c:648
+#: ../src/five-or-more.c:644
 msgid "You can’t move there!"
 msgstr "Tam nemůžete táhnout!"
 
-#: ../src/five-or-more.c:1178
+#: ../src/five-or-more.c:1174
 msgid "GNOME port of the once-popular Color Lines game"
 msgstr "Port pro prostředí GNOME kdysi oblíbené hry Barevné linie"
 
-#: ../src/five-or-more.c:1184
+#: ../src/five-or-more.c:1180
 msgid "translator-credits"
 msgstr ""
 "Jirka Lébl\n"
@@ -308,15 +308,15 @@ msgstr ""
 "Petr Pulc <petrpulc@gmail.com>\n"
 "Marek Černocký <marek@manet.cz>"
 
-#: ../src/five-or-more.c:1308
+#: ../src/five-or-more.c:1304
 msgid "Are you sure you want to restart the game?"
 msgstr "Opravdu chcete hru začít znovu od začátku?"
 
-#: ../src/five-or-more.c:1311
+#: ../src/five-or-more.c:1307
 msgid "_Cancel"
 msgstr "_Zrušit"
 
-#: ../src/five-or-more.c:1312
+#: ../src/five-or-more.c:1308
 msgid "_Restart"
 msgstr "Z_novu od začátku"
 
@@ -355,3 +355,6 @@ msgstr "_Zavřít"
 #: ../src/games-scores-dialog.c:478
 msgid "Date"
 msgstr "Datum"
+
+#~ msgid "New Game"
+#~ msgstr "Nová hra"
