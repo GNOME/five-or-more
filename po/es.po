@@ -5,15 +5,15 @@
 # Lucas Vieites <lucas@codexion.com>, 2007, 2008.
 # Jorge González <jorgegonz@svn.gnome.org>, 2007, 2008, 2009, 2010, 2011.
 # Chris Leonard <cjl@laptop.org>, 2012.
-# Daniel Mustieles <daniel.mustieles@gmail.com>, 2008, 2009, 2010, 2011, 2012, 2013, 2014.
+# Daniel Mustieles <daniel.mustieles@gmail.com>, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2016.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-"
 "or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-05-19 05:37+0000\n"
-"PO-Revision-Date: 2014-12-18 11:19+0100\n"
+"POT-Creation-Date: 2016-08-13 20:27+0000\n"
+"PO-Revision-Date: 2016-08-16 12:12+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español; Castellano <gnome-es-list@gnome.org>\n"
 "Language: es\n"
@@ -26,7 +26,7 @@ msgstr ""
 
 #: ../data/five-or-more.appdata.xml.in.h:1 ../data/five-or-more.desktop.in.h:1
 #: ../data/five-or-more.ui.h:1 ../src/five-or-more.c:1172
-#: ../src/five-or-more.c:1731
+#: ../src/five-or-more.c:1723
 msgid "Five or More"
 msgstr "Cinco o más"
 
@@ -53,6 +53,10 @@ msgid ""
 msgstr ""
 "Después de cada turno aparecen más objetos. Juegue todo el tiempo que pueda, "
 "hasta que se llene el tablero."
+
+#: ../data/five-or-more.appdata.xml.in.h:5
+msgid "The GNOME Project"
+msgstr "El proyecto GNOME"
 
 #: ../data/five-or-more.desktop.in.h:3
 msgid "game;strategy;logic;"
@@ -279,7 +283,7 @@ msgstr "Adaptación a GNOME del popular juego de líneas de colores"
 #: ../src/five-or-more.c:1180
 msgid "translator-credits"
 msgstr ""
-"Daniel Mustieles <daniel.mustieles@gmail.com>, 2008-2012\n"
+"Daniel Mustieles <daniel.mustieles@gmail.com>, 2008-2016\n"
 "Jorge González <jorgegonz@svn.gnome.org>, 2008\n"
 "Lucas Vieites <lucas@asixinformatica.com>, 2002-2008\n"
 "Germán Poo Caamaño <gpoo@ubiobio.cl>\n"
