@@ -224,6 +224,9 @@ refresh_pixmaps (void)
   if (!ball_surface)
     return;
 
+  if (!boxsize)
+    return;
+
   if (ball_preimage) {
     ball_pixbuf = games_preimage_render (ball_preimage, 4 * boxsize,
                                          7 * boxsize);
