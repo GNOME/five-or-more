@@ -8,19 +8,19 @@ msgstr ""
 "Project-Id-Version: five-or-more master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-"
 "or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-04-15 17:38+0000\n"
-"PO-Revision-Date: 2016-04-16 01:22+0200\n"
+"POT-Creation-Date: 2016-08-13 20:27+0000\n"
+"PO-Revision-Date: 2016-08-22 22:46+0200\n"
 "Last-Translator: Fabio Tomat <f.t.public@gmail.com>\n"
 "Language-Team: Friulian <fur@li.org>\n"
 "Language: fur\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.5\n"
+"X-Generator: Poedit 1.8.8\n"
 
 #: ../data/five-or-more.appdata.xml.in.h:1 ../data/five-or-more.desktop.in.h:1
 #: ../data/five-or-more.ui.h:1 ../src/five-or-more.c:1172
-#: ../src/five-or-more.c:1731
+#: ../src/five-or-more.c:1723
 msgid "Five or More"
 msgstr "Cinc o plui"
 
@@ -46,6 +46,10 @@ msgid ""
 msgstr ""
 "A ogni turni, gnûfs elements a saran disponibii. Zuie par plui timp "
 "pussibil, fintremai che la taule di zûc no je plene!"
+
+#: ../data/five-or-more.appdata.xml.in.h:5
+msgid "The GNOME Project"
+msgstr "Il progjet GNOME"
 
 #: ../data/five-or-more.desktop.in.h:3
 msgid "game;strategy;logic;"
