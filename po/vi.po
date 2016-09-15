@@ -1,18 +1,18 @@
 # Vietnamese translation for five-or-more.
 # Bản dịch tiếng Việt dành cho five-or-more.
-# Copyright © 2015 GNOME I18N Project for Vietnamese.
+# Copyright © 2016 GNOME I18N Project for Vietnamese.
 # T.M.Thanh <tmthanh@yahoo.com>, 2002.
 # Nguyễn Thái Ngọc Duy <pclouds@gmail.com>, 2007, 2012.
 # Clytie Siddall <clytie@riverland.net.au>, 2005-2009.
-# Trần Ngọc Quân <vnwildman@gmail.com>, 2015.
+# Trần Ngọc Quân <vnwildman@gmail.com>, 2015, 2016.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-"
 "or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-10-03 05:13+0000\n"
-"PO-Revision-Date: 2015-10-03 15:24+0700\n"
+"POT-Creation-Date: 2016-09-12 23:13+0000\n"
+"PO-Revision-Date: 2016-09-15 07:46+0700\n"
 "Last-Translator: Trần Ngọc Quân <vnwildman@gmail.com>\n"
 "Language-Team: Vietnamese <gnome-vi-list@gnome.org>\n"
 "Language: vi\n"
@@ -23,8 +23,8 @@ msgstr ""
 "X-Generator: Gtranslator 2.91.7\n"
 
 #: ../data/five-or-more.appdata.xml.in.h:1 ../data/five-or-more.desktop.in.h:1
-#: ../data/five-or-more.ui.h:1 ../src/five-or-more.c:1172
-#: ../src/five-or-more.c:1731
+#: ../data/five-or-more.ui.h:1 ../src/five-or-more.c:1175
+#: ../src/five-or-more.c:1726
 msgid "Five or More"
 msgstr "Năm hay nhiều hơn"
 
@@ -51,6 +51,10 @@ msgid ""
 msgstr ""
 "Nhiều đối tượng xuất hiện hơn sau từng bước đi. Hãy chơi càng lâu càng tốt, "
 "cho đến khi bảng hoàn toàn bị đầy!"
+
+#: ../data/five-or-more.appdata.xml.in.h:5
+msgid "The GNOME Project"
+msgstr "Dự án GNOME"
 
 #: ../data/five-or-more.desktop.in.h:3
 msgid "game;strategy;logic;"
@@ -99,7 +103,7 @@ msgstr "Di chuyển _nhanh"
 
 #: ../data/five-or-more.ui.h:2
 msgid "Next:"
-msgstr "Kế:"
+msgstr "Tiếp theo:"
 
 #: ../data/five-or-more.ui.h:3
 msgid "0"
@@ -252,44 +256,44 @@ msgstr ""
 "\n"
 "Hãy kiểm tra bản cài đặt “Năm hay nhiều hơn”."
 
-#: ../src/five-or-more.c:407
+#: ../src/five-or-more.c:410
 msgid "Match five objects of the same type in a row to score!"
 msgstr "Xếp 5 đối tượng cùng loại trên một dòng để ăn điểm!"
 
-#: ../src/five-or-more.c:468
+#: ../src/five-or-more.c:471
 msgid "Five or More Scores"
 msgstr "Điểm số Năm hay nhiều hơn"
 
-#: ../src/five-or-more.c:470
+#: ../src/five-or-more.c:473
 msgid "_Board size:"
 msgstr "Cỡ _bảng:"
 
-#: ../src/five-or-more.c:487
+#: ../src/five-or-more.c:490
 msgid "Game Over!"
 msgstr "Trò chơi kết thúc!"
 
 #. Can't move there!
-#: ../src/five-or-more.c:644
+#: ../src/five-or-more.c:647
 msgid "You can’t move there!"
 msgstr "Không thể di chuyển vào đó!"
 
-#: ../src/five-or-more.c:1174
+#: ../src/five-or-more.c:1177
 msgid "GNOME port of the once-popular Color Lines game"
 msgstr "Trò chơi sắp bóng cùng màu thành hàng được chuyển sang cho GNOME"
 
-#: ../src/five-or-more.c:1180
+#: ../src/five-or-more.c:1183
 msgid "translator-credits"
 msgstr "Nhóm Việt hóa GNOME <gnome-vi-list@gnome.org>"
 
-#: ../src/five-or-more.c:1304
+#: ../src/five-or-more.c:1307
 msgid "Are you sure you want to restart the game?"
 msgstr "Bạn có chắc muốn đặt lại ván chơi không?"
 
-#: ../src/five-or-more.c:1307
+#: ../src/five-or-more.c:1310
 msgid "_Cancel"
 msgstr "_Thôi"
 
-#: ../src/five-or-more.c:1308
+#: ../src/five-or-more.c:1311
 msgid "_Restart"
 msgstr "_Khởi động lại"
 
@@ -310,7 +314,7 @@ msgstr "Điểm"
 #, c-format
 msgctxt "score-dialog"
 msgid "%1$dm %2$ds"
-msgstr "%1$dm %2$ds"
+msgstr "%1$dph %2$dgi"
 
 #: ../src/games-scores-dialog.c:371
 msgid "_Quit"
@@ -318,7 +322,7 @@ msgstr "T_hoát"
 
 #: ../src/games-scores-dialog.c:378
 msgid "_Undo"
-msgstr "_Hủy bước"
+msgstr "_Hoàn tác"
 
 #: ../src/games-scores-dialog.c:392
 msgid "_Close"
