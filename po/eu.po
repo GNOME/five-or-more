@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 #
-# Iñaki Larrañaga Murgoitio <dooteo@zundan.com>, 2008, 2009, 2010, 2011, 2012, 2013, 2014.
+# Iñaki Larrañaga Murgoitio <dooteo@zundan.com>, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2016.
 msgid ""
 msgstr ""
 "Project-Id-Version: five-or-more master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-"
-"or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-12-31 17:05+0100\n"
-"PO-Revision-Date: 2014-12-31 17:06+0100\n"
-"Last-Translator: Iñaki Larrañaga Murgoitio <dooteo@zundan.com>\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-or-"
+"more&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2016-08-13 20:27+0000\n"
+"PO-Revision-Date: 2016-09-20 12:10+0100\n"
+"Last-Translator: dooteo <dooteo@zundan.com>\n"
 "Language-Team: Basque <librezale@librezale.org>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
@@ -19,11 +19,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "\n"
-"X-Generator: Lokalize 1.4\n"
+"X-Generator: Lokalize 2.0\n"
 
 #: ../data/five-or-more.appdata.xml.in.h:1 ../data/five-or-more.desktop.in.h:1
-#: ../data/five-or-more.ui.h:1 ../src/five-or-more.c:1176
-#: ../src/five-or-more.c:1719
+#: ../data/five-or-more.ui.h:1 ../src/five-or-more.c:1172
+#: ../src/five-or-more.c:1723
 msgid "Five or More"
 msgstr "Bost edo gehiago"
 
@@ -51,12 +51,16 @@ msgstr ""
 "Txanda bakoitzaren ondoren, objektu gehiago agertzen dira. Jokatu ahal duzun "
 "gehiena taula erabat bete arte."
 
+#: ../data/five-or-more.appdata.xml.in.h:5
+msgid "The GNOME Project"
+msgstr "GNOME proiektua"
+
 #: ../data/five-or-more.desktop.in.h:3
 msgid "game;strategy;logic;"
 msgstr "jokoa;estrategia;logika;"
 
-#: ../data/five-or-more-preferences.ui.h:1 ../data/menu.ui.h:3
-#: ../src/five-or-more.c:174
+#: ../data/five-or-more-preferences.ui.h:1 ../data/menu.ui.h:2
+#: ../src/five-or-more.c:171
 msgid "Preferences"
 msgstr "Hobespenak"
 
@@ -117,22 +121,18 @@ msgid "Start a new puzzle"
 msgstr "Hasi puzzle berria"
 
 #: ../data/menu.ui.h:1
-msgid "New Game"
-msgstr "Joko berria"
-
-#: ../data/menu.ui.h:2
 msgid "Scores"
 msgstr "Puntuazioa"
 
-#: ../data/menu.ui.h:4
+#: ../data/menu.ui.h:3
 msgid "Help"
 msgstr "Laguntza"
 
-#: ../data/menu.ui.h:5
+#: ../data/menu.ui.h:4
 msgid "About"
 msgstr "Honi buruz"
 
-#: ../data/menu.ui.h:6
+#: ../data/menu.ui.h:5
 msgid "Quit"
 msgstr "Irten"
 
@@ -224,11 +224,11 @@ msgctxt "board size"
 msgid "Large"
 msgstr "Handia"
 
-#: ../src/five-or-more.c:168
+#: ../src/five-or-more.c:165
 msgid "Could not load theme"
 msgstr "Ezin izan da gaia kargatu"
 
-#: ../src/five-or-more.c:194
+#: ../src/five-or-more.c:191
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -241,7 +241,7 @@ msgstr ""
 "\n"
 "Gai lehenetsia kargatuko da horren ordez."
 
-#: ../src/five-or-more.c:201
+#: ../src/five-or-more.c:198
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -254,44 +254,44 @@ msgstr ""
 "\n"
 "Begiratu 'Bost edo gehiago' ongi instalatua dagoen."
 
-#: ../src/five-or-more.c:411
+#: ../src/five-or-more.c:407
 msgid "Match five objects of the same type in a row to score!"
 msgstr "Puntuatzeko jarri ilaran kolore bereko bost bola!"
 
-#: ../src/five-or-more.c:472
+#: ../src/five-or-more.c:468
 msgid "Five or More Scores"
 msgstr "Bost edo gehiagoren puntuazioa"
 
-#: ../src/five-or-more.c:474
+#: ../src/five-or-more.c:470
 msgid "_Board size:"
 msgstr "_Taularen tamaina:"
 
-#: ../src/five-or-more.c:491
+#: ../src/five-or-more.c:487
 msgid "Game Over!"
 msgstr "Amaitu da!"
 
 #. Can't move there!
-#: ../src/five-or-more.c:648
+#: ../src/five-or-more.c:644
 msgid "You can’t move there!"
 msgstr "Ezin da horra eraman!"
 
-#: ../src/five-or-more.c:1178
+#: ../src/five-or-more.c:1174
 msgid "GNOME port of the once-popular Color Lines game"
 msgstr "Color Lines joko ezagunaren GNOMEren moldaketa"
 
-#: ../src/five-or-more.c:1184
+#: ../src/five-or-more.c:1180
 msgid "translator-credits"
 msgstr "Hizkuntza Politikarako Sailburuordetza <hizkpol@ej-gv.es>"
 
-#: ../src/five-or-more.c:1308
+#: ../src/five-or-more.c:1304
 msgid "Are you sure you want to restart the game?"
 msgstr "Ziur zaude jokoa berrabiaraztea nahi duzula?"
 
-#: ../src/five-or-more.c:1311
+#: ../src/five-or-more.c:1307
 msgid "_Cancel"
 msgstr "_Utzi"
 
-#: ../src/five-or-more.c:1312
+#: ../src/five-or-more.c:1308
 msgid "_Restart"
 msgstr "_Hasi berriro"
 
@@ -330,6 +330,9 @@ msgstr "It_xi"
 #: ../src/games-scores-dialog.c:478
 msgid "Date"
 msgstr "Data"
+
+#~ msgid "New Game"
+#~ msgstr "Joko berria"
 
 #~ msgid "Five or More Preferences"
 #~ msgstr "'Bost edo gehiago'ren hobespenak"
