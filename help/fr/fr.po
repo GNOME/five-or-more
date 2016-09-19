@@ -10,8 +10,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: glines documentation\n"
-"POT-Creation-Date: 2014-09-06 16:49+0000\n"
-"PO-Revision-Date: 2014-09-06 23:39+0200\n"
+"POT-Creation-Date: 2016-08-13 20:28+0000\n"
+"PO-Revision-Date: 2016-09-19 10:28+0200\n"
 "Last-Translator: Alain Lojewski <allomervan@gmail.com>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "Language: \n"
@@ -326,16 +326,16 @@ msgstr ""
 #. (itstool) path: item/p
 #: C/change-theme.page:27
 msgid ""
-"Select <gui>balls</gui> or <gui>shapes</gui> from the <gui>Image</gui> drop "
-"down menu to change the playing pieces."
+"Select <gui>balls</gui>, <gui>dots</gui>, <gui>gumball</gui> or <gui>shapes</"
+"gui> from the <gui>Image</gui> drop down menu to change the playing pieces."
 msgstr ""
-"Sélectionnez <gui>balles</gui> ou <gui>formes</gui> dans le menu déroulant "
+"Sélectionnez <gui>balls</gui>, <gui>dots</gui>, <gui>gumball</gui> ou <gui>shapes</gui> dans le menu déroulant "
 "<gui>Image</gui> pour modifier les pièces du jeu."
 
 #. (itstool) path: item/p
 #: C/change-theme.page:29
 msgid ""
-"Click on the colored box next to <gui>Image background</gui> to access the "
+"Click on the colored box next to <gui>Background color</gui> to access the "
 "color palette."
 msgstr ""
 "Cliquez sur la boîte colorée à côté de <gui>Couleur d'arrière-plan</gui> "
@@ -358,16 +358,26 @@ msgstr "Cinq ou plus avec des balles différentes"
 
 #. (itstool) path: media/p
 #: C/change-theme.page:43
+msgid "<app>Five or More</app> with different dots"
+msgstr "<app>Cinq ou plus</app> avec des points différents"
+
+#. (itstool) path: media/p
+#: C/change-theme.page:47
+msgid "<app>Five or More</app> with different gumballs"
+msgstr "<app>Cinq ou plus</app> avec des billes de gomme différentes"
+
+#. (itstool) path: media/p
+#: C/change-theme.page:51
 msgid "<app>Five or More</app> with different shapes"
 msgstr "<app>Cinq ou plus</app> avec des formes différentes"
 
 #. (itstool) path: section/title
-#: C/change-theme.page:48
+#: C/change-theme.page:56
 msgid "Background colors available"
 msgstr "Couleurs d'arrière-plan disponibles"
 
 #. (itstool) path: media/p
-#: C/change-theme.page:50
+#: C/change-theme.page:58
 msgid "Five or More color palette"
 msgstr "Palette des couleurs de Cinq ou plus"
 
