@@ -1,14 +1,14 @@
 # Norwegian bokmål translation of five-or-more.
 # Copyright © 1998-2002 Free Software Foundation, Inc.
-# Kjartan Maraas <kmaraas@gnome.org>, 1998-2015.
+# Kjartan Maraas <kmaraas@gnome.org>, 1998-2016.
 # Terance Edward Sola <terance@lyse.net>, 2005.
 # Torstein Adolf Winterseth <kvikende@fsfe.org>, 2010.
 msgid ""
 msgstr ""
-"Project-Id-Version: five-or-more 3.15.x\n"
+"Project-Id-Version: five-or-more 3.22.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-10 17:37+0100\n"
-"PO-Revision-Date: 2015-02-10 17:38+0100\n"
+"POT-Creation-Date: 2016-10-16 12:37+0200\n"
+"PO-Revision-Date: 2016-10-16 12:37+0200\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian bokmål <i18n-nb@lister.ping.uio.no>\n"
 "Language: nb\n"
@@ -18,8 +18,8 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../data/five-or-more.appdata.xml.in.h:1 ../data/five-or-more.desktop.in.h:1
-#: ../data/five-or-more.ui.h:1 ../src/five-or-more.c:1172
-#: ../src/five-or-more.c:1731
+#: ../data/five-or-more.ui.h:1 ../src/five-or-more.c:1175
+#: ../src/five-or-more.c:1726
 msgid "Five or More"
 msgstr "Fem eller flere"
 
@@ -46,6 +46,10 @@ msgid ""
 msgstr ""
 "Flere objekter kommer til syne for hvert trekk. Spill så lenge som mulig til "
 "brettet er helt fullt."
+
+#: ../data/five-or-more.appdata.xml.in.h:5
+msgid "The GNOME Project"
+msgstr "GNOME prosjektet"
 
 #: ../data/five-or-more.desktop.in.h:3
 msgid "game;strategy;logic;"
@@ -244,47 +248,47 @@ msgstr ""
 "\n"
 "Vennligst sjekk at Fem eller flere er korrekt installert."
 
-#: ../src/five-or-more.c:407
+#: ../src/five-or-more.c:410
 msgid "Match five objects of the same type in a row to score!"
 msgstr "Få fem objekter med samme farge på rad for å vinne!"
 
-#: ../src/five-or-more.c:468
+#: ../src/five-or-more.c:471
 msgid "Five or More Scores"
 msgstr "Poeng for Fem eller flere"
 
-#: ../src/five-or-more.c:470
+#: ../src/five-or-more.c:473
 msgid "_Board size:"
 msgstr "Størrelse på _brett"
 
-#: ../src/five-or-more.c:487
+#: ../src/five-or-more.c:490
 msgid "Game Over!"
 msgstr "Spillet er over!"
 
 #. Can't move there!
-#: ../src/five-or-more.c:644
+#: ../src/five-or-more.c:647
 msgid "You can’t move there!"
 msgstr "Kan ikke flytte dit!"
 
-#: ../src/five-or-more.c:1174
+#: ../src/five-or-more.c:1177
 msgid "GNOME port of the once-popular Color Lines game"
 msgstr "GNOME versjon av det tidligere populære Color Lines-spillet"
 
-#: ../src/five-or-more.c:1180
+#: ../src/five-or-more.c:1183
 msgid "translator-credits"
 msgstr ""
 "Kjartan Maraas <kmaraas@gnome.org>\n"
 "Espen Stefansen <espens@svn.gnome.org>\n"
 "Torstein Adolf Winterseth <kvikende@fsfe.org>"
 
-#: ../src/five-or-more.c:1304
+#: ../src/five-or-more.c:1307
 msgid "Are you sure you want to restart the game?"
 msgstr "Er du sikker på at du vil starte spillet på nytt?"
 
-#: ../src/five-or-more.c:1307
+#: ../src/five-or-more.c:1310
 msgid "_Cancel"
 msgstr "A_vbryt"
 
-#: ../src/five-or-more.c:1308
+#: ../src/five-or-more.c:1311
 msgid "_Restart"
 msgstr "Sta_rt på nytt"
 
