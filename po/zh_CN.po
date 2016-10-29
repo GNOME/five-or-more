@@ -8,47 +8,51 @@ msgstr ""
 "Project-Id-Version: gnome-games master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-"
 "or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-03-08 17:53+0000\n"
-"PO-Revision-Date: 2012-03-23 17:59+0800\n"
-"Last-Translator: Wylmer Wang <wantinghard@gmail.com>\n"
+"POT-Creation-Date: 2015-11-10 18:23+0000\n"
+"PO-Revision-Date: 2016-10-30 02:48+0800\n"
+"Last-Translator: liushuyu <liushuyu_011@126.com>\n"
 "Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 1.8.11\n"
 
-#: ../data/five-or-more.appdata.xml.in.h:1
+#: ../data/five-or-more.appdata.xml.in.h:1 ../data/five-or-more.desktop.in.h:1
+#: ../data/five-or-more.ui.h:1 ../src/five-or-more.c:1172
+#: ../src/five-or-more.c:1731
+msgid "Five or More"
+msgstr "连珠消球"
+
+#: ../data/five-or-more.appdata.xml.in.h:2 ../data/five-or-more.desktop.in.h:2
+msgid "Remove colored balls from the board by forming lines"
+msgstr "将彩球连成一线以消去"
+
+#: ../data/five-or-more.appdata.xml.in.h:3
 msgid ""
 "Five or More is the GNOME port of a once-popular computer game. Align five "
 "or more objects of the same color into a line to cause them to disappear and "
 "score points. Earn many more points by lining up as many objects as possible "
 "before clearing them."
-msgstr "Five or More 是曾经风行的计算机游戏连珠消球的 GNOME 移植版本。将同色的五个"
-"或更多个物体连成一线来消除它们并得分。一次连线消除得越多，得分越高。"
+msgstr ""
+"Five or More 是曾经风行的计算机游戏连珠消球的 GNOME 移植版本。将同色的五个或"
+"更多个物体连成一线来消除它们并得分。一次连线消除得越多，得分越高。"
 
-#: ../data/five-or-more.appdata.xml.in.h:2
+#: ../data/five-or-more.appdata.xml.in.h:4
 msgid ""
 "More objects appear after every turn. Play for as long as possible, until "
 "the board is completely full!"
 msgstr "每轮后新的物体会出现。想办法玩下去，不要让棋盘被塞满！"
 
-#: ../data/five-or-more.desktop.in.h:1 ../data/five-or-more.ui.h:1
-#: ../src/glines.c:1181 ../src/glines.c:1687
-msgid "Five or More"
-msgstr "连珠消球"
-
-#: ../data/five-or-more.desktop.in.h:2
-msgid "Remove colored balls from the board by forming lines"
-msgstr "将彩球连成一线以消去"
-
 #: ../data/five-or-more.desktop.in.h:3
 msgid "game;strategy;logic;"
 msgstr "game;strategy;logic;游戏;策略;逻辑;"
 
-#: ../data/five-or-more-preferences.ui.h:1
-msgid "Five or More Preferences"
-msgstr "连珠消球首选项"
+#: ../data/five-or-more-preferences.ui.h:1 ../data/menu.ui.h:2
+#: ../src/five-or-more.c:171
+msgid "Preferences"
+msgstr "首选项"
 
 #: ../data/five-or-more-preferences.ui.h:2
 msgid "Appearance"
@@ -98,31 +102,27 @@ msgstr "0"
 msgid "Score:"
 msgstr "得分:"
 
-#: ../data/five-or-more.ui.h:5 ../src/games-stock.c:48
-msgid "Start a new game"
+#: ../data/five-or-more.ui.h:5 ../src/games-scores-dialog.c:385
+msgid "_New Game"
+msgstr "新建游戏(_N)"
+
+#: ../data/five-or-more.ui.h:6
+msgid "Start a new puzzle"
 msgstr "开始新游戏"
 
-#: ../data/menu.ui.h:1 ../src/games-scores-dialog.c:385
-msgid "New Game"
-msgstr "新游戏"
-
-#: ../data/menu.ui.h:2
+#: ../data/menu.ui.h:1
 msgid "Scores"
 msgstr "得分"
 
-#: ../data/menu.ui.h:3 ../src/glines.c:176
-msgid "Preferences"
-msgstr "首选项"
-
-#: ../data/menu.ui.h:4
+#: ../data/menu.ui.h:3
 msgid "Help"
 msgstr "帮助"
 
-#: ../data/menu.ui.h:5
+#: ../data/menu.ui.h:4
 msgid "About"
 msgstr "关于"
 
-#: ../data/menu.ui.h:6
+#: ../data/menu.ui.h:5
 msgid "Quit"
 msgstr "退出"
 
@@ -195,9 +195,94 @@ msgstr "主窗口的高度(像素)"
 msgid "true if the window is maximized"
 msgstr "若窗口已最大化则为 true"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:18
-msgid "true if the window is fullscren"
-msgstr "若窗口已全屏则为 true"
+#: ../src/five-or-more.c:80
+msgctxt "board size"
+msgid "Small"
+msgstr "小"
+
+#: ../src/five-or-more.c:81
+msgctxt "board size"
+msgid "Medium"
+msgstr "中"
+
+#: ../src/five-or-more.c:82
+msgctxt "board size"
+msgid "Large"
+msgstr "大"
+
+#: ../src/five-or-more.c:165
+msgid "Could not load theme"
+msgstr "无法载入主题"
+
+#: ../src/five-or-more.c:191
+#, c-format
+msgid ""
+"Unable to locate file:\n"
+"%s\n"
+"\n"
+"The default theme will be loaded instead."
+msgstr ""
+"无法定位文件：\n"
+"%s\n"
+"\n"
+"将载入默认主题。"
+
+#: ../src/five-or-more.c:198
+#, c-format
+msgid ""
+"Unable to locate file:\n"
+"%s\n"
+"\n"
+"Please check that Five or More is installed correctly."
+msgstr ""
+"无法定位文件：\n"
+"%s\n"
+"\n"
+"请检查您的连珠消球安装是否正确。"
+
+#: ../src/five-or-more.c:407
+msgid "Match five objects of the same type in a row to score!"
+msgstr "在一线上放置五个以上同色球以便得分！"
+
+#: ../src/five-or-more.c:468
+msgid "Five or More Scores"
+msgstr "连珠消球得分"
+
+#: ../src/five-or-more.c:470
+msgid "_Board size:"
+msgstr "棋盘大小(_B)："
+
+#: ../src/five-or-more.c:487
+msgid "Game Over!"
+msgstr "游戏结束！"
+
+#. Can't move there!
+#: ../src/five-or-more.c:644
+msgid "You can’t move there!"
+msgstr "不能移到那儿！"
+
+#: ../src/five-or-more.c:1174
+msgid "GNOME port of the once-popular Color Lines game"
+msgstr "一度非常流行的连珠消球游戏的 GNOME 版本"
+
+#: ../src/five-or-more.c:1180
+msgid "translator-credits"
+msgstr ""
+"Yang Zhang <zyangmath@gmail.com>, 2007\n"
+"Ping Z <zpsigma@gmail.com>, 2007\n"
+"Xhacker Liu <liu.dongyuan@gmail.com>, 2010"
+
+#: ../src/five-or-more.c:1304
+msgid "Are you sure you want to restart the game?"
+msgstr "您确定要重新开始游戏吗？"
+
+#: ../src/five-or-more.c:1307
+msgid "_Cancel"
+msgstr "取消(_C)"
+
+#: ../src/five-or-more.c:1308
+msgid "_Restart"
+msgstr "重新开始(_R)"
 
 #. Score dialog column header for the score time (e.g. 1 minute)
 #: ../src/games-scores-dialog.c:132
@@ -218,285 +303,168 @@ msgctxt "score-dialog"
 msgid "%1$dm %2$ds"
 msgstr "%1$d分%2$d秒"
 
+#: ../src/games-scores-dialog.c:371
+msgid "_Quit"
+msgstr "退出(_Q)"
+
+#: ../src/games-scores-dialog.c:378
+msgid "_Undo"
+msgstr "撤消(_U)"
+
+#: ../src/games-scores-dialog.c:392
+msgid "_Close"
+msgstr "关闭(_C)"
+
 #. Score dialog column header for the date the score was recorded
 #: ../src/games-scores-dialog.c:478
 msgid "Date"
 msgstr "日期"
 
-#: ../src/games-stock.c:41
-msgid "View help for this game"
-msgstr "查看此游戏的帮助"
+#~ msgid "New Game"
+#~ msgstr "新游戏"
 
-#: ../src/games-stock.c:42
-msgid "End the current game"
-msgstr "结束当前游戏"
+#~ msgid "Five or More Preferences"
+#~ msgstr "连珠消球首选项"
 
-#: ../src/games-stock.c:43
-msgid "Toggle fullscreen mode"
-msgstr "全屏模式切换"
+#~ msgid "true if the window is fullscren"
+#~ msgstr "若窗口已全屏则为 true"
 
-#: ../src/games-stock.c:44
-msgid "Get a hint for your next move"
-msgstr "获取您的下一步的提示"
+#~ msgid "View help for this game"
+#~ msgstr "查看此游戏的帮助"
 
-#: ../src/games-stock.c:45
-msgid "Leave fullscreen mode"
-msgstr "离开全屏模式"
+#~ msgid "End the current game"
+#~ msgstr "结束当前游戏"
 
-#: ../src/games-stock.c:46
-msgid "Start a new multiplayer network game"
-msgstr "开始多人网络游戏"
+#~ msgid "Toggle fullscreen mode"
+#~ msgstr "全屏模式切换"
 
-#: ../src/games-stock.c:47
-msgid "End the current network game and return to network server"
-msgstr "结束当前网络游戏并回到服务器"
+#~ msgid "Get a hint for your next move"
+#~ msgstr "获取您的下一步的提示"
 
-#: ../src/games-stock.c:49
-msgid "Pause the game"
-msgstr "暂停游戏"
+#~ msgid "Leave fullscreen mode"
+#~ msgstr "离开全屏模式"
 
-#: ../src/games-stock.c:50
-msgid "Show a list of players in the network game"
-msgstr "显示网络游戏中的玩家列表"
+#~ msgid "Start a new multiplayer network game"
+#~ msgstr "开始多人网络游戏"
 
-#: ../src/games-stock.c:51
-msgid "Redo the undone move"
-msgstr "重做撤消的一着"
+#~ msgid "End the current network game and return to network server"
+#~ msgstr "结束当前网络游戏并回到服务器"
 
-#: ../src/games-stock.c:52
-msgid "Restart the game"
-msgstr "重新开始游戏"
+#~ msgid "Pause the game"
+#~ msgstr "暂停游戏"
 
-#: ../src/games-stock.c:53
-msgid "Resume the paused game"
-msgstr "恢复暂停的游戏"
+#~ msgid "Show a list of players in the network game"
+#~ msgstr "显示网络游戏中的玩家列表"
 
-#: ../src/games-stock.c:54
-msgid "View the scores"
-msgstr "查看得分"
+#~ msgid "Redo the undone move"
+#~ msgstr "重做撤消的一着"
 
-#: ../src/games-stock.c:55
-msgid "Undo the last move"
-msgstr "撤消最后一着"
+#~ msgid "Restart the game"
+#~ msgstr "重新开始游戏"
 
-#: ../src/games-stock.c:56
-msgid "About this game"
-msgstr "关于此游戏"
+#~ msgid "Resume the paused game"
+#~ msgstr "恢复暂停的游戏"
 
-#: ../src/games-stock.c:57
-msgid "Close this window"
-msgstr "关闭此窗口"
+#~ msgid "View the scores"
+#~ msgstr "查看得分"
 
-#: ../src/games-stock.c:58
-msgid "Configure the game"
-msgstr "配置游戏"
+#~ msgid "Undo the last move"
+#~ msgstr "撤消最后一着"
 
-#: ../src/games-stock.c:59
-msgid "Quit this game"
-msgstr "退出此游戏"
+#~ msgid "About this game"
+#~ msgstr "关于此游戏"
 
-#: ../src/games-stock.c:247
-msgid "_Contents"
-msgstr "目录(_C)"
+#~ msgid "Close this window"
+#~ msgstr "关闭此窗口"
 
-#: ../src/games-stock.c:248
-msgid "_Fullscreen"
-msgstr "全屏(_F)"
+#~ msgid "Configure the game"
+#~ msgstr "配置游戏"
 
-#: ../src/games-stock.c:249
-msgid "_Hint"
-msgstr "提示(_H)"
+#~ msgid "Quit this game"
+#~ msgstr "退出此游戏"
 
-#. Translators: This "_New" is for the menu item 'Game->New', implies "New Game"
-#: ../src/games-stock.c:251
-msgid "_New"
-msgstr "新建(_N)"
+#~ msgid "_Contents"
+#~ msgstr "目录(_C)"
 
-#. Translators: This "_New Game" is for the game-over dialogue
-#: ../src/games-stock.c:253
-msgid "_New Game"
-msgstr "新建游戏(_N)"
+#~ msgid "_Fullscreen"
+#~ msgstr "全屏(_F)"
 
-#: ../src/games-stock.c:254
-msgid "_Redo Move"
-msgstr "重做移动(_R)"
+#~ msgid "_Hint"
+#~ msgstr "提示(_H)"
 
-#. Translators: this is the "Reset" scores button in a scores dialogue
-#: ../src/games-stock.c:256
-msgid "_Reset"
-msgstr "重置(_R)"
+#~ msgid "_New"
+#~ msgstr "新建(_N)"
 
-#. Translators: "_Restart" is the menu item 'Game->Restart', implies "Restart Game"
-#: ../src/games-stock.c:258
-msgid "_Restart"
-msgstr "重新开始(_R)"
+#~ msgid "_Redo Move"
+#~ msgstr "重做移动(_R)"
 
-#: ../src/games-stock.c:259
-msgid "_Undo Move"
-msgstr "撤消移动(_U)"
+#~ msgid "_Reset"
+#~ msgstr "重置(_R)"
 
-#: ../src/games-stock.c:260
-msgid "_Deal"
-msgstr "发牌(_D)"
+#~ msgid "_Undo Move"
+#~ msgstr "撤消移动(_U)"
 
-#: ../src/games-stock.c:261
-msgid "_Leave Fullscreen"
-msgstr "离开全屏(_L)"
+#~ msgid "_Deal"
+#~ msgstr "发牌(_D)"
 
-#: ../src/games-stock.c:262
-msgid "Network _Game"
-msgstr "网络游戏(_G)"
+#~ msgid "_Leave Fullscreen"
+#~ msgstr "离开全屏(_L)"
 
-#: ../src/games-stock.c:263
-msgid "L_eave Game"
-msgstr "离开游戏(_E)"
+#~ msgid "Network _Game"
+#~ msgstr "网络游戏(_G)"
 
-#: ../src/games-stock.c:264
-msgid "Player _List"
-msgstr "玩家列表(_L)"
+#~ msgid "L_eave Game"
+#~ msgstr "离开游戏(_E)"
 
-#: ../src/games-stock.c:265
-msgid "_Pause"
-msgstr "暂停(_P)"
+#~ msgid "Player _List"
+#~ msgstr "玩家列表(_L)"
 
-#: ../src/games-stock.c:266
-msgid "Res_ume"
-msgstr "继续(_U)"
+#~ msgid "_Pause"
+#~ msgstr "暂停(_P)"
 
-#: ../src/games-stock.c:267
-msgid "_Scores"
-msgstr "得分(_S)"
+#~ msgid "Res_ume"
+#~ msgstr "继续(_U)"
 
-#: ../src/games-stock.c:268
-msgid "_End Game"
-msgstr "结束游戏(_E)"
+#~ msgid "_Scores"
+#~ msgstr "得分(_S)"
 
-#. %s is replaced with the name of the game in gnome-games.
-#: ../src/games-stock.c:317
-#, c-format
-msgid ""
-"%s is free software; you can redistribute it and/or modify it under the "
-"terms of the GNU General Public License as published by the Free Software "
-"Foundation; either version %d of the License, or (at your option) any later "
-"version."
-msgstr ""
-"%s 是自由软件；您可以按照自由软件基金会所发表的 GNU GPL 协议自由发放和/或修改"
-"它；采用协议的第 %d 版，或者(根据您的选择)任何更高版本。"
+#~ msgid "_End Game"
+#~ msgstr "结束游戏(_E)"
 
-#: ../src/games-stock.c:322
-#, c-format
-msgid ""
-"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
-"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
-"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
-"details."
-msgstr ""
-"%s 发表的目的是希望它能够对您有用，但我们没有任何保证；对于以任何用途使用它所"
-"造成的任何直接或间接后果都不承担任何责任。请参看 GNU GPL 协议中的细节。"
+#~ msgid ""
+#~ "%s is free software; you can redistribute it and/or modify it under the "
+#~ "terms of the GNU General Public License as published by the Free Software "
+#~ "Foundation; either version %d of the License, or (at your option) any "
+#~ "later version."
+#~ msgstr ""
+#~ "%s 是自由软件；您可以按照自由软件基金会所发表的 GNU GPL 协议自由发放和/或"
+#~ "修改它；采用协议的第 %d 版，或者(根据您的选择)任何更高版本。"
 
-#: ../src/games-stock.c:327
-#, c-format
-msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
-"Fifth Floor, Boston, MA  02110-1301  USA"
-msgstr ""
-"您应该在收到 %s 的同时收到了 GNU GPL 协议的副本；如果您没有收到的话，请给自由"
-"软件基金会写信，地址是 51 Franklin Street, Fifth Floor, Boston, MA  "
-"02110-1301  USA"
+#~ msgid ""
+#~ "%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+#~ "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+#~ "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+#~ "details."
+#~ msgstr ""
+#~ "%s 发表的目的是希望它能够对您有用，但我们没有任何保证；对于以任何用途使用"
+#~ "它所造成的任何直接或间接后果都不承担任何责任。请参看 GNU GPL 协议中的细"
+#~ "节。"
 
-#: ../src/games-stock.c:331
-msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"this program.  If not, see <http://www.gnu.org/licenses/>."
-msgstr ""
-"您应该在收到该程序的同时收到了 GNU GPL 协议的副本。如果没有的话，请参见"
-"<http://www.gnu.org/licenses/>。"
+#~ msgid ""
+#~ "You should have received a copy of the GNU General Public License along "
+#~ "with %s; if not, write to the Free Software Foundation, Inc., 51 Franklin "
+#~ "Street, Fifth Floor, Boston, MA  02110-1301  USA"
+#~ msgstr ""
+#~ "您应该在收到 %s 的同时收到了 GNU GPL 协议的副本；如果您没有收到的话，请给"
+#~ "自由软件基金会写信，地址是 51 Franklin Street, Fifth Floor, Boston, MA  "
+#~ "02110-1301  USA"
 
-#: ../src/glines.c:81
-msgctxt "board size"
-msgid "Small"
-msgstr "小"
-
-#: ../src/glines.c:82
-msgctxt "board size"
-msgid "Medium"
-msgstr "中"
-
-#: ../src/glines.c:83
-msgctxt "board size"
-msgid "Large"
-msgstr "大"
-
-#: ../src/glines.c:170
-msgid "Could not load theme"
-msgstr "无法载入主题"
-
-#: ../src/glines.c:196
-#, c-format
-msgid ""
-"Unable to locate file:\n"
-"%s\n"
-"\n"
-"The default theme will be loaded instead."
-msgstr ""
-"无法定位文件：\n"
-"%s\n"
-"\n"
-"将载入默认主题。"
-
-#: ../src/glines.c:203
-#, c-format
-msgid ""
-"Unable to locate file:\n"
-"%s\n"
-"\n"
-"Please check that Five or More is installed correctly."
-msgstr ""
-"无法定位文件：\n"
-"%s\n"
-"\n"
-"请检查您的连珠消球安装是否正确。"
-
-#: ../src/glines.c:413
-msgid "Match five objects of the same type in a row to score!"
-msgstr "在一线上放置五个以上同色球以便得分！"
-
-#: ../src/glines.c:475
-#| msgid "Five or More"
-msgid "Five or More Scores"
-msgstr "连珠消球得分"
-
-#: ../src/glines.c:477
-msgid "_Board size:"
-msgstr "棋盘大小(_B)："
-
-#: ../src/glines.c:494
-msgid "Game Over!"
-msgstr "游戏结束！"
-
-#. Can't move there!
-#: ../src/glines.c:651
-#| msgid "You can't move there!"
-msgid "You can’t move there!"
-msgstr "不能移到那儿！"
-
-#: ../src/glines.c:1183
-msgid ""
-"GNOME port of the once-popular Color Lines game\n"
-"\n"
-"Five or More is a part of GNOME Games."
-msgstr ""
-"流行的连珠消球游戏的 GNOME 版本\n"
-"\n"
-"连珠消球是 GNOME 游戏的一部分。"
-
-#: ../src/glines.c:1189
-msgid "translator-credits"
-msgstr ""
-"Yang Zhang <zyangmath@gmail.com>, 2007\n"
-"Ping Z <zpsigma@gmail.com>, 2007\n"
-"Xhacker Liu <liu.dongyuan@gmail.com>, 2010"
+#~ msgid ""
+#~ "You should have received a copy of the GNU General Public License along "
+#~ "with this program.  If not, see <http://www.gnu.org/licenses/>."
+#~ msgstr ""
+#~ "您应该在收到该程序的同时收到了 GNU GPL 协议的副本。如果没有的话，请参见"
+#~ "<http://www.gnu.org/licenses/>。"
 
 #~ msgid "GNOME Five or More"
 #~ msgstr "GNOME 连珠消球"
@@ -1991,9 +1959,6 @@ msgstr ""
 
 #~ msgid "New game"
 #~ msgstr "新游戏"
-
-#~ msgid "_Undo"
-#~ msgstr "撤消(_U)"
 
 #~ msgid "Undo last action"
 #~ msgstr "撤消最后一着"
@@ -5106,12 +5071,6 @@ msgstr ""
 #~ msgid "Could not show link"
 #~ msgstr "无法显示链接"
 
-#~ msgid "_Cancel"
-#~ msgstr "取消(_C)"
-
-#~ msgid "_Close"
-#~ msgstr "关闭(_C)"
-
 #~ msgid "_OK"
 #~ msgstr "确认(_O)"
 
@@ -6680,9 +6639,6 @@ msgstr ""
 
 #~ msgid "Launch"
 #~ msgstr "启动"
-
-#~ msgid "Are you sure you want to quit?"
-#~ msgstr "您确定想要退出吗？"
 
 #~ msgid "Quit?"
 #~ msgstr "退出吗？"
