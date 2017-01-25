@@ -14,19 +14,20 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-14 08:12+0200\n"
-"PO-Revision-Date: 2014-09-05 00:02+0200\n"
+"POT-Creation-Date: 2017-01-25 12:45+0100\n"
+"PO-Revision-Date: 2017-01-25 12:45+0100\n"
 "Last-Translator: Gil Forcada <gilforcada@guifi.net>\n"
 "Language-Team: Catalan <tradgnome@softcatala.org>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bits\n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 1.8.7.1\n"
 
 #: ../data/five-or-more.appdata.xml.in.h:1 ../data/five-or-more.desktop.in.h:1
-#: ../data/five-or-more.ui.h:1 ../src/five-or-more.c:1172
-#: ../src/five-or-more.c:1731
+#: ../data/five-or-more.ui.h:1 ../src/five-or-more.c:1175
+#: ../src/five-or-more.c:1726
 msgid "Five or More"
 msgstr "Cinc o més"
 
@@ -53,6 +54,10 @@ msgid ""
 msgstr ""
 "A cada ronda apareixen més objectes. Jugueu tan com pugueu fins que "
 "s'empleni el tauler!"
+
+#: ../data/five-or-more.appdata.xml.in.h:5
+msgid "The GNOME Project"
+msgstr "El projecte GNOME"
 
 #: ../data/five-or-more.desktop.in.h:3
 msgid "game;strategy;logic;"
@@ -254,33 +259,33 @@ msgstr ""
 "\n"
 "Comproveu la instal·lació del Cinc o més."
 
-#: ../src/five-or-more.c:407
+#: ../src/five-or-more.c:410
 msgid "Match five objects of the same type in a row to score!"
 msgstr ""
 "Per puntuar, heu de fer coincidir en una fila cinc objectes del mateix color"
 
-#: ../src/five-or-more.c:468
+#: ../src/five-or-more.c:471
 msgid "Five or More Scores"
 msgstr "Puntuacions del Cinc o més"
 
-#: ../src/five-or-more.c:470
+#: ../src/five-or-more.c:473
 msgid "_Board size:"
 msgstr "_Mida del tauler:"
 
-#: ../src/five-or-more.c:487
+#: ../src/five-or-more.c:490
 msgid "Game Over!"
 msgstr "Fi del joc"
 
 #. Can't move there!
-#: ../src/five-or-more.c:644
+#: ../src/five-or-more.c:647
 msgid "You can’t move there!"
 msgstr "Aquí no s'hi pot anar!"
 
-#: ../src/five-or-more.c:1174
+#: ../src/five-or-more.c:1177
 msgid "GNOME port of the once-popular Color Lines game"
 msgstr "Adaptació per al GNOME de l'antic i popular joc Línies de color"
 
-#: ../src/five-or-more.c:1180
+#: ../src/five-or-more.c:1183
 msgid "translator-credits"
 msgstr ""
 "Jordi Vila <gnome@softcatala.net>\n"
@@ -291,15 +296,15 @@ msgstr ""
 "David Planella <david.planella@gmail.com>\n"
 "Jordi Mas <jmas@softcatala.org>"
 
-#: ../src/five-or-more.c:1304
+#: ../src/five-or-more.c:1307
 msgid "Are you sure you want to restart the game?"
 msgstr "Esteu segur que voleu reiniciar el joc?"
 
-#: ../src/five-or-more.c:1307
+#: ../src/five-or-more.c:1310
 msgid "_Cancel"
 msgstr "_Cancel·la"
 
-#: ../src/five-or-more.c:1308
+#: ../src/five-or-more.c:1311
 msgid "_Restart"
 msgstr "_Reinicia"
 
@@ -338,4 +343,3 @@ msgstr "_Tanca"
 #: ../src/games-scores-dialog.c:478
 msgid "Date"
 msgstr "Data"
-
