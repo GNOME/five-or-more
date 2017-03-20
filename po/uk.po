@@ -3,28 +3,27 @@
 # Yuri Syrota <rasta@renome.rovno.ua>, 1999-2000.
 # Maxim Dziumanenko <dziumanenko@gmail.com>, 2004-2010
 # Wanderlust <wanderlust@ukr.net>, 2009.
-# Daniel Korostil <ted.korostiled@gmail.com>, 2014, 2015.
+# Daniel Korostil <ted.korostiled@gmail.com>, 2014, 2015, 2017.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-"
-"or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-02-25 05:43+0000\n"
-"PO-Revision-Date: 2015-02-25 12:19+0300\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-20 18:41+0200\n"
+"PO-Revision-Date: 2017-03-20 18:41+0300\n"
 "Last-Translator: Daniel Korostil <ted.korostiled@gmail.com>\n"
 "Language-Team: linux.org.ua\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Virtaal 0.7.1\n"
 "X-Project-Style: gnome\n"
 
 #: ../data/five-or-more.appdata.xml.in.h:1 ../data/five-or-more.desktop.in.h:1
-#: ../data/five-or-more.ui.h:1 ../src/five-or-more.c:1172
-#: ../src/five-or-more.c:1731
+#: ../data/five-or-more.ui.h:1 ../src/five-or-more.c:1175
+#: ../src/five-or-more.c:1726
 msgid "Five or More"
 msgstr "П'ять або більше"
 
@@ -51,6 +50,10 @@ msgid ""
 msgstr ""
 "Більше об'єктів з'являються після кожного кроку. Грайте якнайдовше, поки "
 "дошка повністю не заповниться!"
+
+#: ../data/five-or-more.appdata.xml.in.h:5
+msgid "The GNOME Project"
+msgstr "Проект GNOME"
 
 #: ../data/five-or-more.desktop.in.h:3
 msgid "game;strategy;logic;"
@@ -249,36 +252,32 @@ msgstr ""
 "\n"
 "Перевірте коректність встановлення гри \"П'ять або більше\"."
 
-#: ../src/five-or-more.c:407
+#: ../src/five-or-more.c:410
 msgid "Match five objects of the same type in a row to score!"
 msgstr "Поставте п'ять кульок одного кольору в ряд, щоб отримати очки!"
 
-#: ../src/five-or-more.c:468
+#: ../src/five-or-more.c:471
 msgid "Five or More Scores"
 msgstr "Бали"
 
-#: ../src/five-or-more.c:470
+#: ../src/five-or-more.c:473
 msgid "_Board size:"
 msgstr "Розмір _дошки:"
 
-#: ../src/five-or-more.c:487
+#: ../src/five-or-more.c:490
 msgid "Game Over!"
 msgstr "Гру закінчено!"
 
 #. Can't move there!
-#: ../src/five-or-more.c:644
+#: ../src/five-or-more.c:647
 msgid "You can’t move there!"
 msgstr "Ви не можете переміститись сюди!"
 
-#: ../src/five-or-more.c:1174
-#| msgid ""
-#| "GNOME port of the once-popular Color Lines game\n"
-#| "\n"
-#| "Five or More is a part of GNOME Games."
+#: ../src/five-or-more.c:1177
 msgid "GNOME port of the once-popular Color Lines game"
 msgstr "Варіант GNOME для колись популярної гри «Кольорові рядки»"
 
-#: ../src/five-or-more.c:1180
+#: ../src/five-or-more.c:1183
 msgid "translator-credits"
 msgstr ""
 "Юрій Сирота\n"
@@ -286,16 +285,15 @@ msgstr ""
 "Wanderlust <wanderlust@ukr.net\n"
 "Daniel Korostil <ted.korostiled@gmail.com>"
 
-#: ../src/five-or-more.c:1304
-#| msgid "Already used! Where do you want to put that?"
+#: ../src/five-or-more.c:1307
 msgid "Are you sure you want to restart the game?"
 msgstr "Перезапустити гру?"
 
-#: ../src/five-or-more.c:1307
+#: ../src/five-or-more.c:1310
 msgid "_Cancel"
 msgstr "_Скасувати"
 
-#: ../src/five-or-more.c:1308
+#: ../src/five-or-more.c:1311
 msgid "_Restart"
 msgstr "_Перезапустити"
 
@@ -319,7 +317,6 @@ msgid "%1$dm %2$ds"
 msgstr "%1$dхв %2$dс"
 
 #: ../src/games-scores-dialog.c:371
-#| msgid "Quit"
 msgid "_Quit"
 msgstr "В_ийти"
 
