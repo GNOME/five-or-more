@@ -4,14 +4,14 @@
 # Occitan gnome-games translation
 # Copyright (C) 2002, 2007 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-games package.#
-# Cédric Valmary (totenoc.eu) <cvalmary@yahoo.fr>, 2016.
+# Cédric Valmary (totenoc.eu) <cvalmary@yahoo.fr>, 2016, 2017.
 msgid ""
 msgstr ""
 "Project-Id-Version: oc\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=five-"
 "or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-05-19 05:37+0000\n"
-"PO-Revision-Date: 2016-05-29 20:34+0200\n"
+"POT-Creation-Date: 2017-02-28 06:48+0000\n"
+"PO-Revision-Date: 2017-03-23 18:03+0200\n"
 "Last-Translator: Cédric Valmary (totenoc.eu) <cvalmary@yahoo.fr>\n"
 "Language-Team: Tot En Òc\n"
 "Language: oc\n"
@@ -23,14 +23,14 @@ msgstr ""
 "X-Project-Style: gnome\n"
 
 #: ../data/five-or-more.appdata.xml.in.h:1 ../data/five-or-more.desktop.in.h:1
-#: ../data/five-or-more.ui.h:1 ../src/five-or-more.c:1172
-#: ../src/five-or-more.c:1731
+#: ../data/five-or-more.ui.h:1 ../src/five-or-more.c:1175
+#: ../src/five-or-more.c:1726
 msgid "Five or More"
 msgstr "Cinc o mai"
 
 #: ../data/five-or-more.appdata.xml.in.h:2 ../data/five-or-more.desktop.in.h:2
 msgid "Remove colored balls from the board by forming lines"
-msgstr ""
+msgstr "Levar de bilhas de color del platèu en formant de linhas"
 
 #: ../data/five-or-more.appdata.xml.in.h:3
 msgid ""
@@ -39,12 +39,22 @@ msgid ""
 "score points. Earn many more points by lining up as many objects as possible "
 "before clearing them."
 msgstr ""
+"Cinc o mai es la version GNOME d'un jòc informatic autrescòps plan conegut. "
+"Alinhatz cinc objèctes o mai de la meteissa color sus una linha per los far "
+"desaparéisser e marcar de punts. Mai alinhatz d'objèctes abans de los far "
+"desaparéisser, mai ganhatz de punts."
 
 #: ../data/five-or-more.appdata.xml.in.h:4
 msgid ""
 "More objects appear after every turn. Play for as long as possible, until "
 "the board is completely full!"
 msgstr ""
+"De novèls objèctes apareisson de mai en mai aprèp cada torn. Jogatz lo mai "
+"longtemps possible, fins al moment que lo platèu siá completament emplenat !"
+
+#: ../data/five-or-more.appdata.xml.in.h:5
+msgid "The GNOME Project"
+msgstr "Lo projècte GNOME"
 
 #: ../data/five-or-more.desktop.in.h:3
 msgid "game;strategy;logic;"
@@ -69,8 +79,9 @@ msgstr "_Color de fons :"
 
 #: ../data/five-or-more-preferences.ui.h:5
 msgid "Board Size"
-msgstr ""
+msgstr "Talha del platèu"
 
+# Correspond à Taille
 #: ../data/five-or-more-preferences.ui.h:6
 msgid "_Small"
 msgstr "_Pichon"
@@ -89,7 +100,7 @@ msgstr "General"
 
 #: ../data/five-or-more-preferences.ui.h:10
 msgid "_Use fast moves"
-msgstr ""
+msgstr "_Utilizar de desplaçaments rapids"
 
 #: ../data/five-or-more.ui.h:2
 msgid "Next:"
@@ -129,12 +140,14 @@ msgstr "Quitar"
 
 #: ../data/org.gnome.five-or-more.gschema.xml.h:1
 msgid "Playing field size"
-msgstr ""
+msgstr "Talha de la grasilha"
 
 #: ../data/org.gnome.five-or-more.gschema.xml.h:2
 msgid ""
 "Playing field size. 1=Small, 2=Medium, 3=Large. Any other value is invalid."
 msgstr ""
+"Talha de la taula de jòc. 1=pichona, 2=mejana, 3=granda. Tota autra valor es "
+"incorrècta."
 
 #: ../data/org.gnome.five-or-more.gschema.xml.h:3
 msgid "Ball style"
@@ -143,6 +156,7 @@ msgstr "Estil de la bala"
 #: ../data/org.gnome.five-or-more.gschema.xml.h:4
 msgid "Ball style. The filename of the images to use for the balls."
 msgstr ""
+"Estil de bilhas. Lo nom de fichièr dels imatges d'utilizar per las bilhas."
 
 #: ../data/org.gnome.five-or-more.gschema.xml.h:5
 msgid "Background color"
@@ -150,15 +164,15 @@ msgstr "Color de rèireplan"
 
 #: ../data/org.gnome.five-or-more.gschema.xml.h:6
 msgid "Background color. The hex specification of the background color."
-msgstr ""
+msgstr "Color de rèireplan. La descripcion exadecimala de la color de fons."
 
 #: ../data/org.gnome.five-or-more.gschema.xml.h:7
 msgid "Time between moves"
-msgstr ""
+msgstr "Lo relambi entre dos desplaçaments"
 
 #: ../data/org.gnome.five-or-more.gschema.xml.h:8
 msgid "Time between moves in milliseconds."
-msgstr ""
+msgstr "Lo relambi entre los desplaçaments, en millisegondas."
 
 #: ../data/org.gnome.five-or-more.gschema.xml.h:9
 msgid "Game score"
@@ -166,7 +180,7 @@ msgstr "Marca del jòc"
 
 #: ../data/org.gnome.five-or-more.gschema.xml.h:10
 msgid "Game score from last saved session."
-msgstr ""
+msgstr "Marca del jòc de la darrièra session salvada."
 
 #: ../data/org.gnome.five-or-more.gschema.xml.h:11
 msgid "Game field"
@@ -174,15 +188,15 @@ msgstr "Camp del jòc"
 
 #: ../data/org.gnome.five-or-more.gschema.xml.h:12
 msgid "Game field from last saved session."
-msgstr ""
+msgstr "Zòna de jòc de la darrièra session salvada."
 
 #: ../data/org.gnome.five-or-more.gschema.xml.h:13
 msgid "Game preview"
-msgstr "Previsualizacion del jòc"
+msgstr "Apercebut del jòc"
 
 #: ../data/org.gnome.five-or-more.gschema.xml.h:14
 msgid "Game preview from last saved session."
-msgstr ""
+msgstr "Apercebut del jòc de la darrièra session salvada."
 
 #: ../data/org.gnome.five-or-more.gschema.xml.h:15
 msgid "Width of the window in pixels"
@@ -194,8 +208,9 @@ msgstr "Nautor de la fenèstra en pixèls"
 
 #: ../data/org.gnome.five-or-more.gschema.xml.h:17
 msgid "true if the window is maximized"
-msgstr ""
+msgstr "verai se la fenèstra es maximizada"
 
+# Correspond à Taille
 #: ../src/five-or-more.c:80
 msgctxt "board size"
 msgid "Small"
@@ -213,7 +228,7 @@ msgstr "Grand"
 
 #: ../src/five-or-more.c:165
 msgid "Could not load theme"
-msgstr ""
+msgstr "Impossible de cargar lo tèma"
 
 #: ../src/five-or-more.c:191
 #, c-format
@@ -223,6 +238,10 @@ msgid ""
 "\n"
 "The default theme will be loaded instead."
 msgstr ""
+"Impossible de localizar lo fichièr :\n"
+"%s\n"
+"\n"
+"Lo tèma per defaut serà cargat a sa plaça."
 
 #: ../src/five-or-more.c:198
 #, c-format
@@ -232,49 +251,53 @@ msgid ""
 "\n"
 "Please check that Five or More is installed correctly."
 msgstr ""
+"Impossible de trobar lo fichièr :\n"
+"%s\n"
+"\n"
+"Verificatz que Cinc o mai es corrèctament installat."
 
-#: ../src/five-or-more.c:407
+#: ../src/five-or-more.c:410
 msgid "Match five objects of the same type in a row to score!"
-msgstr ""
+msgstr "Alinhatz cinc bilhas de meteissa color per marcar de punts !"
 
-#: ../src/five-or-more.c:468
+#: ../src/five-or-more.c:471
 msgid "Five or More Scores"
 msgstr "Marcas de Cinc o mai"
 
-#: ../src/five-or-more.c:470
+#: ../src/five-or-more.c:473
 msgid "_Board size:"
-msgstr ""
+msgstr "_Talha del platèu :"
 
-#: ../src/five-or-more.c:487
+#: ../src/five-or-more.c:490
 msgid "Game Over!"
 msgstr "Jòc acabat !"
 
 #. Can't move there!
-#: ../src/five-or-more.c:644
+#: ../src/five-or-more.c:647
 msgid "You can’t move there!"
-msgstr ""
+msgstr "Impossible de se desplaçar aicí."
 
-#: ../src/five-or-more.c:1174
+#: ../src/five-or-more.c:1177
 msgid "GNOME port of the once-popular Color Lines game"
-msgstr ""
+msgstr "Portatge GNOME del jòc autrescòps celèbre Linhas Coloradas"
 
-#: ../src/five-or-more.c:1180
+#: ../src/five-or-more.c:1183
 msgid "translator-credits"
 msgstr ""
 "Yannig Marchegay (Kokoyaya) <yannig@marchegay.org>\n"
 "Cédric Valmary (totenoc.eu) <cvalmary@yahoo.fr>"
 
-#: ../src/five-or-more.c:1304
+#: ../src/five-or-more.c:1307
 msgid "Are you sure you want to restart the game?"
 msgstr "Sètz segur que volètz reaviar lo jòc ?"
 
-#: ../src/five-or-more.c:1307
+#: ../src/five-or-more.c:1310
 msgid "_Cancel"
 msgstr "_Anullar"
 
-#: ../src/five-or-more.c:1308
+#: ../src/five-or-more.c:1311
 msgid "_Restart"
-msgstr "To_rnar lançar"
+msgstr "_Reaviar"
 
 #. Score dialog column header for the score time (e.g. 1 minute)
 #: ../src/games-scores-dialog.c:132
@@ -912,7 +935,7 @@ msgstr "Data"
 #~ msgstr "Nom d'utilizaire :"
 
 #~ msgid "Password:"
-#~ msgstr "Senhal :"
+#~ msgstr "Senhal :"
 
 #~ msgid "Email:"
 #~ msgstr "Adreça electronica :"
