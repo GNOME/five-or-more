@@ -1,13 +1,13 @@
 # Czech translation of glines help.
 # Copyright (C) 2009 the author(s) of gnome-games.
 # This file is distributed under the same license as the glines help.
-# Marek Černocký <marek@manet.cz>, 2009, 2013.
+# Marek Černocký <marek@manet.cz>, 2009, 2013, 2017.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games gnome-2-28\n"
-"POT-Creation-Date: 2015-10-24 05:21+0000\n"
-"PO-Revision-Date: 2015-10-24 10:29+0200\n"
+"POT-Creation-Date: 2017-07-31 12:01+0000\n"
+"PO-Revision-Date: 2017-08-05 16:15+0200\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -108,11 +108,11 @@ msgstr ""
 msgid ""
 "If you are requesting a new feature, choose <gui>enhancement</gui> in the "
 "<gui>Severity</gui> menu. Fill in the Summary and Description sections and "
-"click <gui>Commit</gui>."
+"click <gui>Submit Bug</gui>."
 msgstr ""
 "V případě, že žádáte o novou funkčnost, zvolte v nabídce <gui>Severity</gui> "
 "položku <gui>enhancement</gui>. Vyplňte pole Summary a Description a "
-"klikněte na <gui>Commit</gui>."
+"klikněte na <gui>Submit Bug</gui>."
 
 #. (itstool) path: page/p
 #: C/bug-filing.page:42
@@ -315,8 +315,8 @@ msgid ""
 "Select <gui>balls</gui>, <gui>dots</gui>, <gui>gumball</gui> or <gui>shapes</"
 "gui> from the <gui>Image</gui> drop down menu to change the playing pieces."
 msgstr ""
-"Výběrem <gui>kuliček</gui>, <gui>teček</gui>, <gui>hopskulek</gui> nebo <gui>"
-"tvarů</gui> v robalovací nabídce <gui>Obrázek</gui> změňte hrací kameny."
+"Výběrem <gui>kuliček</gui>, <gui>teček</gui>, <gui>hopskulek</gui> nebo "
+"<gui>tvarů</gui> v robalovací nabídce <gui>Obrázek</gui> změňte hrací kameny."
 
 #. (itstool) path: item/p
 #: C/change-theme.page:29
