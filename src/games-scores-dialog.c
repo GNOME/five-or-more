@@ -460,7 +460,7 @@ static void games_scores_dialog_init (GamesScoresDialog *self)
 			FALSE, FALSE, 0);	
  
   self->priv->combo = gtk_combo_box_text_new ();
-  gtk_combo_box_set_focus_on_click (GTK_COMBO_BOX (self->priv->combo), FALSE);
+  gtk_widget_set_focus_on_click (GTK_WIDGET (self->priv->combo), FALSE);
   gtk_box_pack_start (GTK_BOX (self->priv->catbar), 
 			self->priv->combo, TRUE, TRUE, 0);
   gtk_label_set_mnemonic_widget (GTK_LABEL (self->priv->label), self->priv->combo);
