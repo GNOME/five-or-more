@@ -19,7 +19,7 @@ dnl Dependencies
 dnl ###########################################################################
 
 GLIB_REQUIRED=2.32
-GTK_REQUIRED=3.12.0
+GTK_REQUIRED=3.20.0
 RSVG_REQUIRED=2.32.0
 
 PKG_CHECK_MODULES(FIVE_OR_MORE, [
