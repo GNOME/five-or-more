@@ -2,13 +2,13 @@
 # Copyright (C) 2013. Free Software Foundation, Inc.
 # This file is distributed under the same license as the five-or-more help.
 #
-# Gabor Kelemen <kelemeng at gnome dot hu>, 2013, 2014, 2016.
+# Gabor Kelemen <kelemeng at gnome dot hu>, 2013, 2014, 2016, 2017.
 # Balázs Úr <urbalazs@gmail.com>, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: five-or-more master\n"
-"POT-Creation-Date: 2016-01-26 18:27+0000\n"
-"PO-Revision-Date: 2016-01-27 01:38+0100\n"
+"POT-Creation-Date: 2017-07-31 12:01+0000\n"
+"PO-Revision-Date: 2017-08-18 10:37+0200\n"
 "Last-Translator: Gabor Kelemen <kelemeng at ubuntu dot com>\n"
 "Language-Team: Hungarian <openscope at googlegroups dot com>\n"
 "Language: hu\n"
@@ -105,14 +105,18 @@ msgstr ""
 
 #. (itstool) path: page/p
 #: C/bug-filing.page:38
+#| msgid ""
+#| "If you are requesting a new feature, choose <gui>enhancement</gui> in the "
+#| "<gui>Severity</gui> menu. Fill in the Summary and Description sections "
+#| "and click <gui>Commit</gui>."
 msgid ""
 "If you are requesting a new feature, choose <gui>enhancement</gui> in the "
 "<gui>Severity</gui> menu. Fill in the Summary and Description sections and "
-"click <gui>Commit</gui>."
+"click <gui>Submit Bug</gui>."
 msgstr ""
 "Ha új szolgáltatást kér, válassza az <gui>enhancement</gui> lehetőséget a "
 "<gui>Severity</gui> menüben. Töltse ki a Summary és Description szakaszokat, "
-"és kattintson a <gui>Commit</gui> gombra."
+"és kattintson a <gui>Submit Bug</gui> gombra."
 
 #. (itstool) path: page/p
 #: C/bug-filing.page:42
@@ -315,22 +319,16 @@ msgstr ""
 
 #. (itstool) path: item/p
 #: C/change-theme.page:27
-#| msgid ""
-#| "Select <gui>balls</gui> or <gui>shapes</gui> from the <gui>Image</gui> "
-#| "drop down menu to change the playing pieces."
 msgid ""
 "Select <gui>balls</gui>, <gui>dots</gui>, <gui>gumball</gui> or <gui>shapes</"
 "gui> from the <gui>Image</gui> drop down menu to change the playing pieces."
 msgstr ""
-"A <gui>Kép</gui> legördülő menüből válassza a <gui>balls</gui>, <gui>dots<"
-"/gui>, <gui>gumball</gui> vagy <gui>shapes</gui> pontot a labdaképek "
+"A <gui>Kép</gui> legördülő menüből válassza a <gui>balls</gui>, <gui>dots</"
+"gui>, <gui>gumball</gui> vagy <gui>shapes</gui> pontot a labdaképek "
 "megváltoztatásához."
 
 #. (itstool) path: item/p
 #: C/change-theme.page:29
-#| msgid ""
-#| "Click on the colored box next to <gui>Image background</gui> to access "
-#| "the color palette."
 msgid ""
 "Click on the colored box next to <gui>Background color</gui> to access the "
 "color palette."
@@ -355,13 +353,11 @@ msgstr "Az Öt vagy több különböző labdákkal."
 
 #. (itstool) path: media/p
 #: C/change-theme.page:43
-#| msgid "<app>Five or More</app> with different shapes"
 msgid "<app>Five or More</app> with different dots"
 msgstr "Az <app>Öt vagy több</app> különböző pontokkal"
 
 #. (itstool) path: media/p
 #: C/change-theme.page:47
-#| msgid "<app>Five or More</app> with different shapes"
 msgid "<app>Five or More</app> with different gumballs"
 msgstr "Az <app>Öt vagy több</app> különböző gumilabdákkal"
 
