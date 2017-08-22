@@ -7,7 +7,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=five-"
 "or-more&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2017-02-28 06:48+0000\n"
-"PO-Revision-Date: 2017-08-21 22:32+0200\n"
+"PO-Revision-Date: 2017-08-22 22:29+0200\n"
 "Last-Translator: Launchpad Translations Administrators <rosetta@launchpad."
 "net>\n"
 "Language-Team: Croatian <lokalizacija@linux.hr>\n"
@@ -208,17 +208,17 @@ msgstr "istinito ako je potrozor uvećan"
 #: ../src/five-or-more.c:80
 msgctxt "board size"
 msgid "Small"
-msgstr "Malen"
+msgstr "Mala"
 
 #: ../src/five-or-more.c:81
 msgctxt "board size"
 msgid "Medium"
-msgstr "Srednji"
+msgstr "Srednja"
 
 #: ../src/five-or-more.c:82
 msgctxt "board size"
 msgid "Large"
-msgstr "Veliki"
+msgstr "Velika"
 
 #: ../src/five-or-more.c:165
 msgid "Could not load theme"
@@ -256,7 +256,7 @@ msgstr "Povežite pet objekata iste vrste u redku za osvajanje bodova!"
 
 #: ../src/five-or-more.c:471
 msgid "Five or More Scores"
-msgstr "Pet ili više bodova"
+msgstr "Pet ili više rezultata"
 
 #: ../src/five-or-more.c:473
 msgid "_Board size:"
@@ -278,29 +278,8 @@ msgstr "GNOME inačica nekad popularne igre Boja redaka"
 #: ../src/five-or-more.c:1183
 msgid "translator-credits"
 msgstr ""
-"lokalizacija@linux.hr\n"
-"  Antun Krasic <butch@gawab.com>\n"
-"  Automatski Prijevod <>\n"
-"  Danijel Studen <dstuden@vuka.hr>\n"
-"  Davorin Vlahovic <aburn@fly.srk.fer.hr>\n"
-"  Denis Lackovic <delacko@linux.hr>\n"
-"  Ivan Knežević <kn3z@lycos.com>\n"
-"  Mato Kutlić <mate@iskraemeco.hr>\n"
-"  Nikola Planinac <>\n"
-"  Robert Sedak <robert.sedak@sk.t-com.hr>\n"
-"  Sasa Poznanovic <sasa.poznanovic@vuka.hr>\n"
-"  Tomislav Cavrag <tcavrag@vuka.hr>\n"
-"  Vedran Vyroubal <vedran.vyroubal@inet.hr>\n"
-"\n"
 "Launchpad Contributions:\n"
-"  Ante Karamatić https://launchpad.net/~ivoks\n"
-"  Božidar Paun https://launchpad.net/~neuntoeter\n"
-"  Danijel Šnajder https://launchpad.net/~phantomlord\n"
-"  Edgar Buršić https://launchpad.net/~edgar\n"
-"  Launchpad Translations Administrators https://launchpad.net/~rosetta-"
-"admins\n"
-"  Tomislav Medak https://launchpad.net/~to-me\n"
-"  majstor https://launchpad.net/~lcosic"
+"  gogo https://launchpad.net/~trebelnik-stefina"
 
 #: ../src/five-or-more.c:1307
 msgid "Are you sure you want to restart the game?"
