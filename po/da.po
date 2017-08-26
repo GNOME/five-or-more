@@ -13,8 +13,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-12 02:04+0200\n"
+"Report-Msgid-Bugs-To: "
+"https://bugzilla.gnome.org/enter_bug.cgi?product=five-or-more&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2017-02-28 06:48+0000\n"
 "PO-Revision-Date: 2016-09-08 03:15+0200\n"
 "Last-Translator: Ask Hjorth Larsen <asklarsen@gmail.com>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
@@ -237,7 +238,7 @@ msgid ""
 "The default theme will be loaded instead."
 msgstr ""
 "Kunne ikke finde filen:\n"
-" \"%s\"\n"
+" “%s”\n"
 "\n"
 "I stedet vil standardtemaet blive indlæst."
 
@@ -342,3 +343,5 @@ msgstr "Dato"
 
 #~ msgid "New Game"
 #~ msgstr "Nyt spil"
+
+
