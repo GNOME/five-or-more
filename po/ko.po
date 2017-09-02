@@ -2,7 +2,8 @@
 # This file is distributed under the same license as the gnome-games package.
 #
 # GwanSun Back <backiss@kornet.net>, 2001
-# Changwoo Ryu <cwryu@debian.org>, 1998, 2002-2015.
+# ChiHyeon Kim <pipi910327@gmail.com>, 2017.
+# Changwoo Ryu <cwryu@debian.org>, 1998, 2002-2015, 2017.
 #
 #
 # 새로 번역하신 분은 아래 "translator-credits"에 추가하세요.
@@ -23,10 +24,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=five-"
 "or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-03-07 17:43+0000\n"
-"PO-Revision-Date: 2015-03-08 04:03+0900\n"
+"POT-Creation-Date: 2017-08-22 20:33+0000\n"
+"PO-Revision-Date: 2017-09-01 19:29+0900\n"
 "Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
 "Language-Team: GNOME Korea <gnome-kr@googlegroups.com>\n"
 "Language: ko\n"
@@ -34,10 +35,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 2.0.3\n"
 
 #: ../data/five-or-more.appdata.xml.in.h:1 ../data/five-or-more.desktop.in.h:1
-#: ../data/five-or-more.ui.h:1 ../src/five-or-more.c:1172
-#: ../src/five-or-more.c:1731
+#: ../data/five-or-more.ui.h:1 ../src/five-or-more.c:1175
+#: ../src/five-or-more.c:1726
 msgid "Five or More"
 msgstr "다섯개"
 
@@ -63,6 +65,10 @@ msgid ""
 msgstr ""
 "매 턴이 끝나면 물체가 나타납니다. 게임판이 가득 찰 때까지 가능한 오래 플레이"
 "하십시오!"
+
+#: ../data/five-or-more.appdata.xml.in.h:5
+msgid "The GNOME Project"
+msgstr "그놈 프로젝트"
 
 #: ../data/five-or-more.desktop.in.h:3
 msgid "game;strategy;logic;"
@@ -204,11 +210,11 @@ msgstr "지난번 저장했던 세션의 게임 미리 보기."
 
 #: ../data/org.gnome.five-or-more.gschema.xml.h:15
 msgid "Width of the window in pixels"
-msgstr "창의 너비, 픽셀 단위."
+msgstr "창의 너비, 픽셀 단위"
 
 #: ../data/org.gnome.five-or-more.gschema.xml.h:16
 msgid "Height of the window in pixels"
-msgstr "창의 높이, 픽셀 단위."
+msgstr "창의 높이, 픽셀 단위"
 
 #: ../data/org.gnome.five-or-more.gschema.xml.h:17
 msgid "true if the window is maximized"
@@ -257,46 +263,48 @@ msgstr ""
 "파일을 찾을 수 없습니다: \n"
 "%s\n"
 "\n"
-"다섯개가 제대로 설치되었는지 확인하십시오"
+"다섯개가 제대로 설치되었는지 확인하십시오."
 
-#: ../src/five-or-more.c:407
+#: ../src/five-or-more.c:410
 msgid "Match five objects of the same type in a row to score!"
 msgstr "점수를 올리려면 같은 색의 동그라미 다섯 개를 한 줄에 늘어 놓으십시오!"
 
-#: ../src/five-or-more.c:468
+#: ../src/five-or-more.c:471
 msgid "Five or More Scores"
 msgstr "다섯개 점수"
 
-#: ../src/five-or-more.c:470
+#: ../src/five-or-more.c:473
 msgid "_Board size:"
 msgstr "보드 크기(_B):"
 
-#: ../src/five-or-more.c:487
+#: ../src/five-or-more.c:490
 msgid "Game Over!"
 msgstr "게임 끝!"
 
 #. Can't move there!
-#: ../src/five-or-more.c:644
+#: ../src/five-or-more.c:647
 msgid "You can’t move there!"
 msgstr "거기로 이동할 수 없습니다!"
 
-#: ../src/five-or-more.c:1174
+#: ../src/five-or-more.c:1177
 msgid "GNOME port of the once-popular Color Lines game"
-msgstr "한때 유행했던 색상 라인 게임을 그놈으로 옮겼습니다."
+msgstr "한때 유행했던 색상 라인 게임을 그놈으로 옮겼습니다"
 
-#: ../src/five-or-more.c:1180
+#: ../src/five-or-more.c:1183
 msgid "translator-credits"
-msgstr "류창우 <cwryu@debian.org>"
+msgstr ""
+"류창우 <cwryu@debian.org>\n"
+"김치현 <pipi910327@gmail.com>"
 
-#: ../src/five-or-more.c:1304
+#: ../src/five-or-more.c:1307
 msgid "Are you sure you want to restart the game?"
 msgstr "정말로 게임을 다시 시작하시겠습니까?"
 
-#: ../src/five-or-more.c:1307
+#: ../src/five-or-more.c:1310
 msgid "_Cancel"
 msgstr "취소(_C)"
 
-#: ../src/five-or-more.c:1308
+#: ../src/five-or-more.c:1311
 msgid "_Restart"
 msgstr "다시 시작(_R)"
 
