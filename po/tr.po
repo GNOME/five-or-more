@@ -11,15 +11,17 @@
 # Hakan Bekdas <hakanbekdas@yahoo.com>, 2006.
 # Baris Cicek <baris@teamforce.name.tr>, 2004, 2005, 2008, 2009.
 # Muhammet Kara <muhammetk@gmail.com>, 2011, 2014, 2015.
+# Furkan Ahmet Kara <furkanahmetkara.fk@gmail.com>, 2017.
+# Emin Tufan Çetin <etcetin@gmail.com>, 2017.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=five-"
 "or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-12-31 06:26+0000\n"
-"PO-Revision-Date: 2015-12-31 20:11+0200\n"
-"Last-Translator: Muhammet Kara <muhammetk@gmail.com>\n"
+"POT-Creation-Date: 2017-09-02 07:08+0000\n"
+"PO-Revision-Date: 2017-09-10 15:18+0300\n"
+"Last-Translator: Emin Tufan Çetin <etcetin@gmail.com>\n"
 "Language-Team: Türkçe <gnome-turk@gnome.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
@@ -29,8 +31,8 @@ msgstr ""
 "X-Generator: Gtranslator 2.91.7\n"
 
 #: ../data/five-or-more.appdata.xml.in.h:1 ../data/five-or-more.desktop.in.h:1
-#: ../data/five-or-more.ui.h:1 ../src/five-or-more.c:1172
-#: ../src/five-or-more.c:1731
+#: ../data/five-or-more.ui.h:1 ../src/five-or-more.c:1175
+#: ../src/five-or-more.c:1726
 msgid "Five or More"
 msgstr "Beş veya Fazlası"
 
@@ -45,12 +47,22 @@ msgid ""
 "score points. Earn many more points by lining up as many objects as possible "
 "before clearing them."
 msgstr ""
+"Five or More, bir zamanlar gözde olan bir bilgisayar oyununun GNOME "
+"sürümüdür. Aynı renkteki beş veya daha fazla nesneyi kaybolmalarını sağlamak "
+"için bir çizgide hizalayın ve puanları kazanın. Onları temizlemeden önce "
+"mümkün olduğunca çok nesneyi sıralayarak daha çok puan kazanın."
 
 #: ../data/five-or-more.appdata.xml.in.h:4
 msgid ""
 "More objects appear after every turn. Play for as long as possible, until "
 "the board is completely full!"
 msgstr ""
+"Her turdan sonra daha çok öge meydana gelir. Pano tümüyle doluncaya kadar, "
+"mümkün olduğunca uzun süre oyna!"
+
+#: ../data/five-or-more.appdata.xml.in.h:5
+msgid "The GNOME Project"
+msgstr "GNOME Projesi"
 
 #: ../data/five-or-more.desktop.in.h:3
 msgid "game;strategy;logic;"
@@ -71,7 +83,7 @@ msgstr "_Resim:"
 
 #: ../data/five-or-more-preferences.ui.h:4
 msgid "B_ackground color:"
-msgstr "_Arkaplan rengi:"
+msgstr "_Arka plan rengi:"
 
 #: ../data/five-or-more-preferences.ui.h:5
 msgid "Board Size"
@@ -153,11 +165,11 @@ msgstr "Top stili. Toplar için kullanılacak resimlerin dosya adı."
 
 #: ../data/org.gnome.five-or-more.gschema.xml.h:5
 msgid "Background color"
-msgstr "Arkaplan rengi"
+msgstr "Arka plan rengi"
 
 #: ../data/org.gnome.five-or-more.gschema.xml.h:6
 msgid "Background color. The hex specification of the background color."
-msgstr "Arkaplan rengi. Arkaplan renginin hex belirtimi."
+msgstr "Arka plan rengi. Arka plan renginin hex belirtimi."
 
 #: ../data/org.gnome.five-or-more.gschema.xml.h:7
 msgid "Time between moves"
@@ -189,7 +201,7 @@ msgstr "Oyun önizleme"
 
 #: ../data/org.gnome.five-or-more.gschema.xml.h:14
 msgid "Game preview from last saved session."
-msgstr "Son kaydedilen oturumdan oyun önizleme."
+msgstr "Son kaydedilen oturumdan oyun önizlemesi."
 
 #: ../data/org.gnome.five-or-more.gschema.xml.h:15
 msgid "Width of the window in pixels"
@@ -201,7 +213,7 @@ msgstr "Piksel olarak pencerenin yüksekliği"
 
 #: ../data/org.gnome.five-or-more.gschema.xml.h:17
 msgid "true if the window is maximized"
-msgstr ""
+msgstr "eğer pencere en büyük hale getirilmişse işaretle"
 
 #: ../src/five-or-more.c:80
 msgctxt "board size"
@@ -243,65 +255,53 @@ msgid ""
 "\n"
 "Please check that Five or More is installed correctly."
 msgstr ""
-"Beş veya Fazlası resim dosyasını bulamadı:\n"
+"Dosya yeri saptanamadı:\n"
 "%s\n"
 "\n"
-"Lütfen Beş veya Fazlası'nın tam olarak kurulu olup olmadığını kontrol edin."
+"Lütfen Beş veya Fazlası’nın tam olarak kurulu olup olmadığını denetleyin."
 
-#: ../src/five-or-more.c:407
+#: ../src/five-or-more.c:410
 msgid "Match five objects of the same type in a row to score!"
 msgstr "Puan almak için, bir sırada aynı renkten beş nesneyi eşleştirin!"
 
-#: ../src/five-or-more.c:468
-#| msgid "Five or More"
+#: ../src/five-or-more.c:471
 msgid "Five or More Scores"
 msgstr "Beş veya Fazlası Puanları"
 
-#: ../src/five-or-more.c:470
+#: ../src/five-or-more.c:473
 msgid "_Board size:"
 msgstr "Tahta _boyutu:"
 
-#: ../src/five-or-more.c:487
+#: ../src/five-or-more.c:490
 msgid "Game Over!"
 msgstr "Oyun Bitti!"
 
 #. Can't move there!
-#: ../src/five-or-more.c:644
-#, fuzzy
-#| msgid "You can't move there!"
+#: ../src/five-or-more.c:647
 msgid "You can’t move there!"
-msgstr "Oraya taşınamaz!"
+msgstr "Oraya hareket edemezsin!"
 
-#: ../src/five-or-more.c:1174
-#, fuzzy
-#| msgid ""
-#| "GNOME port of the once-popular Color Lines game.\n"
-#| "\n"
-#| "Five or More is a part of GNOME Games."
+#: ../src/five-or-more.c:1177
 msgid "GNOME port of the once-popular Color Lines game"
-msgstr ""
-"Bir zamanların popüler Renkli Çizgiler oyununun GNOME sürümü.\n"
-"\n"
-"Beş veya Daha Fazla GNOME Oyunları'nın bir parçasıdır."
+msgstr "Bir zamanların popüler Renkli Çizgiler oyununun GNOME sürümü."
 
-#: ../src/five-or-more.c:1180
+#: ../src/five-or-more.c:1183
 msgid "translator-credits"
 msgstr ""
 "Barış Çiçek <baris@teamforce.name.tr> \n"
 "Muhammet Kara <muhammetk@gmail.com>"
 
-#: ../src/five-or-more.c:1304
-#| msgid "Are you sure you want to quit?"
+#: ../src/five-or-more.c:1307
 msgid "Are you sure you want to restart the game?"
 msgstr "Oyunu yeniden başlatmak istediğinizden emin misiniz?"
 
-#: ../src/five-or-more.c:1307
+#: ../src/five-or-more.c:1310
 msgid "_Cancel"
 msgstr "İptal _et"
 
-#: ../src/five-or-more.c:1308
+#: ../src/five-or-more.c:1311
 msgid "_Restart"
-msgstr "_Tekrar Başla"
+msgstr "_Yeniden Başla"
 
 #. Score dialog column header for the score time (e.g. 1 minute)
 #: ../src/games-scores-dialog.c:132
