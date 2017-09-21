@@ -2,8 +2,16 @@
 #
 # This file is distributed under the same license as the gnome-games package.
 #
+# Almer S. Tigelaar <almer1@dds.nl>, 2000.
+# Taco Witte <T.C.Witte@phys.uu.nl>, 2002.
+# Erik Kruijswijk <e.kruijswijk@ictro.drp.minjus.nl>, 2002.
+# Tino Meinen <tino.meinen@gmail.com>, 2002–2009.
+# Wouter Bolsterlee <wbolster@gnome.org>, 2008.
+# Redmar <redmar@ubuntu-nl.org>, 2011.
 # Hein-Jan Leliveld <h.j.leliveld@student.tn.tudelft.nl>
 # Brent De Weerdt <deweerdt.brent@gmail.com>, 2013
+# Justin van Steijn <jvs@fsfe.org>, 2015
+# Nathan Follens <nthn@unseen.is>, 2017
 #
 #
 # Kaartspellen:
@@ -31,20 +39,14 @@
 #
 # Mahjong:
 # map		    stapelwijze
-#
-# Almer S. Tigelaar <almer1@dds.nl>, 2000.
-# Taco Witte <T.C.Witte@phys.uu.nl>, 2002.
-# Erik Kruijswijk <e.kruijswijk@ictro.drp.minjus.nl>, 2002.
-# Tino Meinen <tino.meinen@gmail.com>, 2002–2009.
-# Wouter Bolsterlee <wbolster@gnome.org>, 2008.
-# Redmar <redmar@ubuntu-nl.org>, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-15 21:35+0100\n"
-"PO-Revision-Date: 2013-02-11 21:34+0100\n"
-"Last-Translator: Brent De Weerdt <deweerdt.brent@gmail.com>\n"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=five-"
+"or-more&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2017-09-02 07:08+0000\n"
+"PO-Revision-Date: 2017-09-09 20:15+0200\n"
+"Last-Translator: Nathan Follens <nthn@unseen.is>\n"
 "Language-Team: Dutch <vertaling@vrijschrift.org>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
@@ -52,24 +54,50 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Launchpad-Export-Date: 2011-09-18 07:04+0000\n"
-"X-Generator: Lokalize 1.2\n"
+"X-Generator: Poedit 2.0.3\n"
 
-#: ../data/five-or-more.desktop.in.in.h:1 ../src/glines.c:1170
-#: ../src/glines.c:1173 ../src/glines.c:1661
+#: ../data/five-or-more.appdata.xml.in.h:1 ../data/five-or-more.desktop.in.h:1
+#: ../data/five-or-more.ui.h:1 ../src/five-or-more.c:1175
+#: ../src/five-or-more.c:1726
 msgid "Five or More"
 msgstr "Vijf of meer"
 
-#: ../data/five-or-more.desktop.in.in.h:2
+#: ../data/five-or-more.appdata.xml.in.h:2 ../data/five-or-more.desktop.in.h:2
 msgid "Remove colored balls from the board by forming lines"
 msgstr "Gekleurde ballen van het bord verwijderen door lijnen te vormen"
 
-#: ../data/five-or-more.desktop.in.in.h:3
+#: ../data/five-or-more.appdata.xml.in.h:3
+msgid ""
+"Five or More is the GNOME port of a once-popular computer game. Align five "
+"or more objects of the same color into a line to cause them to disappear and "
+"score points. Earn many more points by lining up as many objects as possible "
+"before clearing them."
+msgstr ""
+"Vijf of meer is de Gnome-variant van een computerspel dat eens populair was. "
+"Plaats vijf of meer objecten van dezelfde kleur op één lijn om ze te laten "
+"verdwijnen en punten te scoren. Verdien nog meer punten door zo veel "
+"mogelijk objecten op één lijn te zetten voordat ze verdwijnen."
+
+#: ../data/five-or-more.appdata.xml.in.h:4
+msgid ""
+"More objects appear after every turn. Play for as long as possible, until "
+"the board is completely full!"
+msgstr ""
+"Er verschijnen meer objecten na elke beurt. Speel zo lang mogelijk, totdat "
+"het bord volledig vol is!"
+
+#: ../data/five-or-more.appdata.xml.in.h:5
+msgid "The GNOME Project"
+msgstr "Het Gnome-project"
+
+#: ../data/five-or-more.desktop.in.h:3
 msgid "game;strategy;logic;"
 msgstr "spel;strategie;logica;"
 
-#: ../data/five-or-more-preferences.ui.h:1
-msgid "Five or More Preferences"
-msgstr "‘Vijf of meer’ voorkeuren"
+#: ../data/five-or-more-preferences.ui.h:1 ../data/menu.ui.h:2
+#: ../src/five-or-more.c:171
+msgid "Preferences"
+msgstr "Voorkeuren"
 
 #: ../data/five-or-more-preferences.ui.h:2
 msgid "Appearance"
@@ -107,382 +135,137 @@ msgstr "Algemeen"
 msgid "_Use fast moves"
 msgstr "_Snelle zetten gebruiken"
 
-#: ../data/five-or-more.ui.h:1
-msgid "Five or more"
-msgstr "Vijf of meer"
-
-#: ../data/five-or-more.ui.h:2
-msgid "_Game"
-msgstr "_Spel"
-
-#: ../data/five-or-more.ui.h:3
-msgid "Scores"
-msgstr "Scores"
-
-# hoofdmenu bevat: _Spel _Instellingen en _Hulp
-#: ../data/five-or-more.ui.h:4
-msgid "_Settings"
-msgstr "I_nstellingen"
-
-#: ../data/five-or-more.ui.h:5
-msgid "_Help"
-msgstr "_Hulp"
-
-#. Help contents menu item
-#: ../data/five-or-more.ui.h:7 ../src/games-stock.c:247
-msgid "_Contents"
-msgstr "In_houd"
-
 # komende/volgende/hierna
 # volgende knikkers
-#: ../data/five-or-more.ui.h:8
+#: ../data/five-or-more.ui.h:2
 msgid "Next:"
 msgstr "Volgende:"
 
-#: ../data/five-or-more.ui.h:9
+#: ../data/five-or-more.ui.h:3
 msgid "0"
 msgstr "0"
 
-#: ../data/five-or-more.ui.h:10
+#: ../data/five-or-more.ui.h:4
 msgid "Score:"
 msgstr "Score:"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:1
+#: ../data/five-or-more.ui.h:5 ../src/games-scores-dialog.c:385
+msgid "_New Game"
+msgstr "_Nieuw spel"
+
+#: ../data/five-or-more.ui.h:6
+msgid "Start a new puzzle"
+msgstr "Een nieuw spel beginnen"
+
+#: ../data/menu.ui.h:1
+msgid "Scores"
+msgstr "Scores"
+
+#: ../data/menu.ui.h:3
+msgid "Help"
+msgstr "Hulp"
+
+#: ../data/menu.ui.h:4
+msgid "About"
+msgstr "Info"
+
+#: ../data/menu.ui.h:5
+msgid "Quit"
+msgstr "Afsluiten"
+
+#: ../data/org.gnome.five-or-more.gschema.xml.h:1
 msgid "Playing field size"
 msgstr "Speelveld grootte"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:2
+#: ../data/org.gnome.five-or-more.gschema.xml.h:2
 msgid ""
 "Playing field size. 1=Small, 2=Medium, 3=Large. Any other value is invalid."
 msgstr ""
 "Speelveld grootte. 1=klein, 2=medium, 3=groot. Elke andere waarde is "
 "ongeldig."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:3
+#: ../data/org.gnome.five-or-more.gschema.xml.h:3
 msgid "Ball style"
 msgstr "Knikkerstijl"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:4
+#: ../data/org.gnome.five-or-more.gschema.xml.h:4
 msgid "Ball style. The filename of the images to use for the balls."
 msgstr "Knikkerstijl. De bestandsnaam van de plaatjes van de knikkers."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:5
+#: ../data/org.gnome.five-or-more.gschema.xml.h:5
 msgid "Background color"
 msgstr "Achtergrondkleur"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:6
+#: ../data/org.gnome.five-or-more.gschema.xml.h:6
 msgid "Background color. The hex specification of the background color."
 msgstr "Achtergrondkleur. De hexadecimale opgave van de achtergrondkleur."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:7
+#: ../data/org.gnome.five-or-more.gschema.xml.h:7
 msgid "Time between moves"
 msgstr "Tijd tussen zetten"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:8
+#: ../data/org.gnome.five-or-more.gschema.xml.h:8
 msgid "Time between moves in milliseconds."
 msgstr "De tijd tussen zetten in milliseconden."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:9
+#: ../data/org.gnome.five-or-more.gschema.xml.h:9
 msgid "Game score"
 msgstr "Score"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:10
+#: ../data/org.gnome.five-or-more.gschema.xml.h:10
 msgid "Game score from last saved session."
 msgstr "Score van de laatst bewaarde sessie."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:11
+#: ../data/org.gnome.five-or-more.gschema.xml.h:11
 msgid "Game field"
 msgstr "Spelveld"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:12
+#: ../data/org.gnome.five-or-more.gschema.xml.h:12
 msgid "Game field from last saved session."
 msgstr "Spelveld van de laatstbewaarde sessie."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:13
+#: ../data/org.gnome.five-or-more.gschema.xml.h:13
 msgid "Game preview"
 msgstr "Spelvoorbeeld"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:14
+#: ../data/org.gnome.five-or-more.gschema.xml.h:14
 msgid "Game preview from last saved session."
 msgstr "Spelvoorbeeld van de laatst bewaarde sessie."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:15
+#: ../data/org.gnome.five-or-more.gschema.xml.h:15
 msgid "Width of the window in pixels"
-msgstr "De breedte van het venster in beeldpunten."
+msgstr "De breedte van het venster in beeldpunten"
 
 # de gevraagde hoogte/de hoogte
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:16
+#: ../data/org.gnome.five-or-more.gschema.xml.h:16
 msgid "Height of the window in pixels"
-msgstr "De hoogte van het venster in beeldpunten."
+msgstr "De hoogte van het venster in beeldpunten"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:17
+#: ../data/org.gnome.five-or-more.gschema.xml.h:17
 msgid "true if the window is maximized"
-msgstr "Ingeschakeld als het venster is gemaximaliseerd"
+msgstr "ingeschakeld als het venster is gemaximaliseerd"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.in.h:18
-msgid "true if the window is fullscren"
-msgstr "Ingeschakeld als het venster het volledige scherm vult"
-
-#. Score dialog column header for the score time (e.g. 1 minute)
-#: ../src/games-scores-dialog.c:136
-msgctxt "score-dialog"
-msgid "Time"
-msgstr "Tijd"
-
-#. Score dialog column header for the score value (e.g. 30 moves)
-#: ../src/games-scores-dialog.c:142
-msgctxt "score-dialog"
-msgid "Score"
-msgstr "Score"
-
-#. Score format for time based scores.  %1$d is the time in minutes, %2$d is the time in seconds
-#: ../src/games-scores-dialog.c:307
-#, c-format
-msgctxt "score-dialog"
-msgid "%1$dm %2$ds"
-msgstr "%1$dm %2$ds"
-
-# eigenlijk partij bij schaak, maar spel bij andere games
-#: ../src/games-scores-dialog.c:470
-msgid "New Game"
-msgstr "Nieuw spel"
-
-#. Score dialog column header for the name of the player who recorded the score
-#: ../src/games-scores-dialog.c:571
-msgctxt "score-dialog"
-msgid "Name"
-msgstr "Naam"
-
-#. Score dialog column header for the date the score was recorded
-#: ../src/games-scores-dialog.c:580
-msgid "Date"
-msgstr "Datum"
-
-#: ../src/games-stock.c:41
-msgid "View help for this game"
-msgstr "De hulp voor dit spel weergeven"
-
-#: ../src/games-stock.c:42
-msgid "End the current game"
-msgstr "De huidige schaakpartij beëindigen"
-
-#: ../src/games-stock.c:43
-msgid "Toggle fullscreen mode"
-msgstr "Schermvullend aan/uit"
-
-#: ../src/games-stock.c:44
-msgid "Get a hint for your next move"
-msgstr "Vraag een hint voor uw volgende zet"
-
-#: ../src/games-stock.c:45
-msgid "Leave fullscreen mode"
-msgstr "Schermvullend verlaten"
-
-# online spel/netwerkspel
-#: ../src/games-stock.c:46
-msgid "Start a new multiplayer network game"
-msgstr "Een nieuw spel via het netwerk beginnen met meerdere spelers"
-
-#: ../src/games-stock.c:47
-msgid "End the current network game and return to network server"
-msgstr "Het huidige netwerkspel beëindigen en terugkeren naar de netwerkserver"
-
-#: ../src/games-stock.c:48
-msgid "Start a new game"
-msgstr "Een nieuw spel beginnen"
-
-#: ../src/games-stock.c:49
-msgid "Pause the game"
-msgstr "Het spel pauzeren"
-
-# on-line spel/netwerkspel
-#: ../src/games-stock.c:50
-msgid "Show a list of players in the network game"
-msgstr "Een lijst met spelers in het netwerkspel tonen"
-
-# hoe je het ook vertaald, het blijft altijd een beetje dubbelzinnig.
-# maar zo, op z'n simpelst is het voor iedereen toch wel duidelijk
-#: ../src/games-stock.c:51
-msgid "Redo the undone move"
-msgstr "De laatste zet herhalen"
-
-#: ../src/games-stock.c:52
-msgid "Restart the game"
-msgstr "Spel opnieuw starten"
-
-#: ../src/games-stock.c:53
-msgid "Resume the paused game"
-msgstr "Het gepauzeerde spel hervatten"
-
-# topscores bekijken
-#: ../src/games-stock.c:54
-msgid "View the scores"
-msgstr "Topscores tonen"
-
-#: ../src/games-stock.c:55
-msgid "Undo the last move"
-msgstr "De laatste zet ongedaan maken"
-
-#: ../src/games-stock.c:56
-msgid "About this game"
-msgstr "Over dit spel"
-
-#: ../src/games-stock.c:57
-msgid "Close this window"
-msgstr "Dit venster sluiten"
-
-#: ../src/games-stock.c:58
-msgid "Configure the game"
-msgstr "Het spel configureren"
-
-#: ../src/games-stock.c:59
-msgid "Quit this game"
-msgstr "Dit spel afsluiten"
-
-#: ../src/games-stock.c:248
-msgid "_Fullscreen"
-msgstr "_Schermvullend"
-
-#: ../src/games-stock.c:249
-msgid "_Hint"
-msgstr "_Hint"
-
-#. Translators: This "_New" is for the menu item 'Game->New', implies "New Game"
-#: ../src/games-stock.c:251
-msgid "_New"
-msgstr "_Nieuw"
-
-#. Translators: This "_New Game" is for the game-over dialogue
-#: ../src/games-stock.c:253
-msgid "_New Game"
-msgstr "_Nieuw spel"
-
-#: ../src/games-stock.c:254
-msgid "_Redo Move"
-msgstr "_Opnieuw doen"
-
-#. Translators: this is the "Reset" scores button in a scores dialogue
-#: ../src/games-stock.c:256
-msgid "_Reset"
-msgstr "_Resetten"
-
-#. Translators: "_Restart" is the menu item 'Game->Restart', implies "Restart Game"
-#: ../src/games-stock.c:258
-msgid "_Restart"
-msgstr "_Herstarten"
-
-# herstellen/ongedaan maken
-#: ../src/games-stock.c:259
-msgid "_Undo Move"
-msgstr "_Ongedaan maken"
-
-#: ../src/games-stock.c:260
-msgid "_Deal"
-msgstr "D_elen"
-
-#: ../src/games-stock.c:261
-msgid "_Leave Fullscreen"
-msgstr "_Schermvullend verlaten"
-
-#: ../src/games-stock.c:262
-msgid "Network _Game"
-msgstr "Netwerk-_spel"
-
-#: ../src/games-stock.c:263
-msgid "L_eave Game"
-msgstr "Sp_el verlaten"
-
-#: ../src/games-stock.c:264
-msgid "Player _List"
-msgstr "S_pelerslijst"
-
-#: ../src/games-stock.c:265
-msgid "_Pause"
-msgstr "_Pauzeren"
-
-#: ../src/games-stock.c:266
-msgid "Res_ume"
-msgstr "_Hervatten"
-
-#: ../src/games-stock.c:267
-msgid "_Scores"
-msgstr "_Scores"
-
-#: ../src/games-stock.c:268
-msgid "_End Game"
-msgstr "Spel _beëindigen"
-
-#. %s is replaced with the name of the game in gnome-games.
-#: ../src/games-stock.c:317
-#, c-format
-msgid ""
-"%s is free software; you can redistribute it and/or modify it under the "
-"terms of the GNU General Public License as published by the Free Software "
-"Foundation; either version %d of the License, or (at your option) any later "
-"version."
-msgstr ""
-"%s is vrije software; herdistributie en/of het aanbrengen van wijzigingen is "
-"toegestaan onder de voorwaarden vermeld in de GNU General Public License die "
-"gepubliceerd is door de Free Software Foundation; ofwel versie %d van de "
-"licentie of, (zo u wilt) elke latere versie."
-
-#: ../src/games-stock.c:322
-#, c-format
-msgid ""
-"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
-"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
-"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
-"details."
-msgstr ""
-"%s wordt gedistribueerd met de hoop dat het bruikbaar zal zijn, maar zonder "
-"enige garantie; zelfs niet een geïmpliceerde garantie van verkoopbaarheid of "
-"geschiktheid voor een bepaald doel. Zie de GNU General Public License voor "
-"meer informatie."
-
-#: ../src/games-stock.c:327
-#, c-format
-msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
-"Fifth Floor, Boston, MA  02110-1301  USA"
-msgstr ""
-"U moet gelijk met %s een kopie van de GNU General Public License hebben "
-"ontvangen; zo niet, schrijf dan naar de Free Software Foundation, Inc., 51 "
-"Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA"
-
-#: ../src/games-stock.c:331
-msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"this program.  If not, see <http://www.gnu.org/licenses/>."
-msgstr ""
-"U moet een kopie van de GNU General Public License met dit programma hebben "
-"ontvangen; zo niet, zie <http://www.gnu.org/licenses/>."
-
-#: ../src/glines.c:78
+#: ../src/five-or-more.c:80
 msgctxt "board size"
 msgid "Small"
 msgstr "Klein"
 
-#: ../src/glines.c:79
+#: ../src/five-or-more.c:81
 msgctxt "board size"
 msgid "Medium"
 msgstr "Gemiddeld"
 
-#: ../src/glines.c:80
+#: ../src/five-or-more.c:82
 msgctxt "board size"
 msgid "Large"
 msgstr "Groot"
 
 # gaat het om de plaatjes op de stenen of de stapelwijze?
-#: ../src/glines.c:170
+#: ../src/five-or-more.c:165
 msgid "Could not load theme"
 msgstr "Kon het thema niet laden"
 
-#: ../src/glines.c:176
-msgid "Preferences"
-msgstr "Voorkeuren"
-
-#: ../src/glines.c:196
+#: ../src/five-or-more.c:191
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -494,7 +277,7 @@ msgstr ""
 "\n"
 "In plaats daarvan zal het standaardthema worden geladen."
 
-#: ../src/glines.c:203
+#: ../src/five-or-more.c:198
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -504,41 +287,35 @@ msgid ""
 msgstr ""
 "Kon het bestand %s niet vinden:\n"
 "\n"
-"Controleer of 'Vijf of meer' correct is geïnstalleerd"
+"Controleer of 'Vijf of meer' correct is geïnstalleerd."
 
-#: ../src/glines.c:408
+#: ../src/five-or-more.c:410
 msgid "Match five objects of the same type in a row to score!"
 msgstr "Plaats vijf objecten van hetzelfde type op een rij om te scoren!"
 
-#: ../src/glines.c:470
-msgid "GNOME Five or More"
-msgstr "Gnome Vijf of meer"
+#: ../src/five-or-more.c:471
+msgid "Five or More Scores"
+msgstr "Scores van Vijf of meer"
 
-#: ../src/glines.c:472
+#: ../src/five-or-more.c:473
 msgid "_Board size:"
 msgstr "_Bordgrootte:"
 
 # voorbij/afgelopen
-#: ../src/glines.c:489
+#: ../src/five-or-more.c:490
 msgid "Game Over!"
 msgstr "Spel afgelopen!"
 
 #. Can't move there!
-#: ../src/glines.c:646
-msgid "You can't move there!"
-msgstr "U mag daar niet zetten!"
+#: ../src/five-or-more.c:647
+msgid "You can’t move there!"
+msgstr "U kunt daar niet zetten!"
 
-#: ../src/glines.c:1175
-msgid ""
-"GNOME port of the once-popular Color Lines game.\n"
-"\n"
-"Five or More is a part of GNOME Games."
-msgstr ""
-"Gnome-versie van het eens zo populaire spel: Kleurlijnen.\n"
-"\n"
-"‘Vijf of meer’ is onderdeel van Gnome Games."
+#: ../src/five-or-more.c:1177
+msgid "GNOME port of the once-popular Color Lines game"
+msgstr "Gnome-versie van het eens zo populaire kleurlijnenspel"
 
-#: ../src/glines.c:1181
+#: ../src/five-or-more.c:1183
 msgid "translator-credits"
 msgstr ""
 "Tino Meinen\n"
@@ -546,8 +323,10 @@ msgstr ""
 "Almer S. Tigelaar\n"
 "Taco Witte\n"
 "Erik Kruijswijk\n"
+"Justin van Steijn\n"
+"Nathan Follens\n"
 "\n"
-"Kijk voor meer informatie op http://nl.gnome.org/\n"
+"Meer info over Gnome-NL http://nl.gnome.org/\n"
 "\n"
 "Launchpad Contributions:\n"
 "  Balaam's Miracle https://launchpad.net/~balaam-balaamsmiracle\n"
@@ -568,9 +347,235 @@ msgstr ""
 "  Wouter Bolsterlee (uws) https://launchpad.net/~uws\n"
 "  kerplunk https://launchpad.net/~schorpioen"
 
-#: ../src/glines.c:1184
-msgid "GNOME Games web site"
-msgstr "Gnome games website"
+# ingevuld?/neergezet
+#: ../src/five-or-more.c:1307
+msgid "Are you sure you want to restart the game?"
+msgstr "Weet u zeker dat u het spel opnieuw wilt starten?"
+
+#: ../src/five-or-more.c:1310
+msgid "_Cancel"
+msgstr "_Annuleren"
+
+#: ../src/five-or-more.c:1311
+msgid "_Restart"
+msgstr "_Herstarten"
+
+#. Score dialog column header for the score time (e.g. 1 minute)
+#: ../src/games-scores-dialog.c:132
+msgctxt "score-dialog"
+msgid "Time"
+msgstr "Tijd"
+
+#. Score dialog column header for the score value (e.g. 30 moves)
+#: ../src/games-scores-dialog.c:138
+msgctxt "score-dialog"
+msgid "Score"
+msgstr "Score"
+
+#. Score format for time based scores.  %1$d is the time in minutes, %2$d is the time in seconds
+#: ../src/games-scores-dialog.c:225
+#, c-format
+msgctxt "score-dialog"
+msgid "%1$dm %2$ds"
+msgstr "%1$dm %2$ds"
+
+#: ../src/games-scores-dialog.c:371
+msgid "_Quit"
+msgstr "A_fsluiten"
+
+#: ../src/games-scores-dialog.c:378
+msgid "_Undo"
+msgstr "_Ongedaan maken"
+
+# leegmaken/wissen
+#: ../src/games-scores-dialog.c:392
+msgid "_Close"
+msgstr "Sl_uiten"
+
+#. Score dialog column header for the date the score was recorded
+#: ../src/games-scores-dialog.c:478
+msgid "Date"
+msgstr "Datum"
+
+#~ msgid "Five or More Preferences"
+#~ msgstr "‘Vijf of meer’ voorkeuren"
+
+#~ msgid "Five or more"
+#~ msgstr "Vijf of meer"
+
+#~ msgid "_Game"
+#~ msgstr "_Spel"
+
+# hoofdmenu bevat: _Spel _Instellingen en _Hulp
+#~ msgid "_Settings"
+#~ msgstr "I_nstellingen"
+
+#~ msgid "_Help"
+#~ msgstr "_Hulp"
+
+#~ msgid "_Contents"
+#~ msgstr "In_houd"
+
+#~ msgid "true if the window is fullscren"
+#~ msgstr "Ingeschakeld als het venster het volledige scherm vult"
+
+# eigenlijk partij bij schaak, maar spel bij andere games
+#~ msgid "New Game"
+#~ msgstr "Nieuw spel"
+
+#~ msgctxt "score-dialog"
+#~ msgid "Name"
+#~ msgstr "Naam"
+
+#~ msgid "View help for this game"
+#~ msgstr "De hulp voor dit spel weergeven"
+
+#~ msgid "End the current game"
+#~ msgstr "De huidige schaakpartij beëindigen"
+
+#~ msgid "Toggle fullscreen mode"
+#~ msgstr "Schermvullend aan/uit"
+
+#~ msgid "Get a hint for your next move"
+#~ msgstr "Vraag een hint voor uw volgende zet"
+
+#~ msgid "Leave fullscreen mode"
+#~ msgstr "Schermvullend verlaten"
+
+# online spel/netwerkspel
+#~ msgid "Start a new multiplayer network game"
+#~ msgstr "Een nieuw spel via het netwerk beginnen met meerdere spelers"
+
+#~ msgid "End the current network game and return to network server"
+#~ msgstr ""
+#~ "Het huidige netwerkspel beëindigen en terugkeren naar de netwerkserver"
+
+#~ msgid "Pause the game"
+#~ msgstr "Het spel pauzeren"
+
+# on-line spel/netwerkspel
+#~ msgid "Show a list of players in the network game"
+#~ msgstr "Een lijst met spelers in het netwerkspel tonen"
+
+# hoe je het ook vertaald, het blijft altijd een beetje dubbelzinnig.
+# maar zo, op z'n simpelst is het voor iedereen toch wel duidelijk
+#~ msgid "Redo the undone move"
+#~ msgstr "De laatste zet herhalen"
+
+#~ msgid "Restart the game"
+#~ msgstr "Spel opnieuw starten"
+
+#~ msgid "Resume the paused game"
+#~ msgstr "Het gepauzeerde spel hervatten"
+
+# topscores bekijken
+#~ msgid "View the scores"
+#~ msgstr "Topscores tonen"
+
+#~ msgid "Undo the last move"
+#~ msgstr "De laatste zet ongedaan maken"
+
+#~ msgid "About this game"
+#~ msgstr "Over dit spel"
+
+#~ msgid "Close this window"
+#~ msgstr "Dit venster sluiten"
+
+#~ msgid "Configure the game"
+#~ msgstr "Het spel configureren"
+
+#~ msgid "Quit this game"
+#~ msgstr "Dit spel afsluiten"
+
+#~ msgid "_Fullscreen"
+#~ msgstr "_Schermvullend"
+
+#~ msgid "_Hint"
+#~ msgstr "_Hint"
+
+#~ msgid "_New"
+#~ msgstr "_Nieuw"
+
+#~ msgid "_Redo Move"
+#~ msgstr "_Opnieuw doen"
+
+#~ msgid "_Reset"
+#~ msgstr "_Resetten"
+
+# herstellen/ongedaan maken
+#~ msgid "_Undo Move"
+#~ msgstr "_Ongedaan maken"
+
+#~ msgid "_Deal"
+#~ msgstr "D_elen"
+
+#~ msgid "_Leave Fullscreen"
+#~ msgstr "_Schermvullend verlaten"
+
+#~ msgid "Network _Game"
+#~ msgstr "Netwerk-_spel"
+
+#~ msgid "L_eave Game"
+#~ msgstr "Sp_el verlaten"
+
+#~ msgid "Player _List"
+#~ msgstr "S_pelerslijst"
+
+#~ msgid "_Pause"
+#~ msgstr "_Pauzeren"
+
+#~ msgid "Res_ume"
+#~ msgstr "_Hervatten"
+
+#~ msgid "_Scores"
+#~ msgstr "_Scores"
+
+#~ msgid "_End Game"
+#~ msgstr "Spel _beëindigen"
+
+#~ msgid ""
+#~ "%s is free software; you can redistribute it and/or modify it under the "
+#~ "terms of the GNU General Public License as published by the Free Software "
+#~ "Foundation; either version %d of the License, or (at your option) any "
+#~ "later version."
+#~ msgstr ""
+#~ "%s is vrije software; herdistributie en/of het aanbrengen van wijzigingen "
+#~ "is toegestaan onder de voorwaarden vermeld in de GNU General Public "
+#~ "License die gepubliceerd is door de Free Software Foundation; ofwel "
+#~ "versie %d van de licentie of, (zo u wilt) elke latere versie."
+
+#~ msgid ""
+#~ "%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+#~ "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+#~ "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+#~ "details."
+#~ msgstr ""
+#~ "%s wordt gedistribueerd met de hoop dat het bruikbaar zal zijn, maar "
+#~ "zonder enige garantie; zelfs niet een geïmpliceerde garantie van "
+#~ "verkoopbaarheid of geschiktheid voor een bepaald doel. Zie de GNU General "
+#~ "Public License voor meer informatie."
+
+#~ msgid ""
+#~ "You should have received a copy of the GNU General Public License along "
+#~ "with %s; if not, write to the Free Software Foundation, Inc., 51 Franklin "
+#~ "Street, Fifth Floor, Boston, MA  02110-1301  USA"
+#~ msgstr ""
+#~ "U moet gelijk met %s een kopie van de GNU General Public License hebben "
+#~ "ontvangen; zo niet, schrijf dan naar de Free Software Foundation, Inc., "
+#~ "51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA"
+
+#~ msgid ""
+#~ "You should have received a copy of the GNU General Public License along "
+#~ "with this program.  If not, see <http://www.gnu.org/licenses/>."
+#~ msgstr ""
+#~ "U moet een kopie van de GNU General Public License met dit programma "
+#~ "hebben ontvangen; zo niet, zie <http://www.gnu.org/licenses/>."
+
+#~ msgid "GNOME Five or More"
+#~ msgstr "Gnome Vijf of meer"
+
+#~ msgid "GNOME Games web site"
+#~ msgstr "Gnome games website"
 
 #~ msgid "A flag to enable 3D mode"
 #~ msgstr "Een vlag om 3D-weergave in te schakelen"
@@ -2356,9 +2361,6 @@ msgstr "Gnome games website"
 
 #~ msgid "New game"
 #~ msgstr "Nieuw spel"
-
-#~ msgid "_Undo"
-#~ msgstr "_Ongedaan maken"
 
 #~ msgid "Undo last action"
 #~ msgstr "De laatste actie ongedaan maken"
@@ -4488,9 +4490,6 @@ msgstr "Gnome games website"
 
 #~ msgid "GGZ"
 #~ msgstr "GGZ"
-
-#~ msgid "Quit"
-#~ msgstr "Afsluiten"
 
 #~ msgid "Watch"
 #~ msgstr "Volgen"
@@ -7669,10 +7668,6 @@ msgstr "Gnome games website"
 #~ msgid "This game doesn't support spectators."
 #~ msgstr "Dit spel heeft nog geen hints"
 
-#, fuzzy
-#~ msgid "About"
-#~ msgstr "I_nfo"
-
 # gebiedende wijs hier mooier
 #, fuzzy
 #~ msgid "Message of the Day"
@@ -7862,10 +7857,6 @@ msgstr "Gnome games website"
 #, fuzzy
 #~ msgid "Player Stats"
 #~ msgstr "Namen van de spelers"
-
-#, fuzzy
-#~ msgid "Help"
-#~ msgstr "_Hulp"
 
 #, fuzzy
 #~ msgid "Contents"
@@ -8724,13 +8715,6 @@ msgstr "Gnome games website"
 
 #~ msgid "_About"
 #~ msgstr "I_nfo"
-
-#~ msgid "_Cancel"
-#~ msgstr "_Annuleren"
-
-# leegmaken/wissen
-#~ msgid "_Close"
-#~ msgstr "Sl_uiten"
 
 #~ msgid "_OK"
 #~ msgstr "_OK"
@@ -9778,10 +9762,6 @@ msgstr "Gnome games website"
 #~ "Controleer uw Nibbles-installatie"
 
 #, fuzzy
-#~ msgid "Same GNOME Preferences"
-#~ msgstr "Tali voorkeuren"
-
-#, fuzzy
 #~ msgid "Welcome to Same GNOME!"
 #~ msgstr "Welkom bij Iagno!"
 
@@ -10048,11 +10028,6 @@ msgstr "Gnome games website"
 # ingevuld?/neergezet
 #, fuzzy
 #~ msgid "Are you sure you want to quit Aisleriot?"
-#~ msgstr "Al in gebruik! Waar moet het ingevuld worden?"
-
-# ingevuld?/neergezet
-#, fuzzy
-#~ msgid "Are you sure you want to quit Gataxx?"
 #~ msgstr "Al in gebruik! Waar moet het ingevuld worden?"
 
 #, fuzzy
