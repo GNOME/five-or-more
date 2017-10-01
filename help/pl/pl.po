@@ -1,0 +1,1035 @@
+# Polish translation for five-or-more help.
+# Copyright © 2017 the five-or-more authors.
+# This file is distributed under the same license as the five-or-more package.
+# Piotr Drąg <piotrdrag@gmail.com>, 2017.
+# Aviary.pl <community-poland@mozilla.org>, 2017.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: five-or-more-help\n"
+"POT-Creation-Date: 2017-09-30 15:42+0000\n"
+"PO-Revision-Date: 2017-10-01 03:22+0200\n"
+"Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
+"Language-Team: Polish <community-poland@mozilla.org>\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+
+#. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
+msgctxt "_"
+msgid "translator-credits"
+msgstr ""
+"Piotr Drąg <piotrdrag@gmail.com>, 2017\n"
+"Aviary.pl <community-poland@mozilla.org>, 2017"
+
+#. (itstool) path: credit/name
+#: C/bug-filing.page:10 C/change-board-size.page:14 C/change-theme.page:14
+#: C/develop.page:10 C/documentation.page:8 C/fast-moves.page:14
+#: C/index.page:17 C/scores.page:14 C/shortcuts.page:9 C/strategy.page:9
+#: C/translate.page:10
+msgid "Tiffany Antopolski"
+msgstr "Tiffany Antopolski"
+
+#. (itstool) path: credit/years
+#: C/bug-filing.page:12 C/change-board-size.page:11 C/develop.page:12
+#: C/documentation.page:10 C/fast-moves.page:11 C/play.page:12 C/rules.page:12
+#: C/scores.page:11 C/shortcuts.page:11 C/translate.page:12
+msgid "2011"
+msgstr "2011"
+
+#. (itstool) path: license/p
+#: C/bug-filing.page:15 C/develop.page:15 C/documentation.page:13
+#: C/index.page:21 C/translate.page:19
+msgid "Creative Commons Share Alike 3.0"
+msgstr "Creative Commons Share Alike 3.0"
+
+#. (itstool) path: page/title
+#: C/bug-filing.page:19
+msgid "Report a Problem"
+msgstr "Zgłaszanie problemów"
+
+#. (itstool) path: page/p
+#: C/bug-filing.page:20
+msgid ""
+"<app>Five or More</app> is maintained by a volunteer community. You are "
+"welcome to participate. If you notice a problem you can file a <em>bug "
+"report</em>. To file a bug, go to <link href=\"https://bugzilla.gnome.org/\"/"
+">."
+msgstr ""
+"Gra <app>Kulki</app> jest tworzona przez społeczność ochotników. Zapraszamy "
+"do współpracy. Jeśli wystąpił jakiś błąd, to można go zgłosić na stronie "
+"<link href=\"https://bugzilla.gnome.org/\"/> (w języku angielskim)."
+
+#. (itstool) path: page/p
+#: C/bug-filing.page:23
+msgid ""
+"This is a bug tracking system where users and developers can file details "
+"about bugs, crashes and request enhancements."
+msgstr ""
+"To system śledzenia błędów, w którym użytkownicy i programiści mogą zgłaszać "
+"informacje o błędach, awariach i prośby o ulepszenia."
+
+#. (itstool) path: page/p
+#: C/bug-filing.page:26
+msgid ""
+"To participate you need an account which will give you the ability to gain "
+"access, file bugs, and make comments. Also, you need to register so you can "
+"receive updates by e-mail about the status of your bug. If you don't already "
+"have an account, just click on the <gui>New Account</gui> link to create one."
+msgstr ""
+"Do wzięcia udziału potrzebne jest konto, dające dostęp, możliwość zgłaszania "
+"błędów i pisania komentarzy. Rejestracja umożliwia także otrzymywanie "
+"powiadomień pocztą e-mail o stanie błędu. Jeśli nie masz jeszcze konta, to "
+"kliknij odnośnik <gui>New Account</gui> (Nowe konto)."
+
+#. (itstool) path: page/p
+#: C/bug-filing.page:30
+msgid ""
+"Once you have an account, log in, click on <guiseq><gui>File a Bug</"
+"gui><gui>Applications</gui><gui>five-or-more</gui></guiseq>. Before "
+"reporting a bug, please read the <link href=\"https://bugzilla.gnome.org/"
+"page.cgi?id=bug-writing.html\">bug writing guidelines</link>, and please "
+"<link href=\"https://bugzilla.gnome.org/browse.cgi?product=five-or-more"
+"\">browse</link> for the bug to see if it already exists."
+msgstr ""
+"Po utworzeniu konta zaloguj się i kliknij <guiseq><gui>File a Bug</"
+"gui><gui>Applications</gui><gui>five-or-more</gui></guiseq> "
+"(<guiseq><gui>Zgłoś błąd</gui><gui>Programy</gui><gui>five-or-more</gui></"
+"guiseq>). Przed zgłoszeniem błędu prosimy przeczytać <link href=\"https://"
+"bugzilla.gnome.org/page.cgi?id=bug-writing.html\">wytyczne opisywania "
+"błędów</link> i <link href=\"https://bugzilla.gnome.org/browse.cgi?"
+"product=five-or-more\">poszukać</link>, czy błąd został już zgłoszony."
+
+#. (itstool) path: page/p
+#: C/bug-filing.page:38
+msgid ""
+"If you are requesting a new feature, choose <gui>enhancement</gui> in the "
+"<gui>Severity</gui> menu. Fill in the Summary and Description sections and "
+"click <gui>Submit Bug</gui>."
+msgstr ""
+"W przypadku prośby o nową funkcję wybierz <gui>enhancement</gui> "
+"(ulepszenie) w menu <gui>Severity</gui> (Ciężkość). Wypełnij sekcje "
+"„Summary” (Podsumowanie) i „Description” (Opis) w języku angielskim "
+"i kliknij przycisk <gui>Submit Bug</gui> (Wyślij)."
+
+#. (itstool) path: page/p
+#: C/bug-filing.page:42
+msgid ""
+"Your report will be given an ID number, and its status will be updated as it "
+"is being dealt with."
+msgstr ""
+"Zgłoszenie otrzyma numer identyfikujący, a jego stan będzie zmieniany razem "
+"z postępem jego rozwiązywania."
+
+#. (itstool) path: credit/name
+#: C/change-board-size.page:9 C/change-theme.page:9 C/fast-moves.page:9
+#: C/index.page:13 C/play.page:10 C/scores.page:9
+msgid "Lahiru lanka"
+msgstr "Lahiru Lanka"
+
+#. (itstool) path: credit/name
+#: C/change-board-size.page:18 C/fast-moves.page:18 C/play.page:15
+#: C/translate.page:15
+msgid "Michael Hill"
+msgstr "Michael Hill"
+
+#. (itstool) path: page/title
+#: C/change-board-size.page:23
+msgid "Change board size"
+msgstr "Zmiana rozmiaru planszy"
+
+#. (itstool) path: page/p
+#: C/change-board-size.page:24
+msgid "To change the board size:"
+msgstr "Aby zmienić rozmiar planszy:"
+
+#. (itstool) path: item/p
+#: C/change-board-size.page:26
+msgid "Click <guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq>"
+msgstr "Kliknij <guiseq><gui>Ustawienia</gui><gui>Preferencje</gui></guiseq>."
+
+#. (itstool) path: item/p
+#: C/change-board-size.page:27
+msgid ""
+"Under <gui>Board Size</gui>, select <gui>Small</gui>, <gui>Medium</gui>, or "
+"<gui>Large</gui>."
+msgstr ""
+"W sekcji <gui>Rozmiar planszy</gui> wybierz <gui>Mała</gui>, <gui>Średnia</"
+"gui> lub <gui>Duża</gui>."
+
+#. (itstool) path: note/p
+#: C/change-board-size.page:32
+msgid ""
+"While a larger board gives you more space, there are also more objects in "
+"play for each turn."
+msgstr ""
+"Chociaż większa plansza daje więcej miejsca, to w każdej rundzie jest więcej "
+"kulek w grze."
+
+#. (itstool) path: section/title
+#: C/change-board-size.page:37
+msgid "Board parameters"
+msgstr "Parametry planszy"
+
+#. (itstool) path: section/p
+#: C/change-board-size.page:38
+msgid "The 3 different board sizes have the following parameters:"
+msgstr "Trzy dostępne rozmiary planszy mają następujące parametry:"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:42
+msgid "<em>Size</em>"
+msgstr "<em>Rozmiar</em>"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:43
+msgid "<em>Width</em>"
+msgstr "<em>Szerokość</em>"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:44
+msgid "<em>Height</em>"
+msgstr "<em>Wysokość</em>"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:45
+msgid "<em>Number of types</em>"
+msgstr "<em>Liczba typów</em>"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:46
+msgid "<em>New objects per turn</em>"
+msgstr "<em>Nowe kulki na rundę</em>"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:47
+msgid "<em>Number of cells</em>"
+msgstr "<em>Liczba komórek</em>"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:51
+msgid "Small"
+msgstr "Mała"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:52 C/change-board-size.page:53
+#: C/change-board-size.page:61 C/change-board-size.page:66 C/scores.page:41
+msgid "7"
+msgstr "7"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:54 C/scores.page:33
+msgid "5"
+msgstr "5"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:55 C/change-board-size.page:61
+msgid "3"
+msgstr "3"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:56
+msgid "49"
+msgstr "49"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:60
+msgid "Medium"
+msgstr "Średnia"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:60 C/scores.page:49
+msgid "9"
+msgstr "9"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:61
+msgid "81"
+msgstr "81"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:65
+msgid "Large"
+msgstr "Duża"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:65
+msgid "20"
+msgstr "20"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:65
+msgid "15"
+msgstr "15"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:66
+msgid "300"
+msgstr "300"
+
+#. (itstool) path: section/title
+#: C/change-board-size.page:74
+msgid "The 3 board sizes"
+msgstr "Trzy rozmiary planszy"
+
+#. (itstool) path: media/p
+#: C/change-board-size.page:80
+msgid "<app>Five or More</app> Small board"
+msgstr "Mała plansza <app>Kulek</app>"
+
+#. (itstool) path: media/p
+#: C/change-board-size.page:85
+msgid "<app>Five or More</app> medium size board"
+msgstr "Średnia plansza <app>Kulek</app>"
+
+#. (itstool) path: media/p
+#: C/change-board-size.page:90
+msgid "<app>Five or More</app> large size board"
+msgstr "Duża  plansza <app>Kulek</app>"
+
+#. (itstool) path: credit/years
+#: C/change-theme.page:11 C/strategy.page:11
+msgid "2012"
+msgstr "2012"
+
+#. (itstool) path: page/title
+#: C/change-theme.page:20
+msgid "Change the look and feel"
+msgstr "Zmiana wyglądu"
+
+#. (itstool) path: page/p
+#: C/change-theme.page:21
+msgid "To change the appearance of the pieces and the board:"
+msgstr "Aby zmienić wygląd kulek i planszy:"
+
+#. (itstool) path: item/p
+#: C/change-theme.page:24 C/fast-moves.page:28
+msgid "Click <guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq>."
+msgstr "Kliknij <guiseq><gui>Ustawienia</gui><gui>Preferencje</gui></guiseq>."
+
+#. (itstool) path: item/p
+#: C/change-theme.page:27
+msgid ""
+"Select <gui>balls</gui>, <gui>dots</gui>, <gui>gumball</gui> or <gui>shapes</"
+"gui> from the <gui>Image</gui> drop down menu to change the playing pieces."
+msgstr ""
+"Wybierz <gui>kulki</gui>, <gui>kropki</gui>, <gui>gumy</gui> lub "
+"<gui>kształty</gui> z rozwijanego menu <gui>Obraz</gui>, aby zmienić kulki "
+"do gry."
+
+#. (itstool) path: item/p
+#: C/change-theme.page:29
+msgid ""
+"Click on the colored box next to <gui>Background color</gui> to access the "
+"color palette."
+msgstr ""
+"Kliknij kolorowe pole obok napisu <gui>Kolor tła</gui>, aby włączyć paletę "
+"kolorów."
+
+#. (itstool) path: item/p
+#: C/change-theme.page:33 C/fast-moves.page:30
+msgid "Click <gui>Close</gui>."
+msgstr "Kliknij przycisk <gui>Zamknij</gui>."
+
+#. (itstool) path: section/title
+#: C/change-theme.page:37
+msgid "Images available"
+msgstr "Dostępne obrazy"
+
+#. (itstool) path: media/p
+#: C/change-theme.page:39
+msgid "Five or More with different balls"
+msgstr "Gra Kulki z różnymi kulkami"
+
+#. (itstool) path: media/p
+#: C/change-theme.page:43
+msgid "<app>Five or More</app> with different dots"
+msgstr "Gra <app>Kulki</app> z różnymi kropkami"
+
+#. (itstool) path: media/p
+#: C/change-theme.page:47
+msgid "<app>Five or More</app> with different gumballs"
+msgstr "Gra <app>Kulki</app> z różnymi gumami"
+
+#. (itstool) path: media/p
+#: C/change-theme.page:51
+msgid "<app>Five or More</app> with different shapes"
+msgstr "Gra <app>Kulki</app> z różnymi kształtami"
+
+#. (itstool) path: section/title
+#: C/change-theme.page:56
+msgid "Background colors available"
+msgstr "Dostępne kolory tła"
+
+#. (itstool) path: media/p
+#: C/change-theme.page:58
+msgid "Five or More color palette"
+msgstr "Paleta kolorów gry Kulki"
+
+#. (itstool) path: page/title
+#: C/develop.page:19
+msgid "Help develop"
+msgstr "Pomoc w programowaniu"
+
+#. (itstool) path: page/p
+#: C/develop.page:20
+msgid ""
+"The <app>GNOME Games</app> are developed and maintained by a volunteer "
+"community. You are welcome to participate."
+msgstr ""
+"<app>Gry GNOME</app> są tworzone przez społeczność ochotników. Zapraszamy do "
+"współpracy."
+
+#. (itstool) path: page/p
+#: C/develop.page:23
+msgid ""
+"If you would like to <link href=\"https://wiki.gnome.org/Apps/Games/"
+"Contributing\">help develop <app>GNOME Games</app></link>, you can get in "
+"touch with the developers using <link href=\"https://cbe005.chat.mibbit.com/?"
+"url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, or via our <link "
+"href=\"http://mail.gnome.org/mailman/listinfo/games-list\">mailing list</"
+"link>."
+msgstr ""
+"Jeśli chcesz <link href=\"https://wiki.gnome.org/Apps/Games/Contributing"
+"\">pomóc rozwijać <app>Gry GNOME</app></link>, to możesz skontaktować się "
+"z programistami za pomocą sieci <link href=\"https://cbe005.chat.mibbit.com/?"
+"url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">IRC</link> lub przez <link "
+"href=\"http://mail.gnome.org/mailman/listinfo/games-list\">listę pocztową</"
+"link> (w języku angielskim)."
+
+#. (itstool) path: page/title
+#: C/documentation.page:17
+msgid "Help write documentation"
+msgstr "Pomoc w pisaniu dokumentacji"
+
+#. (itstool) path: page/p
+#: C/documentation.page:19
+msgid ""
+"The <app>GNOME Games</app> documentation is maintained by a volunteer "
+"community. You are welcome to participate."
+msgstr ""
+"Dokumentacja <app>Gier GNOME</app> jest tworzona przez społeczność "
+"ochotników. Zapraszamy do współpracy."
+
+#. (itstool) path: page/p
+#: C/documentation.page:22
+msgid ""
+"To contribute to the Documentation Project, feel free to get in touch with "
+"us using <link href=\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc."
+"gnome.org%2Fdocs\">irc</link>, or via our <link href=\"http://mail.gnome.org/"
+"mailman/listinfo/gnome-doc-list\">mailing list</link>."
+msgstr ""
+"Jeśli chcesz wziąć udział w projekcie dokumentacji, to skontaktuj się z nami "
+"za pomocą sieci <link href=\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F"
+"%2Firc.gnome.org%2Fdocs\">IRC</link> lub przez <link href=\"http://mail."
+"gnome.org/mailman/listinfo/gnome-doc-list\">listę pocztową</link> (w języku "
+"angielskim)."
+
+#. (itstool) path: page/p
+#: C/documentation.page:26
+msgid ""
+"Our <link href=\"https://wiki.gnome.org/DocumentationProject/Contributing"
+"\">wiki</link> page contains useful information."
+msgstr ""
+"Nasza <link href=\"https://wiki.gnome.org/DocumentationProject/Contributing"
+"\">wiki</link> zawiera przydatne informacje (w języku angielskim)."
+
+#. (itstool) path: page/title
+#: C/fast-moves.page:25
+msgid "Change speed"
+msgstr "Zmiana prędkości"
+
+#. (itstool) path: page/p
+#: C/fast-moves.page:26
+msgid "To speed up object movements:"
+msgstr "Aby przyspieszyć ruch kulek:"
+
+#. (itstool) path: item/p
+#: C/fast-moves.page:29
+msgid "Under <gui>General</gui>, select <gui>Use fast moves</gui>."
+msgstr "W sekcji <gui>Ogólne</gui> zaznacz opcję <gui>Szybkie ruchy</gui>."
+
+#. (itstool) path: note/p
+#: C/fast-moves.page:33
+msgid ""
+"Any changes you make are instantly applied and remembered for the next time "
+"you run <app>Five or More</app>."
+msgstr ""
+"Wprowadzone zmiany zostaną zastosowane od razu i zapamiętane dla następnego "
+"uruchomienia gry <app>Kulki</app>."
+
+#. (itstool) path: info/title
+#: C/index.page:8
+msgctxt "link"
+msgid "Five or More"
+msgstr "Kulki"
+
+#. (itstool) path: info/title
+#: C/index.page:9
+msgctxt "text"
+msgid "Five or More"
+msgstr "Kulki"
+
+#. (itstool) path: media/span
+#: C/index.page:27
+msgid "Five or More logo"
+msgstr "Logo gry Kulki"
+
+#. (itstool) path: page/title
+#: C/index.page:26
+msgid "<_:media-1/> Five or More"
+msgstr "<_:media-1/> Kulki"
+
+#. (itstool) path: page/p
+#: C/index.page:29
+msgid ""
+"<app>Five or More</app> is a deceptively simple brain workout. The goal is "
+"to place at least five objects of the same <link xref=\"change-theme#images"
+"\">color or shape</link> into a straight line. The line can be horizontal, "
+"vertical or diagonal. Once five or more objects are grouped into a line, "
+"they disappear. The goal is to vanish as many objects as possible. The game "
+"is over when the entire board is full."
+msgstr ""
+"<app>Kulki</app> to zwodniczo prosta łamigłówka. Celem jest umieszczenie co "
+"najmniej pięciu kulek o tym samym <link xref=\"change-theme#images\">kolorze "
+"lub kształcie</link> w prostej linii. Linia może być pozioma, pionowa lub "
+"ukośna. Po połączeniu pięciu lub więcej kulek w linię znikają one z planszy. "
+"Celem jest usunięcie jak największej liczby kulek. Gra kończy się, kiedy "
+"cała plansza jest zapełniona."
+
+#. (itstool) path: section/title
+#: C/index.page:34
+msgid "Game Play"
+msgstr "Rozgrywka"
+
+#. (itstool) path: section/title
+#: C/index.page:38
+msgid "Useful Tips"
+msgstr "Wskazówki"
+
+#. (itstool) path: section/title
+#: C/index.page:42
+msgid "Advanced"
+msgstr "Zaawansowane"
+
+#. (itstool) path: section/title
+#: C/index.page:46
+msgid "Get Involved"
+msgstr "Dołącz do nas"
+
+#. (itstool) path: p/link
+#: C/legal.xml:3
+msgid "Creative Commons Attribution-ShareAlike 3.0 Unported License"
+msgstr "Creative Commons Attribution-ShareAlike 3.0 Unported"
+
+#. (itstool) path: license/p
+#: C/legal.xml:3
+msgid "This work is licensed under a <_:link-1/>."
+msgstr "Na warunkach licencji <_:link-1/>."
+
+#. (itstool) path: info/desc
+#: C/license.page:9
+msgid "Legal information."
+msgstr "Informacje prawne."
+
+#. (itstool) path: page/title
+#: C/license.page:12
+msgid "License"
+msgstr "Licencja"
+
+#. (itstool) path: page/p
+#: C/license.page:13
+msgid ""
+"This work is distributed under a CreativeCommons Attribution-Share Alike 3.0 "
+"Unported license."
+msgstr ""
+"Na warunkach licencji Creative Commons Attribution-Share Alike 3.0 Unported."
+
+#. (itstool) path: page/p
+#: C/license.page:21
+msgid "You are free:"
+msgstr "Można:"
+
+#. (itstool) path: item/title
+#: C/license.page:26
+msgid "<em>To share</em>"
+msgstr "<em>dzielić się</em>"
+
+#. (itstool) path: item/p
+#: C/license.page:27
+msgid "To copy, distribute and transmit the work."
+msgstr ", czyli kopiować, rozpowszechniać, odtwarzać i wykonywać utwór."
+
+#. (itstool) path: item/title
+#: C/license.page:30
+msgid "<em>To remix</em>"
+msgstr "<em>remiksować</em>"
+
+#. (itstool) path: item/p
+#: C/license.page:31
+msgid "To adapt the work."
+msgstr ", czyli tworzyć utwory zależne."
+
+#. (itstool) path: page/p
+#: C/license.page:34
+msgid "Under the following conditions:"
+msgstr "Na następujących warunkach:"
+
+#. (itstool) path: item/title
+#: C/license.page:39
+msgid "<em>Attribution</em>"
+msgstr "<em>Uznanie autorstwa</em>"
+
+#. (itstool) path: item/p
+#: C/license.page:40
+msgid ""
+"You must attribute the work in the manner specified by the author or "
+"licensor (but not in any way that suggests that they endorse you or your use "
+"of the work)."
+msgstr ""
+"Utwór należy oznaczyć w sposób określony przez Twórcę lub Licencjodawcę."
+
+#. (itstool) path: item/title
+#: C/license.page:47
+msgid "<em>Share Alike</em>"
+msgstr "<em>Na tych samych warunkach</em>"
+
+#. (itstool) path: item/p
+#: C/license.page:48
+msgid ""
+"If you alter, transform, or build upon this work, you may distribute the "
+"resulting work only under the same, similar or a compatible license."
+msgstr ""
+"Zmieniając utwór, przekształcając go lub tworząc na jego podstawie, wolno "
+"rozpowszechniać powstały utwór zależny jedynie na tej samej, podobnej lub "
+"zgodnej licencji."
+
+#. (itstool) path: page/p
+#: C/license.page:54
+msgid ""
+"For the full text of the license, see the <link href=\"http://"
+"creativecommons.org/licenses/by-sa/3.0/legalcode\">CreativeCommons website</"
+"link>, or read the full <link href=\"http://creativecommons.org/licenses/by-"
+"sa/3.0/\">Commons Deed</link>."
+msgstr ""
+"Pełny tekst licencji dostępny jest na stronie <link href=\"http://"
+"creativecommons.org/licenses/by-sa/3.0/legalcode\">Creative Commons</link>; "
+"można również przeczytać <link href=\"http://creativecommons.org/licenses/by-"
+"sa/3.0/\">podsumowanie</link>."
+
+#. (itstool) path: page/title
+#: C/play.page:22
+msgid "How to Play"
+msgstr "Jak grać"
+
+#. (itstool) path: page/p
+#: C/play.page:24
+msgid ""
+"To start a new game click <guiseq><gui>Game</gui><gui>New</gui></guiseq>."
+msgstr ""
+"Aby rozpocząć nową grę, kliknij <guiseq><gui>Gra</gui><gui>Nowa</gui></"
+"guiseq>."
+
+#. (itstool) path: section/title
+#: C/play.page:28
+msgid "Using the mouse"
+msgstr "Używanie myszy"
+
+#. (itstool) path: item/p
+#: C/play.page:32
+msgid ""
+"Click on the object you want to move. The selected object will begin "
+"spinning."
+msgstr "Kliknij kulkę do przeniesienia. Wybrana kulka zacznie się obracać."
+
+#. (itstool) path: item/p
+#: C/play.page:36
+msgid "Click on the destination cell."
+msgstr "Kliknij komórkę docelową."
+
+#. (itstool) path: section/title
+#: C/play.page:44
+msgid "Using the keyboard"
+msgstr "Używanie klawiatury"
+
+#. (itstool) path: item/p
+#: C/play.page:47
+msgid ""
+"Press any of the arrow keys. An outline around a cell will appear on the "
+"board."
+msgstr ""
+"Naciśnij jeden z klawiszy strzałek. Wokół komórki na planszy pojawi się "
+"obwódka."
+
+#. (itstool) path: item/p
+#: C/play.page:49
+msgid "Using the arrow keys, navigate to the object you want to move."
+msgstr "Za pomocą klawiszy strzałek przejdź do kulki do przeniesienia."
+
+#. (itstool) path: item/p
+#: C/play.page:51
+msgid ""
+"To select the object, press the <key>Enter</key> or <key>Spacebar</key>. The "
+"selected object will begin spinning."
+msgstr ""
+"Aby wybrać kulkę, naciśnij klawisz <key>Enter</key> lub <key>Spację</key>. "
+"Wybrana kulka zacznie się obracać."
+
+#. (itstool) path: item/p
+#: C/play.page:53
+msgid ""
+"Move to the destination cell, and again press the <key>Enter</key> or "
+"<key>Spacebar</key>. The chosen object will move to the destination cell."
+msgstr ""
+"Przejdź do komórki docelowej i ponownie naciśnij klawisz <key>Enter</key> "
+"lub <key>Spację</key>. Wybrany obiekt zostanie przeniesiony do komórki "
+"docelowej."
+
+#. (itstool) path: section/title
+#: C/play.page:62
+msgid "Video demonstration"
+msgstr "Demonstracja wideo"
+
+#. (itstool) path: page/title
+#: C/rules.page:18
+msgid "Rules"
+msgstr "Zasady"
+
+#. (itstool) path: item/p
+#: C/rules.page:20
+msgid ""
+"At the start of the game there are either 3 or 7 objects placed on your "
+"board, depending on the <link xref=\"change-board-size\">board size</link>."
+msgstr ""
+"Na początku gry na planszy są 3 lub 7 kulek, w zależności od <link xref="
+"\"change-board-size\">rozmiaru planszy</link>."
+
+#. (itstool) path: item/p
+#: C/rules.page:23
+msgid ""
+"Each time you <link xref=\"play\">move an object</link>, additional objects "
+"are placed randomly on the board. The number of new objects placed each turn "
+"also depends on the board. A preview of the objects to be placed on the "
+"board appears in the upper left corner of the game window."
+msgstr ""
+"Po każdym <link xref=\"play\">przeniesieniu kulki</link> na planszy "
+"pojawiają się nowe, wybrane losowo. Ich liczba także zależy od planszy. "
+"W górnym lewym rogu okna gry widoczne są kulki, które zostaną umieszczone na "
+"planszy w następnej rundzie."
+
+#. (itstool) path: item/p
+#: C/rules.page:28
+msgid ""
+"There must be a clear path from the original position of the object to the "
+"destination cell (i.e you can not jump over objects)."
+msgstr ""
+"Między obecnym położeniem kulki a komórką docelową musi być wolne przejście "
+"(tzn. nie można przechodzić nad innymi kulkami)."
+
+#. (itstool) path: item/p
+#: C/rules.page:31
+msgid ""
+"A straight horizontal, vertical or diagonal line of five or more similar "
+"objects will disappear from the game board. When this happens you will have "
+"an extra move without additional objects being added to the board."
+msgstr ""
+"Prosta pozioma, pionowa lub ukośna linia pięciu lub więcej podobnych kulek "
+"zniknie z planszy. Gracz dostaje dodatkowy ruch bez dodawania nowych kulek "
+"do planszy."
+
+#. (itstool) path: item/p
+#: C/rules.page:35
+msgid ""
+"The more objects you clear, the longer the game will go on. The longer you "
+"play, the higher your <link xref=\"scores\">score</link>."
+msgstr ""
+"Im więcej kulek zostaje usuniętych, tym gra trwa dłużej. Im dłużej gra trwa, "
+"tym wyższy <link xref=\"scores\">wynik</link>."
+
+#. (itstool) path: item/p
+#: C/rules.page:38
+msgid ""
+"The game is over when the board is full, since no object can be moved at "
+"that point."
+msgstr ""
+"Gra kończy się, kiedy plansza jest pełna, jako że nie można już przenieść "
+"żadnej kulki."
+
+#. (itstool) path: media/p
+#: C/rules.page:46
+msgid "Example horizontal alignment"
+msgstr "Przykład ułożenia w poziomie"
+
+#. (itstool) path: media/p
+#: C/rules.page:51
+msgid "Example vertical alignment"
+msgstr "Przykład ułożenia w pionie"
+
+#. (itstool) path: media/p
+#: C/rules.page:56
+msgid "Example diagonal alignment"
+msgstr "Przykład ułożenia ukośnego"
+
+#. (itstool) path: media/p
+#: C/rules.page:61
+msgid "<app>Five or More</app> game over position."
+msgstr "Koniec gry <app>Kulki</app>."
+
+#. (itstool) path: page/title
+#: C/scores.page:20
+msgid "Scoring"
+msgstr "Wyniki"
+
+#. (itstool) path: page/p
+#: C/scores.page:21
+msgid ""
+"You score points by creating lines of 5 or more objects. The number of "
+"points depends on the number of objects that disappear."
+msgstr ""
+"Tworzenie linii z 5 lub więcej kulek daje punkty. Liczba punktów zależy od "
+"liczby usuniętych kulek."
+
+#. (itstool) path: td/p
+#: C/scores.page:27
+msgid "<em>Number of objects</em>"
+msgstr "<em>Liczba kulek</em>"
+
+#. (itstool) path: td/p
+#: C/scores.page:28
+msgid "<em>Number of points</em>"
+msgstr "<em>Liczba punktów</em>"
+
+#. (itstool) path: td/p
+#: C/scores.page:34 C/scores.page:53
+msgid "10"
+msgstr "10"
+
+#. (itstool) path: td/p
+#: C/scores.page:37
+msgid "6"
+msgstr "6"
+
+#. (itstool) path: td/p
+#: C/scores.page:38 C/scores.page:61
+msgid "12"
+msgstr "12"
+
+#. (itstool) path: td/p
+#: C/scores.page:42
+msgid "18"
+msgstr "18"
+
+#. (itstool) path: td/p
+#: C/scores.page:45
+msgid "8"
+msgstr "8"
+
+#. (itstool) path: td/p
+#: C/scores.page:46
+msgid "28"
+msgstr "28"
+
+#. (itstool) path: td/p
+#: C/scores.page:50
+msgid "42"
+msgstr "42"
+
+#. (itstool) path: td/p
+#: C/scores.page:54
+msgid "82"
+msgstr "82"
+
+#. (itstool) path: td/p
+#: C/scores.page:57
+msgid "11"
+msgstr "11"
+
+#. (itstool) path: td/p
+#: C/scores.page:58
+msgid "108"
+msgstr "108"
+
+#. (itstool) path: td/p
+#: C/scores.page:62
+msgid "138"
+msgstr "138"
+
+#. (itstool) path: td/p
+#: C/scores.page:65
+msgid "13"
+msgstr "13"
+
+#. (itstool) path: td/p
+#: C/scores.page:66
+msgid "172"
+msgstr "172"
+
+#. (itstool) path: td/p
+#: C/scores.page:69
+msgid "14"
+msgstr "14"
+
+#. (itstool) path: td/p
+#: C/scores.page:70
+msgid "210"
+msgstr "210"
+
+#. (itstool) path: note/p
+#: C/scores.page:76
+msgid ""
+"You can view the high scores by clicking <guiseq><gui>Game</gui><gui>Scores</"
+"gui></guiseq>."
+msgstr ""
+"Można wyświetlić najlepsze wyniki klikając <guiseq><gui>Gra</"
+"gui><gui>Wyniki</gui></guiseq>."
+
+#. (itstool) path: note/p
+#: C/scores.page:78
+msgid ""
+"The <app>Five or More</app> scores are recorded according to the board size. "
+"You can select the <gui>Board Size</gui> of interest using the drop down "
+"menu."
+msgstr ""
+"Wyniki gry <app>Kulki</app> są nagrywane zgodnie z rozmiarem planszy. Można "
+"wybrać <gui>Rozmiar planszy</gui> z rozwijanego menu."
+
+#. (itstool) path: page/title
+#: C/shortcuts.page:17
+msgid "Keyboard shortcuts"
+msgstr "Skróty klawiszowe"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:20
+msgid "New game"
+msgstr "Nowa gra"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:21
+msgid "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
+msgstr "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:24
+msgid "Help"
+msgstr "Pomoc"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:25
+msgid "<key>F1</key>"
+msgstr "<key>F1</key>"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:28
+msgid "Quit"
+msgstr "Zakończenie gry"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:29
+msgid "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
+msgstr "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
+
+#. (itstool) path: page/title
+#: C/strategy.page:17
+msgid "Strategy"
+msgstr "Strategia"
+
+#. (itstool) path: page/p
+#: C/strategy.page:19
+msgid ""
+"There is no universal strategy for <app>Five or More</app>, but some "
+"strategic elements do exist. Here are some things to try and keep in mind as "
+"you play:"
+msgstr ""
+"Dla gry <app>Kulki</app> nie ma uniwersalnej strategii, ale warto pamiętać "
+"kilka rzeczy:"
+
+#. (itstool) path: item/p
+#: C/strategy.page:22
+msgid "Try to set at least three same objects with your every move."
+msgstr "Staraj się, aby każdy ruch ustawiał co najmniej trzy takie same kulki."
+
+#. (itstool) path: item/p
+#: C/strategy.page:23
+msgid ""
+"The board can quickly become very crowded with objects, so it is best to "
+"think ahead. Pay attention to the collection of <gui>Next</gui> objects, "
+"because knowing these will influence your moves."
+msgstr ""
+"Plansza może szybko zapełnić się kulkami, więc dobrze jest myśleć "
+"z wyprzedzeniem. Zwracaj uwagę na <gui>Następne</gui> kulki, ponieważ "
+"wpływają one na decyzje podczas gry."
+
+#. (itstool) path: item/p
+#: C/strategy.page:24
+msgid ""
+"Try to line up more than 5 objects. For example, if you have 6 objects, you "
+"can line up 2 and 3 with a space in between, and then connect them by "
+"placing the sixth object between them."
+msgstr ""
+"Staraj się łączyć więcej niż 5 kulek. Na przykład, jeśli masz 6 kulek, to "
+"możesz połączyć 2 i 3 z przerwą między nimi, a następnie połączyć je szóstą "
+"kulką."
+
+#. (itstool) path: page/title
+#: C/translate.page:23
+msgid "Help translate"
+msgstr "Pomoc w tłumaczeniu"
+
+#. (itstool) path: page/p
+#: C/translate.page:25
+msgid ""
+"The <app>GNOME Games</app> user interface and documentation is being "
+"translated by a world-wide volunteer community. You are welcome to "
+"participate."
+msgstr ""
+"Interfejs i dokumentacja <app>Gier GNOME</app> jest tłumaczona przez "
+"ogólnoświatową społeczność ochotników. Zapraszamy do współpracy."
+
+#. (itstool) path: page/p
+#: C/translate.page:28
+msgid ""
+"There are <link href=\"http://l10n.gnome.org/module/five-or-more/\">many "
+"languages</link> for which translations are still needed."
+msgstr ""
+"<link href=\"http://l10n.gnome.org/module/five-or-more/\">Wiele języków</"
+"link> nadal potrzebuje tłumaczeń."
+
+#. (itstool) path: page/p
+#: C/translate.page:30
+msgid ""
+"To start translating you will need to <link href=\"http://l10n.gnome.org"
+"\">create an account</link> and join the <link href=\"http://l10n.gnome.org/"
+"teams/\">translation team</link> for your language. This will give you the "
+"ability to upload new translations."
+msgstr ""
+"Do rozpoczęcia tłumaczenia potrzebne jest <link href=\"http://l10n.gnome.org"
+"\">utworzenie konta</link> i dołączenie do <link href=\"http://l10n.gnome."
+"org/teams/\">zespołu tłumaczy</link> dla danego języka. Umożliwi to "
+"wysyłanie nowych tłumaczeń."
+
+#. (itstool) path: page/p
+#: C/translate.page:34
+msgid ""
+"You can chat with GNOME translators using <link href=\"https://cbe003.chat."
+"mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fi18n\">irc</link>. People on the "
+"channel are located worldwide, so you may not get an immediate response as a "
+"result of timezone differences."
+msgstr ""
+"Można skontaktować się z tłumaczami GNOME za pomocą sieci <link href="
+"\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fi18n"
+"\">IRC</link> (w języku angielskim). Z powodu różnic stref czasowych "
+"odpowiedź może nie przyjść od razu."
+
+#. (itstool) path: page/p
+#: C/translate.page:38
+msgid ""
+"Alternatively, you can contact the Internationalization Team using their "
+"<link href=\"http://mail.gnome.org/mailman/listinfo/gnome-i18n\">mailing "
+"list</link>."
+msgstr ""
+"Można także skontaktować się z zespołem tłumaczeń za pomocą <link href="
+"\"http://mail.gnome.org/mailman/listinfo/gnome-i18n\">listy pocztowej</link> "
+"(w języku angielskim)."

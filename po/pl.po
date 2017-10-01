@@ -1,5 +1,5 @@
 # Polish translation for five-or-more.
-# Copyright © 1998-2016 the five-or-more authors.
+# Copyright © 1998-2017 the five-or-more authors.
 # This file is distributed under the same license as the five-or-more package.
 # Zbigniew Chyla <chyla@alice.ci.pwr.wroc.pl>, 1998-2002.
 # Marcin Gorycki <mgo@olicom.dk>, 1999.
@@ -12,15 +12,15 @@
 # Tomasz Dominikowski <dominikowski@gmail.com>, 2008.
 # Joanna Mazgaj <jmazgaj@aviary.pl>, 2009-2010.
 # Wojciech Kapusta <wkapusta@aviary.pl>, 2009.
-# Piotr Drąg <piotrdrag@gmail.com>, 2010-2016.
-# Aviary.pl <community-poland@mozilla.org>, 2007-2016.
+# Piotr Drąg <piotrdrag@gmail.com>, 2010-2017.
+# Aviary.pl <community-poland@mozilla.org>, 2007-2017.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: five-or-more\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-16 09:47+0200\n"
-"PO-Revision-Date: 2016-08-16 09:48+0200\n"
+"POT-Creation-Date: 2017-10-01 03:18+0200\n"
+"PO-Revision-Date: 2017-10-01 03:19+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <community-poland@mozilla.org>\n"
 "Language: pl\n"
@@ -31,8 +31,8 @@ msgstr ""
 "|| n%100>=20) ? 1 : 2);\n"
 
 #: ../data/five-or-more.appdata.xml.in.h:1 ../data/five-or-more.desktop.in.h:1
-#: ../data/five-or-more.ui.h:1 ../src/five-or-more.c:1172
-#: ../src/five-or-more.c:1723
+#: ../data/five-or-more.ui.h:1 ../src/five-or-more.c:1175
+#: ../src/five-or-more.c:1726
 msgid "Five or More"
 msgstr "Kulki"
 
@@ -48,17 +48,17 @@ msgid ""
 "before clearing them."
 msgstr ""
 "Gra w kulki jest portem niegdyś popularnej gry w kolorowe linie dla "
-"środowiska GNOME. Dopasowanie pięciu lub więcej obiektów tego samego koloru "
-"w jednej linii powoduje ich zniknięcie i zaliczenie punktów. Im więcej "
-"obiektów w linii, tym więcej punktów."
+"środowiska GNOME. Dopasowanie pięciu lub więcej kulek tego samego koloru "
+"w jednej linii powoduje ich zniknięcie i zaliczenie punktów. Im więcej kulek "
+"w linii, tym więcej punktów."
 
 #: ../data/five-or-more.appdata.xml.in.h:4
 msgid ""
 "More objects appear after every turn. Play for as long as possible, until "
 "the board is completely full!"
 msgstr ""
-"Po każdej rundzie pojawia się więcej obiektów. Można grać, dopóki cała "
-"plansza się nie zapełni!"
+"Po każdej rundzie pojawia się więcej kulek. Można grać, dopóki cała plansza "
+"się nie zapełni!"
 
 #: ../data/five-or-more.appdata.xml.in.h:5
 msgid "The GNOME Project"
@@ -131,7 +131,7 @@ msgstr "Rozpoczyna nową grę"
 
 #: ../data/menu.ui.h:1
 msgid "Scores"
-msgstr "Punkty"
+msgstr "Wyniki"
 
 #: ../data/menu.ui.h:3
 msgid "Help"
@@ -260,33 +260,33 @@ msgstr ""
 "\n"
 "Proszę się upewnić, że gra „Kulki” została prawidłowo zainstalowana."
 
-#: ../src/five-or-more.c:407
+#: ../src/five-or-more.c:410
 msgid "Match five objects of the same type in a row to score!"
 msgstr ""
 "Należy ustawić w linii pięć kulek tego samego koloru, aby zdobyć punkty."
 
-#: ../src/five-or-more.c:468
+#: ../src/five-or-more.c:471
 msgid "Five or More Scores"
 msgstr "Wyniki gry Kulki"
 
-#: ../src/five-or-more.c:470
+#: ../src/five-or-more.c:473
 msgid "_Board size:"
 msgstr "_Rozmiar planszy:"
 
-#: ../src/five-or-more.c:487
+#: ../src/five-or-more.c:490
 msgid "Game Over!"
 msgstr "Koniec gry!"
 
 #. Can't move there!
-#: ../src/five-or-more.c:644
+#: ../src/five-or-more.c:647
 msgid "You can’t move there!"
 msgstr "Nie można tam przenieść."
 
-#: ../src/five-or-more.c:1174
+#: ../src/five-or-more.c:1177
 msgid "GNOME port of the once-popular Color Lines game"
 msgstr "Port niegdyś popularnej gry w kolorowe linie dla środowiska GNOME"
 
-#: ../src/five-or-more.c:1180
+#: ../src/five-or-more.c:1183
 msgid "translator-credits"
 msgstr ""
 "Zbigniew Chyla <chyla@alice.ci.pwr.wroc.pl>, 1998-2002\n"
@@ -300,18 +300,18 @@ msgstr ""
 "Tomasz Dominikowski <dominikowski@gmail.com>, 2008\n"
 "Joanna Mazgaj <jmazgaj@aviary.pl>, 2009-2010\n"
 "Wojciech Kapusta <wkapusta@aviary.pl>, 2009\n"
-"Piotr Drąg <piotrdrag@gmail.com>, 2010-2016\n"
-"Aviary.pl <community-poland@mozilla.org>, 2007-2016"
+"Piotr Drąg <piotrdrag@gmail.com>, 2010-2017\n"
+"Aviary.pl <community-poland@mozilla.org>, 2007-2017"
 
-#: ../src/five-or-more.c:1304
+#: ../src/five-or-more.c:1307
 msgid "Are you sure you want to restart the game?"
 msgstr "Na pewno zacząć grę od początku?"
 
-#: ../src/five-or-more.c:1307
+#: ../src/five-or-more.c:1310
 msgid "_Cancel"
 msgstr "_Anuluj"
 
-#: ../src/five-or-more.c:1308
+#: ../src/five-or-more.c:1311
 msgid "_Restart"
 msgstr "_Zacznij od początku"
 
@@ -332,7 +332,7 @@ msgstr "Wynik"
 #, c-format
 msgctxt "score-dialog"
 msgid "%1$dm %2$ds"
-msgstr "%1$d m %2$d s"
+msgstr "%1$d min %2$d s"
 
 #: ../src/games-scores-dialog.c:371
 msgid "_Quit"
