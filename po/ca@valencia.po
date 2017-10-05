@@ -13,18 +13,30 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-09-05 00:03+0200\n"
-"PO-Revision-Date: 2014-09-05 00:02+0200\n"
-"Last-Translator: Gil Forcada <gilforcada@guifi.net>\n"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=five-"
+"or-more&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2017-02-28 06:48+0000\n"
+"PO-Revision-Date: 2017-01-25 12:45+0100\n"
+"Last-Translator: Xavi Ivars <xavi.ivars@gmail.com>\n"
 "Language-Team: Catalan <tradgnome@softcatala.org>\n"
-"Language: ca@valencia\n"
+"Language: ca-valencia\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bits\n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 1.8.7.1\n"
 
-#: ../data/five-or-more.appdata.xml.in.h:1
+#: ../data/five-or-more.appdata.xml.in.h:1 ../data/five-or-more.desktop.in.h:1
+#: ../data/five-or-more.ui.h:1 ../src/five-or-more.c:1175
+#: ../src/five-or-more.c:1726
+msgid "Five or More"
+msgstr "Cinc o més"
+
+#: ../data/five-or-more.appdata.xml.in.h:2 ../data/five-or-more.desktop.in.h:2
+msgid "Remove colored balls from the board by forming lines"
+msgstr "Suprimiu les boles de colors del tauler formant línies"
+
+#: ../data/five-or-more.appdata.xml.in.h:3
 msgid ""
 "Five or More is the GNOME port of a once-popular computer game. Align five "
 "or more objects of the same color into a line to cause them to disappear and "
@@ -36,29 +48,24 @@ msgstr ""
 "desapareguin i aconseguir punts. Alineeu com més objectes millor per "
 "aconseguir encara més punts abans de netejar-los."
 
-#: ../data/five-or-more.appdata.xml.in.h:2
+#: ../data/five-or-more.appdata.xml.in.h:4
 msgid ""
 "More objects appear after every turn. Play for as long as possible, until "
 "the board is completely full!"
 msgstr ""
 "A cada ronda apareixen més objectes. Jugueu tan com pugueu fins que "
-"s'empleni el tauler!"
+"s'ompla el tauler!"
 
-#: ../data/five-or-more.desktop.in.h:1 ../data/five-or-more.ui.h:1
-#: ../src/five-or-more.c:1174 ../src/five-or-more.c:1674
-msgid "Five or More"
-msgstr "Cinc o més"
-
-#: ../data/five-or-more.desktop.in.h:2
-msgid "Remove colored balls from the board by forming lines"
-msgstr "Suprimiu les boles de colors del tauler formant línies"
+#: ../data/five-or-more.appdata.xml.in.h:5
+msgid "The GNOME Project"
+msgstr "El projecte GNOME"
 
 #: ../data/five-or-more.desktop.in.h:3
 msgid "game;strategy;logic;"
 msgstr "joc;estratègia;lògica;"
 
-#: ../data/five-or-more-preferences.ui.h:1 ../data/menu.ui.h:3
-#: ../src/five-or-more.c:173
+#: ../data/five-or-more-preferences.ui.h:1 ../data/menu.ui.h:2
+#: ../src/five-or-more.c:171
 msgid "Preferences"
 msgstr "Preferències"
 
@@ -111,7 +118,7 @@ msgstr "0"
 msgid "Score:"
 msgstr "Marcador:"
 
-#: ../data/five-or-more.ui.h:5
+#: ../data/five-or-more.ui.h:5 ../src/games-scores-dialog.c:385
 msgid "_New Game"
 msgstr "Partida _nova"
 
@@ -119,23 +126,19 @@ msgstr "Partida _nova"
 msgid "Start a new puzzle"
 msgstr "Comença un trencaclosques nou"
 
-#: ../data/menu.ui.h:1 ../src/games-scores-dialog.c:385
-msgid "New Game"
-msgstr "Partida nova"
-
-#: ../data/menu.ui.h:2
+#: ../data/menu.ui.h:1
 msgid "Scores"
 msgstr "Puntuacions"
 
-#: ../data/menu.ui.h:4
+#: ../data/menu.ui.h:3
 msgid "Help"
 msgstr "Ajuda"
 
-#: ../data/menu.ui.h:5
+#: ../data/menu.ui.h:4
 msgid "About"
 msgstr "Quant a"
 
-#: ../data/menu.ui.h:6
+#: ../data/menu.ui.h:5
 msgid "Quit"
 msgstr "Ix"
 
@@ -202,11 +205,11 @@ msgstr "Previsualització del joc de la darrera sessió guardada."
 
 #: ../data/org.gnome.five-or-more.gschema.xml.h:15
 msgid "Width of the window in pixels"
-msgstr "L'amplada, en píxels, de la finestra"
+msgstr "L'amplària, en píxels, de la finestra"
 
 #: ../data/org.gnome.five-or-more.gschema.xml.h:16
 msgid "Height of the window in pixels"
-msgstr "L'alçada, en píxels, de la finestra"
+msgstr "L'alçària, en píxels, de la finestra"
 
 #: ../data/org.gnome.five-or-more.gschema.xml.h:17
 msgid "true if the window is maximized"
@@ -227,11 +230,11 @@ msgctxt "board size"
 msgid "Large"
 msgstr "Gran"
 
-#: ../src/five-or-more.c:167
+#: ../src/five-or-more.c:165
 msgid "Could not load theme"
 msgstr "No s'ha pogut carregar el tema"
 
-#: ../src/five-or-more.c:193
+#: ../src/five-or-more.c:191
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -244,7 +247,7 @@ msgstr ""
 "\n"
 "Es carregarà el tema per defecte en el seu lloc."
 
-#: ../src/five-or-more.c:200
+#: ../src/five-or-more.c:198
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -275,22 +278,15 @@ msgid "Game Over!"
 msgstr "Fi del joc"
 
 #. Can't move there!
-#: ../src/five-or-more.c:646
+#: ../src/five-or-more.c:647
 msgid "You can’t move there!"
 msgstr "Ací no s'hi pot anar!"
 
-#
-#: ../src/five-or-more.c:1176
-msgid ""
-"GNOME port of the once-popular Color Lines game\n"
-"\n"
-"Five or More is a part of GNOME Games."
-msgstr ""
-"Adaptació per al GNOME de l'antic i popular joc Línies de color\n"
-"\n"
-"El Cinc o més forma part dels jocs del GNOME."
+#: ../src/five-or-more.c:1177
+msgid "GNOME port of the once-popular Color Lines game"
+msgstr "Adaptació per al GNOME de l'antic i popular joc Línies de color"
 
-#: ../src/five-or-more.c:1182
+#: ../src/five-or-more.c:1183
 msgid "translator-credits"
 msgstr ""
 "Jordi Vila <gnome@softcatala.net>\n"
@@ -298,7 +294,20 @@ msgstr ""
 "Xavier Conde <xaviconde@eresmas.com>\n"
 "Jesús Corrius <jesus@softcatala.org>\n"
 "Josep Puigdemont <josep.puigdemont@gmail.com>\n"
-"David Planella <david.planella@gmail.com>"
+"David Planella <david.planella@gmail.com>\n"
+"Jordi Mas <jmas@softcatala.org>"
+
+#: ../src/five-or-more.c:1307
+msgid "Are you sure you want to restart the game?"
+msgstr "Esteu segur que voleu reiniciar el joc?"
+
+#: ../src/five-or-more.c:1310
+msgid "_Cancel"
+msgstr "_Cancel·la"
+
+#: ../src/five-or-more.c:1311
+msgid "_Restart"
+msgstr "_Reinicia"
 
 #. Score dialog column header for the score time (e.g. 1 minute)
 #: ../src/games-scores-dialog.c:132
@@ -318,6 +327,18 @@ msgstr "Puntuació"
 msgctxt "score-dialog"
 msgid "%1$dm %2$ds"
 msgstr "%1$d m %2$d s"
+
+#: ../src/games-scores-dialog.c:371
+msgid "_Quit"
+msgstr "I_x"
+
+#: ../src/games-scores-dialog.c:378
+msgid "_Undo"
+msgstr "_Desfés"
+
+#: ../src/games-scores-dialog.c:392
+msgid "_Close"
+msgstr "_Tanca"
 
 #. Score dialog column header for the date the score was recorded
 #: ../src/games-scores-dialog.c:478
