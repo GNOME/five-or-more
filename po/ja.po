@@ -42,16 +42,17 @@ msgid ""
 "score points. Earn many more points by lining up as many objects as possible "
 "before clearing them."
 msgstr ""
-"Five or More は、かつて人気のあったコンピューターゲームの GNOME 版です。"
-"同じ色の石を 5 個以上一列に並べると、石が消えて得点が入ります。"
-"石を消すときにできるだけ多くの石を並べると、その分得点もたくさん入ります。"
+"Five or More は、かつて人気のあったコンピューターゲームの GNOME 版です。同じ"
+"色の石を 5 個以上一列に並べると、石が消えて得点が入ります。石を消すときにでき"
+"るだけ多くの石を並べると、その分得点もたくさん入ります。"
 
 #: ../data/five-or-more.appdata.xml.in.h:4
 msgid ""
 "More objects appear after every turn. Play for as long as possible, until "
 "the board is completely full!"
 msgstr ""
-"ターン毎に石は増えていきます。盤が石で一杯になればゲーム終了です。できるだけ長くプレイしましょう。"
+"ターン毎に石は増えていきます。盤が石で一杯になればゲーム終了です。できるだけ"
+"長くプレイしましょう。"
 
 #: ../data/five-or-more.desktop.in.h:3
 msgid "game;strategy;logic;"
@@ -272,8 +273,7 @@ msgstr "そこは移動できません!"
 
 #: ../src/five-or-more.c:1174
 msgid "GNOME port of the once-popular Color Lines game"
-msgstr ""
-"一世を風靡したカラーラインゲームの GNOME 版です。"
+msgstr "一世を風靡したカラーラインゲームの GNOME 版です。"
 
 #: ../src/five-or-more.c:1180
 msgid "translator-credits"
@@ -335,158 +335,3 @@ msgstr "閉じる(_C)"
 #: ../src/games-scores-dialog.c:478
 msgid "Date"
 msgstr "日付"
-
-#~ msgid "Five or More Preferences"
-#~ msgstr "Five or More の設定"
-
-#~ msgid "New Game"
-#~ msgstr "新しいゲーム"
-
-#~ msgid "true if the window is fullscren"
-#~ msgstr "ウィンドウがフルスクリーンの場合は TRUE"
-
-#~ msgctxt "score-dialog"
-#~ msgid "Name"
-#~ msgstr "名前"
-
-#~ msgid "View help for this game"
-#~ msgstr "このゲームのヘルプを表示します"
-
-#~ msgid "End the current game"
-#~ msgstr "このゲームを終了します"
-
-#~ msgid "Toggle fullscreen mode"
-#~ msgstr "フルスクリーンモードを切り替えます"
-
-#~ msgid "Get a hint for your next move"
-#~ msgstr "次の操作のヒントを得ます"
-
-#~ msgid "Leave fullscreen mode"
-#~ msgstr "フルスクリーンモードを解除します"
-
-#~ msgid "Start a new multiplayer network game"
-#~ msgstr "新しいネットワーク対戦ゲームを開始します"
-
-#~ msgid "End the current network game and return to network server"
-#~ msgstr "現在のネットワーク対戦を終了してネットワークサーバーに戻ります"
-
-#~ msgid "Pause the game"
-#~ msgstr "ゲームを一時停止します"
-
-#~ msgid "Show a list of players in the network game"
-#~ msgstr "ネットワーク対戦しているプレイヤーの一覧を表示します"
-
-#~ msgid "Redo the undone move"
-#~ msgstr "直前の操作を取り消します"
-
-#~ msgid "Restart the game"
-#~ msgstr "ゲームをやり直します"
-
-#~ msgid "Resume the paused game"
-#~ msgstr "一時停止していたゲームを再開します"
-
-#~ msgid "View the scores"
-#~ msgstr "得点を表示します"
-
-#~ msgid "Undo the last move"
-#~ msgstr "直前の操作を取り消します"
-
-#~ msgid "About this game"
-#~ msgstr "このゲームの情報を表示します"
-
-#~ msgid "Close this window"
-#~ msgstr "このウィンドウを閉じます"
-
-#~ msgid "Configure the game"
-#~ msgstr "このゲームを設定します"
-
-#~ msgid "Quit this game"
-#~ msgstr "このゲームを終了します"
-
-#~ msgid "_Contents"
-#~ msgstr "目次(_C)"
-
-#~ msgid "_Fullscreen"
-#~ msgstr "フルスクリーン(_F)"
-
-#~ msgid "_Hint"
-#~ msgstr "ヒント(_H)"
-
-#~ msgid "_New"
-#~ msgstr "新しいゲーム(_N)"
-
-#~ msgid "_Redo Move"
-#~ msgstr "移動をやり直す(_R)"
-
-#~ msgid "_Reset"
-#~ msgstr "リセット(_R)"
-
-#~ msgid "_Deal"
-#~ msgstr "カードを引く(_D)"
-
-#~ msgid "_Leave Fullscreen"
-#~ msgstr "フルスクリーンの解除(_L)"
-
-#~ msgid "Network _Game"
-#~ msgstr "ネットワーク対戦(_G)"
-
-#~ msgid "L_eave Game"
-#~ msgstr "ゲームから抜ける(_E)"
-
-#~ msgid "Player _List"
-#~ msgstr "プレイヤーの一覧(_L)"
-
-#~ msgid "_Pause"
-#~ msgstr "一時停止(_P)"
-
-#~ msgid "Res_ume"
-#~ msgstr "再開(_U)"
-
-#~ msgid "_Scores"
-#~ msgstr "得点(_S)"
-
-#~ msgid "_End Game"
-#~ msgstr "ゲームの終了(_E)"
-
-#~ msgid ""
-#~ "%s is free software; you can redistribute it and/or modify it under the "
-#~ "terms of the GNU General Public License as published by the Free Software "
-#~ "Foundation; either version %d of the License, or (at your option) any "
-#~ "later version."
-#~ msgstr ""
-#~ "%s はフリーソフトウェアです。フリーソフトウェア財団が提供する GNU 一般公衆"
-#~ "利用許諾契約書の第%d版、あるいはそれ以降の版が定める条項の下で本プログラム"
-#~ "を再頒布または変更することができます。"
-
-#~ msgid ""
-#~ "%s is distributed in the hope that it will be useful, but WITHOUT ANY "
-#~ "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
-#~ "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
-#~ "details."
-#~ msgstr ""
-#~ "%s は有用とは思いますが、その頒布にあたっては市場性及び特定の目的、その適"
-#~ "合性についての暗黙の保証を含めて、いかなる保証も行ないません。詳細について"
-#~ "は GNU 一般公衆利用許諾契約書をご覧ください。"
-
-#~ msgid ""
-#~ "You should have received a copy of the GNU General Public License along "
-#~ "with %s; if not, write to the Free Software Foundation, Inc., 51 Franklin "
-#~ "Street, Fifth Floor, Boston, MA  02110-1301  USA"
-#~ msgstr ""
-#~ "あなたは %s と一緒に GNU 一般公衆利用許諾契約書の写しを受け取っているはず"
-#~ "です。そうでない場合は、Free Software Foundation, Inc., 51 Franklin "
-#~ "Street, Fifth Floor, Boston, MA 02110-1301, USA へ手紙を書いてください。"
-
-#~ msgid ""
-#~ "You should have received a copy of the GNU General Public License along "
-#~ "with this program.  If not, see <http://www.gnu.org/licenses/>."
-#~ msgstr ""
-#~ "あなたは %s と一緒に GNU 一般公衆利用許諾契約書の写しを受け取っているはず"
-#~ "です。そうでない場合は、<http://www.gnu.org/licenses/> を参照してくださ"
-#~ "い。"
-
-#~ msgid "GNOME Five or More"
-#~ msgstr "GNOME Five or More"
-
-#~ msgid "GNOME Games web site"
-#~ msgstr "GNOME ゲーム集のウェブサイト"

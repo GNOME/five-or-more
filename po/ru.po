@@ -345,6 +345,3 @@ msgstr "_Закрыть"
 #: ../src/games-scores-dialog.c:478
 msgid "Date"
 msgstr "Дата"
-
-#~ msgid "New Game"
-#~ msgstr "Новая игра"

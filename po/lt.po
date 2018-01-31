@@ -343,6 +343,3 @@ msgstr "_Užverti"
 #: ../src/games-scores-dialog.c:478
 msgid "Date"
 msgstr "Data"
-
-#~ msgid "New Game"
-#~ msgstr "Naujas žaidimas"

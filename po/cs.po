@@ -355,6 +355,3 @@ msgstr "_Zavřít"
 #: ../src/games-scores-dialog.c:478
 msgid "Date"
 msgstr "Datum"
-
-#~ msgid "New Game"
-#~ msgstr "Nová hra"
