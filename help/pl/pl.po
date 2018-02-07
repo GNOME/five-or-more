@@ -1,13 +1,13 @@
 # Polish translation for five-or-more help.
 # Copyright © 2017 the five-or-more authors.
-# This file is distributed under the same license as the five-or-more package.
+# This file is distributed under the same license as the five-or-more help.
 # Piotr Drąg <piotrdrag@gmail.com>, 2017.
 # Aviary.pl <community-poland@mozilla.org>, 2017.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: five-or-more-help\n"
-"POT-Creation-Date: 2017-09-30 15:42+0000\n"
+"POT-Creation-Date: 2017-10-01 01:23+0000\n"
 "PO-Revision-Date: 2017-10-01 03:22+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <community-poland@mozilla.org>\n"
