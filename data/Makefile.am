@@ -29,12 +29,13 @@ appstream_XML = $(appstream_in_files:.xml.in=.xml)
 @INTLTOOL_XML_RULE@
 
 EXTRA_DIST = 			\
-	$(theme_DATA)		\
 	$(appstream_in_files)	\
 	$(desktop_in_files)	\
 	$(gsettings_SCHEMAS)	\
-	$(man_MANS)	\
-	$(ui_DATA)
+	$(man_MANS)		\
+	$(ui_DATA)		\
+	$(theme_DATA)		\
+	translatable_themes.h
 
 CLEANFILES = \
 	$(appstream_XML)	\

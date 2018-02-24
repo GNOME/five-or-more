@@ -314,7 +314,8 @@ games_file_list_create_widget (GamesFileList * filelist,
       }
     }
 
-    gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (widget), visible);
+    gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (widget),
+                                    g_dpgettext2 (NULL, "themes", visible));
     if (selection && (!strcmp (string, selection))) {
       gtk_combo_box_set_active (widget, itemno);
       found = TRUE;
