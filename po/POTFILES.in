@@ -1,10 +1,11 @@
 # List of source files containing translatable strings.
 # Please keep this file in alphabetical order.
+[encoding: UTF-8]
 data/five-or-more.appdata.xml.in
 data/five-or-more.desktop.in
-data/five-or-more-preferences.ui
-data/five-or-more.ui
-data/menu.ui
+[type: gettext/glade]data/five-or-more-preferences.ui
+[type: gettext/glade]data/five-or-more.ui
+[type: gettext/glade]data/menu.ui
 data/org.gnome.five-or-more.gschema.xml
 src/five-or-more.c
 src/games-scores-dialog.c

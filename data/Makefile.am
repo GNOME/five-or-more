@@ -21,14 +21,12 @@ man_MANS = five-or-more.6
 desktop_in_files = five-or-more.desktop.in
 desktopdir = $(datadir)/applications
 desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
-$(desktop_DATA): $(desktop_in_files)
-	$(AM_V_GEN)$(MSGFMT) --desktop --template $< -d $(top_srcdir)/po -o $@
+@INTLTOOL_DESKTOP_RULE@
 
 appstream_in_files = five-or-more.appdata.xml.in
 appstream_XML = $(appstream_in_files:.xml.in=.xml)
 @APPSTREAM_XML_RULES@
-$(appstream_XML): $(appstream_in_files)
-	$(AM_V_GEN)$(MSGFMT) --xml --template $< -d $(top_srcdir)/po -o $@
+@INTLTOOL_XML_RULE@
 
 EXTRA_DIST = 			\
 	$(theme_DATA)		\

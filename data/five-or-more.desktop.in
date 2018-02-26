@@ -1,10 +1,8 @@
 [Desktop Entry]
-Name=Five or More
-Comment=Remove colored balls from the board by forming lines
-# Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-Keywords=game;strategy;logic;
+_Name=Five or More
+_Comment=Remove colored balls from the board by forming lines
+_Keywords=game;strategy;logic;
 Exec=five-or-more
-# Translators: Do NOT translate or transliterate this text (this is an icon file name)!
 Icon=five-or-more
 Terminal=false
 Type=Application
