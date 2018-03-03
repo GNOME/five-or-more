@@ -1,5 +1,5 @@
 # Polish translation for five-or-more.
-# Copyright © 1998-2017 the five-or-more authors.
+# Copyright © 1998-2018 the five-or-more authors.
 # This file is distributed under the same license as the five-or-more package.
 # Zbigniew Chyla <chyla@alice.ci.pwr.wroc.pl>, 1998-2002.
 # Marcin Gorycki <mgo@olicom.dk>, 1999.
@@ -12,15 +12,15 @@
 # Tomasz Dominikowski <dominikowski@gmail.com>, 2008.
 # Joanna Mazgaj <jmazgaj@aviary.pl>, 2009-2010.
 # Wojciech Kapusta <wkapusta@aviary.pl>, 2009.
-# Piotr Drąg <piotrdrag@gmail.com>, 2010-2017.
-# Aviary.pl <community-poland@mozilla.org>, 2007-2017.
+# Piotr Drąg <piotrdrag@gmail.com>, 2010-2018.
+# Aviary.pl <community-poland@mozilla.org>, 2007-2018.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: five-or-more\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-01 03:18+0200\n"
-"PO-Revision-Date: 2017-10-01 03:19+0200\n"
+"POT-Creation-Date: 2018-03-03 17:29+0100\n"
+"PO-Revision-Date: 2018-03-03 17:30+0100\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <community-poland@mozilla.org>\n"
 "Language: pl\n"
@@ -31,14 +31,14 @@ msgstr ""
 "|| n%100>=20) ? 1 : 2);\n"
 
 #: ../data/five-or-more.appdata.xml.in.h:1 ../data/five-or-more.desktop.in.h:1
-#: ../data/five-or-more.ui.h:1 ../src/five-or-more.c:1175
-#: ../src/five-or-more.c:1726
+#: ../data/five-or-more.ui.h:1 ../src/five-or-more.c:1173
+#: ../src/five-or-more.c:1724
 msgid "Five or More"
 msgstr "Kulki"
 
 #: ../data/five-or-more.appdata.xml.in.h:2 ../data/five-or-more.desktop.in.h:2
 msgid "Remove colored balls from the board by forming lines"
-msgstr "Usuwanie kolorowych kul poprzez układanie ich w linie"
+msgstr "Usuwanie kolorowych kulek poprzez układanie ich w linie"
 
 #: ../data/five-or-more.appdata.xml.in.h:3
 msgid ""
@@ -69,7 +69,7 @@ msgid "game;strategy;logic;"
 msgstr "gra;gierka;strategiczna;strategia;logiczna;logika;"
 
 #: ../data/five-or-more-preferences.ui.h:1 ../data/menu.ui.h:2
-#: ../src/five-or-more.c:171
+#: ../src/five-or-more.c:169
 msgid "Preferences"
 msgstr "Preferencje"
 
@@ -121,7 +121,7 @@ msgstr "0"
 msgid "Score:"
 msgstr "Punkty:"
 
-#: ../data/five-or-more.ui.h:5 ../src/games-scores-dialog.c:385
+#: ../data/five-or-more.ui.h:5 ../src/games-scores-dialog.c:384
 msgid "_New Game"
 msgstr "_Nowa gra"
 
@@ -157,11 +157,11 @@ msgstr ""
 
 #: ../data/org.gnome.five-or-more.gschema.xml.h:3
 msgid "Ball style"
-msgstr "Wzór kuli"
+msgstr "Wzór kulek"
 
 #: ../data/org.gnome.five-or-more.gschema.xml.h:4
 msgid "Ball style. The filename of the images to use for the balls."
-msgstr "Wzór kuli. Nazwa pliku obrazu kul."
+msgstr "Wzór kulek. Nazwa pliku obrazu kulek."
 
 #: ../data/org.gnome.five-or-more.gschema.xml.h:5
 msgid "Background color"
@@ -215,26 +215,51 @@ msgstr "Wysokość okna w pikselach"
 msgid "true if the window is maximized"
 msgstr "Wartość „true” oznacza, że okno jest zmaksymalizowane"
 
-#: ../src/five-or-more.c:80
+#.
+#. * Translatable strings file.
+#. * Add this file to your project's POTFILES.in.
+#. * DO NOT compile it as part of your application.
+#.
+#: ../data/translatable_themes.h:6
+msgctxt "themes"
+msgid "balls"
+msgstr "Kulki"
+
+#: ../data/translatable_themes.h:7
+msgctxt "themes"
+msgid "dots"
+msgstr "Kropki"
+
+#: ../data/translatable_themes.h:8
+msgctxt "themes"
+msgid "gumball"
+msgstr "Gumy"
+
+#: ../data/translatable_themes.h:9
+msgctxt "themes"
+msgid "shapes"
+msgstr "Kształty"
+
+#: ../src/five-or-more.c:78
 msgctxt "board size"
 msgid "Small"
 msgstr "Mała"
 
-#: ../src/five-or-more.c:81
+#: ../src/five-or-more.c:79
 msgctxt "board size"
 msgid "Medium"
 msgstr "Średnia"
 
-#: ../src/five-or-more.c:82
+#: ../src/five-or-more.c:80
 msgctxt "board size"
 msgid "Large"
 msgstr "Duża"
 
-#: ../src/five-or-more.c:165
+#: ../src/five-or-more.c:163
 msgid "Could not load theme"
 msgstr "Nie można wczytać motywu"
 
-#: ../src/five-or-more.c:191
+#: ../src/five-or-more.c:189
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -245,9 +270,9 @@ msgstr ""
 "Nie można odnaleźć pliku:\n"
 "%s\n"
 "\n"
-"Zostanie wczytany motyw domyślny."
+"Zostanie wczytany domyślny motyw."
 
-#: ../src/five-or-more.c:198
+#: ../src/five-or-more.c:196
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -258,35 +283,35 @@ msgstr ""
 "Nie można odnaleźć pliku:\n"
 "%s\n"
 "\n"
-"Proszę się upewnić, że gra „Kulki” została prawidłowo zainstalowana."
+"Proszę się upewnić, że gra „Kulki” została poprawnie zainstalowana."
 
-#: ../src/five-or-more.c:410
+#: ../src/five-or-more.c:408
 msgid "Match five objects of the same type in a row to score!"
 msgstr ""
 "Należy ustawić w linii pięć kulek tego samego koloru, aby zdobyć punkty."
 
-#: ../src/five-or-more.c:471
+#: ../src/five-or-more.c:469
 msgid "Five or More Scores"
 msgstr "Wyniki gry Kulki"
 
-#: ../src/five-or-more.c:473
+#: ../src/five-or-more.c:471
 msgid "_Board size:"
 msgstr "_Rozmiar planszy:"
 
-#: ../src/five-or-more.c:490
+#: ../src/five-or-more.c:488
 msgid "Game Over!"
 msgstr "Koniec gry!"
 
 #. Can't move there!
-#: ../src/five-or-more.c:647
+#: ../src/five-or-more.c:645
 msgid "You can’t move there!"
 msgstr "Nie można tam przenieść."
 
-#: ../src/five-or-more.c:1177
+#: ../src/five-or-more.c:1175
 msgid "GNOME port of the once-popular Color Lines game"
 msgstr "Port niegdyś popularnej gry w kolorowe linie dla środowiska GNOME"
 
-#: ../src/five-or-more.c:1183
+#: ../src/five-or-more.c:1181
 msgid "translator-credits"
 msgstr ""
 "Zbigniew Chyla <chyla@alice.ci.pwr.wroc.pl>, 1998-2002\n"
@@ -300,53 +325,53 @@ msgstr ""
 "Tomasz Dominikowski <dominikowski@gmail.com>, 2008\n"
 "Joanna Mazgaj <jmazgaj@aviary.pl>, 2009-2010\n"
 "Wojciech Kapusta <wkapusta@aviary.pl>, 2009\n"
-"Piotr Drąg <piotrdrag@gmail.com>, 2010-2017\n"
-"Aviary.pl <community-poland@mozilla.org>, 2007-2017"
+"Piotr Drąg <piotrdrag@gmail.com>, 2010-2018\n"
+"Aviary.pl <community-poland@mozilla.org>, 2007-2018"
 
-#: ../src/five-or-more.c:1307
+#: ../src/five-or-more.c:1305
 msgid "Are you sure you want to restart the game?"
 msgstr "Na pewno zacząć grę od początku?"
 
-#: ../src/five-or-more.c:1310
+#: ../src/five-or-more.c:1308
 msgid "_Cancel"
 msgstr "_Anuluj"
 
-#: ../src/five-or-more.c:1311
+#: ../src/five-or-more.c:1309
 msgid "_Restart"
 msgstr "_Zacznij od początku"
 
 #. Score dialog column header for the score time (e.g. 1 minute)
-#: ../src/games-scores-dialog.c:132
+#: ../src/games-scores-dialog.c:131
 msgctxt "score-dialog"
 msgid "Time"
 msgstr "Czas"
 
 #. Score dialog column header for the score value (e.g. 30 moves)
-#: ../src/games-scores-dialog.c:138
+#: ../src/games-scores-dialog.c:137
 msgctxt "score-dialog"
 msgid "Score"
 msgstr "Wynik"
 
 #. Score format for time based scores.  %1$d is the time in minutes, %2$d is the time in seconds
-#: ../src/games-scores-dialog.c:225
+#: ../src/games-scores-dialog.c:224
 #, c-format
 msgctxt "score-dialog"
 msgid "%1$dm %2$ds"
 msgstr "%1$d min %2$d s"
 
-#: ../src/games-scores-dialog.c:371
+#: ../src/games-scores-dialog.c:370
 msgid "_Quit"
 msgstr "Za_kończ"
 
-#: ../src/games-scores-dialog.c:378
+#: ../src/games-scores-dialog.c:377
 msgid "_Undo"
 msgstr "Cof_nij"
 
-#: ../src/games-scores-dialog.c:392
+#: ../src/games-scores-dialog.c:391
 msgid "_Close"
 msgstr "Za_mknij"
 
 #. Score dialog column header for the date the score was recorded
-#: ../src/games-scores-dialog.c:478
+#: ../src/games-scores-dialog.c:477
 msgid "Date"
 msgstr "Data"
