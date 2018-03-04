@@ -16,15 +16,15 @@
 # Petr Pulc <petrpulc@gmail.com>, 2009.
 # Andre Klapper <ak-47@gmx.net>, 2009.
 # Petr Kovar <pknbe@volny.cz>, 2008, 2012.
-# Marek Černocký <marek@manet.cz>, 2010, 2011, 2012, 2013, 2014, 2015, 2016.
+# Marek Černocký <marek@manet.cz>, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2018.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: five-or-more master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=five-"
 "or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-08-13 20:27+0000\n"
-"PO-Revision-Date: 2016-08-14 12:45+0200\n"
+"POT-Creation-Date: 2018-03-03 16:16+0000\n"
+"PO-Revision-Date: 2018-03-04 08:44+0100\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: čeština <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -36,8 +36,8 @@ msgstr ""
 "X-Project-Style: gnome\n"
 
 #: ../data/five-or-more.appdata.xml.in.h:1 ../data/five-or-more.desktop.in.h:1
-#: ../data/five-or-more.ui.h:1 ../src/five-or-more.c:1172
-#: ../src/five-or-more.c:1723
+#: ../data/five-or-more.ui.h:1 ../src/five-or-more.c:1173
+#: ../src/five-or-more.c:1724
 msgid "Five or More"
 msgstr "Pět nebo víc"
 
@@ -74,7 +74,7 @@ msgid "game;strategy;logic;"
 msgstr "hra;strategická;logická;"
 
 #: ../data/five-or-more-preferences.ui.h:1 ../data/menu.ui.h:2
-#: ../src/five-or-more.c:171
+#: ../src/five-or-more.c:169
 msgid "Preferences"
 msgstr "Předvolby"
 
@@ -126,7 +126,7 @@ msgstr "0"
 msgid "Score:"
 msgstr "Skóre:"
 
-#: ../data/five-or-more.ui.h:5 ../src/games-scores-dialog.c:385
+#: ../data/five-or-more.ui.h:5 ../src/games-scores-dialog.c:384
 msgid "_New Game"
 msgstr "_Nová hra"
 
@@ -221,26 +221,51 @@ msgstr "Výška okna v pixelech."
 msgid "true if the window is maximized"
 msgstr "Zapnuto, pokud je okno maximalizováno"
 
-#: ../src/five-or-more.c:80
+#.
+#. * Translatable strings file.
+#. * Add this file to your project's POTFILES.in.
+#. * DO NOT compile it as part of your application.
+#.
+#: ../data/translatable_themes.h:6
+msgctxt "themes"
+msgid "balls"
+msgstr "kuličky"
+
+#: ../data/translatable_themes.h:7
+msgctxt "themes"
+msgid "dots"
+msgstr "tečky"
+
+#: ../data/translatable_themes.h:8
+msgctxt "themes"
+msgid "gumball"
+msgstr "hopsakoule"
+
+#: ../data/translatable_themes.h:9
+msgctxt "themes"
+msgid "shapes"
+msgstr "tvary"
+
+#: ../src/five-or-more.c:78
 msgctxt "board size"
 msgid "Small"
 msgstr "Malé"
 
-#: ../src/five-or-more.c:81
+#: ../src/five-or-more.c:79
 msgctxt "board size"
 msgid "Medium"
 msgstr "Střední"
 
-#: ../src/five-or-more.c:82
+#: ../src/five-or-more.c:80
 msgctxt "board size"
 msgid "Large"
 msgstr "Velké"
 
-#: ../src/five-or-more.c:165
+#: ../src/five-or-more.c:163
 msgid "Could not load theme"
 msgstr "Nelze načíst motiv"
 
-#: ../src/five-or-more.c:191
+#: ../src/five-or-more.c:189
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -253,7 +278,7 @@ msgstr ""
 "\n"
 "Bude místo něj načten výchozí motiv."
 
-#: ../src/five-or-more.c:198
+#: ../src/five-or-more.c:196
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -266,32 +291,32 @@ msgstr ""
 "\n"
 "Zkontrolujte prosím, že je hra Pět nebo víc správně nainstalována."
 
-#: ../src/five-or-more.c:407
+#: ../src/five-or-more.c:408
 msgid "Match five objects of the same type in a row to score!"
 msgstr "Seřazením pěti objektů stejného typu do řady získáte body!"
 
-#: ../src/five-or-more.c:468
+#: ../src/five-or-more.c:469
 msgid "Five or More Scores"
 msgstr "Skóre Pět nebo víc"
 
-#: ../src/five-or-more.c:470
+#: ../src/five-or-more.c:471
 msgid "_Board size:"
 msgstr "Velikost hrací _desky:"
 
-#: ../src/five-or-more.c:487
+#: ../src/five-or-more.c:488
 msgid "Game Over!"
 msgstr "Konec hry!"
 
 #. Can't move there!
-#: ../src/five-or-more.c:644
+#: ../src/five-or-more.c:645
 msgid "You can’t move there!"
 msgstr "Tam nemůžete táhnout!"
 
-#: ../src/five-or-more.c:1174
+#: ../src/five-or-more.c:1175
 msgid "GNOME port of the once-popular Color Lines game"
 msgstr "Port pro prostředí GNOME kdysi oblíbené hry Barevné linie"
 
-#: ../src/five-or-more.c:1180
+#: ../src/five-or-more.c:1181
 msgid "translator-credits"
 msgstr ""
 "Jirka Lébl\n"
@@ -308,50 +333,50 @@ msgstr ""
 "Petr Pulc <petrpulc@gmail.com>\n"
 "Marek Černocký <marek@manet.cz>"
 
-#: ../src/five-or-more.c:1304
+#: ../src/five-or-more.c:1305
 msgid "Are you sure you want to restart the game?"
 msgstr "Opravdu chcete hru začít znovu od začátku?"
 
-#: ../src/five-or-more.c:1307
+#: ../src/five-or-more.c:1308
 msgid "_Cancel"
 msgstr "_Zrušit"
 
-#: ../src/five-or-more.c:1308
+#: ../src/five-or-more.c:1309
 msgid "_Restart"
 msgstr "Z_novu od začátku"
 
 #. Score dialog column header for the score time (e.g. 1 minute)
-#: ../src/games-scores-dialog.c:132
+#: ../src/games-scores-dialog.c:131
 msgctxt "score-dialog"
 msgid "Time"
 msgstr "Čas"
 
 #. Score dialog column header for the score value (e.g. 30 moves)
-#: ../src/games-scores-dialog.c:138
+#: ../src/games-scores-dialog.c:137
 msgctxt "score-dialog"
 msgid "Score"
 msgstr "Skóre"
 
 #. Score format for time based scores.  %1$d is the time in minutes, %2$d is the time in seconds
-#: ../src/games-scores-dialog.c:225
+#: ../src/games-scores-dialog.c:224
 #, c-format
 msgctxt "score-dialog"
 msgid "%1$dm %2$ds"
 msgstr "%1$d min %2$d sec"
 
-#: ../src/games-scores-dialog.c:371
+#: ../src/games-scores-dialog.c:370
 msgid "_Quit"
 msgstr "U_končit"
 
-#: ../src/games-scores-dialog.c:378
+#: ../src/games-scores-dialog.c:377
 msgid "_Undo"
 msgstr "_Zpět"
 
-#: ../src/games-scores-dialog.c:392
+#: ../src/games-scores-dialog.c:391
 msgid "_Close"
 msgstr "_Zavřít"
 
 #. Score dialog column header for the date the score was recorded
-#: ../src/games-scores-dialog.c:478
+#: ../src/games-scores-dialog.c:477
 msgid "Date"
 msgstr "Datum"
