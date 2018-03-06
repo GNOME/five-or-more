@@ -8,16 +8,19 @@
 # Martin Willemoes Hansen <mwh@sysrq.dk>, 2004, 05.
 # flemming christensen <fc@stromata.dk>, 2011.
 # Ask Hjorth Larsen <asklarsen@gmail.com>, 2007-2016.
+# Joe Hansen (joedalton2@yahoo.dk), 2018.
 #
 # Husk at tilføje dig i credit-listen (besked id "translator-credits")
+# nb afklar der er brugt på bold og kugle for ball i den her !!!
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=five-"
 "or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2017-02-28 06:48+0000\n"
-"PO-Revision-Date: 2016-09-08 03:15+0200\n"
-"Last-Translator: Ask Hjorth Larsen <asklarsen@gmail.com>\n"
+"POT-Creation-Date: 2018-03-03 16:16+0000\n"
+"PO-Revision-Date: 2018-03-06 03:15+0200\n"
+"Last-Translator: Joe Hansen (joedalton2@yahoo.dk)\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
@@ -26,8 +29,8 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
 #: ../data/five-or-more.appdata.xml.in.h:1 ../data/five-or-more.desktop.in.h:1
-#: ../data/five-or-more.ui.h:1 ../src/five-or-more.c:1175
-#: ../src/five-or-more.c:1726
+#: ../data/five-or-more.ui.h:1 ../src/five-or-more.c:1173
+#: ../src/five-or-more.c:1724
 msgid "Five or More"
 msgstr "Fem eller mere"
 
@@ -64,7 +67,7 @@ msgid "game;strategy;logic;"
 msgstr "spil;strategi;logik;"
 
 #: ../data/five-or-more-preferences.ui.h:1 ../data/menu.ui.h:2
-#: ../src/five-or-more.c:171
+#: ../src/five-or-more.c:169
 msgid "Preferences"
 msgstr "Indstillinger"
 
@@ -116,7 +119,7 @@ msgstr "0"
 msgid "Score:"
 msgstr "Point:"
 
-#: ../data/five-or-more.ui.h:5 ../src/games-scores-dialog.c:385
+#: ../data/five-or-more.ui.h:5 ../src/games-scores-dialog.c:384
 msgid "_New Game"
 msgstr "_Nyt spil"
 
@@ -210,26 +213,51 @@ msgstr "Højden af vinduet i billedpunkter"
 msgid "true if the window is maximized"
 msgstr "sand hvis vinduet er maksimeret"
 
-#: ../src/five-or-more.c:80
+#.
+#. * Translatable strings file.
+#. * Add this file to your project's POTFILES.in.
+#. * DO NOT compile it as part of your application.
+#.
+#: ../data/translatable_themes.h:6
+msgctxt "themes"
+msgid "balls"
+msgstr "kugler"
+
+#: ../data/translatable_themes.h:7
+msgctxt "themes"
+msgid "dots"
+msgstr "prikker"
+
+#: ../data/translatable_themes.h:8
+msgctxt "themes"
+msgid "gumball"
+msgstr "tyggegummikugle"
+
+#: ../data/translatable_themes.h:9
+msgctxt "themes"
+msgid "shapes"
+msgstr "former"
+
+#: ../src/five-or-more.c:78
 msgctxt "board size"
 msgid "Small"
 msgstr "Lille"
 
-#: ../src/five-or-more.c:81
+#: ../src/five-or-more.c:79
 msgctxt "board size"
 msgid "Medium"
 msgstr "Mellem"
 
-#: ../src/five-or-more.c:82
+#: ../src/five-or-more.c:80
 msgctxt "board size"
 msgid "Large"
 msgstr "Stor"
 
-#: ../src/five-or-more.c:165
+#: ../src/five-or-more.c:163
 msgid "Could not load theme"
 msgstr "Kunne ikke indlæse tema"
 
-#: ../src/five-or-more.c:191
+#: ../src/five-or-more.c:189
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -242,7 +270,7 @@ msgstr ""
 "\n"
 "I stedet vil standardtemaet blive indlæst."
 
-#: ../src/five-or-more.c:198
+#: ../src/five-or-more.c:196
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -255,32 +283,32 @@ msgstr ""
 "\n"
 "Kontrollér venligst at Fem eller mere er korrekt installeret."
 
-#: ../src/five-or-more.c:410
+#: ../src/five-or-more.c:408
 msgid "Match five objects of the same type in a row to score!"
 msgstr "Få fem objekter af den samme farve på stribe for at få point!"
 
-#: ../src/five-or-more.c:471
+#: ../src/five-or-more.c:469
 msgid "Five or More Scores"
 msgstr "Resultater for Fem eller mere"
 
-#: ../src/five-or-more.c:473
+#: ../src/five-or-more.c:471
 msgid "_Board size:"
 msgstr "_Brætstørrelse:"
 
-#: ../src/five-or-more.c:490
+#: ../src/five-or-more.c:488
 msgid "Game Over!"
 msgstr "Spillet er slut!"
 
 #. Can't move there!
-#: ../src/five-or-more.c:647
+#: ../src/five-or-more.c:645
 msgid "You can’t move there!"
 msgstr "Du kan ikke flytte dertil!"
 
-#: ../src/five-or-more.c:1177
+#: ../src/five-or-more.c:1175
 msgid "GNOME port of the once-popular Color Lines game"
 msgstr "GNOME-udgave af det engang så populære spil Color Lines"
 
-#: ../src/five-or-more.c:1183
+#: ../src/five-or-more.c:1181
 msgid "translator-credits"
 msgstr ""
 "Anders Wegge Jakobsen\n"
@@ -293,50 +321,50 @@ msgstr ""
 "Dansk-gruppen <dansk@dansk-gruppen.dk>\n"
 "Mere info: http://www.dansk-gruppen.dk"
 
-#: ../src/five-or-more.c:1307
+#: ../src/five-or-more.c:1305
 msgid "Are you sure you want to restart the game?"
 msgstr "Er du sikker på at du vil genstarte spillet?"
 
-#: ../src/five-or-more.c:1310
+#: ../src/five-or-more.c:1308
 msgid "_Cancel"
 msgstr "_Annullér"
 
-#: ../src/five-or-more.c:1311
+#: ../src/five-or-more.c:1309
 msgid "_Restart"
 msgstr "_Genstart"
 
 #. Score dialog column header for the score time (e.g. 1 minute)
-#: ../src/games-scores-dialog.c:132
+#: ../src/games-scores-dialog.c:131
 msgctxt "score-dialog"
 msgid "Time"
 msgstr "Tid"
 
 #. Score dialog column header for the score value (e.g. 30 moves)
-#: ../src/games-scores-dialog.c:138
+#: ../src/games-scores-dialog.c:137
 msgctxt "score-dialog"
 msgid "Score"
 msgstr "Resultat"
 
 #. Score format for time based scores.  %1$d is the time in minutes, %2$d is the time in seconds
-#: ../src/games-scores-dialog.c:225
+#: ../src/games-scores-dialog.c:224
 #, c-format
 msgctxt "score-dialog"
 msgid "%1$dm %2$ds"
 msgstr "%1$dm %2$ds"
 
-#: ../src/games-scores-dialog.c:371
+#: ../src/games-scores-dialog.c:370
 msgid "_Quit"
 msgstr "_Afslut"
 
-#: ../src/games-scores-dialog.c:378
+#: ../src/games-scores-dialog.c:377
 msgid "_Undo"
 msgstr "_Fortryd"
 
-#: ../src/games-scores-dialog.c:392
+#: ../src/games-scores-dialog.c:391
 msgid "_Close"
 msgstr "_Luk"
 
 #. Score dialog column header for the date the score was recorded
-#: ../src/games-scores-dialog.c:478
+#: ../src/games-scores-dialog.c:477
 msgid "Date"
 msgstr "Dato"
