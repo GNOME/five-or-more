@@ -1,32 +1,32 @@
 # Italian translation for five-or-more
-# Copyright (C) 2002-2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015 Free Software Foundation, Inc.
+# Copyright (C) 2002-2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2018 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-games package.
 # Fabrizio Stefani <f.stef@it.gnome.org>, 1999-2002;
 # Alessio Frusciante <algol@firenze.linux.it>. 2003.
 # Francesco Marletta <francesco.marletta@tiscali.it>. 2002-2006.
 # Gruppo traduzione Italiano di Ubuntu <gruppo-traduzione@ubuntu-it.org>, 2007-2008
-# Milo Casagrande <milo@milo.name>, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015.
+# Milo Casagrande <milo@milo.name>, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2018.
 # Gianvito Cavasoli <gianvito@gmx.it>, 2016.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: five-or-more\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=five-"
 "or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-08-13 20:27+0000\n"
-"PO-Revision-Date: 2016-10-04 15:33+0200\n"
-"Last-Translator: Gianvito Cavasoli <gianvito@gmx.it>\n"
+"POT-Creation-Date: 2018-03-03 16:16+0000\n"
+"PO-Revision-Date: 2018-03-05 13:55+0100\n"
+"Last-Translator: Milo Casagrande <milo@milo.name>\n"
 "Language-Team: Italiano <gnome-it-list@gnome.org>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Gtranslator 2.91.7\n"
+"X-Generator: Poedit 2.0.6\n"
 
 #: ../data/five-or-more.appdata.xml.in.h:1 ../data/five-or-more.desktop.in.h:1
-#: ../data/five-or-more.ui.h:1 ../src/five-or-more.c:1172
-#: ../src/five-or-more.c:1723
+#: ../data/five-or-more.ui.h:1 ../src/five-or-more.c:1173
+#: ../src/five-or-more.c:1724
 msgid "Five or More"
 msgstr "Cinque o più"
 
@@ -63,7 +63,7 @@ msgid "game;strategy;logic;"
 msgstr "gioco;giochi;strategia;logica;"
 
 #: ../data/five-or-more-preferences.ui.h:1 ../data/menu.ui.h:2
-#: ../src/five-or-more.c:171
+#: ../src/five-or-more.c:169
 msgid "Preferences"
 msgstr "Preferenze"
 
@@ -115,7 +115,7 @@ msgstr "0"
 msgid "Score:"
 msgstr "Punteggio:"
 
-#: ../data/five-or-more.ui.h:5 ../src/games-scores-dialog.c:385
+#: ../data/five-or-more.ui.h:5 ../src/games-scores-dialog.c:384
 msgid "_New Game"
 msgstr "_Nuova partita"
 
@@ -211,26 +211,51 @@ msgstr "Altezza della finestra in pixel."
 msgid "true if the window is maximized"
 msgstr "VERO se la finestra è massimizzata"
 
-#: ../src/five-or-more.c:80
+#.
+#. * Translatable strings file.
+#. * Add this file to your project's POTFILES.in.
+#. * DO NOT compile it as part of your application.
+#.
+#: ../data/translatable_themes.h:6
+msgctxt "themes"
+msgid "balls"
+msgstr "palline"
+
+#: ../data/translatable_themes.h:7
+msgctxt "themes"
+msgid "dots"
+msgstr "puntini"
+
+#: ../data/translatable_themes.h:8
+msgctxt "themes"
+msgid "gumball"
+msgstr "pallina di chewing-gum"
+
+#: ../data/translatable_themes.h:9
+msgctxt "themes"
+msgid "shapes"
+msgstr "forme"
+
+#: ../src/five-or-more.c:78
 msgctxt "board size"
 msgid "Small"
 msgstr "Piccola"
 
-#: ../src/five-or-more.c:81
+#: ../src/five-or-more.c:79
 msgctxt "board size"
 msgid "Medium"
 msgstr "Media"
 
-#: ../src/five-or-more.c:82
+#: ../src/five-or-more.c:80
 msgctxt "board size"
 msgid "Large"
 msgstr "Grande"
 
-#: ../src/five-or-more.c:165
+#: ../src/five-or-more.c:163
 msgid "Could not load theme"
 msgstr "Impossibile caricare il tema"
 
-#: ../src/five-or-more.c:191
+#: ../src/five-or-more.c:189
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -243,7 +268,7 @@ msgstr ""
 "\n"
 "Verrà caricato invece il tema predefinito."
 
-#: ../src/five-or-more.c:198
+#: ../src/five-or-more.c:196
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -256,32 +281,32 @@ msgstr ""
 "\n"
 "Controllare l'installazione di Cinque o più."
 
-#: ../src/five-or-more.c:407
+#: ../src/five-or-more.c:408
 msgid "Match five objects of the same type in a row to score!"
 msgstr "Allinea cinque oggetti dello stesso tipo per fare punti!"
 
-#: ../src/five-or-more.c:468
+#: ../src/five-or-more.c:469
 msgid "Five or More Scores"
 msgstr "Punteggi Cinque o più"
 
-#: ../src/five-or-more.c:470
+#: ../src/five-or-more.c:471
 msgid "_Board size:"
 msgstr "_Dimensione della tavola:"
 
-#: ../src/five-or-more.c:487
+#: ../src/five-or-more.c:488
 msgid "Game Over!"
 msgstr "Fine gioco!"
 
 #. Can't move there!
-#: ../src/five-or-more.c:644
+#: ../src/five-or-more.c:645
 msgid "You can’t move there!"
 msgstr "Non puoi spostare lì!"
 
-#: ../src/five-or-more.c:1174
+#: ../src/five-or-more.c:1175
 msgid "GNOME port of the once-popular Color Lines game"
 msgstr "Trasposizione per GNOME del glorioso gioco Color Lines"
 
-#: ../src/five-or-more.c:1180
+#: ../src/five-or-more.c:1181
 msgid "translator-credits"
 msgstr ""
 "Milo Casagrande <milo@milo.name>\n"
@@ -289,50 +314,50 @@ msgstr ""
 "Francesco Marletta <francesco.marletta@tiscali.it>\n"
 "Fabrizio Stefani <f.stef@it.gnome.org>"
 
-#: ../src/five-or-more.c:1304
+#: ../src/five-or-more.c:1305
 msgid "Are you sure you want to restart the game?"
 msgstr "Vuoi ricominciare veramente la partita?"
 
-#: ../src/five-or-more.c:1307
+#: ../src/five-or-more.c:1308
 msgid "_Cancel"
 msgstr "A_nnulla"
 
-#: ../src/five-or-more.c:1308
+#: ../src/five-or-more.c:1309
 msgid "_Restart"
 msgstr "_Ricomincia"
 
 #. Score dialog column header for the score time (e.g. 1 minute)
-#: ../src/games-scores-dialog.c:132
+#: ../src/games-scores-dialog.c:131
 msgctxt "score-dialog"
 msgid "Time"
 msgstr "Tempo"
 
 #. Score dialog column header for the score value (e.g. 30 moves)
-#: ../src/games-scores-dialog.c:138
+#: ../src/games-scores-dialog.c:137
 msgctxt "score-dialog"
 msgid "Score"
 msgstr "Punteggio"
 
 #. Score format for time based scores.  %1$d is the time in minutes, %2$d is the time in seconds
-#: ../src/games-scores-dialog.c:225
+#: ../src/games-scores-dialog.c:224
 #, c-format
 msgctxt "score-dialog"
 msgid "%1$dm %2$ds"
 msgstr "%1$dm %2$ds"
 
-#: ../src/games-scores-dialog.c:371
+#: ../src/games-scores-dialog.c:370
 msgid "_Quit"
 msgstr "_Esci"
 
-#: ../src/games-scores-dialog.c:378
+#: ../src/games-scores-dialog.c:377
 msgid "_Undo"
 msgstr "A_nnulla"
 
-#: ../src/games-scores-dialog.c:392
+#: ../src/games-scores-dialog.c:391
 msgid "_Close"
 msgstr "_Chiudi"
 
 #. Score dialog column header for the date the score was recorded
-#: ../src/games-scores-dialog.c:478
+#: ../src/games-scores-dialog.c:477
 msgid "Date"
 msgstr "Data"
