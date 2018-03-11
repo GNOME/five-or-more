@@ -8,11 +8,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: five-or-more master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=five-"
 "or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-08-13 20:27+0000\n"
-"PO-Revision-Date: 2016-09-05 13:19+0700\n"
-"Last-Translator: Andika Triwidada <andika@gmail.com>\n"
+"POT-Creation-Date: 2018-03-03 16:16+0000\n"
+"PO-Revision-Date: 2018-03-05 14:10+0700\n"
+"Last-Translator: Kukuh Syafaat <syafaatkukuh@gmail.com>\n"
 "Language-Team: Indonesian <gnome@i15n.org>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
@@ -20,11 +20,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Rosetta-Export-Date: 2007-04-23 05:58:10+0000\n"
-"X-Generator: Poedit 1.6.10\n"
+"X-Generator: Poedit 2.0.6\n"
 
 #: ../data/five-or-more.appdata.xml.in.h:1 ../data/five-or-more.desktop.in.h:1
-#: ../data/five-or-more.ui.h:1 ../src/five-or-more.c:1172
-#: ../src/five-or-more.c:1723
+#: ../data/five-or-more.ui.h:1 ../src/five-or-more.c:1173
+#: ../src/five-or-more.c:1724
 msgid "Five or More"
 msgstr "Five or More"
 
@@ -61,7 +61,7 @@ msgid "game;strategy;logic;"
 msgstr "permainan;strategi;logika;"
 
 #: ../data/five-or-more-preferences.ui.h:1 ../data/menu.ui.h:2
-#: ../src/five-or-more.c:171
+#: ../src/five-or-more.c:169
 msgid "Preferences"
 msgstr "Preferensi"
 
@@ -113,7 +113,7 @@ msgstr "0"
 msgid "Score:"
 msgstr "Nilai:"
 
-#: ../data/five-or-more.ui.h:5 ../src/games-scores-dialog.c:385
+#: ../data/five-or-more.ui.h:5 ../src/games-scores-dialog.c:384
 msgid "_New Game"
 msgstr "Mai_nkan Permainan Baru"
 
@@ -207,26 +207,51 @@ msgstr "Tinggi jendela dalam piksel"
 msgid "true if the window is maximized"
 msgstr "bernilai \"true\" bila jendela dimaksimalkan"
 
-#: ../src/five-or-more.c:80
+#.
+#. * Translatable strings file.
+#. * Add this file to your project's POTFILES.in.
+#. * DO NOT compile it as part of your application.
+#.
+#: ../data/translatable_themes.h:6
+msgctxt "themes"
+msgid "balls"
+msgstr "bola"
+
+#: ../data/translatable_themes.h:7
+msgctxt "themes"
+msgid "dots"
+msgstr "titik"
+
+#: ../data/translatable_themes.h:8
+msgctxt "themes"
+msgid "gumball"
+msgstr "gumball"
+
+#: ../data/translatable_themes.h:9
+msgctxt "themes"
+msgid "shapes"
+msgstr "bentuk"
+
+#: ../src/five-or-more.c:78
 msgctxt "board size"
 msgid "Small"
 msgstr "Kecil"
 
-#: ../src/five-or-more.c:81
+#: ../src/five-or-more.c:79
 msgctxt "board size"
 msgid "Medium"
 msgstr "Sedang"
 
-#: ../src/five-or-more.c:82
+#: ../src/five-or-more.c:80
 msgctxt "board size"
 msgid "Large"
 msgstr "Besar"
 
-#: ../src/five-or-more.c:165
+#: ../src/five-or-more.c:163
 msgid "Could not load theme"
 msgstr "Tak bisa memuat tema"
 
-#: ../src/five-or-more.c:191
+#: ../src/five-or-more.c:189
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -239,7 +264,7 @@ msgstr ""
 "\n"
 "Tema baku akan dimuat."
 
-#: ../src/five-or-more.c:198
+#: ../src/five-or-more.c:196
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -252,85 +277,86 @@ msgstr ""
 "\n"
 "Silakan periksa apakah Five or More telah terinstal dengan benar"
 
-#: ../src/five-or-more.c:407
+#: ../src/five-or-more.c:408
 msgid "Match five objects of the same type in a row to score!"
 msgstr ""
 "Bariskan 5 objek dengan tipe yang sama dalam satu baris untuk menambah skor!"
 
-#: ../src/five-or-more.c:468
+#: ../src/five-or-more.c:469
 msgid "Five or More Scores"
 msgstr "Skor Five or More"
 
-#: ../src/five-or-more.c:470
+#: ../src/five-or-more.c:471
 msgid "_Board size:"
 msgstr "Ukuran _papan:"
 
-#: ../src/five-or-more.c:487
+#: ../src/five-or-more.c:488
 msgid "Game Over!"
 msgstr "Permainan Usai!"
 
 #. Can't move there!
-#: ../src/five-or-more.c:644
+#: ../src/five-or-more.c:645
 msgid "You can’t move there!"
 msgstr "Anda tidak bisa melangkah ke sana!"
 
-#: ../src/five-or-more.c:1174
+#: ../src/five-or-more.c:1175
 msgid "GNOME port of the once-popular Color Lines game"
 msgstr "Port GNOME dari permainan Color Lines yang pernah populer"
 
-#: ../src/five-or-more.c:1180
+#: ../src/five-or-more.c:1181
 msgid "translator-credits"
 msgstr ""
 "Mohammad DAMT <mdamt@bisnisweb.com>\n"
 "Ahmad Riza H Nst  <rizahnst@gnome.org>\n"
 "Andika Triwidada <andika@gmail.com>, 2010, 2012, 2013, 2014, 2016.\n"
 "Vincent Sebastian The <vincent.s.the@gmail.com>, 2011, 2012.\n"
-"Dirgita <dirgitadevina@yahoo.co.id>, 2012."
+"Dirgita <dirgitadevina@yahoo.co.id>, 2012.\n"
+"Kukuh Syafaat <syafaatkukuh@gmail.com>, 2018."
 
-#: ../src/five-or-more.c:1304
+#: ../src/five-or-more.c:1305
 msgid "Are you sure you want to restart the game?"
 msgstr "Anda yakin hendak memulai ulang permainan?"
 
-#: ../src/five-or-more.c:1307
+#: ../src/five-or-more.c:1308
 msgid "_Cancel"
 msgstr "_Batal"
 
-#: ../src/five-or-more.c:1308
+#: ../src/five-or-more.c:1309
 msgid "_Restart"
 msgstr "_Ulangi"
 
 #. Score dialog column header for the score time (e.g. 1 minute)
-#: ../src/games-scores-dialog.c:132
+#: ../src/games-scores-dialog.c:131
 msgctxt "score-dialog"
 msgid "Time"
 msgstr "Waktu"
 
 #. Score dialog column header for the score value (e.g. 30 moves)
-#: ../src/games-scores-dialog.c:138
+#: ../src/games-scores-dialog.c:137
 msgctxt "score-dialog"
 msgid "Score"
 msgstr "Nilai"
 
 #. Score format for time based scores.  %1$d is the time in minutes, %2$d is the time in seconds
-#: ../src/games-scores-dialog.c:225
+#: ../src/games-scores-dialog.c:224
 #, c-format
 msgctxt "score-dialog"
 msgid "%1$dm %2$ds"
 msgstr "%1$dm %2$ds"
 
-#: ../src/games-scores-dialog.c:371
+#: ../src/games-scores-dialog.c:370
 msgid "_Quit"
 msgstr "_Keluar"
 
-#: ../src/games-scores-dialog.c:378
+#: ../src/games-scores-dialog.c:377
 msgid "_Undo"
 msgstr "_Tak Jadi"
 
-#: ../src/games-scores-dialog.c:392
+#: ../src/games-scores-dialog.c:391
 msgid "_Close"
 msgstr "_Tutup"
 
 #. Score dialog column header for the date the score was recorded
-#: ../src/games-scores-dialog.c:478
+#: ../src/games-scores-dialog.c:477
 msgid "Date"
 msgstr "Tanggal"
