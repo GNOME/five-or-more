@@ -10,18 +10,18 @@
 # Ömer Fadıl USTA <omer_fad@hotmail.com>,2002.
 # Hakan Bekdas <hakanbekdas@yahoo.com>, 2006.
 # Baris Cicek <baris@teamforce.name.tr>, 2004, 2005, 2008, 2009.
-# Muhammet Kara <muhammetk@gmail.com>, 2011, 2014, 2015.
 # Furkan Ahmet Kara <furkanahmetkara.fk@gmail.com>, 2017.
 # Emin Tufan Çetin <etcetin@gmail.com>, 2017.
+# Muhammet Kara <muhammetk@gmail.com>, 2011, 2014, 2015, 2018.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=five-"
 "or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2017-09-02 07:08+0000\n"
-"PO-Revision-Date: 2017-09-10 15:18+0300\n"
-"Last-Translator: Emin Tufan Çetin <etcetin@gmail.com>\n"
+"POT-Creation-Date: 2018-03-03 16:16+0000\n"
+"PO-Revision-Date: 2018-03-11 10:29+0300\n"
+"Last-Translator: Muhammet Kara <muhammetk@gmail.com>\n"
 "Language-Team: Türkçe <gnome-turk@gnome.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
@@ -31,8 +31,8 @@ msgstr ""
 "X-Generator: Gtranslator 2.91.7\n"
 
 #: ../data/five-or-more.appdata.xml.in.h:1 ../data/five-or-more.desktop.in.h:1
-#: ../data/five-or-more.ui.h:1 ../src/five-or-more.c:1175
-#: ../src/five-or-more.c:1726
+#: ../data/five-or-more.ui.h:1 ../src/five-or-more.c:1173
+#: ../src/five-or-more.c:1724
 msgid "Five or More"
 msgstr "Beş veya Fazlası"
 
@@ -69,7 +69,7 @@ msgid "game;strategy;logic;"
 msgstr "oyun;strateji;mantık;"
 
 #: ../data/five-or-more-preferences.ui.h:1 ../data/menu.ui.h:2
-#: ../src/five-or-more.c:171
+#: ../src/five-or-more.c:169
 msgid "Preferences"
 msgstr "Tercihler"
 
@@ -121,7 +121,7 @@ msgstr "0"
 msgid "Score:"
 msgstr "Puan:"
 
-#: ../data/five-or-more.ui.h:5 ../src/games-scores-dialog.c:385
+#: ../data/five-or-more.ui.h:5 ../src/games-scores-dialog.c:384
 msgid "_New Game"
 msgstr "Yeni _Oyun"
 
@@ -215,26 +215,51 @@ msgstr "Piksel olarak pencerenin yüksekliği"
 msgid "true if the window is maximized"
 msgstr "eğer pencere en büyük hale getirilmişse işaretle"
 
-#: ../src/five-or-more.c:80
+#.
+#. * Translatable strings file.
+#. * Add this file to your project's POTFILES.in.
+#. * DO NOT compile it as part of your application.
+#.
+#: ../data/translatable_themes.h:6
+msgctxt "themes"
+msgid "balls"
+msgstr "toplar"
+
+#: ../data/translatable_themes.h:7
+msgctxt "themes"
+msgid "dots"
+msgstr "noktalar"
+
+#: ../data/translatable_themes.h:8
+msgctxt "themes"
+msgid "gumball"
+msgstr "sakız"
+
+#: ../data/translatable_themes.h:9
+msgctxt "themes"
+msgid "shapes"
+msgstr "şekiller"
+
+#: ../src/five-or-more.c:78
 msgctxt "board size"
 msgid "Small"
 msgstr "Küçük"
 
-#: ../src/five-or-more.c:81
+#: ../src/five-or-more.c:79
 msgctxt "board size"
 msgid "Medium"
 msgstr "Orta"
 
-#: ../src/five-or-more.c:82
+#: ../src/five-or-more.c:80
 msgctxt "board size"
 msgid "Large"
 msgstr "Büyük"
 
-#: ../src/five-or-more.c:165
+#: ../src/five-or-more.c:163
 msgid "Could not load theme"
 msgstr "Tema yüklenemedi"
 
-#: ../src/five-or-more.c:191
+#: ../src/five-or-more.c:189
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -247,7 +272,7 @@ msgstr ""
 "\n"
 "Bunun yerine öntanımlı tema yüklenecek."
 
-#: ../src/five-or-more.c:198
+#: ../src/five-or-more.c:196
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -260,81 +285,81 @@ msgstr ""
 "\n"
 "Lütfen Beş veya Fazlası’nın tam olarak kurulu olup olmadığını denetleyin."
 
-#: ../src/five-or-more.c:410
+#: ../src/five-or-more.c:408
 msgid "Match five objects of the same type in a row to score!"
 msgstr "Puan almak için, bir sırada aynı renkten beş nesneyi eşleştirin!"
 
-#: ../src/five-or-more.c:471
+#: ../src/five-or-more.c:469
 msgid "Five or More Scores"
 msgstr "Beş veya Fazlası Puanları"
 
-#: ../src/five-or-more.c:473
+#: ../src/five-or-more.c:471
 msgid "_Board size:"
 msgstr "Tahta _boyutu:"
 
-#: ../src/five-or-more.c:490
+#: ../src/five-or-more.c:488
 msgid "Game Over!"
 msgstr "Oyun Bitti!"
 
 #. Can't move there!
-#: ../src/five-or-more.c:647
+#: ../src/five-or-more.c:645
 msgid "You can’t move there!"
 msgstr "Oraya hareket edemezsin!"
 
-#: ../src/five-or-more.c:1177
+#: ../src/five-or-more.c:1175
 msgid "GNOME port of the once-popular Color Lines game"
 msgstr "Bir zamanların popüler Renkli Çizgiler oyununun GNOME sürümü."
 
-#: ../src/five-or-more.c:1183
+#: ../src/five-or-more.c:1181
 msgid "translator-credits"
 msgstr ""
 "Barış Çiçek <baris@teamforce.name.tr> \n"
 "Muhammet Kara <muhammetk@gmail.com>"
 
-#: ../src/five-or-more.c:1307
+#: ../src/five-or-more.c:1305
 msgid "Are you sure you want to restart the game?"
 msgstr "Oyunu yeniden başlatmak istediğinizden emin misiniz?"
 
-#: ../src/five-or-more.c:1310
+#: ../src/five-or-more.c:1308
 msgid "_Cancel"
 msgstr "İptal _et"
 
-#: ../src/five-or-more.c:1311
+#: ../src/five-or-more.c:1309
 msgid "_Restart"
 msgstr "_Yeniden Başla"
 
 #. Score dialog column header for the score time (e.g. 1 minute)
-#: ../src/games-scores-dialog.c:132
+#: ../src/games-scores-dialog.c:131
 msgctxt "score-dialog"
 msgid "Time"
 msgstr "Süre"
 
 #. Score dialog column header for the score value (e.g. 30 moves)
-#: ../src/games-scores-dialog.c:138
+#: ../src/games-scores-dialog.c:137
 msgctxt "score-dialog"
 msgid "Score"
 msgstr "Puan"
 
 #. Score format for time based scores.  %1$d is the time in minutes, %2$d is the time in seconds
-#: ../src/games-scores-dialog.c:225
+#: ../src/games-scores-dialog.c:224
 #, c-format
 msgctxt "score-dialog"
 msgid "%1$dm %2$ds"
 msgstr "%1$dm %2$ds"
 
-#: ../src/games-scores-dialog.c:371
+#: ../src/games-scores-dialog.c:370
 msgid "_Quit"
 msgstr "_Çıkış"
 
-#: ../src/games-scores-dialog.c:378
+#: ../src/games-scores-dialog.c:377
 msgid "_Undo"
 msgstr "_Geri al"
 
-#: ../src/games-scores-dialog.c:392
+#: ../src/games-scores-dialog.c:391
 msgid "_Close"
 msgstr "_Kapat"
 
 #. Score dialog column header for the date the score was recorded
-#: ../src/games-scores-dialog.c:478
+#: ../src/games-scores-dialog.c:477
 msgid "Date"
 msgstr "Tarih"
