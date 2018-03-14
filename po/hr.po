@@ -6,8 +6,8 @@ msgstr ""
 "Project-Id-Version: gnome-games 0\n"
 "Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=five-"
 "or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2018-03-03 16:16+0000\n"
-"PO-Revision-Date: 2018-03-07 16:18+0100\n"
+"POT-Creation-Date: 2018-03-12 22:13+0000\n"
+"PO-Revision-Date: 2018-03-14 14:54+0100\n"
 "Last-Translator: Launchpad Translations Administrators <rosetta@launchpad."
 "net>\n"
 "Language-Team: Croatian <lokalizacija@linux.hr>\n"
@@ -28,7 +28,7 @@ msgstr "Pet ili više"
 
 #: ../data/five-or-more.appdata.xml.in.h:2 ../data/five-or-more.desktop.in.h:2
 msgid "Remove colored balls from the board by forming lines"
-msgstr "Uklanjaj obojene lopte sa table formirajući linije"
+msgstr "Uklonite obojene lopte s ploče formirajući linije"
 
 #: ../data/five-or-more.appdata.xml.in.h:3
 msgid ""
@@ -147,11 +147,11 @@ msgstr ""
 
 #: ../data/org.gnome.five-or-more.gschema.xml.h:3
 msgid "Ball style"
-msgstr "Stil lopte"
+msgstr "Izgled lopte"
 
 #: ../data/org.gnome.five-or-more.gschema.xml.h:4
 msgid "Ball style. The filename of the images to use for the balls."
-msgstr "Stil lopte. Naziv datoteke slika koju treba koristiti za lopte."
+msgstr "Izgled lopte. Naziv datoteke slika koje se koriste za lopte."
 
 #: ../data/org.gnome.five-or-more.gschema.xml.h:5
 msgid "Background color"
@@ -187,11 +187,11 @@ msgstr "Polje igre iz posljednje spremljene sesije."
 
 #: ../data/org.gnome.five-or-more.gschema.xml.h:13
 msgid "Game preview"
-msgstr "Izgled igre"
+msgstr "Pregled igre"
 
 #: ../data/org.gnome.five-or-more.gschema.xml.h:14
 msgid "Game preview from last saved session."
-msgstr "Izgled igre iz posljednje spremljene sesije."
+msgstr "Pregled igre iz posljednje spremljene sesije."
 
 #: ../data/org.gnome.five-or-more.gschema.xml.h:15
 msgid "Width of the window in pixels"
