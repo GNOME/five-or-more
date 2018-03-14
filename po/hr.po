@@ -7,7 +7,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=five-"
 "or-more&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2018-03-12 22:13+0000\n"
-"PO-Revision-Date: 2018-03-14 14:54+0100\n"
+"PO-Revision-Date: 2018-03-14 14:58+0100\n"
 "Last-Translator: Launchpad Translations Administrators <rosetta@launchpad."
 "net>\n"
 "Language-Team: Croatian <lokalizacija@linux.hr>\n"
@@ -28,7 +28,7 @@ msgstr "Pet ili više"
 
 #: ../data/five-or-more.appdata.xml.in.h:2 ../data/five-or-more.desktop.in.h:2
 msgid "Remove colored balls from the board by forming lines"
-msgstr "Uklonite obojene lopte s ploče formirajući linije"
+msgstr "Uklonite obojene lopte s ploče formirajući redke"
 
 #: ../data/five-or-more.appdata.xml.in.h:3
 msgid ""
