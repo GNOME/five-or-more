@@ -2,7 +2,6 @@ SUBDIRS = data help po src
 
 EXTRA_DIST = \
 	**/meson.build \
-	meson_options.txt \
 	meson_post_install.py \
 	$(NULL)
 
