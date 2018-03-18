@@ -3,6 +3,12 @@
 five_or_more_c_sources = [
 	'five-or-more.c',
 	'five-or-more.h',
+	'game-area.h',
+	'game-area.c',
+	'five-or-more-app.c',
+	'five-or-more-app.h',
+	'balls-preview.c',
+	'balls-preview.h',
 	'games-file-list.c',
 	'games-file-list.h',
 	'games-gridframe.c',
