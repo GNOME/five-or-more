@@ -204,7 +204,7 @@ msgid ""
 "command line."
 msgstr ""
 "<application>Beş ya da Fazlası</application> çalıştırmak için, </"
-"guisubmenu>Ana Menü</guimenu> alt menüsü olan <guisubmenu>Oyunlar</"
+"<guimenu>Ana Menü</guimenu> alt menüsü olan <guisubmenu>Oyunlar</"
 "guisubmenu>'dan <guimenuitem>Beş ya da Fazlası</guimenuitem>'nı seçin, ya da "
 "komut satırında <command>glines</command> yazın."
 
