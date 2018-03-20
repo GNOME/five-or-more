@@ -8,7 +8,6 @@ data/menu.ui
 data/org.gnome.five-or-more.gschema.xml
 data/translatable_themes.h
 src/five-or-more.c
-src/games-scores-dialog.c
 src/five-or-more-app.c
 src/game-area.c
 src/balls-preview.c

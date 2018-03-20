@@ -33,8 +33,8 @@
 #include <gtk/gtk.h>
 #include <gdk-pixbuf/gdk-pixbuf.h>
 #include <gdk/gdkkeysyms.h>
+#include <libgnome-games-support.h>
 
-#include "games-gridframe.h"
 #include "game-area.h"
 #include "five-or-more-app.h"
 #include "balls-preview.h"
@@ -82,8 +82,7 @@ static const gint field_sizes[MAX_SIZE][4] = {
 };
 
 static scoretable sctab[] =
-  { {5, 10}, {6, 12}, {7, 18}, {8, 28}, {9, 42}, {10, 82}, {11, 108}, {12,
-                                                                       138},
+  { {5, 10}, {6, 12}, {7, 18}, {8, 28}, {9, 42}, {10, 82}, {11, 108}, {12, 138},
   {13, 172}, {14, 210}, {0, 0} };
 
 static gchar *warning_message = NULL;
@@ -98,8 +97,6 @@ set_sizes (gint size)
   npieces = field_sizes[size][3];
   gint *game_size = get_game_size();
   *game_size = size;
-  GamesScoresCategory *scorecats = get_scorecats();
-  games_scores_set_category (get_highscores(), scorecats[size - 1].key);
 
   g_settings_set_int (*(get_settings()), KEY_SIZE, size);
   GtkWidget *gridframe = get_gridframe();
@@ -321,7 +318,6 @@ check_gameover (void)
 static int
 addscore (int num)
 {
-  gchar string[20];
   int i = 0;
   int retval;
 
@@ -670,7 +666,6 @@ cell_clicked (GtkWidget * widget, int fx, int fy)
 static gint
 button_press_event (GtkWidget * widget, GdkEvent * event)
 {
-  int x, y;
   int fx, fy;
 
   if (inmove)

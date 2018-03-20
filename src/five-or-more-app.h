@@ -24,7 +24,6 @@
 #define FIVE_OR_MORE_APP_H
 
 #include <gtk/gtk.h>
-#include "games-scores.h"
 
 typedef struct _background background;
 struct _background{
@@ -33,7 +32,6 @@ struct _background{
   gint set;
 } ;
 
-GamesScores                 *get_highscores             ();
 GtkWidget                   *get_gridframe              ();
 char                        *get_ball_filename          ();
 background                   get_backgnd                ();
@@ -41,7 +39,6 @@ void                         set_status_message         (gchar * message);
 void                         game_over                  (void);
 void                         set_application_callbacks  (GtkApplication *application);
 gint                        *get_game_size              ();
-const GamesScoresCategory   *get_scorecats              ();
 GSettings                  **get_settings               ();
 int                          get_move_timeout           ();
 void                         game_props_callback        (GSimpleAction *action,

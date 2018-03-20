@@ -51,7 +51,6 @@ main (int argc, char *argv[])
   bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
   textdomain (GETTEXT_PACKAGE);
 
-  games_scores_startup ();
   GRand **rgen  = get_rgen();
 
   *rgen = g_rand_new ();

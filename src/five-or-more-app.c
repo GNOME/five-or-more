@@ -33,12 +33,10 @@
 #include <gtk/gtk.h>
 #include <gdk-pixbuf/gdk-pixbuf.h>
 #include <gdk/gdkkeysyms.h>
+#include <libgnome-games-support.h>
 
 #include "games-file-list.h"
 #include "games-preimage.h"
-#include "games-gridframe.h"
-#include "games-scores.h"
-#include "games-scores-dialog.h"
 #include "game-area.h"
 #include "five-or-more-app.h"
 #include "balls-preview.h"
@@ -50,7 +48,12 @@
 #define KEY_BACKGROUND_COLOR  "background-color"
 #define KEY_BALL_THEME        "ball-theme"
 
-static const GamesScoresCategory scorecats[] = {
+typedef struct {
+  gchar *key;
+  gchar *name;
+} key_value;
+
+static const key_value scorecats[] = {
   { "Small",  NC_("board size", "Small")  },
   { "Medium", NC_("board size", "Medium") },
   { "Large",  NC_("board size", "Large")  }
@@ -77,7 +80,11 @@ static GtkWidget *size_radio_s, *size_radio_m, *size_radio_l;
 static int move_timeout = 100;
 static gboolean window_is_fullscreen = FALSE, window_is_maximized = FALSE;
 static gint window_width = 0, window_height = 0;
-static GamesScores *highscores;
+
+static gint no_categories = 3;
+static gchar *score_current_category = NULL;
+static GamesScoresContext *highscores;
+
 static GSettings *settings;
 static GtkBuilder *builder;
 static GtkBuilder *builder_preferences;
@@ -91,12 +98,6 @@ GSettings **
 get_settings ()
 {
   return &settings;
-}
-
-const GamesScoresCategory *
-get_scorecats ()
-{
-  return scorecats;
 }
 
 gint *
@@ -127,12 +128,6 @@ int
 get_move_timeout ()
 {
   return move_timeout;
-}
-
-GamesScores *
-get_highscores()
-{
-  return highscores;
 }
 
 void
@@ -170,9 +165,11 @@ set_backgnd_color (const gchar * str)
 }
 
 static void
-show_scores (gint pos)
+show_scores ()
 {
-  static GtkWidget *dialog;
+  games_scores_context_run_dialog (highscores);
+
+/*  static GtkWidget *dialog;
 
   if (dialog == NULL) {
     dialog = games_scores_dialog_new (GTK_WINDOW (app), highscores, _("Five or More Scores"));
@@ -186,7 +183,7 @@ show_scores (gint pos)
 
   gtk_window_present (GTK_WINDOW (dialog));
   gtk_dialog_run (GTK_DIALOG (dialog));
-  gtk_widget_hide (dialog);
+  gtk_widget_hide (dialog);*/
 }
 
 static void
@@ -205,15 +202,46 @@ load_properties (void)
   load_theme ();
 }
 
+static void
+add_score_cb (GObject *source_object, GAsyncResult *res, gpointer user_data)
+{
+  GamesScoresContext *context = GAMES_SCORES_CONTEXT (source_object);
+  GError *error = NULL;
+
+  games_scores_context_add_score_finish (context, res, &error);
+  if (error != NULL) {
+    g_warning ("Failed to add score: %s", error->message);
+    g_error_free (error);
+  }
+}
+
+const gchar *
+category_name_from_key (const gchar *key)
+{
+  int i;
+  for (i = 0; i < no_categories; i++) {
+    if (g_strcmp0 (scorecats[i].key, key) == 0)
+      return scorecats[i].name;
+  }
+  return NULL;
+}
+
 void
 game_over (void)
 {
-  int pos;
 
   set_status_message (_("Game Over!"));
-  if (score > 0)
-    pos = games_scores_add_plain_score (highscores, score);
-  show_scores (pos);
+  if (score > 0) {
+    const gchar *name = category_name_from_key (score_current_category);
+    GamesScoresCategory *current_category = games_scores_category_new (score_current_category, name);
+    games_scores_context_add_score (highscores,
+                                    score,
+                                    current_category,
+                                    NULL,
+                                    add_score_cb,
+                                    NULL);
+  }
+  show_scores ();
 }
 
 static void
@@ -263,6 +291,8 @@ conf_value_changed_cb (GSettings *settings, gchar *key)
 
     if (size_tmp != game_size) {
       set_sizes (size_tmp);
+      score_current_category = scorecats[size_tmp - 1].key;
+
       reset_game ();
       start_game ();
     }
@@ -282,6 +312,7 @@ init_config (void)
   game_size = CLAMP (game_size, SMALL, MAX_SIZE - 1);
 
   set_sizes (game_size);
+  score_current_category = scorecats[game_size - 1].key;
 }
 
 static gboolean
@@ -318,7 +349,7 @@ game_top_ten_callback (GSimpleAction *action,
                        GVariant *parameter,
                        gpointer user_data)
 {
-  show_scores (0);
+  show_scores ();
 }
 
 
@@ -561,6 +592,16 @@ game_quit_callback (GSimpleAction *action,
   g_application_quit (G_APPLICATION (user_data));
 }
 
+static GamesScoresCategory *
+create_category_from_key (const char *key, gpointer user_data)
+{
+  const gchar *name = category_name_from_key (key);
+  if (name == NULL)
+    return NULL;
+
+  return games_scores_category_new (key, name);
+}
+
 void
 startup_cb (GApplication *application)
 {
@@ -570,6 +611,7 @@ startup_cb (GApplication *application)
   GtkWidget *new_game_button;
   guint i;
   GError *error = NULL;
+  GamesScoresDirectoryImporter *importer;
 
   GActionEntry app_actions[] = {
     { "new-game", game_new_callback },
@@ -588,11 +630,6 @@ startup_cb (GApplication *application)
 
   settings = g_settings_new ("org.gnome.five-or-more");
 
-  highscores = games_scores_new ("five-or-more",
-                                 scorecats, G_N_ELEMENTS (scorecats),
-                                 "board size", NULL,
-                                 0 /* default category */,
-                                 GAMES_SCORES_STYLE_PLAIN_DESCENDING);
   init_config ();
   builder = gtk_builder_new ();
   ui_path = g_build_filename (DATA_DIRECTORY, "menu.ui", NULL);
@@ -644,12 +681,21 @@ startup_cb (GApplication *application)
 
   GtkWidget *draw_area = game_area_init ();
 
-  gridframe = games_grid_frame_new (get_hfieldsize(), get_vfieldsize());
+  gridframe = GTK_WIDGET (games_grid_frame_new (get_hfieldsize(), get_vfieldsize()));
   games_grid_frame_set_padding (GAMES_GRID_FRAME (gridframe), 1, 1);
   gtk_container_add (GTK_CONTAINER (gridframe), draw_area);
   gtk_box_pack_start (GTK_BOX (hbox), gridframe, TRUE, TRUE, 0);
 
   new_game_button = GTK_WIDGET (gtk_builder_get_object (builder, "new_game_button"));
+
+  importer = games_scores_directory_importer_new ();
+  highscores = games_scores_context_new_with_importer ("five-or-more",
+                                                      _("Board Size: "),
+                                                      GTK_WINDOW (app),
+                                                      create_category_from_key,
+                                                      NULL,
+                                                      GAMES_SCORES_STYLE_POINTS_GREATER_IS_BETTER,
+                                                      GAMES_SCORES_IMPORTER (importer));
 
   load_properties ();
 

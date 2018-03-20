@@ -27,6 +27,7 @@ PKG_CHECK_MODULES(FIVE_OR_MORE, [
   glib-2.0 >= $GLIB_REQUIRED
   gio-2.0 >= $GLIB_REQUIRED
   gtk+-3.0 >= $GTK_REQUIRED
+  libgnome-games-support-1
   librsvg-2.0 >= $RSVG_REQUIRED
 ])
 

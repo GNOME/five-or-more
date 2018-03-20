@@ -15,11 +15,12 @@ pkgdata_dir = join_paths (data_dir, 'five-or-more')
 # Dependencies
 glib_min_version = '2.32'
 
-librsvg = dependency('librsvg-2.0', version: '>= 2.32.0')
 gio = dependency('gio-2.0', version: '>= ' + glib_min_version)
 glib = dependency('glib-2.0', version: '>= ' + glib_min_version)
 gmodule_export = dependency('gmodule-export-2.0')
 gtk = dependency('gtk+-3.0', version: '>= 3.20.0')
+libgnome_games_support = dependency('libgnome-games-support-1')
+librsvg = dependency('librsvg-2.0', version: '>= 2.32.0')
 
 # Libraries
 cc = meson.get_compiler('c')

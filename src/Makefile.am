@@ -8,14 +8,6 @@ five_or_more_SOURCES =	\
 	games-gridframe.h	\
 	games-preimage.c	\
 	games-preimage.h	\
-	games-score.h			\
-	games-score.c			\
-	games-scores.c			\
-	games-scores.h			\
-	games-scores-dialog.c	\
-	games-scores-dialog.h	\
-	games-scores-backend.c	\
-	games-scores-backend.h \
 	five-or-more-app.h \
 	five-or-more-app.c \
 	balls-preview.c \

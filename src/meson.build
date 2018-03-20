@@ -10,18 +10,8 @@ five_or_more_c_sources = [
 	'balls-preview.h',
 	'games-file-list.c',
 	'games-file-list.h',
-	'games-gridframe.c',
-	'games-gridframe.h',
 	'games-preimage.c',
-	'games-preimage.h',
-	'games-score.c',
-	'games-score.h',
-	'games-scores-backend.c',
-	'games-scores-backend.h',
-	'games-scores-dialog.c',
-	'games-scores-dialog.h',
-	'games-scores.c',
-	'games-scores.h'
+	'games-preimage.h'
 ]
 
 five_or_more_sources = [
@@ -29,11 +19,12 @@ five_or_more_sources = [
 ]
 
 five_or_more_deps = [
-	libmath,
-	librsvg,
 	glib,
 	gio,
-	gtk
+	gtk,
+	libgnome_games_support,
+	libmath,
+	librsvg
 ]
 
 five_or_more_includes = [
