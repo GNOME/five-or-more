@@ -67,7 +67,7 @@ main (int argc, char *argv[])
     exit (1);
   }
 
-  g_set_application_name (_("Five Or More"));
+  g_set_application_name (_("Five or More"));
 
   gtk_window_set_default_icon_name ("five-or-more");
 
