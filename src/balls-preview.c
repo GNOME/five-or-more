@@ -80,7 +80,7 @@ refresh_preview_surfaces (void)
   GdkPixbuf *scaled = NULL;
   GtkWidget *widget = GTK_WIDGET (preview_images[0]);
   GtkStyleContext *context;
-  GdkRGBA bg;
+  GdkRGBA *bg = NULL;
   cairo_t *cr;
   GdkRectangle preview_rect;
   cairo_surface_t *blank_preview_surface = NULL;
@@ -88,7 +88,9 @@ refresh_preview_surfaces (void)
   cairo_surface_t *preview_surface = NULL;
 
   context = gtk_widget_get_style_context (widget);
-  gtk_style_context_get_background_color (context, gtk_style_context_get_state (context), &bg);
+  gtk_style_context_get (context, gtk_style_context_get_state (context),
+                                  GTK_STYLE_PROPERTY_BACKGROUND_COLOR,
+                                  &bg, NULL);
 
   /* Like the refresh_pixmaps() function, we may be called before
    * the window is ready. */
@@ -119,7 +121,7 @@ refresh_preview_surfaces (void)
                                                                CAIRO_FORMAT_ARGB32,
                                                                PREVIEW_IMAGE_WIDTH, PREVIEW_IMAGE_HEIGHT, 1);
     cr = cairo_create (preview_surface);
-    gdk_cairo_set_source_rgba (cr, &bg);
+    gdk_cairo_set_source_rgba (cr, bg);
     gdk_cairo_rectangle (cr, &preview_rect);
     cairo_fill (cr);
 
@@ -140,13 +142,14 @@ refresh_preview_surfaces (void)
                                                              CAIRO_CONTENT_COLOR_ALPHA,
                                                              PREVIEW_IMAGE_WIDTH, PREVIEW_IMAGE_HEIGHT);
   cr = cairo_create (blank_preview_surface);
-  gdk_cairo_set_source_rgba (cr, &bg);
+  gdk_cairo_set_source_rgba (cr, bg);
   gdk_cairo_rectangle (cr, &preview_rect);
   cairo_fill (cr);
 
   cairo_surface_destroy (blank_preview_surface);
   cairo_destroy (cr);
   g_object_unref (scaled);
+  gdk_rgba_free(bg);
 }
 
 GtkImage **

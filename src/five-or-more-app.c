@@ -392,7 +392,7 @@ bg_color_callback (GtkWidget * widget, gpointer data)
 static void
 size_callback (GtkWidget * widget, gpointer data)
 {
-  GtkWidget *size_radio, *content_area, *label;
+  GtkWidget *size_radio;
 
   game_size = g_settings_get_int (settings, KEY_SIZE);
   if (pref_dialog_done && game_size != GPOINTER_TO_INT (data) && !restart_game_dialog) {
@@ -419,14 +419,17 @@ size_callback (GtkWidget * widget, gpointer data)
     case GTK_RESPONSE_CANCEL:
       switch (game_size) {
       case SMALL:
-	size_radio = size_radio_s;
-	break;
+        size_radio = size_radio_s;
+        break;
       case MEDIUM:
-	size_radio = size_radio_m;
-	break;
+        size_radio = size_radio_m;
+        break;
       case LARGE:
-	size_radio = size_radio_l;
-	break;
+        size_radio = size_radio_l;
+        break;
+      default:
+        size_radio = size_radio_m;
+        break;
       }
       gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (size_radio), TRUE);
     }
@@ -548,7 +551,7 @@ game_help_callback (GSimpleAction *action,
 {
   GError *error = NULL;
 
-  gtk_show_uri (gtk_widget_get_screen (GTK_WIDGET (app)), "help:five-or-more", gtk_get_current_event_time (), &error);
+  gtk_show_uri_on_window (GTK_WINDOW (app), "help:five-or-more", gtk_get_current_event_time (), &error);
   if (error)
     g_warning ("Failed to show help: %s", error->message);
   g_clear_error (&error);
@@ -608,7 +611,6 @@ startup_cb (GApplication *application)
   gchar *ui_path;
   GtkWidget *hbox;
   GtkWidget *preview_hbox;
-  GtkWidget *new_game_button;
   guint i;
   GError *error = NULL;
   GamesScoresDirectoryImporter *importer;
@@ -626,7 +628,8 @@ startup_cb (GApplication *application)
                                    app_actions, G_N_ELEMENTS (app_actions),
                                    application);
 
-  gtk_application_add_accelerator (GTK_APPLICATION (application), "<Primary>N", "app.new-game", NULL);
+  const gchar *accels[] = { "<Primary>N", NULL };
+  gtk_application_set_accels_for_action (GTK_APPLICATION (application), "app.new-game", accels);
 
   settings = g_settings_new ("org.gnome.five-or-more");
 
@@ -685,8 +688,6 @@ startup_cb (GApplication *application)
   games_grid_frame_set_padding (GAMES_GRID_FRAME (gridframe), 1, 1);
   gtk_container_add (GTK_CONTAINER (gridframe), draw_area);
   gtk_box_pack_start (GTK_BOX (hbox), gridframe, TRUE, TRUE, 0);
-
-  new_game_button = GTK_WIDGET (gtk_builder_get_object (builder, "new_game_button"));
 
   importer = games_scores_directory_importer_new ();
   highscores = games_scores_context_new_with_importer ("five-or-more",
