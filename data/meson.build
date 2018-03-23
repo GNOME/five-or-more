@@ -5,7 +5,7 @@ i18n.merge_file(
 	type: 'desktop',
 	po_dir: po_dir,
 	install: true,
-	install_dir: join_paths(pkgdata_dir, 'applications')
+	install_dir: join_paths(data_dir, 'applications')
 )
 
 # Themes
@@ -39,7 +39,7 @@ i18n.merge_file(
 	type: 'xml',
 	po_dir: po_dir,
 	install: true,
-	install_dir: join_paths(pkgdata_dir, 'metainfo'),
+	install_dir: join_paths(data_dir, 'metainfo'),
 )
 
 # Gschema
