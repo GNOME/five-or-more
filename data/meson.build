@@ -17,17 +17,20 @@ endforeach
 
 # UI files
 foreach file: ['five-or-more.ui', 'five-or-more-preferences.ui', 'menu.ui']
-	install_data (file,
+	install_data(file,
 		install_dir: join_paths(pkgdata_dir)
 	)
 endforeach
 
 # Icons
 foreach size: [ '16x16', '22x22', '24x24', '32x32', '48x48', '256x256', '512x512' ]
-    install_data (join_paths ('icons', 'hicolor', size, 'five-or-more.png'),
-                  install_dir: join_paths (data_dir, 'icons', 'hicolor', size, 'apps'))
+    install_data(join_paths('icons', 'hicolor', size, 'five-or-more.png'),
+                 install_dir: join_paths (data_dir, 'icons', 'hicolor', size, 'apps')
+    )
 endforeach
-install_data (join_paths ('icons', 'hicolor', 'symbolic', 'five-or-more-symbolic.svg'),
+
+install_data(join_paths('icons', 'hicolor', 'symbolic', 'five-or-more-symbolic.svg'),
+             install_dir: join_paths (data_dir, 'icons', 'hicolor', 'symbolic', 'apps'))
 
 # Appdata
 i18n.merge_file(
@@ -36,7 +39,7 @@ i18n.merge_file(
 	type: 'xml',
 	po_dir: po_dir,
 	install: true,
-	install_dir: join_paths(pkgdata_dir, 'meta-info')
+	install_dir: join_paths(pkgdata_dir, 'meta-info'),
 )
 
 # Gschema
