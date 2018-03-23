@@ -23,10 +23,11 @@ foreach file: ['five-or-more.ui', 'five-or-more-preferences.ui', 'menu.ui']
 endforeach
 
 # Icons
-install_subdir('icons',
-  install_dir: join_paths(pkgdata_dir),
-  exclude_files: [ 'Makefile', 'Makefile.in', 'Makefile.am', 'five-or-more-src.svg' ],
-)
+foreach size: [ '16x16', '22x22', '24x24', '32x32', '48x48', '256x256', '512x512' ]
+    install_data (join_paths ('icons', 'hicolor', size, 'five-or-more.png'),
+                  install_dir: join_paths (data_dir, 'icons', 'hicolor', size, 'apps'))
+endforeach
+install_data (join_paths ('icons', 'hicolor', 'symbolic', 'five-or-more-symbolic.svg'),
 
 # Appdata
 i18n.merge_file(
@@ -40,7 +41,7 @@ i18n.merge_file(
 
 # Gschema
 install_data('org.gnome.five-or-more.gschema.xml',
-	install_dir: join_paths(pkgdata_dir, 'appdata')
+	install_dir: join_paths(data_dir, 'glib-2.0', 'schemas')
 )
 
 # Manpage
