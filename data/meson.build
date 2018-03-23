@@ -39,7 +39,7 @@ i18n.merge_file(
 	type: 'xml',
 	po_dir: po_dir,
 	install: true,
-	install_dir: join_paths(pkgdata_dir, 'meta-info'),
+	install_dir: join_paths(pkgdata_dir, 'metainfo'),
 )
 
 # Gschema
