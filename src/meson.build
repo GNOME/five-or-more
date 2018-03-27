@@ -19,12 +19,12 @@ five_or_more_sources = [
 ]
 
 five_or_more_deps = [
-	glib,
-	gio,
-	gtk,
-	libgnome_games_support,
-	libmath,
-	librsvg
+	glib_dep,
+	gio_dep,
+	gtk_dep,
+	libgnome_games_support_dep,
+	libmath_dep,
+	librsvg_dep,
 ]
 
 five_or_more_includes = [
