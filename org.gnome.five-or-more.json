@@ -4,6 +4,9 @@
     "runtime-version": "3.28",
     "sdk": "org.gnome.Sdk",
     "command": "five-or-more",
+    "tags" : [
+        "nightly"
+    ],
     "rename-icon": "five-or-more",
     "rename-desktop-file":"five-or-more.desktop",
     "desktop-file-name-prefix" : "(Nightly) ",
@@ -11,7 +14,6 @@
         "--share=ipc",
         "--socket=x11",
         "--socket=wayland",
-        "--socket=system-bus",
         "--filesystem=xdg-run/dconf",
         "--filesystem=~/.config/dconf:ro",
         "--talk-name=ca.desrt.dconf",
