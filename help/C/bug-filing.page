@@ -18,26 +18,24 @@
 
 <title>Report a Problem</title>
 <p>
-   <app>Five or More</app> is maintained by a volunteer community. You are welcome to participate.  If you notice a problem you can file a <em>bug report</em>. To file a bug, go to <link href = "https://bugzilla.gnome.org/"/>.
+   <app>Five or More</app> is maintained by a volunteer community. You are welcome to participate.  If you notice a problem you can file a <em>bug report</em>. To file a bug, go to <link href = "https://gitlab.gnome.org/GNOME/five-or-more/issues/new"/>.
    </p>
    <p>
    This is a bug tracking system where users and developers can file details about bugs, crashes and request enhancements.  
    </p>
    <p>
-   To participate you need an account which will give you the ability to gain access, file bugs, and make comments.  Also, you need to register so you can receive updates by e-mail about the status of your bug. If you don't already have an account, just click on the <gui>New Account</gui> link to create one.
+   To participate you have to log in, which will give you the ability to gain access, file bugs, and make comments.  Also, you need to log in using one of your existing accounts or register a new account so you can receive updates by e-mail about the status of your bug. If you don't already have an account and don't want to use any of the available log in options, just click on the <gui>Register</gui> link to create one.
    </p>
 
-  <p>Once you have an account, log in, click on <guiseq><gui>File a
-  Bug</gui><gui>Applications</gui><gui>five-or-more</gui></guiseq>. Before
+  <p>Once you have an account, log in, click on <guiseq><gui>Projects</gui><gui>five-or-more</gui><gui>Issues</gui><gui>New issue</gui></guiseq>. Before
   reporting a bug, please read the
   <link href="https://bugzilla.gnome.org/page.cgi?id=bug-writing.html">bug
   writing guidelines</link>, and please
-  <link href="https://bugzilla.gnome.org/browse.cgi?product=five-or-more">browse</link>
+  <link href="https://gitlab.gnome.org/GNOME/five-or-more/issues">browse</link>
   for the bug to see if it already exists.</p>
 
    <p>
-   If you are requesting a new feature, choose <gui>enhancement</gui> in the <gui>Severity</gui> menu.
-   Fill in the Summary and Description sections and click <gui>Submit Bug</gui>.
+   Fill in the Title and Description sections and click <gui>Submit issue</gui>.
    </p>
    <p>
       Your report will be given an ID number, and its status will be updated as it is being dealt with.
