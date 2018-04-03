@@ -10,10 +10,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.HEAD.ro\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-31 22:32+0100\n"
-"PO-Revision-Date: 2011-03-16 17:36+0200\n"
-"Last-Translator: Lucian Adrian Grijincu <lucian.grijincu@gmail.com>\n"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=five-"
+"or-more&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2018-03-17 14:01+0000\n"
+"PO-Revision-Date: 2018-04-02 23:12+0300\n"
+"Last-Translator: Florentina Mușat <florentina.musat.28@gmail.com>\n"
 "Language-Team: Romanian Gnome Team <gnomero-list@lists.sourceforge.net>\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
@@ -21,7 +22,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2);;\n"
-"X-Generator: Virtaal 0.6.1\n"
+"X-Generator: Poedit 2.0.6\n"
 "X-Launchpad-Export-Date: 2009-11-27 09:12+0000\n"
 
 #: ../data/five-or-more.appdata.xml.in.h:1 ../data/five-or-more.desktop.in.h:1
@@ -41,20 +42,27 @@ msgid ""
 "score points. Earn many more points by lining up as many objects as possible "
 "before clearing them."
 msgstr ""
+"Cinci sau mai multe este portarea GNOME a unui joc pe calculator odinioară "
+"popular. Aliniați cinci sau mai multe obiecte de aceeași culoare într-o "
+"linie pentru a le face să dispară și a înscrie puncte. Câștigați mult mai "
+"multe puncte prin alinierea a cât mai multor obiecte posibil înainte de a le "
+"elibera."
 
 #: ../data/five-or-more.appdata.xml.in.h:4
 msgid ""
 "More objects appear after every turn. Play for as long as possible, until "
 "the board is completely full!"
 msgstr ""
+"Mai multe obiecte apar după fiecare rundă. Jucați cât mai mult timp posibil, "
+"până când tabla este completă!"
 
 #: ../data/five-or-more.appdata.xml.in.h:5
 msgid "The GNOME Project"
-msgstr ""
+msgstr "Proiectul GNOME"
 
 #: ../data/five-or-more.desktop.in.h:3
 msgid "game;strategy;logic;"
-msgstr ""
+msgstr "game;strategy;logic;joc;strategie;logică;"
 
 #: ../data/five-or-more-preferences.ui.h:1 ../data/menu.ui.h:2
 #: ../src/five-or-more.c:169
@@ -99,10 +107,9 @@ msgstr "_Folosește mutări rapide"
 
 #: ../data/five-or-more.ui.h:2
 msgid "Next:"
-msgstr "Următoarele:"
+msgstr "Următorul:"
 
 #: ../data/five-or-more.ui.h:3
-#, fuzzy
 msgid "0"
 msgstr "0"
 
@@ -115,9 +122,8 @@ msgid "_New Game"
 msgstr "Joc _nou"
 
 #: ../data/five-or-more.ui.h:6
-#, fuzzy
 msgid "Start a new puzzle"
-msgstr "Pornește un joc nou"
+msgstr "Începe un puzzle nou"
 
 #: ../data/menu.ui.h:1
 msgid "Scores"
@@ -195,18 +201,41 @@ msgid "Game preview from last saved session."
 msgstr "Previzualizare joc de la ultima sesiune salvată."
 
 #: ../data/org.gnome.five-or-more.gschema.xml.h:15
-#, fuzzy
 msgid "Width of the window in pixels"
-msgstr "Mărimea în pixeli a ferestrei principale."
+msgstr "Lățimea ferestrei în pixeli"
 
 #: ../data/org.gnome.five-or-more.gschema.xml.h:16
-#, fuzzy
 msgid "Height of the window in pixels"
-msgstr "Înălțimea în pixeli a ferestrei principale."
+msgstr "Înălțimea ferestrei în pixeli"
 
 #: ../data/org.gnome.five-or-more.gschema.xml.h:17
 msgid "true if the window is maximized"
-msgstr ""
+msgstr "adevărat dacă fereastra este maximizată"
+
+#.
+#. * Translatable strings file.
+#. * Add this file to your project's POTFILES.in.
+#. * DO NOT compile it as part of your application.
+#.
+#: ../data/translatable_themes.h:6
+msgctxt "themes"
+msgid "balls"
+msgstr "bile"
+
+#: ../data/translatable_themes.h:7
+msgctxt "themes"
+msgid "dots"
+msgstr "puncte"
+
+#: ../data/translatable_themes.h:8
+msgctxt "themes"
+msgid "gumball"
+msgstr "bilă de gumă"
+
+#: ../data/translatable_themes.h:9
+msgctxt "themes"
+msgid "shapes"
+msgstr "forme"
 
 #: ../src/five-or-more.c:78
 msgctxt "board size"
@@ -225,7 +254,7 @@ msgstr "Mare"
 
 #: ../src/five-or-more.c:163
 msgid "Could not load theme"
-msgstr "Nu am putut încărca tema"
+msgstr "Nu s-a putut încărca tema"
 
 #: ../src/five-or-more.c:189
 #, c-format
@@ -235,7 +264,7 @@ msgid ""
 "\n"
 "The default theme will be loaded instead."
 msgstr ""
-"Nu am putut localiza fișierul:\n"
+"Nu s-a putut localiza fișierul:\n"
 "%s\n"
 "\n"
 "Tema implicită va fi încărcată în schimb."
@@ -248,7 +277,7 @@ msgid ""
 "\n"
 "Please check that Five or More is installed correctly."
 msgstr ""
-"Nu am putut localiza fișierul:\n"
+"Nu s-a putut localiza fișierul:\n"
 "%s\n"
 "\n"
 "Verificați dacă jocul „Cinci sau mai multe” este instalat corect."
@@ -258,13 +287,12 @@ msgid "Match five objects of the same type in a row to score!"
 msgstr "Potriviți cinci obiecte de același tip într-o linie pentru a puncta!"
 
 #: ../src/five-or-more.c:469
-#, fuzzy
 msgid "Five or More Scores"
-msgstr "Cinci sau mai multe"
+msgstr "Scoruri cinci sau mai multe"
 
 #: ../src/five-or-more.c:471
 msgid "_Board size:"
-msgstr "_Dimensiune tablă:"
+msgstr "_Dimensiunea tablei:"
 
 #: ../src/five-or-more.c:488
 msgid "Game Over!"
@@ -272,23 +300,19 @@ msgstr "Jocul s-a terminat!"
 
 #. Can't move there!
 #: ../src/five-or-more.c:645
-#, fuzzy
 msgid "You can’t move there!"
-msgstr "Nu puteți muta acolo!"
+msgstr "Nu se poate muta acolo!"
 
 #: ../src/five-or-more.c:1175
-#, fuzzy
 msgid "GNOME port of the once-popular Color Lines game"
-msgstr ""
-"Jocul este o adaptare pentru GNOME a cunoscutului joc Color Lines.\n"
-"\n"
-"„Cinci sau mai multe” face parte din suita de Jocuri GNOME."
+msgstr "Portare GNOME al jocului odinioară popular Colorează liniile"
 
 #: ../src/five-or-more.c:1181
 msgid "translator-credits"
 msgstr ""
 "Mugurel Tudor <mugurelu@gnome.ro>\n"
 "Lucian Adrian Grijincu <lucian.grijincu@gmail.com>\n"
+"Florentina Mușat <florentina.musat.28@gmail.com>\n"
 "\n"
 "Launchpad Contributions:\n"
 "  Adi Roiban https://launchpad.net/~adiroiban\n"
@@ -307,13 +331,12 @@ msgstr ""
 "  leandrud https://launchpad.net/~leandrud"
 
 #: ../src/five-or-more.c:1305
-#, fuzzy
 msgid "Are you sure you want to restart the game?"
-msgstr "Doriți să ieșiți?"
+msgstr "Sigur doriți să reîncepeți jocul?"
 
 #: ../src/five-or-more.c:1308
 msgid "_Cancel"
-msgstr "A_nulare"
+msgstr "_Anulează"
 
 #: ../src/five-or-more.c:1309
 msgid "_Restart"
@@ -321,33 +344,30 @@ msgstr "_Reîncepe"
 
 #. Score dialog column header for the score time (e.g. 1 minute)
 #: ../src/games-scores-dialog.c:131
-#, fuzzy
 msgctxt "score-dialog"
 msgid "Time"
 msgstr "Timp"
 
 #. Score dialog column header for the score value (e.g. 30 moves)
 #: ../src/games-scores-dialog.c:137
-#, fuzzy
 msgctxt "score-dialog"
 msgid "Score"
 msgstr "Scor"
 
 #. Score format for time based scores.  %1$d is the time in minutes, %2$d is the time in seconds
 #: ../src/games-scores-dialog.c:224
-#, fuzzy, c-format
+#, c-format
 msgctxt "score-dialog"
 msgid "%1$dm %2$ds"
-msgstr "%dm %ds"
+msgstr "%1$dm %2$ds"
 
 #: ../src/games-scores-dialog.c:370
-#, fuzzy
 msgid "_Quit"
-msgstr "Ieșire"
+msgstr "_Ieșire"
 
 #: ../src/games-scores-dialog.c:377
 msgid "_Undo"
-msgstr "An_ulează mutarea"
+msgstr "An_ulează"
 
 #: ../src/games-scores-dialog.c:391
 msgid "_Close"
@@ -356,4 +376,4 @@ msgstr "În_chide"
 #. Score dialog column header for the date the score was recorded
 #: ../src/games-scores-dialog.c:477
 msgid "Date"
-msgstr ""
+msgstr "Dată"
