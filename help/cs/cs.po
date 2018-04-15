@@ -1,15 +1,15 @@
 # Czech translation of glines help.
 # Copyright (C) 2009 the author(s) of gnome-games.
 # This file is distributed under the same license as the glines help.
-# Marek Černocký <marek@manet.cz>, 2009, 2013, 2017.
+# Marek Černocký <marek@manet.cz>, 2009, 2013, 2017, 2018.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games gnome-2-28\n"
-"POT-Creation-Date: 2017-07-31 12:01+0000\n"
-"PO-Revision-Date: 2017-08-05 16:15+0200\n"
+"POT-Creation-Date: 2018-03-27 20:38+0000\n"
+"PO-Revision-Date: 2018-04-15 23:39+0200\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
-"Language-Team: Czech <gnome-cs-list@gnome.org>\n"
+"Language-Team: čeština <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,7 +18,7 @@ msgstr ""
 "X-Poedit-Language: Czech\n"
 "X-Poedit-Country: CZECH REPUBLIC\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Gtranslator 2.91.6\n"
+"X-Generator: Gtranslator 2.91.7\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -56,12 +56,13 @@ msgstr "Hlaste problémy"
 msgid ""
 "<app>Five or More</app> is maintained by a volunteer community. You are "
 "welcome to participate. If you notice a problem you can file a <em>bug "
-"report</em>. To file a bug, go to <link href=\"https://bugzilla.gnome.org/\"/"
-">."
+"report</em>. To file a bug, go to <link href=\"https://gitlab.gnome.org/"
+"GNOME/five-or-more/issues/new\"/>."
 msgstr ""
 "O hru <app>Pět nebo víc</app> se stará komunita dobrovolníků. Vaše případná "
 "účast bude vítána. Pokud si povšimnete nějakého problému, můžete vyplnit "
-"<em>chybové hlášení</em> na <link href=\"https://bugzilla.gnome.org/\"/>."
+"<em>chybové hlášení</em> na <link href=\"https://gitlab.gnome.org/GNOME/"
+"five-or-more/issues/new\"/>."
 
 #. (itstool) path: page/p
 #: C/bug-filing.page:23
@@ -76,46 +77,47 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/bug-filing.page:26
 msgid ""
-"To participate you need an account which will give you the ability to gain "
-"access, file bugs, and make comments. Also, you need to register so you can "
-"receive updates by e-mail about the status of your bug. If you don't already "
-"have an account, just click on the <gui>New Account</gui> link to create one."
+"To participate you have to log in, which will give you the ability to gain "
+"access, file bugs, and make comments. Also, you need to log in using one of "
+"your existing accounts or register a new account so you can receive updates "
+"by e-mail about the status of your bug. If you don't already have an account "
+"and don't want to use any of the available log in options, just click on the "
+"<gui>Register</gui> link to create one."
 msgstr ""
 "Abyste se mohli zapojit, musíte si vytvořit účet, díky kterému získáte "
-"přistup, můžete hlásit chyby a psát komentáře. Registraci potřebujete také k "
+"přistup, můžete hlásit chyby a psát komentáře. Účet potřebujete také k "
 "tomu, aby vám přicházely na e-mail informace o stavu vaší chyby. Jestli účet "
-"zatím nemáte, stačí pro vytvoření kliknout na odkaz <gui>Nový účet</gui>."
+"zatím nemáte, a nechcete použít některou z dostupných možností pro přihlášení "
+"přes externí účty, vytvořte si nový účet kliknutím na <gui>Register</gui>."
 
 #. (itstool) path: page/p
 #: C/bug-filing.page:30
 msgid ""
-"Once you have an account, log in, click on <guiseq><gui>File a Bug</"
-"gui><gui>Applications</gui><gui>five-or-more</gui></guiseq>. Before "
-"reporting a bug, please read the <link href=\"https://bugzilla.gnome.org/"
-"page.cgi?id=bug-writing.html\">bug writing guidelines</link>, and please "
-"<link href=\"https://bugzilla.gnome.org/browse.cgi?product=five-or-more"
-"\">browse</link> for the bug to see if it already exists."
+"Once you have an account, log in, click on <guiseq><gui>Projects</"
+"gui><gui>five-or-more</gui><gui>Issues</gui><gui>New issue</gui></guiseq>. "
+"Before reporting a bug, please read the <link href=\"https://bugzilla.gnome."
+"org/page.cgi?id=bug-writing.html\">bug writing guidelines</link>, and please "
+"<link href=\"https://gitlab.gnome.org/GNOME/five-or-more/issues\">browse</"
+"link> for the bug to see if it already exists."
 msgstr ""
-"Když už účet máte, přihlaste se, klikněte na <guiseq><gui>File a Bug</"
-"gui><gui>Applications</gui><gui>five-or-more</gui></guiseq>. Před nahlášením "
-"chyby si prosím přečtěte <link href=\"https://bugzilla.gnome.org/page.cgi?"
-"id=bug-writing.html\">přiručku k hlášení chyb</link> (odkaz je v angličtině) "
-"a <link href=\"https://bugzilla.gnome.org/browse.cgi?product=five-or-more"
-"\">podívejte</link> se prosím, jestli stejnou chybu nenahlásil už někdo jiný."
+"Když už účet máte, přihlaste se a klikněte na <guiseq><gui>Projects</"
+"gui><gui>five-or-more</gui><gui>Issues</gui><gui>New issue</gui></guiseq>. "
+"Před nahlášením chyby si prosím přečtěte <link href=\"https://bugzilla.gnome."
+"org/page.cgi?id=bug-writing.html\">přiručku k hlášení chyb</link> (odkaz je v "
+"angličtině) a <link href=\"https://gitlab.gnome.org/GNOME/five-or-more/"
+"issues\">podívejte</link> se prosím, jestli stejnou chybu nenahlásil již "
+"někdo jiný."
 
 #. (itstool) path: page/p
-#: C/bug-filing.page:38
+#: C/bug-filing.page:37
 msgid ""
-"If you are requesting a new feature, choose <gui>enhancement</gui> in the "
-"<gui>Severity</gui> menu. Fill in the Summary and Description sections and "
-"click <gui>Submit Bug</gui>."
+"Fill in the Title and Description sections and click <gui>Submit issue</gui>."
 msgstr ""
-"V případě, že žádáte o novou funkčnost, zvolte v nabídce <gui>Severity</gui> "
-"položku <gui>enhancement</gui>. Vyplňte pole Summary a Description a "
-"klikněte na <gui>Submit Bug</gui>."
+"Vyplňte pole <gui>Title</gui> a <gui>Description</gui> a klikněte na "
+"<gui>Submit issue</gui>."
 
 #. (itstool) path: page/p
-#: C/bug-filing.page:42
+#: C/bug-filing.page:40
 msgid ""
 "Your report will be given an ID number, and its status will be updated as it "
 "is being dealt with."
@@ -1034,4 +1036,3 @@ msgid ""
 msgstr ""
 "Případně můžete kontaktovat Internacionalizační tým přes jeho <link href="
 "\"http://mail.gnome.org/mailman/listinfo/gnome-i18n\">poštovní konferenci</"
-"link>."
