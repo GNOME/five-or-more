@@ -2,34 +2,33 @@
 # Copyright 2011 Free Software Foundation, Inc.
 # Aron Xu <aronxu@gnome.org>, 2011.
 # YunQiang Su <wzssyqa@gmail.com>, 2011, 2012.
+# Mingcong Bai <jeffbai@aosc.xyz>, 2018.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-"
-"or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-10-29 18:51+0000\n"
-"PO-Revision-Date: 2016-10-30 02:52+0800\n"
-"Last-Translator: liushuyu <liushuyu_011@126.com>\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/five-or-more/issues\n"
+"POT-Creation-Date: 2018-03-27 17:19+0000\n"
+"PO-Revision-Date: 2018-05-10 12:04-0500\n"
+"Last-Translator: Mingcong Bai <jeffbai@aosc.xyz>\n"
 "Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 1.8.11\n"
+"X-Generator: Poedit 2.0.6\n"
 
-#: ../data/five-or-more.appdata.xml.in.h:1 ../data/five-or-more.desktop.in.h:1
-#: ../data/five-or-more.ui.h:1 ../src/five-or-more.c:1175
-#: ../src/five-or-more.c:1726
+#: data/five-or-more.appdata.xml.in:7 data/five-or-more.desktop.in:3
+#: data/five-or-more.ui:18 src/five-or-more.c:70 src/five-or-more-app.c:573
 msgid "Five or More"
 msgstr "连珠消球"
 
-#: ../data/five-or-more.appdata.xml.in.h:2 ../data/five-or-more.desktop.in.h:2
+#: data/five-or-more.appdata.xml.in:8 data/five-or-more.desktop.in:4
 msgid "Remove colored balls from the board by forming lines"
 msgstr "将彩球连成一线以消去"
 
-#: ../data/five-or-more.appdata.xml.in.h:3
+#: data/five-or-more.appdata.xml.in:10
 msgid ""
 "Five or More is the GNOME port of a once-popular computer game. Align five "
 "or more objects of the same color into a line to cause them to disappear and "
@@ -39,186 +38,249 @@ msgstr ""
 "Five or More 是曾经风行的计算机游戏连珠消球的 GNOME 移植版本。将同色的五个或"
 "更多个物体连成一线来消除它们并得分。一次连线消除得越多，得分越高。"
 
-#: ../data/five-or-more.appdata.xml.in.h:4
+#: data/five-or-more.appdata.xml.in:16
 msgid ""
 "More objects appear after every turn. Play for as long as possible, until "
 "the board is completely full!"
 msgstr "每轮后新的物体会出现。想办法玩下去，不要让棋盘被塞满！"
 
-#: ../data/five-or-more.appdata.xml.in.h:5
+#: data/five-or-more.appdata.xml.in:40
 msgid "The GNOME Project"
 msgstr "GNOME 项目"
 
-#: ../data/five-or-more.desktop.in.h:3
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/five-or-more.desktop.in:6
 msgid "game;strategy;logic;"
 msgstr "game;strategy;logic;游戏;策略;逻辑;"
 
-#: ../data/five-or-more-preferences.ui.h:1 ../data/menu.ui.h:2
-#: ../src/five-or-more.c:171
+#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
+#: data/five-or-more.desktop.in:9
+msgid "five-or-more"
+msgstr "five-or-more"
+
+#: data/five-or-more-preferences.ui:12 data/menu.ui:11 src/game-area.c:858
 msgid "Preferences"
 msgstr "首选项"
 
-#: ../data/five-or-more-preferences.ui.h:2
+#: data/five-or-more-preferences.ui:35
 msgid "Appearance"
 msgstr "外观"
 
-#: ../data/five-or-more-preferences.ui.h:3
+#: data/five-or-more-preferences.ui:59
 msgid "_Image:"
 msgstr "图像(_I)："
 
-#: ../data/five-or-more-preferences.ui.h:4
+#: data/five-or-more-preferences.ui:74
 msgid "B_ackground color:"
 msgstr "背景颜色(_A)："
 
-#: ../data/five-or-more-preferences.ui.h:5
+#: data/five-or-more-preferences.ui:116
 msgid "Board Size"
 msgstr "盘面大小"
 
-#: ../data/five-or-more-preferences.ui.h:6
+#: data/five-or-more-preferences.ui:135
 msgid "_Small"
 msgstr "小(_S)"
 
-#: ../data/five-or-more-preferences.ui.h:7
+#: data/five-or-more-preferences.ui:154
 msgid "_Medium"
 msgstr "中等(_M)"
 
-#: ../data/five-or-more-preferences.ui.h:8
+#: data/five-or-more-preferences.ui:173
 msgid "_Large"
 msgstr "大(_L)"
 
-#: ../data/five-or-more-preferences.ui.h:9
+#: data/five-or-more-preferences.ui:203
 msgid "General"
 msgstr "常规"
 
-#: ../data/five-or-more-preferences.ui.h:10
+#: data/five-or-more-preferences.ui:216
 msgid "_Use fast moves"
 msgstr "使用快速移动(_U)"
 
-#: ../data/five-or-more.ui.h:2
+#: data/five-or-more.ui:30
 msgid "Next:"
 msgstr "下个球："
 
-#: ../data/five-or-more.ui.h:3
-msgid "0"
-msgstr "0"
-
-#: ../data/five-or-more.ui.h:4
+#: data/five-or-more.ui:56
 msgid "Score:"
-msgstr "得分:"
+msgstr "得分："
 
-#: ../data/five-or-more.ui.h:5 ../src/games-scores-dialog.c:385
+#: data/five-or-more.ui:76
 msgid "_New Game"
 msgstr "新建游戏(_N)"
 
-#: ../data/five-or-more.ui.h:6
+#: data/five-or-more.ui:80
 msgid "Start a new puzzle"
 msgstr "开始新游戏"
 
-#: ../data/menu.ui.h:1
+#: data/menu.ui:7
 msgid "Scores"
 msgstr "得分"
 
-#: ../data/menu.ui.h:3
+#: data/menu.ui:17
 msgid "Help"
 msgstr "帮助"
 
-#: ../data/menu.ui.h:4
+#: data/menu.ui:22
 msgid "About"
 msgstr "关于"
 
-#: ../data/menu.ui.h:5
+#: data/menu.ui:26
 msgid "Quit"
 msgstr "退出"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:1
+#: data/org.gnome.five-or-more.gschema.xml:5
 msgid "Playing field size"
 msgstr "场地大小"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:2
+#: data/org.gnome.five-or-more.gschema.xml:6
 msgid ""
 "Playing field size. 1=Small, 2=Medium, 3=Large. Any other value is invalid."
-msgstr "游戏区大小。1=小，2=中，3=大。其它值非法。"
+msgstr "游戏区大小。1=小，2=中，3=大。其他值无效。"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:3
+#: data/org.gnome.five-or-more.gschema.xml:10
 msgid "Ball style"
 msgstr "小球样式"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:4
+#: data/org.gnome.five-or-more.gschema.xml:11
 msgid "Ball style. The filename of the images to use for the balls."
 msgstr "球的样式。球所使用的图片文件。"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:5
+#: data/org.gnome.five-or-more.gschema.xml:15
 msgid "Background color"
 msgstr "背景颜色"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:6
+#: data/org.gnome.five-or-more.gschema.xml:16
 msgid "Background color. The hex specification of the background color."
 msgstr "背景颜色，用十六进制表示。"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:7
+#: data/org.gnome.five-or-more.gschema.xml:20
 msgid "Time between moves"
 msgstr "移动之间的时间"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:8
+#: data/org.gnome.five-or-more.gschema.xml:21
 msgid "Time between moves in milliseconds."
 msgstr "移动之间的时间，以毫秒计。"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:9
+#: data/org.gnome.five-or-more.gschema.xml:25
 msgid "Game score"
 msgstr "游戏得分"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:10
+#: data/org.gnome.five-or-more.gschema.xml:26
 msgid "Game score from last saved session."
 msgstr "自上次保存的会话后的游戏得分。"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:11
+#: data/org.gnome.five-or-more.gschema.xml:30
 msgid "Game field"
 msgstr "游戏状态"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:12
+#: data/org.gnome.five-or-more.gschema.xml:31
 msgid "Game field from last saved session."
 msgstr "游戏上次保存时的状态。"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:13
+#: data/org.gnome.five-or-more.gschema.xml:35
 msgid "Game preview"
 msgstr "游戏预览"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:14
+#: data/org.gnome.five-or-more.gschema.xml:36
 msgid "Game preview from last saved session."
 msgstr "自上次保存的会话后的游戏预览。"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:15
+#: data/org.gnome.five-or-more.gschema.xml:40
 msgid "Width of the window in pixels"
-msgstr "主窗口的宽度(像素)"
+msgstr "主窗口宽度（像素）"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:16
+#: data/org.gnome.five-or-more.gschema.xml:44
 msgid "Height of the window in pixels"
-msgstr "主窗口的高度(像素)"
+msgstr "主窗口高度（像素）"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:17
+#: data/org.gnome.five-or-more.gschema.xml:48
 msgid "true if the window is maximized"
 msgstr "若窗口已最大化则为 true"
 
-#: ../src/five-or-more.c:80
+#.
+#. * Translatable strings file.
+#. * Add this file to your project's POTFILES.in.
+#. * DO NOT compile it as part of your application.
+#.
+#: data/translatable_themes.h:6
+msgctxt "themes"
+msgid "balls"
+msgstr "球"
+
+#: data/translatable_themes.h:7
+msgctxt "themes"
+msgid "dots"
+msgstr "点"
+
+#: data/translatable_themes.h:8
+msgctxt "themes"
+msgid "gumball"
+msgstr "橡皮球"
+
+#: data/translatable_themes.h:9
+msgctxt "themes"
+msgid "shapes"
+msgstr "形状"
+
+#: src/five-or-more-app.c:57
 msgctxt "board size"
 msgid "Small"
 msgstr "小"
 
-#: ../src/five-or-more.c:81
+#: src/five-or-more-app.c:58
 msgctxt "board size"
 msgid "Medium"
 msgstr "中"
 
-#: ../src/five-or-more.c:82
+#: src/five-or-more-app.c:59
 msgctxt "board size"
 msgid "Large"
 msgstr "大"
 
-#: ../src/five-or-more.c:165
-msgid "Could not load theme"
-msgstr "无法载入主题"
+#: src/five-or-more-app.c:233
+msgid "Game Over!"
+msgstr "游戏结束！"
 
-#: ../src/five-or-more.c:191
+#: src/five-or-more-app.c:250
+msgid "Match five objects of the same type in a row to score!"
+msgstr "在一线上放置五个以上同色球以便得分！"
+
+#: src/five-or-more-app.c:405
+msgid "Are you sure you want to restart the game?"
+msgstr "您确定要重新开始游戏吗？"
+
+#: src/five-or-more-app.c:408
+msgid "_Cancel"
+msgstr "取消(_C)"
+
+#: src/five-or-more-app.c:409
+msgid "_Restart"
+msgstr "重新开始(_R)"
+
+#: src/five-or-more-app.c:575
+msgid "GNOME port of the once-popular Color Lines game"
+msgstr "一度非常流行的连珠消球游戏的 GNOME 版本"
+
+#: src/five-or-more-app.c:581
+msgid "translator-credits"
+msgstr ""
+"Yang Zhang <zyangmath@gmail.com>, 2007\n"
+"Ping Z <zpsigma@gmail.com>, 2007\n"
+"Xhacker Liu <liu.dongyuan@gmail.com>, 2010\n"
+"Mingcong Bai <jeffbai@aosc.xyz>, 2018"
+
+#: src/five-or-more-app.c:693
+msgid "Board Size: "
+msgstr "盘面大小："
+
+#. Can't move there!
+#: src/game-area.c:635
+msgid "You can’t move there!"
+msgstr "不能移到那儿！"
+
+#: src/game-area.c:818
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -231,7 +293,7 @@ msgstr ""
 "\n"
 "将载入默认主题。"
 
-#: ../src/five-or-more.c:198
+#: src/game-area.c:825
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -244,82 +306,39 @@ msgstr ""
 "\n"
 "请检查您的连珠消球安装是否正确。"
 
-#: ../src/five-or-more.c:410
-msgid "Match five objects of the same type in a row to score!"
-msgstr "在一线上放置五个以上同色球以便得分！"
+#: src/game-area.c:852
+msgid "Could not load theme"
+msgstr "无法载入主题"
 
-#: ../src/five-or-more.c:471
-msgid "Five or More Scores"
-msgstr "连珠消球得分"
+#~ msgid "0"
+#~ msgstr "0"
 
-#: ../src/five-or-more.c:473
-msgid "_Board size:"
-msgstr "棋盘大小(_B)："
+#~ msgid "Five or More Scores"
+#~ msgstr "连珠消球得分"
 
-#: ../src/five-or-more.c:490
-msgid "Game Over!"
-msgstr "游戏结束！"
+#~ msgid "_Board size:"
+#~ msgstr "棋盘大小(_B)："
 
-#. Can't move there!
-#: ../src/five-or-more.c:647
-msgid "You can’t move there!"
-msgstr "不能移到那儿！"
+#~ msgctxt "score-dialog"
+#~ msgid "Time"
+#~ msgstr "时间"
 
-#: ../src/five-or-more.c:1177
-msgid "GNOME port of the once-popular Color Lines game"
-msgstr "一度非常流行的连珠消球游戏的 GNOME 版本"
+#~ msgctxt "score-dialog"
+#~ msgid "Score"
+#~ msgstr "得分"
 
-#: ../src/five-or-more.c:1183
-msgid "translator-credits"
-msgstr ""
-"Yang Zhang <zyangmath@gmail.com>, 2007\n"
-"Ping Z <zpsigma@gmail.com>, 2007\n"
-"Xhacker Liu <liu.dongyuan@gmail.com>, 2010"
+#~ msgctxt "score-dialog"
+#~ msgid "%1$dm %2$ds"
+#~ msgstr "%1$d分%2$d秒"
 
-#: ../src/five-or-more.c:1307
-msgid "Are you sure you want to restart the game?"
-msgstr "您确定要重新开始游戏吗？"
+#~ msgid "_Quit"
+#~ msgstr "退出(_Q)"
 
-#: ../src/five-or-more.c:1310
-msgid "_Cancel"
-msgstr "取消(_C)"
+#~ msgid "_Undo"
+#~ msgstr "撤消(_U)"
 
-#: ../src/five-or-more.c:1311
-msgid "_Restart"
-msgstr "重新开始(_R)"
+#~ msgid "_Close"
+#~ msgstr "关闭(_C)"
 
-#. Score dialog column header for the score time (e.g. 1 minute)
-#: ../src/games-scores-dialog.c:132
-msgctxt "score-dialog"
-msgid "Time"
-msgstr "时间"
-
-#. Score dialog column header for the score value (e.g. 30 moves)
-#: ../src/games-scores-dialog.c:138
-msgctxt "score-dialog"
-msgid "Score"
-msgstr "得分"
-
-#. Score format for time based scores.  %1$d is the time in minutes, %2$d is the time in seconds
-#: ../src/games-scores-dialog.c:225
-#, c-format
-msgctxt "score-dialog"
-msgid "%1$dm %2$ds"
-msgstr "%1$d分%2$d秒"
-
-#: ../src/games-scores-dialog.c:371
-msgid "_Quit"
-msgstr "退出(_Q)"
-
-#: ../src/games-scores-dialog.c:378
-msgid "_Undo"
-msgstr "撤消(_U)"
-
-#: ../src/games-scores-dialog.c:392
-msgid "_Close"
-msgstr "关闭(_C)"
-
-#. Score dialog column header for the date the score was recorded
-#: ../src/games-scores-dialog.c:478
-msgid "Date"
-msgstr "日期"
+#~ msgid "Date"
+#~ msgstr "日期"
