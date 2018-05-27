@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/org/gnome/five-or-more/ui">
+    <file>five-or-more-vala.ui</file>
+  </gresource>
+</gresources>
