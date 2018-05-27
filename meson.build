@@ -1,7 +1,7 @@
-project('five-or-more', ['c'],
-	version: '3.29.3',
-	meson_version: '>= 0.43.0',
-	license: 'GPLv2'
+project('five-or-more', ['c', 'vala'],
+  version: '3.29.3',
+  meson_version: '>= 0.43.0',
+  license: 'GPLv2'
 )
 
 gnome = import('gnome')
@@ -37,6 +37,12 @@ conf.set_quoted('VERSION', meson.project_version())
 configure_file(output: 'config.h', configuration: conf)
 config_h_dir = include_directories('.')
 
+add_project_arguments([
+    '-include', 'config.h'
+  ],
+  language: 'c'
+)
+
 # Extra scripts
 meson.add_install_script('meson_post_install.py')
 
@@ -45,3 +51,4 @@ subdir('data')
 subdir('help')
 subdir('po')
 subdir('src')
+subdir('src-vala')

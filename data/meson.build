@@ -47,6 +47,10 @@ install_data('org.gnome.five-or-more.gschema.xml',
 	install_dir: join_paths(data_dir, 'glib-2.0', 'schemas')
 )
 
+# Gresource
+resource_files = files('org.gnome.five-or-more.gresource.xml')
+resources = gnome.compile_resources('five-or-more', resource_files)
+
 # Manpage
 install_man(
 	'five-or-more.6'
