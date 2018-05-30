@@ -3,4 +3,7 @@
   <gresource prefix="/org/gnome/five-or-more/ui">
     <file>five-or-more-vala.ui</file>
   </gresource>
+  <gresource prefix="/org/gnome/five-or-more/gtk">
+    <file preprocess="xml-stripblanks" alias="menus.ui">five-or-more-menu.ui</file>
+  </gresource>
 </gresources>
