@@ -2,9 +2,11 @@
 
 five_or_more_sources = [
   'config.vapi',
+  'game.vala',
   'main.vala',
+  'preferences-dialog.vala',
   'window.vala',
-  resources
+  resources,
 ]
 
 five_or_more_deps = [
