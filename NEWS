@@ -1,3 +1,14 @@
+3.29.3 - June 18, 2018
+======================
+
+* Updated translations
+* Migrate to gettext
+* Migrate to meson
+* Use libgnome-games-support for scores tracking
+* Drop autotools
+* Update bugzilla references to gitlab
+* Add flatpak build
+
 3.28.0 - March 12, 2018
 ======================
 
