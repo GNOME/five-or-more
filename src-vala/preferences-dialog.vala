@@ -1,3 +1,6 @@
+namespace FiveOrMore
+{
+
 [GtkTemplate (ui = "/org/gnome/five-or-more/ui/preferences-dialog.ui")]
 public class PreferencesDialog : Gtk.Dialog
 {
@@ -59,3 +62,5 @@ public class PreferencesDialog : Gtk.Dialog
         radiobutton_large.toggled.connect (() => { size_cb (LARGE); });
     }
 }
+
+} // namespace FiveOrMore

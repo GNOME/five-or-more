@@ -4,14 +4,21 @@ five_or_more_sources = [
   'config.vapi',
   'game.vala',
   'main.vala',
+  'next-pieces-widget.vala',
+  'piece.vala',
+  'piece-generator.vala',
   'preferences-dialog.vala',
+  'theme-renderer.vala',
+  'view.vala',
   'window.vala',
   resources,
 ]
 
 five_or_more_deps = [
+  gee_dep,
   gio_dep,
   gtk_dep,
+  librsvg_dep,
 ]
 
 five_or_more_vala_args = [

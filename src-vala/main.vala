@@ -1,3 +1,5 @@
+namespace FiveOrMore
+{
 public class FiveOrMoreApp: Gtk.Application
 {
     public const string KEY_SIZE = "size";
@@ -7,8 +9,6 @@ public class FiveOrMoreApp: Gtk.Application
 
     private Gtk.ApplicationWindow window;
     private PreferencesDialog? preferences_dialog = null;
-
-    private Game? game = null;
 
     private const GLib.ActionEntry action_entries[] =
     {
@@ -27,7 +27,6 @@ public class FiveOrMoreApp: Gtk.Application
 
     public override void activate ()
     {
-        window = new FiveOrMore.Window (this);
         window.present ();
     }
 
@@ -36,8 +35,7 @@ public class FiveOrMoreApp: Gtk.Application
         base.startup ();
 
         settings = new Settings ("org.gnome.five-or-more");
-
-        game = new Game (settings);
+        window = new FiveOrMore.Window (this, settings);
 
         add_action_entries (action_entries, this);
     }
@@ -128,3 +126,5 @@ public class FiveOrMoreApp: Gtk.Application
                                "website", "https://wiki.gnome.org/Apps/Five%20or%20more");
     }
 }
+
+} // namespace FiveOrMore
