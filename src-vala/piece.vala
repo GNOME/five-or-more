@@ -1,6 +1,3 @@
-namespace FiveOrMore
-{
-
 public class Piece
 {
     public int id;
@@ -9,6 +6,9 @@ public class Piece
     {
         this.id = id;
     }
-}
 
-} // namespace FiveOrMore
+    public bool equal (Piece piece)
+    {
+        return this.id == piece.id;
+    }
+}

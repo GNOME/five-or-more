@@ -2,12 +2,12 @@
 <interface>
   <!-- interface-requires gtk+ 3.0 -->
   <object class="GtkAccelGroup" id="accelgroup"/>
-  <template class="FiveOrMoreWindow" parent="GtkApplicationWindow">
+  <template class="GameWindow" parent="GtkApplicationWindow">
     <property name="can_focus">False</property>
     <property name="default_width">320</property>
     <property name="default_height">400</property>
     <property name="icon_name">glines</property>
-    <property name="border-width">20</property>
+    <property name="border-width">18</property>
     <accel-groups>
       <group name="accelgroup"/>
     </accel-groups>
@@ -70,6 +70,7 @@
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="orientation">horizontal</property>
+        <property name="spacing">12</property>
         <child>
           <object class="GtkButton" id="new_game_button">
                 <property name="visible">True</property>

@@ -2,6 +2,7 @@
 
 five_or_more_sources = [
   'config.vapi',
+  'board.vala',
   'game.vala',
   'main.vala',
   'next-pieces-widget.vala',
@@ -18,6 +19,7 @@ five_or_more_deps = [
   gee_dep,
   gio_dep,
   gtk_dep,
+  libgnome_games_support_dep,
   librsvg_dep,
 ]
 
