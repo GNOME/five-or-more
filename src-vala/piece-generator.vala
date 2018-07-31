@@ -1,6 +1,3 @@
-namespace FiveOrMore
-{
-
 public class NextPiecesGenerator
 {
     private int n_types;
@@ -23,15 +20,18 @@ public class NextPiecesGenerator
     {
         this.pieces.clear ();
 
-        int i;
-        for (i = 0; i < this.n_next_pieces; i++)
+        for (int i = 0; i < this.n_next_pieces; i++)
         {
             int id = yield_next_piece ();
             this.pieces.add (new Piece (id));
         }
 
+        for (int i = 0; i < this.n_next_pieces; i++)
+        {
+            stderr.printf ("[DEBUG] %d\n", this.pieces[i].id);
+        }
+        stderr.printf ("\n");
+
         return this.pieces;
     }
 }
-
-} // namespace FiveOrMore
