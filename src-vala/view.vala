@@ -173,17 +173,15 @@ public class View : Gtk.DrawingArea
         return true;
     }
 
-    public override bool draw (Cairo.Context cr)
+    private void fill_background (Cairo.Context cr)
     {
-        if (theme == null)
-            return false;
-
-        //fill background color
         Gdk.cairo_set_source_rgba (cr, background_color);
         Gdk.cairo_rectangle (cr, board_rectangle);
         cr.fill ();
+    }
 
-        // draw gridlines
+    private void draw_gridlines (Cairo.Context cr)
+    {
         Gdk.RGBA grid_color = Gdk.RGBA ();
         grid_color.parse ("#525F6C");
         Gdk.cairo_set_source_rgba (cr, grid_color);
@@ -208,8 +206,10 @@ public class View : Gtk.DrawingArea
 
         Gdk.cairo_rectangle (cr, line_rectangle);
         cr.stroke ();
+    }
 
-        // draw shapes
+    private void draw_shapes (Cairo.Context cr)
+    {
         for (int row = 0; row < game.n_rows; row++)
         {
             for (int col = 0; col < game.n_cols; col++)
@@ -225,8 +225,10 @@ public class View : Gtk.DrawingArea
                 }
             }
         }
+    }
 
-        // draw path animation
+    private void draw_path (Cairo.Context cr)
+    {
         if (game.current_path != null && game.current_path.size > 0 && game.current_path_cell_pos != -1)
         {
             Cell current_cell = game.current_path[game.current_path_cell_pos];
@@ -237,6 +239,17 @@ public class View : Gtk.DrawingArea
                                  current_cell.row * piece_size,
                                  piece_size);
         }
+    }
+
+    public override bool draw (Cairo.Context cr)
+    {
+        if (theme == null)
+            return false;
+
+        fill_background (cr);
+        draw_gridlines (cr);
+        draw_shapes (cr);
+        draw_path (cr);
 
         return true;
     }
