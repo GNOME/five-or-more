@@ -222,7 +222,6 @@ public class Game : Object
                 }
 
                 update_score (inactivate.size);
-                stderr.printf ("[DEBUG] New score is %d", score);
             }
 
             if (inactivate.size < Game.N_MATCH)
