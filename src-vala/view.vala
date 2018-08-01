@@ -146,10 +146,38 @@ public class View : Gtk.DrawingArea
         if (theme == null)
             return false;
 
+        //fill background color
         Gdk.cairo_set_source_rgba (cr, background_color);
         Gdk.cairo_rectangle (cr, board_rectangle);
         cr.fill ();
 
+        // draw gridlines
+        Gdk.RGBA grid_color = Gdk.RGBA ();
+        grid_color.parse ("#525F6C");
+        Gdk.cairo_set_source_rgba (cr, grid_color);
+        cr.set_line_width (2.0);
+
+        for (int i = piece_size; i < board_rectangle.width; i += piece_size)
+        {
+            cr.move_to (i + 1, 0 + 1);
+            cr.line_to (i + 1, board_rectangle.height + 1);
+        }
+
+        for (int i = piece_size; i < board_rectangle.height; i += piece_size)
+        {
+            cr.move_to (0 + 1, i + 1);
+            cr.line_to (board_rectangle.width + 1, i + 1);
+        }
+
+        var line_rectangle = Gdk.Rectangle ();
+        line_rectangle.x = line_rectangle.y = 1;
+        line_rectangle.width = board_rectangle.width - 1;
+        line_rectangle.height = board_rectangle.height - 1;
+
+        Gdk.cairo_rectangle (cr, line_rectangle);
+        cr.stroke ();
+
+        // draw shapes
         for (int row = 0; row < game.n_rows; row++)
         {
             for (int col = 0; col < game.n_cols; col++)
@@ -164,6 +192,7 @@ public class View : Gtk.DrawingArea
             }
         }
 
+        // draw path animation
         if (game.current_path != null && game.current_path.size > 0 && game.current_path_cell_pos != -1)
         {
             Cell current_cell = game.current_path[game.current_path_cell_pos];
