@@ -121,24 +121,17 @@ public class View : Gtk.DrawingArea
             start_y = cell_y;
 
             animation_id = Timeout.add (100, animate_clicked);
-            stderr.printf ("[DEBUG]: pointA %d %d\n", start_y, start_x);
         }
         /* if selected cell is empty and start is set, and cell is empty, set end */
         else if (game.board.get_piece (cell_y, cell_x) == null && start_x != -1 && start_y != -1)
         {
             end_x = cell_x;
             end_y = cell_y;
-            stderr.printf ("[DEBUG]: pointB %d %d\n", end_y, end_x);
 
             bool move = game.make_move (start_y, start_x, end_y, end_x);
 
             if (!move)
                 return false;
-
-            foreach (Cell p in game.current_path)
-            {
-                stderr.printf ("[DEBUG]: Path %d %d\n", p.row, p.col);
-            }
 
             start_x = -1;
             start_y = -1;

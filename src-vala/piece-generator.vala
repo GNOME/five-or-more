@@ -26,12 +26,6 @@ public class NextPiecesGenerator
             this.pieces.add (new Piece (id));
         }
 
-        for (int i = 0; i < this.n_next_pieces; i++)
-        {
-            stderr.printf ("[DEBUG] %d\n", this.pieces[i].id);
-        }
-        stderr.printf ("\n");
-
         return this.pieces;
     }
 }

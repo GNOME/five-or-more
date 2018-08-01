@@ -49,7 +49,6 @@ public class FiveOrMoreApp: Gtk.Application
 
     private void new_game_cb ()
     {
-        stderr.printf ("[DEBUG] Pressed New Game!\n");
         if (window == null)
         {
             warning ("Failed to restart game");

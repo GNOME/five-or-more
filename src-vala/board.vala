@@ -102,7 +102,6 @@ public class Board
 
             if (closed.contains (dst))
             {
-                stderr.printf ("[DEBUG]: Foud path\n");
                 for (Cell? p = dst; p != null; p = p.parent)
                 {
                     path.insert (0, p);
@@ -138,8 +137,6 @@ public class Board
                 }
             }
         } while (open.size != 0);
-
-        stderr.printf ("[DEBUG]: There is no path!\n");
 
         return path;
     }
@@ -394,8 +391,6 @@ public class Cell
             foreach (var l in list)
                 inactivate.add (l);
         }
-
-        stderr.printf ("To be inactivated: %d\n", inactivate.size);
 
         return inactivate;
     }
