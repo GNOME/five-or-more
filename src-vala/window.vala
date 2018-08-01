@@ -2,6 +2,9 @@
 public class GameWindow : Gtk.ApplicationWindow
 {
     [GtkChild]
+    private Gtk.HeaderBar headerbar;
+
+    [GtkChild]
     private Gtk.Box preview_hbox;
 
     [GtkChild]
@@ -16,6 +19,12 @@ public class GameWindow : Gtk.ApplicationWindow
     private ThemeRenderer? theme = null;
 
     private Games.Scores.Context highscores;
+    private const string status[] = {
+            "Match five objects of the same type in a row to score!",
+            "You can't move there!",
+            "Game Over!",
+            null
+    };
 
     public GameWindow (Gtk.Application app, Settings settings)
     {
@@ -36,6 +45,8 @@ public class GameWindow : Gtk.ApplicationWindow
         game.notify["n-cols"].connect ((s, p) => { grid_frame.set (game.n_cols, game.n_rows); });
         game.notify["n-rows"].connect ((s, p) => { grid_frame.set (game.n_cols, game.n_rows); });
         game.notify["score"].connect ((s, p) => { scorelabel.set_text (game.score.to_string ()); });
+        game.notify["status-message"].connect ((s, p) => { set_status_message (_(status[game.status_message])); });
+        set_status_message (_(status[game.status_message]));
         hbox.pack_start (grid_frame);
 
         View game_view = new View (settings, game, theme);
@@ -69,6 +80,11 @@ public class GameWindow : Gtk.ApplicationWindow
     public void restart_game ()
     {
         game.restart ();
+    }
+
+    private void set_status_message (string? message)
+    {
+        headerbar.set_subtitle (message);
     }
 
     public void show_scores ()

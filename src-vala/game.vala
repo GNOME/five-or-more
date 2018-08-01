@@ -65,6 +65,8 @@ public class Game : Object
     public int n_categories = 3;
     public string score_current_category = null;
 
+    public StatusMessage status_message { get; set; }
+
     public Game (Settings settings)
     {
         this.settings = settings;
@@ -89,6 +91,8 @@ public class Game : Object
 
         this.score = 0;
         this.score_current_category = scorecats[size - 1].key;
+
+        this.status_message = DESCRIPTION;
 
         next_pieces_generator = new NextPiecesGenerator (game_difficulty[size].n_next_pieces,
                                                          game_difficulty[size].n_types);
@@ -143,6 +147,7 @@ public class Game : Object
 
             if (check_game_over ())
             {
+                status_message = GAME_OVER;
                 board.grid_changed ();
                 return;
             }
@@ -180,6 +185,7 @@ public class Game : Object
 
         if (current_path == null || current_path.size == 0)
         {
+            status_message = NO_PATH;
             return false;
         }
 
@@ -260,4 +266,12 @@ struct KeyValue
 {
   public string key;
   public string name;
+}
+
+public enum StatusMessage
+{
+    DESCRIPTION = 0,
+    NO_PATH = 1,
+    GAME_OVER = 2,
+    NONE = 3,
 }
