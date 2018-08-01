@@ -94,6 +94,9 @@ public class View : Gtk.DrawingArea
         if (cell_x >= game.n_cols || cell_y >= game.n_rows)
             return false;
 
+        if (game.status_message != StatusMessage.NONE)
+            game.status_message = StatusMessage.NONE;
+
         /* if selected cell is not empty, set start */
         if (game.board.get_piece (cell_y, cell_x) != null)
         {
