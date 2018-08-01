@@ -18,6 +18,9 @@ public class View : Gtk.DrawingArea
     private int end_x;
     private int end_y;
 
+    private int animation_state;
+    private uint animation_id;
+
     public View (Settings settings, Game game, ThemeRenderer theme)
     {
         this.settings = settings;
@@ -56,6 +59,8 @@ public class View : Gtk.DrawingArea
         end_x = -1;
         end_y = -1;
 
+        animation_state = 0;
+        animation_id = -1;
     }
 
     private void board_changed_cb ()
@@ -92,8 +97,27 @@ public class View : Gtk.DrawingArea
         /* if selected cell is not empty, set start */
         if (game.board.get_piece (cell_y, cell_x) != null)
         {
+            if (animation_id != -1)
+            {
+                Source.remove (animation_id);
+                animation_id = -1;
+            }
+
+            if (start_x == cell_x && start_y == cell_y)
+            {
+                start_x = -1;
+                start_y = -1;
+
+                animation_state = 0;
+                queue_draw ();
+
+                return true;
+            }
+
             start_x = cell_x;
             start_y = cell_y;
+
+            animation_id = Timeout.add (100, animate_clicked);
             stderr.printf ("[DEBUG]: pointA %d %d\n", start_y, start_x);
         }
         /* if selected cell is empty and start is set, and cell is empty, set end */
@@ -106,12 +130,7 @@ public class View : Gtk.DrawingArea
             bool move = game.make_move (start_y, start_x, end_y, end_x);
 
             if (!move)
-            {
-                start_x = -1;
-                start_y = -1;
-
                 return false;
-            }
 
             foreach (Cell p in game.current_path)
             {
@@ -120,11 +139,24 @@ public class View : Gtk.DrawingArea
 
             start_x = -1;
             start_y = -1;
+
+            if (animation_id != -1)
+            {
+                Source.remove (animation_id);
+                animation_id = -1;
+            }
         }
 
         return true;
     }
 
+    private bool animate_clicked ()
+    {
+        animation_state = (animation_state + 1) % Game.N_ANIMATIONS;
+        queue_draw ();
+
+        return Source.CONTINUE;
+    }
 
     private void update_sizes (int width, int height)
     {
@@ -183,12 +215,14 @@ public class View : Gtk.DrawingArea
             for (int col = 0; col < game.n_cols; col++)
             {
                 if (game.board.get_piece (row,col) != null)
+                {
                     theme.render_sprite (cr,
                                          game.board.get_piece (row,col).id,
-                                         0,
+                                         (start_x == col && start_y == row) ? animation_state : 0,
                                          col * piece_size,
                                          row * piece_size,
                                          piece_size);
+                }
             }
         }
 
@@ -198,7 +232,7 @@ public class View : Gtk.DrawingArea
             Cell current_cell = game.current_path[game.current_path_cell_pos];
             theme.render_sprite (cr,
                                  game.animating_piece.id,
-                                 0,
+                                 animation_state,
                                  current_cell.col * piece_size,
                                  current_cell.row * piece_size,
                                  piece_size);
