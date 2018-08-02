@@ -27,6 +27,12 @@ public class View : Gtk.DrawingArea
         this.game = game;
         this.theme = theme;
 
+        settings.changed[FiveOrMoreApp.KEY_THEME].connect (() => {
+            game.board.grid_changed ();
+            game.queue_changed (game.next_pieces_queue);
+            queue_draw ();
+        });
+
         background_color = Gdk.RGBA ();
         set_background_color ();
         settings.changed[FiveOrMoreApp.KEY_BACKGROUND_COLOR].connect (() => {

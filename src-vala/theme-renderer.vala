@@ -4,11 +4,17 @@ public class ThemeRenderer
 
     public const int DEFAULT_SPRITE_SIZE = 20;
     private int sprite_size = DEFAULT_SPRITE_SIZE;
+    private float sprite_sheet_width;
+    private float sprite_sheet_height;
 
     private string theme_name;
     private Rsvg.Handle? theme = null;
-    private float sprite_sheet_width;
-    private float sprite_sheet_height;
+    public const string themes[] = {
+            "balls.svg",
+            "dots.png",
+            "gumball.png",
+            "shapes.svg",
+    };
 
     private Cairo.Pattern? tile_pattern = null;
     private Cairo.Context cr_preview;
