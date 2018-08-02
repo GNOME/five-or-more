@@ -2,6 +2,7 @@ public class FiveOrMoreApp: Gtk.Application
 {
     public const string KEY_SIZE = "size";
     public const string KEY_BACKGROUND_COLOR = "background-color";
+    public const string KEY_THEME = "ball-theme";
 
     private Settings settings;
 

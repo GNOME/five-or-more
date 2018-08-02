@@ -31,9 +31,7 @@ public class GameWindow : Gtk.ApplicationWindow
         Object (application: app);
 
         game = new Game (settings);
-
-        var theme_file = Path.build_filename (DATA_DIRECTORY, "themes", ThemeRenderer.THEME);
-        theme = new ThemeRenderer (theme_file);
+        theme = new ThemeRenderer (settings);
 
         NextPiecesWidget next_pieces_widget = new NextPiecesWidget (settings, game, theme);
         preview_hbox.pack_start (next_pieces_widget);

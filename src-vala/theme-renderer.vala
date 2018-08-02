@@ -1,19 +1,31 @@
 public class ThemeRenderer
 {
-    public const string THEME = "balls.svg";
-    public const int DEFAULT_SPRITE_SIZE = 20;
+    private Settings settings;
 
+    public const int DEFAULT_SPRITE_SIZE = 20;
+    private int sprite_size = DEFAULT_SPRITE_SIZE;
+
+    private string theme_name;
     private Rsvg.Handle? theme = null;
     private float sprite_sheet_width;
     private float sprite_sheet_height;
 
     private Cairo.Pattern? tile_pattern = null;
-
-    private int sprite_size = DEFAULT_SPRITE_SIZE;
-
     private Cairo.Context cr_preview;
-    public ThemeRenderer (string theme_file)
+
+    public ThemeRenderer (Settings settings)
     {
+        this.settings = settings;
+
+        settings.changed[FiveOrMoreApp.KEY_THEME].connect (change_theme_cb);
+        change_theme_cb ();
+    }
+
+    private void change_theme_cb ()
+    {
+        theme_name = settings.get_string (FiveOrMoreApp.KEY_THEME);
+        var theme_file = Path.build_filename (DATA_DIRECTORY, "themes", theme_name);
+
         try
         {
             theme = new Rsvg.Handle.from_file (theme_file);
