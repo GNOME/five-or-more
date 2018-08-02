@@ -4,6 +4,9 @@ public class PreferencesDialog : Gtk.Dialog
     private Settings settings;
 
     [GtkChild]
+    private Gtk.ComboBoxText theme_box;
+
+    [GtkChild]
     private Gtk.ColorButton color_button;
 
     [GtkChild]
@@ -13,10 +16,26 @@ public class PreferencesDialog : Gtk.Dialog
     [GtkChild]
     private Gtk.RadioButton radiobutton_large;
 
+    private void theme_set_cb (Gtk.ComboBox self)
+    {
+        var combo_box_text = self as Gtk.ComboBoxText;
+        var theme = combo_box_text.get_active_text ();
+        foreach (var t in ThemeRenderer.themes)
+        {
+            if (t.split (".")[0] == theme)
+            {
+                if (!settings.set_string ("ball-theme", t))
+                    warning ("Failed to set theme: %s", t);
+
+                return;
+            }
+        }
+    }
+
     private void color_set_cb (Gtk.ColorButton self)
     {
         var color = self.get_rgba ();
-        if (!settings.set_string ("background-color", color.to_string ()))
+        if (!settings.set_string (FiveOrMoreApp.KEY_BACKGROUND_COLOR, color.to_string ()))
             warning ("Failed to set color: %s", color.to_string ());
     }
 
@@ -43,7 +62,7 @@ public class PreferencesDialog : Gtk.Dialog
         switch (result)
         {
             case Gtk.ResponseType.OK:
-                 if (!settings.set_int ("size", size))
+                 if (!settings.set_int (FiveOrMoreApp.KEY_SIZE, size))
                     warning ("Failed to set size: %d", size);
                 button.set_active (true);
                 break;
@@ -72,6 +91,15 @@ public class PreferencesDialog : Gtk.Dialog
     public PreferencesDialog (Settings settings)
     {
         this.settings = settings;
+
+         /* Set up theme */
+        string theme = settings.get_string (FiveOrMoreApp.KEY_THEME);
+        for (int id = 0; id < ThemeRenderer.themes.length; id++)
+        {
+            if (ThemeRenderer.themes[id] == theme)
+                theme_box.set_active (id);
+        }
+        theme_box.changed.connect (theme_set_cb);
 
         /* Set up board color */
         var color_str = settings.get_string (FiveOrMoreApp.KEY_BACKGROUND_COLOR);
