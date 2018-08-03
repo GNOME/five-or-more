@@ -19,10 +19,10 @@ public class GameWindow : Gtk.ApplicationWindow
     private ThemeRenderer? theme = null;
 
     private Games.Scores.Context highscores;
-    private const string status[] = {
-            "Match five objects of the same type in a row to score!",
-            "You can't move there!",
-            "Game Over!",
+    private string[] status = {
+            _("Match five objects of the same type in a row to score!"),
+            _("You can't move there!"),
+            _("Game Over!"),
             null
     };
 
@@ -43,8 +43,8 @@ public class GameWindow : Gtk.ApplicationWindow
         game.notify["n-cols"].connect ((s, p) => { grid_frame.set (game.n_cols, game.n_rows); });
         game.notify["n-rows"].connect ((s, p) => { grid_frame.set (game.n_cols, game.n_rows); });
         game.notify["score"].connect ((s, p) => { scorelabel.set_text (game.score.to_string ()); });
-        game.notify["status-message"].connect ((s, p) => { set_status_message (_(status[game.status_message])); });
-        set_status_message (_(status[game.status_message]));
+        game.notify["status-message"].connect ((s, p) => { set_status_message (status[game.status_message]); });
+        set_status_message (status[game.status_message]);
         hbox.pack_start (grid_frame);
 
         View game_view = new View (settings, game, theme);
