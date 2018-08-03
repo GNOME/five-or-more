@@ -91,23 +91,20 @@ public class GameWindow : Gtk.ApplicationWindow
     }
 
 
-    private Games.Scores.Category create_category_from_key (string key)
+    private Games.Scores.Category? create_category_from_key (string key)
     {
-        string name = category_name_from_key (key);
-        if (name == null)
-            return (Games.Scores.Category) null;
-
+        string? name = category_name_from_key (key);
         return new Games.Scores.Category (key, name);
     }
 
     private string category_name_from_key (string key)
     {
         for (int i = 0; i < game.n_categories; i++) {
-            if (strcmp (Game.scorecats[i].key, key) == 0)
+            if (Game.scorecats[i].key == key)
             {
                 return Game.scorecats[i].name;
             }
         }
-        return (string) null;
+        return "";
     }
 }
