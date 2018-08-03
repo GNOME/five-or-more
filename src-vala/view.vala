@@ -184,8 +184,7 @@ public class View : Gtk.DrawingArea
 
     private void draw_gridlines (Cairo.Context cr)
     {
-        Gdk.RGBA grid_color = Gdk.RGBA ();
-        grid_color.parse ("#525F6C");
+        Gdk.RGBA grid_color = this.get_style_context ().get_color (Gtk.StateFlags.NORMAL);
         Gdk.cairo_set_source_rgba (cr, grid_color);
         cr.set_line_width (2.0);
 
