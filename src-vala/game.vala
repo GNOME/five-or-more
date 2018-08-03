@@ -246,11 +246,11 @@ public class Game : Object
 
 enum BoardSize
 {
-    UNSET = 0,
-    SMALL = 1,
-    MEDIUM = 2,
-    LARGE = 3,
-    MAX_SIZE = 4,
+    UNSET,
+    SMALL,
+    MEDIUM,
+    LARGE,
+    MAX_SIZE,
 }
 
 struct GameDifficulty
@@ -269,8 +269,8 @@ struct KeyValue
 
 public enum StatusMessage
 {
-    DESCRIPTION = 0,
-    NO_PATH = 1,
-    GAME_OVER = 2,
-    NONE = 3,
+    DESCRIPTION,
+    NO_PATH,
+    GAME_OVER,
+    NONE,
 }
