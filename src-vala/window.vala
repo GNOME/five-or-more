@@ -16,6 +16,12 @@ public class GameWindow : Gtk.ApplicationWindow
     [GtkChild]
     private Gtk.Label scorelabel;
 
+    private Settings? settings = null;
+    private bool window_tiled;
+    public bool window_maximized { get; private set; }
+    public int window_width { get; private set; }
+    public int window_height { get; private set; }
+
     private Game? game = null;
     private ThemeRenderer? theme = null;
 
@@ -31,8 +37,13 @@ public class GameWindow : Gtk.ApplicationWindow
     {
         Object (application: app);
 
+        this.settings = settings;
         game = new Game (settings);
         theme = new ThemeRenderer (settings);
+
+        set_default_size (settings.get_int ("window-width"), settings.get_int ("window-height"));
+        if (settings.get_boolean ("window-is-maximized"))
+            maximize ();
 
         NextPiecesWidget next_pieces_widget = new NextPiecesWidget (settings, game, theme);
         preview_hbox.pack_start (next_pieces_widget);
@@ -62,6 +73,28 @@ public class GameWindow : Gtk.ApplicationWindow
                                                 Games.Scores.Style.POINTS_GREATER_IS_BETTER,
                                                 importer);
         game.game_over.connect (score_cb);
+    }
+
+    protected override bool window_state_event (Gdk.EventWindowState event)
+    {
+        if ((event.changed_mask & Gdk.WindowState.MAXIMIZED) != 0)
+            window_maximized = (event.new_window_state & Gdk.WindowState.MAXIMIZED) != 0;
+
+        if ((event.changed_mask & Gdk.WindowState.TILED) != 0)
+            window_tiled = (event.new_window_state & Gdk.WindowState.TILED) != 0;
+
+        return false;
+    }
+
+    protected override void size_allocate (Gtk.Allocation allocation)
+    {
+        base.size_allocate (allocation);
+
+        if (window_maximized || window_tiled)
+            return;
+
+        window_width = allocation.width;
+        window_height = allocation.height;
     }
 
     private void score_cb ()

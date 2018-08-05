@@ -129,4 +129,13 @@ public class FiveOrMoreApp: Gtk.Application
                                "translator-credits", _("translator-credits"),
                                "website", "https://wiki.gnome.org/Apps/Five%20or%20more");
     }
+
+    public override void shutdown ()
+    {
+        settings.set_int ("window-width", window.window_width);
+        settings.set_int ("window-height", window.window_height);
+        settings.set_boolean ("window-is-maximized", window.window_maximized);
+
+        base.shutdown ();
+    }
 }
