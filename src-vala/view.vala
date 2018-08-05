@@ -200,26 +200,26 @@ public class View : Gtk.DrawingArea
     {
         Gdk.RGBA grid_color = cs.get_color (Gtk.StateFlags.NORMAL);
         Gdk.cairo_set_source_rgba (cr, grid_color);
-        cr.set_line_width (2.0);
+        cr.set_line_width (1.0);
 
         for (int i = piece_size; i < board_rectangle.width; i += piece_size)
         {
-            cr.move_to (i + 1, 0 + 1);
-            cr.line_to (i + 1, board_rectangle.height + 1);
+            cr.move_to (i + 0.5, 0 + 0.5);
+            cr.line_to (i + 0.5, board_rectangle.height + 0.5);
         }
 
         for (int i = piece_size; i < board_rectangle.height; i += piece_size)
         {
-            cr.move_to (0 + 1, i + 1);
-            cr.line_to (board_rectangle.width + 1, i + 1);
+            cr.move_to (0 + 0.5, i + 0.5);
+            cr.line_to (board_rectangle.width + 0.5, i + 0.5);
         }
 
-        var line_rectangle = Gdk.Rectangle ();
-        line_rectangle.x = line_rectangle.y = 1;
-        line_rectangle.width = board_rectangle.width - 1;
-        line_rectangle.height = board_rectangle.height - 1;
+        var border = Gdk.Rectangle ();
+        border.x = border.y = 1;
+        border.width = board_rectangle.width;
+        border.height = board_rectangle.height;
 
-        Gdk.cairo_rectangle (cr, line_rectangle);
+        Gdk.cairo_rectangle (cr, border);
         cr.stroke ();
     }
 
