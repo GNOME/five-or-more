@@ -6,6 +6,7 @@ public class View : Gtk.DrawingArea
     private Game? game = null;
     private ThemeRenderer? theme = null;
     private Gdk.RGBA background_color;
+    private Gtk.StyleContext cs;
 
     private Gdk.Rectangle board_rectangle;
 
@@ -83,6 +84,21 @@ public class View : Gtk.DrawingArea
     {
         var color_str = settings.get_string (FiveOrMoreApp.KEY_BACKGROUND_COLOR);
         background_color.parse (color_str);
+
+        cs = this.get_style_context ();
+        var provider = new Gtk.CssProvider ();
+        try
+        {
+            provider.load_from_data (".game-view { background-color: %s; }".printf (background_color.to_string ()));
+        }
+        catch (Error e)
+        {
+            warning ("Failed to load CSS data to provider");
+            return;
+        }
+
+        cs.add_class ("game-view");
+        cs.add_provider (provider, Gtk.STYLE_PROVIDER_PRIORITY_USER);
     }
 
     public override bool button_press_event (Gdk.EventButton event)
@@ -177,14 +193,12 @@ public class View : Gtk.DrawingArea
 
     private void fill_background (Cairo.Context cr)
     {
-        Gdk.cairo_set_source_rgba (cr, background_color);
-        Gdk.cairo_rectangle (cr, board_rectangle);
-        cr.fill ();
+        cs.render_background (cr, board_rectangle.x, board_rectangle.y, board_rectangle.width, board_rectangle.height);
     }
 
     private void draw_gridlines (Cairo.Context cr)
     {
-        Gdk.RGBA grid_color = this.get_style_context ().get_color (Gtk.StateFlags.NORMAL);
+        Gdk.RGBA grid_color = cs.get_color (Gtk.StateFlags.NORMAL);
         Gdk.cairo_set_source_rgba (cr, grid_color);
         cr.set_line_width (2.0);
 

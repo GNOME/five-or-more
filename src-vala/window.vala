@@ -11,9 +11,10 @@ public class GameWindow : Gtk.ApplicationWindow
     private Gtk.Box hbox;
 
     [GtkChild]
-    private Gtk.Label scorelabel;
-
     private Games.GridFrame grid_frame;
+
+    [GtkChild]
+    private Gtk.Label scorelabel;
 
     private Game? game = null;
     private ThemeRenderer? theme = null;
@@ -38,7 +39,7 @@ public class GameWindow : Gtk.ApplicationWindow
         next_pieces_widget.realize ();
         next_pieces_widget.show ();
 
-        grid_frame = new Games.GridFrame (game.n_cols, game.n_rows);
+        grid_frame.set (game.n_cols, game.n_rows);
         /* it depends on which one changes last, so it is better to call them both */
         game.notify["n-cols"].connect ((s, p) => { grid_frame.set (game.n_cols, game.n_rows); });
         game.notify["n-rows"].connect ((s, p) => { grid_frame.set (game.n_cols, game.n_rows); });
