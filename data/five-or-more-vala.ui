@@ -72,6 +72,9 @@
         <property name="orientation">horizontal</property>
         <property name="spacing">12</property>
         <child>
+          <object class="GamesGridFrame" id="grid_frame">
+            <property name="visible">True</property>
+          </object>
           <object class="GtkButton" id="new_game_button">
                 <property name="visible">True</property>
                 <property name="use_underline">True</property>
