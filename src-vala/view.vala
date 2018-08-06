@@ -217,6 +217,10 @@ public class View : Gtk.DrawingArea
         if (game.status_message != StatusMessage.NONE)
             game.status_message = StatusMessage.NONE;
 
+
+        keyboard_cursor_x = cell_x;
+        keyboard_cursor_y = cell_y;
+
         /* if selected cell is not empty, set start */
         if (game.board.get_piece (cell_y, cell_x) != null)
         {
