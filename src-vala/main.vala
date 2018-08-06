@@ -37,6 +37,7 @@ public class FiveOrMoreApp: Gtk.Application
         window = new GameWindow (this, settings);
 
         add_action_entries (action_entries, this);
+        set_accels_for_action ("app.new-game", {"<Primary>n"});
     }
 
     public static int main (string[] args)
