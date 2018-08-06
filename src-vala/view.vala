@@ -19,6 +19,10 @@ public class View : Gtk.DrawingArea
     private int end_x;
     private int end_y;
 
+    private bool show_cursor;
+    private int keyboard_cursor_x;
+    private int keyboard_cursor_y;
+
     private int animation_state;
     private uint animation_id;
 
@@ -58,6 +62,10 @@ public class View : Gtk.DrawingArea
 
         game.board.grid_changed.connect (board_changed_cb);
         add_events (Gdk.EventMask.BUTTON_PRESS_MASK | Gdk.EventMask.BUTTON_RELEASE_MASK);
+        add_events (Gdk.EventMask.KEY_PRESS_MASK | Gdk.EventMask.KEY_RELEASE_MASK);
+
+        set_can_focus (true);
+        grab_focus ();
 
         game.current_path_cell_pos_changed.connect (current_path_cell_pos_changed_cb);
 
@@ -65,6 +73,10 @@ public class View : Gtk.DrawingArea
         start_y = -1;
         end_x = -1;
         end_y = -1;
+
+        show_cursor = false;
+        keyboard_cursor_x = -1;
+        keyboard_cursor_y = -1;
 
         animation_state = 0;
         animation_id = -1;
@@ -101,18 +113,104 @@ public class View : Gtk.DrawingArea
         cs.add_provider (provider, Gtk.STYLE_PROVIDER_PRIORITY_USER);
     }
 
-    public override bool button_press_event (Gdk.EventButton event)
+    private void draw_box (int x, int y, int width, int height)
     {
-        if (game == null || game.animating)
-            return false;
+        queue_draw_area (x, y, width, height);
+    }
 
-        /* Ignore the 2BUTTON and 3BUTTON events. */
-        if (event.type != Gdk.EventType.BUTTON_PRESS)
-            return false;
+    private void move_keyboard_cursor (int x, int y)
+    {
+        int prev_x = keyboard_cursor_x;
+        int prev_y = keyboard_cursor_y;
 
-        cell_x = (int)event.x / piece_size;
-        cell_y = (int)event.y / piece_size;
+        if (!show_cursor)
+        {
+            show_cursor = true;
+            // queue_draw ();
+            draw_box (keyboard_cursor_x * piece_size, keyboard_cursor_y * piece_size, piece_size, piece_size);
+        }
 
+        keyboard_cursor_x += x;
+        if (keyboard_cursor_x < 0)
+            keyboard_cursor_x = 0;
+        if (keyboard_cursor_x >= game.n_cols)
+            keyboard_cursor_x = game.n_cols - 1;
+
+        keyboard_cursor_y += y;
+        if (keyboard_cursor_y < 0)
+            keyboard_cursor_y = 0;
+        if (keyboard_cursor_y >= game.n_rows)
+            keyboard_cursor_y = game.n_rows - 1;
+
+        if (keyboard_cursor_x == prev_x && keyboard_cursor_y == prev_y)
+            return;
+            // queue_draw ();
+        draw_box (prev_x * piece_size, prev_y * piece_size, piece_size, piece_size);
+        draw_box (keyboard_cursor_x * piece_size, keyboard_cursor_y * piece_size, piece_size, piece_size);
+    }
+
+    public override bool key_press_event (Gdk.EventKey event)
+    {
+        uint key = event.keyval;
+        switch (key)
+        {
+            case (Gdk.Key.Left):
+                /* fall-thru */
+            case (Gdk.Key.KP_Left):
+                move_keyboard_cursor (-1, 0);
+                break;
+            case (Gdk.Key.Right):
+                /* fall-thru */
+            case (Gdk.Key.KP_Right):
+                move_keyboard_cursor (1, 0);
+                break;
+            case (Gdk.Key.Up):
+                /* fall-thru */
+            case (Gdk.Key.KP_Up):
+                move_keyboard_cursor (0, -1);
+                break;
+            case (Gdk.Key.Down):
+                /* fall-thru */
+            case (Gdk.Key.KP_Down):
+                move_keyboard_cursor (0, 1);
+                break;
+            case (Gdk.Key.Home):
+                /* fall-thru */
+            case (Gdk.Key.KP_Home):
+                move_keyboard_cursor (-999, 0);
+                break;
+            case (Gdk.Key.End):
+                /* fall-thru */
+            case (Gdk.Key.KP_End):
+                move_keyboard_cursor (999, 0);
+                break;
+            case (Gdk.Key.Page_Up):
+                /* fall-thru */
+            case (Gdk.Key.KP_Page_Up):
+                move_keyboard_cursor (0, -999);
+                break;
+            case (Gdk.Key.Page_Down):
+                /* fall-thru */
+            case (Gdk.Key.KP_Page_Down):
+                move_keyboard_cursor (0, 999);
+                break;
+            case (Gdk.Key.space):
+                /* fall-thru */
+            case (Gdk.Key.KP_Space):
+                /* fall-thru */
+            case (Gdk.Key.Return):
+                /* fall-thru */
+            case (Gdk.Key.KP_Enter):
+                if (show_cursor)
+                    cell_clicked (keyboard_cursor_x, keyboard_cursor_y);
+                break;
+        }
+
+        return true;
+    }
+
+    private bool cell_clicked (int cell_x, int cell_y)
+    {
         if (cell_x >= game.n_cols || cell_y >= game.n_rows)
             return false;
 
@@ -166,6 +264,27 @@ public class View : Gtk.DrawingArea
         }
 
         return true;
+    }
+
+    public override bool button_press_event (Gdk.EventButton event)
+    {
+        if (game == null || game.animating)
+            return false;
+
+        /* Ignore the 2BUTTON and 3BUTTON events. */
+        if (event.type != Gdk.EventType.BUTTON_PRESS)
+            return false;
+
+        if (show_cursor)
+        {
+            show_cursor = false;
+            draw_box (keyboard_cursor_x * piece_size, keyboard_cursor_y * piece_size, piece_size, piece_size);
+        }
+
+        cell_x = (int)event.x / piece_size;
+        cell_y = (int)event.y / piece_size;
+
+        return cell_clicked (cell_x, cell_y);
     }
 
     private bool animate_clicked ()
@@ -223,6 +342,24 @@ public class View : Gtk.DrawingArea
         cr.stroke ();
     }
 
+    private void draw_cursor_box (Cairo.Context cr)
+    {
+        if (show_cursor)
+        {
+            Gdk.RGBA grid_color = cs.get_color (Gtk.StateFlags.NORMAL);
+            Gdk.cairo_set_source_rgba (cr, grid_color);
+            cr.set_line_width (2.0);
+
+            var cursor_rectangle = Gdk.Rectangle ();
+            cursor_rectangle.x = keyboard_cursor_x * piece_size + 1;
+            cursor_rectangle.y = keyboard_cursor_y * piece_size + 1;
+            cursor_rectangle.width = piece_size - 1;
+            cursor_rectangle.height = piece_size - 1;
+            Gdk.cairo_rectangle (cr, cursor_rectangle);
+            cr.stroke ();
+        }
+    }
+
     private void draw_shapes (Cairo.Context cr)
     {
         for (int row = 0; row < game.n_rows; row++)
@@ -264,6 +401,7 @@ public class View : Gtk.DrawingArea
         fill_background (cr);
         draw_gridlines (cr);
         draw_shapes (cr);
+        draw_cursor_box (cr);
         draw_path (cr);
 
         return true;
