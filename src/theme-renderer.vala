@@ -11,8 +11,6 @@ public class ThemeRenderer
     private Rsvg.Handle? theme = null;
     public const string themes[] = {
             "balls.svg",
-            "dots.png",
-            "gumball.png",
             "shapes.svg",
     };
 

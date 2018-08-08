@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gresources>
   <gresource prefix="/org/gnome/five-or-more/ui">
-    <file preprocess="xml-stripblanks">five-or-more-vala.ui</file>
-    <file preprocess="xml-stripblanks" alias="preferences-dialog.ui">five-or-more-vala-preferences.ui</file>
+    <file preprocess="xml-stripblanks">five-or-more.ui</file>
+    <file preprocess="xml-stripblanks" alias="preferences-dialog.ui">five-or-more-preferences.ui</file>
   </gresource>
   <gresource prefix="/org/gnome/five-or-more/gtk">
     <file preprocess="xml-stripblanks" alias="menus.ui">five-or-more-menu.ui</file>

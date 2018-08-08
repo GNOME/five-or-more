@@ -1,4 +1,4 @@
-[GtkTemplate (ui = "/org/gnome/five-or-more/ui/five-or-more-vala.ui")]
+[GtkTemplate (ui = "/org/gnome/five-or-more/ui/five-or-more.ui")]
 public class GameWindow : Gtk.ApplicationWindow
 {
     [GtkChild]

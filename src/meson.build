@@ -1,43 +1,34 @@
 #five-or-more executable
 
-five_or_more_c_sources = [
-	'five-or-more.c',
-	'game-area.h',
-	'game-area.c',
-	'five-or-more-app.c',
-	'five-or-more-app.h',
-	'balls-preview.c',
-	'balls-preview.h',
-	'games-file-list.c',
-	'games-file-list.h',
-	'games-preimage.c',
-	'games-preimage.h'
-]
-
 five_or_more_sources = [
-	five_or_more_c_sources
+  'config.vapi',
+  'board.vala',
+  'game.vala',
+  'main.vala',
+  'next-pieces-widget.vala',
+  'piece.vala',
+  'piece-generator.vala',
+  'preferences-dialog.vala',
+  'theme-renderer.vala',
+  'view.vala',
+  'window.vala',
+  resources,
 ]
 
 five_or_more_deps = [
-	glib_dep,
-	gio_dep,
-	gtk_dep,
-	libgnome_games_support_dep,
-	libmath_dep,
-	librsvg_dep,
+  gee_dep,
+  gio_dep,
+  gtk_dep,
+  libgnome_games_support_dep,
+  librsvg_dep,
 ]
 
-five_or_more_includes = [
-	config_h_dir
-]
-
-five_or_more_c_flags = [
-	'-include', 'config.h'
+five_or_more_vala_args = [
+  '--gresources', resource_files,
 ]
 
 executable('five-or-more', five_or_more_sources,
-	dependencies: five_or_more_deps,
-	include_directories: five_or_more_includes,
-	c_args: five_or_more_c_flags,
-	install: true
+  dependencies: five_or_more_deps,
+  vala_args: five_or_more_vala_args,
+  install: true,
 )
