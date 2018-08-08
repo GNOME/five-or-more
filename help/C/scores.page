@@ -17,66 +17,70 @@
     <desc></desc>
   </info>
 
-<title>Scoring</title>
-<p>You score points by creating lines of 5 or more objects.  The number of
- points depends on the number of objects that disappear.</p>
+  <title>Scoring</title>
+  <p>You score points by creating lines of 5 or more objects.  The number of
+  points depends on the number of objects that disappear.</p>
 
-    <table rules="rowgroups cols" frame="all">
-      <tbody>
-        <tr>
-         <td><p><em>Number of objects</em></p></td>
-         <td><p><em>Number of points</em></p></td>
-        </tr>
-      </tbody>
-      <tbody>
-       <tr>
+  <table rules="rowgroups cols" frame="all">
+    <tbody>
+      <tr>
+       <td><p><em>Number of objects</em></p></td>
+       <td><p><em>Number of points</em></p></td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
         <td><p>5</p></td>
         <td><p>10</p></td>
-       </tr>
-       <tr>
+      </tr>
+      <tr>
         <td><p>6</p></td>
-        <td><p>12</p></td>
-       </tr>
-       <tr>
-        <td><p>7</p></td>
         <td><p>18</p></td>
-       </tr>
-       <tr>
+      </tr>
+      <tr>
+        <td><p>7</p></td>
+        <td><p>25</p></td>
+      </tr>
+      <tr>
         <td><p>8</p></td>
-        <td><p>28</p></td>
-       </tr>
-       <tr>
+        <td><p>31</p></td>
+      </tr>
+      <tr>
         <td><p>9</p></td>
-        <td><p>42</p></td>
-       </tr>
-       <tr>
+        <td><p>36</p></td>
+      </tr>
+      <tr>
         <td><p>10</p></td>
-        <td><p>82</p></td>
-       </tr>
-       <tr>
+        <td><p>41</p></td>
+      </tr>
+      <tr>
         <td><p>11</p></td>
-        <td><p>108</p></td>
-       </tr>
-       <tr>
-        <td><p>12</p></td>
-        <td><p>138</p></td>
+        <td><p>45</p></td>
        </tr>
       <tr>
+        <td><p>12</p></td>
+        <td><p>49</p></td>
+      </tr>
+      <tr>
         <td><p>13</p></td>
-        <td><p>172</p></td>
+        <td><p>53</p></td>
       </tr>
       <tr>
         <td><p>14</p></td>
-        <td><p>210</p></td>
-       </tr>
-     </tbody>
-    </table>
+        <td><p>56</p></td>
+      </tr>
+      <tr>
+        <td><p>14</p></td>
+        <td><p>56</p></td>
+      </tr>
+    </tbody>
+  </table>
 
-<note style="tip">
-<p>You can view the high scores by clicking
- <guiseq><gui>Game</gui><gui>Scores</gui></guiseq>.</p>
-<p>The <app>Five or More</app> scores are recorded according to the board size.
- You can select the <gui>Board Size</gui> of interest using the drop down
- menu.</p> 
-</note>
+  <note style="tip">
+    <p>You can view the high scores by clicking
+     <guiseq><gui>Game</gui><gui>Scores</gui></guiseq>.</p>
+    <p>The <app>Five or More</app> scores are recorded according to the board size.
+     You can select the <gui>Board Size</gui> of interest using the drop down
+     menu.</p>
+  </note>
 </page>
