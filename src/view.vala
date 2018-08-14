@@ -32,12 +32,6 @@ public class View : Gtk.DrawingArea
         this.game = game;
         this.theme = theme;
 
-        settings.changed[FiveOrMoreApp.KEY_THEME].connect (() => {
-            game.board.grid_changed ();
-            game.queue_changed (game.next_pieces_queue);
-            queue_draw ();
-        });
-
         background_color = Gdk.RGBA ();
         set_background_color ();
         settings.changed[FiveOrMoreApp.KEY_BACKGROUND_COLOR].connect (() => {
@@ -69,6 +63,8 @@ public class View : Gtk.DrawingArea
 
         game.current_path_cell_pos_changed.connect (current_path_cell_pos_changed_cb);
 
+        theme.theme_changed.connect (theme_changed_cb);
+
         start_x = -1;
         start_y = -1;
         end_x = -1;
@@ -89,6 +85,13 @@ public class View : Gtk.DrawingArea
 
     private void current_path_cell_pos_changed_cb ()
     {
+        queue_draw ();
+    }
+
+    private void theme_changed_cb ()
+    {
+        game.board.grid_changed ();
+        game.queue_changed (game.next_pieces_queue);
         queue_draw ();
     }
 

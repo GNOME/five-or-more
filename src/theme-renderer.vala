@@ -17,12 +17,17 @@ public class ThemeRenderer
     private Cairo.Pattern? tile_pattern = null;
     private Cairo.Context cr_preview;
 
+    public signal void theme_changed ();
+    private bool is_theme_changed;
+
     public ThemeRenderer (Settings settings)
     {
         this.settings = settings;
 
         settings.changed[FiveOrMoreApp.KEY_THEME].connect (change_theme_cb);
         change_theme_cb ();
+
+        is_theme_changed = false;
     }
 
     private void change_theme_cb ()
@@ -58,12 +63,16 @@ public class ThemeRenderer
         var dimensions = theme.get_dimensions ();
         sprite_sheet_width = dimensions.width;
         sprite_sheet_height = dimensions.height;
+
+        theme_changed ();
+        is_theme_changed = true;
     }
 
     public void render_sprite (Cairo.Context cr, int type, int animation, double x, double y, int size)
     {
-        if (tile_pattern == null || sprite_size != size)
+        if (is_theme_changed || tile_pattern == null || sprite_size != size)
         {
+            is_theme_changed = false;
             sprite_size = size;
 
             var preview_surface = new Cairo.Surface.similar (cr.get_target (),
