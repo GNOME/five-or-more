@@ -54,14 +54,14 @@ public class View : Gtk.DrawingArea
             queue_draw ();
         });
 
-        game.board.grid_changed.connect (board_changed_cb);
+        game.board.grid_changed.connect (queue_draw);
         add_events (Gdk.EventMask.BUTTON_PRESS_MASK | Gdk.EventMask.BUTTON_RELEASE_MASK);
         add_events (Gdk.EventMask.KEY_PRESS_MASK | Gdk.EventMask.KEY_RELEASE_MASK);
 
         set_can_focus (true);
         grab_focus ();
 
-        game.current_path_cell_pos_changed.connect (current_path_cell_pos_changed_cb);
+        game.current_path_cell_pos_changed.connect (queue_draw);
 
         theme.theme_changed.connect (theme_changed_cb);
 
@@ -76,16 +76,6 @@ public class View : Gtk.DrawingArea
 
         animation_state = 0;
         animation_id = -1;
-    }
-
-    private void board_changed_cb ()
-    {
-        queue_draw ();
-    }
-
-    private void current_path_cell_pos_changed_cb ()
-    {
-        queue_draw ();
     }
 
     private void theme_changed_cb ()
