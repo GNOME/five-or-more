@@ -32,15 +32,32 @@ public class ThemeRenderer
 
         try
         {
-            theme = new Rsvg.Handle.from_file (theme_file);
-            var dimensions = theme.get_dimensions ();
-            sprite_sheet_width = dimensions.width;
-            sprite_sheet_height = dimensions.height;
+            load_theme (theme_file);
         }
         catch (Error e)
         {
-            GLib.warning ("Unable to load theme\n");
+            theme_name = settings.get_default_value (FiveOrMoreApp.KEY_THEME).get_string ();
+            theme_file = Path.build_filename (DATA_DIRECTORY, "themes", theme_name);
+
+            try
+            {
+                load_theme (theme_file);
+            }
+            catch
+            {
+                GLib.warning ("Unable to load default theme\n");
+            }
+
+            GLib.warning ("Unable to load chosen theme\n");
         }
+    }
+
+    private void load_theme (string theme_file) throws Error
+    {
+        theme = new Rsvg.Handle.from_file (theme_file);
+        var dimensions = theme.get_dimensions ();
+        sprite_sheet_width = dimensions.width;
+        sprite_sheet_height = dimensions.height;
     }
 
     public void render_sprite (Cairo.Context cr, int type, int animation, double x, double y, int size)
