@@ -3,8 +3,20 @@ public class Board
     private const int MOVE_COST = 1;
 
     private Cell[,] grid = null;
-    private int n_rows;
-    private int n_cols;
+
+    public int n_rows {
+        get {
+            assert (grid != null);
+            return grid.length[0];
+        }
+    }
+
+    public int n_cols {
+        get {
+            assert (grid != null);
+            return grid.length[1];
+        }
+    }
 
     public signal void grid_changed ();
 
@@ -17,9 +29,6 @@ public class Board
 
     public Board (int n_rows, int n_cols)
     {
-        this.n_rows = n_rows;
-        this.n_cols =n_cols;
-
         grid = new Cell[n_rows, n_cols];
         for (int col = 0; col < n_cols; col++)
         {
@@ -32,9 +41,6 @@ public class Board
 
     public void reset (int n_rows, int n_cols)
     {
-        this.n_rows = n_rows;
-        this.n_cols = n_cols;
-
         grid = new Cell[n_rows, n_cols];
 
         for (int col = 0; col < n_cols; col++)
@@ -109,7 +115,7 @@ public class Board
                 return path;
             }
 
-            neighbours = current_cell.get_neighbours (grid, n_rows, n_cols);
+            neighbours = current_cell.get_neighbours (grid);
             foreach (Cell neighbour in neighbours)
             {
                 // if this adjacent square is already in the closed list ignore it
@@ -233,7 +239,7 @@ public class Cell
             stderr.printf ("%s: null\n", messg);
     }
 
-    private Cell get_neighbour (Cell[,] board, Direction dir, int n_rows, int n_cols)
+    private Cell get_neighbour (Cell[,] board, Direction dir)
     {
         Cell? neighbour = null;
         int row = -1, col = -1;
@@ -274,118 +280,118 @@ public class Cell
                 break;
         }
 
-        if (row >= 0 && row < n_rows &&
-            col >= 0 && col < n_cols)
+        if (row >= 0 && row < board.length[0] &&
+            col >= 0 && col < board.length[1])
             neighbour = board[row, col];
 
         return neighbour;
     }
 
-    public Gee.ArrayList<Cell> get_neighbours (Cell[,] board, int n_rows, int n_cols)
+    public Gee.ArrayList<Cell> get_neighbours (Cell[,] board)
     {
         Gee.ArrayList<Cell> neighbours = new Gee.ArrayList<Cell> ();
         Cell? right = null, left = null, up = null, down = null;
 
-        right = this.get_neighbour (board, Direction.RIGHT, n_rows, n_cols);
+        right = this.get_neighbour (board, Direction.RIGHT);
         if (right != null && right.piece == null)
             neighbours.add (right);
 
-        left = get_neighbour (board, Direction.LEFT, n_rows, n_cols);
+        left = get_neighbour (board, Direction.LEFT);
         if (left != null && left.piece == null)
             neighbours.add (left);
 
-        up = get_neighbour (board, Direction.UP, n_rows, n_cols);
+        up = get_neighbour (board, Direction.UP);
         if (up != null && up.piece == null)
             neighbours.add (up);
 
-        down = get_neighbour (board, Direction.DOWN, n_rows, n_cols);
+        down = get_neighbour (board, Direction.DOWN);
         if (down != null && down.piece == null)
             neighbours.add (down);
 
         return neighbours;
     }
 
-    private void get_direction (Cell[,] board, int n_rows, int n_cols, Direction dir, ref Gee.ArrayList<Cell>? list)
+    private void get_direction (Cell[,] board, Direction dir, ref Gee.ArrayList<Cell>? list)
     {
         if (list == null)
             list = new Gee.ArrayList<Cell> ();
 
         for (Cell? cell = this;
             cell != null && cell.piece != null && cell.piece.equal (this.piece);
-            cell = cell.get_neighbour (board, dir, n_rows, n_cols))
+            cell = cell.get_neighbour (board, dir))
         {
             if (!list.contains (cell))
                 list.add (cell);
         }
     }
 
-    private Gee.ArrayList<Cell> get_horizontal (Cell[,] board, int n_rows, int n_cols)
+    private Gee.ArrayList<Cell> get_horizontal (Cell[,] board)
     {
         Gee.ArrayList<Cell>? list = null;
 
-        get_direction (board, n_rows, n_cols, Direction.LEFT, ref list);
-        get_direction (board, n_rows, n_cols, Direction.RIGHT, ref list);
+        get_direction (board, Direction.LEFT, ref list);
+        get_direction (board, Direction.RIGHT, ref list);
 
         return list;
     }
 
-    private Gee.ArrayList<Cell> get_vertical (Cell[,] board, int n_rows, int n_cols)
+    private Gee.ArrayList<Cell> get_vertical (Cell[,] board)
     {
         Gee.ArrayList<Cell>? list = null;
 
-        get_direction (board, n_rows, n_cols, Direction.UP, ref list);
-        get_direction (board, n_rows, n_cols, Direction.DOWN, ref list);
+        get_direction (board, Direction.UP, ref list);
+        get_direction (board, Direction.DOWN, ref list);
 
         return list;
     }
 
-    private Gee.ArrayList<Cell> get_first_diagonal (Cell[,] board, int n_rows, int n_cols)
+    private Gee.ArrayList<Cell> get_first_diagonal (Cell[,] board)
     {
         Gee.ArrayList<Cell>? list = null;
 
-        get_direction (board, n_rows, n_cols, Direction.UPPER_LEFT, ref list);
-        get_direction (board, n_rows, n_cols, Direction.LOWER_RIGHT, ref list);
+        get_direction (board, Direction.UPPER_LEFT, ref list);
+        get_direction (board, Direction.LOWER_RIGHT, ref list);
 
         return list;
     }
 
-    private Gee.ArrayList<Cell> get_second_diagonal (Cell[,] board, int n_rows, int n_cols)
+    private Gee.ArrayList<Cell> get_second_diagonal (Cell[,] board)
     {
         Gee.ArrayList<Cell>? list = null;
 
-        get_direction (board, n_rows, n_cols, Direction.UPPER_RIGHT, ref list);
-        get_direction (board, n_rows, n_cols, Direction.LOWER_LEFT, ref list);
+        get_direction (board, Direction.UPPER_RIGHT, ref list);
+        get_direction (board, Direction.LOWER_LEFT, ref list);
 
         return list;
     }
 
-    public Gee.HashSet<Cell> get_all_directions (Cell[,] board, int n_rows, int n_cols)
+    public Gee.HashSet<Cell> get_all_directions (Cell[,] board)
     {
         Gee.ArrayList<Cell>? list;
         Gee.HashSet<Cell>? inactivate = new Gee.HashSet<Cell> ();
 
-        list = get_horizontal (board, n_rows, n_cols);
+        list = get_horizontal (board);
         if (list.size >= Game.N_MATCH)
         {
             foreach (var l in list)
                 inactivate.add (l);
         }
 
-        list = get_vertical (board, n_rows, n_cols);
+        list = get_vertical (board);
         if (list.size >= Game.N_MATCH)
         {
             foreach (var l in list)
                 inactivate.add (l);
         }
 
-        list = get_first_diagonal (board, n_rows, n_cols);
+        list = get_first_diagonal (board);
         if (list.size >= Game.N_MATCH)
         {
             foreach (var l in list)
                 inactivate.add (l);
         }
 
-        list = get_second_diagonal (board, n_rows, n_cols);
+        list = get_second_diagonal (board);
         if (list.size >= Game.N_MATCH)
         {
             foreach (var l in list)

@@ -10,8 +10,20 @@ public class Game : Object
     private NextPiecesGenerator next_pieces_generator;
 
     public Board board = null;
-    public int n_rows { get; private set; }
-    public int n_cols { get; private set; }
+    public int n_rows {
+        get {
+            assert (board != null);
+            return board.n_rows;
+        }
+    }
+
+    public int n_cols {
+        get {
+            assert (board != null);
+            return board.n_cols;
+        }
+    }
+
     public int n_next_pieces;
 
     private int n_cells;
@@ -82,8 +94,8 @@ public class Game : Object
 
     private void init_game ()
     {
-        this.n_rows = game_difficulty[size].n_rows;
-        this.n_cols = game_difficulty[size].n_cols;
+        var n_rows = game_difficulty[size].n_rows;
+        var n_cols = game_difficulty[size].n_cols;
         this.n_next_pieces = game_difficulty[size].n_next_pieces;
 
         this.n_cells = n_rows * n_cols;
@@ -99,11 +111,11 @@ public class Game : Object
         generate_next_pieces ();
 
         if (board == null)
-            board = new Board (this.n_rows, this.n_cols);
+            board = new Board (n_rows, n_cols);
         else
             board.reset (n_rows, n_cols);
 
-        fill_board (this.n_rows, this.n_cols);
+        fill_board (n_rows, n_cols);
 
         generate_next_pieces ();
     }
@@ -128,9 +140,7 @@ public class Game : Object
             board.set_piece (row, col, next_pieces_queue [i]);
 
             Gee.HashSet<Cell> inactivate =
-            board.get_cell (row, col).get_all_directions (board.get_grid (),
-                                                        n_rows,
-                                                        n_cols);
+            board.get_cell (row, col).get_all_directions (board.get_grid ());
             if (inactivate.size > 0)
             {
                 n_filled_cells -= inactivate.size;
@@ -211,7 +221,7 @@ public class Game : Object
 
             current_path = null;
             var inactivate =
-                curr_cell.get_all_directions (board.get_grid (), n_rows, n_cols);
+                curr_cell.get_all_directions (board.get_grid ());
 
             if (inactivate.size > 0)
             {
