@@ -6,10 +6,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-"
-"or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-01-25 21:28+0000\n"
-"PO-Revision-Date: 2015-09-21 16:16+0500\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/five-or-more/issues\n"
+"POT-Creation-Date: 2018-08-25 08:53+0000\n"
+"PO-Revision-Date: 2018-08-25 22:38+0500\n"
 "Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
 "Language-Team: Kazakh <kk_KZ@googlegroups.com>\n"
 "Language: kk\n"
@@ -17,19 +16,18 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 1.8.4\n"
+"X-Generator: Poedit 2.1.1\n"
 
-#: ../data/five-or-more.appdata.xml.in.h:1 ../data/five-or-more.desktop.in.h:1
-#: ../data/five-or-more.ui.h:1 ../src/five-or-more.c:1172
-#: ../src/five-or-more.c:1731
+#: data/five-or-more.appdata.xml.in:7 data/five-or-more.desktop.in:3
+#: data/five-or-more.ui:18 src/five-or-more.c:70 src/five-or-more-app.c:576
 msgid "Five or More"
 msgstr ""
 
-#: ../data/five-or-more.appdata.xml.in.h:2 ../data/five-or-more.desktop.in.h:2
+#: data/five-or-more.appdata.xml.in:8 data/five-or-more.desktop.in:4
 msgid "Remove colored balls from the board by forming lines"
 msgstr ""
 
-#: ../data/five-or-more.appdata.xml.in.h:3
+#: data/five-or-more.appdata.xml.in:10
 msgid ""
 "Five or More is the GNOME port of a once-popular computer game. Align five "
 "or more objects of the same color into a line to cause them to disappear and "
@@ -37,184 +35,245 @@ msgid ""
 "before clearing them."
 msgstr ""
 
-#: ../data/five-or-more.appdata.xml.in.h:4
+#: data/five-or-more.appdata.xml.in:16
 msgid ""
 "More objects appear after every turn. Play for as long as possible, until "
 "the board is completely full!"
 msgstr ""
 
-#: ../data/five-or-more.desktop.in.h:3
+#: data/five-or-more.appdata.xml.in:40
+msgid "The GNOME Project"
+msgstr ""
+
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/five-or-more.desktop.in:6
 msgid "game;strategy;logic;"
 msgstr "ойын;стратегия;логика;"
 
-#: ../data/five-or-more-preferences.ui.h:1 ../data/menu.ui.h:2
-#: ../src/five-or-more.c:171
+#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
+#: data/five-or-more.desktop.in:9
+msgid "five-or-more"
+msgstr ""
+
+#: data/five-or-more-preferences.ui:12 data/menu.ui:11 src/game-area.c:858
 msgid "Preferences"
 msgstr "Қалаулар"
 
-#: ../data/five-or-more-preferences.ui.h:2
+#: data/five-or-more-preferences.ui:35
 msgid "Appearance"
 msgstr "Сыртқы түрі"
 
-#: ../data/five-or-more-preferences.ui.h:3
+#: data/five-or-more-preferences.ui:59
 msgid "_Image:"
 msgstr "Суре_т:"
 
-#: ../data/five-or-more-preferences.ui.h:4
+#: data/five-or-more-preferences.ui:74
 msgid "B_ackground color:"
 msgstr "_Фон түсі:"
 
-#: ../data/five-or-more-preferences.ui.h:5
+#: data/five-or-more-preferences.ui:116
 msgid "Board Size"
 msgstr "Тақта өлшемі"
 
-#: ../data/five-or-more-preferences.ui.h:6
+#: data/five-or-more-preferences.ui:135
 msgid "_Small"
 msgstr "_Кішкентай"
 
-#: ../data/five-or-more-preferences.ui.h:7
+#: data/five-or-more-preferences.ui:154
 msgid "_Medium"
 msgstr "О_рташа"
 
-#: ../data/five-or-more-preferences.ui.h:8
+#: data/five-or-more-preferences.ui:173
 msgid "_Large"
 msgstr "Ү_лкен"
 
-#: ../data/five-or-more-preferences.ui.h:9
+#: data/five-or-more-preferences.ui:203
 msgid "General"
 msgstr "Жалпы"
 
-#: ../data/five-or-more-preferences.ui.h:10
+#: data/five-or-more-preferences.ui:216
 msgid "_Use fast moves"
 msgstr ""
 
-#: ../data/five-or-more.ui.h:2
+#: data/five-or-more.ui:30
 msgid "Next:"
 msgstr "Келесі:"
 
-#: ../data/five-or-more.ui.h:3
-#| msgctxt "number"
-#| msgid "0"
-msgid "0"
-msgstr "0"
-
-#: ../data/five-or-more.ui.h:4
+#: data/five-or-more.ui:56
 msgid "Score:"
 msgstr "Есебі:"
 
-#: ../data/five-or-more.ui.h:5 ../src/games-scores-dialog.c:385
+#: data/five-or-more.ui:76
 msgid "_New Game"
 msgstr "Ж_аңа ойын"
 
-#: ../data/five-or-more.ui.h:6
+#: data/five-or-more.ui:80
 msgid "Start a new puzzle"
 msgstr ""
 
-#: ../data/menu.ui.h:1
+#: data/menu.ui:7
 msgid "Scores"
 msgstr "Есептер"
 
-#: ../data/menu.ui.h:3
+#: data/menu.ui:17
 msgid "Help"
 msgstr "Көмек"
 
-#: ../data/menu.ui.h:4
+#: data/menu.ui:22
 msgid "About"
 msgstr "Осы туралы"
 
-#: ../data/menu.ui.h:5
+#: data/menu.ui:26
 msgid "Quit"
 msgstr "Шығу"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:1
+#: data/org.gnome.five-or-more.gschema.xml:5
 msgid "Playing field size"
 msgstr ""
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:2
+#: data/org.gnome.five-or-more.gschema.xml:6
 msgid ""
 "Playing field size. 1=Small, 2=Medium, 3=Large. Any other value is invalid."
 msgstr ""
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:3
+#: data/org.gnome.five-or-more.gschema.xml:10
 msgid "Ball style"
 msgstr "Доп стилі"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:4
+#: data/org.gnome.five-or-more.gschema.xml:11
 msgid "Ball style. The filename of the images to use for the balls."
 msgstr ""
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:5
+#: data/org.gnome.five-or-more.gschema.xml:15
 msgid "Background color"
 msgstr "Фон түсі"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:6
+#: data/org.gnome.five-or-more.gschema.xml:16
 msgid "Background color. The hex specification of the background color."
 msgstr ""
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:7
+#: data/org.gnome.five-or-more.gschema.xml:20
 msgid "Time between moves"
 msgstr ""
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:8
+#: data/org.gnome.five-or-more.gschema.xml:21
 msgid "Time between moves in milliseconds."
 msgstr ""
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:9
+#: data/org.gnome.five-or-more.gschema.xml:25
 msgid "Game score"
 msgstr "Ойын есебі"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:10
+#: data/org.gnome.five-or-more.gschema.xml:26
 msgid "Game score from last saved session."
 msgstr "Соңғы сақталған ойынның есебі."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:11
+#: data/org.gnome.five-or-more.gschema.xml:30
 msgid "Game field"
 msgstr ""
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:12
+#: data/org.gnome.five-or-more.gschema.xml:31
 msgid "Game field from last saved session."
 msgstr ""
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:13
+#: data/org.gnome.five-or-more.gschema.xml:35
 msgid "Game preview"
 msgstr ""
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:14
+#: data/org.gnome.five-or-more.gschema.xml:36
 msgid "Game preview from last saved session."
 msgstr ""
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:15
+#: data/org.gnome.five-or-more.gschema.xml:40
 msgid "Width of the window in pixels"
 msgstr "Терезе ені, пиксельмен"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:16
+#: data/org.gnome.five-or-more.gschema.xml:44
 msgid "Height of the window in pixels"
 msgstr "Терезе биіктігі, пиксельмен"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:17
+#: data/org.gnome.five-or-more.gschema.xml:48
 msgid "true if the window is maximized"
 msgstr ""
 
-#: ../src/five-or-more.c:80
+#.
+#. * Translatable strings file.
+#. * Add this file to your project's POTFILES.in.
+#. * DO NOT compile it as part of your application.
+#.
+#: data/translatable_themes.h:6
+msgctxt "themes"
+msgid "balls"
+msgstr ""
+
+#: data/translatable_themes.h:7
+msgctxt "themes"
+msgid "dots"
+msgstr ""
+
+#: data/translatable_themes.h:8
+msgctxt "themes"
+msgid "gumball"
+msgstr ""
+
+#: data/translatable_themes.h:9
+msgctxt "themes"
+msgid "shapes"
+msgstr ""
+
+#: src/five-or-more-app.c:57
 msgctxt "board size"
 msgid "Small"
 msgstr "Кішкентай"
 
-#: ../src/five-or-more.c:81
+#: src/five-or-more-app.c:58
 msgctxt "board size"
 msgid "Medium"
 msgstr "Орташа"
 
-#: ../src/five-or-more.c:82
+#: src/five-or-more-app.c:59
 msgctxt "board size"
 msgid "Large"
 msgstr "Үлкен"
 
-#: ../src/five-or-more.c:165
-msgid "Could not load theme"
+#: src/five-or-more-app.c:233
+msgid "Game Over!"
+msgstr "Ойын аяқталды!"
+
+#: src/five-or-more-app.c:250
+msgid "Match five objects of the same type in a row to score!"
 msgstr ""
 
-#: ../src/five-or-more.c:191
+#: src/five-or-more-app.c:405
+msgid "Are you sure you want to restart the game?"
+msgstr ""
+
+#: src/five-or-more-app.c:408
+msgid "_Cancel"
+msgstr "Ба_с тарту"
+
+#: src/five-or-more-app.c:409
+msgid "_Restart"
+msgstr "Қа_йта қосу"
+
+#: src/five-or-more-app.c:578
+msgid "GNOME port of the once-popular Color Lines game"
+msgstr ""
+
+#: src/five-or-more-app.c:584
+msgid "translator-credits"
+msgstr "Baurzhan Muftakhidinov <baurthefirst@gmail.com>, 2010"
+
+#: src/five-or-more-app.c:694
+msgid "Board Size: "
+msgstr "Тақта өлшемі: "
+
+#. Can't move there!
+#: src/game-area.c:635
+msgid "You can’t move there!"
+msgstr "Осында жылжытуға болмайды!"
+
+#: src/game-area.c:818
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -223,7 +282,7 @@ msgid ""
 "The default theme will be loaded instead."
 msgstr ""
 
-#: ../src/five-or-more.c:198
+#: src/game-area.c:825
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -232,79 +291,38 @@ msgid ""
 "Please check that Five or More is installed correctly."
 msgstr ""
 
-#: ../src/five-or-more.c:407
-msgid "Match five objects of the same type in a row to score!"
+#: src/game-area.c:852
+msgid "Could not load theme"
 msgstr ""
 
-#: ../src/five-or-more.c:468
-msgid "Five or More Scores"
-msgstr ""
+#~| msgctxt "number"
+#~| msgid "0"
+#~ msgid "0"
+#~ msgstr "0"
 
-#: ../src/five-or-more.c:470
-msgid "_Board size:"
-msgstr "_Тақта өлшемі:"
+#~ msgid "_Board size:"
+#~ msgstr "_Тақта өлшемі:"
 
-#: ../src/five-or-more.c:487
-msgid "Game Over!"
-msgstr "Ойын аяқталды!"
+#~ msgctxt "score-dialog"
+#~ msgid "Time"
+#~ msgstr "Уақыт"
 
-#. Can't move there!
-#: ../src/five-or-more.c:644
-msgid "You can’t move there!"
-msgstr "Осында жылжытуға болмайды!"
+#~ msgctxt "score-dialog"
+#~ msgid "Score"
+#~ msgstr "Нәтиже"
 
-#: ../src/five-or-more.c:1174
-msgid "GNOME port of the once-popular Color Lines game"
-msgstr ""
+#~ msgctxt "score-dialog"
+#~ msgid "%1$dm %2$ds"
+#~ msgstr "%1$dм %2$dс"
 
-#: ../src/five-or-more.c:1180
-msgid "translator-credits"
-msgstr "Baurzhan Muftakhidinov <baurthefirst@gmail.com>, 2010"
+#~ msgid "_Quit"
+#~ msgstr "_Шығу"
 
-#: ../src/five-or-more.c:1304
-msgid "Are you sure you want to restart the game?"
-msgstr ""
+#~ msgid "_Undo"
+#~ msgstr "Бол_дырмау"
 
-#: ../src/five-or-more.c:1307
-msgid "_Cancel"
-msgstr "Ба_с тарту"
+#~ msgid "_Close"
+#~ msgstr "_Жабу"
 
-#: ../src/five-or-more.c:1308
-msgid "_Restart"
-msgstr "Қа_йта қосу"
-
-#. Score dialog column header for the score time (e.g. 1 minute)
-#: ../src/games-scores-dialog.c:132
-msgctxt "score-dialog"
-msgid "Time"
-msgstr "Уақыт"
-
-#. Score dialog column header for the score value (e.g. 30 moves)
-#: ../src/games-scores-dialog.c:138
-msgctxt "score-dialog"
-msgid "Score"
-msgstr "Нәтиже"
-
-#. Score format for time based scores.  %1$d is the time in minutes, %2$d is the time in seconds
-#: ../src/games-scores-dialog.c:225
-#, c-format
-msgctxt "score-dialog"
-msgid "%1$dm %2$ds"
-msgstr "%1$dм %2$dс"
-
-#: ../src/games-scores-dialog.c:371
-msgid "_Quit"
-msgstr "_Шығу"
-
-#: ../src/games-scores-dialog.c:378
-msgid "_Undo"
-msgstr "Бол_дырмау"
-
-#: ../src/games-scores-dialog.c:392
-msgid "_Close"
-msgstr "_Жабу"
-
-#. Score dialog column header for the date the score was recorded
-#: ../src/games-scores-dialog.c:478
-msgid "Date"
-msgstr "Күні"
+#~ msgid "Date"
+#~ msgstr "Күні"
