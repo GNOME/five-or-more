@@ -147,7 +147,6 @@ public class GameWindow : Gtk.ApplicationWindow
         highscores.run_dialog ();
     }
 
-
     private Games.Scores.Category? create_category_from_key (string key)
     {
         string? name = category_name_from_key (key);
