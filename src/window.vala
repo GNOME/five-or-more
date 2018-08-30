@@ -74,9 +74,7 @@ public class GameWindow : Gtk.ApplicationWindow
         next_pieces_widget.show ();
 
         grid_frame.set (game.n_cols, game.n_rows);
-        /* it depends on which one changes last, so it is better to call them both */
-        game.notify["n-cols"].connect ((s, p) => { grid_frame.set (game.n_cols, game.n_rows); });
-        game.notify["n-rows"].connect ((s, p) => { grid_frame.set (game.n_cols, game.n_rows); });
+        game.board.board_changed.connect (() => { grid_frame.set (game.n_cols, game.n_rows); });
         game.notify["score"].connect ((s, p) => { scorelabel.set_text (game.score.to_string ()); });
         game.notify["status-message"].connect ((s, p) => { set_status_message (status[game.status_message]); });
         set_status_message (status[game.status_message]);

@@ -73,12 +73,7 @@ public class View : Gtk.DrawingArea
         board_rectangle = Gdk.Rectangle ();
         board_rectangle.x = board_rectangle.y = 0;
         update_sizes (MINIMUM_BOARD_SIZE, MINIMUM_BOARD_SIZE);
-        /* it depends on which one changes last, so it is better to call them both */
-        game.notify["n-rows"].connect (() => {
-            update_sizes (get_allocated_width (), get_allocated_height ());
-            queue_draw ();
-        });
-        game.notify["n-cols"].connect (() => {
+        game.board.board_changed.connect (() => {
             update_sizes (get_allocated_width (), get_allocated_height ());
             queue_draw ();
         });

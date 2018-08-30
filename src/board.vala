@@ -40,6 +40,7 @@ public class Board
     }
 
     public signal void grid_changed ();
+    public signal void board_changed ();
 
     private Cell src;
     private Cell dst;
@@ -78,6 +79,8 @@ public class Board
                     grid[row, col] = new Cell (row, col, null, null);
             }
         }
+
+        board_changed ();
     }
 
     public Cell[,]? get_grid ()
