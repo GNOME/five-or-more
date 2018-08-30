@@ -252,14 +252,6 @@ public class Cell
         return this.row == cell.row && this.col == cell.col;
     }
 
-    public void print_cell (string messg, Cell? c)
-    {
-        if (c != null)
-            stderr.printf ("%s: %d %d\n", messg, c.row, c.col);
-        else
-            stderr.printf ("%s: null\n", messg);
-    }
-
     private Cell get_neighbour (Cell[,] board, Direction dir)
     {
         Cell? neighbour = null;
