@@ -158,9 +158,7 @@ public class GameWindow : Gtk.ApplicationWindow
     {
         for (int i = 0; i < game.n_categories; i++) {
             if (Game.scorecats[i].key == key)
-            {
                 return Game.scorecats[i].name;
-            }
         }
         return "";
     }
