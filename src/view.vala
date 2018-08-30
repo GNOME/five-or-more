@@ -129,11 +129,6 @@ public class View : Gtk.DrawingArea
         }
     }
 
-    private void draw_box (int x, int y, int width, int height)
-    {
-        queue_draw_area (x, y, width, height);
-    }
-
     private void move_keyboard_cursor (int x, int y)
     {
         int prev_x = keyboard_cursor_x;
@@ -142,8 +137,7 @@ public class View : Gtk.DrawingArea
         if (!show_cursor)
         {
             show_cursor = true;
-            // queue_draw ();
-            draw_box (keyboard_cursor_x * piece_size, keyboard_cursor_y * piece_size, piece_size, piece_size);
+            queue_draw_area (keyboard_cursor_x * piece_size, keyboard_cursor_y * piece_size, piece_size, piece_size);
         }
 
         keyboard_cursor_x += x;
@@ -160,9 +154,9 @@ public class View : Gtk.DrawingArea
 
         if (keyboard_cursor_x == prev_x && keyboard_cursor_y == prev_y)
             return;
-            // queue_draw ();
-        draw_box (prev_x * piece_size, prev_y * piece_size, piece_size, piece_size);
-        draw_box (keyboard_cursor_x * piece_size, keyboard_cursor_y * piece_size, piece_size, piece_size);
+
+        queue_draw_area (prev_x * piece_size, prev_y * piece_size, piece_size, piece_size);
+        queue_draw_area (keyboard_cursor_x * piece_size, keyboard_cursor_y * piece_size, piece_size, piece_size);
     }
 
     public override bool key_press_event (Gdk.EventKey event)
@@ -298,7 +292,7 @@ public class View : Gtk.DrawingArea
         if (show_cursor)
         {
             show_cursor = false;
-            draw_box (keyboard_cursor_x * piece_size, keyboard_cursor_y * piece_size, piece_size, piece_size);
+            queue_draw_area (keyboard_cursor_x * piece_size, keyboard_cursor_y * piece_size, piece_size, piece_size);
         }
 
         cell_x = (int)event.x / piece_size;
