@@ -30,6 +30,7 @@ public class View : Gtk.DrawingArea
     private ThemeRenderer? theme = null;
     private Gdk.RGBA background_color;
     private Gtk.StyleContext cs;
+    private Gtk.CssProvider provider;
 
     private Gdk.Rectangle board_rectangle;
 
@@ -54,6 +55,11 @@ public class View : Gtk.DrawingArea
         this.settings = settings;
         this.game = game;
         this.theme = theme;
+
+        cs = get_style_context ();
+        provider = new Gtk.CssProvider ();
+        cs.add_class ("game-view");
+        cs.add_provider (provider, Gtk.STYLE_PROVIDER_PRIORITY_USER);
 
         background_color = Gdk.RGBA ();
         set_background_color ();
@@ -113,8 +119,6 @@ public class View : Gtk.DrawingArea
         var color_str = settings.get_string (FiveOrMoreApp.KEY_BACKGROUND_COLOR);
         background_color.parse (color_str);
 
-        cs = this.get_style_context ();
-        var provider = new Gtk.CssProvider ();
         try
         {
             provider.load_from_data (".game-view { background-color: %s; }".printf (background_color.to_string ()));
@@ -124,9 +128,6 @@ public class View : Gtk.DrawingArea
             warning ("Failed to load CSS data to provider");
             return;
         }
-
-        cs.add_class ("game-view");
-        cs.add_provider (provider, Gtk.STYLE_PROVIDER_PRIORITY_USER);
     }
 
     private void draw_box (int x, int y, int width, int height)
