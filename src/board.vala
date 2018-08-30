@@ -23,8 +23,6 @@
 
 public class Board
 {
-    private const int MOVE_COST = 1;
-
     private Cell[,] grid = null;
 
     public int n_rows {
@@ -224,7 +222,7 @@ public class Board
     {
         int f, g, h;
 
-        g = current_cost + MOVE_COST;
+        g = current_cost + 1;
         h = manhattan (start.row, start.col, end.row, end.col);
         f = g + h;
 
