@@ -117,11 +117,10 @@ public class View : Gtk.DrawingArea
     private void set_background_color ()
     {
         var color_str = settings.get_string (FiveOrMoreApp.KEY_BACKGROUND_COLOR);
-        background_color.parse (color_str);
 
         try
         {
-            provider.load_from_data (".game-view { background-color: %s; }".printf (background_color.to_string ()));
+            provider.load_from_data (".game-view { background-color: %s; }".printf (color_str));
         }
         catch (Error e)
         {
