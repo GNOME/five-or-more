@@ -13,21 +13,20 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: five-or-more master\n"
-"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=five-"
-"or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2018-03-15 01:25+0000\n"
-"PO-Revision-Date: 2018-03-15 15:21+0100\n"
-"Last-Translator: Balázs Úr <urbalazs@gmail.com>\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/five-or-more/issues\n"
+"POT-Creation-Date: 2018-08-25 08:53+0000\n"
+"PO-Revision-Date: 2018-08-31 12:50+0200\n"
+"Last-Translator: Meskó Balázs <mesko.balazs@fsf.hu>\n"
 "Language-Team: Hungarian <openscope at googlegroups dot com>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 1.2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.0.8\n"
 
 #: data/five-or-more.appdata.xml.in:7 data/five-or-more.desktop.in:3
-#: data/five-or-more.ui:18 src/five-or-more.c:1173 src/five-or-more.c:1724
+#: data/five-or-more.ui:18 src/five-or-more.c:70 src/five-or-more-app.c:576
 msgid "Five or More"
 msgstr "Öt vagy több"
 
@@ -69,7 +68,7 @@ msgstr "játék;stratégia;logika;"
 msgid "five-or-more"
 msgstr "five-or-more"
 
-#: data/five-or-more-preferences.ui:12 data/menu.ui:11 src/five-or-more.c:169
+#: data/five-or-more-preferences.ui:12 data/menu.ui:11 src/game-area.c:858
 msgid "Preferences"
 msgstr "Beállítások"
 
@@ -113,15 +112,11 @@ msgstr "_Gyors mozgások használata"
 msgid "Next:"
 msgstr "Következő:"
 
-#: data/five-or-more.ui:46
-msgid "0"
-msgstr "0"
-
 #: data/five-or-more.ui:56
 msgid "Score:"
 msgstr "Pont:"
 
-#: data/five-or-more.ui:76 src/games-scores-dialog.c:384
+#: data/five-or-more.ui:76
 msgid "_New Game"
 msgstr "Ú_j játék"
 
@@ -240,26 +235,66 @@ msgctxt "themes"
 msgid "shapes"
 msgstr "formák"
 
-#: src/five-or-more.c:78
+#: src/five-or-more-app.c:57
 msgctxt "board size"
 msgid "Small"
 msgstr "Kicsi"
 
-#: src/five-or-more.c:79
+#: src/five-or-more-app.c:58
 msgctxt "board size"
 msgid "Medium"
 msgstr "Közepes"
 
-#: src/five-or-more.c:80
+#: src/five-or-more-app.c:59
 msgctxt "board size"
 msgid "Large"
 msgstr "Nagy"
 
-#: src/five-or-more.c:163
-msgid "Could not load theme"
-msgstr "Nem lehet betölteni a témát"
+#: src/five-or-more-app.c:233
+msgid "Game Over!"
+msgstr "Vége a játéknak!"
 
-#: src/five-or-more.c:189
+#: src/five-or-more-app.c:250
+msgid "Match five objects of the same type in a row to score!"
+msgstr "Helyezzen el öt egyszínű objektumot egy sorba!"
+
+#: src/five-or-more-app.c:405
+msgid "Are you sure you want to restart the game?"
+msgstr "Biztosan újra szeretné indítani a játékot?"
+
+#: src/five-or-more-app.c:408
+msgid "_Cancel"
+msgstr "_Mégse"
+
+#: src/five-or-more-app.c:409
+msgid "_Restart"
+msgstr "Ú_jraindítás"
+
+#: src/five-or-more-app.c:578
+msgid "GNOME port of the once-popular Color Lines game"
+msgstr "A népszerű Color Lines játék GNOME-átirata"
+
+#: src/five-or-more-app.c:584
+msgid "translator-credits"
+msgstr ""
+"Bán Szabolcs <shooby at gnome dot hu>\n"
+"Dvornik László <dvornik at gnome dot hu>\n"
+"Kelemen Gábor <kelemeng at gnome dot hu>\n"
+"Kovács Emese <emese at gnome dot hu>\n"
+"Nagy Gergely <greg at gnome dot hu>\n"
+"Tímár András <timar at gnome dot hu>\n"
+"Varga Szabolcs <shirokuma at shirokuma dot hu>"
+
+#: src/five-or-more-app.c:694
+msgid "Board Size: "
+msgstr "A tábla mérete: "
+
+#. Can't move there!
+#: src/game-area.c:635
+msgid "You can’t move there!"
+msgstr "Nem léphet oda!"
+
+#: src/game-area.c:818
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -272,7 +307,7 @@ msgstr ""
 "\n"
 "Helyette az alapértelmezett téma kerül betöltésre."
 
-#: src/five-or-more.c:196
+#: src/game-area.c:825
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -285,87 +320,39 @@ msgstr ""
 "\n"
 "Ellenőrizze, hogy az Öt vagy több megfelelően van-e telepítve."
 
-#: src/five-or-more.c:408
-msgid "Match five objects of the same type in a row to score!"
-msgstr "Helyezzen el öt egyszínű objektumot egy sorba!"
+#: src/game-area.c:852
+msgid "Could not load theme"
+msgstr "Nem lehet betölteni a témát"
 
-#: src/five-or-more.c:469
-msgid "Five or More Scores"
-msgstr "Öt vagy több pontszámok"
+#~ msgid "0"
+#~ msgstr "0"
 
-#: src/five-or-more.c:471
-msgid "_Board size:"
-msgstr "A tábla _mérete:"
+#~ msgid "Five or More Scores"
+#~ msgstr "Öt vagy több pontszámok"
 
-#: src/five-or-more.c:488
-msgid "Game Over!"
-msgstr "Vége a játéknak!"
+#~ msgid "_Board size:"
+#~ msgstr "A tábla _mérete:"
 
-#. Can't move there!
-#: src/five-or-more.c:645
-msgid "You can’t move there!"
-msgstr "Nem léphet oda!"
+#~ msgctxt "score-dialog"
+#~ msgid "Time"
+#~ msgstr "Idő"
 
-#: src/five-or-more.c:1175
-msgid "GNOME port of the once-popular Color Lines game"
-msgstr "A népszerű Color Lines játék GNOME-átirata"
+#~ msgctxt "score-dialog"
+#~ msgid "Score"
+#~ msgstr "Pontszám"
 
-#: src/five-or-more.c:1181
-msgid "translator-credits"
-msgstr ""
-"Bán Szabolcs <shooby at gnome dot hu>\n"
-"Dvornik László <dvornik at gnome dot hu>\n"
-"Kelemen Gábor <kelemeng at gnome dot hu>\n"
-"Kovács Emese <emese at gnome dot hu>\n"
-"Nagy Gergely <greg at gnome dot hu>\n"
-"Tímár András <timar at gnome dot hu>\n"
-"Varga Szabolcs <shirokuma at shirokuma dot hu>"
+#~ msgctxt "score-dialog"
+#~ msgid "%1$dm %2$ds"
+#~ msgstr "%1$dp %2$dmp"
 
-#: src/five-or-more.c:1305
-msgid "Are you sure you want to restart the game?"
-msgstr "Biztosan újra szeretné indítani a játékot?"
+#~ msgid "_Quit"
+#~ msgstr "_Kilépés"
 
-#: src/five-or-more.c:1308
-msgid "_Cancel"
-msgstr "_Mégse"
+#~ msgid "_Undo"
+#~ msgstr "_Visszavonás"
 
-#: src/five-or-more.c:1309
-msgid "_Restart"
-msgstr "Ú_jraindítás"
+#~ msgid "_Close"
+#~ msgstr "_Bezárás"
 
-#. Score dialog column header for the score time (e.g. 1 minute)
-#: src/games-scores-dialog.c:131
-msgctxt "score-dialog"
-msgid "Time"
-msgstr "Idő"
-
-#. Score dialog column header for the score value (e.g. 30 moves)
-#: src/games-scores-dialog.c:137
-msgctxt "score-dialog"
-msgid "Score"
-msgstr "Pontszám"
-
-#. Score format for time based scores.  %1$d is the time in minutes, %2$d is the time in seconds
-#: src/games-scores-dialog.c:224
-#, c-format
-msgctxt "score-dialog"
-msgid "%1$dm %2$ds"
-msgstr "%1$dp %2$dmp"
-
-#: src/games-scores-dialog.c:370
-msgid "_Quit"
-msgstr "_Kilépés"
-
-#: src/games-scores-dialog.c:377
-msgid "_Undo"
-msgstr "_Visszavonás"
-
-#: src/games-scores-dialog.c:391
-msgid "_Close"
-msgstr "_Bezárás"
-
-#. Score dialog column header for the date the score was recorded
-#: src/games-scores-dialog.c:477
-msgid "Date"
-msgstr "Dátum"
-
+#~ msgid "Date"
+#~ msgstr "Dátum"
