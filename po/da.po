@@ -1,5 +1,5 @@
 # Danish translation of gnome-games.
-# Copyright (C) 1998-2016 Free Software Foundation, Inc.
+# Copyright (C) 1998-2016, 2018 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-games package.
 # Anders Wegge Jakobsen <wegge@wegge.dk>, 1998.
 # Kenneth Christiansen <kenneth@ripen.dk>, 1998-2001
@@ -7,7 +7,7 @@
 # Ole Laursen <olau@hardworking.dk>, 2001, 02, 03, 04.
 # Martin Willemoes Hansen <mwh@sysrq.dk>, 2004, 05.
 # flemming christensen <fc@stromata.dk>, 2011.
-# Ask Hjorth Larsen <asklarsen@gmail.com>, 2007-2016.
+# Ask Hjorth Larsen <asklarsen@gmail.com>, 2007-2016, 2018.
 # Joe Hansen (joedalton2@yahoo.dk), 2018.
 #
 # Husk at tilføje dig i credit-listen (besked id "translator-credits")
@@ -16,10 +16,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
-"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=five-"
-"or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2018-03-03 16:16+0000\n"
-"PO-Revision-Date: 2018-03-06 03:15+0200\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/five-or-more/issues\n"
+"POT-Creation-Date: 2018-08-25 08:53+0000\n"
+"PO-Revision-Date: 2018-08-30 21:05+0200\n"
 "Last-Translator: Joe Hansen (joedalton2@yahoo.dk)\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "Language: da\n"
@@ -28,17 +27,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
-#: ../data/five-or-more.appdata.xml.in.h:1 ../data/five-or-more.desktop.in.h:1
-#: ../data/five-or-more.ui.h:1 ../src/five-or-more.c:1173
-#: ../src/five-or-more.c:1724
+#: data/five-or-more.appdata.xml.in:7 data/five-or-more.desktop.in:3
+#: data/five-or-more.ui:18 src/five-or-more.c:70 src/five-or-more-app.c:576
 msgid "Five or More"
 msgstr "Fem eller mere"
 
-#: ../data/five-or-more.appdata.xml.in.h:2 ../data/five-or-more.desktop.in.h:2
+#: data/five-or-more.appdata.xml.in:8 data/five-or-more.desktop.in:4
 msgid "Remove colored balls from the board by forming lines"
 msgstr "Fjern farvede kugler fra brættet ved at danne linjer"
 
-#: ../data/five-or-more.appdata.xml.in.h:3
+#: data/five-or-more.appdata.xml.in:10
 msgid ""
 "Five or More is the GNOME port of a once-popular computer game. Align five "
 "or more objects of the same color into a line to cause them to disappear and "
@@ -50,7 +48,7 @@ msgstr ""
 "forsvinder, og du får points. Få mange flere points ved at arrangere så "
 "mange objekter som muligt før du rydder dem."
 
-#: ../data/five-or-more.appdata.xml.in.h:4
+#: data/five-or-more.appdata.xml.in:16
 msgid ""
 "More objects appear after every turn. Play for as long as possible, until "
 "the board is completely full!"
@@ -58,158 +56,159 @@ msgstr ""
 "Der kommer flere objekter efter hver tur. Spil så længe som muligt, indtil "
 "brættet er helt fuldt!"
 
-#: ../data/five-or-more.appdata.xml.in.h:5
+#: data/five-or-more.appdata.xml.in:40
 msgid "The GNOME Project"
 msgstr "GNOME-projektet"
 
-#: ../data/five-or-more.desktop.in.h:3
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/five-or-more.desktop.in:6
 msgid "game;strategy;logic;"
 msgstr "spil;strategi;logik;"
 
-#: ../data/five-or-more-preferences.ui.h:1 ../data/menu.ui.h:2
-#: ../src/five-or-more.c:169
+#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
+#: data/five-or-more.desktop.in:9
+msgid "five-or-more"
+msgstr "five-or-more"
+
+#: data/five-or-more-preferences.ui:12 data/menu.ui:11 src/game-area.c:858
 msgid "Preferences"
 msgstr "Indstillinger"
 
-#: ../data/five-or-more-preferences.ui.h:2
+#: data/five-or-more-preferences.ui:35
 msgid "Appearance"
 msgstr "Udseende"
 
-#: ../data/five-or-more-preferences.ui.h:3
+#: data/five-or-more-preferences.ui:59
 msgid "_Image:"
 msgstr "_Billede:"
 
-#: ../data/five-or-more-preferences.ui.h:4
+#: data/five-or-more-preferences.ui:74
 msgid "B_ackground color:"
 msgstr "B_aggrundsfarve:"
 
-#: ../data/five-or-more-preferences.ui.h:5
+#: data/five-or-more-preferences.ui:116
 msgid "Board Size"
 msgstr "Brætstørrelse"
 
-#: ../data/five-or-more-preferences.ui.h:6
+#: data/five-or-more-preferences.ui:135
 msgid "_Small"
 msgstr "_Lille"
 
-#: ../data/five-or-more-preferences.ui.h:7
+#: data/five-or-more-preferences.ui:154
 msgid "_Medium"
 msgstr "_Mellem"
 
-#: ../data/five-or-more-preferences.ui.h:8
+#: data/five-or-more-preferences.ui:173
 msgid "_Large"
 msgstr "_Stor"
 
-#: ../data/five-or-more-preferences.ui.h:9
+#: data/five-or-more-preferences.ui:203
 msgid "General"
 msgstr "General"
 
-#: ../data/five-or-more-preferences.ui.h:10
+#: data/five-or-more-preferences.ui:216
 msgid "_Use fast moves"
 msgstr "_Benyt hurtige træk"
 
-#: ../data/five-or-more.ui.h:2
+#: data/five-or-more.ui:30
 msgid "Next:"
 msgstr "Næste:"
 
-#: ../data/five-or-more.ui.h:3
-msgid "0"
-msgstr "0"
-
-#: ../data/five-or-more.ui.h:4
+#: data/five-or-more.ui:56
 msgid "Score:"
 msgstr "Point:"
 
-#: ../data/five-or-more.ui.h:5 ../src/games-scores-dialog.c:384
+#: data/five-or-more.ui:76
 msgid "_New Game"
 msgstr "_Nyt spil"
 
-#: ../data/five-or-more.ui.h:6
+#: data/five-or-more.ui:80
 msgid "Start a new puzzle"
 msgstr "Start et nyt spil"
 
-#: ../data/menu.ui.h:1
+#: data/menu.ui:7
 msgid "Scores"
 msgstr "Resultater"
 
-#: ../data/menu.ui.h:3
+#: data/menu.ui:17
 msgid "Help"
 msgstr "Hjælp"
 
-#: ../data/menu.ui.h:4
+#: data/menu.ui:22
 msgid "About"
 msgstr "Om"
 
-#: ../data/menu.ui.h:5
+#: data/menu.ui:26
 msgid "Quit"
 msgstr "Afslut"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:1
+#: data/org.gnome.five-or-more.gschema.xml:5
 msgid "Playing field size"
 msgstr "Banestørrelse"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:2
+#: data/org.gnome.five-or-more.gschema.xml:6
 msgid ""
 "Playing field size. 1=Small, 2=Medium, 3=Large. Any other value is invalid."
 msgstr ""
 "Banestørrelse. 1=Lille, 2=Mellemstor, 3=Stor. Alle andre værdier er ugyldige."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:3
+#: data/org.gnome.five-or-more.gschema.xml:10
 msgid "Ball style"
 msgstr "Boldstil"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:4
+#: data/org.gnome.five-or-more.gschema.xml:11
 msgid "Ball style. The filename of the images to use for the balls."
 msgstr "Boldstil. Filnavnet på de billeder der skal bruges til kuglerne."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:5
+#: data/org.gnome.five-or-more.gschema.xml:15
 msgid "Background color"
 msgstr "Baggrundsfarve"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:6
+#: data/org.gnome.five-or-more.gschema.xml:16
 msgid "Background color. The hex specification of the background color."
 msgstr "Baggrundsfarve. Hexadecimal specifikation af baggrundsfarven."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:7
+#: data/org.gnome.five-or-more.gschema.xml:20
 msgid "Time between moves"
 msgstr "Tid mellem flytninger"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:8
+#: data/org.gnome.five-or-more.gschema.xml:21
 msgid "Time between moves in milliseconds."
 msgstr "Tid mellem flytninger i millisekunder."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:9
+#: data/org.gnome.five-or-more.gschema.xml:25
 msgid "Game score"
 msgstr "Spilpoint"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:10
+#: data/org.gnome.five-or-more.gschema.xml:26
 msgid "Game score from last saved session."
 msgstr "Spilpoint fra sidste gemte session."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:11
+#: data/org.gnome.five-or-more.gschema.xml:30
 msgid "Game field"
 msgstr "Spillefelt"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:12
+#: data/org.gnome.five-or-more.gschema.xml:31
 msgid "Game field from last saved session."
 msgstr "Spillefeltet fra sidste gemte session."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:13
+#: data/org.gnome.five-or-more.gschema.xml:35
 msgid "Game preview"
 msgstr "Spilforhåndsvisning"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:14
+#: data/org.gnome.five-or-more.gschema.xml:36
 msgid "Game preview from last saved session."
 msgstr "Spilforhåndsvisning fra sidste gemte session."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:15
+#: data/org.gnome.five-or-more.gschema.xml:40
 msgid "Width of the window in pixels"
 msgstr "Bredden af vinduet i billedpunkter"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:16
+#: data/org.gnome.five-or-more.gschema.xml:44
 msgid "Height of the window in pixels"
 msgstr "Højden af vinduet i billedpunkter"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:17
+#: data/org.gnome.five-or-more.gschema.xml:48
 msgid "true if the window is maximized"
 msgstr "sand hvis vinduet er maksimeret"
 
@@ -218,97 +217,66 @@ msgstr "sand hvis vinduet er maksimeret"
 #. * Add this file to your project's POTFILES.in.
 #. * DO NOT compile it as part of your application.
 #.
-#: ../data/translatable_themes.h:6
+#: data/translatable_themes.h:6
 msgctxt "themes"
 msgid "balls"
 msgstr "kugler"
 
-#: ../data/translatable_themes.h:7
+#: data/translatable_themes.h:7
 msgctxt "themes"
 msgid "dots"
 msgstr "prikker"
 
-#: ../data/translatable_themes.h:8
+#: data/translatable_themes.h:8
 msgctxt "themes"
 msgid "gumball"
 msgstr "tyggegummikugle"
 
-#: ../data/translatable_themes.h:9
+#: data/translatable_themes.h:9
 msgctxt "themes"
 msgid "shapes"
 msgstr "former"
 
-#: ../src/five-or-more.c:78
+#: src/five-or-more-app.c:57
 msgctxt "board size"
 msgid "Small"
 msgstr "Lille"
 
-#: ../src/five-or-more.c:79
+#: src/five-or-more-app.c:58
 msgctxt "board size"
 msgid "Medium"
 msgstr "Mellem"
 
-#: ../src/five-or-more.c:80
+#: src/five-or-more-app.c:59
 msgctxt "board size"
 msgid "Large"
 msgstr "Stor"
 
-#: ../src/five-or-more.c:163
-msgid "Could not load theme"
-msgstr "Kunne ikke indlæse tema"
-
-#: ../src/five-or-more.c:189
-#, c-format
-msgid ""
-"Unable to locate file:\n"
-"%s\n"
-"\n"
-"The default theme will be loaded instead."
-msgstr ""
-"Kunne ikke finde filen:\n"
-" “%s”\n"
-"\n"
-"I stedet vil standardtemaet blive indlæst."
-
-#: ../src/five-or-more.c:196
-#, c-format
-msgid ""
-"Unable to locate file:\n"
-"%s\n"
-"\n"
-"Please check that Five or More is installed correctly."
-msgstr ""
-"'Kunne ikke finde filen:\n"
-"%s\n"
-"\n"
-"Kontrollér venligst at Fem eller mere er korrekt installeret."
-
-#: ../src/five-or-more.c:408
-msgid "Match five objects of the same type in a row to score!"
-msgstr "Få fem objekter af den samme farve på stribe for at få point!"
-
-#: ../src/five-or-more.c:469
-msgid "Five or More Scores"
-msgstr "Resultater for Fem eller mere"
-
-#: ../src/five-or-more.c:471
-msgid "_Board size:"
-msgstr "_Brætstørrelse:"
-
-#: ../src/five-or-more.c:488
+#: src/five-or-more-app.c:233
 msgid "Game Over!"
 msgstr "Spillet er slut!"
 
-#. Can't move there!
-#: ../src/five-or-more.c:645
-msgid "You can’t move there!"
-msgstr "Du kan ikke flytte dertil!"
+#: src/five-or-more-app.c:250
+msgid "Match five objects of the same type in a row to score!"
+msgstr "Få fem objekter af den samme farve på stribe for at få point!"
 
-#: ../src/five-or-more.c:1175
+#: src/five-or-more-app.c:405
+msgid "Are you sure you want to restart the game?"
+msgstr "Er du sikker på at du vil genstarte spillet?"
+
+#: src/five-or-more-app.c:408
+msgid "_Cancel"
+msgstr "_Annullér"
+
+#: src/five-or-more-app.c:409
+msgid "_Restart"
+msgstr "_Genstart"
+
+#: src/five-or-more-app.c:578
 msgid "GNOME port of the once-popular Color Lines game"
 msgstr "GNOME-udgave af det engang så populære spil Color Lines"
 
-#: ../src/five-or-more.c:1181
+#: src/five-or-more-app.c:584
 msgid "translator-credits"
 msgstr ""
 "Anders Wegge Jakobsen\n"
@@ -321,50 +289,74 @@ msgstr ""
 "Dansk-gruppen <dansk@dansk-gruppen.dk>\n"
 "Mere info: http://www.dansk-gruppen.dk"
 
-#: ../src/five-or-more.c:1305
-msgid "Are you sure you want to restart the game?"
-msgstr "Er du sikker på at du vil genstarte spillet?"
+#: src/five-or-more-app.c:694
+msgid "Board Size: "
+msgstr "Brætstørrelse: "
 
-#: ../src/five-or-more.c:1308
-msgid "_Cancel"
-msgstr "_Annullér"
+#. Can't move there!
+#: src/game-area.c:635
+msgid "You can’t move there!"
+msgstr "Du kan ikke flytte dertil!"
 
-#: ../src/five-or-more.c:1309
-msgid "_Restart"
-msgstr "_Genstart"
-
-#. Score dialog column header for the score time (e.g. 1 minute)
-#: ../src/games-scores-dialog.c:131
-msgctxt "score-dialog"
-msgid "Time"
-msgstr "Tid"
-
-#. Score dialog column header for the score value (e.g. 30 moves)
-#: ../src/games-scores-dialog.c:137
-msgctxt "score-dialog"
-msgid "Score"
-msgstr "Resultat"
-
-#. Score format for time based scores.  %1$d is the time in minutes, %2$d is the time in seconds
-#: ../src/games-scores-dialog.c:224
+#: src/game-area.c:818
 #, c-format
-msgctxt "score-dialog"
-msgid "%1$dm %2$ds"
-msgstr "%1$dm %2$ds"
+msgid ""
+"Unable to locate file:\n"
+"%s\n"
+"\n"
+"The default theme will be loaded instead."
+msgstr ""
+"Kunne ikke finde filen:\n"
+" “%s”\n"
+"\n"
+"I stedet vil standardtemaet blive indlæst."
 
-#: ../src/games-scores-dialog.c:370
-msgid "_Quit"
-msgstr "_Afslut"
+#: src/game-area.c:825
+#, c-format
+msgid ""
+"Unable to locate file:\n"
+"%s\n"
+"\n"
+"Please check that Five or More is installed correctly."
+msgstr ""
+"'Kunne ikke finde filen:\n"
+"%s\n"
+"\n"
+"Kontrollér venligst at Fem eller mere er korrekt installeret."
 
-#: ../src/games-scores-dialog.c:377
-msgid "_Undo"
-msgstr "_Fortryd"
+#: src/game-area.c:852
+msgid "Could not load theme"
+msgstr "Kunne ikke indlæse tema"
 
-#: ../src/games-scores-dialog.c:391
-msgid "_Close"
-msgstr "_Luk"
+#~ msgid "0"
+#~ msgstr "0"
 
-#. Score dialog column header for the date the score was recorded
-#: ../src/games-scores-dialog.c:477
-msgid "Date"
-msgstr "Dato"
+#~ msgid "Five or More Scores"
+#~ msgstr "Resultater for Fem eller mere"
+
+#~ msgid "_Board size:"
+#~ msgstr "_Brætstørrelse:"
+
+#~ msgctxt "score-dialog"
+#~ msgid "Time"
+#~ msgstr "Tid"
+
+#~ msgctxt "score-dialog"
+#~ msgid "Score"
+#~ msgstr "Resultat"
+
+#~ msgctxt "score-dialog"
+#~ msgid "%1$dm %2$ds"
+#~ msgstr "%1$dm %2$ds"
+
+#~ msgid "_Quit"
+#~ msgstr "_Afslut"
+
+#~ msgid "_Undo"
+#~ msgstr "_Fortryd"
+
+#~ msgid "_Close"
+#~ msgstr "_Luk"
+
+#~ msgid "Date"
+#~ msgstr "Dato"
