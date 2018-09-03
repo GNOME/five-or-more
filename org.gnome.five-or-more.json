@@ -31,7 +31,7 @@
                 {
                     "type": "git",
                     "branch": "meson",
-                    "url": "https://git.gnome.org/browse/libgee"
+                    "url": "https://gitlab.gnome.org/GNOME/libgee.git"
                 }
             ]
         },
@@ -52,7 +52,7 @@
                 {
                     "type": "git",
                     "branch": "master",
-                    "url": "https://git.gnome.org/browse/five-or-more"
+                    "url": "https://gitlab.gnome.org/GNOME/five-or-more.git"
                 }
             ]
         }
