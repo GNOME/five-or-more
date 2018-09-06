@@ -3,24 +3,25 @@
 # This file is distributed under the same license as the glines documentation package.
 #
 #
+#
 # Jonathan Ernst <jonathan@ernstfamily.ch>, 2007.
 # Claude Paroz <claude@2xlibre.net>, 2007-2009.
 # Bruno Brouard <annoa.b@gmail.com>, 2012.
 # Charles Monzat <superboa@hotmail.fr>, 2017.
-#
+# jean-baptiste <jean-baptiste@holcroft.fr>, 2018.
 msgid ""
 msgstr ""
 "Project-Id-Version: glines documentation\n"
-"POT-Creation-Date: 2017-07-31 12:01+0000\n"
-"PO-Revision-Date: 2017-10-21 21:00+0200\n"
-"Last-Translator: Charles Monzat <superboa@hotmail.fr>\n"
+"POT-Creation-Date: 2018-08-25 08:53+0000\n"
+"PO-Revision-Date: 2018-08-31 22:55+0100\n"
+"Last-Translator: jean-baptiste <jean-baptiste@holcroft.fr>\n"
 "Language-Team: français <gnomefr@traduc.org>\n"
-"Language: \n"
+"Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Gtranslator 2.91.7\n"
+"X-Generator: Lokalize 2.0\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -29,7 +30,8 @@ msgstr ""
 "Jonathan Ernst <jonathan@ernstfamily.ch>, 2007\n"
 "Claude Paroz <claude@2xlibre.net>, 2007-2009\n"
 "Bruno Brouard <annoa.b@gmail.com>, 2008, 2012\n"
-"Alain Lojewski <allomervan@gmail.com>, 2012"
+"Alain Lojewski <allomervan@gmail.com>, 2012\n"
+"Jean-Baptiste Holcroft <jean-baptiste@holcroft.fr>, 2018"
 
 #. (itstool) path: credit/name
 #: C/bug-filing.page:10 C/change-board-size.page:14 C/change-theme.page:14
@@ -51,7 +53,7 @@ msgstr "2011"
 #: C/index.page:21 C/translate.page:19
 msgid "Creative Commons Share Alike 3.0"
 msgstr ""
-"Creative Commons Paternité-Partage des Conditions Initiales à l'Identique 3.0"
+"Creative Commons Paternité-Partage des Conditions Initiales à l’Identique 3.0"
 
 #. (itstool) path: page/title
 #: C/bug-filing.page:19
@@ -60,16 +62,21 @@ msgstr "Signaler un problème"
 
 #. (itstool) path: page/p
 #: C/bug-filing.page:20
+#| msgid ""
+#| "<app>Five or More</app> is maintained by a volunteer community. You are "
+#| "welcome to participate. If you notice a problem you can file a <em>bug "
+#| "report</em>. To file a bug, go to <link href=\"https://bugzilla.gnome.org/"
+#| "\"/>."
 msgid ""
 "<app>Five or More</app> is maintained by a volunteer community. You are "
 "welcome to participate. If you notice a problem you can file a <em>bug "
-"report</em>. To file a bug, go to <link href=\"https://bugzilla.gnome.org/\"/"
-">."
+"report</em>. To file a bug, go to <link href=\"https://gitlab.gnome.org/"
+"GNOME/five-or-more/issues/new\"/>."
 msgstr ""
 "<app>Cinq ou plus</app> est maintenu par une communauté de volontaires. "
 "Votre contribution est la bienvenue. Si vous remarquez un problème, vous "
-"pouvez remplir un <em>rapport d'anomalie</em> en allant sur <link href="
-"\"https://bugzilla.gnome.org/\"/>."
+"pouvez remplir un <em>rapport d’anomalie</em> en allant sur <link href="
+"\"https://gitlab.gnome.org/GNOME/five-or-more/issues/new\"/>."
 
 #. (itstool) path: page/p
 #: C/bug-filing.page:23
@@ -77,67 +84,78 @@ msgid ""
 "This is a bug tracking system where users and developers can file details "
 "about bugs, crashes and request enhancements."
 msgstr ""
-"Il s'agit d'un système de suivi de bogues où les utilisateurs et les "
+"Il s’agit d’un système de suivi de bogues où les utilisateurs et les "
 "développeurs peuvent fournir des détails sur des bogues, des plantages et "
-"des propositions d'améliorations."
+"des propositions d’améliorations."
 
 #. (itstool) path: page/p
 #: C/bug-filing.page:26
+#| msgid ""
+#| "To participate you need an account which will give you the ability to "
+#| "gain access, file bugs, and make comments. Also, you need to register so "
+#| "you can receive updates by e-mail about the status of your bug. If you "
+#| "don't already have an account, just click on the <gui>New Account</gui> "
+#| "link to create one."
 msgid ""
-"To participate you need an account which will give you the ability to gain "
-"access, file bugs, and make comments. Also, you need to register so you can "
-"receive updates by e-mail about the status of your bug. If you don't already "
-"have an account, just click on the <gui>New Account</gui> link to create one."
+"To participate you have to log in, which will give you the ability to gain "
+"access, file bugs, and make comments. Also, you need to log in using one of "
+"your existing accounts or register a new account so you can receive updates "
+"by e-mail about the status of your bug. If you don't already have an account "
+"and don't want to use any of the available log in options, just click on the "
+"<gui>Register</gui> link to create one."
 msgstr ""
-"Pour participer, vous devez posséder un compte qui vous donne la possibilité "
+"Pour participer, vous devez vous connecter ce qui vous donnera la possibilité "
 "de déposer des bogues et faire des commentaires. Vous devez également vous "
-"inscrire afin de recevoir les mises à jour du statut de votre bogue par "
-"courriel. Si vous n'avez pas encore de compte, il suffit de cliquer sur le "
-"lien <gui>New Account</gui> (nouveau compte) pour en créer un."
+"connecter en utilisant un de vos comptes ou vous inscrire afin de recevoir"
+" les "
+"mises à jour du statut de votre bogue par courriel. Si vous n’avez pas encore "
+"de compte et ne souhaitez pas utiliser l’une des méthode de connexion, il"
+" suffit "
+"de cliquer sur le lien <gui>New Account</gui> (nouveau compte) pour en créer"
+" un."
 
 #. (itstool) path: page/p
 #: C/bug-filing.page:30
+#| msgid ""
+#| "Once you have an account, log in, click on <guiseq><gui>File a Bug</"
+#| "gui><gui>Applications</gui><gui>five-or-more</gui></guiseq>. Before "
+#| "reporting a bug, please read the <link href=\"https://bugzilla.gnome.org/"
+#| "page.cgi?id=bug-writing.html\">bug writing guidelines</link>, and please "
+#| "<link href=\"https://bugzilla.gnome.org/browse.cgi?product=five-or-more"
+#| "\">browse</link> for the bug to see if it already exists."
 msgid ""
-"Once you have an account, log in, click on <guiseq><gui>File a Bug</"
-"gui><gui>Applications</gui><gui>five-or-more</gui></guiseq>. Before "
-"reporting a bug, please read the <link href=\"https://bugzilla.gnome.org/"
-"page.cgi?id=bug-writing.html\">bug writing guidelines</link>, and please "
-"<link href=\"https://bugzilla.gnome.org/browse.cgi?product=five-or-more"
-"\">browse</link> for the bug to see if it already exists."
+"Once you have an account, log in, click on <guiseq><gui>Projects</"
+"gui><gui>five-or-more</gui><gui>Issues</gui><gui>New issue</gui></guiseq>. "
+"Before reporting a bug, please read the <link href=\"https://bugzilla.gnome."
+"org/page.cgi?id=bug-writing.html\">bug writing guidelines</link>, and please "
+"<link href=\"https://gitlab.gnome.org/GNOME/five-or-more/issues\">browse</"
+"link> for the bug to see if it already exists."
 msgstr ""
 "Une fois en possession de votre compte, connectez-vous (bouton « log in » "
 "dans la barre du haut ou du bas). Cliquez alors successivement sur "
-"<guiseq><gui>File a Bug (Déclarer un bogue)</gui><gui>Applications</"
-"gui><gui>five-or-more</gui></guiseq>. Avant de signaler une anomalie, lisez "
-"le <link href=\"https://bugzilla.gnome.org/page.cgi?id=bug-writing.html"
-"\">guide de rédaction des rapport de bogues</link> et faites une <link href="
-"\"https://bugzilla.gnome.org/browse.cgi?product=five-or-more\">recherche</"
-"link> au sujet de l'anomalie au cas où quelque chose de similaire existerait "
+"<guiseq><gui>Projects</gui><gui>five-or-more</gui><gui>Issues</gui> "
+"<gui>New issue</gui></guiseq>. Avant de signaler une anomalie, lisez le "
+"<link href=\"https://bugzilla.gnome.org/page.cgi?id=bug-writing.html\"> "
+"guide de rédaction des rapport de bogues</link> et faites une <link href="
+"\"https://gitlab.gnome.org/GNOME/five-or-more/issues\">recherche</"
+"link> au sujet de l’anomalie au cas où quelque chose de similaire existerait "
 "déjà."
 
 #. (itstool) path: page/p
-#: C/bug-filing.page:38
-#| msgid ""
-#| "If you are requesting a new feature, choose <gui>enhancement</gui> in the "
-#| "<gui>Severity</gui> menu. Fill in the Summary and Description sections "
-#| "and click <gui>Commit</gui>."
+#: C/bug-filing.page:37
 msgid ""
-"If you are requesting a new feature, choose <gui>enhancement</gui> in the "
-"<gui>Severity</gui> menu. Fill in the Summary and Description sections and "
-"click <gui>Submit Bug</gui>."
+"Fill in the Title and Description sections and click <gui>Submit issue</gui>."
 msgstr ""
-"Si vous demandez une nouvelle fonctionnalité, choisissez <gui>enhancement</"
-"gui> (amélioration) dans le menu <gui>Severity</gui> (sévérité). Remplissez "
-"les rubriques « Summary » (résumé) et « Description » puis cliquez sur "
-"<gui>Submit Bug</gui> (signaler un bogue)."
+"Remplissez les sections titre et description et cliquez sur <gui>Submit"
+" issue</gui>."
 
 #. (itstool) path: page/p
-#: C/bug-filing.page:42
+#: C/bug-filing.page:40
 msgid ""
 "Your report will be given an ID number, and its status will be updated as it "
 "is being dealt with."
 msgstr ""
-"Votre signalement recevra un numéro d'identification, et son statut sera mis "
+"Votre signalement recevra un numéro d’identification, et son statut sera mis "
 "à jour quand il sera traité."
 
 #. (itstool) path: credit/name
@@ -183,8 +201,8 @@ msgid ""
 "While a larger board gives you more space, there are also more objects in "
 "play for each turn."
 msgstr ""
-"Un plateau plus grand vous donne plus d'espace, il y a également plus "
-"d'objets en jeu à chaque tour."
+"Un plateau plus grand vous donne plus d’espace, il y a également plus "
+"d’objets en jeu à chaque tour."
 
 #. (itstool) path: section/title
 #: C/change-board-size.page:37
@@ -215,12 +233,12 @@ msgstr "<em>Hauteur</em>"
 #. (itstool) path: td/p
 #: C/change-board-size.page:45
 msgid "<em>Number of types</em>"
-msgstr "<em>Nombre de types d'objet</em>"
+msgstr "<em>Nombre de types d’objet</em>"
 
 #. (itstool) path: td/p
 #: C/change-board-size.page:46
 msgid "<em>New objects per turn</em>"
-msgstr "<em>Nombre d'objets par tour</em>"
+msgstr "<em>Nombre d’objets par tour</em>"
 
 #. (itstool) path: td/p
 #: C/change-board-size.page:47
@@ -316,12 +334,12 @@ msgstr "2012"
 #. (itstool) path: page/title
 #: C/change-theme.page:20
 msgid "Change the look and feel"
-msgstr "Modification de l'apparence"
+msgstr "Modification de l’apparence"
 
 #. (itstool) path: page/p
 #: C/change-theme.page:21
 msgid "To change the appearance of the pieces and the board:"
-msgstr "Pour modifier l'apparence des pièces et du plateau :"
+msgstr "Pour modifier l’apparence des pièces et du plateau :"
 
 #. (itstool) path: item/p
 #: C/change-theme.page:24 C/fast-moves.page:28
@@ -345,7 +363,7 @@ msgid ""
 "Click on the colored box next to <gui>Background color</gui> to access the "
 "color palette."
 msgstr ""
-"Cliquez sur la boîte colorée à côté de <gui>Couleur d'arrière-plan</gui> "
+"Cliquez sur la boîte colorée à côté de <gui>Couleur d’arrière-plan</gui> "
 "pour accéder à la palette des couleurs."
 
 #. (itstool) path: item/p
@@ -381,7 +399,7 @@ msgstr "<app>Cinq ou plus</app> avec des formes différentes"
 #. (itstool) path: section/title
 #: C/change-theme.page:56
 msgid "Background colors available"
-msgstr "Couleurs d'arrière-plan disponibles"
+msgstr "Couleurs d’arrière-plan disponibles"
 
 #. (itstool) path: media/p
 #: C/change-theme.page:58
@@ -422,7 +440,7 @@ msgstr ""
 #. (itstool) path: page/title
 #: C/documentation.page:17
 msgid "Help write documentation"
-msgstr "Contribution à l'écriture du manuel d'aide"
+msgstr "Contribution à l’écriture du manuel d’aide"
 
 #. (itstool) path: page/p
 #: C/documentation.page:19
@@ -441,7 +459,7 @@ msgid ""
 "gnome.org%2Fdocs\">irc</link>, or via our <link href=\"http://mail.gnome.org/"
 "mailman/listinfo/gnome-doc-list\">mailing list</link>."
 msgstr ""
-"Pour contribuer au projet de documentation, n'hésitez pas à prendre contact "
+"Pour contribuer au projet de documentation, n’hésitez pas à prendre contact "
 "avec nous en utilisant <link href=\"https://cbe003.chat.mibbit.com/?url=irc"
 "%3A%2F%2Firc.gnome.org%2Fdocs\">irc</link> ou via notre <link href=\"http://"
 "mail.gnome.org/mailman/listinfo/gnome-doc-list\">liste de diffusion</link>."
@@ -513,12 +531,12 @@ msgid ""
 "they disappear. The goal is to vanish as many objects as possible. The game "
 "is over when the entire board is full."
 msgstr ""
-"<app>Cinq ou plus</app> est un concept d'entraînement cérébral qui donne "
-"l'impression d'être simple. Le but est de placer au moins cinq objets de la "
+"<app>Cinq ou plus</app> est un concept d’entraînement cérébral qui donne "
+"l’impression d’être simple. Le but est de placer au moins cinq objets de la "
 "même <link xref=\"change-theme#images\">couleur ou forme</link> de façon à "
 "former une ligne droite. La ligne peut être horizontale, verticale ou en "
 "diagonale. Une fois que cinq objets ou plus sont alignés, ils disparaissent. "
-"Le but est de faire disparaître le plus d'objets possible. Le jeu prend fin "
+"Le but est de faire disparaître le plus d’objets possible. Le jeu prend fin "
 "lorsque le tableau est plein."
 
 #. (itstool) path: section/title
@@ -539,14 +557,14 @@ msgstr "Avancée"
 #. (itstool) path: section/title
 #: C/index.page:46
 msgid "Get Involved"
-msgstr "Comment s'impliquer"
+msgstr "Comment s’impliquer"
 
 #. (itstool) path: p/link
 #: C/legal.xml:3
 msgid "Creative Commons Attribution-ShareAlike 3.0 Unported License"
 msgstr ""
 "licence Creative Commons Paternité-Partage des Conditions Initiales à "
-"l'Identique 3.0 Unported"
+"l’Identique 3.0 Unported"
 
 #. (itstool) path: license/p
 #: C/legal.xml:3
@@ -570,7 +588,7 @@ msgid ""
 "Unported license."
 msgstr ""
 "Cette œuvre est distribuée sous licence Creative Commons Paternité-Partage "
-"des Conditions Initiales à l'Identique 3.0 Unported."
+"des Conditions Initiales à l’Identique 3.0 Unported."
 
 #. (itstool) path: page/p
 #: C/license.page:21
@@ -595,7 +613,7 @@ msgstr "<em>de modifier</em>"
 #. (itstool) path: item/p
 #: C/license.page:31
 msgid "To adapt the work."
-msgstr "d'adapter cette création,"
+msgstr "d’adapter cette création,"
 
 #. (itstool) path: page/p
 #: C/license.page:34
@@ -614,15 +632,15 @@ msgid ""
 "licensor (but not in any way that suggests that they endorse you or your use "
 "of the work)."
 msgstr ""
-"Vous devez citer le nom de l'auteur original de la manière indiquée par "
-"l'auteur de l'œuvre ou le titulaire des droits qui vous confère cette "
-"autorisation (mais pas d'une manière qui suggérerait qu'ils vous soutiennent "
-"ou approuvent votre utilisation de l'œuvre)."
+"Vous devez citer le nom de l’auteur original de la manière indiquée par "
+"l’auteur de l’œuvre ou le titulaire des droits qui vous confère cette "
+"autorisation (mais pas d’une manière qui suggérerait qu’ils vous soutiennent "
+"ou approuvent votre utilisation de l’œuvre)."
 
 #. (itstool) path: item/title
 #: C/license.page:47
 msgid "<em>Share Alike</em>"
-msgstr "<em>Partage des conditions initiales à l'identique</em>"
+msgstr "<em>Partage des conditions initiales à l’identique</em>"
 
 #. (itstool) path: item/p
 #: C/license.page:48
@@ -630,7 +648,7 @@ msgid ""
 "If you alter, transform, or build upon this work, you may distribute the "
 "resulting work only under the same, similar or a compatible license."
 msgstr ""
-"Si vous modifiez, transformez ou adaptez cette création, vous n'avez le "
+"Si vous modifiez, transformez ou adaptez cette création, vous n’avez le "
 "droit de distribuer la création qui en résulte que sous un contrat identique "
 "à celui-ci."
 
@@ -650,7 +668,7 @@ msgstr ""
 #. (itstool) path: page/title
 #: C/play.page:22
 msgid "How to Play"
-msgstr "Déroulement d'une partie"
+msgstr "Déroulement d’une partie"
 
 #. (itstool) path: page/p
 #: C/play.page:24
@@ -671,7 +689,7 @@ msgid ""
 "Click on the object you want to move. The selected object will begin "
 "spinning."
 msgstr ""
-"Cliquez sur l'objet que vous voulez déplacer. L'objet sélectionné se met à "
+"Cliquez sur l’objet que vous voulez déplacer. L’objet sélectionné se met à "
 "tourner."
 
 #. (itstool) path: item/p
@@ -690,14 +708,14 @@ msgid ""
 "Press any of the arrow keys. An outline around a cell will appear on the "
 "board."
 msgstr ""
-"Appuyez sur une des touches fléchées. Un contour autour d'une cellule "
+"Appuyez sur une des touches fléchées. Un contour autour d’une cellule "
 "apparaît sur le plateau."
 
 #. (itstool) path: item/p
 #: C/play.page:49
 msgid "Using the arrow keys, navigate to the object you want to move."
 msgstr ""
-"En utilisant les touches fléchées, naviguez vers l'objet que vous voulez "
+"En utilisant les touches fléchées, naviguez vers l’objet que vous voulez "
 "déplacer."
 
 #. (itstool) path: item/p
@@ -706,8 +724,8 @@ msgid ""
 "To select the object, press the <key>Enter</key> or <key>Spacebar</key>. The "
 "selected object will begin spinning."
 msgstr ""
-"Pour sélectionner l'objet, appuyez sur <key>Entrée</key> ou la <key>barre "
-"d'espace</key>. L'objet sélectionné se met à tourner."
+"Pour sélectionner l’objet, appuyez sur <key>Entrée</key> ou la <key>barre "
+"d’espace</key>. L’objet sélectionné se met à tourner."
 
 #. (itstool) path: item/p
 #: C/play.page:53
@@ -716,7 +734,7 @@ msgid ""
 "<key>Spacebar</key>. The chosen object will move to the destination cell."
 msgstr ""
 "Déplacez-vous vers la cellule cible et appuyez à nouveau sur <key>Entrée</"
-"key> ou la <key>barre d'espace</key>. L'objet sélectionné se déplace vers la "
+"key> ou la <key>barre d’espace</key>. L’objet sélectionné se déplace vers la "
 "cellule de destination."
 
 #. (itstool) path: section/title
@@ -758,7 +776,7 @@ msgid ""
 "There must be a clear path from the original position of the object to the "
 "destination cell (i.e you can not jump over objects)."
 msgstr ""
-"Le chemin entre la position initiale de l'objet et la cellule de destination "
+"Le chemin entre la position initiale de l’objet et la cellule de destination "
 "doit être libre (c.-à-d. vous ne pouvez pas sauter par dessus des objets)."
 
 #. (itstool) path: item/p
@@ -769,9 +787,9 @@ msgid ""
 "an extra move without additional objects being added to the board."
 msgstr ""
 "Une ligne droite horizontale, verticale ou diagonale de cinq objets "
-"similaires ou plus disparaît automatiquement du plateau de jeu dès qu'elle "
-"est créée. Lorsque cela se produit, vous bénéficiez d'un mouvement "
-"supplémentaire sans ajout d'objets sur le plateau."
+"similaires ou plus disparaît automatiquement du plateau de jeu dès qu’elle "
+"est créée. Lorsque cela se produit, vous bénéficiez d’un mouvement "
+"supplémentaire sans ajout d’objets sur le plateau."
 
 #. (itstool) path: item/p
 #: C/rules.page:35
@@ -779,7 +797,7 @@ msgid ""
 "The more objects you clear, the longer the game will go on. The longer you "
 "play, the higher your <link xref=\"scores\">score</link>."
 msgstr ""
-"Plus vous effacez d'objets, plus la partie est longue. Plus vous jouez "
+"Plus vous effacez d’objets, plus la partie est longue. Plus vous jouez "
 "longtemps, plus votre <link xref=\"scores\">score</link> augmente."
 
 #. (itstool) path: item/p
@@ -788,23 +806,23 @@ msgid ""
 "The game is over when the board is full, since no object can be moved at "
 "that point."
 msgstr ""
-"La partie est terminée lorsque le plateau est plein, puisqu'aucun objet ne "
+"La partie est terminée lorsque le plateau est plein, puisqu’aucun objet ne "
 "peut plus alors être déplacé."
 
 #. (itstool) path: media/p
 #: C/rules.page:46
 msgid "Example horizontal alignment"
-msgstr "Exemple d'alignement horizontal"
+msgstr "Exemple d’alignement horizontal"
 
 #. (itstool) path: media/p
 #: C/rules.page:51
 msgid "Example vertical alignment"
-msgstr "Exemple d'alignement vertical"
+msgstr "Exemple d’alignement vertical"
 
 #. (itstool) path: media/p
 #: C/rules.page:56
 msgid "Example diagonal alignment"
-msgstr "Exemple d'alignement en diagonale"
+msgstr "Exemple d’alignement en diagonale"
 
 #. (itstool) path: media/p
 #: C/rules.page:61
@@ -823,12 +841,12 @@ msgid ""
 "points depends on the number of objects that disappear."
 msgstr ""
 "Vous marquez des points en créant des lignes de 5 objets ou plus. Le nombre "
-"de points dépend du nombre d'objets composant la ligne qui disparaît."
+"de points dépend du nombre d’objets composant la ligne qui disparaît."
 
 #. (itstool) path: td/p
 #: C/scores.page:27
 msgid "<em>Number of objects</em>"
-msgstr "<em>Nombre d'objets</em>"
+msgstr "<em>Nombre d’objets</em>"
 
 #. (itstool) path: td/p
 #: C/scores.page:28
@@ -948,7 +966,7 @@ msgstr "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
 #. (itstool) path: td/p
 #: C/shortcuts.page:24
 msgid "Help"
-msgstr "Manuel d'aide"
+msgstr "Manuel d’aide"
 
 #. (itstool) path: td/p
 #: C/shortcuts.page:25
@@ -977,9 +995,9 @@ msgid ""
 "strategic elements do exist. Here are some things to try and keep in mind as "
 "you play:"
 msgstr ""
-"Il n'y a pas de stratégie universelle pour <app>Cinq ou plus</app>, mais "
+"Il n’y a pas de stratégie universelle pour <app>Cinq ou plus</app>, mais "
 "quelques éléments de stratégie existent. Voici ce que vous devez garder à "
-"l'esprit lorsque vous jouez :"
+"l’esprit lorsque vous jouez :"
 
 #. (itstool) path: item/p
 #: C/strategy.page:22
@@ -994,8 +1012,8 @@ msgid ""
 "think ahead. Pay attention to the collection of <gui>Next</gui> objects, "
 "because knowing these will influence your moves."
 msgstr ""
-"Le plateau peut se remplir rapidement d'objets donc il vaut mieux anticiper. "
-"Observez bien l'ensemble des objets <gui>suivants</gui> parce que leur "
+"Le plateau peut se remplir rapidement d’objets donc il vaut mieux anticiper. "
+"Observez bien l’ensemble des objets <gui>suivants</gui> parce que leur "
 "connaissance influe sur vos déplacements."
 
 #. (itstool) path: item/p
@@ -1005,9 +1023,9 @@ msgid ""
 "can line up 2 and 3 with a space in between, and then connect them by "
 "placing the sixth object between them."
 msgstr ""
-"Essayez d'aligner plus de 5 objets. Par exemple, s'il y a 6 objets "
+"Essayez d’aligner plus de 5 objets. Par exemple, s’il y a 6 objets "
 "identiques, vous pouvez en aligner 2, laisser un espace, puis en aligner 3 "
-"et enfin connecter le tout en plaçant le sixième dans l'espace."
+"et enfin connecter le tout en plaçant le sixième dans l’espace."
 
 #. (itstool) path: page/title
 #: C/translate.page:23
@@ -1021,7 +1039,7 @@ msgid ""
 "translated by a world-wide volunteer community. You are welcome to "
 "participate."
 msgstr ""
-"L'interface utilisateur et la documentation des <app>jeux GNOME</app> est "
+"L’interface utilisateur et la documentation des <app>jeux GNOME</app> est "
 "actuellement traduite par une communauté de volontaires dans le monde "
 "entier. Votre contribution est la bienvenue."
 
@@ -1045,7 +1063,7 @@ msgid ""
 msgstr ""
 "Pour commencer à traduire, vous devez <link href=\"http://l10n.gnome.org"
 "\">créer un compte</link> et rejoindre <link href=\"http://l10n.gnome.org/"
-"teams/\">l'équipe de traduction</link> de votre langue. Ce compte va vous "
+"teams/\">l’équipe de traduction</link> de votre langue. Ce compte va vous "
 "permettre de téléverser de nouvelles traductions."
 
 #. (itstool) path: page/p
@@ -1056,10 +1074,10 @@ msgid ""
 "channel are located worldwide, so you may not get an immediate response as a "
 "result of timezone differences."
 msgstr ""
-"Vous pouvez discuter avec d'autres traducteurs de GNOME par le canal <link "
+"Vous pouvez discuter avec d’autres traducteurs de GNOME par le canal <link "
 "href=\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fi18n"
 "\">irc</link>. Les personnes abonnées à ce canal sont disséminées dans le "
-"monde entier, vous n'aurez donc probablement pas de réponse rapide à cause "
+"monde entier, vous n’aurez donc probablement pas de réponse rapide à cause "
 "des décalages horaires."
 
 #. (itstool) path: page/p
@@ -1069,9 +1087,24 @@ msgid ""
 "<link href=\"http://mail.gnome.org/mailman/listinfo/gnome-i18n\">mailing "
 "list</link>."
 msgstr ""
-"Vous pouvez aussi joindre par courriel l'équipe d'internationalisation en "
+"Vous pouvez aussi joindre par courriel l’équipe d’internationalisation en "
 "utilisant leur <link href=\"http://mail.gnome.org/mailman/listinfo/gnome-i18n"
 "\">liste de diffusion</link>."
+
+#~| msgid ""
+#~| "If you are requesting a new feature, choose <gui>enhancement</gui> in "
+#~| "the <gui>Severity</gui> menu. Fill in the Summary and Description "
+#~| "sections and click <gui>Commit</gui>."
+#~ msgid ""
+#~ "If you are requesting a new feature, choose <gui>enhancement</gui> in the "
+#~ "<gui>Severity</gui> menu. Fill in the Summary and Description sections "
+#~ "and click <gui>Submit Bug</gui>."
+#~ msgstr ""
+#~ "Si vous demandez une nouvelle fonctionnalité, choisissez "
+#~ "<gui>enhancement</gui> (amélioration) dans le menu <gui>Severity</gui> "
+#~ "(sévérité). Remplissez les rubriques « Summary » (résumé) et "
+#~ "« Description » puis cliquez sur <gui>Submit Bug</gui> (signaler un "
+#~ "bogue)."
 
 #~ msgctxt "_"
 #~ msgid ""
