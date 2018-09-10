@@ -18,10 +18,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games trunk\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-"
-"or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-08-13 20:27+0000\n"
-"PO-Revision-Date: 2016-09-16 12:27+0300\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/five-or-more/issues\n"
+"POT-Creation-Date: 2018-08-25 08:53+0000\n"
+"PO-Revision-Date: 2018-09-10 22:56+0300\n"
 "Last-Translator: Stas Solovey <whats_up@tut.by>\n"
 "Language-Team: Русский <gnome-cyr@gnome.org>\n"
 "Language: ru\n"
@@ -29,21 +28,20 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
-"X-Generator: Gtranslator 2.91.7\n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Poedit 2.1.1\n"
 
-#: ../data/five-or-more.appdata.xml.in.h:1 ../data/five-or-more.desktop.in.h:1
-#: ../data/five-or-more.ui.h:1 ../src/five-or-more.c:1172
-#: ../src/five-or-more.c:1723
+#: data/five-or-more.appdata.xml.in:7 data/five-or-more.desktop.in:3
+#: data/five-or-more.ui:18 src/five-or-more.c:70 src/five-or-more-app.c:576
 msgid "Five or More"
 msgstr "Пять или более"
 
-#: ../data/five-or-more.appdata.xml.in.h:2 ../data/five-or-more.desktop.in.h:2
+#: data/five-or-more.appdata.xml.in:8 data/five-or-more.desktop.in:4
 msgid "Remove colored balls from the board by forming lines"
 msgstr ""
 "Убирайте разноцветные шарики с поля, выстраивая прямые линии одного цвета"
 
-#: ../data/five-or-more.appdata.xml.in.h:3
+#: data/five-or-more.appdata.xml.in:10
 msgid ""
 "Five or More is the GNOME port of a once-popular computer game. Align five "
 "or more objects of the same color into a line to cause them to disappear and "
@@ -55,7 +53,7 @@ msgstr ""
 "и вам были начислены очки. Получайте как можно больше очков, выстраивая в "
 "линию максимально возможное количество объектов."
 
-#: ../data/five-or-more.appdata.xml.in.h:4
+#: data/five-or-more.appdata.xml.in:16
 msgid ""
 "More objects appear after every turn. Play for as long as possible, until "
 "the board is completely full!"
@@ -63,182 +61,243 @@ msgstr ""
 "После каждого хода появляются новые объекты. Игра продолжается до тех пор, "
 "пока игровая доска не заполнится объектами."
 
-#: ../data/five-or-more.appdata.xml.in.h:5
+#: data/five-or-more.appdata.xml.in:40
 msgid "The GNOME Project"
 msgstr "Проект GNOME"
 
-#: ../data/five-or-more.desktop.in.h:3
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/five-or-more.desktop.in:6
 msgid "game;strategy;logic;"
 msgstr "игра;стратегия;логическая;"
 
-#: ../data/five-or-more-preferences.ui.h:1 ../data/menu.ui.h:2
-#: ../src/five-or-more.c:171
+#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
+#: data/five-or-more.desktop.in:9
+msgid "five-or-more"
+msgstr "five-or-more"
+
+#: data/five-or-more-preferences.ui:12 data/menu.ui:11 src/game-area.c:858
 msgid "Preferences"
 msgstr "Параметры"
 
-#: ../data/five-or-more-preferences.ui.h:2
+#: data/five-or-more-preferences.ui:35
 msgid "Appearance"
 msgstr "Вид"
 
-#: ../data/five-or-more-preferences.ui.h:3
+#: data/five-or-more-preferences.ui:59
 msgid "_Image:"
 msgstr "_Шарики:"
 
-#: ../data/five-or-more-preferences.ui.h:4
+#: data/five-or-more-preferences.ui:74
 msgid "B_ackground color:"
 msgstr "Цвет _фона:"
 
-#: ../data/five-or-more-preferences.ui.h:5
+#: data/five-or-more-preferences.ui:116
 msgid "Board Size"
 msgstr "Размер игрового поля"
 
-#: ../data/five-or-more-preferences.ui.h:6
+#: data/five-or-more-preferences.ui:135
 msgid "_Small"
 msgstr "_Маленький"
 
-#: ../data/five-or-more-preferences.ui.h:7
+#: data/five-or-more-preferences.ui:154
 msgid "_Medium"
 msgstr "_Средний"
 
-#: ../data/five-or-more-preferences.ui.h:8
+#: data/five-or-more-preferences.ui:173
 msgid "_Large"
 msgstr "_Большой"
 
-#: ../data/five-or-more-preferences.ui.h:9
+#: data/five-or-more-preferences.ui:203
 msgid "General"
 msgstr "Общие"
 
-#: ../data/five-or-more-preferences.ui.h:10
+#: data/five-or-more-preferences.ui:216
 msgid "_Use fast moves"
 msgstr "Использовать _быстрые ходы"
 
-#: ../data/five-or-more.ui.h:2
+#: data/five-or-more.ui:30
 msgid "Next:"
 msgstr "Следующие:"
 
-#: ../data/five-or-more.ui.h:3
-msgid "0"
-msgstr "0"
-
-#: ../data/five-or-more.ui.h:4
+#: data/five-or-more.ui:56
 msgid "Score:"
 msgstr "Счёт:"
 
-#: ../data/five-or-more.ui.h:5 ../src/games-scores-dialog.c:385
+#: data/five-or-more.ui:76
 msgid "_New Game"
 msgstr "_Новая игра"
 
-#: ../data/five-or-more.ui.h:6
+#: data/five-or-more.ui:80
 msgid "Start a new puzzle"
 msgstr "Начать новую игру"
 
-#: ../data/menu.ui.h:1
+#: data/menu.ui:7
 msgid "Scores"
 msgstr "Результаты"
 
-#: ../data/menu.ui.h:3
+#: data/menu.ui:17
 msgid "Help"
 msgstr "Справка"
 
-#: ../data/menu.ui.h:4
+#: data/menu.ui:22
 msgid "About"
 msgstr "О приложении"
 
-#: ../data/menu.ui.h:5
+#: data/menu.ui:26
 msgid "Quit"
-msgstr "Закончить"
+msgstr "Завершить"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:1
+#: data/org.gnome.five-or-more.gschema.xml:5
 msgid "Playing field size"
 msgstr "Размер игрового поля"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:2
+#: data/org.gnome.five-or-more.gschema.xml:6
 msgid ""
 "Playing field size. 1=Small, 2=Medium, 3=Large. Any other value is invalid."
 msgstr ""
 "Размер игрового поля. 1 - маленькое, 2 - среднее, 3 - большое. Другие "
 "значения некорректны."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:3
+#: data/org.gnome.five-or-more.gschema.xml:10
 msgid "Ball style"
 msgstr "Стиль шариков"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:4
+#: data/org.gnome.five-or-more.gschema.xml:11
 msgid "Ball style. The filename of the images to use for the balls."
 msgstr "Стиль шариков. Имя файла изображений для стилизации шариков."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:5
+#: data/org.gnome.five-or-more.gschema.xml:15
 msgid "Background color"
 msgstr "Цвет фона"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:6
+#: data/org.gnome.five-or-more.gschema.xml:16
 msgid "Background color. The hex specification of the background color."
 msgstr "Цвет фона. Это шестнадцатеричное число, определяющее цвет фона."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:7
+#: data/org.gnome.five-or-more.gschema.xml:20
 msgid "Time between moves"
 msgstr "Время между прыжками шариков"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:8
+#: data/org.gnome.five-or-more.gschema.xml:21
 msgid "Time between moves in milliseconds."
-msgstr "Время между прыжками шарика в миллисекундах"
+msgstr "Время между прыжками шарика в миллисекундах."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:9
+#: data/org.gnome.five-or-more.gschema.xml:25
 msgid "Game score"
 msgstr "Результаты игры"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:10
+#: data/org.gnome.five-or-more.gschema.xml:26
 msgid "Game score from last saved session."
 msgstr "Таблица результатов из последнего сохраненного сеанса игры."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:11
+#: data/org.gnome.five-or-more.gschema.xml:30
 msgid "Game field"
 msgstr "Игровое поле"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:12
+#: data/org.gnome.five-or-more.gschema.xml:31
 msgid "Game field from last saved session."
 msgstr "Игровое поле из последнего сохраненного сеанса игры."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:13
+#: data/org.gnome.five-or-more.gschema.xml:35
 msgid "Game preview"
 msgstr "Просмотр игры"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:14
+#: data/org.gnome.five-or-more.gschema.xml:36
 msgid "Game preview from last saved session."
 msgstr "Просмотр игры из последнего сохраненного сеанса игры."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:15
+#: data/org.gnome.five-or-more.gschema.xml:40
 msgid "Width of the window in pixels"
 msgstr "Ширина окна в пикселах"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:16
+#: data/org.gnome.five-or-more.gschema.xml:44
 msgid "Height of the window in pixels"
 msgstr "Высота окна в пикселах"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:17
+#: data/org.gnome.five-or-more.gschema.xml:48
 msgid "true if the window is maximized"
 msgstr "истинно, если окно имеет максимальный размер"
 
-#: ../src/five-or-more.c:80
+#.
+#. * Translatable strings file.
+#. * Add this file to your project's POTFILES.in.
+#. * DO NOT compile it as part of your application.
+#.
+#: data/translatable_themes.h:6
+msgctxt "themes"
+msgid "balls"
+msgstr "шары"
+
+#: data/translatable_themes.h:7
+msgctxt "themes"
+msgid "dots"
+msgstr "точки"
+
+#: data/translatable_themes.h:8
+msgctxt "themes"
+msgid "gumball"
+msgstr "резинки"
+
+#: data/translatable_themes.h:9
+msgctxt "themes"
+msgid "shapes"
+msgstr "формы"
+
+#: src/five-or-more-app.c:57
 msgctxt "board size"
 msgid "Small"
 msgstr "Маленькая"
 
-#: ../src/five-or-more.c:81
+#: src/five-or-more-app.c:58
 msgctxt "board size"
 msgid "Medium"
 msgstr "Средняя"
 
-#: ../src/five-or-more.c:82
+#: src/five-or-more-app.c:59
 msgctxt "board size"
 msgid "Large"
 msgstr "Большая"
 
-#: ../src/five-or-more.c:165
-msgid "Could not load theme"
-msgstr "Не удалось загрузить тему"
+#: src/five-or-more-app.c:233
+msgid "Game Over!"
+msgstr "Игра окончена!"
 
-#: ../src/five-or-more.c:191
+#: src/five-or-more-app.c:250
+msgid "Match five objects of the same type in a row to score!"
+msgstr "Соберите пять шариков одинакового цвета в одну линию!"
+
+#: src/five-or-more-app.c:405
+msgid "Are you sure you want to restart the game?"
+msgstr "Уверены, что хотите перезапустить игру?"
+
+#: src/five-or-more-app.c:408
+msgid "_Cancel"
+msgstr "_Отменить"
+
+#: src/five-or-more-app.c:409
+msgid "_Restart"
+msgstr "_Перезапустить"
+
+#: src/five-or-more-app.c:578
+msgid "GNOME port of the once-popular Color Lines game"
+msgstr "Порт популярной игры «Цветные линии» для GNOME"
+
+#: src/five-or-more-app.c:584
+msgid "translator-credits"
+msgstr ""
+"Stas Solovey <whats_up@tut.by>, 2016-2018.\n"
+"Yuri Myasoedov <ymyasoedov@yandex.ru>, 2012-2015."
+
+#: src/five-or-more-app.c:694
+msgid "Board Size: "
+msgstr "Размер игрового поля: "
+
+#. Can't move there!
+#: src/game-area.c:635
+msgid "You can’t move there!"
+msgstr "Невозможно переместить сюда!"
+
+#: src/game-area.c:818
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -251,7 +310,7 @@ msgstr ""
 "\n"
 "Вместо него будет загружена тема по умолчанию."
 
-#: ../src/five-or-more.c:198
+#: src/game-area.c:825
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -264,84 +323,39 @@ msgstr ""
 "\n"
 "Проверьте корректность установки игры «Пять или более»."
 
-#: ../src/five-or-more.c:407
-msgid "Match five objects of the same type in a row to score!"
-msgstr "Соберите пять шариков одинакового цвета в одну линию!"
+#: src/game-area.c:852
+msgid "Could not load theme"
+msgstr "Не удалось загрузить тему"
 
-#: ../src/five-or-more.c:468
-msgid "Five or More Scores"
-msgstr "Счёт «Пять или более»"
+#~ msgid "0"
+#~ msgstr "0"
 
-#: ../src/five-or-more.c:470
-msgid "_Board size:"
-msgstr "Размер _доски:"
+#~ msgid "Five or More Scores"
+#~ msgstr "Счёт «Пять или более»"
 
-#: ../src/five-or-more.c:487
-msgid "Game Over!"
-msgstr "Игра окончена!"
+#~ msgid "_Board size:"
+#~ msgstr "Размер _доски:"
 
-#. Can't move there!
-#: ../src/five-or-more.c:644
-msgid "You can’t move there!"
-msgstr "Невозможно переместить сюда!"
+#~ msgctxt "score-dialog"
+#~ msgid "Time"
+#~ msgstr "Время"
 
-#: ../src/five-or-more.c:1174
-msgid "GNOME port of the once-popular Color Lines game"
-msgstr "Порт популярной игры «Цветные линии» для GNOME"
+#~ msgctxt "score-dialog"
+#~ msgid "Score"
+#~ msgstr "Очки"
 
-#: ../src/five-or-more.c:1180
-msgid "translator-credits"
-msgstr ""
-"Валек Филиппов aka frob\n"
-"Дмитрий Мастрюков\n"
-"Вячеслав Диконов\n"
-"Михаил Яхонтов\n"
-"Леонид Кантер"
+#~ msgctxt "score-dialog"
+#~ msgid "%1$dm %2$ds"
+#~ msgstr "%1$dмин. %2$dс"
 
-#: ../src/five-or-more.c:1304
-msgid "Are you sure you want to restart the game?"
-msgstr "Уверены, что хотите перезапустить игру?"
+#~ msgid "_Quit"
+#~ msgstr "_Закончить"
 
-#: ../src/five-or-more.c:1307
-msgid "_Cancel"
-msgstr "_Отменить"
+#~ msgid "_Undo"
+#~ msgstr "_Отменить"
 
-#: ../src/five-or-more.c:1308
-msgid "_Restart"
-msgstr "_Перезапустить"
+#~ msgid "_Close"
+#~ msgstr "_Закрыть"
 
-#. Score dialog column header for the score time (e.g. 1 minute)
-#: ../src/games-scores-dialog.c:132
-msgctxt "score-dialog"
-msgid "Time"
-msgstr "Время"
-
-#. Score dialog column header for the score value (e.g. 30 moves)
-#: ../src/games-scores-dialog.c:138
-msgctxt "score-dialog"
-msgid "Score"
-msgstr "Очки"
-
-#. Score format for time based scores.  %1$d is the time in minutes, %2$d is the time in seconds
-#: ../src/games-scores-dialog.c:225
-#, c-format
-msgctxt "score-dialog"
-msgid "%1$dm %2$ds"
-msgstr "%1$dмин. %2$dс"
-
-#: ../src/games-scores-dialog.c:371
-msgid "_Quit"
-msgstr "_Закончить"
-
-#: ../src/games-scores-dialog.c:378
-msgid "_Undo"
-msgstr "_Отменить"
-
-#: ../src/games-scores-dialog.c:392
-msgid "_Close"
-msgstr "_Закрыть"
-
-#. Score dialog column header for the date the score was recorded
-#: ../src/games-scores-dialog.c:478
-msgid "Date"
-msgstr "Дата"
+#~ msgid "Date"
+#~ msgstr "Дата"
