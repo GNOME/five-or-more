@@ -4,6 +4,7 @@
  * Authors: Robert Szokovacs <szo@appaloosacorp.hu>
  *          Szabolcs Ban <shooby@gnome.hu>
  *          Karuna Grewal <karunagrewal98@gmail.com>
+ *          Ruxandra Simion <ruxandra.simion93@gmail.com>
  * Copyright © 2007 Christian Persch
  *
  * This game is free software; you can redistribute it and/or modify
@@ -20,36 +21,34 @@
  * along with this program; if not, see <https://www.gnu.org/licenses/>.
  */
 
-#ifndef GAME_AREA_H
-#define GAME_AREA_H
+public class NextPiecesGenerator
+{
+    private int n_types;
+    private int n_next_pieces;
+    private Gee.ArrayList<Piece> pieces;
 
-#include <gtk/gtk.h>
-#include "games-preimage.h"
+    public NextPiecesGenerator (int n_next_pieces, int n_types)
+    {
+        this.pieces = new Gee.ArrayList<Piece> ();
+        this.n_next_pieces = n_next_pieces;
+        this.n_types = n_types;
+    }
 
-typedef struct {
-  int num;
-  int score;
-} scoretable;
+    private int yield_next_piece ()
+    {
+        return GLib.Random.int_range (0, this.n_types);
+    }
 
-typedef struct {
-  int color;
-  int pathsearch;
-  int phase;
-  int active;
-  int tag;
-} field_props;
+    public Gee.ArrayList<Piece> yield_next_pieces ()
+    {
+        this.pieces.clear ();
 
-GRand           **get_rgen          ();
-GamesPreimage    *get_ball_preimage ();
-gint              get_npieces       ();
-void              set_inmove        (int i);
-void              refresh_pixmaps   (void);
-void              refresh_screen    (void);
-void              load_theme        (void);
-GtkWidget       * game_area_init    (void);
-gint              get_ncolors       ();
-void              set_sizes         (gint size);
-void              reset_game        (void);
-gint              get_hfieldsize    ();
-gint              get_vfieldsize    ();
-#endif
+        for (int i = 0; i < this.n_next_pieces; i++)
+        {
+            int id = yield_next_piece ();
+            this.pieces.add (new Piece (id));
+        }
+
+        return this.pieces;
+    }
+}

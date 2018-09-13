@@ -23,28 +23,27 @@
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude" />
   </info>
 
-<title>
-<media type="image" src="figures/logo32.png" its:translate="no"><span its:translate="yes">Five or More logo</span></media> Five or More</title>
+  <title>
+    <media type="image" src="figures/logo32.png" its:translate="no"><span its:translate="yes">Five or More logo</span></media> Five or More
+  </title>
 
   <p><app>Five or More</app> is a deceptively simple brain workout. The goal is to place at least five objects of the same <link xref="change-theme#images">color or shape</link> into a straight line. The line can be horizontal, vertical or diagonal.  Once five or more objects are grouped into a line, they disappear.  The goal is to vanish as many objects as possible.  The game is over when the entire board is full.</p>
 
 
-
-   <section id="play" style="2column">
+  <section id="play" style="2column">
     <title>Game Play</title>
-   </section>
+  </section>
 
-   <section id="tips" style="2column">
+  <section id="tips" style="2column">
     <title>Useful Tips</title>
-   </section>
+  </section>
 
-   <section id="advanced" style="2column">
+  <section id="advanced" style="2column">
     <title>Advanced</title>
-   </section>
+  </section>
 
-   <section id="get-involved" style="2column">
+  <section id="get-involved" style="2column">
     <title>Get Involved</title>
-   </section>
-
+  </section>
 
 </page>

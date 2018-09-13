@@ -21,7 +21,7 @@
 
   <title>How to Play</title>
 
-  <p>To start a new game click <guiseq><gui>Game</gui><gui>New</gui></guiseq>.</p> 
+  <p>To start a new game click <guiseq><gui>Game</gui><gui>New</gui></guiseq>.</p>
 
   <section id="mouse">
 
@@ -33,7 +33,8 @@
        spinning.</p>
     </item>
     <item>
-      <p>Click on the destination cell.</p>
+      <p>Click on the destination cell. The chosen object will move to
+     the destination cell, if there is any clear path.</p>
     </item>
   </steps>
 
@@ -44,15 +45,21 @@
   <title>Using the keyboard</title>
 
   <steps>
-    <item><p>Press any of the arrow keys.  An outline around a cell will appear
-     on the board.</p></item>
-    <item><p>Using the arrow keys, navigate to the object you want to
-     move.</p></item>
-    <item><p>To select the object, press the <key>Enter</key> or
-     <key>Spacebar</key>. The selected object will begin spinning.</p></item>
-    <item><p>Move to the destination cell, and again press the
-     <key>Enter</key> or <key>Spacebar</key>.  The chosen object will move to
-     the destination cell.</p></item>
+    <item>
+      <p>Press any of the arrow keys.  An outline around a cell will appear
+      on the board.</p>
+    </item>
+    <item>
+      <p>Using the arrow keys, and the <key>Home</key>, <key>End</key>, <key>PageUp</key> and <key>PageDown</key> keys navigate to the object you want to move.</p>
+    </item>
+    <item>
+      <p>To select the object, press the <key>Enter</key>, <key>Spacebar</key> or <key>Return</key>. The selected object will begin spinning.</p>
+    </item>
+    <item>
+      <p>Move to the destination cell, and again press the
+      <key>Enter</key>, <key>Spacebar</key> or <key>Return</key>. The chosen object will move to
+      the destination cell, if there is any clear path.</p>
+    </item>
   </steps>
 
   </section>
@@ -63,7 +70,7 @@
 
     <media type="video" mime="application/ogg" src="figures/glines-demo.ogv" its:translate="no">
     </media>
-    
+
   </section>
 
 </page>

@@ -4,6 +4,7 @@
  * Authors: Robert Szokovacs <szo@appaloosacorp.hu>
  *          Szabolcs Ban <shooby@gnome.hu>
  *          Karuna Grewal <karunagrewal98@gmail.com>
+ *          Ruxandra Simion <ruxandra.simion93@gmail.com>
  * Copyright © 2007 Christian Persch
  *
  * This game is free software; you can redistribute it and/or modify
@@ -20,16 +21,17 @@
  * along with this program; if not, see <https://www.gnu.org/licenses/>.
  */
 
-#ifndef BALLS_PREVIEW_H
-#define BALLS_PREVIEW_H
+public class Piece
+{
+    public int id;
 
-#include <gtk/gtk.h>
+    public Piece (int id)
+    {
+        this.id = id;
+    }
 
-void        init_preview             (void);
-void        draw_preview             (void);
-void        refresh_preview_surfaces (void);
-GtkImage  **get_preview_images       ();
-int       * get_preview              ();
-GdkPixbuf **get_preview_pixbufs      ();
-
-#endif
+    public bool equal (Piece piece)
+    {
+        return this.id == piece.id;
+    }
+}
