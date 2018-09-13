@@ -1,6 +1,5 @@
 # German five-or-more translation
 # Copyright (C) 1998-2005 Free Software Foundation, Inc.
-#
 # Carsten Schaar <nhadcasc@fs-maphy.uni-hannover.de>, 1998.
 # Matthias Warkus <mawa@iname.com>, 1999.
 # Karl Eichwalder <ke@suse.de>, 1999, 2000.
@@ -24,19 +23,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: five-or-more master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/five-or-more/issues\n"
-"POT-Creation-Date: 2018-03-27 17:19+0000\n"
-"PO-Revision-Date: 2018-08-04 13:49+0200\n"
-"Last-Translator: Tim Sabsch <tim@sabsch.com>\n"
+"POT-Creation-Date: 2018-09-13 09:53+0000\n"
+"PO-Revision-Date: 2018-09-13 13:53+0200\n"
+"Last-Translator: Mario Blättermann <mario.blaettermann@gmail.com>\n"
 "Language-Team: Deutsch <gnome-de@gnome.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.0.9\n"
+"X-Generator: Vé 0.1.4\n"
 
 #: data/five-or-more.appdata.xml.in:7 data/five-or-more.desktop.in:3
-#: data/five-or-more.ui:18 src/five-or-more.c:70 src/five-or-more-app.c:573
+#: data/five-or-more.ui:19 src/main.vala:68 src/main.vala:144
 msgid "Five or More"
 msgstr "Fünf oder mehr"
 
@@ -78,75 +77,79 @@ msgstr "Spiel;Strategie;Logik;"
 msgid "five-or-more"
 msgstr "five-or-more"
 
-#: data/five-or-more-preferences.ui:12 data/menu.ui:11 src/game-area.c:858
+#: data/five-or-more-preferences.ui:13 data/five-or-more-menu.ui:11
 msgid "Preferences"
 msgstr "Einstellungen"
 
-#: data/five-or-more-preferences.ui:35
+#: data/five-or-more-preferences.ui:36
 msgid "Appearance"
 msgstr "Erscheinungsbild"
 
-#: data/five-or-more-preferences.ui:59
-msgid "_Image:"
-msgstr "_Bild:"
+#: data/five-or-more-preferences.ui:60
+msgid "_Theme:"
+msgstr "_Thema:"
 
-#: data/five-or-more-preferences.ui:74
+#: data/five-or-more-preferences.ui:76
+#| msgctxt "themes"
+#| msgid "balls"
+msgid "balls"
+msgstr "Kugeln"
+
+#: data/five-or-more-preferences.ui:77
+#| msgctxt "themes"
+#| msgid "shapes"
+msgid "shapes"
+msgstr "Formen"
+
+#: data/five-or-more-preferences.ui:86
 msgid "B_ackground color:"
 msgstr "_Hintergrundfarbe:"
 
-#: data/five-or-more-preferences.ui:116
+#: data/five-or-more-preferences.ui:128
 msgid "Board Size"
 msgstr "Spielflächengröße"
 
-#: data/five-or-more-preferences.ui:135
+#: data/five-or-more-preferences.ui:147
 msgid "_Small"
 msgstr "_Klein"
 
-#: data/five-or-more-preferences.ui:154
+#: data/five-or-more-preferences.ui:166
 msgid "_Medium"
 msgstr "_Mittel"
 
-#: data/five-or-more-preferences.ui:173
+#: data/five-or-more-preferences.ui:185
 msgid "_Large"
 msgstr "_Groß"
 
-#: data/five-or-more-preferences.ui:203
-msgid "General"
-msgstr "Allgemein"
-
-#: data/five-or-more-preferences.ui:216
-msgid "_Use fast moves"
-msgstr "Züge _schnell ausführen"
-
-#: data/five-or-more.ui:30
+#: data/five-or-more.ui:31
 msgid "Next:"
 msgstr "Nächste Kugeln:"
 
-#: data/five-or-more.ui:56
+#: data/five-or-more.ui:57
 msgid "Score:"
 msgstr "Punkte:"
 
-#: data/five-or-more.ui:76
+#: data/five-or-more.ui:82
 msgid "_New Game"
 msgstr "_Neues Spiel"
 
-#: data/five-or-more.ui:80
+#: data/five-or-more.ui:86
 msgid "Start a new puzzle"
 msgstr "Eine neue Spielpartie beginnen"
 
-#: data/menu.ui:7
+#: data/five-or-more-menu.ui:7
 msgid "Scores"
 msgstr "Punkte"
 
-#: data/menu.ui:17
+#: data/five-or-more-menu.ui:17
 msgid "Help"
 msgstr "Hilfe"
 
-#: data/menu.ui:22
+#: data/five-or-more-menu.ui:22
 msgid "About"
 msgstr "Info"
 
-#: data/menu.ui:26
+#: data/five-or-more-menu.ui:26
 msgid "Quit"
 msgstr "Beenden"
 
@@ -220,73 +223,26 @@ msgstr "Fensterhöhe in Pixeln"
 msgid "true if the window is maximized"
 msgstr "Wahr, falls das Fenster maximiert ist"
 
-#.
-#. * Translatable strings file.
-#. * Add this file to your project's POTFILES.in.
-#. * DO NOT compile it as part of your application.
-#.
-#: data/translatable_themes.h:6
-msgctxt "themes"
-msgid "balls"
-msgstr "Kugeln"
-
-#: data/translatable_themes.h:7
-msgctxt "themes"
-msgid "dots"
-msgstr "Kleckse"
-
-#: data/translatable_themes.h:8
-msgctxt "themes"
-msgid "gumball"
-msgstr "Ballons"
-
-#: data/translatable_themes.h:9
-msgctxt "themes"
-msgid "shapes"
-msgstr "Formen"
-
-#: src/five-or-more-app.c:57
+#: src/game.vala:94
 msgctxt "board size"
 msgid "Small"
 msgstr "Klein"
 
-#: src/five-or-more-app.c:58
+#: src/game.vala:95
 msgctxt "board size"
 msgid "Medium"
 msgstr "Mittel"
 
-#: src/five-or-more-app.c:59
+#: src/game.vala:96
 msgctxt "board size"
 msgid "Large"
 msgstr "Groß"
 
-#: src/five-or-more-app.c:233
-msgid "Game Over!"
-msgstr "Spiel vorbei!"
-
-#: src/five-or-more-app.c:250
-msgid "Match five objects of the same type in a row to score!"
-msgstr ""
-"Ordnen Sie fünf gleichartige Objekte in einer Reihe an, um Punkte zu "
-"erzielen!"
-
-#: src/five-or-more-app.c:405
-msgid "Are you sure you want to restart the game?"
-msgstr "Wollen Sie das Spiel wirklich neu starten?"
-
-#: src/five-or-more-app.c:408
-msgid "_Cancel"
-msgstr "A_bbrechen"
-
-#: src/five-or-more-app.c:409
-msgid "_Restart"
-msgstr "Neu sta_rten"
-
-#: src/five-or-more-app.c:575
+#: src/main.vala:147
 msgid "GNOME port of the once-popular Color Lines game"
 msgstr "GNOME-Portierung des ehemals populären Spiels »Color Lines«"
 
-#: src/five-or-more-app.c:581
+#: src/main.vala:153
 msgid "translator-credits"
 msgstr ""
 "Karl Eichwalder <ke@suse.de>\n"
@@ -307,44 +263,78 @@ msgstr ""
 "Bernd Homuth <dev@hmt.im>\n"
 "Tim Sabsch <tim@sabsch.com>"
 
-#: src/five-or-more-app.c:693
+#: src/preferences-dialog.vala:77
+msgid "Are you sure you want to restart the game?"
+msgstr "Wollen Sie das Spiel wirklich neu starten?"
+
+#: src/preferences-dialog.vala:79
+msgid "_Cancel"
+msgstr "A_bbrechen"
+
+#: src/preferences-dialog.vala:80
+msgid "_Restart"
+msgstr "Neu sta_rten"
+
+#: src/window.vala:53
+msgid "Match five objects of the same type in a row to score!"
+msgstr ""
+"Ordnen Sie fünf gleichartige Objekte in einer Reihe an, um Punkte zu "
+"erzielen!"
+
+#: src/window.vala:54
+#| msgid "You can’t move there!"
+msgid "You can't move there!"
+msgstr "Zug dorthin ist nicht möglich!"
+
+#: src/window.vala:55
+msgid "Game Over!"
+msgstr "Spiel vorbei!"
+
+#: src/window.vala:91
 msgid "Board Size: "
 msgstr "Spielflächengröße: "
 
-#. Can't move there!
-#: src/game-area.c:635
-msgid "You can’t move there!"
-msgstr "Zug dorthin ist nicht möglich!"
+#~ msgid "_Image:"
+#~ msgstr "_Bild:"
 
-#: src/game-area.c:818
-#, c-format
-msgid ""
-"Unable to locate file:\n"
-"%s\n"
-"\n"
-"The default theme will be loaded instead."
-msgstr ""
-"Datei wurde nicht gefunden:\n"
-"%s\n"
-"\n"
-"Der Vorgabesatz wird stattdessen geladen."
+#~ msgid "General"
+#~ msgstr "Allgemein"
 
-#: src/game-area.c:825
-#, c-format
-msgid ""
-"Unable to locate file:\n"
-"%s\n"
-"\n"
-"Please check that Five or More is installed correctly."
-msgstr ""
-"Datei wurde nicht gefunden:\n"
-"%s\n"
-"\n"
-"Bitte überprüfen Sie Ihre »Fünf oder mehr«-Installation."
+#~ msgid "_Use fast moves"
+#~ msgstr "Züge _schnell ausführen"
 
-#: src/game-area.c:852
-msgid "Could not load theme"
-msgstr "Das Thema konnte nicht geladen werden"
+#~ msgctxt "themes"
+#~ msgid "dots"
+#~ msgstr "Kleckse"
+
+#~ msgctxt "themes"
+#~ msgid "gumball"
+#~ msgstr "Ballons"
+
+#~ msgid ""
+#~ "Unable to locate file:\n"
+#~ "%s\n"
+#~ "\n"
+#~ "The default theme will be loaded instead."
+#~ msgstr ""
+#~ "Datei wurde nicht gefunden:\n"
+#~ "%s\n"
+#~ "\n"
+#~ "Der Vorgabesatz wird stattdessen geladen."
+
+#~ msgid ""
+#~ "Unable to locate file:\n"
+#~ "%s\n"
+#~ "\n"
+#~ "Please check that Five or More is installed correctly."
+#~ msgstr ""
+#~ "Datei wurde nicht gefunden:\n"
+#~ "%s\n"
+#~ "\n"
+#~ "Bitte überprüfen Sie Ihre »Fünf oder mehr«-Installation."
+
+#~ msgid "Could not load theme"
+#~ msgstr "Das Thema konnte nicht geladen werden"
 
 #~ msgid "0"
 #~ msgstr "0"
