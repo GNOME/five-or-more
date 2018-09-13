@@ -6,7 +6,6 @@ data/five-or-more-preferences.ui
 data/five-or-more.ui
 data/five-or-more-menu.ui
 data/org.gnome.five-or-more.gschema.xml
-data/org.gnome.five-or-more.gresource.xml
 src/game.vala
 src/main.vala
 src/preferences-dialog.vala
