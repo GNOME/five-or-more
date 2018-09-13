@@ -51,7 +51,7 @@ public class GameWindow : Gtk.ApplicationWindow
     private Games.Scores.Context highscores;
     private string[] status = {
             _("Match five objects of the same type in a row to score!"),
-            _("You can't move there!"),
+            _("You can’t move there!"),
             _("Game Over!"),
             null
     };
