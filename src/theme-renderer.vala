@@ -29,12 +29,14 @@ public class ThemeRenderer
     private int sprite_size = DEFAULT_SPRITE_SIZE;
     private float sprite_sheet_width;
     private float sprite_sheet_height;
+    private float theme_sprite_size;
 
     private string theme_name;
     private Rsvg.Handle? theme = null;
     public const string themes[] = {
             "balls.svg",
             "shapes.svg",
+            "tango.svg",
     };
 
     private Cairo.Pattern? tile_pattern = null;
@@ -86,6 +88,7 @@ public class ThemeRenderer
         var dimensions = theme.get_dimensions ();
         sprite_sheet_width = dimensions.width;
         sprite_sheet_height = dimensions.height;
+        theme_sprite_size = sprite_sheet_height/Game.N_TYPES;
 
         theme_changed ();
         is_theme_changed = true;
@@ -105,7 +108,7 @@ public class ThemeRenderer
             cr_preview = new Cairo.Context (preview_surface);
 
             var matrix = Cairo.Matrix.identity ();
-            matrix.scale (Game.N_ANIMATIONS * sprite_size / sprite_sheet_width,
+            matrix.scale ((sprite_sheet_width/theme_sprite_size) * sprite_size / sprite_sheet_width,
                           Game.N_TYPES * sprite_size / sprite_sheet_height);
             cr_preview.set_matrix (matrix);
 

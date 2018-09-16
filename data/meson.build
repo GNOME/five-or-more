@@ -9,7 +9,7 @@ i18n.merge_file (
 )
 
 # Themes
-foreach file: ['balls.svg', 'shapes.svg']
+foreach file: ['balls.svg', 'shapes.svg', 'tango.svg']
   install_data (file,
                 install_dir: join_paths(pkgdata_dir, 'themes')
   )
