@@ -6,7 +6,7 @@
     <property name="can_focus">False</property>
     <property name="default_width">320</property>
     <property name="default_height">400</property>
-    <property name="icon_name">glines</property>
+    <property name="icon_name">five-or-more</property>
     <property name="border-width">18</property>
     <accel-groups>
       <group name="accelgroup"/>
