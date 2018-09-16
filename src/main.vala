@@ -128,7 +128,9 @@ public class FiveOrMoreApp: Gtk.Application
         };
 
         const string artists[] = {
-            null
+            "Callum McKenzie",
+            "Kenney.nl",
+            "Robert Roth",
         };
 
         const string documenters[] = {
