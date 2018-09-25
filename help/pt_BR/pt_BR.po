@@ -2,485 +2,378 @@
 # Copyright (C) 2013 five-or-more's COPYRIGHT HOLDER
 # This file is distributed under the same license as the five-or-more package.
 # Enrico Nicoletto <liverig@gmail.com>, 2013.
-#
+# Rafael Fontenelle <rafaelff@gnome.org>, 2018.
 msgid ""
 msgstr ""
 "Project-Id-Version: five-or-more help\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-"
 "or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-09-14 12:22+0000\n"
-"PO-Revision-Date: 2013-09-13 21:54-0300\n"
-"Last-Translator: Enrico Nicoletto <liverig@gmail.com>\n"
+"POT-Creation-Date: 2018-09-13 15:19+0000\n"
+"PO-Revision-Date: 2018-09-25 07:28-0200\n"
+"Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
 "Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 1.5.7\n"
+"X-Generator: Virtaal 1.0.0-beta1\n"
 "X-Project-Style: gnome\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
 msgid "translator-credits"
-msgstr "Enrico Nicoletto <liverig@gmail.com>, 2013."
-
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/index.page:6
-msgctxt "_"
-msgid "external ref='figures/logo.png' md5='83ba6ff888acbdea3ad599b055ed7710'"
-msgstr "external ref='figures/logo.png' md5='83ba6ff888acbdea3ad599b055ed7710'"
-
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/index.page:26
-msgctxt "_"
-msgid ""
-"external ref='figures/logo32.png' md5='51b65eea63f1a6c26a4c5d628dba406c'"
 msgstr ""
-"external ref='figures/logo32.png' md5='51b65eea63f1a6c26a4c5d628dba406c'"
-
-#. (itstool) path: info/title
-#: C/index.page:7
-msgctxt "link"
-msgid "Five or More"
-msgstr "Cinco ou Mais"
-
-#. (itstool) path: info/title
-#: C/index.page:8
-msgctxt "text"
-msgid "Five or More"
-msgstr "Cinco ou Mais"
+"Enrico Nicoletto <liverig@gmail.com>, 2013\n"
+"Rafael Fontenelle <rafaelff@gnome.org>, 2018"
 
 #. (itstool) path: credit/name
-#: C/index.page:12 C/change-board-size.page:8 C/change-theme.page:8
-#: C/fast-moves.page:9 C/play.page:9 C/scores.page:9
-msgid "Lahiru lanka"
-msgstr "Lahiru lanka"
-
-#. (itstool) path: credit/name
-#: C/index.page:16 C/bug-filing.page:11 C/change-board-size.page:13
-#: C/change-theme.page:13 C/develop.page:10 C/documentation.page:8
-#: C/fast-moves.page:14 C/scores.page:14 C/shortcuts.page:9 C/strategy.page:9
-#: C/translate.page:10
+#: C/bug-filing.page:10 C/change-board-size.page:14 C/change-theme.page:14
+#: C/develop.page:10 C/documentation.page:8 C/fast-moves.page:14 C/index.page:17
+#: C/scores.page:14 C/shortcuts.page:9 C/strategy.page:9 C/translate.page:10
 msgid "Tiffany Antopolski"
 msgstr "Tiffany Antopolski"
 
-#. (itstool) path: license/p
-#: C/index.page:20 C/bug-filing.page:16 C/develop.page:15
-#: C/documentation.page:13 C/translate.page:19
-msgid "Creative Commons Share Alike 3.0"
-msgstr "Creative Commons Atribuição Compartilhada Igual 3.0"
-
-#. (itstool) path: page/title
-#: C/index.page:25
-msgid ""
-"<media type=\"image\" src=\"figures/logo32.png\">Five or More logo</media> "
-"Five or More"
-msgstr ""
-"<media type=\"image\" src=\"figures/logo32.png\">Logotipo do Cinco ou Mais</"
-"media> Cinco ou Mais"
-
-#. (itstool) path: page/p
-#: C/index.page:28
-msgid ""
-"<app>Five or More</app> is a deceptively simple brain workout. The goal is "
-"to place at least five objects of the same <link xref=\"change-theme#images"
-"\">color or shape</link> into a straight line. The line can be horizontal, "
-"vertical or diagonal. Once five or more objects are grouped into a line, "
-"they disappear. The goal is to vanish as many objects as possible. The game "
-"is over when the entire board is full."
-msgstr ""
-
-#. (itstool) path: section/title
-#: C/index.page:33
-msgid "Game Play"
-msgstr "Tipo de jogo"
-
-#. (itstool) path: section/title
-#: C/index.page:37
-msgid "Useful Tips"
-msgstr "Dicas úteis"
-
-#. (itstool) path: section/title
-#: C/index.page:41
-msgid "Advanced"
-msgstr "Avançado"
-
-#. (itstool) path: section/title
-#: C/index.page:45
-msgid "Get Involved"
-msgstr "Envolva-se"
-
 #. (itstool) path: credit/years
-#: C/bug-filing.page:13 C/change-board-size.page:10 C/develop.page:12
-#: C/documentation.page:10 C/fast-moves.page:11 C/play.page:11 C/rules.page:11
+#: C/bug-filing.page:12 C/change-board-size.page:11 C/develop.page:12
+#: C/documentation.page:10 C/fast-moves.page:11 C/play.page:12 C/rules.page:12
 #: C/scores.page:11 C/shortcuts.page:11 C/translate.page:12
 msgid "2011"
 msgstr "2011"
 
+#. (itstool) path: license/p
+#: C/bug-filing.page:15 C/develop.page:15 C/documentation.page:13
+#: C/index.page:21 C/translate.page:19
+msgid "Creative Commons Share Alike 3.0"
+msgstr "Creative Commons Atribuição Compartilhada Igual 3.0"
+
 #. (itstool) path: page/title
-#: C/bug-filing.page:20
+#: C/bug-filing.page:19
 msgid "Report a Problem"
-msgstr "Informe um problema"
+msgstr "Relatando um problema"
 
 #. (itstool) path: page/p
-#: C/bug-filing.page:21
+#: C/bug-filing.page:20
 msgid ""
 "<app>Five or More</app> is maintained by a volunteer community. You are "
 "welcome to participate. If you notice a problem you can file a <em>bug "
-"report</em>. To file a bug, go to <link href=\"https://bugzilla.gnome.org/\"/"
-">."
+"report</em>. To file a bug, go to <link href=\"https://gitlab.gnome.org/GNOME/"
+"five-or-more/issues/new\"/>."
 msgstr ""
+"<app>Cinco ou Mais</app> é mantido pelos voluntários da comunidade. Você é "
+"bem-vindo para participar. Se você tiver algum problema, você pode "
+"<em>relatar um erro</em>. Para relatar um erro, vá em <link href=\"https://"
+"gitlab.gnome.org/GNOME/five-or-more/issues/new\"/>."
 
 #. (itstool) path: page/p
-#: C/bug-filing.page:24
+#: C/bug-filing.page:23
 msgid ""
 "This is a bug tracking system where users and developers can file details "
 "about bugs, crashes and request enhancements."
 msgstr ""
+"Este é um sistema de rastreamento de erros onde usuários e desenvolvedores "
+"podem relatar detalhes sobre erros, falhas e solicitações de melhorias."
 
 #. (itstool) path: page/p
-#: C/bug-filing.page:27
+#: C/bug-filing.page:26
 msgid ""
-"To participate you need an account which will give you the ability to gain "
-"access, file bugs, and make comments. Also, you need to register so you can "
-"receive updates by e-mail about the status of your bug. If you don't already "
-"have an account, just click on the <gui>New Account</gui> link to create one."
+"To participate you have to log in, which will give you the ability to gain "
+"access, file bugs, and make comments. Also, you need to log in using one of "
+"your existing accounts or register a new account so you can receive updates "
+"by e-mail about the status of your bug. If you don't already have an account "
+"and don't want to use any of the available log in options, just click on the "
+"<gui>Register</gui> link to create one."
 msgstr ""
+"Para participar, você precisa de uma conta que lhe concederá a habilidade de "
+"relatar erros e fazer comentários. Também, você precisa se registrar para "
+"receber atualizações por e-mail sobre o status de seu relatório de erro. Se "
+"você não tiver uma conta, basta clicar no link <gui>Sign in / Register</gui> "
+"para criar uma."
 
 #. (itstool) path: page/p
-#: C/bug-filing.page:31
+#: C/bug-filing.page:30
 msgid ""
-"Once you have an account, log in, click on <guiseq><gui>File a Bug</"
-"gui><gui>Applications</gui><gui>five-or-more</gui></guiseq>. Before "
-"reporting a bug, please read the <link href=\"https://bugzilla.gnome.org/"
-"page.cgi?id=bug-writing.html\">bug writing guidelines</link>, and please "
-"<link href=\"https://bugzilla.gnome.org/browse.cgi?product=five-or-more"
-"\">browse</link> for the bug to see if it already exists."
+"Once you have an account, log in, click on <guiseq><gui>Projects</"
+"gui><gui>five-or-more</gui><gui>Issues</gui><gui>New issue</gui></guiseq>. "
+"Before reporting a bug, please read the <link href=\"https://bugzilla.gnome."
+"org/page.cgi?id=bug-writing.html\">bug writing guidelines</link>, and please "
+"<link href=\"https://gitlab.gnome.org/GNOME/five-or-more/issues\">browse</"
+"link> for the bug to see if it already exists."
 msgstr ""
+"Assim que você tiver uma conta, autentique-se, clique em "
+"<guiseq><gui>Projetos</gui><gui>five-or-more</gui><gui>Issues</gui><gui>New "
+"issue</gui></guiseq>. Antes de relatar um erro, por favor leia as <link href="
+"\"https://bugzilla.gnome.org/page.cgi?id=bug-writing.html\">diretrizes de "
+"relatório de erro</link>, e por favor <link href=\"https://gitlab.gnome.org/"
+"GNOME/five-or-more/issues\">pesquise</link> por erros relatados para ver se "
+"já foi relatado."
 
 #. (itstool) path: page/p
-#: C/bug-filing.page:39
+#: C/bug-filing.page:37
 msgid ""
-"If you are requesting a new feature, choose <gui>enhancement</gui> in the "
-"<gui>Severity</gui> menu. Fill in the Summary and Description sections and "
-"click <gui>Commit</gui>."
-msgstr ""
+"Fill in the Title and Description sections and click <gui>Submit issue</gui>."
+msgstr "Preencha as seções Título e Descrição e clique <gui>Enviar issue</gui>."
 
 #. (itstool) path: page/p
-#: C/bug-filing.page:43
+#: C/bug-filing.page:40
 msgid ""
 "Your report will be given an ID number, and its status will be updated as it "
 "is being dealt with."
 msgstr ""
-
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/change-board-size.page:78
-msgctxt "_"
-msgid "external ref='figures/small.png' md5='cc59a29333b3b145c9e7928872c714bc'"
-msgstr ""
-"external ref='figures/small.png' md5='cc59a29333b3b145c9e7928872c714bc'"
-
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/change-board-size.page:83
-msgctxt "_"
-msgid ""
-"external ref='figures/medium.png' md5='ae122a301d215d40fff80717211b0915'"
-msgstr ""
-"external ref='figures/medium.png' md5='ae122a301d215d40fff80717211b0915'"
-
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/change-board-size.page:88
-msgctxt "_"
-msgid "external ref='figures/large.png' md5='14942e047fbbc3538ababbfa888fa4e6'"
-msgstr ""
-"external ref='figures/large.png' md5='14942e047fbbc3538ababbfa888fa4e6'"
+"Seu relatório receberá um número de ID e seu status será atualizado na medida "
+"em que é tratado."
 
 #. (itstool) path: credit/name
-#: C/change-board-size.page:17 C/fast-moves.page:18 C/play.page:14
+#: C/change-board-size.page:9 C/change-theme.page:9 C/fast-moves.page:9
+#: C/index.page:13 C/play.page:10 C/scores.page:9
+msgid "Lahiru lanka"
+msgstr "Lahiru lanka"
+
+#. (itstool) path: credit/name
+#: C/change-board-size.page:18 C/fast-moves.page:18 C/play.page:15
 #: C/translate.page:15
 msgid "Michael Hill"
 msgstr "Michael Hill"
 
 #. (itstool) path: page/title
-#: C/change-board-size.page:22
+#: C/change-board-size.page:23
 msgid "Change board size"
 msgstr "Alterando o tamanho do tabuleiro"
 
 #. (itstool) path: page/p
-#: C/change-board-size.page:23
+#: C/change-board-size.page:24
 msgid "To change the board size:"
-msgstr ""
-
-#. (itstool) path: item/p
-#: C/change-board-size.page:25
-msgid "Click <guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq>"
-msgstr ""
+msgstr "Para alterar o tamanho do tabuleiro:"
 
 #. (itstool) path: item/p
 #: C/change-board-size.page:26
+msgid "Click <guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq>"
+msgstr ""
+"Clique em <guiseq><gui>Configurações</gui><gui>Preferências</gui></guiseq>"
+
+#. (itstool) path: item/p
+#: C/change-board-size.page:27
 msgid ""
 "Under <gui>Board Size</gui>, select <gui>Small</gui>, <gui>Medium</gui>, or "
 "<gui>Large</gui>."
 msgstr ""
+"Sob <gui>Tamanho do tabuleiro</gui>, selecione <gui>Pequeno</gui>, "
+"<gui>Médio</gui> ou <gui>Grande</gui>."
 
 #. (itstool) path: note/p
-#: C/change-board-size.page:31
+#: C/change-board-size.page:32
 msgid ""
 "While a larger board gives you more space, there are also more objects in "
 "play for each turn."
 msgstr ""
+"Quanto tabuleiros maiores lhe dão mais espaço, há também mais objetos para "
+"jogar em cada turno."
 
 #. (itstool) path: section/title
-#: C/change-board-size.page:36
+#: C/change-board-size.page:37
 msgid "Board parameters"
-msgstr ""
+msgstr "Parâmetros do tabuleiro"
 
 #. (itstool) path: section/p
-#: C/change-board-size.page:37
+#: C/change-board-size.page:38
 msgid "The 3 different board sizes have the following parameters:"
-msgstr ""
-
-#. (itstool) path: td/p
-#: C/change-board-size.page:41
-msgid "<em>Size</em>"
-msgstr ""
+msgstr "Os três tamanhos diferentes do tabuleiro têm os seguintes parâmetros:"
 
 #. (itstool) path: td/p
 #: C/change-board-size.page:42
-msgid "<em>Width</em>"
-msgstr ""
+msgid "<em>Size</em>"
+msgstr "<em>Tamanho</em>"
 
 #. (itstool) path: td/p
 #: C/change-board-size.page:43
-msgid "<em>Height</em>"
-msgstr ""
+msgid "<em>Width</em>"
+msgstr "<em>Largura</em>"
 
 #. (itstool) path: td/p
 #: C/change-board-size.page:44
-#, fuzzy
-msgid "<em>Number of types</em>"
-msgstr "_Número de jogadores:"
+msgid "<em>Height</em>"
+msgstr "<em>Altura</em>"
 
 #. (itstool) path: td/p
 #: C/change-board-size.page:45
-msgid "<em>New objects per turn</em>"
-msgstr ""
+msgid "<em>Number of types</em>"
+msgstr "<em>Número de tipos</em>"
 
 #. (itstool) path: td/p
 #: C/change-board-size.page:46
-msgid "<em>Number of cells</em>"
-msgstr ""
+msgid "<em>New objects per turn</em>"
+msgstr "<em>Novos objetos por turno</em>"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:50
+#: C/change-board-size.page:47
+msgid "<em>Number of cells</em>"
+msgstr "<em>Número de células</em>"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:51
 msgid "Small"
 msgstr "Pequeno"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:51 C/change-board-size.page:52
-#: C/change-board-size.page:60 C/change-board-size.page:65 C/scores.page:41
+#: C/change-board-size.page:52 C/change-board-size.page:53
+#: C/change-board-size.page:61 C/change-board-size.page:66 C/scores.page:41
 msgid "7"
 msgstr "7"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:53 C/scores.page:33
+#: C/change-board-size.page:54 C/scores.page:33
 msgid "5"
 msgstr "5"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:54 C/change-board-size.page:60
+#: C/change-board-size.page:55 C/change-board-size.page:61
 msgid "3"
 msgstr "3"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:55
+#: C/change-board-size.page:56
 msgid "49"
 msgstr "49"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:59
+#: C/change-board-size.page:60
 msgid "Medium"
 msgstr "Médio"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:59 C/scores.page:49
+#: C/change-board-size.page:60 C/scores.page:49
 msgid "9"
 msgstr "9"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:60
+#: C/change-board-size.page:61
 msgid "81"
 msgstr "81"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:64
+#: C/change-board-size.page:65
 msgid "Large"
 msgstr "Grande"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:64
+#: C/change-board-size.page:65
 msgid "20"
 msgstr "20"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:64
+#: C/change-board-size.page:65
 msgid "15"
 msgstr "15"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:65
+#: C/change-board-size.page:66
 msgid "300"
 msgstr "300"
 
 #. (itstool) path: section/title
-#: C/change-board-size.page:73
+#: C/change-board-size.page:74
 msgid "The 3 board sizes"
 msgstr "Os três tamanhos de tabuleiro"
 
 #. (itstool) path: media/p
-#: C/change-board-size.page:79
+#: C/change-board-size.page:80
 msgid "<app>Five or More</app> Small board"
 msgstr "Tabuleiro pequeno do <app>Cinco ou Mais</app>"
 
 #. (itstool) path: media/p
-#: C/change-board-size.page:84
+#: C/change-board-size.page:85
 msgid "<app>Five or More</app> medium size board"
 msgstr "Tabuleiro médio do <app>Cinco ou Mais</app>"
 
 #. (itstool) path: media/p
-#: C/change-board-size.page:89
+#: C/change-board-size.page:90
 msgid "<app>Five or More</app> large size board"
 msgstr "Tabuleiro grande do <app>Cinco ou Mais</app>"
 
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/change-theme.page:37
-msgctxt "_"
-msgid ""
-"external ref='figures/color-balls.png' md5='ac9b26a5c770a7e118c84d82b43fbcaa'"
-msgstr ""
-"external ref='figures/color-balls.png' md5='ac9b26a5c770a7e118c84d82b43fbcaa'"
-
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/change-theme.page:41
-msgctxt "_"
-msgid ""
-"external ref='figures/color-shapes.png' "
-"md5='12b538f0d29c55aa93c8fd6adec58ffc'"
-msgstr ""
-"external ref='figures/color-shapes.png' "
-"md5='12b538f0d29c55aa93c8fd6adec58ffc'"
-
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/change-theme.page:49
-msgctxt "_"
-msgid ""
-"external ref='figures/pickcolor.png' md5='51d82564630d095c45865aff5518e6fc'"
-msgstr ""
-"external ref='figures/pickcolor.png' md5='51d82564630d095c45865aff5518e6fc'"
-
 #. (itstool) path: credit/years
-#: C/change-theme.page:10 C/strategy.page:11
+#: C/change-theme.page:11 C/strategy.page:11
 msgid "2012"
 msgstr "2012"
 
 #. (itstool) path: page/title
-#: C/change-theme.page:19
+#: C/change-theme.page:20
 msgid "Change the look and feel"
-msgstr "Mudando a aparência"
+msgstr "Alterando a aparência"
 
 #. (itstool) path: page/p
-#: C/change-theme.page:20
+#: C/change-theme.page:21
 msgid "To change the appearance of the pieces and the board:"
-msgstr ""
+msgstr "Para alterar a aparência das peças e do tabuleiro:"
 
 #. (itstool) path: item/p
-#: C/change-theme.page:23 C/fast-moves.page:28
+#: C/change-theme.page:24 C/fast-moves.page:28
 msgid "Click <guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq>."
 msgstr ""
+"Clique em <guiseq><gui>Configurações</gui><gui>Preferências</gui></guiseq>."
 
 #. (itstool) path: item/p
-#: C/change-theme.page:26
+#: C/change-theme.page:27
 msgid ""
-"Select <gui>balls</gui> or <gui>shapes</gui> from the <gui>Image</gui> drop "
-"down menu to change the playing pieces."
+"Select <gui>balls</gui>, <gui>dots</gui>, <gui>gumball</gui> or <gui>shapes</"
+"gui> from the <gui>Image</gui> drop down menu to change the playing pieces."
 msgstr ""
+"Selecione <gui>bolas</gui>, <gui>pontos</gui>, <gui>bola de chiclete</gui> ou "
+"<gui>formas</gui> a partir do menu suspenso <gui>Imagem</gui> para alterar as "
+"peças em jogo."
 
 #. (itstool) path: item/p
-#: C/change-theme.page:28
+#: C/change-theme.page:29
 msgid ""
-"Click on the colored box next to <gui>Image background</gui> to access the "
+"Click on the colored box next to <gui>Background color</gui> to access the "
 "color palette."
 msgstr ""
+"Clique na caixa colorida próximo a <gui>Cor de fundo</gui> para acessar a "
+"paleta de cores."
 
 #. (itstool) path: item/p
-#: C/change-theme.page:32 C/fast-moves.page:30
+#: C/change-theme.page:33 C/fast-moves.page:30
 msgid "Click <gui>Close</gui>."
-msgstr ""
+msgstr "Clique em <gui>Fechar</gui>."
 
 #. (itstool) path: section/title
-#: C/change-theme.page:36
+#: C/change-theme.page:37
 msgid "Images available"
 msgstr "Imagens disponíveis"
 
 #. (itstool) path: media/p
-#: C/change-theme.page:38
-#, fuzzy
+#: C/change-theme.page:39
 msgid "Five or More with different balls"
 msgstr "Cinco ou Mais com bolas diferentes"
 
 #. (itstool) path: media/p
-#: C/change-theme.page:42
+#: C/change-theme.page:43
+msgid "<app>Five or More</app> with different dots"
+msgstr "<app>Cinco ou Mais</app> com pontos diferentes"
+
+#. (itstool) path: media/p
+#: C/change-theme.page:47
+msgid "<app>Five or More</app> with different gumballs"
+msgstr "<app>Cinco ou Mais</app> com bolas de chiclete diferentes"
+
+#. (itstool) path: media/p
+#: C/change-theme.page:51
 msgid "<app>Five or More</app> with different shapes"
-msgstr ""
+msgstr "<app>Cinco ou Mais</app> com formas diferentes"
 
 #. (itstool) path: section/title
-#: C/change-theme.page:47
+#: C/change-theme.page:56
 msgid "Background colors available"
 msgstr "Cores de fundo disponíveis"
 
 #. (itstool) path: media/p
-#: C/change-theme.page:50
-#, fuzzy
+#: C/change-theme.page:58
 msgid "Five or More color palette"
-msgstr "Preferências do Cinco ou Mais"
+msgstr "Paletas de cores do Cinco ou Mais"
 
 #. (itstool) path: page/title
 #: C/develop.page:19
 msgid "Help develop"
-msgstr "Ajude no desenvolvimento"
+msgstr "Ajudando no desenvolvimento"
 
 #. (itstool) path: page/p
 #: C/develop.page:20
@@ -494,18 +387,24 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/develop.page:23
 msgid ""
-"If you would like to <link href=\"https://live.gnome.org/GnomeGames/"
+"If you would like to <link href=\"https://wiki.gnome.org/Apps/Games/"
 "Contributing\">help develop <app>GNOME Games</app></link>, you can get in "
 "touch with the developers using <link href=\"https://cbe005.chat.mibbit.com/?"
 "url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, or via our <link "
 "href=\"http://mail.gnome.org/mailman/listinfo/games-list\">mailing list</"
 "link>."
 msgstr ""
+"Se você quiser <link href=\"https://wiki.gnome.org/Apps/Games/Contributing"
+"\">ajudar a desenvolver <app>GNOME Games</app></link>, você pode entrar em "
+"contato com os desenvolvedores usando o <link href=\"https://cbe005.chat."
+"mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link> ou por "
+"meio de nossa <link href=\"http://mail.gnome.org/mailman/listinfo/games-list"
+"\">lista de discussão</link>."
 
 #. (itstool) path: page/title
 #: C/documentation.page:17
 msgid "Help write documentation"
-msgstr "Ajude a escrever documentação"
+msgstr "Ajudando na escrita da documentação"
 
 #. (itstool) path: page/p
 #: C/documentation.page:19
@@ -519,18 +418,25 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/documentation.page:22
 msgid ""
-"To contribute to the Documentation Project, feel free to get in touch with "
-"us using <link href=\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc."
-"gnome.org%2Fdocs\">irc</link>, or via our <link href=\"http://mail.gnome.org/"
+"To contribute to the Documentation Project, feel free to get in touch with us "
+"using <link href=\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome."
+"org%2Fdocs\">irc</link>, or via our <link href=\"http://mail.gnome.org/"
 "mailman/listinfo/gnome-doc-list\">mailing list</link>."
 msgstr ""
+"Para contribuir para o Projeto de Documentação, sinta-se à vontade para "
+"entrar em contato com a gente usando o <link href=\"https://cbe003.chat."
+"mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fdocs\">irc</link> ou por nossa "
+"<link href=\"http://mail.gnome.org/mailman/listinfo/gnome-doc-list\">lista de "
+"discussão</link>."
 
 #. (itstool) path: page/p
 #: C/documentation.page:26
 msgid ""
-"Our <link href=\"https://live.gnome.org/DocumentationProject/Contributing"
+"Our <link href=\"https://wiki.gnome.org/DocumentationProject/Contributing"
 "\">wiki</link> page contains useful information."
 msgstr ""
+"Nossa página <link href=\"https://wiki.gnome.org/DocumentationProject/"
+"Contributing\">wiki</link> contém informações úteis."
 
 #. (itstool) path: page/title
 #: C/fast-moves.page:25
@@ -540,12 +446,12 @@ msgstr "Velocidade do jogo"
 #. (itstool) path: page/p
 #: C/fast-moves.page:26
 msgid "To speed up object movements:"
-msgstr ""
+msgstr "Para acelerar o movimento dos objetos:"
 
 #. (itstool) path: item/p
 #: C/fast-moves.page:29
 msgid "Under <gui>General</gui>, select <gui>Use fast moves</gui>."
-msgstr ""
+msgstr "Sob <gui>Geral</gui>, selecione <gui>Usar movimentos rápidos</gui>."
 
 #. (itstool) path: note/p
 #: C/fast-moves.page:33
@@ -553,16 +459,81 @@ msgid ""
 "Any changes you make are instantly applied and remembered for the next time "
 "you run <app>Five or More</app>."
 msgstr ""
+"Quaisquer alterações que você fizer serão aplicadas instantaneamente para a "
+"próxima vez que você executar <app>Cinco ou Mais</app>."
+
+#. (itstool) path: info/title
+#: C/index.page:8
+msgctxt "link"
+msgid "Five or More"
+msgstr "Cinco ou Mais"
+
+#. (itstool) path: info/title
+#: C/index.page:9
+msgctxt "text"
+msgid "Five or More"
+msgstr "Cinco ou Mais"
+
+#. (itstool) path: media/span
+#: C/index.page:27
+#| msgctxt "link"
+#| msgid "Five or More"
+msgid "Five or More logo"
+msgstr "Logo do Cinco ou Mais"
+
+#. (itstool) path: page/title
+#: C/index.page:26
+#| msgctxt "link"
+#| msgid "Five or More"
+msgid "<_:media-1/> Five or More"
+msgstr "<_:media-1/> Cinco ou Mais"
+
+#. (itstool) path: page/p
+#: C/index.page:29
+msgid ""
+"<app>Five or More</app> is a deceptively simple brain workout. The goal is to "
+"place at least five objects of the same <link xref=\"change-theme#images"
+"\">color or shape</link> into a straight line. The line can be horizontal, "
+"vertical or diagonal. Once five or more objects are grouped into a line, they "
+"disappear. The goal is to vanish as many objects as possible. The game is "
+"over when the entire board is full."
+msgstr ""
+"<app>Cinco ou Mais</app> é um exercício cerebral enganadoramente simples. O "
+"objetivo é colocar pelo menos cinco objetos da mesma <link xref=\"change-"
+"theme#images\">cor ou forma</link> em uma linha reta. A linha pode ser "
+"horizontal, vertical ou diagonal. Quando cinco ou mais objetos são agrupados "
+"em uma linha, eles desaparecem. O objetivo é eliminar o maior número de "
+"objetos possível. O jogo acaba quando todo o tabuleiro está cheio."
+
+#. (itstool) path: section/title
+#: C/index.page:34
+msgid "Game Play"
+msgstr "Tipo de jogo"
+
+#. (itstool) path: section/title
+#: C/index.page:38
+msgid "Useful Tips"
+msgstr "Dicas úteis"
+
+#. (itstool) path: section/title
+#: C/index.page:42
+msgid "Advanced"
+msgstr "Avançado"
+
+#. (itstool) path: section/title
+#: C/index.page:46
+msgid "Get Involved"
+msgstr "Envolva-se"
 
 #. (itstool) path: p/link
 #: C/legal.xml:3
 msgid "Creative Commons Attribution-ShareAlike 3.0 Unported License"
-msgstr ""
+msgstr "Creative Commons Atribuição Compartilhada Igual 3.0 Não Adaptada"
 
 #. (itstool) path: license/p
 #: C/legal.xml:3
 msgid "This work is licensed under a <_:link-1/>."
-msgstr ""
+msgstr "Esta obra é licenciada sob uma licença <_:link-1/>."
 
 #. (itstool) path: info/desc
 #: C/license.page:9
@@ -581,6 +552,8 @@ msgid ""
 "This work is distributed under a CreativeCommons Attribution-Share Alike 3.0 "
 "Unported license."
 msgstr ""
+"Esta obra é licenciada sob uma licença Creative Commons Atribuição "
+"Compartilhada Igual 3.0 Não Adaptada."
 
 #. (itstool) path: page/p
 #: C/license.page:21
@@ -590,45 +563,47 @@ msgstr "Você é livre:"
 #. (itstool) path: item/title
 #: C/license.page:26
 msgid "<em>To share</em>"
-msgstr ""
+msgstr "<em>Para compartilhar</em>"
 
 #. (itstool) path: item/p
 #: C/license.page:27
 msgid "To copy, distribute and transmit the work."
-msgstr ""
+msgstr "Para copiar, distribuir e transmitir a obra."
 
 #. (itstool) path: item/title
 #: C/license.page:30
 msgid "<em>To remix</em>"
-msgstr ""
+msgstr "<em>Para remixar</em>"
 
 #. (itstool) path: item/p
 #: C/license.page:31
 msgid "To adapt the work."
-msgstr ""
+msgstr "Para adaptar a obra."
 
 #. (itstool) path: page/p
 #: C/license.page:34
 msgid "Under the following conditions:"
-msgstr ""
+msgstr "Sob as seguintes condições:"
 
 #. (itstool) path: item/title
 #: C/license.page:39
 msgid "<em>Attribution</em>"
-msgstr ""
+msgstr "<em>Atribuição</em>"
 
 #. (itstool) path: item/p
 #: C/license.page:40
 msgid ""
-"You must attribute the work in the manner specified by the author or "
-"licensor (but not in any way that suggests that they endorse you or your use "
-"of the work)."
+"You must attribute the work in the manner specified by the author or licensor "
+"(but not in any way that suggests that they endorse you or your use of the "
+"work)."
 msgstr ""
+"Você deve atribuir esta obra da forma especificada pelo autor ou licenciante "
+"(mas não de forma a sugerir que eles endossam você ou o sua forma de uso)."
 
 #. (itstool) path: item/title
 #: C/license.page:47
 msgid "<em>Share Alike</em>"
-msgstr ""
+msgstr "<em>Compartilhamento pela mesma licença</em>"
 
 #. (itstool) path: item/p
 #: C/license.page:48
@@ -636,210 +611,182 @@ msgid ""
 "If you alter, transform, or build upon this work, you may distribute the "
 "resulting work only under the same, similar or a compatible license."
 msgstr ""
+"Se você alterar, transformar ou basear-se neste trabalho, poderá distribuir "
+"o trabalho resultante apenas sob a mesma licença, semelhante ou compatível."
 
 #. (itstool) path: page/p
 #: C/license.page:54
 msgid ""
-"For the full text of the license, see the <link href=\"http://"
-"creativecommons.org/licenses/by-sa/3.0/legalcode\">CreativeCommons website</"
-"link>, or read the full <link href=\"http://creativecommons.org/licenses/by-"
-"sa/3.0/\">Commons Deed</link>."
+"For the full text of the license, see the <link href=\"http://creativecommons."
+"org/licenses/by-sa/3.0/legalcode\">CreativeCommons website</link>, or read "
+"the full <link href=\"http://creativecommons.org/licenses/by-sa/3.0/"
+"\">Commons Deed</link>."
 msgstr ""
-
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/play.page:63
-msgctxt "_"
-msgid ""
-"external ref='figures/glines-demo.ogv' md5='f9222aaac4ad0df37975c8ac77fbe1cc'"
-msgstr ""
+"Para o texto integral da licença, veja o <link href=\""
+"https://creativecommons.org/licenses/by-sa/3.0/legalcode.pt\">site da "
+"CreativeCommons</link> ou leia o texto completo em <link href=\""
+"https://creativecommons.org/licenses/by-sa/3.0/deed.pt_BR\">Licença para "
+"leigos</link>."
 
 #. (itstool) path: page/title
-#: C/play.page:21
+#: C/play.page:22
 msgid "How to Play"
 msgstr "Como jogar"
 
 #. (itstool) path: page/p
-#: C/play.page:23
+#: C/play.page:24
 msgid ""
 "To start a new game click <guiseq><gui>Game</gui><gui>New</gui></guiseq>."
 msgstr ""
+"Para iniciar um novo jogo, clique em "
+"<guiseq><gui>Jogo</gui><gui>Novo</gui></guiseq>."
 
 #. (itstool) path: section/title
-#: C/play.page:27
+#: C/play.page:28
 msgid "Using the mouse"
 msgstr "Usando o mouse"
 
 #. (itstool) path: item/p
-#: C/play.page:31
+#: C/play.page:32
 msgid ""
-"Click on the object you want to move. The selected object will begin "
-"spinning."
+"Click on the object you want to move. The selected object will begin spinning."
 msgstr ""
+"Clique no objeto que você deseja mover. O objeto selecionado vai começar a "
+"girar."
 
 #. (itstool) path: item/p
-#: C/play.page:35
+#: C/play.page:36
 msgid "Click on the destination cell."
-msgstr ""
+msgstr "Clique na célula de destino."
 
 #. (itstool) path: section/title
-#: C/play.page:43
+#: C/play.page:44
 msgid "Using the keyboard"
 msgstr "Usando o teclado"
 
 #. (itstool) path: item/p
-#: C/play.page:46
+#: C/play.page:47
 msgid ""
 "Press any of the arrow keys. An outline around a cell will appear on the "
 "board."
 msgstr ""
+"Pressione qualquer uma das teclas de setas. Um contorno em volta de uma "
+"célula aparecerá no tabuleiro."
 
 #. (itstool) path: item/p
-#: C/play.page:48
+#: C/play.page:49
 msgid "Using the arrow keys, navigate to the object you want to move."
-msgstr ""
+msgstr "Usando as teclas de setas, navegue para o objeto que você deseja mover."
 
 #. (itstool) path: item/p
-#: C/play.page:50
+#: C/play.page:51
 msgid ""
 "To select the object, press the <key>Enter</key> or <key>Spacebar</key>. The "
 "selected object will begin spinning."
 msgstr ""
+"Para selecione o objeto, pressione o <key>Enter</key> ou <key>Espaço</key>. "
+"O objeto selecionado vai começar a girar."
 
 #. (itstool) path: item/p
-#: C/play.page:52
+#: C/play.page:53
 msgid ""
 "Move to the destination cell, and again press the <key>Enter</key> or "
 "<key>Spacebar</key>. The chosen object will move to the destination cell."
 msgstr ""
+"Mova a célula de destino e pressione novamente o <key>Enter</key> ou "
+"<key>Espaço</key>. O objeto escolhido vai mover para a célula de destino."
 
 #. (itstool) path: section/title
-#: C/play.page:61
+#: C/play.page:62
 msgid "Video demonstration"
-msgstr ""
-
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/rules.page:44
-msgctxt "_"
-msgid ""
-"external ref='figures/horizontal.png' md5='069cf4ce8408b1cc5e6337f2527c4d2e'"
-msgstr ""
-"external ref='figures/horizontal.png' md5='069cf4ce8408b1cc5e6337f2527c4d2e'"
-
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/rules.page:49
-msgctxt "_"
-msgid ""
-"external ref='figures/vertical.png' md5='9f17201dac1c4c78a572ac17dce45ce0'"
-msgstr ""
-"external ref='figures/vertical.png' md5='9f17201dac1c4c78a572ac17dce45ce0'"
-
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/rules.page:54
-msgctxt "_"
-msgid ""
-"external ref='figures/diagonal.png' md5='8654cd0cc269ac9ed0f8fb8bce02a8fc'"
-msgstr ""
-"external ref='figures/diagonal.png' md5='8654cd0cc269ac9ed0f8fb8bce02a8fc'"
-
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/rules.page:59
-msgctxt "_"
-msgid ""
-"external ref='figures/glines-gameover.png' "
-"md5='ab35873b1818aa94499cc7fcca646db6'"
-msgstr ""
-"external ref='figures/glines-gameover.png' "
-"md5='ab35873b1818aa94499cc7fcca646db6'"
+msgstr "Demonstração em vídeo"
 
 #. (itstool) path: page/title
-#: C/rules.page:17
+#: C/rules.page:18
 msgid "Rules"
-msgstr ""
+msgstr "Regras"
 
 #. (itstool) path: item/p
-#: C/rules.page:19
+#: C/rules.page:20
 msgid ""
 "At the start of the game there are either 3 or 7 objects placed on your "
 "board, depending on the <link xref=\"change-board-size\">board size</link>."
 msgstr ""
+"No início do jogo, existem 3 ou 7 objetos colocados no seu tabuleiro, "
+"dependendo do <link xref=\"change-board-size\">tamanho do tabuleiro</link>."
 
 #. (itstool) path: item/p
-#: C/rules.page:22
+#: C/rules.page:23
 msgid ""
 "Each time you <link xref=\"play\">move an object</link>, additional objects "
 "are placed randomly on the board. The number of new objects placed each turn "
-"also depends on the board. A preview of the objects to be placed on the "
-"board appears in the upper left corner of the game window."
+"also depends on the board. A preview of the objects to be placed on the board "
+"appears in the upper left corner of the game window."
 msgstr ""
+"Cada vez que você <link xref=\"play\">move um objeto</link>, objetos "
+"adicionais são colocados aleatoriamente no tabuleiro. O número de novos "
+"objetos colocados em cada turno também depende da mesa. Uma prévia dos "
+"objetos a serem colocados no tabuleiro aparece no canto superior esquerdo da "
+"janela do jogo."
 
 #. (itstool) path: item/p
-#: C/rules.page:27
+#: C/rules.page:28
 msgid ""
 "There must be a clear path from the original position of the object to the "
 "destination cell (i.e you can not jump over objects)."
 msgstr ""
+"Deve haver um caminho claro da posição original do objeto até a célula de "
+"destino (ou seja, você não pode pular objetos)."
 
 #. (itstool) path: item/p
-#: C/rules.page:30
+#: C/rules.page:31
 msgid ""
 "A straight horizontal, vertical or diagonal line of five or more similar "
 "objects will disappear from the game board. When this happens you will have "
 "an extra move without additional objects being added to the board."
 msgstr ""
+"Uma linha reta horizontal, vertical ou diagonal de cinco ou mais objetos "
+"semelhantes desaparecerá do tabuleiro de jogo. Quando isso acontecer, você "
+"terá um movimento extra sem que objetos adicionais sejam adicionados ao "
+"tabuleiro."
 
 #. (itstool) path: item/p
-#: C/rules.page:34
+#: C/rules.page:35
 msgid ""
 "The more objects you clear, the longer the game will go on. The longer you "
 "play, the higher your <link xref=\"scores\">score</link>."
 msgstr ""
+"Quanto mais objetos você limpar, mais tempo o jogo continuará. Quanto mais "
+"tempo você joga, maior será sua <link xref=\"scores\">pontuação</link>."
 
 #. (itstool) path: item/p
-#: C/rules.page:37
+#: C/rules.page:38
 msgid ""
-"The game is over when the board is full, since no object can be moved at "
-"that point."
+"The game is over when the board is full, since no object can be moved at that "
+"point."
 msgstr ""
+"O jogo acaba quando o tabuleiro está cheio, já que nenhum objeto pode ser "
+"movido naquele ponto."
 
 #. (itstool) path: media/p
-#: C/rules.page:45
+#: C/rules.page:46
 msgid "Example horizontal alignment"
-msgstr ""
+msgstr "Exemplo de alinhamento horizontal"
 
 #. (itstool) path: media/p
-#: C/rules.page:50
+#: C/rules.page:51
 msgid "Example vertical alignment"
-msgstr ""
+msgstr "Exemplo de alinhamento vertical"
 
 #. (itstool) path: media/p
-#: C/rules.page:55
+#: C/rules.page:56
 msgid "Example diagonal alignment"
-msgstr ""
+msgstr "Exemplo de alinhamento diagonal"
 
 #. (itstool) path: media/p
-#: C/rules.page:60
+#: C/rules.page:61
 msgid "<app>Five or More</app> game over position."
-msgstr ""
+msgstr "Posição de fim de jogo do <app>Cinco ou Mais</app>."
 
 #. (itstool) path: page/title
 #: C/scores.page:20
@@ -849,14 +796,16 @@ msgstr "Pontuando"
 #. (itstool) path: page/p
 #: C/scores.page:21
 msgid ""
-"You score points by creating lines of 5 or more objects. The number of "
-"points depends on the number of objects that disappear."
+"You score points by creating lines of 5 or more objects. The number of points "
+"depends on the number of objects that disappear."
 msgstr ""
+"Você ganha pontos criando linhas de 5 ou mais objetos. O número de pontos "
+"depende do número de objetos que desaparecem."
 
 #. (itstool) path: td/p
 #: C/scores.page:27
 msgid "<em>Number of objects</em>"
-msgstr ""
+msgstr "<em>Número de objetos</em>"
 
 #. (itstool) path: td/p
 #: C/scores.page:28
@@ -944,14 +893,18 @@ msgid ""
 "You can view the high scores by clicking <guiseq><gui>Game</gui><gui>Scores</"
 "gui></guiseq>."
 msgstr ""
+"Você pode ver as pontuações mais altas clicando em "
+"<guiseq><gui>Jogo</gui><gui>Pontuações</gui></guiseq>."
 
 #. (itstool) path: note/p
 #: C/scores.page:78
 msgid ""
 "The <app>Five or More</app> scores are recorded according to the board size. "
-"You can select the <gui>Board Size</gui> of interest using the drop down "
-"menu."
+"You can select the <gui>Board Size</gui> of interest using the drop down menu."
 msgstr ""
+"As pontuações do <app>Cinco ou Mais</app> são registradas de acordo com o "
+"tamanho do tabuleiro. Você pode selecionar o <gui>Tamanho do tabuleir</gui> "
+"de interesse usando o menu suspenso."
 
 #. (itstool) path: page/title
 #: C/shortcuts.page:17
@@ -1000,11 +953,15 @@ msgid ""
 "strategic elements do exist. Here are some things to try and keep in mind as "
 "you play:"
 msgstr ""
+"Não há uma estratégia universal para <app>Cinco ou Mais</app>, mas existem "
+"alguns elementos estratégicos. Aqui estão algumas coisas para tentar ter em "
+"mente enquanto joga:"
 
 #. (itstool) path: item/p
 #: C/strategy.page:22
 msgid "Try to set at least three same objects with your every move."
 msgstr ""
+"Tente definir pelo menos três objetos iguais com todos os seus movimentos."
 
 #. (itstool) path: item/p
 #: C/strategy.page:23
@@ -1013,19 +970,25 @@ msgid ""
 "think ahead. Pay attention to the collection of <gui>Next</gui> objects, "
 "because knowing these will influence your moves."
 msgstr ""
+"O tabuleiro pode rapidamente ficar muito cheio de objetos, então é melhor "
+"planejar antencipadamente. Preste atenção na coleção de objetos <gui>próximos</gui>, "
+"porque saber disso influenciará seus movimentos."
 
 #. (itstool) path: item/p
 #: C/strategy.page:24
 msgid ""
 "Try to line up more than 5 objects. For example, if you have 6 objects, you "
-"can line up 2 and 3 with a space in between, and then connect them by "
-"placing the sixth object between them."
+"can line up 2 and 3 with a space in between, and then connect them by placing "
+"the sixth object between them."
 msgstr ""
+"Tente alinhar mais de 5 objetos. Por exemplo, se você tiver 6 objetos, "
+"poderá alinhar 2 e 3 com um espaço intermediário e, em seguida, conectá-los, "
+"colocando o sexto objeto entre eles."
 
 #. (itstool) path: page/title
 #: C/translate.page:23
 msgid "Help translate"
-msgstr "Ajude a traduzir"
+msgstr "Ajudando a traduzir"
 
 #. (itstool) path: page/p
 #: C/translate.page:25
@@ -1044,17 +1007,19 @@ msgid ""
 "There are <link href=\"http://l10n.gnome.org/module/five-or-more/\">many "
 "languages</link> for which translations are still needed."
 msgstr ""
+"Há <link href=\"http://l10n.gnome.org/module/five-or-more/\">muitos idiomas</"
+"link> para os quais traduções ainda são necessárias."
 
 #. (itstool) path: page/p
 #: C/translate.page:30
 msgid ""
-"To start translating you will need to <link href=\"http:l10n.gnome.org"
+"To start translating you will need to <link href=\"http://l10n.gnome.org"
 "\">create an account</link> and join the <link href=\"http://l10n.gnome.org/"
 "teams/\">translation team</link> for your language. This will give you the "
 "ability to upload new translations."
 msgstr ""
-"Para começar a traduzir você precisará <link href=\"http:l10n.gnome.org"
-"\">criar uma conta</link> e ingressar na <link href=\"http://l10n.gnome.org/"
+"Para começar a traduzir você precisará <link href=\"http://l10n.gnome.org\">"
+"criar uma conta</link> e ingressar na <link href=\"http://l10n.gnome.org/"
 "teams/\">equipe de tradução</link> para o seu idioma (Português do Brasil, "
 "Brazilian Portuguese). Isto lhe dará a capacidade de enviar novas traduções."
 
@@ -1066,6 +1031,10 @@ msgid ""
 "channel are located worldwide, so you may not get an immediate response as a "
 "result of timezone differences."
 msgstr ""
+"Você pode conversar com tradutores do GNOME usando <link href=\"https://"
+"cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fi18n\">irc</link>. "
+"Pessoas no canal estão espalhadas por todo o mundo, então você pode não obter "
+"uma resposta imediata como um resultado de diferenças de fuso horário."
 
 #. (itstool) path: page/p
 #: C/translate.page:38
