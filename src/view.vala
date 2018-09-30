@@ -28,7 +28,6 @@ public class View : Gtk.DrawingArea
     private Settings settings;
     private Game? game = null;
     private ThemeRenderer? theme = null;
-    private Gdk.RGBA background_color;
     private Gtk.StyleContext cs;
     private Gtk.CssProvider provider;
 
@@ -61,7 +60,6 @@ public class View : Gtk.DrawingArea
         cs.add_class ("game-view");
         cs.add_provider (provider, Gtk.STYLE_PROVIDER_PRIORITY_USER);
 
-        background_color = Gdk.RGBA ();
         set_background_color ();
         settings.changed[FiveOrMoreApp.KEY_BACKGROUND_COLOR].connect (() => {
             set_background_color ();
