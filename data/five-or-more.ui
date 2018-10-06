@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
-  <!-- interface-requires gtk+ 3.0 -->
+  <!-- interface-requires gtk+ 3.10 -->
+  <menu id="primary-menu">
+    <section>
+      <item>
+        <attribute name="label" translatable="yes">Scores</attribute>
+        <attribute name="action">app.scores</attribute>
+      </item>
+    </section>
+    <section>
+      <item>
+        <attribute name="label" translatable="yes">Preferences</attribute>
+        <attribute name="action">app.preferences</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">Help</attribute>
+        <attribute name="action">app.help</attribute>
+        <attribute name="accel">F1</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">About Five or More</attribute>
+        <attribute name="action">app.about</attribute>
+      </item>
+    </section>
+  </menu>
   <object class="GtkAccelGroup" id="accelgroup"/>
   <template class="GameWindow" parent="GtkApplicationWindow">
     <property name="can_focus">False</property>
@@ -38,6 +61,23 @@
               </packing>
             </child>
           </object>
+        </child>
+        <child>
+          <object class="GtkMenuButton" id="primary-menu-button">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="menu_model">primary-menu</property>
+            <child>
+              <object class="GtkImage" id="primary-menu-button-image">
+                <property name="visible">True</property>
+                <property name="icon_size">1</property>
+                <property name="icon_name">open-menu-symbolic</property>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="pack_type">end</property>
+          </packing>
         </child>
         <child>
           <object class="GtkLabel" id="scorelabel">

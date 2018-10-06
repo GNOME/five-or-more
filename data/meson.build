@@ -16,7 +16,7 @@ foreach file: ['balls.svg', 'shapes.svg', 'tango.svg']
 endforeach
 
 # UI files
-foreach file: ['five-or-more.ui', 'five-or-more-preferences.ui', 'five-or-more-menu.ui']
+foreach file: ['five-or-more.ui', 'five-or-more-preferences.ui']
   install_data (file,
     install_dir: join_paths (pkgdata_dir)
   )
