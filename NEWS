@@ -1,3 +1,12 @@
+3.31.1 - October 08, 2018
+======================
+
+* Complete rewrite as part of GSoC (Ruxandra Simion)
+* Added new ball theme (Robert Roth)
+* Remove appmenu #10 (Robert Roth)
+* Resource files with reverse domain naming (Robert Roth)
+* Updated translations
+
 3.30.0 - September 02, 2018
 ======================
 
