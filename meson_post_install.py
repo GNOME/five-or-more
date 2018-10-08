@@ -19,4 +19,4 @@ hooksdir = os.path.join(sourcedir, '.git', 'hooks')
 precommit = os.path.join(hooksdir, 'pre-commit')
 if os.path.lexists(precommit):
     os.remove(precommit)
-os.symlink('../../../libgnome-games-support/style-checker', precommit)
+# os.symlink('../../../libgnome-games-support/style-checker', precommit)
