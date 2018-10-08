@@ -1,7 +1,8 @@
+desktop = 'org.gnome.five-or-more.desktop'
 # Desktop file
 i18n.merge_file (
-  input: 'five-or-more.desktop.in',
-  output: 'five-or-more.desktop',
+  input: desktop + '.in',
+  output: desktop,
   type: 'desktop',
   po_dir: po_dir,
   install: true,
@@ -24,19 +25,20 @@ endforeach
 
 # Icons
 foreach size: [ '16x16', '22x22', '24x24', '32x32', '48x48', '256x256', '512x512' ]
-    install_data(join_paths('icons', 'hicolor', size, 'five-or-more.png'),
+    install_data(join_paths('icons', 'hicolor', size, 'org.gnome.five-or-more.png'),
                  install_dir: join_paths (data_dir, 'icons', 'hicolor', size, 'apps')
     )
 endforeach
 
-install_data (join_paths ('icons', 'hicolor', 'symbolic', 'five-or-more-symbolic.svg'),
+install_data (join_paths ('icons', 'hicolor', 'symbolic', 'org.gnome.five-or-more-symbolic.svg'),
              install_dir: join_paths (data_dir, 'icons', 'hicolor', 'symbolic', 'apps')
              )
 
+appdata = 'org.gnome.five-or-more.appdata.xml'
 # Appdata
 i18n.merge_file (
-  input: 'five-or-more.appdata.xml.in',
-  output: 'five-or-more.appdata.xml',
+  input: appdata + '.in',
+  output: appdata,
   type: 'xml',
   po_dir: po_dir,
   install: true,

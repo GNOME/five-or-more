@@ -66,7 +66,7 @@ public class FiveOrMoreApp: Gtk.Application
     public static int main (string[] args)
     {
         Environment.set_application_name (_("Five or More"));
-        Gtk.Window.set_default_icon_name ("five-or-more");
+        Gtk.Window.set_default_icon_name ("org.gnome.five-or-more");
 
         var app = new FiveOrMoreApp ();
         return app.run (args);
@@ -144,7 +144,7 @@ public class FiveOrMoreApp: Gtk.Application
 
         Gtk.show_about_dialog (window,
                                "program-name", _("Five or More"),
-                               "logo-icon-name", "five-or-more",
+                               "logo-icon-name", "org.gnome.five-or-more",
                                "version", VERSION,
                                "comments", _("GNOME port of the once-popular Color Lines game"),
                                "copyright", copyright,
