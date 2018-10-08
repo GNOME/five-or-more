@@ -1,9 +1,9 @@
 # List of source files containing translatable strings.
 # Please keep this file in alphabetical order.
-data/five-or-more.appdata.xml.in
-data/five-or-more.desktop.in
 data/five-or-more-preferences.ui
 data/five-or-more.ui
+data/org.gnome.five-or-more.appdata.xml.in
+data/org.gnome.five-or-more.desktop.in
 data/org.gnome.five-or-more.gschema.xml
 src/game.vala
 src/main.vala
