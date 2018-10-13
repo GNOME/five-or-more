@@ -22,8 +22,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: five-or-more master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/five-or-more/issues\n"
-"POT-Creation-Date: 2018-03-27 17:19+0000\n"
-"PO-Revision-Date: 2018-04-15 23:38+0200\n"
+"POT-Creation-Date: 2018-10-08 19:22+0000\n"
+"PO-Revision-Date: 2018-10-13 09:49+0200\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: čeština <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -34,16 +34,89 @@ msgstr ""
 "X-Generator: Gtranslator 2.91.7\n"
 "X-Project-Style: gnome\n"
 
-#: data/five-or-more.appdata.xml.in:7 data/five-or-more.desktop.in:3
-#: data/five-or-more.ui:18 src/five-or-more.c:70 src/five-or-more-app.c:573
+#: data/five-or-more-preferences.ui:13 data/five-or-more.ui:13
+msgid "Preferences"
+msgstr "Předvolby"
+
+#: data/five-or-more-preferences.ui:36
+msgid "Appearance"
+msgstr "Vzhled"
+
+#: data/five-or-more-preferences.ui:60
+msgid "_Theme:"
+msgstr "Mo_tiv:"
+
+#: data/five-or-more-preferences.ui:76
+msgid "balls"
+msgstr "kuličky"
+
+#: data/five-or-more-preferences.ui:77
+msgid "shapes"
+msgstr "tvary"
+
+#: data/five-or-more-preferences.ui:78
+msgid "tango"
+msgstr "tango"
+
+#: data/five-or-more-preferences.ui:87
+msgid "B_ackground color:"
+msgstr "Barva _pozadí:"
+
+#: data/five-or-more-preferences.ui:129
+msgid "Board Size"
+msgstr "Velikost hrací desky"
+
+#: data/five-or-more-preferences.ui:148
+msgid "_Small"
+msgstr "_Malá"
+
+#: data/five-or-more-preferences.ui:167
+msgid "_Medium"
+msgstr "_Střední"
+
+#: data/five-or-more-preferences.ui:186
+msgid "_Large"
+msgstr "Ve_lká"
+
+#: data/five-or-more.ui:7
+msgid "Scores"
+msgstr "Skóre"
+
+#: data/five-or-more.ui:17
+msgid "Help"
+msgstr "Nápověda"
+
+#: data/five-or-more.ui:22
+msgid "About Five or More"
+msgstr "O aplikaci Pět nebo víc"
+
+#: data/five-or-more.ui:42 data/org.gnome.five-or-more.appdata.xml.in:7
+#: data/org.gnome.five-or-more.desktop.in:3 src/main.vala:68 src/main.vala:146
 msgid "Five or More"
 msgstr "Pět nebo víc"
 
-#: data/five-or-more.appdata.xml.in:8 data/five-or-more.desktop.in:4
+#: data/five-or-more.ui:54
+msgid "Next:"
+msgstr "Následující:"
+
+#: data/five-or-more.ui:97
+msgid "Score:"
+msgstr "Skóre:"
+
+#: data/five-or-more.ui:122
+msgid "_New Game"
+msgstr "_Nová hra"
+
+#: data/five-or-more.ui:126
+msgid "Start a new puzzle"
+msgstr "Začít nový hlavolam"
+
+#: data/org.gnome.five-or-more.appdata.xml.in:8
+#: data/org.gnome.five-or-more.desktop.in:4
 msgid "Remove colored balls from the board by forming lines"
 msgstr "Odstraňovat barevné koule z hrací desky tvořením úseček"
 
-#: data/five-or-more.appdata.xml.in:10
+#: data/org.gnome.five-or-more.appdata.xml.in:10
 msgid ""
 "Five or More is the GNOME port of a once-popular computer game. Align five "
 "or more objects of the same color into a line to cause them to disappear and "
@@ -55,7 +128,7 @@ msgstr ""
 "objekty zmizí a navýší se vám skóre. Více bodů získáte, když se budete "
 "snažit před vymazáním seřadit objektů co nejvíce."
 
-#: data/five-or-more.appdata.xml.in:16
+#: data/org.gnome.five-or-more.appdata.xml.in:16
 msgid ""
 "More objects appear after every turn. Play for as long as possible, until "
 "the board is completely full!"
@@ -63,91 +136,19 @@ msgstr ""
 "Po každém tahu se objeví nové objekty. Hrajte, co nejdéle to půjde, dokud "
 "nebude hrací plocha plná."
 
-#: data/five-or-more.appdata.xml.in:40
+#: data/org.gnome.five-or-more.appdata.xml.in:40
 msgid "The GNOME Project"
 msgstr "Projekt GNOME"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/five-or-more.desktop.in:6
+#: data/org.gnome.five-or-more.desktop.in:6
 msgid "game;strategy;logic;"
 msgstr "hra;strategická;logická;"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: data/five-or-more.desktop.in:9
-msgid "five-or-more"
-msgstr "five-or-more"
-
-#: data/five-or-more-preferences.ui:12 data/menu.ui:11 src/game-area.c:858
-msgid "Preferences"
-msgstr "Předvolby"
-
-#: data/five-or-more-preferences.ui:35
-msgid "Appearance"
-msgstr "Vzhled"
-
-#: data/five-or-more-preferences.ui:59
-msgid "_Image:"
-msgstr "_Obrázek:"
-
-#: data/five-or-more-preferences.ui:74
-msgid "B_ackground color:"
-msgstr "Barva _pozadí:"
-
-#: data/five-or-more-preferences.ui:116
-msgid "Board Size"
-msgstr "Velikost hrací desky"
-
-#: data/five-or-more-preferences.ui:135
-msgid "_Small"
-msgstr "_Malá"
-
-#: data/five-or-more-preferences.ui:154
-msgid "_Medium"
-msgstr "_Střední"
-
-#: data/five-or-more-preferences.ui:173
-msgid "_Large"
-msgstr "Ve_lká"
-
-#: data/five-or-more-preferences.ui:203
-msgid "General"
-msgstr "Obecné"
-
-#: data/five-or-more-preferences.ui:216
-msgid "_Use fast moves"
-msgstr "Používat _rychlé tahy"
-
-#: data/five-or-more.ui:30
-msgid "Next:"
-msgstr "Následující:"
-
-#: data/five-or-more.ui:56
-msgid "Score:"
-msgstr "Skóre:"
-
-#: data/five-or-more.ui:76
-msgid "_New Game"
-msgstr "_Nová hra"
-
-#: data/five-or-more.ui:80
-msgid "Start a new puzzle"
-msgstr "Začít nový hlavolam"
-
-#: data/menu.ui:7
-msgid "Scores"
-msgstr "Skóre"
-
-#: data/menu.ui:17
-msgid "Help"
-msgstr "Nápověda"
-
-#: data/menu.ui:22
-msgid "About"
-msgstr "O aplikaci"
-
-#: data/menu.ui:26
-msgid "Quit"
-msgstr "Ukončit"
+#: data/org.gnome.five-or-more.desktop.in:9
+msgid "org.gnome.five-or-more"
+msgstr "org.gnome.five-or-more"
 
 #: data/org.gnome.five-or-more.gschema.xml:5
 msgid "Playing field size"
@@ -220,71 +221,26 @@ msgstr "Výška okna v pixelech."
 msgid "true if the window is maximized"
 msgstr "Zapnuto, pokud je okno maximalizováno"
 
-#.
-#. * Translatable strings file.
-#. * Add this file to your project's POTFILES.in.
-#. * DO NOT compile it as part of your application.
-#.
-#: data/translatable_themes.h:6
-msgctxt "themes"
-msgid "balls"
-msgstr "kuličky"
-
-#: data/translatable_themes.h:7
-msgctxt "themes"
-msgid "dots"
-msgstr "tečky"
-
-#: data/translatable_themes.h:8
-msgctxt "themes"
-msgid "gumball"
-msgstr "hopsakoule"
-
-#: data/translatable_themes.h:9
-msgctxt "themes"
-msgid "shapes"
-msgstr "tvary"
-
-#: src/five-or-more-app.c:57
+#: src/game.vala:94
 msgctxt "board size"
 msgid "Small"
 msgstr "Malé"
 
-#: src/five-or-more-app.c:58
+#: src/game.vala:95
 msgctxt "board size"
 msgid "Medium"
 msgstr "Střední"
 
-#: src/five-or-more-app.c:59
+#: src/game.vala:96
 msgctxt "board size"
 msgid "Large"
 msgstr "Velké"
 
-#: src/five-or-more-app.c:233
-msgid "Game Over!"
-msgstr "Konec hry!"
-
-#: src/five-or-more-app.c:250
-msgid "Match five objects of the same type in a row to score!"
-msgstr "Seřazením pěti objektů stejného typu do řady získáte body!"
-
-#: src/five-or-more-app.c:405
-msgid "Are you sure you want to restart the game?"
-msgstr "Opravdu chcete hru začít znovu od začátku?"
-
-#: src/five-or-more-app.c:408
-msgid "_Cancel"
-msgstr "_Zrušit"
-
-#: src/five-or-more-app.c:409
-msgid "_Restart"
-msgstr "Z_novu od začátku"
-
-#: src/five-or-more-app.c:575
+#: src/main.vala:149
 msgid "GNOME port of the once-popular Color Lines game"
 msgstr "Port pro prostředí GNOME kdysi oblíbené hry Barevné linie"
 
-#: src/five-or-more-app.c:581
+#: src/main.vala:155
 msgid "translator-credits"
 msgstr ""
 "Jirka Lébl\n"
@@ -301,74 +257,30 @@ msgstr ""
 "Petr Pulc <petrpulc@gmail.com>\n"
 "Marek Černocký <marek@manet.cz>"
 
-#: src/five-or-more-app.c:693
-msgid "Board Size: "
-msgstr "Velikost hrací desky: "
+#: src/preferences-dialog.vala:77
+msgid "Are you sure you want to restart the game?"
+msgstr "Opravdu chcete hru začít znovu od začátku?"
 
-#. Can't move there!
-#: src/game-area.c:635
+#: src/preferences-dialog.vala:79
+msgid "_Cancel"
+msgstr "_Zrušit"
+
+#: src/preferences-dialog.vala:80
+msgid "_Restart"
+msgstr "Z_novu od začátku"
+
+#: src/window.vala:53
+msgid "Match five objects of the same type in a row to score!"
+msgstr "Seřazením pěti objektů stejného typu do řady získáte body!"
+
+#: src/window.vala:54
 msgid "You can’t move there!"
 msgstr "Tam nemůžete táhnout!"
 
-#: src/game-area.c:818
-#, c-format
-msgid ""
-"Unable to locate file:\n"
-"%s\n"
-"\n"
-"The default theme will be loaded instead."
-msgstr ""
-"Nelze najít soubor:\n"
-"%s\n"
-"\n"
-"Bude místo něj načten výchozí motiv."
+#: src/window.vala:55
+msgid "Game Over!"
+msgstr "Konec hry!"
 
-#: src/game-area.c:825
-#, c-format
-msgid ""
-"Unable to locate file:\n"
-"%s\n"
-"\n"
-"Please check that Five or More is installed correctly."
-msgstr ""
-"Nelze najít soubor:\n"
-"%s\n"
-"\n"
-"Zkontrolujte prosím, že je hra Pět nebo víc správně nainstalována."
-
-#: src/game-area.c:852
-msgid "Could not load theme"
-msgstr "Nelze načíst motiv"
-
-#~ msgid "0"
-#~ msgstr "0"
-
-#~ msgid "Five or More Scores"
-#~ msgstr "Skóre Pět nebo víc"
-
-#~ msgid "_Board size:"
-#~ msgstr "Velikost hrací _desky:"
-
-#~ msgctxt "score-dialog"
-#~ msgid "Time"
-#~ msgstr "Čas"
-
-#~ msgctxt "score-dialog"
-#~ msgid "Score"
-#~ msgstr "Skóre"
-
-#~ msgctxt "score-dialog"
-#~ msgid "%1$dm %2$ds"
-#~ msgstr "%1$d min %2$d sec"
-
-#~ msgid "_Quit"
-#~ msgstr "U_končit"
-
-#~ msgid "_Undo"
-#~ msgstr "_Zpět"
-
-#~ msgid "_Close"
-#~ msgstr "_Zavřít"
-
-#~ msgid "Date"
-#~ msgstr "Datum"
+#: src/window.vala:91
+msgid "Board Size: "
+msgstr "Velikost hrací desky: "
