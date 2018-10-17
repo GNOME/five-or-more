@@ -31,9 +31,6 @@ public class GameWindow : Gtk.ApplicationWindow
     private Gtk.Box preview_hbox;
 
     [GtkChild]
-    private Gtk.Box hbox;
-
-    [GtkChild]
     private Gtk.MenuButton primary_menu_button;
 
     [GtkChild]
@@ -78,7 +75,6 @@ public class GameWindow : Gtk.ApplicationWindow
         game.notify["score"].connect ((s, p) => { set_status_message (status[StatusMessage.NONE].printf(game.score)); });
         game.notify["status-message"].connect ((s, p) => { set_status_message (status[game.status_message].printf(game.score)); });
         set_status_message (status[game.status_message]);
-        hbox.pack_start (grid_frame);
 
         View game_view = new View (settings, game, theme);
         grid_frame.add (game_view);

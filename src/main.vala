@@ -62,6 +62,8 @@ public class FiveOrMoreApp: Gtk.Application
 
         add_action_entries (action_entries, this);
         set_accels_for_action ("app.new-game", {"<Primary>n"});
+        set_accels_for_action ("app.quit", {"<Primary>q"});
+        set_accels_for_action ("app.help", {"F1"});
         var board_size_action = lookup_action("change-size");
         BoardSize size = (BoardSize)settings.get_int (FiveOrMoreApp.KEY_SIZE);
         (board_size_action as SimpleAction).set_state (new Variant.string(size.to_string()));
