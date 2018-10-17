@@ -23,7 +23,7 @@
 
 public class View : Gtk.DrawingArea
 {
-    private const int MINIMUM_BOARD_SIZE = 300;
+    private const int MINIMUM_BOARD_SIZE = 256;
 
     private Settings settings;
     private Game? game = null;
