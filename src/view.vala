@@ -217,10 +217,6 @@ public class View : Gtk.DrawingArea
         if (cell_x >= game.n_cols || cell_y >= game.n_rows)
             return false;
 
-        if (game.status_message != StatusMessage.NONE)
-            game.status_message = StatusMessage.NONE;
-
-
         keyboard_cursor_x = cell_x;
         keyboard_cursor_y = cell_y;
 
@@ -252,6 +248,9 @@ public class View : Gtk.DrawingArea
         /* if selected cell is empty and start is set, and cell is empty, set end */
         else if (game.board.get_piece (cell_y, cell_x) == null && start_x != -1 && start_y != -1)
         {
+            if (game.status_message != StatusMessage.NONE)
+                game.status_message = StatusMessage.NONE;
+
             end_x = cell_x;
             end_y = cell_y;
 
