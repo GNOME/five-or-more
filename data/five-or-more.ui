@@ -79,30 +79,6 @@
             <property name="pack_type">end</property>
           </packing>
         </child>
-        <child>
-          <object class="GtkLabel" id="scorelabel">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="margin_end">2</property>
-            <property name="label">0</property>
-          </object>
-          <packing>
-            <property name="pack_type">end</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkLabel" id="labelScore">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="label" translatable="yes">Score:</property>
-            <attributes>
-              <attribute name="weight" value="bold"/>
-            </attributes>
-          </object>
-          <packing>
-            <property name="pack_type">end</property>
-          </packing>
-        </child>
       </object>
     </child>
     <child>
@@ -137,3 +113,4 @@
     </child>
   </template>
 </interface>
+

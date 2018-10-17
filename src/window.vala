@@ -36,9 +36,6 @@ public class GameWindow : Gtk.ApplicationWindow
     [GtkChild]
     private Games.GridFrame grid_frame;
 
-    [GtkChild]
-    private Gtk.Label scorelabel;
-
     private Settings? settings = null;
     private bool window_tiled;
     public bool window_maximized { get; private set; }
@@ -53,7 +50,7 @@ public class GameWindow : Gtk.ApplicationWindow
             _("Match five objects of the same type in a row to score!"),
             _("You can’t move there!"),
             _("Game Over!"),
-            null
+            _("Score: %d")
     };
 
     public GameWindow (Gtk.Application app, Settings settings)
@@ -75,8 +72,8 @@ public class GameWindow : Gtk.ApplicationWindow
 
         grid_frame.set (game.n_cols, game.n_rows);
         game.board.board_changed.connect (() => { grid_frame.set (game.n_cols, game.n_rows); });
-        game.notify["score"].connect ((s, p) => { scorelabel.set_text (game.score.to_string ()); });
-        game.notify["status-message"].connect ((s, p) => { set_status_message (status[game.status_message]); });
+        game.notify["score"].connect ((s, p) => { set_status_message (status[StatusMessage.NONE].printf(game.score)); });
+        game.notify["status-message"].connect ((s, p) => { set_status_message (status[game.status_message].printf(game.score)); });
         set_status_message (status[game.status_message]);
         hbox.pack_start (grid_frame);
 
