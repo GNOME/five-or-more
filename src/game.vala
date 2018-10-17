@@ -277,7 +277,7 @@ public class Game : Object
     }
 }
 
-enum BoardSize
+public enum BoardSize
 {
     UNSET,
     SMALL,

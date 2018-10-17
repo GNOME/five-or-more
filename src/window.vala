@@ -34,6 +34,9 @@ public class GameWindow : Gtk.ApplicationWindow
     private Gtk.Box hbox;
 
     [GtkChild]
+    private Gtk.MenuButton primary_menu_button;
+
+    [GtkChild]
     private Games.GridFrame grid_frame;
 
     private Settings? settings = null;
@@ -140,6 +143,44 @@ public class GameWindow : Gtk.ApplicationWindow
     public void show_scores ()
     {
         highscores.run_dialog ();
+    }
+
+    public void change_size (BoardSize size)
+    {
+        var game_size = settings.get_int ("size");
+
+        if (game_size == size)
+            return;
+
+        primary_menu_button.set_active (false);
+
+        if (game.score > 0) {
+            var flags = Gtk.DialogFlags.DESTROY_WITH_PARENT;
+            var restart_game_dialog = new Gtk.MessageDialog (this,
+                                                             flags,
+                                                             Gtk.MessageType.WARNING,
+                                                             Gtk.ButtonsType.NONE,
+                                                             _("Are you sure you want to restart the game?"),
+                                                             null);
+            restart_game_dialog.add_buttons (_("_Cancel"), Gtk.ResponseType.CANCEL,
+                                             _("_Restart"), Gtk.ResponseType.OK,
+                                             null);
+
+            var result = restart_game_dialog.run ();
+            restart_game_dialog.destroy ();
+            switch (result)
+            {
+                case Gtk.ResponseType.OK:
+                     if (!settings.set_int (FiveOrMoreApp.KEY_SIZE, size))
+                        warning ("Failed to set size: %d", size);
+                    break;
+                case Gtk.ResponseType.CANCEL:
+                    break;
+            }
+        } else {
+            settings.set_int (FiveOrMoreApp.KEY_SIZE, size);
+        }
+
     }
 
     private Games.Scores.Category? create_category_from_key (string key)

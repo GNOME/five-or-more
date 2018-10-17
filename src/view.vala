@@ -72,6 +72,9 @@ public class View : Gtk.DrawingArea
         board_rectangle.x = board_rectangle.y = 0;
         update_sizes (MINIMUM_BOARD_SIZE, MINIMUM_BOARD_SIZE);
         game.board.board_changed.connect (() => {
+            show_cursor = false;
+            keyboard_cursor_x = -1;
+            keyboard_cursor_y = -1;
             update_sizes (get_allocated_width (), get_allocated_height ());
             queue_draw ();
         });

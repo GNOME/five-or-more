@@ -4,6 +4,23 @@
   <menu id="primary-menu">
     <section>
       <item>
+        <attribute name="label" translatable="yes">_Small</attribute>
+        <attribute name="action">app.change-size</attribute>
+        <attribute name="target">BOARD_SIZE_SMALL</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">_Medium</attribute>
+        <attribute name="action">app.change-size</attribute>
+        <attribute name="target">BOARD_SIZE_MEDIUM</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">_Large</attribute>
+        <attribute name="action">app.change-size</attribute>
+        <attribute name="target">BOARD_SIZE_LARGE</attribute>
+      </item>
+    </section>
+    <section>
+      <item>
         <attribute name="label" translatable="yes">Scores</attribute>
         <attribute name="action">app.scores</attribute>
       </item>
@@ -63,7 +80,7 @@
           </object>
         </child>
         <child>
-          <object class="GtkMenuButton" id="primary-menu-button">
+          <object class="GtkMenuButton" id="primary_menu_button">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="menu_model">primary-menu</property>
