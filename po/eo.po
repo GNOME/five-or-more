@@ -1,244 +1,289 @@
-# Esperanto translation for gnome-games.
-# Copyright (c) 2005 Canonical Ltd, and Rosetta Contributors 2005
-# This file is distributed under the same license as the gnome-games package.
-#
-# FIRST AUTHOR < >, 2005.
-# Billy HAND < >, 2008.
-# Sergio ĤLUTĈIN < >, 2009.
-# Arturo < >, 2009.
-# Benno SCHULENBERG < >, 2010.
-# Robert BOGENSCHNEIDER < >, 2010.
-# Alekso42 < >, 2010.
-# Miguel PÉREZ < >, 2010.
-# Michael MORONI < >, 2011.
-# Serge LEBLANC < >, 2011.
-# Miĥa-Johano WALTER < >, 2011.
-# Tiffany Antopolski <tiffany.antopolski@gmail.com>, 2011, 2012.
-# Kristjan SCHMIDT <kristjan.schmidt@googlemail.com>, 2010, 2011, 2012.
-#
+# Esperanto translation for five-or-more.
+# Copyright (C) 2011 Free Software Foundation, Inc.
+# This file is distributed under the same license as the five-or-more package.
+# Tiffany ANTOPOLSKI <tiffany.antopolski@gmail.com>, 2011, 2012.
+# Kristjan SCHMIDT <kristjan.schmidt@googlemail.com>, 2010, 2011, 2012, 2018.
+# Carmen Bianca BAKKER <carmen@carmenbianca.eu>, 2018.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-31 22:27+0100\n"
-"PO-Revision-Date: 2012-03-09 22:20+0100\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/five-or-more/issues\n"
+"POT-Creation-Date: 2018-09-13 15:19+0000\n"
+"PO-Revision-Date: 2018-11-22 16:01+0200\n"
 "Last-Translator: Kristjan SCHMIDT <kristjan.schmidt@googlemail.com>\n"
-"Language-Team: Esperanto <gnome-l10n-eo@lists.launchpad.net>\n"
+"Language-Team: Esperanto <gnome-eo-list@gnome.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"X-Generator: Virtaal 0.7.1-rc1\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Virtaal 0.7.1\n"
 "X-DamnedLies-Scope: partial\n"
 "X-Launchpad-Export-Date: 2012-01-11 17:32+0000\n"
 "X-Project-Style: gnome\n"
 
-#: ../data/five-or-more.appdata.xml.in.h:1 ../data/five-or-more.desktop.in.h:1
-#: ../data/five-or-more.ui.h:1 ../src/five-or-more.c:1173
-#: ../src/five-or-more.c:1724
+#: data/five-or-more.appdata.xml.in:7 data/five-or-more.desktop.in:3
+#: data/five-or-more.ui:18 src/five-or-more.c:70 src/five-or-more-app.c:576
 msgid "Five or More"
 msgstr "Kvin Aŭ Pli"
 
-#: ../data/five-or-more.appdata.xml.in.h:2 ../data/five-or-more.desktop.in.h:2
+#: data/five-or-more.appdata.xml.in:8 data/five-or-more.desktop.in:4
 msgid "Remove colored balls from the board by forming lines"
 msgstr "Forigu kolorajn pilkojn de la tabulo, farante liniojn"
 
-#: ../data/five-or-more.appdata.xml.in.h:3
+#: data/five-or-more.appdata.xml.in:10
 msgid ""
 "Five or More is the GNOME port of a once-popular computer game. Align five "
 "or more objects of the same color into a line to cause them to disappear and "
 "score points. Earn many more points by lining up as many objects as possible "
 "before clearing them."
 msgstr ""
+"Kvin Aŭ Pli estas GNOME-versio de iufoje populara videoludo. Vicigi kvin aŭ "
+"pli da objektoj de la sama koloro en linion por ke ili malaperos kaj vi "
+"gajnos poentojn. Gajnu eĉ pli da poentoj per vicigi kiel eble plej multe da "
+"objektoj antaŭ ol vakigi ilin."
 
-#: ../data/five-or-more.appdata.xml.in.h:4
+#: data/five-or-more.appdata.xml.in:16
 msgid ""
 "More objects appear after every turn. Play for as long as possible, until "
 "the board is completely full!"
 msgstr ""
+"Pli da objektoj aperos post ĉiu vico. Ludu kiel eble plej longe, ĝis la "
+"tabulo estas plena!"
 
-#: ../data/five-or-more.appdata.xml.in.h:5
+#: data/five-or-more.appdata.xml.in:40
 msgid "The GNOME Project"
-msgstr ""
+msgstr "La GNOME Projekto"
 
-#: ../data/five-or-more.desktop.in.h:3
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/five-or-more.desktop.in:6
 msgid "game;strategy;logic;"
-msgstr ""
+msgstr "ludo;strategio;logiko;"
 
-#: ../data/five-or-more-preferences.ui.h:1 ../data/menu.ui.h:2
-#: ../src/five-or-more.c:169
+#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
+#: data/five-or-more.desktop.in:9
+msgid "five-or-more"
+msgstr "five-or-more"
+
+#: data/five-or-more-preferences.ui:12 data/menu.ui:11 src/game-area.c:858
 msgid "Preferences"
 msgstr "Preferoj"
 
-#: ../data/five-or-more-preferences.ui.h:2
+#: data/five-or-more-preferences.ui:35
 msgid "Appearance"
 msgstr "Aspekto"
 
-#: ../data/five-or-more-preferences.ui.h:3
+#: data/five-or-more-preferences.ui:59
 msgid "_Image:"
 msgstr "B_ildo:"
 
-#: ../data/five-or-more-preferences.ui.h:4
+#: data/five-or-more-preferences.ui:74
 msgid "B_ackground color:"
 msgstr "_Fonkoloro:"
 
-#: ../data/five-or-more-preferences.ui.h:5
+#: data/five-or-more-preferences.ui:116
 msgid "Board Size"
 msgstr "Tabula grando"
 
-#: ../data/five-or-more-preferences.ui.h:6
+#: data/five-or-more-preferences.ui:135
 msgid "_Small"
 msgstr "_Malgranda"
 
-#: ../data/five-or-more-preferences.ui.h:7
+#: data/five-or-more-preferences.ui:154
 msgid "_Medium"
 msgstr "_Meza"
 
-#: ../data/five-or-more-preferences.ui.h:8
+#: data/five-or-more-preferences.ui:173
 msgid "_Large"
 msgstr "_Granda"
 
-#: ../data/five-or-more-preferences.ui.h:9
+#: data/five-or-more-preferences.ui:203
 msgid "General"
 msgstr "Ĝenerala"
 
-#: ../data/five-or-more-preferences.ui.h:10
+#: data/five-or-more-preferences.ui:216
 msgid "_Use fast moves"
 msgstr "_Uzi rapidajn movojn"
 
-#: ../data/five-or-more.ui.h:2
+#: data/five-or-more.ui:30
 msgid "Next:"
 msgstr "Sekva:"
 
-#: ../data/five-or-more.ui.h:3
-msgid "0"
-msgstr "0"
-
-#: ../data/five-or-more.ui.h:4
+#: data/five-or-more.ui:56
 msgid "Score:"
 msgstr "Poentaro:"
 
-#: ../data/five-or-more.ui.h:5 ../src/games-scores-dialog.c:384
+#: data/five-or-more.ui:76
 msgid "_New Game"
 msgstr "_Nova ludo"
 
-#: ../data/five-or-more.ui.h:6
-#, fuzzy
+#: data/five-or-more.ui:80
 msgid "Start a new puzzle"
-msgstr "Komenci novan ludon"
+msgstr "Komenci novan puzlon"
 
-#: ../data/menu.ui.h:1
+#: data/menu.ui:7
 msgid "Scores"
 msgstr "Poentaroj"
 
-#: ../data/menu.ui.h:3
-#, fuzzy
+#: data/menu.ui:17
 msgid "Help"
-msgstr "_Helpo"
+msgstr "Helpo"
 
-#: ../data/menu.ui.h:4
-#, fuzzy
+#: data/menu.ui:22
 msgid "About"
-msgstr "_Pri"
+msgstr "Pri"
 
-#: ../data/menu.ui.h:5
-#, fuzzy
+#: data/menu.ui:26
 msgid "Quit"
-msgstr "_Fini"
+msgstr "Ĉesi"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:1
+#: data/org.gnome.five-or-more.gschema.xml:5
 msgid "Playing field size"
 msgstr "Grando de ludareo"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:2
+#: data/org.gnome.five-or-more.gschema.xml:6
 msgid ""
 "Playing field size. 1=Small, 2=Medium, 3=Large. Any other value is invalid."
 msgstr ""
 "Grando de ludareo. 1=Eta, 2=Meza, 3=Ega. Ĉiu ajn alia valoro ne validas."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:3
+#: data/org.gnome.five-or-more.gschema.xml:10
 msgid "Ball style"
 msgstr "Pilkstilo"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:4
+#: data/org.gnome.five-or-more.gschema.xml:11
 msgid "Ball style. The filename of the images to use for the balls."
 msgstr "Pilkstilo. La dosiernomo de la bildoj uzotaj por la pilkoj."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:5
+#: data/org.gnome.five-or-more.gschema.xml:15
 msgid "Background color"
 msgstr "Fonkoloro"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:6
+#: data/org.gnome.five-or-more.gschema.xml:16
 msgid "Background color. The hex specification of the background color."
 msgstr "Fona koloro. La deksesuma specifo de la fona koloro."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:7
+#: data/org.gnome.five-or-more.gschema.xml:20
 msgid "Time between moves"
 msgstr "Tempo inter movoj"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:8
+#: data/org.gnome.five-or-more.gschema.xml:21
 msgid "Time between moves in milliseconds."
-msgstr "Tempo inter movoj (en milisekundoj)"
+msgstr "Tempo inter movoj (en milisekundoj)."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:9
+#: data/org.gnome.five-or-more.gschema.xml:25
 msgid "Game score"
 msgstr "Ludpoentaro"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:10
+#: data/org.gnome.five-or-more.gschema.xml:26
 msgid "Game score from last saved session."
 msgstr "Ludpoentaro de la antaŭa konservita seanco."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:11
+#: data/org.gnome.five-or-more.gschema.xml:30
 msgid "Game field"
 msgstr "Ludkampo"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:12
+#: data/org.gnome.five-or-more.gschema.xml:31
 msgid "Game field from last saved session."
 msgstr "Ludkampo de la lasta konservita seanco."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:13
+#: data/org.gnome.five-or-more.gschema.xml:35
 msgid "Game preview"
 msgstr "Ludantaŭvido"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:14
+#: data/org.gnome.five-or-more.gschema.xml:36
 msgid "Game preview from last saved session."
 msgstr "Ludantaŭvido de la antaŭa konservita seanco."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:15
-#, fuzzy
+#: data/org.gnome.five-or-more.gschema.xml:40
 msgid "Width of the window in pixels"
-msgstr "La larĝo de la ĉefa fenestro per rastrumeroj."
+msgstr "Larĝo de la fenestro en bilderoj"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:16
-#, fuzzy
+#: data/org.gnome.five-or-more.gschema.xml:44
 msgid "Height of the window in pixels"
-msgstr "La alto de la ĉefa fenestro per rastrumeroj."
+msgstr "Alto de la fenestro en bilderoj"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:17
-msgid "true if the window is maximized"
-msgstr ""
+#.
+#. * Translatable strings file.
+#. * Add this file to your project's POTFILES.in.
+#. * DO NOT compile it as part of your application.
+#.
+#: data/translatable_themes.h:6
+msgctxt "themes"
+msgid "balls"
+msgstr "pilkoj"
 
-#: ../src/five-or-more.c:78
+#: data/translatable_themes.h:7
+msgctxt "themes"
+msgid "dots"
+msgstr "punktoj"
+
+#: data/translatable_themes.h:8
+msgctxt "themes"
+msgid "gumball"
+msgstr "gumpilko"
+
+#: data/translatable_themes.h:9
+msgctxt "themes"
+msgid "shapes"
+msgstr "formoj"
+
+#: src/five-or-more-app.c:57
 msgctxt "board size"
 msgid "Small"
 msgstr "Malgranda"
 
-#: ../src/five-or-more.c:79
+#: src/five-or-more-app.c:58
 msgctxt "board size"
 msgid "Medium"
 msgstr "Meza"
 
-#: ../src/five-or-more.c:80
+#: src/five-or-more-app.c:59
 msgctxt "board size"
 msgid "Large"
 msgstr "Granda"
 
-#: ../src/five-or-more.c:163
-msgid "Could not load theme"
-msgstr "Etoso ne ŝarĝeblis"
+#: src/five-or-more-app.c:233
+msgid "Game Over!"
+msgstr "Ludo finita!"
 
-#: ../src/five-or-more.c:189
+#: src/five-or-more-app.c:250
+msgid "Match five objects of the same type in a row to score!"
+msgstr "Kongruigu kvin aĵojn de la sama tipo laŭvice por poenti!"
+
+#: src/five-or-more-app.c:405
+msgid "Are you sure you want to restart the game?"
+msgstr "Ĉu vi certe volas restartigi la ludon?"
+
+#: src/five-or-more-app.c:408
+msgid "_Cancel"
+msgstr "_Nuligu"
+
+#: src/five-or-more-app.c:409
+msgid "_Restart"
+msgstr "_Restartigi"
+
+#: src/five-or-more-app.c:578
+msgid "GNOME port of the once-popular Color Lines game"
+msgstr "GNOME-versio de la iufoje populara ludo Koloraj Linioj"
+
+#: src/five-or-more-app.c:584
+msgid "translator-credits"
+msgstr ""
+"Kristjan SCHMIDT\n"
+"Tiffany ANTOPOLSKI\n"
+"Carmen Bianca BAKKER <carmen@carmenbianca.eu>"
+
+#: src/five-or-more-app.c:694
+msgid "Board Size: "
+msgstr "Tabula grando: "
+
+#. Can't move there!
+#: src/game-area.c:635
+msgid "You can’t move there!"
+msgstr "Vi ne povas movi tien!"
+
+#: src/game-area.c:818
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -251,7 +296,7 @@ msgstr ""
 "\n"
 "La defaŭlta etoso estos ŝarĝita anstataŭe."
 
-#: ../src/five-or-more.c:196
+#: src/game-area.c:825
 #, c-format
 msgid ""
 "Unable to locate file:\n"
@@ -264,103 +309,37 @@ msgstr ""
 "\n"
 "Bonvolu kontroli, ke Kvin Aŭ Pli estas ĝuste instalita."
 
-#: ../src/five-or-more.c:408
-msgid "Match five objects of the same type in a row to score!"
-msgstr "Kongruigu kvin aĵojn de la sama tipo laŭvice por poenti!"
+#: src/game-area.c:852
+msgid "Could not load theme"
+msgstr "Etoso ne ŝarĝeblis"
 
-#: ../src/five-or-more.c:469
+#~ msgid "0"
+#~ msgstr "0"
+
 #, fuzzy
-msgid "Five or More Scores"
-msgstr "Kvin Aŭ Pli"
+#~ msgid "Five or More Scores"
+#~ msgstr "Kvin Aŭ Pli"
 
-#: ../src/five-or-more.c:471
-msgid "_Board size:"
-msgstr "Ta_bula grando:"
+#~ msgid "_Board size:"
+#~ msgstr "Ta_bula grando:"
 
-#: ../src/five-or-more.c:488
-msgid "Game Over!"
-msgstr "Ludo finita!"
+#~ msgctxt "score-dialog"
+#~ msgid "Time"
+#~ msgstr "Daŭro"
 
-#. Can't move there!
-#: ../src/five-or-more.c:645
-#, fuzzy
-msgid "You can’t move there!"
-msgstr "Vi ne povas movi tien!"
+#~ msgctxt "score-dialog"
+#~ msgid "Score"
+#~ msgstr "Poentoj"
 
-#: ../src/five-or-more.c:1175
-#, fuzzy
-msgid "GNOME port of the once-popular Color Lines game"
-msgstr ""
-"GNOME-porto de la antaŭe populara ludo Koloraj Linioj.\n"
-"\n"
-"Kvin Aŭ Pli estas ero de GNOME Ludiloj."
+#~ msgctxt "score-dialog"
+#~ msgid "%1$dm %2$ds"
+#~ msgstr "%1$dm %2$ds"
 
-#: ../src/five-or-more.c:1181
-msgid "translator-credits"
-msgstr ""
-"Launchpad Contributions:\n"
-"  Alekso42 https://launchpad.net/~alekso42\n"
-"  Arturo https://launchpad.net/~asly-esperanto\n"
-"  Benno Schulenberg https://launchpad.net/~bennoschulenberg\n"
-"  Billy Hand https://launchpad.net/~billythethird\n"
-"  Johano https://launchpad.net/~johanohepton\n"
-"  Kristjan SCHMIDT https://launchpad.net/~kristjan-eo\n"
-"  Marek Blahuš https://launchpad.net/~s-launchpad-blahus-cz\n"
-"  Michael Moroni https://launchpad.net/~airon90\n"
-"  Miguel Pérez https://launchpad.net/~rraton-esperanto\n"
-"  Robert BOGENSCHNEIDER https://launchpad.net/~robog\n"
-"  Serge Leblanc https://launchpad.net/~serge-leblanc\n"
-"  Sergio Ĥlutĉin https://launchpad.net/~sergej-hlutchin\n"
-"  Thomas Heinis https://launchpad.net/~th-sitrino\n"
-"\n"
-"GNOME Contributions:\n"
-"  Tiffany Antopolski"
+#~ msgid "_Quit"
+#~ msgstr "_Fini"
 
-#: ../src/five-or-more.c:1305
-#, fuzzy
-msgid "Are you sure you want to restart the game?"
-msgstr "Tio estas jam uzata! Kie vi volas meti tion?"
+#~ msgid "_Undo"
+#~ msgstr "_Malfari"
 
-#: ../src/five-or-more.c:1308
-msgid "_Cancel"
-msgstr "_Nuligu"
-
-#: ../src/five-or-more.c:1309
-msgid "_Restart"
-msgstr "_Restartigi"
-
-#. Score dialog column header for the score time (e.g. 1 minute)
-#: ../src/games-scores-dialog.c:131
-msgctxt "score-dialog"
-msgid "Time"
-msgstr "Daŭro"
-
-#. Score dialog column header for the score value (e.g. 30 moves)
-#: ../src/games-scores-dialog.c:137
-msgctxt "score-dialog"
-msgid "Score"
-msgstr "Poentoj"
-
-#. Score format for time based scores.  %1$d is the time in minutes, %2$d is the time in seconds
-#: ../src/games-scores-dialog.c:224
-#, c-format
-msgctxt "score-dialog"
-msgid "%1$dm %2$ds"
-msgstr "%1$dm %2$ds"
-
-#: ../src/games-scores-dialog.c:370
-msgid "_Quit"
-msgstr "_Fini"
-
-#: ../src/games-scores-dialog.c:377
-msgid "_Undo"
-msgstr "_Malfari"
-
-#: ../src/games-scores-dialog.c:391
-msgid "_Close"
-msgstr "_Fermi"
-
-#. Score dialog column header for the date the score was recorded
-#: ../src/games-scores-dialog.c:477
-msgid "Date"
-msgstr ""
+#~ msgid "_Close"
+#~ msgstr "_Fermi"
