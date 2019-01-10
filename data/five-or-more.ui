@@ -90,6 +90,7 @@
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="menu_model">primary-menu</property>
+            <accelerator key="F10" signal="activate"/>
             <child>
               <object class="GtkImage" id="primary-menu-button-image">
                 <property name="visible">True</property>
