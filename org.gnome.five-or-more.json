@@ -1,14 +1,14 @@
 {
-    "app-id" : "org.gnome.five-or-more",
-    "runtime" : "org.gnome.Platform",
-    "runtime-version" : "3.30",
-    "sdk" : "org.gnome.Sdk",
-    "command" : "five-or-more",
-    "tags" : [
+    "app-id": "org.gnome.five-or-more",
+    "runtime": "org.gnome.Platform",
+    "runtime-version": "3.30",
+    "sdk": "org.gnome.Sdk",
+    "command": "five-or-more",
+    "tags": [
         "nightly"
     ],
-    "desktop-file-name-prefix" : "(Nightly) ",
-    "finish-args" : [
+    "desktop-file-name-prefix": "(Nightly) ",
+    "finish-args": [
         "--share=ipc",
         "--socket=x11",
         "--socket=wayland",
@@ -17,42 +17,31 @@
         "--talk-name=ca.desrt.dconf",
         "--env=DCONF_USER_CONFIG_DIR=.config/dconf"
     ],
-    "build-options" : {
-        "cflags" : "-O2 -g",
-        "cxxflags" : "-O2 -g",
-    },
-    "modules" : [
-        {
-            "name" : "libgee",
-            "buildsystem" : "meson",
-            "sources" : [
-                {
-                    "type" : "git",
-                    "branch" : "meson",
-                    "url" : "https://gitlab.gnome.org/GNOME/libgee.git"
-                }
-            ]
+    "modules": [{
+            "name": "libgee",
+            "buildsystem": "meson",
+            "sources": [{
+                "type": "git",
+                "branch": "meson",
+                "url": "https://gitlab.gnome.org/GNOME/libgee.git"
+            }]
         },
         {
-            "name" : "libgnome-games-support",
-            "sources" : [
-                {
-                    "type" : "archive",
-                    "url" : "https://download.gnome.org/sources/libgnome-games-support/1.4/libgnome-games-support-1.4.0.tar.xz",
-                    "sha256" : "1d89b145da7d4aedae3fa75456d97ed1b4a5bc062a01e7d0db93b006bdf11456"
-                }
-            ]
+            "name": "libgnome-games-support",
+            "sources": [{
+                "type": "archive",
+                "url": "https://download.gnome.org/sources/libgnome-games-support/1.4/libgnome-games-support-1.4.0.tar.xz",
+                "sha256": "1d89b145da7d4aedae3fa75456d97ed1b4a5bc062a01e7d0db93b006bdf11456"
+            }]
         },
         {
-            "name" : "five-or-more",
-            "buildsystem" : "meson",
-            "sources" : [
-                {
-                    "type" : "git",
-                    "branch" : "master",
-                    "url" : "https://gitlab.gnome.org/GNOME/five-or-more.git"
-                }
-            ]
+            "name": "five-or-more",
+            "buildsystem": "meson",
+            "sources": [{
+                "type": "git",
+                "branch": "master",
+                "url": "https://gitlab.gnome.org/GNOME/five-or-more.git"
+            }]
         }
     ]
 }
