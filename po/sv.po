@@ -1,18 +1,18 @@
 # Swedish messages for five-or-more.
-# Copyright © 1999-2018 Free Software Foundation, Inc.
+# Copyright © 1999-2019 Free Software Foundation, Inc.
 # Andreas Persenius <ndap@swipnet.se>, 1999.
 # Andreas Hyden <a.hyden@cyberpoint.se>
 # Martin Norbäck <d95mback@dtek.chalmers.se>, 2000.
 # Christian Rose <menthos@menthos.com>, 2000, 2001, 2002, 2003, 2004, 2005.
 # Daniel Nylander <po@danielnylander.se>, 2006, 2007, 2008, 2009, 2010, 2011, 2012.
-# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2014, 2015, 2016, 2018.
+# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2014, 2015, 2016, 2018, 2019.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: five-or-more\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/five-or-more/issues\n"
-"POT-Creation-Date: 2018-10-17 21:56+0000\n"
-"PO-Revision-Date: 2018-12-28 15:01+0100\n"
+"POT-Creation-Date: 2019-01-11 15:40+0000\n"
+"PO-Revision-Date: 2019-01-13 23:20+0100\n"
 "Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 2.2\n"
 
-#: data/five-or-more-preferences.ui:13 data/five-or-more.ui:36
+#: data/five-or-more-preferences.ui:13
 msgid "Preferences"
 msgstr "Inställningar"
 
@@ -51,12 +51,12 @@ msgid "B_ackground color:"
 msgstr "B_akgrundsfärg:"
 
 #: data/five-or-more.ui:7
-msgid "New Game"
-msgstr "Nytt spel"
+msgid "_New Game"
+msgstr "_Nytt spel"
 
 #: data/five-or-more.ui:13
-msgid "Scores"
-msgstr "Poäng"
+msgid "S_cores"
+msgstr "_Poäng"
 
 #: data/five-or-more.ui:19
 msgid "_Small"
@@ -70,13 +70,17 @@ msgstr "_Mellan"
 msgid "_Large"
 msgstr "_Stor"
 
+#: data/five-or-more.ui:36
+msgid "_Preferences"
+msgstr "_Inställningar"
+
 #: data/five-or-more.ui:40
-msgid "Help"
-msgstr "Hjälp"
+msgid "_Help"
+msgstr "_Hjälp"
 
 #: data/five-or-more.ui:45
-msgid "About Five or More"
-msgstr "Om Fem eller mer"
+msgid "_About Five or More"
+msgstr "_Om Fem eller mer"
 
 #: data/five-or-more.ui:65 data/org.gnome.five-or-more.appdata.xml.in:7
 #: data/org.gnome.five-or-more.desktop.in:3 src/main.vala:74 src/main.vala:168
@@ -123,7 +127,6 @@ msgstr "spel;strategi;logik;"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
 #: data/org.gnome.five-or-more.desktop.in:9
-#| msgid "five-or-more"
 msgid "org.gnome.five-or-more"
 msgstr "org.gnome.five-or-more"
 
