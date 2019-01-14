@@ -5,14 +5,14 @@
 # Lucas Vieites <lucas@codexion.com>, 2007, 2008.
 # Jorge González <jorgegonz@svn.gnome.org>, 2007, 2008, 2009, 2010, 2011.
 # Chris Leonard <cjl@laptop.org>, 2012.
-# Daniel Mustieles <daniel.mustieles@gmail.com>, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2016, 2018.
+# Daniel Mustieles <daniel.mustieles@gmail.com>, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2016, 2018, 2019.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/five-or-more/issues\n"
-"POT-Creation-Date: 2018-10-17 21:56+0000\n"
-"PO-Revision-Date: 2018-12-04 15:36+0100\n"
+"POT-Creation-Date: 2019-01-11 15:40+0000\n"
+"PO-Revision-Date: 2019-01-14 15:30+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: es <gnome-es-list@gnome.org>\n"
 "Language: es\n"
@@ -23,7 +23,7 @@ msgstr ""
 "X-Generator: Gtranslator 2.91.7\n"
 "X-Project-Style: gnome\n"
 
-#: data/five-or-more-preferences.ui:13 data/five-or-more.ui:36
+#: data/five-or-more-preferences.ui:13
 msgid "Preferences"
 msgstr "Preferencias"
 
@@ -36,14 +36,10 @@ msgid "_Theme:"
 msgstr "_Tema:"
 
 #: data/five-or-more-preferences.ui:76
-#| msgctxt "themes"
-#| msgid "balls"
 msgid "balls"
 msgstr "bolas"
 
 #: data/five-or-more-preferences.ui:77
-#| msgctxt "themes"
-#| msgid "shapes"
 msgid "shapes"
 msgstr "formas"
 
@@ -56,13 +52,14 @@ msgid "B_ackground color:"
 msgstr "_Color de fondo:"
 
 #: data/five-or-more.ui:7
-#| msgid "_New Game"
-msgid "New Game"
-msgstr "Juego nuevo"
+#| msgid "New Game"
+msgid "_New Game"
+msgstr "Juego _nuevo"
 
 #: data/five-or-more.ui:13
-msgid "Scores"
-msgstr "Puntuación"
+#| msgid "Scores"
+msgid "S_cores"
+msgstr "Pun_tuación"
 
 #: data/five-or-more.ui:19
 msgid "_Small"
@@ -76,14 +73,20 @@ msgstr "_Mediano"
 msgid "_Large"
 msgstr "_Grande"
 
+#: data/five-or-more.ui:36
+#| msgid "Preferences"
+msgid "_Preferences"
+msgstr "Prefere_ncias"
+
 #: data/five-or-more.ui:40
-msgid "Help"
-msgstr "Ayuda"
+#| msgid "Help"
+msgid "_Help"
+msgstr "A_yuda"
 
 #: data/five-or-more.ui:45
-#| msgid "Five or More"
-msgid "About Five or More"
-msgstr "Acerca de Cinco o más"
+#| msgid "About Five or More"
+msgid "_About Five or More"
+msgstr "_Acerca de Cinco o más"
 
 #: data/five-or-more.ui:65 data/org.gnome.five-or-more.appdata.xml.in:7
 #: data/org.gnome.five-or-more.desktop.in:3 src/main.vala:74 src/main.vala:168
@@ -130,7 +133,6 @@ msgstr "juego;estrategia;lógica;"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
 #: data/org.gnome.five-or-more.desktop.in:9
-#| msgid "five-or-more"
 msgid "org.gnome.five-or-more"
 msgstr "org.gnome.five-or-more"
 
@@ -247,7 +249,6 @@ msgstr "Juego terminado"
 
 #: src/window.vala:53
 #, c-format
-#| msgid "Score:"
 msgid "Score: %d"
 msgstr "Puntuación: %d"
 
