@@ -44,10 +44,4 @@
     </media>
   </section>
 
-  <section id="colors">
-    <title>Background colors available</title>
-    <media type="image" src="figures/pickcolor.png" width="200" its:translate="no">
-      <p its:translate="yes">Five or More color palette</p>
-    </media>
-  </section>
 </page>

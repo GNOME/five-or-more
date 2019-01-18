@@ -26,7 +26,6 @@ five_or_more_help_media = [
   'figures/logo.png',
   'figures/logo32.png',
   'figures/medium.png',
-  'figures/pickcolor.png',
   'figures/small.png',
   'figures/vertical.png'
 ]
