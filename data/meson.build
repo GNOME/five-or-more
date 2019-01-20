@@ -1,6 +1,6 @@
 desktop = 'org.gnome.five-or-more.desktop'
 # Desktop file
-i18n.merge_file (
+desktop_file = i18n.merge_file (
   input: desktop + '.in',
   output: desktop,
   type: 'desktop',
@@ -8,6 +8,16 @@ i18n.merge_file (
   install: true,
   install_dir: join_paths (data_dir, 'applications')
 )
+desktop_file_validate = find_program('desktop-file-validate', required: false)
+if desktop_file_validate.found()
+  test(
+    'validate-desktop',
+    desktop_file_validate,
+    args: [
+      desktop_file.full_path()
+    ]
+  )
+endif
 
 # Themes
 foreach file: ['balls.svg', 'shapes.svg', 'tango.svg']
@@ -36,7 +46,7 @@ install_data (join_paths ('icons', 'hicolor', 'symbolic', 'org.gnome.five-or-mor
 
 appdata = 'org.gnome.five-or-more.appdata.xml'
 # Appdata
-i18n.merge_file (
+appdata_file = i18n.merge_file (
   input: appdata + '.in',
   output: appdata,
   type: 'xml',
@@ -44,6 +54,15 @@ i18n.merge_file (
   install: true,
   install_dir: join_paths (data_dir, 'metainfo'),
 )
+appstream_util = find_program('appstream-util', required: false)
+if appstream_util.found()
+  test(
+    'validate-appdata', appstream_util,
+    args: [
+      'validate-relax', '--nonet', appdata_file.full_path()
+    ]
+  )
+endif
 
 # Gschema
 install_data ('org.gnome.five-or-more.gschema.xml',
