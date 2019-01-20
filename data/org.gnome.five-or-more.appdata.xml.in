@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2013 Michael Catanzaro -->
-<component type="desktop">
-  <id>org.gnome.five-or-more.desktop</id>
+<component type="desktop-application">
+  <id>org.gnome.five-or-more</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0+</project_license>
   <name>Five or More</name>
@@ -23,6 +23,7 @@
       <image>https://people.gnome.org/~mcatanzaro/five-or-more.png</image>
     </screenshot>
   </screenshots>
+  <launchable type="desktop-id">org.gnome.five-or-more.desktop</launchable>
   <url type="homepage">https://wiki.gnome.org/Apps/Five%20or%20more</url>
   <url type="bugtracker">https://gitlab.gnome.org/GNOME/five-or-more/issues</url>
   <url type="donation">http://www.gnome.org/friends/</url>
@@ -31,7 +32,6 @@
   <update_contact>mcatanzaro_at_gnome.org</update_contact>
   <project_group>GNOME</project_group>
   <kudos>
-    <kudo>AppMenu</kudo>
     <kudo>HiDpiIcon</kudo>
     <kudo>ModernToolkit</kudo>
     <kudo>UserDocs</kudo>
