@@ -7,9 +7,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Gnome-games GNOME TRUNK\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-31 22:38+0100\n"
-"PO-Revision-Date: 2011-09-10 20:59+0200\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/five-or-more/issues\n"
+"POT-Creation-Date: 2019-01-11 15:40+0000\n"
+"PO-Revision-Date: 2019-01-21 12:55+0200\n"
 "Last-Translator: F Wolff <friedel@translate.org.za>\n"
 "Language-Team: translate-discuss-af@lists.sourceforge.net\n"
 "Language: af\n"
@@ -17,20 +17,84 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Virtaal 0.7.1-beta1\n"
+"X-Generator: Poedit 2.2\n"
 "X-Project-Style: gnome\n"
 
-#: ../data/five-or-more.appdata.xml.in.h:1 ../data/five-or-more.desktop.in.h:1
-#: ../data/five-or-more.ui.h:1 ../src/five-or-more.c:1173
-#: ../src/five-or-more.c:1724
+#: data/five-or-more-preferences.ui:13
+msgid "Preferences"
+msgstr "Voorkeure"
+
+#: data/five-or-more-preferences.ui:36
+msgid "Appearance"
+msgstr "Voorkoms"
+
+#: data/five-or-more-preferences.ui:60
+msgid "_Theme:"
+msgstr "_Tema:"
+
+#: data/five-or-more-preferences.ui:76
+msgid "balls"
+msgstr "balle"
+
+#: data/five-or-more-preferences.ui:77
+msgid "shapes"
+msgstr "vorms"
+
+#: data/five-or-more-preferences.ui:78
+msgid "tango"
+msgstr "tango"
+
+#: data/five-or-more-preferences.ui:87
+msgid "B_ackground color:"
+msgstr "_Agtergrondkleur:"
+
+#: data/five-or-more.ui:7
+msgid "_New Game"
+msgstr "_Nuwe speletjie"
+
+#: data/five-or-more.ui:13
+msgid "S_cores"
+msgstr "_Tellings"
+
+#: data/five-or-more.ui:19
+msgid "_Small"
+msgstr "_Klein"
+
+#: data/five-or-more.ui:24
+msgid "_Medium"
+msgstr "_Medium"
+
+#: data/five-or-more.ui:29
+msgid "_Large"
+msgstr "_Groot"
+
+#: data/five-or-more.ui:36
+msgid "_Preferences"
+msgstr "_Voorkeure"
+
+#: data/five-or-more.ui:40
+msgid "_Help"
+msgstr "_Hulp"
+
+#: data/five-or-more.ui:45
+msgid "_About Five or More"
+msgstr "_Aangaande Vyf-of-meer"
+
+#: data/five-or-more.ui:65 data/org.gnome.five-or-more.appdata.xml.in:7
+#: data/org.gnome.five-or-more.desktop.in:3 src/main.vala:74 src/main.vala:168
 msgid "Five or More"
 msgstr "Vyf-of-meer"
 
-#: ../data/five-or-more.appdata.xml.in.h:2 ../data/five-or-more.desktop.in.h:2
+#: data/five-or-more.ui:77
+msgid "Next:"
+msgstr "Volgende:"
+
+#: data/org.gnome.five-or-more.appdata.xml.in:8
+#: data/org.gnome.five-or-more.desktop.in:4
 msgid "Remove colored balls from the board by forming lines"
 msgstr "Verwyder gekleurde balle van die bord deur lyne te vorm"
 
-#: ../data/five-or-more.appdata.xml.in.h:3
+#: data/org.gnome.five-or-more.appdata.xml.in:10
 msgid ""
 "Five or More is the GNOME port of a once-popular computer game. Align five "
 "or more objects of the same color into a line to cause them to disappear and "
@@ -38,307 +102,235 @@ msgid ""
 "before clearing them."
 msgstr ""
 
-#: ../data/five-or-more.appdata.xml.in.h:4
+#: data/org.gnome.five-or-more.appdata.xml.in:16
 msgid ""
 "More objects appear after every turn. Play for as long as possible, until "
 "the board is completely full!"
 msgstr ""
 
-#: ../data/five-or-more.appdata.xml.in.h:5
+#: data/org.gnome.five-or-more.appdata.xml.in:40
 msgid "The GNOME Project"
-msgstr ""
+msgstr "Die GNOME-projek"
 
-#: ../data/five-or-more.desktop.in.h:3
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/org.gnome.five-or-more.desktop.in:6
 msgid "game;strategy;logic;"
-msgstr ""
+msgstr "speletjie;strategie;logika;"
 
-#: ../data/five-or-more-preferences.ui.h:1 ../data/menu.ui.h:2
-#: ../src/five-or-more.c:169
-msgid "Preferences"
-msgstr "Voorkeure"
+#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
+#: data/org.gnome.five-or-more.desktop.in:9
+msgid "org.gnome.five-or-more"
+msgstr "org.gnome.five-or-more"
 
-#: ../data/five-or-more-preferences.ui.h:2
-msgid "Appearance"
-msgstr "Voorkoms"
-
-#: ../data/five-or-more-preferences.ui.h:3
-msgid "_Image:"
-msgstr "_Beeld:"
-
-#: ../data/five-or-more-preferences.ui.h:4
-msgid "B_ackground color:"
-msgstr "_Agtergrondkleur:"
-
-#: ../data/five-or-more-preferences.ui.h:5
-msgid "Board Size"
-msgstr "Bordgrootte"
-
-#: ../data/five-or-more-preferences.ui.h:6
-#, fuzzy
-msgid "_Small"
-msgstr "Klein"
-
-#: ../data/five-or-more-preferences.ui.h:7
-msgid "_Medium"
-msgstr "_Medium"
-
-#: ../data/five-or-more-preferences.ui.h:8
-#, fuzzy
-msgid "_Large"
-msgstr "Groot"
-
-#: ../data/five-or-more-preferences.ui.h:9
-#, fuzzy
-msgid "General"
-msgstr "Algemeen"
-
-#: ../data/five-or-more-preferences.ui.h:10
-msgid "_Use fast moves"
-msgstr "_Gebruik vinnige skuiwe"
-
-#: ../data/five-or-more.ui.h:2
-msgid "Next:"
-msgstr "Volgende:"
-
-#: ../data/five-or-more.ui.h:3
-#, fuzzy
-msgid "0"
-msgstr "0"
-
-#: ../data/five-or-more.ui.h:4
-msgid "Score:"
-msgstr "Telling:"
-
-#: ../data/five-or-more.ui.h:5 ../src/games-scores-dialog.c:384
-msgid "_New Game"
-msgstr "_Nuwe speletjie"
-
-#: ../data/five-or-more.ui.h:6
-#, fuzzy
-msgid "Start a new puzzle"
-msgstr "Begin 'n nuwe speletjie"
-
-#: ../data/menu.ui.h:1
-msgid "Scores"
-msgstr "Tellings"
-
-#: ../data/menu.ui.h:3
-msgid "Help"
-msgstr "Hulp"
-
-#: ../data/menu.ui.h:4
-msgid "About"
-msgstr "Aangaande"
-
-#: ../data/menu.ui.h:5
-msgid "Quit"
-msgstr "Afsluit"
-
-#: ../data/org.gnome.five-or-more.gschema.xml.h:1
+#: data/org.gnome.five-or-more.gschema.xml:5
 msgid "Playing field size"
 msgstr "Speelveldgrootte"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:2
+#: data/org.gnome.five-or-more.gschema.xml:6
 msgid ""
 "Playing field size. 1=Small, 2=Medium, 3=Large. Any other value is invalid."
 msgstr ""
 "Speelveld grootte. 1=Klein, 2=Medium, 3=Groot. Enige ander waarde is "
 "ongeldig."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:3
+#: data/org.gnome.five-or-more.gschema.xml:10
 msgid "Ball style"
 msgstr "Balstyl"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:4
+#: data/org.gnome.five-or-more.gschema.xml:11
 msgid "Ball style. The filename of the images to use for the balls."
 msgstr ""
 "Balstyl. Die lêernaam van die beelde wat vir die balle gebruik moet word."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:5
+#: data/org.gnome.five-or-more.gschema.xml:15
 msgid "Background color"
 msgstr "Agtergrondkleur"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:6
+#: data/org.gnome.five-or-more.gschema.xml:16
 msgid "Background color. The hex specification of the background color."
 msgstr "Agtergrondkleur. Die hex-spesifikasie van die agtergrondkleur."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:7
+#: data/org.gnome.five-or-more.gschema.xml:20
 msgid "Time between moves"
 msgstr "Tyd tussen skuiwe"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:8
+#: data/org.gnome.five-or-more.gschema.xml:21
 msgid "Time between moves in milliseconds."
 msgstr "Tyd tussen skuiwe in millisekondes."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:9
+#: data/org.gnome.five-or-more.gschema.xml:25
 msgid "Game score"
 msgstr "Speltelling"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:10
+#: data/org.gnome.five-or-more.gschema.xml:26
 msgid "Game score from last saved session."
 msgstr "Speltelling van die laaste gestoorde sessie."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:11
+#: data/org.gnome.five-or-more.gschema.xml:30
 msgid "Game field"
 msgstr "Speelveld"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:12
+#: data/org.gnome.five-or-more.gschema.xml:31
 msgid "Game field from last saved session."
 msgstr "Speelveld van die laaste gestoorde sessie."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:13
+#: data/org.gnome.five-or-more.gschema.xml:35
 msgid "Game preview"
 msgstr "Spelvoorskou"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:14
+#: data/org.gnome.five-or-more.gschema.xml:36
 msgid "Game preview from last saved session."
 msgstr "Spelvoorskou van die laaste gestoorde sessie."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:15
-#, fuzzy
+#: data/org.gnome.five-or-more.gschema.xml:40
 msgid "Width of the window in pixels"
-msgstr "Die wydte van die hoofvenster in beeldpunte."
+msgstr "Die wydte van die venster in beeldpunte"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:16
-#, fuzzy
+#: data/org.gnome.five-or-more.gschema.xml:44
 msgid "Height of the window in pixels"
-msgstr "Die hoogte van die hoofvenster in beeldpunte."
+msgstr "Die hoogte van die venster in beeldpunte"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:17
+#: data/org.gnome.five-or-more.gschema.xml:48
 msgid "true if the window is maximized"
-msgstr ""
+msgstr "waar as die venster gemaksimeer is"
 
-#: ../src/five-or-more.c:78
+#: src/game.vala:94
 msgctxt "board size"
 msgid "Small"
 msgstr "Klein"
 
-#: ../src/five-or-more.c:79
+#: src/game.vala:95
 msgctxt "board size"
 msgid "Medium"
 msgstr "Medium"
 
-#: ../src/five-or-more.c:80
+#: src/game.vala:96
 msgctxt "board size"
 msgid "Large"
 msgstr "Groot"
 
-#: ../src/five-or-more.c:163
-msgid "Could not load theme"
-msgstr "Kon nie tema laai nie"
-
-#: ../src/five-or-more.c:189
-#, c-format
-msgid ""
-"Unable to locate file:\n"
-"%s\n"
-"\n"
-"The default theme will be loaded instead."
-msgstr ""
-"Kan nie lêer\n"
-"%s\n"
-"vind nie.\n"
-"Die verstektema sal in sy plek gelaai word."
-
-#: ../src/five-or-more.c:196
-#, c-format
-msgid ""
-"Unable to locate file:\n"
-"%s\n"
-"\n"
-"Please check that Five or More is installed correctly."
-msgstr ""
-"Kan nie lêer\n"
-"%s\n"
-"vind nie.\n"
-"Kontroleer dat Vyf-of-meer korrek geïnstalleer is."
-
-#: ../src/five-or-more.c:408
-msgid "Match five objects of the same type in a row to score!"
-msgstr "Pas vyf voorwerpe van dieselfde soort in 'n ry om punte te wen!"
-
-#: ../src/five-or-more.c:469
-#, fuzzy
-msgid "Five or More Scores"
-msgstr "Vyf-of-meer"
-
-#: ../src/five-or-more.c:471
-msgid "_Board size:"
-msgstr "_Bordgrootte:"
-
-#: ../src/five-or-more.c:488
-msgid "Game Over!"
-msgstr "Spel verby!"
-
-#. Can't move there!
-#: ../src/five-or-more.c:645
-#, fuzzy
-msgid "You can’t move there!"
-msgstr "Kan nie soontoe skuif nie!"
-
-#: ../src/five-or-more.c:1175
-#, fuzzy
+#: src/main.vala:171
 msgid "GNOME port of the once-popular Color Lines game"
-msgstr ""
-"GNOME-weergawe van die eens gewilde Kleurlynespel.\n"
-"\n"
-"Vyf-of-meer is een van die GNOME-speletjies."
+msgstr "GNOME-weergawe van die eens gewilde Kleurlynespel"
 
-#: ../src/five-or-more.c:1181
+#: src/main.vala:177
 msgid "translator-credits"
 msgstr ""
 "Samuel Murray\n"
 "Hermien Bos\n"
-"Friedel Wolff"
+"Friedel Wolff\n"
+"Pieter Schoeman"
 
-#: ../src/five-or-more.c:1305
-#, fuzzy
+#: src/window.vala:50
+msgid "Match five objects of the same type in a row to score!"
+msgstr "Pas vyf voorwerpe van dieselfde soort in 'n ry om punte te wen!"
+
+#: src/window.vala:51
+msgid "You can’t move there!"
+msgstr "Kan nie soontoe skuif nie!"
+
+#: src/window.vala:52
+msgid "Game Over!"
+msgstr "Spel verby!"
+
+#: src/window.vala:53
+#, c-format
+msgid "Score: %d"
+msgstr "Telling: %d"
+
+#: src/window.vala:87
+msgid "Board Size: "
+msgstr "Bordgrootte: "
+
+#: src/window.vala:159
 msgid "Are you sure you want to restart the game?"
-msgstr "Is jy seker jy wil afsluit?"
+msgstr "Is jy seker jy wil die speletjie herbegin?"
 
-#: ../src/five-or-more.c:1308
+#: src/window.vala:161
 msgid "_Cancel"
 msgstr "_Kanselleer"
 
-#: ../src/five-or-more.c:1309
+#: src/window.vala:162
 msgid "_Restart"
 msgstr "_Herbegin"
 
-#. Score dialog column header for the score time (e.g. 1 minute)
-#: ../src/games-scores-dialog.c:131
+#~ msgid "_Image:"
+#~ msgstr "_Beeld:"
+
 #, fuzzy
-msgctxt "score-dialog"
-msgid "Time"
-msgstr "Tyd"
+#~ msgid "General"
+#~ msgstr "Algemeen"
 
-#. Score dialog column header for the score value (e.g. 30 moves)
-#: ../src/games-scores-dialog.c:137
+#~ msgid "_Use fast moves"
+#~ msgstr "_Gebruik vinnige skuiwe"
+
 #, fuzzy
-msgctxt "score-dialog"
-msgid "Score"
-msgstr "Telling"
+#~ msgid "0"
+#~ msgstr "0"
 
-#. Score format for time based scores.  %1$d is the time in minutes, %2$d is the time in seconds
-#: ../src/games-scores-dialog.c:224
-#, fuzzy, c-format
-msgctxt "score-dialog"
-msgid "%1$dm %2$ds"
-msgstr "%dm %ds"
-
-#: ../src/games-scores-dialog.c:370
 #, fuzzy
-msgid "_Quit"
-msgstr "Afsluit"
+#~ msgid "Start a new puzzle"
+#~ msgstr "Begin 'n nuwe speletjie"
 
-#: ../src/games-scores-dialog.c:377
-msgid "_Undo"
-msgstr "_Ontdoen"
+#~ msgid "About"
+#~ msgstr "Aangaande"
 
-#: ../src/games-scores-dialog.c:391
-msgid "_Close"
-msgstr "_Sluit"
+#~ msgid "Quit"
+#~ msgstr "Afsluit"
 
-#. Score dialog column header for the date the score was recorded
-#: ../src/games-scores-dialog.c:477
-msgid "Date"
-msgstr ""
+#~ msgid "Could not load theme"
+#~ msgstr "Kon nie tema laai nie"
+
+#~ msgid ""
+#~ "Unable to locate file:\n"
+#~ "%s\n"
+#~ "\n"
+#~ "The default theme will be loaded instead."
+#~ msgstr ""
+#~ "Kan nie lêer\n"
+#~ "%s\n"
+#~ "vind nie.\n"
+#~ "Die verstektema sal in sy plek gelaai word."
+
+#~ msgid ""
+#~ "Unable to locate file:\n"
+#~ "%s\n"
+#~ "\n"
+#~ "Please check that Five or More is installed correctly."
+#~ msgstr ""
+#~ "Kan nie lêer\n"
+#~ "%s\n"
+#~ "vind nie.\n"
+#~ "Kontroleer dat Vyf-of-meer korrek geïnstalleer is."
+
+#, fuzzy
+#~ msgid "Five or More Scores"
+#~ msgstr "Vyf-of-meer"
+
+#~ msgid "_Board size:"
+#~ msgstr "_Bordgrootte:"
+
+#, fuzzy
+#~ msgctxt "score-dialog"
+#~ msgid "Time"
+#~ msgstr "Tyd"
+
+#, fuzzy
+#~ msgctxt "score-dialog"
+#~ msgid "Score"
+#~ msgstr "Telling"
+
+#, fuzzy
+#~ msgctxt "score-dialog"
+#~ msgid "%1$dm %2$ds"
+#~ msgstr "%dm %ds"
+
+#, fuzzy
+#~ msgid "_Quit"
+#~ msgstr "Afsluit"
+
+#~ msgid "_Undo"
+#~ msgstr "_Ontdoen"
+
+#~ msgid "_Close"
+#~ msgstr "_Sluit"
