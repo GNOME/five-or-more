@@ -31,33 +31,107 @@
 # George Stefanakis <george.stefanakis@gmail.com>, 2011.
 # Dimitris Spingos (Δημήτρης Σπίγγος) <dmtrs32@gmail.com>, 2013, 2014.
 # Efstathios Iosifidis <iosifidis@opensuse.org>, 2015.
+# Tom Tryfonidis <tomtryf@gnome.org>, 2019.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.HEAD.el\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/five-or-more/issues\n"
-"POT-Creation-Date: 2018-03-27 17:19+0000\n"
-"PO-Revision-Date: 2018-04-17 01:53+0200\n"
-"Last-Translator: Efstathios Iosifidis <iosifidis@opensuse.org>\n"
-"Language-Team: Greek, Modern (1453-) <opensuse-translation-el@opensuse.org>\n"
+"POT-Creation-Date: 2019-01-11 15:40+0000\n"
+"PO-Revision-Date: 2019-01-24 23:10+0200\n"
+"Last-Translator: Tom Tryfonidis <tomtryf@gnome.org>\n"
+"Language-Team: Greek, Modern (1453-) <gnome-el-list@gnome.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.5.7\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"X-Generator: Gtranslator 3.30.0\n"
 "X-Project-Style: gnome\n"
 
-#: data/five-or-more.appdata.xml.in:7 data/five-or-more.desktop.in:3
-#: data/five-or-more.ui:18 src/five-or-more.c:70 src/five-or-more-app.c:573
+#: data/five-or-more-preferences.ui:13
+msgid "Preferences"
+msgstr "Προτιμήσεις"
+
+#: data/five-or-more-preferences.ui:36
+msgid "Appearance"
+msgstr "Εμφάνιση"
+
+#: data/five-or-more-preferences.ui:60
+msgid "_Theme:"
+msgstr "_Θέμα:"
+
+#: data/five-or-more-preferences.ui:76
+#| msgctxt "themes"
+#| msgid "balls"
+msgid "balls"
+msgstr "μπάλες"
+
+#: data/five-or-more-preferences.ui:77
+#| msgctxt "themes"
+#| msgid "shapes"
+msgid "shapes"
+msgstr "σχήματα"
+
+#: data/five-or-more-preferences.ui:78
+msgid "tango"
+msgstr "tango"
+
+#: data/five-or-more-preferences.ui:87
+msgid "B_ackground color:"
+msgstr "Χρώμα _παρασκηνίου:"
+
+#: data/five-or-more.ui:7
+msgid "_New Game"
+msgstr "_Νέο παιχνίδι"
+
+#: data/five-or-more.ui:13
+#| msgid "Scores"
+msgid "S_cores"
+msgstr "Βαθ_μολογίες"
+
+#: data/five-or-more.ui:19
+msgid "_Small"
+msgstr "_Μικρό"
+
+#: data/five-or-more.ui:24
+msgid "_Medium"
+msgstr "_Μεσαίο"
+
+#: data/five-or-more.ui:29
+msgid "_Large"
+msgstr "_Μεγάλο"
+
+#: data/five-or-more.ui:36
+#| msgid "Preferences"
+msgid "_Preferences"
+msgstr "_Προτιμήσεις"
+
+#: data/five-or-more.ui:40
+#| msgid "Help"
+msgid "_Help"
+msgstr "_Βοήθεια"
+
+#: data/five-or-more.ui:45
+#| msgid "Five or More"
+msgid "_About Five or More"
+msgstr "Π_ερί Πέντε ή περισσότερα"
+
+#: data/five-or-more.ui:65 data/org.gnome.five-or-more.appdata.xml.in:7
+#: data/org.gnome.five-or-more.desktop.in:3 src/main.vala:74 src/main.vala:168
 msgid "Five or More"
 msgstr "Πέντε ή περισσότερα"
 
-#: data/five-or-more.appdata.xml.in:8 data/five-or-more.desktop.in:4
+#: data/five-or-more.ui:77
+msgid "Next:"
+msgstr "Επόμενο:"
+
+#: data/org.gnome.five-or-more.appdata.xml.in:8
+#: data/org.gnome.five-or-more.desktop.in:4
 msgid "Remove colored balls from the board by forming lines"
 msgstr "Αφαιρέστε τις χρωματιστές μπάλες από τον πίνακα σχηματίζοντας γραμμές"
 
-#: data/five-or-more.appdata.xml.in:10
+#: data/org.gnome.five-or-more.appdata.xml.in:10
 msgid ""
 "Five or More is the GNOME port of a once-popular computer game. Align five "
 "or more objects of the same color into a line to cause them to disappear and "
@@ -71,7 +145,7 @@ msgstr ""
 "πόντους στοιχίζοντας όσο το δυνατό περισσότερα αντικείμενα πριν τα "
 "καθαρίσετε."
 
-#: data/five-or-more.appdata.xml.in:16
+#: data/org.gnome.five-or-more.appdata.xml.in:16
 msgid ""
 "More objects appear after every turn. Play for as long as possible, until "
 "the board is completely full!"
@@ -79,91 +153,20 @@ msgstr ""
 "Περισσότερα αντικείμενα εμφανίζονται μετά από κάθε γύρο. Παίξτε όσο το "
 "δυνατόν περισσότερο, μέχρις ότου ο πίνακας να γεμίσει πλήρως!"
 
-#: data/five-or-more.appdata.xml.in:40
+#: data/org.gnome.five-or-more.appdata.xml.in:40
 msgid "The GNOME Project"
 msgstr "Το έργο GNOME"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/five-or-more.desktop.in:6
+#: data/org.gnome.five-or-more.desktop.in:6
 msgid "game;strategy;logic;"
 msgstr "παιχνίδι;στρατηγική;λογική;game;strategy;logic;"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: data/five-or-more.desktop.in:9
-msgid "five-or-more"
-msgstr "five-or-more"
-
-#: data/five-or-more-preferences.ui:12 data/menu.ui:11 src/game-area.c:858
-msgid "Preferences"
-msgstr "Προτιμήσεις"
-
-#: data/five-or-more-preferences.ui:35
-msgid "Appearance"
-msgstr "Εμφάνιση"
-
-#: data/five-or-more-preferences.ui:59
-msgid "_Image:"
-msgstr "_Εικόνα:"
-
-#: data/five-or-more-preferences.ui:74
-msgid "B_ackground color:"
-msgstr "Χρώμα _παρασκηνίου:"
-
-#: data/five-or-more-preferences.ui:116
-msgid "Board Size"
-msgstr "Μέγεθος πίνακα"
-
-#: data/five-or-more-preferences.ui:135
-msgid "_Small"
-msgstr "_Μικρό"
-
-#: data/five-or-more-preferences.ui:154
-msgid "_Medium"
-msgstr "_Μεσαίο"
-
-#: data/five-or-more-preferences.ui:173
-msgid "_Large"
-msgstr "_Μεγάλο"
-
-#: data/five-or-more-preferences.ui:203
-msgid "General"
-msgstr "Γενικά"
-
-#: data/five-or-more-preferences.ui:216
-msgid "_Use fast moves"
-msgstr "_Χρήση γρήγορων κινήσεων"
-
-#: data/five-or-more.ui:30
-msgid "Next:"
-msgstr "Επόμενο:"
-
-#: data/five-or-more.ui:56
-msgid "Score:"
-msgstr "Βαθμολογία:"
-
-#: data/five-or-more.ui:76
-msgid "_New Game"
-msgstr "_Νέο παιχνίδι"
-
-#: data/five-or-more.ui:80
-msgid "Start a new puzzle"
-msgstr "Εκκίνηση νέου παιχνιδιού"
-
-#: data/menu.ui:7
-msgid "Scores"
-msgstr "Βαθμολογίες"
-
-#: data/menu.ui:17
-msgid "Help"
-msgstr "Βοήθεια"
-
-#: data/menu.ui:22
-msgid "About"
-msgstr "Περί"
-
-#: data/menu.ui:26
-msgid "Quit"
-msgstr "Έξοδος"
+#: data/org.gnome.five-or-more.desktop.in:9
+#| msgid "five-or-more"
+msgid "org.gnome.five-or-more"
+msgstr "org.gnome.five-or-more"
 
 #: data/org.gnome.five-or-more.gschema.xml:5
 msgid "Playing field size"
@@ -238,72 +241,26 @@ msgstr "Το ύψος του παραθύρου σε εικονοστοιχεί�
 msgid "true if the window is maximized"
 msgstr "αληθής αν το παράθυρο είναι μεγιστοποιημένο"
 
-#.
-#. * Translatable strings file.
-#. * Add this file to your project's POTFILES.in.
-#. * DO NOT compile it as part of your application.
-#.
-#: data/translatable_themes.h:6
-msgctxt "themes"
-msgid "balls"
-msgstr "μπάλες"
-
-#: data/translatable_themes.h:7
-msgctxt "themes"
-msgid "dots"
-msgstr "κουκίδες"
-
-#: data/translatable_themes.h:8
-msgctxt "themes"
-msgid "gumball"
-msgstr "τσιχλόμπαλα"
-
-#: data/translatable_themes.h:9
-msgctxt "themes"
-msgid "shapes"
-msgstr "σχήματα"
-
-#: src/five-or-more-app.c:57
+#: src/game.vala:94
 msgctxt "board size"
 msgid "Small"
 msgstr "Μικρό"
 
-#: src/five-or-more-app.c:58
+#: src/game.vala:95
 msgctxt "board size"
 msgid "Medium"
 msgstr "Μεσαίο"
 
-#: src/five-or-more-app.c:59
+#: src/game.vala:96
 msgctxt "board size"
 msgid "Large"
 msgstr "Μεγάλο"
 
-#: src/five-or-more-app.c:233
-msgid "Game Over!"
-msgstr "Τέλος παιχνιδιού!"
-
-#: src/five-or-more-app.c:250
-msgid "Match five objects of the same type in a row to score!"
-msgstr ""
-"Ταιριάξτε πέντε αντικείμενα του ίδιου τύπου σε μια σειρά για να σκοράρετε!"
-
-#: src/five-or-more-app.c:405
-msgid "Are you sure you want to restart the game?"
-msgstr "Θέλετε σίγουρα να επανεκκινήσετε το παιχνίδι;"
-
-#: src/five-or-more-app.c:408
-msgid "_Cancel"
-msgstr "Ά_κυρο"
-
-#: src/five-or-more-app.c:409
-msgid "_Restart"
-msgstr "Επα_νεκκίνηση"
-
-#: src/five-or-more-app.c:575
+#: src/main.vala:171
 msgid "GNOME port of the once-popular Color Lines game"
 msgstr "Μεταφορά στο GNOME του, πάλαι ποτέ, δημοφιλούς παιχνιδιού Color Lines"
 
-#: src/five-or-more-app.c:581
+#: src/main.vala:177
 msgid "translator-credits"
 msgstr ""
 "Ελληνική μεταφραστική ομάδα GNOME\n"
@@ -317,45 +274,94 @@ msgstr ""
 "Για περισστερες πληροφορίες, επισκεφθείτε τη σελίδα\n"
 "http://gnome.gr/"
 
-#: src/five-or-more-app.c:693
-#| msgid "Board Size"
-msgid "Board Size: "
-msgstr "Μέγεθος πίνακα:"
+#: src/window.vala:50
+msgid "Match five objects of the same type in a row to score!"
+msgstr ""
+"Ταιριάξτε πέντε αντικείμενα του ίδιου τύπου σε μια σειρά για να σκοράρετε!"
 
-#. Can't move there!
-#: src/game-area.c:635
+#: src/window.vala:51
 msgid "You can’t move there!"
 msgstr "Δεν μπορείτε να μετακινηθείτε εκεί!"
 
-#: src/game-area.c:818
-#, c-format
-msgid ""
-"Unable to locate file:\n"
-"%s\n"
-"\n"
-"The default theme will be loaded instead."
-msgstr ""
-"Αδυναμία εντοπισμού αρχείου:\n"
-"%s\n"
-"\n"
-"Θα φορτωθεί το προεπιλεγμένο θέμα."
+#: src/window.vala:52
+msgid "Game Over!"
+msgstr "Τέλος παιχνιδιού!"
 
-#: src/game-area.c:825
+#: src/window.vala:53
 #, c-format
-msgid ""
-"Unable to locate file:\n"
-"%s\n"
-"\n"
-"Please check that Five or More is installed correctly."
-msgstr ""
-"Αδυναμία εντοπισμού αρχείου:\n"
-"%s\n"
-"\n"
-"Ελέγξτε αν το παιχνίδι Πέντε ή περισσότερα έχει εγκατασταθεί σωστά."
+#| msgid "Score:"
+msgid "Score: %d"
+msgstr "Βαθμολογία: %d"
 
-#: src/game-area.c:852
-msgid "Could not load theme"
-msgstr "Αδυναμία φόρτωσης θέματος"
+#: src/window.vala:87
+msgid "Board Size: "
+msgstr "Μέγεθος πίνακα:"
+
+#: src/window.vala:159
+msgid "Are you sure you want to restart the game?"
+msgstr "Θέλετε σίγουρα να επανεκκινήσετε το παιχνίδι;"
+
+#: src/window.vala:161
+msgid "_Cancel"
+msgstr "Ά_κυρο"
+
+#: src/window.vala:162
+msgid "_Restart"
+msgstr "Επα_νεκκίνηση"
+
+#~ msgid "_Image:"
+#~ msgstr "_Εικόνα:"
+
+#~ msgid "Board Size"
+#~ msgstr "Μέγεθος πίνακα"
+
+#~ msgid "General"
+#~ msgstr "Γενικά"
+
+#~ msgid "_Use fast moves"
+#~ msgstr "_Χρήση γρήγορων κινήσεων"
+
+#~ msgid "Start a new puzzle"
+#~ msgstr "Εκκίνηση νέου παιχνιδιού"
+
+#~ msgid "About"
+#~ msgstr "Περί"
+
+#~ msgid "Quit"
+#~ msgstr "Έξοδος"
+
+#~ msgctxt "themes"
+#~ msgid "dots"
+#~ msgstr "κουκίδες"
+
+#~ msgctxt "themes"
+#~ msgid "gumball"
+#~ msgstr "τσιχλόμπαλα"
+
+#~ msgid ""
+#~ "Unable to locate file:\n"
+#~ "%s\n"
+#~ "\n"
+#~ "The default theme will be loaded instead."
+#~ msgstr ""
+#~ "Αδυναμία εντοπισμού αρχείου:\n"
+#~ "%s\n"
+#~ "\n"
+#~ "Θα φορτωθεί το προεπιλεγμένο θέμα."
+
+#~ msgid ""
+#~ "Unable to locate file:\n"
+#~ "%s\n"
+#~ "\n"
+#~ "Please check that Five or More is installed correctly."
+#~ msgstr ""
+#~ "Αδυναμία εντοπισμού αρχείου:\n"
+#~ "%s\n"
+#~ "\n"
+#~ "Ελέγξτε αν το παιχνίδι Πέντε ή περισσότερα έχει εγκατασταθεί σωστά."
+
+#~ msgid "Could not load theme"
+#~ msgstr "Αδυναμία φόρτωσης θέματος"
 
 #~ msgid "0"
 #~ msgstr "0"
