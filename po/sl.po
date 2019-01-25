@@ -5,25 +5,26 @@
 # Matej Erman <matej.erman@guest.arnes.si>, 2002.
 # Tadej Janež <tadej_janez@email.si>, 2003.
 # Matic Žgur <mr.zgur@gmail.com>, 2006–2007.
-# Matej Urbančič <mateju@svn.gnome.org>, + 2007–2018.
+# Matej Urbančič <mateju@svn.gnome.org>, + 2007–2019.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: five-or-more master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/five-or-more/issues\n"
-"POT-Creation-Date: 2018-10-18 10:37+0000\n"
-"PO-Revision-Date: 2018-10-25 18:08+0200\n"
+"POT-Creation-Date: 2019-01-24 21:18+0000\n"
+"PO-Revision-Date: 2019-01-25 18:19+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: sl_SI\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n%100==4 ? 3 : 0);\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
+"%100==4 ? 3 : 0);\n"
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Generator: Poedit 2.1.1\n"
 
-#: data/five-or-more-preferences.ui:13 data/five-or-more.ui:36
+#: data/five-or-more-preferences.ui:13
 msgid "Preferences"
 msgstr "Možnosti"
 
@@ -52,12 +53,12 @@ msgid "B_ackground color:"
 msgstr "_Barva ozadja:"
 
 #: data/five-or-more.ui:7
-msgid "New Game"
-msgstr "Nova igra"
+msgid "_New Game"
+msgstr "_Nova igra"
 
 #: data/five-or-more.ui:13
-msgid "Scores"
-msgstr "Rezultati"
+msgid "S_cores"
+msgstr "_Rezultati"
 
 #: data/five-or-more.ui:19
 msgid "_Small"
@@ -71,12 +72,16 @@ msgstr "_Srednje"
 msgid "_Large"
 msgstr "_Velika"
 
+#: data/five-or-more.ui:36
+msgid "_Preferences"
+msgstr "_Možnosti"
+
 #: data/five-or-more.ui:40
-msgid "Help"
-msgstr "Pomoč"
+msgid "_Help"
+msgstr "Pomo_ć"
 
 #: data/five-or-more.ui:45
-msgid "About Five or More"
+msgid "_About Five or More"
 msgstr "_O igri"
 
 #: data/five-or-more.ui:65 data/org.gnome.five-or-more.appdata.xml.in:7
@@ -124,7 +129,6 @@ msgstr "igra;strateška;logika;kroglice;pet v vrsto;"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
 #: data/org.gnome.five-or-more.desktop.in:9
-#| msgid "five-or-more"
 msgid "org.gnome.five-or-more"
 msgstr "org.gnome.five-or-more"
 
@@ -259,6 +263,9 @@ msgstr "_Prekliči"
 msgid "_Restart"
 msgstr "_Ponoven zagon"
 
+#~ msgid "New Game"
+#~ msgstr "Nova igra"
+
 #~ msgid "_Image:"
 #~ msgstr "_Slika:"
 
@@ -270,9 +277,6 @@ msgstr "_Ponoven zagon"
 
 #~ msgid "_Use fast moves"
 #~ msgstr "_Uporabi hitre poteze"
-
-#~ msgid "_New Game"
-#~ msgstr "_Nova igra"
 
 #~ msgid "Start a new puzzle"
 #~ msgstr "Začni novo igro"
