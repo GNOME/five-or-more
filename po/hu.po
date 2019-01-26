@@ -83,7 +83,7 @@ msgstr "_Súgó"
 
 #: data/five-or-more.ui:45
 msgid "_About Five or More"
-msgstr "Az Öt vagy több névjegye"
+msgstr "Az Öt vagy több _névjegye"
 
 #: data/five-or-more.ui:65 data/org.gnome.five-or-more.appdata.xml.in:7
 #: data/org.gnome.five-or-more.desktop.in:3 src/main.vala:74 src/main.vala:168
