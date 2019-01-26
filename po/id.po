@@ -9,28 +9,93 @@ msgid ""
 msgstr ""
 "Project-Id-Version: five-or-more master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/five-or-more/issues\n"
-"POT-Creation-Date: 2018-03-27 17:19+0000\n"
-"PO-Revision-Date: 2018-04-23 13:13+0700\n"
+"POT-Creation-Date: 2019-01-11 15:40+0000\n"
+"PO-Revision-Date: 2019-01-12 16:32+0700\n"
 "Last-Translator: Kukuh Syafaat <kukuhsyafaat@gnome.org>\n"
 "Language-Team: Indonesian <gnome@i15n.org>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Plural-Forms: nplurals=2; plural= n!=1;\n"
 "X-Rosetta-Export-Date: 2007-04-23 05:58:10+0000\n"
 "X-Generator: Poedit 2.0.6\n"
 
-#: data/five-or-more.appdata.xml.in:7 data/five-or-more.desktop.in:3
-#: data/five-or-more.ui:18 src/five-or-more.c:70 src/five-or-more-app.c:573
+#: data/five-or-more-preferences.ui:13
+msgid "Preferences"
+msgstr "Preferensi"
+
+#: data/five-or-more-preferences.ui:36
+msgid "Appearance"
+msgstr "Tampilan"
+
+#: data/five-or-more-preferences.ui:60
+msgid "_Theme:"
+msgstr "_Tema:"
+
+#: data/five-or-more-preferences.ui:76
+msgid "balls"
+msgstr "bola"
+
+#: data/five-or-more-preferences.ui:77
+msgid "shapes"
+msgstr "bentuk"
+
+#: data/five-or-more-preferences.ui:78
+msgid "tango"
+msgstr "tango"
+
+#: data/five-or-more-preferences.ui:87
+msgid "B_ackground color:"
+msgstr "W_arna latar belakang:"
+
+#: data/five-or-more.ui:7
+msgid "_New Game"
+msgstr "Permaina_n Baru"
+
+#: data/five-or-more.ui:13
+msgid "S_cores"
+msgstr "N_ilai"
+
+#: data/five-or-more.ui:19
+msgid "_Small"
+msgstr "_Kecil"
+
+#: data/five-or-more.ui:24
+msgid "_Medium"
+msgstr "_Sedang"
+
+#: data/five-or-more.ui:29
+msgid "_Large"
+msgstr "_Besar"
+
+#: data/five-or-more.ui:36
+msgid "_Preferences"
+msgstr "_Preferensi"
+
+#: data/five-or-more.ui:40
+msgid "_Help"
+msgstr "_Bantuan"
+
+#: data/five-or-more.ui:45
+msgid "_About Five or More"
+msgstr "Tent_ang Five or More"
+
+#: data/five-or-more.ui:65 data/org.gnome.five-or-more.appdata.xml.in:7
+#: data/org.gnome.five-or-more.desktop.in:3 src/main.vala:74 src/main.vala:168
 msgid "Five or More"
 msgstr "Five or More"
 
-#: data/five-or-more.appdata.xml.in:8 data/five-or-more.desktop.in:4
+#: data/five-or-more.ui:77
+msgid "Next:"
+msgstr "Berikutnya:"
+
+#: data/org.gnome.five-or-more.appdata.xml.in:8
+#: data/org.gnome.five-or-more.desktop.in:4
 msgid "Remove colored balls from the board by forming lines"
 msgstr "Hapus bola berwarna dari papan dengan membuat baris"
 
-#: data/five-or-more.appdata.xml.in:10
+#: data/org.gnome.five-or-more.appdata.xml.in:10
 msgid ""
 "Five or More is the GNOME port of a once-popular computer game. Align five "
 "or more objects of the same color into a line to cause them to disappear and "
@@ -42,7 +107,7 @@ msgstr ""
 "nilai. Dapatkan lebih banyak nilai dengan menjajarkan sebanyak mungkin objek "
 "sebelum membersihkan mereka."
 
-#: data/five-or-more.appdata.xml.in:16
+#: data/org.gnome.five-or-more.appdata.xml.in:16
 msgid ""
 "More objects appear after every turn. Play for as long as possible, until "
 "the board is completely full!"
@@ -50,91 +115,19 @@ msgstr ""
 "Lebih banyak objek akan muncul setiap langkah. Bermainlah selama mungkin "
 "sampai papan benar-benar penuh!"
 
-#: data/five-or-more.appdata.xml.in:40
+#: data/org.gnome.five-or-more.appdata.xml.in:40
 msgid "The GNOME Project"
 msgstr "Projek GNOME"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/five-or-more.desktop.in:6
+#: data/org.gnome.five-or-more.desktop.in:6
 msgid "game;strategy;logic;"
 msgstr "permainan;strategi;logika;"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: data/five-or-more.desktop.in:9
-msgid "five-or-more"
-msgstr "five-or-more"
-
-#: data/five-or-more-preferences.ui:12 data/menu.ui:11 src/game-area.c:858
-msgid "Preferences"
-msgstr "Preferensi"
-
-#: data/five-or-more-preferences.ui:35
-msgid "Appearance"
-msgstr "Tampilan"
-
-#: data/five-or-more-preferences.ui:59
-msgid "_Image:"
-msgstr "_Gambar:"
-
-#: data/five-or-more-preferences.ui:74
-msgid "B_ackground color:"
-msgstr "W_arna latar belakang:"
-
-#: data/five-or-more-preferences.ui:116
-msgid "Board Size"
-msgstr "Ukuran Papan"
-
-#: data/five-or-more-preferences.ui:135
-msgid "_Small"
-msgstr "_Kecil"
-
-#: data/five-or-more-preferences.ui:154
-msgid "_Medium"
-msgstr "_Sedang"
-
-#: data/five-or-more-preferences.ui:173
-msgid "_Large"
-msgstr "_Besar"
-
-#: data/five-or-more-preferences.ui:203
-msgid "General"
-msgstr "Umum"
-
-#: data/five-or-more-preferences.ui:216
-msgid "_Use fast moves"
-msgstr "G_unakan langkah cepat"
-
-#: data/five-or-more.ui:30
-msgid "Next:"
-msgstr "Berikutnya:"
-
-#: data/five-or-more.ui:56
-msgid "Score:"
-msgstr "Nilai:"
-
-#: data/five-or-more.ui:76
-msgid "_New Game"
-msgstr "Mai_nkan Permainan Baru"
-
-#: data/five-or-more.ui:80
-msgid "Start a new puzzle"
-msgstr "Mulai permainan baru"
-
-#: data/menu.ui:7
-msgid "Scores"
-msgstr "_Daftar Nilai"
-
-#: data/menu.ui:17
-msgid "Help"
-msgstr "Bantuan"
-
-#: data/menu.ui:22
-msgid "About"
-msgstr "Tentang"
-
-#: data/menu.ui:26
-msgid "Quit"
-msgstr "Keluar"
+#: data/org.gnome.five-or-more.desktop.in:9
+msgid "org.gnome.five-or-more"
+msgstr "org.gnome.five-or-more"
 
 #: data/org.gnome.five-or-more.gschema.xml:5
 msgid "Playing field size"
@@ -206,72 +199,26 @@ msgstr "Tinggi jendela dalam piksel"
 msgid "true if the window is maximized"
 msgstr "bernilai \"true\" bila jendela dimaksimalkan"
 
-#.
-#. * Translatable strings file.
-#. * Add this file to your project's POTFILES.in.
-#. * DO NOT compile it as part of your application.
-#.
-#: data/translatable_themes.h:6
-msgctxt "themes"
-msgid "balls"
-msgstr "bola"
-
-#: data/translatable_themes.h:7
-msgctxt "themes"
-msgid "dots"
-msgstr "titik"
-
-#: data/translatable_themes.h:8
-msgctxt "themes"
-msgid "gumball"
-msgstr "gumball"
-
-#: data/translatable_themes.h:9
-msgctxt "themes"
-msgid "shapes"
-msgstr "bentuk"
-
-#: src/five-or-more-app.c:57
+#: src/game.vala:94
 msgctxt "board size"
 msgid "Small"
 msgstr "Kecil"
 
-#: src/five-or-more-app.c:58
+#: src/game.vala:95
 msgctxt "board size"
 msgid "Medium"
 msgstr "Sedang"
 
-#: src/five-or-more-app.c:59
+#: src/game.vala:96
 msgctxt "board size"
 msgid "Large"
 msgstr "Besar"
 
-#: src/five-or-more-app.c:233
-msgid "Game Over!"
-msgstr "Permainan Usai!"
-
-#: src/five-or-more-app.c:250
-msgid "Match five objects of the same type in a row to score!"
-msgstr ""
-"Bariskan 5 objek dengan tipe yang sama dalam satu baris untuk menambah skor!"
-
-#: src/five-or-more-app.c:405
-msgid "Are you sure you want to restart the game?"
-msgstr "Anda yakin hendak memulai ulang permainan?"
-
-#: src/five-or-more-app.c:408
-msgid "_Cancel"
-msgstr "_Batal"
-
-#: src/five-or-more-app.c:409
-msgid "_Restart"
-msgstr "_Ulangi"
-
-#: src/five-or-more-app.c:575
+#: src/main.vala:171
 msgid "GNOME port of the once-popular Color Lines game"
 msgstr "Port GNOME dari permainan Color Lines yang pernah populer"
 
-#: src/five-or-more-app.c:581
+#: src/main.vala:177
 msgid "translator-credits"
 msgstr ""
 "Mohammad DAMT <mdamt@bisnisweb.com>\n"
@@ -279,46 +226,95 @@ msgstr ""
 "Andika Triwidada <andika@gmail.com>, 2010, 2012, 2013, 2014, 2016.\n"
 "Vincent Sebastian The <vincent.s.the@gmail.com>, 2011, 2012.\n"
 "Dirgita <dirgitadevina@yahoo.co.id>, 2012.\n"
-"Kukuh Syafaat <kukuhsyafaat@gnome.org>, 2018."
+"Kukuh Syafaat <kukuhsyafaat@gnome.org>, 2018, 2019."
 
-#: src/five-or-more-app.c:693
-msgid "Board Size: "
-msgstr "Ukuran Papan: "
+#: src/window.vala:50
+msgid "Match five objects of the same type in a row to score!"
+msgstr ""
+"Bariskan 5 objek dengan tipe yang sama dalam satu baris untuk menambah skor!"
 
-#. Can't move there!
-#: src/game-area.c:635
+#: src/window.vala:51
 msgid "You can’t move there!"
 msgstr "Anda tidak bisa melangkah ke sana!"
 
-#: src/game-area.c:818
-#, c-format
-msgid ""
-"Unable to locate file:\n"
-"%s\n"
-"\n"
-"The default theme will be loaded instead."
-msgstr ""
-"Tidak bisa menemukan berkas:\n"
-"%s\n"
-"\n"
-"Tema baku akan dimuat."
+#: src/window.vala:52
+msgid "Game Over!"
+msgstr "Permainan Usai!"
 
-#: src/game-area.c:825
+#: src/window.vala:53
 #, c-format
-msgid ""
-"Unable to locate file:\n"
-"%s\n"
-"\n"
-"Please check that Five or More is installed correctly."
-msgstr ""
-"Tidak dapat memuat berkas:\n"
-"%s\n"
-"\n"
-"Silakan periksa apakah Five or More telah terinstal dengan benar"
+msgid "Score: %d"
+msgstr "Nilai: %d"
 
-#: src/game-area.c:852
-msgid "Could not load theme"
-msgstr "Tak bisa memuat tema"
+#: src/window.vala:87
+msgid "Board Size: "
+msgstr "Ukuran Papan: "
+
+#: src/window.vala:159
+msgid "Are you sure you want to restart the game?"
+msgstr "Anda yakin hendak memulai ulang permainan?"
+
+#: src/window.vala:161
+msgid "_Cancel"
+msgstr "_Batal"
+
+#: src/window.vala:162
+msgid "_Restart"
+msgstr "_Ulangi"
+
+#~ msgid "_Image:"
+#~ msgstr "_Gambar:"
+
+#~ msgid "Board Size"
+#~ msgstr "Ukuran Papan"
+
+#~ msgid "General"
+#~ msgstr "Umum"
+
+#~ msgid "_Use fast moves"
+#~ msgstr "G_unakan langkah cepat"
+
+#~ msgid "Start a new puzzle"
+#~ msgstr "Mulai permainan baru"
+
+#~ msgid "About"
+#~ msgstr "Tentang"
+
+#~ msgid "Quit"
+#~ msgstr "Keluar"
+
+#~ msgctxt "themes"
+#~ msgid "dots"
+#~ msgstr "titik"
+
+#~ msgctxt "themes"
+#~ msgid "gumball"
+#~ msgstr "gumball"
+
+#~ msgid ""
+#~ "Unable to locate file:\n"
+#~ "%s\n"
+#~ "\n"
+#~ "The default theme will be loaded instead."
+#~ msgstr ""
+#~ "Tidak bisa menemukan berkas:\n"
+#~ "%s\n"
+#~ "\n"
+#~ "Tema baku akan dimuat."
+
+#~ msgid ""
+#~ "Unable to locate file:\n"
+#~ "%s\n"
+#~ "\n"
+#~ "Please check that Five or More is installed correctly."
+#~ msgstr ""
+#~ "Tidak dapat memuat berkas:\n"
+#~ "%s\n"
+#~ "\n"
+#~ "Silakan periksa apakah Five or More telah terinstal dengan benar"
+
+#~ msgid "Could not load theme"
+#~ msgstr "Tak bisa memuat tema"
 
 #~ msgid "0"
 #~ msgstr "0"
