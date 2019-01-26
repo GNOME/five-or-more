@@ -1,5 +1,5 @@
 # Hungarian translation for five-or-more.
-# Copyright (C) 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2016, 2018 Free Software Foundation, Inc.
+# Copyright (C) 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2016, 2018, 2019 Free Software Foundation, Inc.
 # This file is distributed under the same license as the five-or-more package.
 #
 # Szabolcs Ban <shooby at gnome dot hu>, 1999, 2000, 2001.
@@ -9,32 +9,97 @@
 # Laszlo Dvornik <dvornik at gnome dot hu>, 2004.
 # Szabolcs Varga <shirokuma at shirokuma dot hu>, 2005.
 # Gabor Kelemen <kelemeng at gnome dot hu>, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2014.
-# Balázs Úr <urbalazs at gmail dot com>, 2013, 2014, 2016, 2018.
+# Balázs Úr <urbalazs at gmail dot com>, 2013, 2014, 2016, 2018, 2019.
 msgid ""
 msgstr ""
 "Project-Id-Version: five-or-more master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/five-or-more/issues\n"
-"POT-Creation-Date: 2018-08-25 08:53+0000\n"
-"PO-Revision-Date: 2018-08-31 12:50+0200\n"
-"Last-Translator: Meskó Balázs <mesko.balazs@fsf.hu>\n"
-"Language-Team: Hungarian <openscope at googlegroups dot com>\n"
+"POT-Creation-Date: 2019-01-11 15:40+0000\n"
+"PO-Revision-Date: 2019-01-26 21:44+0100\n"
+"Last-Translator: Balázs Úr <urbalazs@gmail.com>\n"
+"Language-Team: Hungarian <gnome-hu-list at gnome dot org>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.0.8\n"
+"X-Generator: Lokalize 1.2\n"
 
-#: data/five-or-more.appdata.xml.in:7 data/five-or-more.desktop.in:3
-#: data/five-or-more.ui:18 src/five-or-more.c:70 src/five-or-more-app.c:576
+#: data/five-or-more-preferences.ui:13
+msgid "Preferences"
+msgstr "Beállítások"
+
+#: data/five-or-more-preferences.ui:36
+msgid "Appearance"
+msgstr "Megjelenés"
+
+#: data/five-or-more-preferences.ui:60
+msgid "_Theme:"
+msgstr "_Téma:"
+
+#: data/five-or-more-preferences.ui:76
+msgid "balls"
+msgstr "labdák"
+
+#: data/five-or-more-preferences.ui:77
+msgid "shapes"
+msgstr "formák"
+
+#: data/five-or-more-preferences.ui:78
+msgid "tango"
+msgstr "tangó"
+
+#: data/five-or-more-preferences.ui:87
+msgid "B_ackground color:"
+msgstr "_Háttérszín:"
+
+#: data/five-or-more.ui:7
+msgid "_New Game"
+msgstr "Ú_j játék"
+
+#: data/five-or-more.ui:13
+msgid "S_cores"
+msgstr "_Pontszámok"
+
+#: data/five-or-more.ui:19
+msgid "_Small"
+msgstr "_Kicsi"
+
+#: data/five-or-more.ui:24
+msgid "_Medium"
+msgstr "Kö_zepes"
+
+#: data/five-or-more.ui:29
+msgid "_Large"
+msgstr "_Nagy"
+
+#: data/five-or-more.ui:36
+msgid "_Preferences"
+msgstr "_Beállítások"
+
+#: data/five-or-more.ui:40
+msgid "_Help"
+msgstr "_Súgó"
+
+#: data/five-or-more.ui:45
+msgid "_About Five or More"
+msgstr "Az Öt vagy több névjegye"
+
+#: data/five-or-more.ui:65 data/org.gnome.five-or-more.appdata.xml.in:7
+#: data/org.gnome.five-or-more.desktop.in:3 src/main.vala:74 src/main.vala:168
 msgid "Five or More"
 msgstr "Öt vagy több"
 
-#: data/five-or-more.appdata.xml.in:8 data/five-or-more.desktop.in:4
+#: data/five-or-more.ui:77
+msgid "Next:"
+msgstr "Következő:"
+
+#: data/org.gnome.five-or-more.appdata.xml.in:8
+#: data/org.gnome.five-or-more.desktop.in:4
 msgid "Remove colored balls from the board by forming lines"
 msgstr "Színes labdák leszedése a tábláról azok egymás mellé helyezésével"
 
-#: data/five-or-more.appdata.xml.in:10
+#: data/org.gnome.five-or-more.appdata.xml.in:10
 msgid ""
 "Five or More is the GNOME port of a once-popular computer game. Align five "
 "or more objects of the same color into a line to cause them to disappear and "
@@ -46,7 +111,7 @@ msgstr ""
 "pontokat kapjon. A legtöbb pont a lehető legtöbb objektum egy sorba "
 "rendezésével érhető el."
 
-#: data/five-or-more.appdata.xml.in:16
+#: data/org.gnome.five-or-more.appdata.xml.in:16
 msgid ""
 "More objects appear after every turn. Play for as long as possible, until "
 "the board is completely full!"
@@ -54,91 +119,19 @@ msgstr ""
 "Minden kör után több objektum jelenik meg. Játsszon amíg csak lehet, amíg a "
 "tábla meg nem telik!"
 
-#: data/five-or-more.appdata.xml.in:40
+#: data/org.gnome.five-or-more.appdata.xml.in:40
 msgid "The GNOME Project"
 msgstr "A GNOME projekt"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/five-or-more.desktop.in:6
+#: data/org.gnome.five-or-more.desktop.in:6
 msgid "game;strategy;logic;"
 msgstr "játék;stratégia;logika;"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: data/five-or-more.desktop.in:9
-msgid "five-or-more"
-msgstr "five-or-more"
-
-#: data/five-or-more-preferences.ui:12 data/menu.ui:11 src/game-area.c:858
-msgid "Preferences"
-msgstr "Beállítások"
-
-#: data/five-or-more-preferences.ui:35
-msgid "Appearance"
-msgstr "Megjelenés"
-
-#: data/five-or-more-preferences.ui:59
-msgid "_Image:"
-msgstr "Ké_p:"
-
-#: data/five-or-more-preferences.ui:74
-msgid "B_ackground color:"
-msgstr "_Háttérszín:"
-
-#: data/five-or-more-preferences.ui:116
-msgid "Board Size"
-msgstr "A tábla mérete"
-
-#: data/five-or-more-preferences.ui:135
-msgid "_Small"
-msgstr "_Kicsi"
-
-#: data/five-or-more-preferences.ui:154
-msgid "_Medium"
-msgstr "Kö_zepes"
-
-#: data/five-or-more-preferences.ui:173
-msgid "_Large"
-msgstr "_Nagy"
-
-#: data/five-or-more-preferences.ui:203
-msgid "General"
-msgstr "Általános"
-
-#: data/five-or-more-preferences.ui:216
-msgid "_Use fast moves"
-msgstr "_Gyors mozgások használata"
-
-#: data/five-or-more.ui:30
-msgid "Next:"
-msgstr "Következő:"
-
-#: data/five-or-more.ui:56
-msgid "Score:"
-msgstr "Pont:"
-
-#: data/five-or-more.ui:76
-msgid "_New Game"
-msgstr "Ú_j játék"
-
-#: data/five-or-more.ui:80
-msgid "Start a new puzzle"
-msgstr "Új fejtörő indítása"
-
-#: data/menu.ui:7
-msgid "Scores"
-msgstr "Pontszámok"
-
-#: data/menu.ui:17
-msgid "Help"
-msgstr "Súgó"
-
-#: data/menu.ui:22
-msgid "About"
-msgstr "Névjegy"
-
-#: data/menu.ui:26
-msgid "Quit"
-msgstr "Kilépés"
+#: data/org.gnome.five-or-more.desktop.in:9
+msgid "org.gnome.five-or-more"
+msgstr "org.gnome.five-or-more"
 
 #: data/org.gnome.five-or-more.gschema.xml:5
 msgid "Playing field size"
@@ -210,71 +203,26 @@ msgstr "Az ablak magassága képpontokban"
 msgid "true if the window is maximized"
 msgstr "Az ablak teljes méretű-e"
 
-#.
-#. * Translatable strings file.
-#. * Add this file to your project's POTFILES.in.
-#. * DO NOT compile it as part of your application.
-#.
-#: data/translatable_themes.h:6
-msgctxt "themes"
-msgid "balls"
-msgstr "labdák"
-
-#: data/translatable_themes.h:7
-msgctxt "themes"
-msgid "dots"
-msgstr "pontok"
-
-#: data/translatable_themes.h:8
-msgctxt "themes"
-msgid "gumball"
-msgstr "rágógumi"
-
-#: data/translatable_themes.h:9
-msgctxt "themes"
-msgid "shapes"
-msgstr "formák"
-
-#: src/five-or-more-app.c:57
+#: src/game.vala:94
 msgctxt "board size"
 msgid "Small"
 msgstr "Kicsi"
 
-#: src/five-or-more-app.c:58
+#: src/game.vala:95
 msgctxt "board size"
 msgid "Medium"
 msgstr "Közepes"
 
-#: src/five-or-more-app.c:59
+#: src/game.vala:96
 msgctxt "board size"
 msgid "Large"
 msgstr "Nagy"
 
-#: src/five-or-more-app.c:233
-msgid "Game Over!"
-msgstr "Vége a játéknak!"
-
-#: src/five-or-more-app.c:250
-msgid "Match five objects of the same type in a row to score!"
-msgstr "Helyezzen el öt egyszínű objektumot egy sorba!"
-
-#: src/five-or-more-app.c:405
-msgid "Are you sure you want to restart the game?"
-msgstr "Biztosan újra szeretné indítani a játékot?"
-
-#: src/five-or-more-app.c:408
-msgid "_Cancel"
-msgstr "_Mégse"
-
-#: src/five-or-more-app.c:409
-msgid "_Restart"
-msgstr "Ú_jraindítás"
-
-#: src/five-or-more-app.c:578
+#: src/main.vala:171
 msgid "GNOME port of the once-popular Color Lines game"
 msgstr "A népszerű Color Lines játék GNOME-átirata"
 
-#: src/five-or-more-app.c:584
+#: src/main.vala:177
 msgid "translator-credits"
 msgstr ""
 "Bán Szabolcs <shooby at gnome dot hu>\n"
@@ -285,74 +233,36 @@ msgstr ""
 "Tímár András <timar at gnome dot hu>\n"
 "Varga Szabolcs <shirokuma at shirokuma dot hu>"
 
-#: src/five-or-more-app.c:694
-msgid "Board Size: "
-msgstr "A tábla mérete: "
+#: src/window.vala:50
+msgid "Match five objects of the same type in a row to score!"
+msgstr "Helyezzen el öt egyszínű objektumot egy sorba!"
 
-#. Can't move there!
-#: src/game-area.c:635
+#: src/window.vala:51
 msgid "You can’t move there!"
 msgstr "Nem léphet oda!"
 
-#: src/game-area.c:818
+#: src/window.vala:52
+msgid "Game Over!"
+msgstr "Vége a játéknak!"
+
+#: src/window.vala:53
 #, c-format
-msgid ""
-"Unable to locate file:\n"
-"%s\n"
-"\n"
-"The default theme will be loaded instead."
-msgstr ""
-"A következő fájl nem található meg:\n"
-"„%s”\n"
-"\n"
-"Helyette az alapértelmezett téma kerül betöltésre."
+msgid "Score: %d"
+msgstr "Pontszám: %d"
 
-#: src/game-area.c:825
-#, c-format
-msgid ""
-"Unable to locate file:\n"
-"%s\n"
-"\n"
-"Please check that Five or More is installed correctly."
-msgstr ""
-"A következő fájl nem található meg:\n"
-"%s\n"
-"\n"
-"Ellenőrizze, hogy az Öt vagy több megfelelően van-e telepítve."
+#: src/window.vala:87
+msgid "Board Size: "
+msgstr "A tábla mérete: "
 
-#: src/game-area.c:852
-msgid "Could not load theme"
-msgstr "Nem lehet betölteni a témát"
+#: src/window.vala:159
+msgid "Are you sure you want to restart the game?"
+msgstr "Biztosan újra szeretné indítani a játékot?"
 
-#~ msgid "0"
-#~ msgstr "0"
+#: src/window.vala:161
+msgid "_Cancel"
+msgstr "_Mégse"
 
-#~ msgid "Five or More Scores"
-#~ msgstr "Öt vagy több pontszámok"
+#: src/window.vala:162
+msgid "_Restart"
+msgstr "Ú_jraindítás"
 
-#~ msgid "_Board size:"
-#~ msgstr "A tábla _mérete:"
-
-#~ msgctxt "score-dialog"
-#~ msgid "Time"
-#~ msgstr "Idő"
-
-#~ msgctxt "score-dialog"
-#~ msgid "Score"
-#~ msgstr "Pontszám"
-
-#~ msgctxt "score-dialog"
-#~ msgid "%1$dm %2$ds"
-#~ msgstr "%1$dp %2$dmp"
-
-#~ msgid "_Quit"
-#~ msgstr "_Kilépés"
-
-#~ msgid "_Undo"
-#~ msgstr "_Visszavonás"
-
-#~ msgid "_Close"
-#~ msgstr "_Bezárás"
-
-#~ msgid "Date"
-#~ msgstr "Dátum"
