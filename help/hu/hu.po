@@ -1,16 +1,16 @@
 # Hungarian translation for five-or-more help.
-# Copyright (C) 2013, 2014, 2016, 2017, 2018 Free Software Foundation, Inc.
+# Copyright (C) 2013, 2014, 2016, 2017, 2018, 2019 Free Software Foundation, Inc.
 # This file is distributed under the same license as the five-or-more help.
 #
 # Gabor Kelemen <kelemeng at gnome dot hu>, 2013, 2014, 2016, 2017.
-# Balázs Úr <urbalazs at gmail dot com>, 2014, 2018.
+# Balázs Úr <urbalazs at gmail dot com>, 2014, 2018, 2019.
 msgid ""
 msgstr ""
 "Project-Id-Version: five-or-more master\n"
-"POT-Creation-Date: 2018-09-13 15:19+0000\n"
-"PO-Revision-Date: 2018-09-13 22:11+0200\n"
+"POT-Creation-Date: 2019-01-18 19:57+0000\n"
+"PO-Revision-Date: 2019-01-29 00:14+0100\n"
 "Last-Translator: Balázs Úr <urbalazs@gmail.com>\n"
-"Language-Team: Hungarian <openscope at googlegroups dot com>\n"
+"Language-Team: Hungarian <gnome-hu-list at gnome dot org>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,16 +25,15 @@ msgstr "Kelemen Gábor <kelemeng at gnome dot hu>, 2013, 2014"
 
 #. (itstool) path: credit/name
 #: C/bug-filing.page:10 C/change-board-size.page:14 C/change-theme.page:14
-#: C/develop.page:10 C/documentation.page:8 C/fast-moves.page:14
-#: C/index.page:17 C/scores.page:14 C/shortcuts.page:9 C/strategy.page:9
-#: C/translate.page:10
+#: C/develop.page:10 C/documentation.page:8 C/index.page:17 C/scores.page:14
+#: C/shortcuts.page:9 C/strategy.page:9 C/translate.page:10
 msgid "Tiffany Antopolski"
 msgstr "Tiffany Antopolski"
 
 #. (itstool) path: credit/years
 #: C/bug-filing.page:12 C/change-board-size.page:11 C/develop.page:12
-#: C/documentation.page:10 C/fast-moves.page:11 C/play.page:12 C/rules.page:12
-#: C/scores.page:11 C/shortcuts.page:11 C/translate.page:12
+#: C/documentation.page:10 C/play.page:12 C/rules.page:12 C/scores.page:11
+#: C/shortcuts.page:11 C/translate.page:12
 msgid "2011"
 msgstr "2011"
 
@@ -51,11 +50,6 @@ msgstr "Hiba jelentése"
 
 #. (itstool) path: page/p
 #: C/bug-filing.page:20
-#| msgid ""
-#| "<app>Five or More</app> is maintained by a volunteer community. You are "
-#| "welcome to participate. If you notice a problem you can file a <em>bug "
-#| "report</em>. To file a bug, go to <link href=\"https://bugzilla.gnome.org/"
-#| "\"/>."
 msgid ""
 "<app>Five or More</app> is maintained by a volunteer community. You are "
 "welcome to participate. If you notice a problem you can file a <em>bug "
@@ -92,8 +86,8 @@ msgstr ""
 "Azért is be kell jelentkeznie a meglévő fiókjai valamelyikének használatával "
 "vagy regisztrálnia kell egy új fiókot, hogy frissítéseket kapjon e-mailben a "
 "hiba állapotáról. Ha még nincs fiókja, és nem szeretné az elérhető "
-"bejelentkezési lehetőségeket egyikét sem használni, akkor kattintson a <gui>"
-"Register</gui> hivatkozásra egy fiók létrehozásához."
+"bejelentkezési lehetőségeket egyikét sem használni, akkor kattintson a "
+"<gui>Register</gui> hivatkozásra egy fiók létrehozásához."
 
 #. (itstool) path: page/p
 #: C/bug-filing.page:30
@@ -105,24 +99,23 @@ msgid ""
 "<link href=\"https://gitlab.gnome.org/GNOME/five-or-more/issues\">browse</"
 "link> for the bug to see if it already exists."
 msgstr ""
-"Ha létrehozta fiókját, jelentkezzen be, kattintson a <guiseq><gui>Projects<"
-"/gui><gui>five-or-more</gui><gui>Issues</gui><gui>New issue</gui></guiseq> "
-"hivatkozásokra. Hiba jelentése előtt olvassa el a <link "
-"href=\"https://bugzilla.gnome.org/page.cgi?id=bug-writing.html\">"
-"hibajelentés-írási irányelveket</link>, és <link href=\"https://gitlab.gnome."
-"org/GNOME/five-or-more/issues\">ellenőrizze</link>, hogy nincs-e már a hiba "
-"bejelentve."
+"Ha létrehozta fiókját, jelentkezzen be, kattintson a <guiseq><gui>Projects</"
+"gui><gui>five-or-more</gui><gui>Issues</gui><gui>New issue</gui></guiseq> "
+"hivatkozásokra. Hiba jelentése előtt olvassa el a <link href=\"https://"
+"bugzilla.gnome.org/page.cgi?id=bug-writing.html\">hibajelentés-írási "
+"irányelveket</link>, és <link href=\"https://gitlab.gnome.org/GNOME/five-or-"
+"more/issues\">ellenőrizze</link>, hogy nincs-e már a hiba bejelentve."
 
 #. (itstool) path: page/p
-#: C/bug-filing.page:37
+#: C/bug-filing.page:33
 msgid ""
 "Fill in the Title and Description sections and click <gui>Submit issue</gui>."
 msgstr ""
-"Töltse ki a Title és a Description szakaszokat, majd kattintson a <gui>Submit "
-"issue</gui> gombra."
+"Töltse ki a Title és a Description szakaszokat, majd kattintson a "
+"<gui>Submit issue</gui> gombra."
 
 #. (itstool) path: page/p
-#: C/bug-filing.page:40
+#: C/bug-filing.page:36
 msgid ""
 "Your report will be given an ID number, and its status will be updated as it "
 "is being dealt with."
@@ -131,14 +124,13 @@ msgstr ""
 "feldolgozása során frissülni fog."
 
 #. (itstool) path: credit/name
-#: C/change-board-size.page:9 C/change-theme.page:9 C/fast-moves.page:9
-#: C/index.page:13 C/play.page:10 C/scores.page:9
+#: C/change-board-size.page:9 C/change-theme.page:9 C/index.page:13
+#: C/play.page:10 C/scores.page:9
 msgid "Lahiru lanka"
 msgstr "Lahiru lanka"
 
 #. (itstool) path: credit/name
-#: C/change-board-size.page:18 C/fast-moves.page:18 C/play.page:15
-#: C/translate.page:15
+#: C/change-board-size.page:18 C/play.page:15 C/translate.page:15
 msgid "Michael Hill"
 msgstr "Michael Hill"
 
@@ -169,7 +161,7 @@ msgstr ""
 "gui> vagy <gui>Nagy</gui> lehetőségek egyikét."
 
 #. (itstool) path: note/p
-#: C/change-board-size.page:32
+#: C/change-board-size.page:31
 msgid ""
 "While a larger board gives you more space, there are also more objects in "
 "play for each turn."
@@ -178,123 +170,124 @@ msgstr ""
 "van játékban."
 
 #. (itstool) path: section/title
-#: C/change-board-size.page:37
+#: C/change-board-size.page:36
 msgid "Board parameters"
 msgstr "Tábla paraméterei"
 
 #. (itstool) path: section/p
-#: C/change-board-size.page:38
+#: C/change-board-size.page:37
 msgid "The 3 different board sizes have the following parameters:"
 msgstr "A 3 különböző táblaméret a következő paraméterekkel rendelkezik:"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:42
+#: C/change-board-size.page:41
 msgid "<em>Size</em>"
 msgstr "<em>Méret</em>"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:43
+#: C/change-board-size.page:42
 msgid "<em>Width</em>"
 msgstr "<em>Szélesség</em>"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:44
+#: C/change-board-size.page:43
 msgid "<em>Height</em>"
 msgstr "<em>Magasság</em>"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:45
+#: C/change-board-size.page:44
 msgid "<em>Number of types</em>"
 msgstr "<em>Típusok száma</em>"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:46
+#: C/change-board-size.page:45
 msgid "<em>New objects per turn</em>"
 msgstr "<em>Új objektumok körönként</em>"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:47
+#: C/change-board-size.page:46
 msgid "<em>Number of cells</em>"
 msgstr "<em>Cellák száma</em>"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:51
+#: C/change-board-size.page:50
 msgid "Small"
 msgstr "Kicsi"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:52 C/change-board-size.page:53
-#: C/change-board-size.page:61 C/change-board-size.page:66 C/scores.page:41
+#: C/change-board-size.page:51 C/change-board-size.page:52
+#: C/change-board-size.page:62 C/change-board-size.page:71
+#: C/change-board-size.page:72 C/scores.page:41
 msgid "7"
 msgstr "7"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:54 C/scores.page:33
+#: C/change-board-size.page:53 C/scores.page:33
 msgid "5"
 msgstr "5"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:55 C/change-board-size.page:61
+#: C/change-board-size.page:54 C/change-board-size.page:63
 msgid "3"
 msgstr "3"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:56
+#: C/change-board-size.page:55 C/scores.page:62
 msgid "49"
 msgstr "49"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:60
+#: C/change-board-size.page:59
 msgid "Medium"
 msgstr "Közepes"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:60 C/scores.page:49
+#: C/change-board-size.page:60 C/change-board-size.page:61 C/scores.page:49
 msgid "9"
 msgstr "9"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:61
+#: C/change-board-size.page:64
 msgid "81"
 msgstr "81"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:65
+#: C/change-board-size.page:68
 msgid "Large"
 msgstr "Nagy"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:65
+#: C/change-board-size.page:69
 msgid "20"
 msgstr "20"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:65
+#: C/change-board-size.page:70
 msgid "15"
 msgstr "15"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:66
+#: C/change-board-size.page:73
 msgid "300"
 msgstr "300"
 
 #. (itstool) path: section/title
-#: C/change-board-size.page:74
+#: C/change-board-size.page:80
 msgid "The 3 board sizes"
 msgstr "A 3 táblaméret"
 
 #. (itstool) path: media/p
-#: C/change-board-size.page:80
+#: C/change-board-size.page:86
 msgid "<app>Five or More</app> Small board"
 msgstr "<app>Öt vagy több</app> kis tábla"
 
 #. (itstool) path: media/p
-#: C/change-board-size.page:85
+#: C/change-board-size.page:91
 msgid "<app>Five or More</app> medium size board"
 msgstr "<app>Öt vagy több</app> közepes tábla"
 
 #. (itstool) path: media/p
-#: C/change-board-size.page:90
+#: C/change-board-size.page:96
 msgid "<app>Five or More</app> large size board"
 msgstr "<app>Öt vagy több</app> nagy tábla"
 
@@ -314,7 +307,7 @@ msgid "To change the appearance of the pieces and the board:"
 msgstr "A figurák és a tábla megjelenésének megváltoztatása:"
 
 #. (itstool) path: item/p
-#: C/change-theme.page:24 C/fast-moves.page:28
+#: C/change-theme.page:24
 msgid "Click <guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq>."
 msgstr ""
 "Válassza a <guiseq><gui>Beállítások</gui><gui>Beállítások</gui></guiseq> "
@@ -323,12 +316,11 @@ msgstr ""
 #. (itstool) path: item/p
 #: C/change-theme.page:27
 msgid ""
-"Select <gui>balls</gui>, <gui>dots</gui>, <gui>gumball</gui> or <gui>shapes</"
-"gui> from the <gui>Image</gui> drop down menu to change the playing pieces."
+"Select <gui>balls</gui> or <gui>shapes</gui> from the <gui>Themes</gui> drop "
+"down menu to change the playing pieces."
 msgstr ""
-"A <gui>Kép</gui> legördülő menüből válassza a <gui>balls</gui>, <gui>dots</"
-"gui>, <gui>gumball</gui> vagy <gui>shapes</gui> pontot a labdaképek "
-"megváltoztatásához."
+"A <gui>Témák</gui> legördülő menüből válassza a <gui>labdák</gui> vagy az <"
+"gui>alakzatok</gui> menüpontot a figurák megváltoztatásához."
 
 #. (itstool) path: item/p
 #: C/change-theme.page:29
@@ -340,14 +332,14 @@ msgstr ""
 "eléréséhez."
 
 #. (itstool) path: item/p
-#: C/change-theme.page:33 C/fast-moves.page:30
+#: C/change-theme.page:33
 msgid "Click <gui>Close</gui>."
 msgstr "Nyomja meg a <gui>Bezárás</gui> gombot."
 
 #. (itstool) path: section/title
 #: C/change-theme.page:37
-msgid "Images available"
-msgstr "Elérhető képek"
+msgid "Available Themes"
+msgstr "Elérhető témák"
 
 #. (itstool) path: media/p
 #: C/change-theme.page:39
@@ -356,28 +348,8 @@ msgstr "Az Öt vagy több különböző labdákkal."
 
 #. (itstool) path: media/p
 #: C/change-theme.page:43
-msgid "<app>Five or More</app> with different dots"
-msgstr "Az <app>Öt vagy több</app> különböző pontokkal"
-
-#. (itstool) path: media/p
-#: C/change-theme.page:47
-msgid "<app>Five or More</app> with different gumballs"
-msgstr "Az <app>Öt vagy több</app> különböző gumilabdákkal"
-
-#. (itstool) path: media/p
-#: C/change-theme.page:51
 msgid "<app>Five or More</app> with different shapes"
 msgstr "Az <app>Öt vagy több</app> különböző alakzatokkal"
-
-#. (itstool) path: section/title
-#: C/change-theme.page:56
-msgid "Background colors available"
-msgstr "Elérhető háttérszínek"
-
-#. (itstool) path: media/p
-#: C/change-theme.page:58
-msgid "Five or More color palette"
-msgstr "Az Öt vagy több színpalettája"
 
 #. (itstool) path: page/title
 #: C/develop.page:19
@@ -446,32 +418,6 @@ msgstr ""
 "A projekt <link href=\"https://wiki.gnome.org/DocumentationProject/"
 "Contributing\">wiki</link> oldala tartalmazza a legfontosabb információkat."
 
-#. (itstool) path: page/title
-#: C/fast-moves.page:25
-msgid "Change speed"
-msgstr "Sebesség megváltoztatása"
-
-#. (itstool) path: page/p
-#: C/fast-moves.page:26
-msgid "To speed up object movements:"
-msgstr "Az objektummozgások felgyorsítása:"
-
-#. (itstool) path: item/p
-#: C/fast-moves.page:29
-msgid "Under <gui>General</gui>, select <gui>Use fast moves</gui>."
-msgstr ""
-"Az <gui>Általános</gui> alatt válassza a <gui>Gyors lépések használata</gui> "
-"pontot."
-
-#. (itstool) path: note/p
-#: C/fast-moves.page:33
-msgid ""
-"Any changes you make are instantly applied and remembered for the next time "
-"you run <app>Five or More</app>."
-msgstr ""
-"A változtatások azonnal alkalmazásra kerülnek, és az <app>Öt vagy több</app> "
-"következő futtatásakor is érvényben lesznek."
-
 #. (itstool) path: info/title
 #: C/index.page:8
 msgctxt "link"
@@ -495,7 +441,7 @@ msgid "<_:media-1/> Five or More"
 msgstr "<_:media-1/> Öt vagy több"
 
 #. (itstool) path: page/p
-#: C/index.page:29
+#: C/index.page:30
 msgid ""
 "<app>Five or More</app> is a deceptively simple brain workout. The goal is "
 "to place at least five objects of the same <link xref=\"change-theme#images"
@@ -661,16 +607,20 @@ msgstr ""
 
 #. (itstool) path: item/p
 #: C/play.page:36
-msgid "Click on the destination cell."
-msgstr "Kattintson a cél cellára."
+msgid ""
+"Click on the destination cell. The chosen object will move to the "
+"destination cell, if there is any clear path."
+msgstr ""
+"Kattintson a cél cellára. A választott objektum a cél cellába lesz mozgatva, "
+"ha létezik szabad útvonal."
 
 #. (itstool) path: section/title
-#: C/play.page:44
+#: C/play.page:45
 msgid "Using the keyboard"
 msgstr "A billentyűzet használatával"
 
 #. (itstool) path: item/p
-#: C/play.page:47
+#: C/play.page:49
 msgid ""
 "Press any of the arrow keys. An outline around a cell will appear on the "
 "board."
@@ -679,31 +629,37 @@ msgstr ""
 "cella körül."
 
 #. (itstool) path: item/p
-#: C/play.page:49
-msgid "Using the arrow keys, navigate to the object you want to move."
-msgstr "A nyílbillentyűkkel léptesse a körvonalat a mozgatandó objektumra."
-
-#. (itstool) path: item/p
-#: C/play.page:51
-msgid ""
-"To select the object, press the <key>Enter</key> or <key>Spacebar</key>. The "
-"selected object will begin spinning."
-msgstr ""
-"Az objektum kiválasztásához nyomja meg az <key>Entert</key> vagy a "
-"<key>szóközt</key>. A kijelölt objektum forogni kezd."
-
-#. (itstool) path: item/p
 #: C/play.page:53
 msgid ""
-"Move to the destination cell, and again press the <key>Enter</key> or "
-"<key>Spacebar</key>. The chosen object will move to the destination cell."
+"Using the arrow keys, and the <key>Home</key>, <key>End</key>, <key>PageUp</"
+"key> and <key>PageDown</key> keys navigate to the object you want to move."
 msgstr ""
-"Lépjen a cél cellára, majd nyomja meg újra az <key>Enter</key> vagy a "
-"<key>szóköz</key> billentyűt. A kijelölt objektum a cél cellába lesz "
-"mozgatva."
+"A nyílbillentyűk és a <key>Home</key>, <key>End</key>, <key>PageUp</key> és <"
+"key>PageDown</key> billentyűk használatával navigáljon ahhoz az objektumhoz, "
+"amelyet mozgatni szeretne."
+
+#. (itstool) path: item/p
+#: C/play.page:56
+msgid ""
+"To select the object, press the <key>Enter</key>, <key>Spacebar</key> or "
+"<key>Return</key>. The selected object will begin spinning."
+msgstr ""
+"Az objektum kiválasztásához nyomja meg az <key>Enter</key>, a <key>Szóköz<"
+"/key> vagy a <key>Return</key> billentyűt. A kijelölt objektum forogni kezd."
+
+#. (itstool) path: item/p
+#: C/play.page:59
+msgid ""
+"Move to the destination cell, and again press the <key>Enter</key>, "
+"<key>Spacebar</key> or <key>Return</key>. The chosen object will move to the "
+"destination cell, if there is any clear path."
+msgstr ""
+"Lépjen a cél cellára, majd nyomja meg újra az <key>Enter</key>, a <key>"
+"Szóköz</key> vagy a <key>Return</key> billentyűt. A kijelölt objektum a cél "
+"cellába lesz mozgatva, ha létezik szabad útvonal."
 
 #. (itstool) path: section/title
-#: C/play.page:62
+#: C/play.page:69
 msgid "Video demonstration"
 msgstr "Videobemutató"
 
@@ -827,14 +783,14 @@ msgid "6"
 msgstr "6"
 
 #. (itstool) path: td/p
-#: C/scores.page:38 C/scores.page:61
-msgid "12"
-msgstr "12"
+#: C/scores.page:38
+msgid "18"
+msgstr "18"
 
 #. (itstool) path: td/p
 #: C/scores.page:42
-msgid "18"
-msgstr "18"
+msgid "25"
+msgstr "25"
 
 #. (itstool) path: td/p
 #: C/scores.page:45
@@ -843,18 +799,18 @@ msgstr "8"
 
 #. (itstool) path: td/p
 #: C/scores.page:46
-msgid "28"
-msgstr "28"
+msgid "31"
+msgstr "31"
 
 #. (itstool) path: td/p
 #: C/scores.page:50
-msgid "42"
-msgstr "42"
+msgid "36"
+msgstr "36"
 
 #. (itstool) path: td/p
 #: C/scores.page:54
-msgid "82"
-msgstr "82"
+msgid "41"
+msgstr "41"
 
 #. (itstool) path: td/p
 #: C/scores.page:57
@@ -863,13 +819,13 @@ msgstr "11"
 
 #. (itstool) path: td/p
 #: C/scores.page:58
-msgid "108"
-msgstr "108"
+msgid "45"
+msgstr "45"
 
 #. (itstool) path: td/p
-#: C/scores.page:62
-msgid "138"
-msgstr "138"
+#: C/scores.page:61
+msgid "12"
+msgstr "12"
 
 #. (itstool) path: td/p
 #: C/scores.page:65
@@ -878,21 +834,21 @@ msgstr "13"
 
 #. (itstool) path: td/p
 #: C/scores.page:66
-msgid "172"
-msgstr "172"
+msgid "53"
+msgstr "53"
 
 #. (itstool) path: td/p
-#: C/scores.page:69
+#: C/scores.page:69 C/scores.page:73
 msgid "14"
 msgstr "14"
 
 #. (itstool) path: td/p
-#: C/scores.page:70
-msgid "210"
-msgstr "210"
+#: C/scores.page:70 C/scores.page:74
+msgid "56"
+msgstr "56"
 
 #. (itstool) path: note/p
-#: C/scores.page:76
+#: C/scores.page:80
 msgid ""
 "You can view the high scores by clicking <guiseq><gui>Game</gui><gui>Scores</"
 "gui></guiseq>."
@@ -901,7 +857,7 @@ msgstr ""
 "kiválasztásával érheti el."
 
 #. (itstool) path: note/p
-#: C/scores.page:78
+#: C/scores.page:82
 msgid ""
 "The <app>Five or More</app> scores are recorded according to the board size. "
 "You can select the <gui>Board Size</gui> of interest using the drop down "
@@ -961,13 +917,13 @@ msgstr ""
 "néhány stratégiai elem. Néhány, a játék során észben tartandó tanács:"
 
 #. (itstool) path: item/p
-#: C/strategy.page:22
+#: C/strategy.page:23
 msgid "Try to set at least three same objects with your every move."
 msgstr ""
 "Próbáljon legalább három hasonló objektumot sorba állítani minden lépéssel."
 
 #. (itstool) path: item/p
-#: C/strategy.page:23
+#: C/strategy.page:24
 msgid ""
 "The board can quickly become very crowded with objects, so it is best to "
 "think ahead. Pay attention to the collection of <gui>Next</gui> objects, "
@@ -978,7 +934,7 @@ msgstr ""
 "lépjen."
 
 #. (itstool) path: item/p
-#: C/strategy.page:24
+#: C/strategy.page:25
 msgid ""
 "Try to line up more than 5 objects. For example, if you have 6 objects, you "
 "can line up 2 and 3 with a space in between, and then connect them by "
