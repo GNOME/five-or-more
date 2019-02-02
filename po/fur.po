@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: five-or-more master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/five-or-more/issues\n"
-"POT-Creation-Date: 2018-10-17 21:56+0000\n"
-"PO-Revision-Date: 2018-12-24 18:45+0100\n"
+"POT-Creation-Date: 2019-01-11 15:40+0000\n"
+"PO-Revision-Date: 2019-02-02 11:34+0100\n"
 "Last-Translator: Fabio Tomat <f.t.public@gmail.com>\n"
 "Language-Team: Friulian <fur@li.org>\n"
 "Language: fur\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.2\n"
 
-#: data/five-or-more-preferences.ui:13 data/five-or-more.ui:36
+#: data/five-or-more-preferences.ui:13
 msgid "Preferences"
 msgstr "Preferencis"
 
@@ -46,12 +46,12 @@ msgid "B_ackground color:"
 msgstr "Colôr di _sfont:"
 
 #: data/five-or-more.ui:7
-msgid "New Game"
-msgstr "Gnove partide"
+msgid "_New Game"
+msgstr "_Gnove partide"
 
 #: data/five-or-more.ui:13
-msgid "Scores"
-msgstr "Risultâts"
+msgid "S_cores"
+msgstr "_Risultâts"
 
 #: data/five-or-more.ui:19
 msgid "_Small"
@@ -65,13 +65,17 @@ msgstr "_Medie"
 msgid "_Large"
 msgstr "_Grande"
 
+#: data/five-or-more.ui:36
+msgid "_Preferences"
+msgstr "_Preferencis"
+
 #: data/five-or-more.ui:40
-msgid "Help"
-msgstr "Jutori"
+msgid "_Help"
+msgstr "_Jutori"
 
 #: data/five-or-more.ui:45
-msgid "About Five or More"
-msgstr "Informazions su Cinc o plui"
+msgid "_About Five or More"
+msgstr "_Informazions su Cinc o plui"
 
 #: data/five-or-more.ui:65 data/org.gnome.five-or-more.appdata.xml.in:7
 #: data/org.gnome.five-or-more.desktop.in:3 src/main.vala:74 src/main.vala:168
@@ -117,7 +121,6 @@ msgstr "zûc;zûcs;strategjie;logjiche;"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
 #: data/org.gnome.five-or-more.desktop.in:9
-#| msgid "five-or-more"
 msgid "org.gnome.five-or-more"
 msgstr "org.gnome.five-or-more"
 
