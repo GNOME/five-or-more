@@ -1,14 +1,14 @@
 # Polish translation for five-or-more help.
-# Copyright © 2017-2018 the five-or-more authors.
+# Copyright © 2017-2019 the five-or-more authors.
 # This file is distributed under the same license as the five-or-more help.
-# Piotr Drąg <piotrdrag@gmail.com>, 2017-2018.
-# Aviary.pl <community-poland@mozilla.org>, 2017-2018.
+# Piotr Drąg <piotrdrag@gmail.com>, 2017-2019.
+# Aviary.pl <community-poland@mozilla.org>, 2017-2019.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: five-or-more-help\n"
-"POT-Creation-Date: 2018-03-27 20:38+0000\n"
-"PO-Revision-Date: 2018-08-12 00:55+0200\n"
+"POT-Creation-Date: 2019-01-18 19:57+0000\n"
+"PO-Revision-Date: 2019-02-03 17:15+0100\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <community-poland@mozilla.org>\n"
 "Language: pl\n"
@@ -22,21 +22,20 @@ msgstr ""
 msgctxt "_"
 msgid "translator-credits"
 msgstr ""
-"Piotr Drąg <piotrdrag@gmail.com>, 2017-2018\n"
-"Aviary.pl <community-poland@mozilla.org>, 2017-2018"
+"Piotr Drąg <piotrdrag@gmail.com>, 2017-2019\n"
+"Aviary.pl <community-poland@mozilla.org>, 2017-2019"
 
 #. (itstool) path: credit/name
 #: C/bug-filing.page:10 C/change-board-size.page:14 C/change-theme.page:14
-#: C/develop.page:10 C/documentation.page:8 C/fast-moves.page:14
-#: C/index.page:17 C/scores.page:14 C/shortcuts.page:9 C/strategy.page:9
-#: C/translate.page:10
+#: C/develop.page:10 C/documentation.page:8 C/index.page:17 C/scores.page:14
+#: C/shortcuts.page:9 C/strategy.page:9 C/translate.page:10
 msgid "Tiffany Antopolski"
 msgstr "Tiffany Antopolski"
 
 #. (itstool) path: credit/years
 #: C/bug-filing.page:12 C/change-board-size.page:11 C/develop.page:12
-#: C/documentation.page:10 C/fast-moves.page:11 C/play.page:12 C/rules.page:12
-#: C/scores.page:11 C/shortcuts.page:11 C/translate.page:12
+#: C/documentation.page:10 C/play.page:12 C/rules.page:12 C/scores.page:11
+#: C/shortcuts.page:11 C/translate.page:12
 msgid "2011"
 msgstr "2011"
 
@@ -110,7 +109,7 @@ msgstr ""
 "zgłoszony."
 
 #. (itstool) path: page/p
-#: C/bug-filing.page:37
+#: C/bug-filing.page:33
 msgid ""
 "Fill in the Title and Description sections and click <gui>Submit issue</gui>."
 msgstr ""
@@ -118,7 +117,7 @@ msgstr ""
 "i kliknij przycisk <gui>Submit issue</gui> (Wyślij zgłoszenie)."
 
 #. (itstool) path: page/p
-#: C/bug-filing.page:40
+#: C/bug-filing.page:36
 msgid ""
 "Your report will be given an ID number, and its status will be updated as it "
 "is being dealt with."
@@ -127,14 +126,13 @@ msgstr ""
 "z postępem jego rozwiązywania."
 
 #. (itstool) path: credit/name
-#: C/change-board-size.page:9 C/change-theme.page:9 C/fast-moves.page:9
-#: C/index.page:13 C/play.page:10 C/scores.page:9
+#: C/change-board-size.page:9 C/change-theme.page:9 C/index.page:13
+#: C/play.page:10 C/scores.page:9
 msgid "Lahiru lanka"
 msgstr "Lahiru Lanka"
 
 #. (itstool) path: credit/name
-#: C/change-board-size.page:18 C/fast-moves.page:18 C/play.page:15
-#: C/translate.page:15
+#: C/change-board-size.page:18 C/play.page:15 C/translate.page:15
 msgid "Michael Hill"
 msgstr "Michael Hill"
 
@@ -163,7 +161,7 @@ msgstr ""
 "gui> lub <gui>Duża</gui>."
 
 #. (itstool) path: note/p
-#: C/change-board-size.page:32
+#: C/change-board-size.page:31
 msgid ""
 "While a larger board gives you more space, there are also more objects in "
 "play for each turn."
@@ -172,123 +170,124 @@ msgstr ""
 "kulek w grze."
 
 #. (itstool) path: section/title
-#: C/change-board-size.page:37
+#: C/change-board-size.page:36
 msgid "Board parameters"
 msgstr "Parametry planszy"
 
 #. (itstool) path: section/p
-#: C/change-board-size.page:38
+#: C/change-board-size.page:37
 msgid "The 3 different board sizes have the following parameters:"
 msgstr "Trzy dostępne rozmiary planszy mają następujące parametry:"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:42
+#: C/change-board-size.page:41
 msgid "<em>Size</em>"
 msgstr "<em>Rozmiar</em>"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:43
+#: C/change-board-size.page:42
 msgid "<em>Width</em>"
 msgstr "<em>Szerokość</em>"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:44
+#: C/change-board-size.page:43
 msgid "<em>Height</em>"
 msgstr "<em>Wysokość</em>"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:45
+#: C/change-board-size.page:44
 msgid "<em>Number of types</em>"
 msgstr "<em>Liczba typów</em>"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:46
+#: C/change-board-size.page:45
 msgid "<em>New objects per turn</em>"
 msgstr "<em>Nowe kulki na rundę</em>"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:47
+#: C/change-board-size.page:46
 msgid "<em>Number of cells</em>"
 msgstr "<em>Liczba komórek</em>"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:51
+#: C/change-board-size.page:50
 msgid "Small"
 msgstr "Mała"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:52 C/change-board-size.page:53
-#: C/change-board-size.page:61 C/change-board-size.page:66 C/scores.page:41
+#: C/change-board-size.page:51 C/change-board-size.page:52
+#: C/change-board-size.page:62 C/change-board-size.page:71
+#: C/change-board-size.page:72 C/scores.page:41
 msgid "7"
 msgstr "7"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:54 C/scores.page:33
+#: C/change-board-size.page:53 C/scores.page:33
 msgid "5"
 msgstr "5"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:55 C/change-board-size.page:61
+#: C/change-board-size.page:54 C/change-board-size.page:63
 msgid "3"
 msgstr "3"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:56
+#: C/change-board-size.page:55 C/scores.page:62
 msgid "49"
 msgstr "49"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:60
+#: C/change-board-size.page:59
 msgid "Medium"
 msgstr "Średnia"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:60 C/scores.page:49
+#: C/change-board-size.page:60 C/change-board-size.page:61 C/scores.page:49
 msgid "9"
 msgstr "9"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:61
+#: C/change-board-size.page:64
 msgid "81"
 msgstr "81"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:65
+#: C/change-board-size.page:68
 msgid "Large"
 msgstr "Duża"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:65
+#: C/change-board-size.page:69
 msgid "20"
 msgstr "20"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:65
+#: C/change-board-size.page:70
 msgid "15"
 msgstr "15"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:66
+#: C/change-board-size.page:73
 msgid "300"
 msgstr "300"
 
 #. (itstool) path: section/title
-#: C/change-board-size.page:74
+#: C/change-board-size.page:80
 msgid "The 3 board sizes"
 msgstr "Trzy rozmiary planszy"
 
 #. (itstool) path: media/p
-#: C/change-board-size.page:80
+#: C/change-board-size.page:86
 msgid "<app>Five or More</app> Small board"
 msgstr "Mała plansza <app>Kulek</app>"
 
 #. (itstool) path: media/p
-#: C/change-board-size.page:85
+#: C/change-board-size.page:91
 msgid "<app>Five or More</app> medium size board"
 msgstr "Średnia plansza <app>Kulek</app>"
 
 #. (itstool) path: media/p
-#: C/change-board-size.page:90
+#: C/change-board-size.page:96
 msgid "<app>Five or More</app> large size board"
 msgstr "Duża plansza <app>Kulek</app>"
 
@@ -308,19 +307,18 @@ msgid "To change the appearance of the pieces and the board:"
 msgstr "Aby zmienić wygląd kulek i planszy:"
 
 #. (itstool) path: item/p
-#: C/change-theme.page:24 C/fast-moves.page:28
+#: C/change-theme.page:24
 msgid "Click <guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq>."
 msgstr "Kliknij <guiseq><gui>Ustawienia</gui><gui>Preferencje</gui></guiseq>."
 
 #. (itstool) path: item/p
 #: C/change-theme.page:27
 msgid ""
-"Select <gui>balls</gui>, <gui>dots</gui>, <gui>gumball</gui> or <gui>shapes</"
-"gui> from the <gui>Image</gui> drop down menu to change the playing pieces."
+"Select <gui>balls</gui> or <gui>shapes</gui> from the <gui>Themes</gui> drop "
+"down menu to change the playing pieces."
 msgstr ""
-"Wybierz <gui>Kulki</gui>, <gui>Kropki</gui>, <gui>Gumy</gui> lub "
-"<gui>Kształty</gui> z rozwijanego menu <gui>Obraz</gui>, aby zmienić kulki "
-"do gry."
+"Wybierz <gui>Kulki</gui> lub <gui>Kształty</gui> z rozwijanego menu "
+"<gui>Motywy</gui>, aby zmienić kulki do gry."
 
 #. (itstool) path: item/p
 #: C/change-theme.page:29
@@ -332,14 +330,14 @@ msgstr ""
 "kolorów."
 
 #. (itstool) path: item/p
-#: C/change-theme.page:33 C/fast-moves.page:30
+#: C/change-theme.page:33
 msgid "Click <gui>Close</gui>."
 msgstr "Kliknij przycisk <gui>Zamknij</gui>."
 
 #. (itstool) path: section/title
 #: C/change-theme.page:37
-msgid "Images available"
-msgstr "Dostępne obrazy"
+msgid "Available Themes"
+msgstr "Dostępne motywy"
 
 #. (itstool) path: media/p
 #: C/change-theme.page:39
@@ -348,28 +346,8 @@ msgstr "Gra Kulki z różnymi kulkami"
 
 #. (itstool) path: media/p
 #: C/change-theme.page:43
-msgid "<app>Five or More</app> with different dots"
-msgstr "Gra <app>Kulki</app> z różnymi kropkami"
-
-#. (itstool) path: media/p
-#: C/change-theme.page:47
-msgid "<app>Five or More</app> with different gumballs"
-msgstr "Gra <app>Kulki</app> z różnymi gumami"
-
-#. (itstool) path: media/p
-#: C/change-theme.page:51
 msgid "<app>Five or More</app> with different shapes"
 msgstr "Gra <app>Kulki</app> z różnymi kształtami"
-
-#. (itstool) path: section/title
-#: C/change-theme.page:56
-msgid "Background colors available"
-msgstr "Dostępne kolory tła"
-
-#. (itstool) path: media/p
-#: C/change-theme.page:58
-msgid "Five or More color palette"
-msgstr "Paleta kolorów gry Kulki"
 
 #. (itstool) path: page/title
 #: C/develop.page:19
@@ -439,30 +417,6 @@ msgstr ""
 "Nasza <link href=\"https://wiki.gnome.org/DocumentationProject/Contributing"
 "\">wiki</link> zawiera przydatne informacje (w języku angielskim)."
 
-#. (itstool) path: page/title
-#: C/fast-moves.page:25
-msgid "Change speed"
-msgstr "Zmiana prędkości"
-
-#. (itstool) path: page/p
-#: C/fast-moves.page:26
-msgid "To speed up object movements:"
-msgstr "Aby przyspieszyć ruch kulek:"
-
-#. (itstool) path: item/p
-#: C/fast-moves.page:29
-msgid "Under <gui>General</gui>, select <gui>Use fast moves</gui>."
-msgstr "W sekcji <gui>Ogólne</gui> zaznacz opcję <gui>Szybkie ruchy</gui>."
-
-#. (itstool) path: note/p
-#: C/fast-moves.page:33
-msgid ""
-"Any changes you make are instantly applied and remembered for the next time "
-"you run <app>Five or More</app>."
-msgstr ""
-"Wprowadzone zmiany zostaną zastosowane od razu i zapamiętane dla następnego "
-"uruchomienia gry <app>Kulki</app>."
-
 #. (itstool) path: info/title
 #: C/index.page:8
 msgctxt "link"
@@ -486,7 +440,7 @@ msgid "<_:media-1/> Five or More"
 msgstr "<_:media-1/> Kulki"
 
 #. (itstool) path: page/p
-#: C/index.page:29
+#: C/index.page:30
 msgid ""
 "<app>Five or More</app> is a deceptively simple brain workout. The goal is "
 "to place at least five objects of the same <link xref=\"change-theme#images"
@@ -649,16 +603,20 @@ msgstr "Kliknij kulkę do przeniesienia. Wybrana kulka zacznie się obracać."
 
 #. (itstool) path: item/p
 #: C/play.page:36
-msgid "Click on the destination cell."
-msgstr "Kliknij komórkę docelową."
+msgid ""
+"Click on the destination cell. The chosen object will move to the "
+"destination cell, if there is any clear path."
+msgstr ""
+"Kliknij komórkę docelową. Wybrana kulka zostanie do niej przeniesiona, jeśli "
+"jest między nimi przejście."
 
 #. (itstool) path: section/title
-#: C/play.page:44
+#: C/play.page:45
 msgid "Using the keyboard"
 msgstr "Używanie klawiatury"
 
 #. (itstool) path: item/p
-#: C/play.page:47
+#: C/play.page:49
 msgid ""
 "Press any of the arrow keys. An outline around a cell will appear on the "
 "board."
@@ -667,31 +625,37 @@ msgstr ""
 "obwódka."
 
 #. (itstool) path: item/p
-#: C/play.page:49
-msgid "Using the arrow keys, navigate to the object you want to move."
-msgstr "Za pomocą klawiszy strzałek przejdź do kulki do przeniesienia."
+#: C/play.page:53
+msgid ""
+"Using the arrow keys, and the <key>Home</key>, <key>End</key>, <key>PageUp</"
+"key> and <key>PageDown</key> keys navigate to the object you want to move."
+msgstr ""
+"Za pomocą klawiszy strzałek oraz klawiszy <key>Home</key>, <key>End</key>, "
+"<key>Page Up</key> i <key>Page Down</key> przejdź do kulki, która ma zostać "
+"przeniesiona."
 
 #. (itstool) path: item/p
-#: C/play.page:51
+#: C/play.page:56
 msgid ""
-"To select the object, press the <key>Enter</key> or <key>Spacebar</key>. The "
-"selected object will begin spinning."
+"To select the object, press the <key>Enter</key>, <key>Spacebar</key> or "
+"<key>Return</key>. The selected object will begin spinning."
 msgstr ""
 "Aby wybrać kulkę, naciśnij klawisz <key>Enter</key> lub <key>Spację</key>. "
 "Wybrana kulka zacznie się obracać."
 
 #. (itstool) path: item/p
-#: C/play.page:53
+#: C/play.page:59
 msgid ""
-"Move to the destination cell, and again press the <key>Enter</key> or "
-"<key>Spacebar</key>. The chosen object will move to the destination cell."
+"Move to the destination cell, and again press the <key>Enter</key>, "
+"<key>Spacebar</key> or <key>Return</key>. The chosen object will move to the "
+"destination cell, if there is any clear path."
 msgstr ""
 "Przejdź do komórki docelowej i ponownie naciśnij klawisz <key>Enter</key> "
-"lub <key>Spację</key>. Wybrany obiekt zostanie przeniesiony do komórki "
-"docelowej."
+"lub <key>Spację</key>. Wybrana kulka zostanie do niej przeniesiona, jeśli "
+"jest między nimi przejście."
 
 #. (itstool) path: section/title
-#: C/play.page:62
+#: C/play.page:69
 msgid "Video demonstration"
 msgstr "Demonstracja wideo"
 
@@ -815,14 +779,14 @@ msgid "6"
 msgstr "6"
 
 #. (itstool) path: td/p
-#: C/scores.page:38 C/scores.page:61
-msgid "12"
-msgstr "12"
+#: C/scores.page:38
+msgid "18"
+msgstr "18"
 
 #. (itstool) path: td/p
 #: C/scores.page:42
-msgid "18"
-msgstr "18"
+msgid "25"
+msgstr "25"
 
 #. (itstool) path: td/p
 #: C/scores.page:45
@@ -831,18 +795,18 @@ msgstr "8"
 
 #. (itstool) path: td/p
 #: C/scores.page:46
-msgid "28"
-msgstr "28"
+msgid "31"
+msgstr "31"
 
 #. (itstool) path: td/p
 #: C/scores.page:50
-msgid "42"
-msgstr "42"
+msgid "36"
+msgstr "36"
 
 #. (itstool) path: td/p
 #: C/scores.page:54
-msgid "82"
-msgstr "82"
+msgid "41"
+msgstr "41"
 
 #. (itstool) path: td/p
 #: C/scores.page:57
@@ -851,13 +815,13 @@ msgstr "11"
 
 #. (itstool) path: td/p
 #: C/scores.page:58
-msgid "108"
-msgstr "108"
+msgid "45"
+msgstr "45"
 
 #. (itstool) path: td/p
-#: C/scores.page:62
-msgid "138"
-msgstr "138"
+#: C/scores.page:61
+msgid "12"
+msgstr "12"
 
 #. (itstool) path: td/p
 #: C/scores.page:65
@@ -866,21 +830,21 @@ msgstr "13"
 
 #. (itstool) path: td/p
 #: C/scores.page:66
-msgid "172"
-msgstr "172"
+msgid "53"
+msgstr "53"
 
 #. (itstool) path: td/p
-#: C/scores.page:69
+#: C/scores.page:69 C/scores.page:73
 msgid "14"
 msgstr "14"
 
 #. (itstool) path: td/p
-#: C/scores.page:70
-msgid "210"
-msgstr "210"
+#: C/scores.page:70 C/scores.page:74
+msgid "56"
+msgstr "56"
 
 #. (itstool) path: note/p
-#: C/scores.page:76
+#: C/scores.page:80
 msgid ""
 "You can view the high scores by clicking <guiseq><gui>Game</gui><gui>Scores</"
 "gui></guiseq>."
@@ -889,7 +853,7 @@ msgstr ""
 "gui><gui>Wyniki</gui></guiseq>."
 
 #. (itstool) path: note/p
-#: C/scores.page:78
+#: C/scores.page:82
 msgid ""
 "The <app>Five or More</app> scores are recorded according to the board size. "
 "You can select the <gui>Board Size</gui> of interest using the drop down "
@@ -949,12 +913,12 @@ msgstr ""
 "kilka rzeczy:"
 
 #. (itstool) path: item/p
-#: C/strategy.page:22
+#: C/strategy.page:23
 msgid "Try to set at least three same objects with your every move."
 msgstr "Staraj się, aby każdy ruch ustawiał co najmniej trzy takie same kulki."
 
 #. (itstool) path: item/p
-#: C/strategy.page:23
+#: C/strategy.page:24
 msgid ""
 "The board can quickly become very crowded with objects, so it is best to "
 "think ahead. Pay attention to the collection of <gui>Next</gui> objects, "
@@ -965,7 +929,7 @@ msgstr ""
 "wpływają one na decyzje podczas gry."
 
 #. (itstool) path: item/p
-#: C/strategy.page:24
+#: C/strategy.page:25
 msgid ""
 "Try to line up more than 5 objects. For example, if you have 6 objects, you "
 "can line up 2 and 3 with a space in between, and then connect them by "
