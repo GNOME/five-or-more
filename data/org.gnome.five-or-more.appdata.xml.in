@@ -61,5 +61,20 @@
     <content_attribute id="money-purchasing">none</content_attribute>
     <content_attribute id="money-gambling">none</content_attribute>
   </content_rating>
+  <releases>
+    <release version="3.31.90" date="2019-02-04">
+      <description>
+        <p>Overview of changes in five-or-more 3.31.90</p>
+        <ul>
+          <li>Updated translations</li>
+          <li>Nightly builds (Bilal Elmoussaoui)</li>
+          <li>Appdata updates (Bilal Elmoussaoui)</li>
+          <li>Tests for appdata and desktop validation (Bilal Elmoussaoui)</li>
+        </ul>
+      </description>
+
+    </release>
+  </releases>
 
 </component>
+

@@ -1,5 +1,5 @@
 project('five-or-more', ['c', 'vala'],
-  version: '3.31.2',
+  version: '3.31.90',
   meson_version: '>= 0.43.0',
   license: 'GPLv2'
 )
