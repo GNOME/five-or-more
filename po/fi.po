@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/five-or-more/issues\n"
-"POT-Creation-Date: 2018-03-27 17:19+0000\n"
-"PO-Revision-Date: 2018-05-04 18:10+0300\n"
+"POT-Creation-Date: 2019-01-11 15:40+0000\n"
+"PO-Revision-Date: 2019-02-05 22:42+0200\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos+l10n@iki.fi>\n"
 "Language-Team: suomi <lokalisointi-lista@googlegroups.com>\n"
 "Language: fi\n"
@@ -27,16 +27,81 @@ msgstr ""
 "X-Generator: Poedit 2.0.6\n"
 "X-POT-Import-Date: 2012-03-05 14:46:29+0000\n"
 
-#: data/five-or-more.appdata.xml.in:7 data/five-or-more.desktop.in:3
-#: data/five-or-more.ui:18 src/five-or-more.c:70 src/five-or-more-app.c:573
+#: data/five-or-more-preferences.ui:13
+msgid "Preferences"
+msgstr "Asetukset"
+
+#: data/five-or-more-preferences.ui:36
+msgid "Appearance"
+msgstr "Ulkoasu"
+
+#: data/five-or-more-preferences.ui:60
+msgid "_Theme:"
+msgstr "T_eema:"
+
+#: data/five-or-more-preferences.ui:76
+msgid "balls"
+msgstr "pallot"
+
+#: data/five-or-more-preferences.ui:77
+msgid "shapes"
+msgstr "muodot"
+
+#: data/five-or-more-preferences.ui:78
+msgid "tango"
+msgstr "tango"
+
+#: data/five-or-more-preferences.ui:87
+msgid "B_ackground color:"
+msgstr "T_austaväri:"
+
+#: data/five-or-more.ui:7
+msgid "_New Game"
+msgstr "_Uusi peli"
+
+#: data/five-or-more.ui:13
+msgid "S_cores"
+msgstr "P_isteet"
+
+#: data/five-or-more.ui:19
+msgid "_Small"
+msgstr "_Pieni"
+
+#: data/five-or-more.ui:24
+msgid "_Medium"
+msgstr "_Keskitaso"
+
+#: data/five-or-more.ui:29
+msgid "_Large"
+msgstr "_Suuri"
+
+#: data/five-or-more.ui:36
+msgid "_Preferences"
+msgstr "_Asetukset"
+
+#: data/five-or-more.ui:40
+msgid "_Help"
+msgstr "_Ohje"
+
+#: data/five-or-more.ui:45
+msgid "_About Five or More"
+msgstr "_Tietoja - Viisi tai enemmän"
+
+#: data/five-or-more.ui:65 data/org.gnome.five-or-more.appdata.xml.in:7
+#: data/org.gnome.five-or-more.desktop.in:3 src/main.vala:74 src/main.vala:168
 msgid "Five or More"
 msgstr "Viisi tai enemmän"
 
-#: data/five-or-more.appdata.xml.in:8 data/five-or-more.desktop.in:4
+#: data/five-or-more.ui:77
+msgid "Next:"
+msgstr "Seuraava:"
+
+#: data/org.gnome.five-or-more.appdata.xml.in:8
+#: data/org.gnome.five-or-more.desktop.in:4
 msgid "Remove colored balls from the board by forming lines"
 msgstr "Poista värilliset pallot laudalta muodostamalla rivejä"
 
-#: data/five-or-more.appdata.xml.in:10
+#: data/org.gnome.five-or-more.appdata.xml.in:10
 msgid ""
 "Five or More is the GNOME port of a once-popular computer game. Align five "
 "or more objects of the same color into a line to cause them to disappear and "
@@ -48,7 +113,7 @@ msgstr ""
 "katoavat ja saat pisteitä. Mitä enemmän saat poistettua kohteita kerralla, "
 "sitä enemmän saat pisteitä."
 
-#: data/five-or-more.appdata.xml.in:16
+#: data/org.gnome.five-or-more.appdata.xml.in:16
 msgid ""
 "More objects appear after every turn. Play for as long as possible, until "
 "the board is completely full!"
@@ -56,91 +121,20 @@ msgstr ""
 "Joka vuoron jälkeen pelialueelle ilmestyy lisää kohteita. Pelaa niin kauan "
 "kuin pystyt - mieluiten niin että lauta täyttyy!"
 
-#: data/five-or-more.appdata.xml.in:40
+#: data/org.gnome.five-or-more.appdata.xml.in:40
 msgid "The GNOME Project"
 msgstr "Gnome-projekti"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/five-or-more.desktop.in:6
+#: data/org.gnome.five-or-more.desktop.in:6
 msgid "game;strategy;logic;"
 msgstr "game;strategy;logic;strategia;logiikka;peli;"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: data/five-or-more.desktop.in:9
-msgid "five-or-more"
-msgstr "five-or-more"
-
-#: data/five-or-more-preferences.ui:12 data/menu.ui:11 src/game-area.c:858
-msgid "Preferences"
-msgstr "Asetukset"
-
-#: data/five-or-more-preferences.ui:35
-msgid "Appearance"
-msgstr "Ulkoasu"
-
-#: data/five-or-more-preferences.ui:59
-msgid "_Image:"
-msgstr "_Kuva:"
-
-#: data/five-or-more-preferences.ui:74
-msgid "B_ackground color:"
-msgstr "T_austaväri:"
-
-#: data/five-or-more-preferences.ui:116
-msgid "Board Size"
-msgstr "Laudan koko"
-
-#: data/five-or-more-preferences.ui:135
-msgid "_Small"
-msgstr "_Pieni"
-
-#: data/five-or-more-preferences.ui:154
-msgid "_Medium"
-msgstr "_Keskitaso"
-
-#: data/five-or-more-preferences.ui:173
-msgid "_Large"
-msgstr "_Suuri"
-
-#: data/five-or-more-preferences.ui:203
-msgid "General"
-msgstr "Yleisasetukset"
-
-#: data/five-or-more-preferences.ui:216
-msgid "_Use fast moves"
-msgstr "Käytä _nopeita siirtoja"
-
-#: data/five-or-more.ui:30
-msgid "Next:"
-msgstr "Seuraava:"
-
-#: data/five-or-more.ui:56
-msgid "Score:"
-msgstr "Pisteet:"
-
-#: data/five-or-more.ui:76
-msgid "_New Game"
-msgstr "_Uusi peli"
-
-#: data/five-or-more.ui:80
-msgid "Start a new puzzle"
-msgstr "Aloita uusi peli"
-
-#: data/menu.ui:7
-msgid "Scores"
-msgstr "Pisteet"
-
-#: data/menu.ui:17
-msgid "Help"
-msgstr "Ohje"
-
-#: data/menu.ui:22
-msgid "About"
-msgstr "Tietoja"
-
-#: data/menu.ui:26
-msgid "Quit"
-msgstr "Lopeta"
+#: data/org.gnome.five-or-more.desktop.in:9
+#| msgid "five-or-more"
+msgid "org.gnome.five-or-more"
+msgstr "org.gnome.five-or-more"
 
 #: data/org.gnome.five-or-more.gschema.xml:5
 msgid "Playing field size"
@@ -213,74 +207,29 @@ msgstr "Ikkunan korkeus kuvapisteinä"
 msgid "true if the window is maximized"
 msgstr "tosi jos ikkuna on suurennettu"
 
-#.
-#. * Translatable strings file.
-#. * Add this file to your project's POTFILES.in.
-#. * DO NOT compile it as part of your application.
-#.
-#: data/translatable_themes.h:6
-msgctxt "themes"
-msgid "balls"
-msgstr "pallot"
-
-#: data/translatable_themes.h:7
-msgctxt "themes"
-msgid "dots"
-msgstr "pisteet"
-
-#: data/translatable_themes.h:8
-msgctxt "themes"
-msgid "gumball"
-msgstr "purkkapallot"
-
-#: data/translatable_themes.h:9
-msgctxt "themes"
-msgid "shapes"
-msgstr "muodot"
-
-#: src/five-or-more-app.c:57
+#: src/game.vala:94
 msgctxt "board size"
 msgid "Small"
 msgstr "Pieni"
 
-#: src/five-or-more-app.c:58
+#: src/game.vala:95
 msgctxt "board size"
 msgid "Medium"
 msgstr "Keskikokoinen"
 
-#: src/five-or-more-app.c:59
+#: src/game.vala:96
 msgctxt "board size"
 msgid "Large"
 msgstr "Suuri"
 
-#: src/five-or-more-app.c:233
-msgid "Game Over!"
-msgstr "Peli päättyi!"
-
-#: src/five-or-more-app.c:250
-msgid "Match five objects of the same type in a row to score!"
-msgstr "Siirrä viisi samanväristä palloa riviin saadaksesi pisteitä!"
-
-#: src/five-or-more-app.c:405
-msgid "Are you sure you want to restart the game?"
-msgstr "Haluatko varmasti aloittaa uuden pelin?"
-
-#: src/five-or-more-app.c:408
-msgid "_Cancel"
-msgstr "_Peru"
-
-#: src/five-or-more-app.c:409
-msgid "_Restart"
-msgstr "_Aloita alusta"
-
-#: src/five-or-more-app.c:575
+#: src/main.vala:171
 msgid "GNOME port of the once-popular Color Lines game"
 msgstr "Gnomen käännös kerran kuuluisasta Color Lines -pelistä"
 
-#: src/five-or-more-app.c:581
+#: src/main.vala:177
 msgid "translator-credits"
 msgstr ""
-"Jiri Grönroos, 2012-2018\n"
+"Jiri Grönroos, 2012-2019\n"
 "Timo Jyrinki, 2008\n"
 "Ilkka Tuohela, 2006-2009\n"
 "Sami Pesonen, 2002-2005\n"
@@ -298,44 +247,92 @@ msgstr ""
 "  Timo Jyrinki https://launchpad.net/~timo-jyrinki\n"
 "  eGetin https://launchpad.net/~egetin"
 
-#: src/five-or-more-app.c:693
-msgid "Board Size: "
-msgstr "Laudan koko: "
+#: src/window.vala:50
+msgid "Match five objects of the same type in a row to score!"
+msgstr "Siirrä viisi samanväristä palloa riviin saadaksesi pisteitä!"
 
-#. Can't move there!
-#: src/game-area.c:635
+#: src/window.vala:51
 msgid "You can’t move there!"
 msgstr "Ei voi siirtää siihen!"
 
-#: src/game-area.c:818
-#, c-format
-msgid ""
-"Unable to locate file:\n"
-"%s\n"
-"\n"
-"The default theme will be loaded instead."
-msgstr ""
-"Tiedostoa ei löydy:\n"
-"\"%s\"\n"
-"\n"
-"Sen sijaan käytetään oletusteemaa."
+#: src/window.vala:52
+msgid "Game Over!"
+msgstr "Peli päättyi!"
 
-#: src/game-area.c:825
+#: src/window.vala:53
 #, c-format
-msgid ""
-"Unable to locate file:\n"
-"%s\n"
-"\n"
-"Please check that Five or More is installed correctly."
-msgstr ""
-"Tiedostoa ei löydy:\n"
-"%s\n"
-"\n"
-"Tarkista että Viisi tai enemmän on asennettu oikein."
+msgid "Score: %d"
+msgstr "Pisteet: %d"
 
-#: src/game-area.c:852
-msgid "Could not load theme"
-msgstr "Teemaa ei voi ladata"
+#: src/window.vala:87
+msgid "Board Size: "
+msgstr "Laudan koko: "
+
+#: src/window.vala:159
+msgid "Are you sure you want to restart the game?"
+msgstr "Haluatko varmasti aloittaa uuden pelin?"
+
+#: src/window.vala:161
+msgid "_Cancel"
+msgstr "_Peru"
+
+#: src/window.vala:162
+msgid "_Restart"
+msgstr "_Aloita alusta"
+
+#~ msgid "_Image:"
+#~ msgstr "_Kuva:"
+
+#~ msgid "Board Size"
+#~ msgstr "Laudan koko"
+
+#~ msgid "General"
+#~ msgstr "Yleisasetukset"
+
+#~ msgid "_Use fast moves"
+#~ msgstr "Käytä _nopeita siirtoja"
+
+#~ msgid "Start a new puzzle"
+#~ msgstr "Aloita uusi peli"
+
+#~ msgid "About"
+#~ msgstr "Tietoja"
+
+#~ msgid "Quit"
+#~ msgstr "Lopeta"
+
+#~ msgctxt "themes"
+#~ msgid "dots"
+#~ msgstr "pisteet"
+
+#~ msgctxt "themes"
+#~ msgid "gumball"
+#~ msgstr "purkkapallot"
+
+#~ msgid ""
+#~ "Unable to locate file:\n"
+#~ "%s\n"
+#~ "\n"
+#~ "The default theme will be loaded instead."
+#~ msgstr ""
+#~ "Tiedostoa ei löydy:\n"
+#~ "\"%s\"\n"
+#~ "\n"
+#~ "Sen sijaan käytetään oletusteemaa."
+
+#~ msgid ""
+#~ "Unable to locate file:\n"
+#~ "%s\n"
+#~ "\n"
+#~ "Please check that Five or More is installed correctly."
+#~ msgstr ""
+#~ "Tiedostoa ei löydy:\n"
+#~ "%s\n"
+#~ "\n"
+#~ "Tarkista että Viisi tai enemmän on asennettu oikein."
+
+#~ msgid "Could not load theme"
+#~ msgstr "Teemaa ei voi ladata"
 
 #~ msgid "0"
 #~ msgstr "0"
