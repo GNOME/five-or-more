@@ -12,14 +12,14 @@
 # Baris Cicek <baris@teamforce.name.tr>, 2004, 2005, 2008, 2009.
 # Furkan Ahmet Kara <furkanahmetkara.fk@gmail.com>, 2017.
 # Muhammet Kara <muhammetk@gmail.com>, 2011, 2014, 2015, 2018.
-# Emin Tufan Çetin <etcetin@gmail.com>, 2017, 2018.
+# Emin Tufan Çetin <etcetin@gmail.com>, 2017-2019.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/five-or-more/issues\n"
-"POT-Creation-Date: 2018-03-27 17:19+0000\n"
-"PO-Revision-Date: 2018-08-14 12:21+0300\n"
+"POT-Creation-Date: 2019-02-08 15:41+0000\n"
+"PO-Revision-Date: 2019-02-10 20:27+0300\n"
 "Last-Translator: Emin Tufan Çetin <etcetin@gmail.com>\n"
 "Language-Team: Türkçe <gnome-turk@gnome.org>\n"
 "Language: tr\n"
@@ -27,18 +27,83 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Gtranslator 2.91.7\n"
+"X-Generator: Gtranslator 3.30.1\n"
 
-#: data/five-or-more.appdata.xml.in:7 data/five-or-more.desktop.in:3
-#: data/five-or-more.ui:18 src/five-or-more.c:70 src/five-or-more-app.c:573
+#: data/five-or-more-preferences.ui:13
+msgid "Preferences"
+msgstr "Tercihler"
+
+#: data/five-or-more-preferences.ui:36
+msgid "Appearance"
+msgstr "Görünüm"
+
+#: data/five-or-more-preferences.ui:60
+msgid "_Theme:"
+msgstr "_Gövde:"
+
+#: data/five-or-more-preferences.ui:76
+msgid "balls"
+msgstr "toplar"
+
+#: data/five-or-more-preferences.ui:77
+msgid "shapes"
+msgstr "şekiller"
+
+#: data/five-or-more-preferences.ui:78
+msgid "tango"
+msgstr "tango"
+
+#: data/five-or-more-preferences.ui:87
+msgid "B_ackground color:"
+msgstr "_Arka plan rengi:"
+
+#: data/five-or-more.ui:7
+msgid "_New Game"
+msgstr "_Yeni Oyun"
+
+#: data/five-or-more.ui:13
+msgid "S_cores"
+msgstr "_Puanlar"
+
+#: data/five-or-more.ui:19
+msgid "_Small"
+msgstr "_Küçük"
+
+#: data/five-or-more.ui:24
+msgid "_Medium"
+msgstr "_Orta"
+
+#: data/five-or-more.ui:29
+msgid "_Large"
+msgstr "_Büyük"
+
+#: data/five-or-more.ui:36
+msgid "_Preferences"
+msgstr "_Tercihler"
+
+#: data/five-or-more.ui:40
+msgid "_Help"
+msgstr "_Yardım"
+
+#: data/five-or-more.ui:45
+msgid "_About Five or More"
+msgstr "Beş veya Fazlası _Hakkında"
+
+#: data/five-or-more.ui:65 data/org.gnome.five-or-more.appdata.xml.in:7
+#: data/org.gnome.five-or-more.desktop.in:3 src/main.vala:74 src/main.vala:168
 msgid "Five or More"
 msgstr "Beş veya Fazlası"
 
-#: data/five-or-more.appdata.xml.in:8 data/five-or-more.desktop.in:4
+#: data/five-or-more.ui:77
+msgid "Next:"
+msgstr "Sonraki:"
+
+#: data/org.gnome.five-or-more.appdata.xml.in:8
+#: data/org.gnome.five-or-more.desktop.in:4
 msgid "Remove colored balls from the board by forming lines"
 msgstr "Çizgiler oluşturarak renkli topları tahtadan kaldırın"
 
-#: data/five-or-more.appdata.xml.in:10
+#: data/org.gnome.five-or-more.appdata.xml.in:10
 msgid ""
 "Five or More is the GNOME port of a once-popular computer game. Align five "
 "or more objects of the same color into a line to cause them to disappear and "
@@ -50,7 +115,7 @@ msgstr ""
 "çizgide hizalayın ve puanları kazanın. Onları temizlemeden önce mümkün "
 "olduğunca çok nesneyi sıralayarak daha çok puan kazanın."
 
-#: data/five-or-more.appdata.xml.in:16
+#: data/org.gnome.five-or-more.appdata.xml.in:16
 msgid ""
 "More objects appear after every turn. Play for as long as possible, until "
 "the board is completely full!"
@@ -58,91 +123,19 @@ msgstr ""
 "Her turdan sonra daha çok öge meydana gelir. Pano tümüyle doluncaya kadar "
 "mümkün olduğunca uzun süre oyna!"
 
-#: data/five-or-more.appdata.xml.in:40
+#: data/org.gnome.five-or-more.appdata.xml.in:40
 msgid "The GNOME Project"
 msgstr "GNOME Projesi"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/five-or-more.desktop.in:6
+#: data/org.gnome.five-or-more.desktop.in:6
 msgid "game;strategy;logic;"
 msgstr "oyun;strateji;mantık;"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: data/five-or-more.desktop.in:9
-msgid "five-or-more"
-msgstr "five-or-more"
-
-#: data/five-or-more-preferences.ui:12 data/menu.ui:11 src/game-area.c:858
-msgid "Preferences"
-msgstr "Tercihler"
-
-#: data/five-or-more-preferences.ui:35
-msgid "Appearance"
-msgstr "Görünüm"
-
-#: data/five-or-more-preferences.ui:59
-msgid "_Image:"
-msgstr "_Resim:"
-
-#: data/five-or-more-preferences.ui:74
-msgid "B_ackground color:"
-msgstr "_Arka plan rengi:"
-
-#: data/five-or-more-preferences.ui:116
-msgid "Board Size"
-msgstr "Tablo Boyutu"
-
-#: data/five-or-more-preferences.ui:135
-msgid "_Small"
-msgstr "_Küçük"
-
-#: data/five-or-more-preferences.ui:154
-msgid "_Medium"
-msgstr "_Orta"
-
-#: data/five-or-more-preferences.ui:173
-msgid "_Large"
-msgstr "_Büyük"
-
-#: data/five-or-more-preferences.ui:203
-msgid "General"
-msgstr "Genel"
-
-#: data/five-or-more-preferences.ui:216
-msgid "_Use fast moves"
-msgstr "_Hızlı hareketleri kullan"
-
-#: data/five-or-more.ui:30
-msgid "Next:"
-msgstr "Sonraki:"
-
-#: data/five-or-more.ui:56
-msgid "Score:"
-msgstr "Puan:"
-
-#: data/five-or-more.ui:76
-msgid "_New Game"
-msgstr "Yeni _Oyun"
-
-#: data/five-or-more.ui:80
-msgid "Start a new puzzle"
-msgstr "Yeni bulmaca başlat"
-
-#: data/menu.ui:7
-msgid "Scores"
-msgstr "Puanlar"
-
-#: data/menu.ui:17
-msgid "Help"
-msgstr "Yardım"
-
-#: data/menu.ui:22
-msgid "About"
-msgstr "Hakkında"
-
-#: data/menu.ui:26
-msgid "Quit"
-msgstr "Çık"
+#: data/org.gnome.five-or-more.desktop.in:9
+msgid "org.gnome.five-or-more"
+msgstr "org.gnome.five-or-more"
 
 #: data/org.gnome.five-or-more.gschema.xml:5
 msgid "Playing field size"
@@ -214,115 +207,117 @@ msgstr "Piksel olarak pencerenin yüksekliği"
 msgid "true if the window is maximized"
 msgstr "eğer pencere en büyük hale getirilmişse işaretle"
 
-#.
-#. * Translatable strings file.
-#. * Add this file to your project's POTFILES.in.
-#. * DO NOT compile it as part of your application.
-#.
-#: data/translatable_themes.h:6
-msgctxt "themes"
-msgid "balls"
-msgstr "toplar"
-
-#: data/translatable_themes.h:7
-msgctxt "themes"
-msgid "dots"
-msgstr "noktalar"
-
-#: data/translatable_themes.h:8
-msgctxt "themes"
-msgid "gumball"
-msgstr "sakız"
-
-#: data/translatable_themes.h:9
-msgctxt "themes"
-msgid "shapes"
-msgstr "şekiller"
-
-#: src/five-or-more-app.c:57
+#: src/game.vala:94
 msgctxt "board size"
 msgid "Small"
 msgstr "Küçük"
 
-#: src/five-or-more-app.c:58
+#: src/game.vala:95
 msgctxt "board size"
 msgid "Medium"
 msgstr "Orta"
 
-#: src/five-or-more-app.c:59
+#: src/game.vala:96
 msgctxt "board size"
 msgid "Large"
 msgstr "Büyük"
 
-#: src/five-or-more-app.c:233
-msgid "Game Over!"
-msgstr "Oyun Bitti!"
-
-#: src/five-or-more-app.c:250
-msgid "Match five objects of the same type in a row to score!"
-msgstr "Puan almak için bir sırada aynı renkten beş nesneyi eşleştirin!"
-
-#: src/five-or-more-app.c:405
-msgid "Are you sure you want to restart the game?"
-msgstr "Oyunu yeniden başlatmak istediğinizden emin misiniz?"
-
-#: src/five-or-more-app.c:408
-msgid "_Cancel"
-msgstr "İptal _Et"
-
-#: src/five-or-more-app.c:409
-msgid "_Restart"
-msgstr "_Yeniden Başla"
-
-#: src/five-or-more-app.c:575
+#: src/main.vala:171
 msgid "GNOME port of the once-popular Color Lines game"
-msgstr "Bir zamanların gözde Renkli Çizgiler oyununun GNOME sürümü."
+msgstr "Bir zamanların gözde Renkli Çizgiler oyununun GNOME sürümü"
 
-#: src/five-or-more-app.c:581
+#: src/main.vala:177
 msgid "translator-credits"
 msgstr ""
 "Barış Çiçek <baris@teamforce.name.tr> \n"
 "Muhammet Kara <muhammetk@gmail.com>"
 
-#: src/five-or-more-app.c:693
-#| msgid "Board Size"
-msgid "Board Size: "
-msgstr "Tablo Boyutu: "
+#: src/window.vala:50
+msgid "Match five objects of the same type in a row to score!"
+msgstr "Puan almak için bir sırada aynı renkten beş nesneyi eşleştirin!"
 
-#. Can't move there!
-#: src/game-area.c:635
+#: src/window.vala:51
 msgid "You can’t move there!"
 msgstr "Oraya hareket edemezsin!"
 
-#: src/game-area.c:818
-#, c-format
-msgid ""
-"Unable to locate file:\n"
-"%s\n"
-"\n"
-"The default theme will be loaded instead."
-msgstr ""
-"Dosya konumlandırılamadı:\n"
-"%s\n"
-"\n"
-"Bunun yerine öntanımlı tema yüklenecek."
+#: src/window.vala:52
+msgid "Game Over!"
+msgstr "Oyun Bitti!"
 
-#: src/game-area.c:825
+#: src/window.vala:53
 #, c-format
-msgid ""
-"Unable to locate file:\n"
-"%s\n"
-"\n"
-"Please check that Five or More is installed correctly."
-msgstr ""
-"Dosya yeri saptanamadı:\n"
-"%s\n"
-"\n"
-"Lütfen Beş veya Fazlası’nın doğru kurulup kurulmadığını denetleyin."
+msgid "Score: %d"
+msgstr "Puan: %d"
 
-#: src/game-area.c:852
-msgid "Could not load theme"
-msgstr "Tema yüklenemedi"
+#: src/window.vala:87
+msgid "Board Size: "
+msgstr "Tablo Boyutu: "
+
+#: src/window.vala:159
+msgid "Are you sure you want to restart the game?"
+msgstr "Oyunu yeniden başlatmak istediğinizden emin misiniz?"
+
+#: src/window.vala:161
+msgid "_Cancel"
+msgstr "İptal _Et"
+
+#: src/window.vala:162
+msgid "_Restart"
+msgstr "_Yeniden Başla"
+
+#~ msgid "_Image:"
+#~ msgstr "_Resim:"
+
+#~ msgid "Board Size"
+#~ msgstr "Tablo Boyutu"
+
+#~ msgid "General"
+#~ msgstr "Genel"
+
+#~ msgid "_Use fast moves"
+#~ msgstr "_Hızlı hareketleri kullan"
+
+#~ msgid "Start a new puzzle"
+#~ msgstr "Yeni bulmaca başlat"
+
+#~ msgid "About"
+#~ msgstr "Hakkında"
+
+#~ msgid "Quit"
+#~ msgstr "Çık"
+
+#~ msgctxt "themes"
+#~ msgid "dots"
+#~ msgstr "noktalar"
+
+#~ msgctxt "themes"
+#~ msgid "gumball"
+#~ msgstr "sakız"
+
+#~ msgid ""
+#~ "Unable to locate file:\n"
+#~ "%s\n"
+#~ "\n"
+#~ "The default theme will be loaded instead."
+#~ msgstr ""
+#~ "Dosya konumlandırılamadı:\n"
+#~ "%s\n"
+#~ "\n"
+#~ "Bunun yerine öntanımlı tema yüklenecek."
+
+#~ msgid ""
+#~ "Unable to locate file:\n"
+#~ "%s\n"
+#~ "\n"
+#~ "Please check that Five or More is installed correctly."
+#~ msgstr ""
+#~ "Dosya yeri saptanamadı:\n"
+#~ "%s\n"
+#~ "\n"
+#~ "Lütfen Beş veya Fazlası’nın doğru kurulup kurulmadığını denetleyin."
+
+#~ msgid "Could not load theme"
+#~ msgstr "Tema yüklenemedi"
 
 #~ msgid "0"
 #~ msgstr "0"
