@@ -48,7 +48,7 @@ apps:
       - gsettings
       - unity7
       - wayland
-    desktop: usr/share/applications/five-or-more.desktop
+    desktop: usr/share/applications/org.gnome.five-or-more.desktop
     environment:
       GSETTINGS_SCHEMA_DIR: $SNAP/share/glib-2.0/schemas
 
