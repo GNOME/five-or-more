@@ -17,67 +17,24 @@
 # Christian Kirbach <Christian.Kirbach@googlemail.com>, 2009-2012.
 # Tobias Endrigkeit <tobiasendrigkeit@googlemail.com>, 2012.
 # Bernd Homuth <dev@hmt.im>, 2015.
-# Tim Sabsch <tim@sabsch.com>, 2018.
+# Tim Sabsch <tim@sabsch.com>, 2018-2019.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: five-or-more master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/five-or-more/issues\n"
-"POT-Creation-Date: 2018-09-13 09:53+0000\n"
-"PO-Revision-Date: 2018-09-13 13:53+0200\n"
-"Last-Translator: Mario Blättermann <mario.blaettermann@gmail.com>\n"
+"POT-Creation-Date: 2019-02-15 01:06+0000\n"
+"PO-Revision-Date: 2019-02-18 21:37+0100\n"
+"Last-Translator: Tim Sabsch <tim@sabsch.com>\n"
 "Language-Team: Deutsch <gnome-de@gnome.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Vé 0.1.4\n"
+"X-Generator: Poedit 2.2.1\n"
 
-#: data/five-or-more.appdata.xml.in:7 data/five-or-more.desktop.in:3
-#: data/five-or-more.ui:19 src/main.vala:68 src/main.vala:144
-msgid "Five or More"
-msgstr "Fünf oder mehr"
-
-#: data/five-or-more.appdata.xml.in:8 data/five-or-more.desktop.in:4
-msgid "Remove colored balls from the board by forming lines"
-msgstr "Farbige Kugeln durch Formieren von Linien aus dem Spielbrett entfernen"
-
-#: data/five-or-more.appdata.xml.in:10
-msgid ""
-"Five or More is the GNOME port of a once-popular computer game. Align five "
-"or more objects of the same color into a line to cause them to disappear and "
-"score points. Earn many more points by lining up as many objects as possible "
-"before clearing them."
-msgstr ""
-"»Fünf oder mehr« ist die GNOME-Portierung eines ehemals populären Spiels. "
-"Richten Sie fünf oder mehr Objekte der gleichen Farbe in einer Line aus, "
-"damit sie vom Spielfeld verschwinden und Punkte gutgeschrieben werden. Je "
-"mehr Objekte in einer Reihe liegen, desto mehr Punkte gibt es."
-
-#: data/five-or-more.appdata.xml.in:16
-msgid ""
-"More objects appear after every turn. Play for as long as possible, until "
-"the board is completely full!"
-msgstr ""
-"Nach jedem Spielzug erscheinen weitere Objekte. Spielen Sie so lange, bis "
-"das Spielfeld vollständig ausgefüllt ist!"
-
-#: data/five-or-more.appdata.xml.in:40
-msgid "The GNOME Project"
-msgstr "Das GNOME-Projekt"
-
-#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/five-or-more.desktop.in:6
-msgid "game;strategy;logic;"
-msgstr "Spiel;Strategie;Logik;"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: data/five-or-more.desktop.in:9
-msgid "five-or-more"
-msgstr "five-or-more"
-
-#: data/five-or-more-preferences.ui:13 data/five-or-more-menu.ui:11
+#: data/five-or-more-preferences.ui:13
 msgid "Preferences"
 msgstr "Einstellungen"
 
@@ -90,68 +47,100 @@ msgid "_Theme:"
 msgstr "_Thema:"
 
 #: data/five-or-more-preferences.ui:76
-#| msgctxt "themes"
-#| msgid "balls"
 msgid "balls"
 msgstr "Kugeln"
 
 #: data/five-or-more-preferences.ui:77
-#| msgctxt "themes"
-#| msgid "shapes"
 msgid "shapes"
 msgstr "Formen"
 
-#: data/five-or-more-preferences.ui:86
+#: data/five-or-more-preferences.ui:78
+msgid "tango"
+msgstr "Tango"
+
+#: data/five-or-more-preferences.ui:87
 msgid "B_ackground color:"
-msgstr "_Hintergrundfarbe:"
+msgstr "Hintergrund_farbe:"
 
-#: data/five-or-more-preferences.ui:128
-msgid "Board Size"
-msgstr "Spielflächengröße"
-
-#: data/five-or-more-preferences.ui:147
-msgid "_Small"
-msgstr "_Klein"
-
-#: data/five-or-more-preferences.ui:166
-msgid "_Medium"
-msgstr "_Mittel"
-
-#: data/five-or-more-preferences.ui:185
-msgid "_Large"
-msgstr "_Groß"
-
-#: data/five-or-more.ui:31
-msgid "Next:"
-msgstr "Nächste Kugeln:"
-
-#: data/five-or-more.ui:57
-msgid "Score:"
-msgstr "Punkte:"
-
-#: data/five-or-more.ui:82
+#: data/five-or-more.ui:7
 msgid "_New Game"
 msgstr "_Neues Spiel"
 
-#: data/five-or-more.ui:86
-msgid "Start a new puzzle"
-msgstr "Eine neue Spielpartie beginnen"
+#: data/five-or-more.ui:13
+msgid "S_cores"
+msgstr "_Punkte"
 
-#: data/five-or-more-menu.ui:7
-msgid "Scores"
-msgstr "Punkte"
+#: data/five-or-more.ui:19
+msgid "_Small"
+msgstr "_Klein"
 
-#: data/five-or-more-menu.ui:17
-msgid "Help"
-msgstr "Hilfe"
+#: data/five-or-more.ui:24
+msgid "_Medium"
+msgstr "_Mittel"
 
-#: data/five-or-more-menu.ui:22
-msgid "About"
-msgstr "Info"
+#: data/five-or-more.ui:29
+msgid "_Large"
+msgstr "_Groß"
 
-#: data/five-or-more-menu.ui:26
-msgid "Quit"
-msgstr "Beenden"
+#: data/five-or-more.ui:36
+msgid "_Preferences"
+msgstr "_Einstellungen"
+
+#: data/five-or-more.ui:40
+msgid "_Help"
+msgstr "_Hilfe"
+
+#: data/five-or-more.ui:45
+msgid "_About Five or More"
+msgstr "_Info zu Fünf oder mehr"
+
+#: data/five-or-more.ui:65 data/org.gnome.five-or-more.appdata.xml.in:7
+#: data/org.gnome.five-or-more.desktop.in:3 src/main.vala:74 src/main.vala:168
+msgid "Five or More"
+msgstr "Fünf oder mehr"
+
+#: data/five-or-more.ui:77
+msgid "Next:"
+msgstr "Nächste Kugeln:"
+
+#: data/org.gnome.five-or-more.appdata.xml.in:8
+#: data/org.gnome.five-or-more.desktop.in:4
+msgid "Remove colored balls from the board by forming lines"
+msgstr "Farbige Kugeln durch Formieren von Linien aus dem Spielbrett entfernen"
+
+#: data/org.gnome.five-or-more.appdata.xml.in:10
+msgid ""
+"Five or More is the GNOME port of a once-popular computer game. Align five "
+"or more objects of the same color into a line to cause them to disappear and "
+"score points. Earn many more points by lining up as many objects as possible "
+"before clearing them."
+msgstr ""
+"»Fünf oder mehr« ist die GNOME-Portierung eines ehemals populären Spiels. "
+"Richten Sie fünf oder mehr Objekte der gleichen Farbe in einer Line aus, "
+"damit sie vom Spielfeld verschwinden und Punkte gutgeschrieben werden. Je "
+"mehr Objekte in einer Reihe liegen, desto mehr Punkte gibt es."
+
+#: data/org.gnome.five-or-more.appdata.xml.in:16
+msgid ""
+"More objects appear after every turn. Play for as long as possible, until "
+"the board is completely full!"
+msgstr ""
+"Nach jedem Spielzug erscheinen weitere Objekte. Spielen Sie so lange, bis "
+"das Spielfeld vollständig ausgefüllt ist!"
+
+#: data/org.gnome.five-or-more.appdata.xml.in:40
+msgid "The GNOME Project"
+msgstr "Das GNOME-Projekt"
+
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/org.gnome.five-or-more.desktop.in:6
+msgid "game;strategy;logic;"
+msgstr "Spiel;Strategie;Logik;"
+
+#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
+#: data/org.gnome.five-or-more.desktop.in:9
+msgid "org.gnome.five-or-more"
+msgstr "org.gnome.five-or-more"
 
 #: data/org.gnome.five-or-more.gschema.xml:5
 msgid "Playing field size"
@@ -238,11 +227,11 @@ msgctxt "board size"
 msgid "Large"
 msgstr "Groß"
 
-#: src/main.vala:147
+#: src/main.vala:171
 msgid "GNOME port of the once-popular Color Lines game"
 msgstr "GNOME-Portierung des ehemals populären Spiels »Color Lines«"
 
-#: src/main.vala:153
+#: src/main.vala:177
 msgid "translator-credits"
 msgstr ""
 "Karl Eichwalder <ke@suse.de>\n"
@@ -263,36 +252,52 @@ msgstr ""
 "Bernd Homuth <dev@hmt.im>\n"
 "Tim Sabsch <tim@sabsch.com>"
 
-#: src/preferences-dialog.vala:77
-msgid "Are you sure you want to restart the game?"
-msgstr "Wollen Sie das Spiel wirklich neu starten?"
-
-#: src/preferences-dialog.vala:79
-msgid "_Cancel"
-msgstr "A_bbrechen"
-
-#: src/preferences-dialog.vala:80
-msgid "_Restart"
-msgstr "Neu sta_rten"
-
-#: src/window.vala:53
+#: src/window.vala:50
 msgid "Match five objects of the same type in a row to score!"
 msgstr ""
 "Ordnen Sie fünf gleichartige Objekte in einer Reihe an, um Punkte zu "
 "erzielen!"
 
-#: src/window.vala:54
-#| msgid "You can’t move there!"
-msgid "You can't move there!"
+#: src/window.vala:51
+msgid "You can’t move there!"
 msgstr "Zug dorthin ist nicht möglich!"
 
-#: src/window.vala:55
+#: src/window.vala:52
 msgid "Game Over!"
 msgstr "Spiel vorbei!"
 
-#: src/window.vala:91
+#: src/window.vala:53
+#, c-format
+msgid "Score: %d"
+msgstr "Punkte: %d"
+
+#: src/window.vala:87
 msgid "Board Size: "
 msgstr "Spielflächengröße: "
+
+#: src/window.vala:159
+msgid "Are you sure you want to restart the game?"
+msgstr "Wollen Sie das Spiel wirklich neu starten?"
+
+#: src/window.vala:161
+msgid "_Cancel"
+msgstr "A_bbrechen"
+
+#: src/window.vala:162
+msgid "_Restart"
+msgstr "Neu sta_rten"
+
+#~ msgid "Board Size"
+#~ msgstr "Spielflächengröße"
+
+#~ msgid "Start a new puzzle"
+#~ msgstr "Eine neue Spielpartie beginnen"
+
+#~ msgid "About"
+#~ msgstr "Info"
+
+#~ msgid "Quit"
+#~ msgstr "Beenden"
 
 #~ msgid "_Image:"
 #~ msgstr "_Bild:"
