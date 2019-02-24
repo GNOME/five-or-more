@@ -6,9 +6,9 @@
 # Carmen Bianca BAKKER <carmen@carmenbianca.eu>, 2018.
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-games\n"
+"Project-Id-Version: five-or-more\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/five-or-more/issues\n"
-"POT-Creation-Date: 2019-01-11 15:40+0000\n"
+"POT-Creation-Date: 2019-02-24 11:21+0000\n"
 "PO-Revision-Date: 2019-02-24 12:19+0200\n"
 "Last-Translator: Kristjan SCHMIDT <kristjan.schmidt@googlemail.com>\n"
 "Language-Team: Esperanto <gnome-eo-list@gnome.org>\n"
@@ -34,14 +34,10 @@ msgid "_Theme:"
 msgstr "Haŭ_to:"
 
 #: data/five-or-more-preferences.ui:76
-#| msgctxt "themes"
-#| msgid "balls"
 msgid "balls"
 msgstr "pilkoj"
 
 #: data/five-or-more-preferences.ui:77
-#| msgctxt "themes"
-#| msgid "shapes"
 msgid "shapes"
 msgstr "formoj"
 
@@ -58,7 +54,6 @@ msgid "_New Game"
 msgstr "_Nova ludo"
 
 #: data/five-or-more.ui:13
-#| msgid "Scores"
 msgid "S_cores"
 msgstr "P_oentaroj"
 
@@ -75,17 +70,14 @@ msgid "_Large"
 msgstr "_Granda"
 
 #: data/five-or-more.ui:36
-#| msgid "Preferences"
 msgid "_Preferences"
 msgstr "_Agordoj"
 
 #: data/five-or-more.ui:40
-#| msgid "Help"
 msgid "_Help"
 msgstr "_Helpo"
 
 #: data/five-or-more.ui:45
-#| msgid "Five or More"
 msgid "_About Five or More"
 msgstr "_Pri Kvin Aŭ Pli"
 
@@ -134,7 +126,6 @@ msgstr "ludo;strategio;logiko;"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
 #: data/org.gnome.five-or-more.desktop.in:9
-#| msgid "five-or-more"
 msgid "org.gnome.five-or-more"
 msgstr "org.gnome.five-or-more"
 
@@ -205,7 +196,6 @@ msgid "Height of the window in pixels"
 msgstr "Alto de la fenestro en bilderoj"
 
 #: data/org.gnome.five-or-more.gschema.xml:48
-#| msgid "Width of the window in pixels"
 msgid "true if the window is maximized"
 msgstr "vera se la fenestro estas maksimumigita"
 
@@ -249,7 +239,6 @@ msgstr "Ludo finita!"
 
 #: src/window.vala:53
 #, c-format
-#| msgid "Score:"
 msgid "Score: %d"
 msgstr "Poentoj: %d"
 
