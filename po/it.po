@@ -1,19 +1,20 @@
 # Italian translation for five-or-more
 # Copyright (C) 2002-2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2018 Free Software Foundation, Inc.
+# Copyright (C) 2019 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-games package.
 # Fabrizio Stefani <f.stef@it.gnome.org>, 1999-2002;
 # Alessio Frusciante <algol@firenze.linux.it>. 2003.
 # Francesco Marletta <francesco.marletta@tiscali.it>. 2002-2006.
 # Gruppo traduzione Italiano di Ubuntu <gruppo-traduzione@ubuntu-it.org>, 2007-2008
-# Milo Casagrande <milo@milo.name>, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2018.
+# Milo Casagrande <milo@milo.name>, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2018, 2019.
 # Gianvito Cavasoli <gianvito@gmx.it>, 2016.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: five-or-more\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/five-or-more/issues\n"
-"POT-Creation-Date: 2018-08-25 08:53+0000\n"
-"PO-Revision-Date: 2018-08-27 10:05+0200\n"
+"POT-Creation-Date: 2019-01-11 15:40+0000\n"
+"PO-Revision-Date: 2019-02-20 09:29+0100\n"
 "Last-Translator: Milo Casagrande <milo@milo.name>\n"
 "Language-Team: Italiano <gnome-it-list@gnome.org>\n"
 "Language: it\n"
@@ -21,18 +22,83 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.0.6\n"
+"X-Generator: Poedit 2.2.1\n"
 
-#: data/five-or-more.appdata.xml.in:7 data/five-or-more.desktop.in:3
-#: data/five-or-more.ui:18 src/five-or-more.c:70 src/five-or-more-app.c:576
+#: data/five-or-more-preferences.ui:13
+msgid "Preferences"
+msgstr "Preferenze"
+
+#: data/five-or-more-preferences.ui:36
+msgid "Appearance"
+msgstr "Aspetto"
+
+#: data/five-or-more-preferences.ui:60
+msgid "_Theme:"
+msgstr "_Tema:"
+
+#: data/five-or-more-preferences.ui:76
+msgid "balls"
+msgstr "palline"
+
+#: data/five-or-more-preferences.ui:77
+msgid "shapes"
+msgstr "forme"
+
+#: data/five-or-more-preferences.ui:78
+msgid "tango"
+msgstr "tango"
+
+#: data/five-or-more-preferences.ui:87
+msgid "B_ackground color:"
+msgstr "Colore di _sfondo:"
+
+#: data/five-or-more.ui:7
+msgid "_New Game"
+msgstr "_Nuova partita"
+
+#: data/five-or-more.ui:13
+msgid "S_cores"
+msgstr "_Punteggi"
+
+#: data/five-or-more.ui:19
+msgid "_Small"
+msgstr "_Piccola"
+
+#: data/five-or-more.ui:24
+msgid "_Medium"
+msgstr "_Media"
+
+#: data/five-or-more.ui:29
+msgid "_Large"
+msgstr "_Grande"
+
+#: data/five-or-more.ui:36
+msgid "_Preferences"
+msgstr "Preferen_ze"
+
+#: data/five-or-more.ui:40
+msgid "_Help"
+msgstr "A_iuto"
+
+#: data/five-or-more.ui:45
+msgid "_About Five or More"
+msgstr "I_nformazioni su Cinque o più"
+
+#: data/five-or-more.ui:65 data/org.gnome.five-or-more.appdata.xml.in:7
+#: data/org.gnome.five-or-more.desktop.in:3 src/main.vala:74 src/main.vala:168
 msgid "Five or More"
 msgstr "Cinque o più"
 
-#: data/five-or-more.appdata.xml.in:8 data/five-or-more.desktop.in:4
+#: data/five-or-more.ui:77
+msgid "Next:"
+msgstr "Prossime:"
+
+#: data/org.gnome.five-or-more.appdata.xml.in:8
+#: data/org.gnome.five-or-more.desktop.in:4
 msgid "Remove colored balls from the board by forming lines"
 msgstr "Rimuovi le biglie colorate dalla scacchiera formando linee"
 
-#: data/five-or-more.appdata.xml.in:10
+#: data/org.gnome.five-or-more.appdata.xml.in:10
 msgid ""
 "Five or More is the GNOME port of a once-popular computer game. Align five "
 "or more objects of the same color into a line to cause them to disappear and "
@@ -44,7 +110,7 @@ msgstr ""
 "guadagnare punti. Guadagna punti accumulando più oggetti possibili prima di "
 "farli sparire."
 
-#: data/five-or-more.appdata.xml.in:16
+#: data/org.gnome.five-or-more.appdata.xml.in:16
 msgid ""
 "More objects appear after every turn. Play for as long as possible, until "
 "the board is completely full!"
@@ -52,91 +118,20 @@ msgstr ""
 "A ogni turno, nuovi oggetti saranno disponibili. Gioca per il più lungo "
 "tempo possibile, finché il tavolo di gioco non è pieno!"
 
-#: data/five-or-more.appdata.xml.in:40
+#: data/org.gnome.five-or-more.appdata.xml.in:40
 msgid "The GNOME Project"
 msgstr "Il progetto GNOME"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/five-or-more.desktop.in:6
+#: data/org.gnome.five-or-more.desktop.in:6
 msgid "game;strategy;logic;"
 msgstr "gioco;giochi;strategia;logica;"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: data/five-or-more.desktop.in:9
-msgid "five-or-more"
-msgstr "five-or-more"
-
-#: data/five-or-more-preferences.ui:12 data/menu.ui:11 src/game-area.c:858
-msgid "Preferences"
-msgstr "Preferenze"
-
-#: data/five-or-more-preferences.ui:35
-msgid "Appearance"
-msgstr "Aspetto"
-
-#: data/five-or-more-preferences.ui:59
-msgid "_Image:"
-msgstr "_Immagine:"
-
-#: data/five-or-more-preferences.ui:74
-msgid "B_ackground color:"
-msgstr "Colore di _sfondo:"
-
-#: data/five-or-more-preferences.ui:116
-msgid "Board Size"
-msgstr "Dimensione tavola"
-
-#: data/five-or-more-preferences.ui:135
-msgid "_Small"
-msgstr "_Piccola"
-
-#: data/five-or-more-preferences.ui:154
-msgid "_Medium"
-msgstr "_Media"
-
-#: data/five-or-more-preferences.ui:173
-msgid "_Large"
-msgstr "_Grande"
-
-#: data/five-or-more-preferences.ui:203
-msgid "General"
-msgstr "Generale"
-
-#: data/five-or-more-preferences.ui:216
-msgid "_Use fast moves"
-msgstr "_Usare mosse rapide"
-
-#: data/five-or-more.ui:30
-msgid "Next:"
-msgstr "Prossime:"
-
-#: data/five-or-more.ui:56
-msgid "Score:"
-msgstr "Punteggio:"
-
-#: data/five-or-more.ui:76
-msgid "_New Game"
-msgstr "_Nuova partita"
-
-#: data/five-or-more.ui:80
-msgid "Start a new puzzle"
-msgstr "Inizia una nuova partita"
-
-#: data/menu.ui:7
-msgid "Scores"
-msgstr "Punteggi"
-
-#: data/menu.ui:17
-msgid "Help"
-msgstr "Aiuto"
-
-#: data/menu.ui:22
-msgid "About"
-msgstr "Informazioni"
-
-#: data/menu.ui:26
-msgid "Quit"
-msgstr "Esci"
+#: data/org.gnome.five-or-more.desktop.in:9
+#| msgid "five-or-more"
+msgid "org.gnome.five-or-more"
+msgstr "org.gnome.five-or-more"
 
 #: data/org.gnome.five-or-more.gschema.xml:5
 msgid "Playing field size"
@@ -210,71 +205,26 @@ msgstr "Altezza della finestra in pixel."
 msgid "true if the window is maximized"
 msgstr "VERO se la finestra è massimizzata"
 
-#.
-#. * Translatable strings file.
-#. * Add this file to your project's POTFILES.in.
-#. * DO NOT compile it as part of your application.
-#.
-#: data/translatable_themes.h:6
-msgctxt "themes"
-msgid "balls"
-msgstr "palline"
-
-#: data/translatable_themes.h:7
-msgctxt "themes"
-msgid "dots"
-msgstr "puntini"
-
-#: data/translatable_themes.h:8
-msgctxt "themes"
-msgid "gumball"
-msgstr "pallina di chewing-gum"
-
-#: data/translatable_themes.h:9
-msgctxt "themes"
-msgid "shapes"
-msgstr "forme"
-
-#: src/five-or-more-app.c:57
+#: src/game.vala:94
 msgctxt "board size"
 msgid "Small"
 msgstr "Piccola"
 
-#: src/five-or-more-app.c:58
+#: src/game.vala:95
 msgctxt "board size"
 msgid "Medium"
 msgstr "Media"
 
-#: src/five-or-more-app.c:59
+#: src/game.vala:96
 msgctxt "board size"
 msgid "Large"
 msgstr "Grande"
 
-#: src/five-or-more-app.c:233
-msgid "Game Over!"
-msgstr "Fine gioco!"
-
-#: src/five-or-more-app.c:250
-msgid "Match five objects of the same type in a row to score!"
-msgstr "Allinea cinque oggetti dello stesso tipo per fare punti!"
-
-#: src/five-or-more-app.c:405
-msgid "Are you sure you want to restart the game?"
-msgstr "Vuoi ricominciare veramente la partita?"
-
-#: src/five-or-more-app.c:408
-msgid "_Cancel"
-msgstr "A_nnulla"
-
-#: src/five-or-more-app.c:409
-msgid "_Restart"
-msgstr "_Ricomincia"
-
-#: src/five-or-more-app.c:578
+#: src/main.vala:171
 msgid "GNOME port of the once-popular Color Lines game"
 msgstr "Trasposizione per GNOME del glorioso gioco Color Lines"
 
-#: src/five-or-more-app.c:584
+#: src/main.vala:177
 msgid "translator-credits"
 msgstr ""
 "Milo Casagrande <milo@milo.name>\n"
@@ -282,74 +232,35 @@ msgstr ""
 "Francesco Marletta <francesco.marletta@tiscali.it>\n"
 "Fabrizio Stefani <f.stef@it.gnome.org>"
 
-#: src/five-or-more-app.c:694
-msgid "Board Size: "
-msgstr "Dimensione della tavola: "
+#: src/window.vala:50
+msgid "Match five objects of the same type in a row to score!"
+msgstr "Allinea cinque oggetti dello stesso tipo per fare punti!"
 
-#. Can't move there!
-#: src/game-area.c:635
+#: src/window.vala:51
 msgid "You can’t move there!"
 msgstr "Non puoi spostare lì!"
 
-#: src/game-area.c:818
+#: src/window.vala:52
+msgid "Game Over!"
+msgstr "Fine gioco!"
+
+#: src/window.vala:53
 #, c-format
-msgid ""
-"Unable to locate file:\n"
-"%s\n"
-"\n"
-"The default theme will be loaded instead."
-msgstr ""
-"Impossibile trovare il file:\n"
-"%s\n"
-"\n"
-"Verrà caricato invece il tema predefinito."
+msgid "Score: %d"
+msgstr "Punteggio: %d"
 
-#: src/game-area.c:825
-#, c-format
-msgid ""
-"Unable to locate file:\n"
-"%s\n"
-"\n"
-"Please check that Five or More is installed correctly."
-msgstr ""
-"Impossibile trovare il file:\n"
-"%s\n"
-"\n"
-"Controllare l'installazione di Cinque o più."
+#: src/window.vala:87
+msgid "Board Size: "
+msgstr "Dimensione della tavola: "
 
-#: src/game-area.c:852
-msgid "Could not load theme"
-msgstr "Impossibile caricare il tema"
+#: src/window.vala:159
+msgid "Are you sure you want to restart the game?"
+msgstr "Vuoi ricominciare veramente la partita?"
 
-#~ msgid "0"
-#~ msgstr "0"
+#: src/window.vala:161
+msgid "_Cancel"
+msgstr "A_nnulla"
 
-#~ msgid "Five or More Scores"
-#~ msgstr "Punteggi Cinque o più"
-
-#~ msgid "_Board size:"
-#~ msgstr "_Dimensione della tavola:"
-
-#~ msgctxt "score-dialog"
-#~ msgid "Time"
-#~ msgstr "Tempo"
-
-#~ msgctxt "score-dialog"
-#~ msgid "Score"
-#~ msgstr "Punteggio"
-
-#~ msgctxt "score-dialog"
-#~ msgid "%1$dm %2$ds"
-#~ msgstr "%1$dm %2$ds"
-
-#~ msgid "_Quit"
-#~ msgstr "_Esci"
-
-#~ msgid "_Undo"
-#~ msgstr "A_nnulla"
-
-#~ msgid "_Close"
-#~ msgstr "_Chiudi"
-
-#~ msgid "Date"
-#~ msgstr "Data"
+#: src/window.vala:162
+msgid "_Restart"
+msgstr "_Ricomincia"
