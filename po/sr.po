@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Гномове игре\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/five-or-more/issues\n"
-"POT-Creation-Date: 2018-09-13 15:19+0000\n"
-"PO-Revision-Date: 2018-09-29 12:16+0200\n"
+"POT-Creation-Date: 2019-01-11 15:40+0000\n"
+"PO-Revision-Date: 2019-02-28 21:36+0100\n"
 "Last-Translator: Марко М. Костић <marko.m.kostic@gmail.com>\n"
 "Language-Team: српски <gnome-sr@googlegroups.org>\n"
 "Language: sr\n"
@@ -21,18 +21,83 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=n==1? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Project-Style: gnome\n"
-"X-Generator: Poedit 2.0.6\n"
+"X-Generator: Poedit 2.2\n"
 
-#: data/five-or-more.appdata.xml.in:7 data/five-or-more.desktop.in:3
-#: data/five-or-more.ui:18 src/five-or-more.c:70 src/five-or-more-app.c:576
+#: data/five-or-more-preferences.ui:13
+msgid "Preferences"
+msgstr "Поставке"
+
+#: data/five-or-more-preferences.ui:36
+msgid "Appearance"
+msgstr "Изглед"
+
+#: data/five-or-more-preferences.ui:60
+msgid "_Theme:"
+msgstr "_Тема:"
+
+#: data/five-or-more-preferences.ui:76
+msgid "balls"
+msgstr "лоптице"
+
+#: data/five-or-more-preferences.ui:77
+msgid "shapes"
+msgstr "облици"
+
+#: data/five-or-more-preferences.ui:78
+msgid "tango"
+msgstr "танго"
+
+#: data/five-or-more-preferences.ui:87
+msgid "B_ackground color:"
+msgstr "Боја _позадине:"
+
+#: data/five-or-more.ui:7
+msgid "_New Game"
+msgstr "_Нова игра"
+
+#: data/five-or-more.ui:13
+msgid "S_cores"
+msgstr "Ре_зултати"
+
+#: data/five-or-more.ui:19
+msgid "_Small"
+msgstr "_Мала"
+
+#: data/five-or-more.ui:24
+msgid "_Medium"
+msgstr "_Средња"
+
+#: data/five-or-more.ui:29
+msgid "_Large"
+msgstr "_Велика"
+
+#: data/five-or-more.ui:36
+msgid "_Preferences"
+msgstr "_Поставке"
+
+#: data/five-or-more.ui:40
+msgid "_Help"
+msgstr "По_моћ"
+
+#: data/five-or-more.ui:45
+msgid "_About Five or More"
+msgstr "_О Пет или више"
+
+#: data/five-or-more.ui:65 data/org.gnome.five-or-more.appdata.xml.in:7
+#: data/org.gnome.five-or-more.desktop.in:3 src/main.vala:74 src/main.vala:168
 msgid "Five or More"
 msgstr "Пет или више"
 
-#: data/five-or-more.appdata.xml.in:8 data/five-or-more.desktop.in:4
+#: data/five-or-more.ui:77
+msgid "Next:"
+msgstr "Следеће:"
+
+#: data/org.gnome.five-or-more.appdata.xml.in:8
+#: data/org.gnome.five-or-more.desktop.in:4
 msgid "Remove colored balls from the board by forming lines"
 msgstr "Уклањајте обојене лоптице са табле образујући линије"
 
-#: data/five-or-more.appdata.xml.in:10
+#: data/org.gnome.five-or-more.appdata.xml.in:10
 msgid ""
 "Five or More is the GNOME port of a once-popular computer game. Align five "
 "or more objects of the same color into a line to cause them to disappear and "
@@ -44,7 +109,7 @@ msgstr ""
 "Зарадите што више поена повезивањем што је могуће више предмета пре него ли "
 "их почистите."
 
-#: data/five-or-more.appdata.xml.in:16
+#: data/org.gnome.five-or-more.appdata.xml.in:16
 msgid ""
 "More objects appear after every turn. Play for as long as possible, until "
 "the board is completely full!"
@@ -52,91 +117,19 @@ msgstr ""
 "Након сваког покушаја појављује се више предмета. Играјте што дуже можете, "
 "све док се табла потпуно не испуни!"
 
-#: data/five-or-more.appdata.xml.in:40
+#: data/org.gnome.five-or-more.appdata.xml.in:40
 msgid "The GNOME Project"
 msgstr "Гномов пројекат"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/five-or-more.desktop.in:6
+#: data/org.gnome.five-or-more.desktop.in:6
 msgid "game;strategy;logic;"
 msgstr "игра;стратегија;логика;"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: data/five-or-more.desktop.in:9
-msgid "five-or-more"
-msgstr "five-or-more"
-
-#: data/five-or-more-preferences.ui:12 data/menu.ui:11 src/game-area.c:858
-msgid "Preferences"
-msgstr "Поставке"
-
-#: data/five-or-more-preferences.ui:35
-msgid "Appearance"
-msgstr "Изглед"
-
-#: data/five-or-more-preferences.ui:59
-msgid "_Image:"
-msgstr "_Слика:"
-
-#: data/five-or-more-preferences.ui:74
-msgid "B_ackground color:"
-msgstr "Боја _позадине:"
-
-#: data/five-or-more-preferences.ui:116
-msgid "Board Size"
-msgstr "Величина табле"
-
-#: data/five-or-more-preferences.ui:135
-msgid "_Small"
-msgstr "_Мала"
-
-#: data/five-or-more-preferences.ui:154
-msgid "_Medium"
-msgstr "_Средња"
-
-#: data/five-or-more-preferences.ui:173
-msgid "_Large"
-msgstr "_Велика"
-
-#: data/five-or-more-preferences.ui:203
-msgid "General"
-msgstr "Опште"
-
-#: data/five-or-more-preferences.ui:216
-msgid "_Use fast moves"
-msgstr "_Користи брзе потезе"
-
-#: data/five-or-more.ui:30
-msgid "Next:"
-msgstr "Следеће:"
-
-#: data/five-or-more.ui:56
-msgid "Score:"
-msgstr "Разултат:"
-
-#: data/five-or-more.ui:76
-msgid "_New Game"
-msgstr "_Нова игра"
-
-#: data/five-or-more.ui:80
-msgid "Start a new puzzle"
-msgstr "Започните нову игру"
-
-#: data/menu.ui:7
-msgid "Scores"
-msgstr "Резултати"
-
-#: data/menu.ui:17
-msgid "Help"
-msgstr "Помоћ"
-
-#: data/menu.ui:22
-msgid "About"
-msgstr "О програму"
-
-#: data/menu.ui:26
-msgid "Quit"
-msgstr "Изађи"
+#: data/org.gnome.five-or-more.desktop.in:9
+msgid "org.gnome.five-or-more"
+msgstr "org.gnome.five-or-more"
 
 #: data/org.gnome.five-or-more.gschema.xml:5
 msgid "Playing field size"
@@ -209,71 +202,26 @@ msgstr "Висина прозора у тачкама"
 msgid "true if the window is maximized"
 msgstr "изабрано ако је прозор увећан"
 
-#.
-#. * Translatable strings file.
-#. * Add this file to your project's POTFILES.in.
-#. * DO NOT compile it as part of your application.
-#.
-#: data/translatable_themes.h:6
-msgctxt "themes"
-msgid "balls"
-msgstr "лоптице"
-
-#: data/translatable_themes.h:7
-msgctxt "themes"
-msgid "dots"
-msgstr "тачке"
-
-#: data/translatable_themes.h:8
-msgctxt "themes"
-msgid "gumball"
-msgstr "жвака"
-
-#: data/translatable_themes.h:9
-msgctxt "themes"
-msgid "shapes"
-msgstr "облици"
-
-#: src/five-or-more-app.c:57
+#: src/game.vala:94
 msgctxt "board size"
 msgid "Small"
 msgstr "Мала"
 
-#: src/five-or-more-app.c:58
+#: src/game.vala:95
 msgctxt "board size"
 msgid "Medium"
 msgstr "Средња"
 
-#: src/five-or-more-app.c:59
+#: src/game.vala:96
 msgctxt "board size"
 msgid "Large"
 msgstr "Велика"
 
-#: src/five-or-more-app.c:233
-msgid "Game Over!"
-msgstr "Игра је готова!"
-
-#: src/five-or-more-app.c:250
-msgid "Match five objects of the same type in a row to score!"
-msgstr "Повежите пет предмета исте врсте у низу да освојите поене!"
-
-#: src/five-or-more-app.c:405
-msgid "Are you sure you want to restart the game?"
-msgstr "Да ли сигурно желите поново да покренете игру?"
-
-#: src/five-or-more-app.c:408
-msgid "_Cancel"
-msgstr "_Откажи"
-
-#: src/five-or-more-app.c:409
-msgid "_Restart"
-msgstr "_Поново покрени"
-
-#: src/five-or-more-app.c:578
+#: src/main.vala:171
 msgid "GNOME port of the once-popular Color Lines game"
 msgstr "Гномова изведба некад популарне игре Линије"
 
-#: src/five-or-more-app.c:584
+#: src/main.vala:177
 msgid "translator-credits"
 msgstr ""
 "Душан Марјановић <madafaka@root.co.yu>\n"
@@ -284,44 +232,92 @@ msgstr ""
 "\n"
 "http://prevod.org — превод на српски језик"
 
-#: src/five-or-more-app.c:694
-msgid "Board Size: "
-msgstr "Величина табле: "
+#: src/window.vala:50
+msgid "Match five objects of the same type in a row to score!"
+msgstr "Повежите пет предмета исте врсте у низу да освојите поене!"
 
-#. Can't move there!
-#: src/game-area.c:635
+#: src/window.vala:51
 msgid "You can’t move there!"
 msgstr "То је немогућ потез!"
 
-#: src/game-area.c:818
-#, c-format
-msgid ""
-"Unable to locate file:\n"
-"%s\n"
-"\n"
-"The default theme will be loaded instead."
-msgstr ""
-"Не могу да пронађем датотеку:\n"
-"%s\n"
-"\n"
-"Учитавам подразумевану тему."
+#: src/window.vala:52
+msgid "Game Over!"
+msgstr "Игра је готова!"
 
-#: src/game-area.c:825
+#: src/window.vala:53
 #, c-format
-msgid ""
-"Unable to locate file:\n"
-"%s\n"
-"\n"
-"Please check that Five or More is installed correctly."
-msgstr ""
-"Не могу да пронађем датотеку:\n"
-"%s\n"
-"\n"
-"Проверите да ли је исправно инсталирана ова игрица."
+msgid "Score: %d"
+msgstr "Резултат: %d"
 
-#: src/game-area.c:852
-msgid "Could not load theme"
-msgstr "Не могу да учитам тему"
+#: src/window.vala:87
+msgid "Board Size: "
+msgstr "Величина табле: "
+
+#: src/window.vala:159
+msgid "Are you sure you want to restart the game?"
+msgstr "Да ли сигурно желите поново да покренете игру?"
+
+#: src/window.vala:161
+msgid "_Cancel"
+msgstr "_Откажи"
+
+#: src/window.vala:162
+msgid "_Restart"
+msgstr "_Поново покрени"
+
+#~ msgid "_Image:"
+#~ msgstr "_Слика:"
+
+#~ msgid "Board Size"
+#~ msgstr "Величина табле"
+
+#~ msgid "General"
+#~ msgstr "Опште"
+
+#~ msgid "_Use fast moves"
+#~ msgstr "_Користи брзе потезе"
+
+#~ msgid "Start a new puzzle"
+#~ msgstr "Започните нову игру"
+
+#~ msgid "About"
+#~ msgstr "О програму"
+
+#~ msgid "Quit"
+#~ msgstr "Изађи"
+
+#~ msgctxt "themes"
+#~ msgid "dots"
+#~ msgstr "тачке"
+
+#~ msgctxt "themes"
+#~ msgid "gumball"
+#~ msgstr "жвака"
+
+#~ msgid ""
+#~ "Unable to locate file:\n"
+#~ "%s\n"
+#~ "\n"
+#~ "The default theme will be loaded instead."
+#~ msgstr ""
+#~ "Не могу да пронађем датотеку:\n"
+#~ "%s\n"
+#~ "\n"
+#~ "Учитавам подразумевану тему."
+
+#~ msgid ""
+#~ "Unable to locate file:\n"
+#~ "%s\n"
+#~ "\n"
+#~ "Please check that Five or More is installed correctly."
+#~ msgstr ""
+#~ "Не могу да пронађем датотеку:\n"
+#~ "%s\n"
+#~ "\n"
+#~ "Проверите да ли је исправно инсталирана ова игрица."
+
+#~ msgid "Could not load theme"
+#~ msgstr "Не могу да учитам тему"
 
 #~ msgid "0"
 #~ msgstr "0"
