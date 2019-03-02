@@ -4,7 +4,7 @@
       id="change-board-size">
   <info>
     <link type="guide" xref="index#tips" />
-    <revision pkgversion="3.4.0" version="0.1" date="2012-03-13" status="final"/>
+    <revision pkgversion="3.31.91" version="0.2" date="2019-03-02" status="final"/>
     <credit type="author copyright">
       <name>Lahiru lanka</name>
       <email> lankakck@.gmailcom</email>
@@ -23,8 +23,8 @@
   <title>Change board size</title>
     <p>To change the board size:</p>
     <list>
-      <item><p>Click <guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq></p></item>
-      <item><p>Under <gui>Board Size</gui>, select <gui>Small</gui>, <gui>Medium</gui>, or <gui>Large</gui>.</p></item>
+      <item><p>Press the menu button in the top-right corner of the window.</p></item>
+      <item><p>Select <gui>Small</gui>, <gui>Medium</gui>, or <gui>Large</gui>.</p></item>
     </list>
 
   <note style="tip">
