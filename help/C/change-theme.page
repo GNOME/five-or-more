@@ -4,7 +4,7 @@
       id="change-theme">
   <info>
     <link type="guide" xref="index#tips" />
-    <revision pkgversion="3.4.0" version="0.1" date="2012-03-13" status="final"/>
+    <revision pkgversion="3.31.91" version="0.2" date="2019-03-02" status="final"/>
     <credit type="author copyright">
       <name>Lahiru lanka</name>
       <email>lankakck@.gmailcom</email>
@@ -21,16 +21,17 @@
   <p>To change the appearance of the pieces and the board:</p>
 
   <steps>
-    <item><p>Click <guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq>.</p>
+    <item><p>Press the menu button in the top-right corner of the window and
+     select <gui style="menuitem">Preferences</gui>.</p>
 
     <list>
-    <item><p>Select <gui>balls</gui> or <gui>shapes</gui> from the <gui>Themes</gui>
-     drop down menu to change the playing pieces.</p></item>
+    <item><p>Select <gui>balls</gui>, <gui>shapes</gui>, or <gui>tango</gui> from
+     the <gui>Theme</gui> drop down menu to change the playing pieces.</p></item>
     <item><p>Click on the colored box next to <gui>Background color</gui> to access
      the color palette.</p></item>
     </list>
     </item>
-    <item><p>Click <gui>Close</gui>.</p></item>
+    <item><p>Close the <gui>Preferences</gui> dialog.</p></item>
   </steps>
 
   <section id="images">
