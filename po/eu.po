@@ -4,329 +4,320 @@
 #
 #
 # Iñaki Larrañaga Murgoitio <dooteo@zundan.com>, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2016.
+# Asier Sarasua Garmendia <asier.sarasua@gmail.com>, 2019.
 msgid ""
-msgstr ""
-"Project-Id-Version: five-or-more master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-"
-"or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-08-13 20:27+0000\n"
-"PO-Revision-Date: 2016-09-20 12:10+0100\n"
-"Last-Translator: dooteo <dooteo@zundan.com>\n"
-"Language-Team: Basque <librezale@librezale.org>\n"
+msgstr "Project-Id-Version: five-or-more master\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/five-or-more/issues\n"
+"POT-Creation-Date: 2019-01-11 15:40+0000\n"
+"PO-Revision-Date: 2019-03-01 06:00+0100\n"
+"Last-Translator: Asier Sarasua Garmendia <asier.sarasua@gmail.com>\n"
+"Language-Team: Basque <librezale@librezale.eus>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"\n"
 "X-Generator: Lokalize 2.0\n"
 
-#: ../data/five-or-more.appdata.xml.in.h:1 ../data/five-or-more.desktop.in.h:1
-#: ../data/five-or-more.ui.h:1 ../src/five-or-more.c:1172
-#: ../src/five-or-more.c:1723
+#: data/five-or-more-preferences.ui:13
+msgid "Preferences"
+msgstr "Hobespenak"
+
+#: data/five-or-more-preferences.ui:36
+msgid "Appearance"
+msgstr "Itxura"
+
+#: data/five-or-more-preferences.ui:60
+msgid "_Theme:"
+msgstr "_Gaia:"
+
+#: data/five-or-more-preferences.ui:76
+msgid "balls"
+msgstr "bolak"
+
+#: data/five-or-more-preferences.ui:77
+msgid "shapes"
+msgstr "formak"
+
+#: data/five-or-more-preferences.ui:78
+msgid "tango"
+msgstr "tango"
+
+#: data/five-or-more-preferences.ui:87
+msgid "B_ackground color:"
+msgstr "Atzeko pla_noaren kolorea:"
+
+#: data/five-or-more.ui:7
+msgid "_New Game"
+msgstr "_Joko berria"
+
+#: data/five-or-more.ui:13
+msgid "S_cores"
+msgstr "P_untuazioak"
+
+#: data/five-or-more.ui:19
+msgid "_Small"
+msgstr "_Txikia"
+
+#: data/five-or-more.ui:24
+msgid "_Medium"
+msgstr "Ta_rtekoa"
+
+#: data/five-or-more.ui:29
+msgid "_Large"
+msgstr "_Handia"
+
+#: data/five-or-more.ui:36
+msgid "_Preferences"
+msgstr "_Hobespenak"
+
+#: data/five-or-more.ui:40
+msgid "_Help"
+msgstr "_Laguntza"
+
+#: data/five-or-more.ui:45
+msgid "_About Five or More"
+msgstr "Bost edo gehiago jokoari _buruz"
+
+#: data/five-or-more.ui:65 data/org.gnome.five-or-more.appdata.xml.in:7
+#: data/org.gnome.five-or-more.desktop.in:3 src/main.vala:74 src/main.vala:168
 msgid "Five or More"
 msgstr "Bost edo gehiago"
 
-#: ../data/five-or-more.appdata.xml.in.h:2 ../data/five-or-more.desktop.in.h:2
+#: data/five-or-more.ui:77
+msgid "Next:"
+msgstr "Hurrengoa:"
+
+#: data/org.gnome.five-or-more.appdata.xml.in:8
+#: data/org.gnome.five-or-more.desktop.in:4
 msgid "Remove colored balls from the board by forming lines"
 msgstr "Lerroak osatuz, kendu koloretako puxtarriak taulatik"
 
-#: ../data/five-or-more.appdata.xml.in.h:3
+#: data/org.gnome.five-or-more.appdata.xml.in:10
 msgid ""
 "Five or More is the GNOME port of a once-popular computer game. Align five "
 "or more objects of the same color into a line to cause them to disappear and "
 "score points. Earn many more points by lining up as many objects as possible "
 "before clearing them."
-msgstr ""
-"Ospetsua den joko baten  GNOMErako moldaketa da 'Bost edo gehiago'. Kolore "
-"berdineko bost edo objektu gehiago lerrokatzean hauek desagertzen dira eta "
-"puntuazioa lortzen da. Irabazi puntu gehiago ahalik eta objektuen kopuru "
-"handiena lerrokatuz guztiak batera garbitzeko."
+msgstr "Ospetsua den joko baten  GNOMErako moldaketa da 'Bost edo gehiago'. Kolore berdineko bost edo objektu gehiago lerrokatzean hauek desagertzen dira eta puntuazioa lortzen da. Irabazi puntu gehiago ahalik eta objektuen kopuru handiena lerrokatuz guztiak batera garbitzeko."
 
-#: ../data/five-or-more.appdata.xml.in.h:4
+#: data/org.gnome.five-or-more.appdata.xml.in:16
 msgid ""
 "More objects appear after every turn. Play for as long as possible, until "
 "the board is completely full!"
-msgstr ""
-"Txanda bakoitzaren ondoren, objektu gehiago agertzen dira. Jokatu ahal duzun "
-"gehiena taula erabat bete arte."
+msgstr "Txanda bakoitzaren ondoren, objektu gehiago agertzen dira. Jokatu ahal duzun gehiena taula erabat bete arte."
 
-#: ../data/five-or-more.appdata.xml.in.h:5
+#: data/org.gnome.five-or-more.appdata.xml.in:40
 msgid "The GNOME Project"
 msgstr "GNOME proiektua"
 
-#: ../data/five-or-more.desktop.in.h:3
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/org.gnome.five-or-more.desktop.in:6
 msgid "game;strategy;logic;"
 msgstr "jokoa;estrategia;logika;"
 
-#: ../data/five-or-more-preferences.ui.h:1 ../data/menu.ui.h:2
-#: ../src/five-or-more.c:171
-msgid "Preferences"
-msgstr "Hobespenak"
+#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
+#: data/org.gnome.five-or-more.desktop.in:9
+msgid "org.gnome.five-or-more"
+msgstr "org.gnome.five-or-more"
 
-#: ../data/five-or-more-preferences.ui.h:2
-msgid "Appearance"
-msgstr "Itxura"
-
-#: ../data/five-or-more-preferences.ui.h:3
-msgid "_Image:"
-msgstr "_Irudia:"
-
-#: ../data/five-or-more-preferences.ui.h:4
-msgid "B_ackground color:"
-msgstr "Atzeko pla_noaren kolorea:"
-
-#: ../data/five-or-more-preferences.ui.h:5
-msgid "Board Size"
-msgstr "Taularen tamaina"
-
-#: ../data/five-or-more-preferences.ui.h:6
-msgid "_Small"
-msgstr "_Txikia"
-
-#: ../data/five-or-more-preferences.ui.h:7
-msgid "_Medium"
-msgstr "_Tartekoa"
-
-#: ../data/five-or-more-preferences.ui.h:8
-msgid "_Large"
-msgstr "_Handia"
-
-#: ../data/five-or-more-preferences.ui.h:9
-msgid "General"
-msgstr "Orokorra"
-
-#: ../data/five-or-more-preferences.ui.h:10
-msgid "_Use fast moves"
-msgstr "_Erabili mugimendu bizkorrak"
-
-#: ../data/five-or-more.ui.h:2
-msgid "Next:"
-msgstr "Hurrengoa:"
-
-#: ../data/five-or-more.ui.h:3
-msgid "0"
-msgstr "0"
-
-#: ../data/five-or-more.ui.h:4
-msgid "Score:"
-msgstr "Puntuazioa:"
-
-#: ../data/five-or-more.ui.h:5 ../src/games-scores-dialog.c:385
-msgid "_New Game"
-msgstr "_Joko berria"
-
-#: ../data/five-or-more.ui.h:6
-msgid "Start a new puzzle"
-msgstr "Hasi puzzle berria"
-
-#: ../data/menu.ui.h:1
-msgid "Scores"
-msgstr "Puntuazioa"
-
-#: ../data/menu.ui.h:3
-msgid "Help"
-msgstr "Laguntza"
-
-#: ../data/menu.ui.h:4
-msgid "About"
-msgstr "Honi buruz"
-
-#: ../data/menu.ui.h:5
-msgid "Quit"
-msgstr "Irten"
-
-#: ../data/org.gnome.five-or-more.gschema.xml.h:1
+#: data/org.gnome.five-or-more.gschema.xml:5
 msgid "Playing field size"
 msgstr "Joko-eremuaren tamaina"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:2
+#: data/org.gnome.five-or-more.gschema.xml:6
 msgid ""
 "Playing field size. 1=Small, 2=Medium, 3=Large. Any other value is invalid."
-msgstr ""
-"Joko-eremuaren tamaina. 1=Txikia, 2=Ertaina, 3=Handia. Gainerako balioak ez "
-"dira baliozkoak."
+msgstr "Joko-eremuaren tamaina. 1=Txikia, 2=Ertaina, 3=Handia. Gainerako balioak ez dira baliozkoak."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:3
+#: data/org.gnome.five-or-more.gschema.xml:10
 msgid "Ball style"
 msgstr "Puxtarrien estiloa"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:4
+#: data/org.gnome.five-or-more.gschema.xml:11
 msgid "Ball style. The filename of the images to use for the balls."
-msgstr ""
-"Puxtarrien estiloa. Puxtarrietan erabili beharreko irudien fitxategi-izena."
+msgstr "Puxtarrien estiloa. Puxtarrietan erabili beharreko irudien fitxategi-izena."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:5
+#: data/org.gnome.five-or-more.gschema.xml:15
 msgid "Background color"
 msgstr "Atzeko planoaren kolorea"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:6
+#: data/org.gnome.five-or-more.gschema.xml:16
 msgid "Background color. The hex specification of the background color."
-msgstr ""
-"Atzeko planoaren kolorea. Atzeko planoaren kolorearen balio hamaseitarra."
+msgstr "Atzeko planoaren kolorea. Atzeko planoaren kolorearen balio hamaseitarra."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:7
+#: data/org.gnome.five-or-more.gschema.xml:20
 msgid "Time between moves"
 msgstr "Mugimenduen arteko denbora"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:8
+#: data/org.gnome.five-or-more.gschema.xml:21
 msgid "Time between moves in milliseconds."
 msgstr "Mugimenduen arteko denbora (milisegundotan)."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:9
+#: data/org.gnome.five-or-more.gschema.xml:25
 msgid "Game score"
 msgstr "Puntuazioa"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:10
+#: data/org.gnome.five-or-more.gschema.xml:26
 msgid "Game score from last saved session."
 msgstr "Azkena gordetako saioko puntuazioa."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:11
+#: data/org.gnome.five-or-more.gschema.xml:30
 msgid "Game field"
 msgstr "Joko-eremua"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:12
+#: data/org.gnome.five-or-more.gschema.xml:31
 msgid "Game field from last saved session."
 msgstr "Azkena gordetako saioko joko-eremua."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:13
+#: data/org.gnome.five-or-more.gschema.xml:35
 msgid "Game preview"
 msgstr "Jokoaren aurrebista"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:14
+#: data/org.gnome.five-or-more.gschema.xml:36
 msgid "Game preview from last saved session."
 msgstr "Azkena gordetako saioko jokoaren aurrebista."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:15
+#: data/org.gnome.five-or-more.gschema.xml:40
 msgid "Width of the window in pixels"
 msgstr "Leiho nagusiaren zabalera (pixeletan)"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:16
+#: data/org.gnome.five-or-more.gschema.xml:44
 msgid "Height of the window in pixels"
 msgstr "Leiho nagusiaren altuera (pixeletan)"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:17
+#: data/org.gnome.five-or-more.gschema.xml:48
 msgid "true if the window is maximized"
 msgstr "egia leihoa maximizatuta badago"
 
-#: ../src/five-or-more.c:80
+#: src/game.vala:94
 msgctxt "board size"
 msgid "Small"
 msgstr "Txikia"
 
-#: ../src/five-or-more.c:81
+#: src/game.vala:95
 msgctxt "board size"
 msgid "Medium"
 msgstr "Tartekoa"
 
-#: ../src/five-or-more.c:82
+#: src/game.vala:96
 msgctxt "board size"
 msgid "Large"
 msgstr "Handia"
 
-#: ../src/five-or-more.c:165
-msgid "Could not load theme"
-msgstr "Ezin izan da gaia kargatu"
-
-#: ../src/five-or-more.c:191
-#, c-format
-msgid ""
-"Unable to locate file:\n"
-"%s\n"
-"\n"
-"The default theme will be loaded instead."
-msgstr ""
-"Ezin da fitxategia lokalizatu:\n"
-"%s\n"
-"\n"
-"Gai lehenetsia kargatuko da horren ordez."
-
-#: ../src/five-or-more.c:198
-#, c-format
-msgid ""
-"Unable to locate file:\n"
-"%s\n"
-"\n"
-"Please check that Five or More is installed correctly."
-msgstr ""
-"Ezin izan da fitxategia lokalizatu:\n"
-"%s\n"
-"\n"
-"Begiratu 'Bost edo gehiago' ongi instalatua dagoen."
-
-#: ../src/five-or-more.c:407
-msgid "Match five objects of the same type in a row to score!"
-msgstr "Puntuatzeko jarri ilaran kolore bereko bost bola!"
-
-#: ../src/five-or-more.c:468
-msgid "Five or More Scores"
-msgstr "Bost edo gehiagoren puntuazioa"
-
-#: ../src/five-or-more.c:470
-msgid "_Board size:"
-msgstr "_Taularen tamaina:"
-
-#: ../src/five-or-more.c:487
-msgid "Game Over!"
-msgstr "Amaitu da!"
-
-#. Can't move there!
-#: ../src/five-or-more.c:644
-msgid "You can’t move there!"
-msgstr "Ezin da horra eraman!"
-
-#: ../src/five-or-more.c:1174
+#: src/main.vala:171
 msgid "GNOME port of the once-popular Color Lines game"
 msgstr "Color Lines joko ezagunaren GNOMEren moldaketa"
 
-#: ../src/five-or-more.c:1180
+#: src/main.vala:177
 msgid "translator-credits"
-msgstr "Hizkuntza Politikarako Sailburuordetza <hizkpol@ej-gv.es>"
+msgstr "Asier Sarasua Garmendia <asier.sarasua@gmail.com>"
 
-#: ../src/five-or-more.c:1304
+#: src/window.vala:50
+msgid "Match five objects of the same type in a row to score!"
+msgstr "Puntuatzeko jarri ilaran kolore bereko bost bola!"
+
+#: src/window.vala:51
+msgid "You can’t move there!"
+msgstr "Ezin da horra eraman!"
+
+#: src/window.vala:52
+msgid "Game Over!"
+msgstr "Amaitu da!"
+
+#: src/window.vala:53
+#, c-format
+msgid "Score: %d"
+msgstr "Puntuazioa: %d"
+
+#: src/window.vala:87
+msgid "Board Size: "
+msgstr "Taularen tamaina: "
+
+#: src/window.vala:159
 msgid "Are you sure you want to restart the game?"
 msgstr "Ziur zaude jokoa berrabiaraztea nahi duzula?"
 
-#: ../src/five-or-more.c:1307
+#: src/window.vala:161
 msgid "_Cancel"
 msgstr "_Utzi"
 
-#: ../src/five-or-more.c:1308
+#: src/window.vala:162
 msgid "_Restart"
-msgstr "_Hasi berriro"
+msgstr "_Berrabiarazi"
 
-#. Score dialog column header for the score time (e.g. 1 minute)
-#: ../src/games-scores-dialog.c:132
-msgctxt "score-dialog"
-msgid "Time"
-msgstr "Denbora"
+#~ msgid "_Image:"
+#~ msgstr "_Irudia:"
 
-#. Score dialog column header for the score value (e.g. 30 moves)
-#: ../src/games-scores-dialog.c:138
-msgctxt "score-dialog"
-msgid "Score"
-msgstr "Puntuazioa"
+#~ msgid "General"
+#~ msgstr "Orokorra"
 
-#. Score format for time based scores.  %1$d is the time in minutes, %2$d is the time in seconds
-#: ../src/games-scores-dialog.c:225
-#, c-format
-msgctxt "score-dialog"
-msgid "%1$dm %2$ds"
-msgstr "%dm %ds"
+#~ msgid "_Use fast moves"
+#~ msgstr "_Erabili mugimendu bizkorrak"
 
-#: ../src/games-scores-dialog.c:371
-msgid "_Quit"
-msgstr "I_rten"
+#~ msgid "0"
+#~ msgstr "0"
 
-#: ../src/games-scores-dialog.c:378
-msgid "_Undo"
-msgstr "_Desegin"
+#~ msgid "Start a new puzzle"
+#~ msgstr "Hasi puzzle berria"
 
-#: ../src/games-scores-dialog.c:392
-msgid "_Close"
-msgstr "It_xi"
+#~ msgid "About"
+#~ msgstr "Honi buruz"
 
-#. Score dialog column header for the date the score was recorded
-#: ../src/games-scores-dialog.c:478
-msgid "Date"
-msgstr "Data"
+#~ msgid "Quit"
+#~ msgstr "Irten"
+
+#~ msgid "Could not load theme"
+#~ msgstr "Ezin izan da gaia kargatu"
+
+#~ msgid ""
+#~ "Unable to locate file:\n"
+#~ "%s\n"
+#~ "\n"
+#~ "The default theme will be loaded instead."
+#~ msgstr ""
+#~ "Ezin da fitxategia lokalizatu:\n"
+#~ "%s\n"
+#~ "\n"
+#~ "Gai lehenetsia kargatuko da horren ordez."
+
+#~ msgid ""
+#~ "Unable to locate file:\n"
+#~ "%s\n"
+#~ "\n"
+#~ "Please check that Five or More is installed correctly."
+#~ msgstr ""
+#~ "Ezin izan da fitxategia lokalizatu:\n"
+#~ "%s\n"
+#~ "\n"
+#~ "Begiratu 'Bost edo gehiago' ongi instalatua dagoen."
+
+#~ msgid "Five or More Scores"
+#~ msgstr "Bost edo gehiagoren puntuazioa"
+
+#~ msgid "_Board size:"
+#~ msgstr "_Taularen tamaina:"
+
+#~ msgctxt "score-dialog"
+#~ msgid "Time"
+#~ msgstr "Denbora"
+
+#~ msgctxt "score-dialog"
+#~ msgid "Score"
+#~ msgstr "Puntuazioa"
+
+#~ msgctxt "score-dialog"
+#~ msgid "%1$dm %2$ds"
+#~ msgstr "%dm %ds"
+
+#~ msgid "_Quit"
+#~ msgstr "I_rten"
+
+#~ msgid "_Undo"
+#~ msgstr "_Desegin"
+
+#~ msgid "_Close"
+#~ msgstr "It_xi"
+
+#~ msgid "Date"
+#~ msgstr "Data"
