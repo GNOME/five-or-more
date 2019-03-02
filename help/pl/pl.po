@@ -7,8 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: five-or-more-help\n"
-"POT-Creation-Date: 2019-01-18 19:57+0000\n"
-"PO-Revision-Date: 2019-02-03 17:15+0100\n"
+"POT-Creation-Date: 2019-03-02 11:03+0000\n"
+"PO-Revision-Date: 2019-03-02 16:20+0100\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <community-poland@mozilla.org>\n"
 "Language: pl\n"
@@ -308,20 +308,24 @@ msgstr "Aby zmienić wygląd kulek i planszy:"
 
 #. (itstool) path: item/p
 #: C/change-theme.page:24
-msgid "Click <guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq>."
-msgstr "Kliknij <guiseq><gui>Ustawienia</gui><gui>Preferencje</gui></guiseq>."
-
-#. (itstool) path: item/p
-#: C/change-theme.page:27
 msgid ""
-"Select <gui>balls</gui> or <gui>shapes</gui> from the <gui>Themes</gui> drop "
-"down menu to change the playing pieces."
+"Press the menu button in the top-right corner of the window and select <gui "
+"style=\"menuitem\">Preferences</gui>."
 msgstr ""
-"Wybierz <gui>Kulki</gui> lub <gui>Kształty</gui> z rozwijanego menu "
-"<gui>Motywy</gui>, aby zmienić kulki do gry."
+"Kliknij przycisk menu w górnym prawym rogu okna i wybierz <gui style="
+"\"menuitem\">Preferencje</gui>."
 
 #. (itstool) path: item/p
-#: C/change-theme.page:29
+#: C/change-theme.page:28
+msgid ""
+"Select <gui>balls</gui>, <gui>shapes</gui>, or <gui>tango</gui> from the "
+"<gui>Theme</gui> drop down menu to change the playing pieces."
+msgstr ""
+"Wybierz <gui>Kulki</gui>, <gui>Kształty</gui> lub <gui>Tango</gui> "
+"z rozwijanego menu <gui>Motyw</gui>, aby zmienić kulki do gry."
+
+#. (itstool) path: item/p
+#: C/change-theme.page:30
 msgid ""
 "Click on the colored box next to <gui>Background color</gui> to access the "
 "color palette."
@@ -330,24 +334,9 @@ msgstr ""
 "kolorów."
 
 #. (itstool) path: item/p
-#: C/change-theme.page:33
-msgid "Click <gui>Close</gui>."
-msgstr "Kliknij przycisk <gui>Zamknij</gui>."
-
-#. (itstool) path: section/title
-#: C/change-theme.page:37
-msgid "Available Themes"
-msgstr "Dostępne motywy"
-
-#. (itstool) path: media/p
-#: C/change-theme.page:39
-msgid "Five or More with different balls"
-msgstr "Gra Kulki z różnymi kulkami"
-
-#. (itstool) path: media/p
-#: C/change-theme.page:43
-msgid "<app>Five or More</app> with different shapes"
-msgstr "Gra <app>Kulki</app> z różnymi kształtami"
+#: C/change-theme.page:34
+msgid "Close the <gui>Preferences</gui> dialog."
+msgstr "Zamknij okno <gui>Preferencje</gui>."
 
 #. (itstool) path: page/title
 #: C/develop.page:19
@@ -584,25 +573,26 @@ msgstr "Jak grać"
 #. (itstool) path: page/p
 #: C/play.page:24
 msgid ""
-"To start a new game click <guiseq><gui>Game</gui><gui>New</gui></guiseq>."
+"To start a new game, press the menu button in the top-right corner of the "
+"window and select <gui style=\"menuitem\">New Game</gui>."
 msgstr ""
-"Aby rozpocząć nową grę, kliknij <guiseq><gui>Gra</gui><gui>Nowa</gui></"
-"guiseq>."
+"Aby rozpocząć nową grę, kliknij przycisk menu w górnym prawym rogu okna "
+"i wybierz <gui style=\"menuitem\">Nowa gra</gui>."
 
 #. (itstool) path: section/title
-#: C/play.page:28
+#: C/play.page:29
 msgid "Using the mouse"
 msgstr "Używanie myszy"
 
 #. (itstool) path: item/p
-#: C/play.page:32
+#: C/play.page:33
 msgid ""
 "Click on the object you want to move. The selected object will begin "
 "spinning."
 msgstr "Kliknij kulkę do przeniesienia. Wybrana kulka zacznie się obracać."
 
 #. (itstool) path: item/p
-#: C/play.page:36
+#: C/play.page:37
 msgid ""
 "Click on the destination cell. The chosen object will move to the "
 "destination cell, if there is any clear path."
@@ -611,12 +601,12 @@ msgstr ""
 "jest między nimi przejście."
 
 #. (itstool) path: section/title
-#: C/play.page:45
+#: C/play.page:46
 msgid "Using the keyboard"
 msgstr "Używanie klawiatury"
 
 #. (itstool) path: item/p
-#: C/play.page:49
+#: C/play.page:50
 msgid ""
 "Press any of the arrow keys. An outline around a cell will appear on the "
 "board."
@@ -625,7 +615,7 @@ msgstr ""
 "obwódka."
 
 #. (itstool) path: item/p
-#: C/play.page:53
+#: C/play.page:54
 msgid ""
 "Using the arrow keys, and the <key>Home</key>, <key>End</key>, <key>PageUp</"
 "key> and <key>PageDown</key> keys navigate to the object you want to move."
@@ -635,7 +625,7 @@ msgstr ""
 "przeniesiona."
 
 #. (itstool) path: item/p
-#: C/play.page:56
+#: C/play.page:57
 msgid ""
 "To select the object, press the <key>Enter</key>, <key>Spacebar</key> or "
 "<key>Return</key>. The selected object will begin spinning."
@@ -644,7 +634,7 @@ msgstr ""
 "Wybrana kulka zacznie się obracać."
 
 #. (itstool) path: item/p
-#: C/play.page:59
+#: C/play.page:60
 msgid ""
 "Move to the destination cell, and again press the <key>Enter</key>, "
 "<key>Spacebar</key> or <key>Return</key>. The chosen object will move to the "
@@ -655,7 +645,7 @@ msgstr ""
 "jest między nimi przejście."
 
 #. (itstool) path: section/title
-#: C/play.page:69
+#: C/play.page:70
 msgid "Video demonstration"
 msgstr "Demonstracja wideo"
 
@@ -844,16 +834,16 @@ msgid "56"
 msgstr "56"
 
 #. (itstool) path: note/p
-#: C/scores.page:80
+#: C/scores.page:81
 msgid ""
-"You can view the high scores by clicking <guiseq><gui>Game</gui><gui>Scores</"
-"gui></guiseq>."
+"You can view the high scores by pressing the menu button in the top-right "
+"corner of the window and selecting <gui style=\"menuitem\">Scores</gui>."
 msgstr ""
-"Można wyświetlić najlepsze wyniki klikając <guiseq><gui>Gra</"
-"gui><gui>Wyniki</gui></guiseq>."
+"Można wyświetlić najlepsze wyniki klikając przycisk menu w górnym prawym "
+"rogu okna i wybierając <gui style=\"menuitem\">Wyniki</gui>."
 
 #. (itstool) path: note/p
-#: C/scores.page:82
+#: C/scores.page:83
 msgid ""
 "The <app>Five or More</app> scores are recorded according to the board size. "
 "You can select the <gui>Board Size</gui> of interest using the drop down "
