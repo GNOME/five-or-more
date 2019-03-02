@@ -1,13 +1,13 @@
 # translation of five-or-more.DOC.po to Swedish
 # Daniel Nylander <po@danielnylander.se>, 2007, 2008.
 # Erik Sköldås <erik.skoldas@tele2.se>, 2015.
-# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2016, 2017, 2018.
+# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2016, 2017, 2018, 2019.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: five-or-more.DOC\n"
-"POT-Creation-Date: 2018-09-13 15:33+0000\n"
-"PO-Revision-Date: 2018-12-23 22:13+0100\n"
+"POT-Creation-Date: 2019-03-02 11:03+0000\n"
+"PO-Revision-Date: 2019-03-02 17:58+0100\n"
 "Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.2\n"
+"X-Generator: Poedit 2.2.1\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -306,21 +306,24 @@ msgstr "För att ändra utseendet på pjäserna och brädet:"
 
 #. (itstool) path: item/p
 #: C/change-theme.page:24
-msgid "Click <guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq>."
-msgstr ""
-"Klicka <guiseq><gui>Inställningar</gui><gui>Inställningar</gui></guiseq>."
-
-#. (itstool) path: item/p
-#: C/change-theme.page:27
 msgid ""
-"Select <gui>balls</gui> or <gui>shapes</gui> from the <gui>Themes</gui> drop "
-"down menu to change the playing pieces."
+"Press the menu button in the top-right corner of the window and select <gui "
+"style=\"menuitem\">Preferences</gui>."
 msgstr ""
-"Välj <gui>bollar</gui> eller <gui>former</gui> från rullgardinsmenyn "
-"<gui>Teman</gui> för att ändra spelpjäserna."
+"Tryck på menyknappen i övre högra hörnet av fönstret och välj <gui style="
+"\"menuitem\">Inställningar</gui>."
 
 #. (itstool) path: item/p
-#: C/change-theme.page:29
+#: C/change-theme.page:28
+msgid ""
+"Select <gui>balls</gui>, <gui>shapes</gui>, or <gui>tango</gui> from the "
+"<gui>Theme</gui> drop down menu to change the playing pieces."
+msgstr ""
+"Välj <gui>bollar</gui>, <gui>former</gui> eller <gui>tango</gui> från "
+"rullgardinsmenyn <gui>Tema</gui> för att ändra spelpjäserna."
+
+#. (itstool) path: item/p
+#: C/change-theme.page:30
 msgid ""
 "Click on the colored box next to <gui>Background color</gui> to access the "
 "color palette."
@@ -329,34 +332,9 @@ msgstr ""
 "åt färgpaletten."
 
 #. (itstool) path: item/p
-#: C/change-theme.page:33
-msgid "Click <gui>Close</gui>."
-msgstr "Klicka <gui>Stäng</gui>."
-
-#. (itstool) path: section/title
-#: C/change-theme.page:37
-msgid "Available Themes"
-msgstr "Tillgängliga teman"
-
-#. (itstool) path: media/p
-#: C/change-theme.page:39
-msgid "Five or More with different balls"
-msgstr "Fem eller mer med olika bollar"
-
-#. (itstool) path: media/p
-#: C/change-theme.page:43
-msgid "<app>Five or More</app> with different shapes"
-msgstr "<app>Fem eller mer</app> med olika former"
-
-#. (itstool) path: section/title
-#: C/change-theme.page:48
-msgid "Background colors available"
-msgstr "Tillgängliga bakgrundsfärger"
-
-#. (itstool) path: media/p
-#: C/change-theme.page:50
-msgid "Five or More color palette"
-msgstr "Färgpalett för Fem eller mer"
+#: C/change-theme.page:34
+msgid "Close the <gui>Preferences</gui> dialog."
+msgstr "Stäng dialogrutan <gui>Inställningar</gui>."
 
 #. (itstool) path: page/title
 #: C/develop.page:19
@@ -594,18 +572,19 @@ msgstr "Hur man spelar"
 #. (itstool) path: page/p
 #: C/play.page:24
 msgid ""
-"To start a new game click <guiseq><gui>Game</gui><gui>New</gui></guiseq>."
+"To start a new game, press the menu button in the top-right corner of the "
+"window and select <gui style=\"menuitem\">New Game</gui>."
 msgstr ""
-"För att starta ett nytt spel klicka <guiseq><gui>Spel</gui><gui>Nytt spel</"
-"gui></guiseq>."
+"För att starta ett nytt spel trycker du på menyknappen i övre högra hörnet "
+"av fönstret och väljer <gui style=\"menuitem\">Nytt spel</gui>."
 
 #. (itstool) path: section/title
-#: C/play.page:28
+#: C/play.page:29
 msgid "Using the mouse"
 msgstr "Att använda musen"
 
 #. (itstool) path: item/p
-#: C/play.page:32
+#: C/play.page:33
 msgid ""
 "Click on the object you want to move. The selected object will begin "
 "spinning."
@@ -614,7 +593,7 @@ msgstr ""
 "snurra."
 
 #. (itstool) path: item/p
-#: C/play.page:36
+#: C/play.page:37
 msgid ""
 "Click on the destination cell. The chosen object will move to the "
 "destination cell, if there is any clear path."
@@ -623,12 +602,12 @@ msgstr ""
 "destinationscellen om det finns en öppen väg."
 
 #. (itstool) path: section/title
-#: C/play.page:45
+#: C/play.page:46
 msgid "Using the keyboard"
 msgstr "Använda tangentbordet"
 
 #. (itstool) path: item/p
-#: C/play.page:49
+#: C/play.page:50
 msgid ""
 "Press any of the arrow keys. An outline around a cell will appear on the "
 "board."
@@ -637,7 +616,7 @@ msgstr ""
 "brädet."
 
 #. (itstool) path: item/p
-#: C/play.page:53
+#: C/play.page:54
 msgid ""
 "Using the arrow keys, and the <key>Home</key>, <key>End</key>, <key>PageUp</"
 "key> and <key>PageDown</key> keys navigate to the object you want to move."
@@ -647,7 +626,7 @@ msgstr ""
 "du vill flytta."
 
 #. (itstool) path: item/p
-#: C/play.page:56
+#: C/play.page:57
 msgid ""
 "To select the object, press the <key>Enter</key>, <key>Spacebar</key> or "
 "<key>Return</key>. The selected object will begin spinning."
@@ -657,7 +636,7 @@ msgstr ""
 "snurra."
 
 #. (itstool) path: item/p
-#: C/play.page:59
+#: C/play.page:60
 msgid ""
 "Move to the destination cell, and again press the <key>Enter</key>, "
 "<key>Spacebar</key> or <key>Return</key>. The chosen object will move to the "
@@ -668,7 +647,7 @@ msgstr ""
 "destinationscellen om det finns en öppen väg."
 
 #. (itstool) path: section/title
-#: C/play.page:69
+#: C/play.page:70
 msgid "Video demonstration"
 msgstr "Videodemonstration"
 
@@ -796,7 +775,6 @@ msgstr "18"
 
 #. (itstool) path: td/p
 #: C/scores.page:42
-#| msgid "5"
 msgid "25"
 msgstr "25"
 
@@ -807,13 +785,11 @@ msgstr "8"
 
 #. (itstool) path: td/p
 #: C/scores.page:46
-#| msgid "3"
 msgid "31"
 msgstr "31"
 
 #. (itstool) path: td/p
 #: C/scores.page:50
-#| msgid "3"
 msgid "36"
 msgstr "36"
 
@@ -829,7 +805,6 @@ msgstr "11"
 
 #. (itstool) path: td/p
 #: C/scores.page:58
-#| msgid "5"
 msgid "45"
 msgstr "45"
 
@@ -845,7 +820,6 @@ msgstr "13"
 
 #. (itstool) path: td/p
 #: C/scores.page:66
-#| msgid "5"
 msgid "53"
 msgstr "53"
 
@@ -856,21 +830,20 @@ msgstr "14"
 
 #. (itstool) path: td/p
 #: C/scores.page:70 C/scores.page:74
-#| msgid "5"
 msgid "56"
 msgstr "56"
 
 #. (itstool) path: note/p
-#: C/scores.page:80
+#: C/scores.page:81
 msgid ""
-"You can view the high scores by clicking <guiseq><gui>Game</gui><gui>Scores</"
-"gui></guiseq>."
+"You can view the high scores by pressing the menu button in the top-right "
+"corner of the window and selecting <gui style=\"menuitem\">Scores</gui>."
 msgstr ""
-"Du kan visa poänglistan genom att klicka <guiseq><gui>Spel</gui><gui>Poäng</"
-"gui></guiseq>."
+"Du kan se de högsta poängen genom att trycka på menyknappen i övre högra "
+"hörnet av fönstret och välja <gui style=\"menuitem\">Poäng</gui>."
 
 #. (itstool) path: note/p
-#: C/scores.page:82
+#: C/scores.page:83
 msgid ""
 "The <app>Five or More</app> scores are recorded according to the board size. "
 "You can select the <gui>Board Size</gui> of interest using the drop down "
@@ -1017,6 +990,41 @@ msgstr ""
 "Alternativt kan du kontakta internationaliseringsgruppen genom att använda "
 "deras <link href=\"http://mail.gnome.org/mailman/listinfo/gnome-i18n"
 "\">sändlista</link>."
+
+#~ msgid "Click <guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq>."
+#~ msgstr ""
+#~ "Klicka <guiseq><gui>Inställningar</gui><gui>Inställningar</gui></guiseq>."
+
+#~ msgid "Click <gui>Close</gui>."
+#~ msgstr "Klicka <gui>Stäng</gui>."
+
+#~ msgid "Available Themes"
+#~ msgstr "Tillgängliga teman"
+
+#~ msgid "Five or More with different balls"
+#~ msgstr "Fem eller mer med olika bollar"
+
+#~ msgid "<app>Five or More</app> with different shapes"
+#~ msgstr "<app>Fem eller mer</app> med olika former"
+
+#~ msgid "Background colors available"
+#~ msgstr "Tillgängliga bakgrundsfärger"
+
+#~ msgid "Five or More color palette"
+#~ msgstr "Färgpalett för Fem eller mer"
+
+#~ msgid ""
+#~ "To start a new game click <guiseq><gui>Game</gui><gui>New</gui></guiseq>."
+#~ msgstr ""
+#~ "För att starta ett nytt spel klicka <guiseq><gui>Spel</gui><gui>Nytt "
+#~ "spel</gui></guiseq>."
+
+#~ msgid ""
+#~ "You can view the high scores by clicking <guiseq><gui>Game</"
+#~ "gui><gui>Scores</gui></guiseq>."
+#~ msgstr ""
+#~ "Du kan visa poänglistan genom att klicka <guiseq><gui>Spel</"
+#~ "gui><gui>Poäng</gui></guiseq>."
 
 #~ msgid "Images available"
 #~ msgstr "Tillgängliga bilder"
