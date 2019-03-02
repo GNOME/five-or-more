@@ -16,8 +16,6 @@ five_or_more_help_pages = [
 ]
 
 five_or_more_help_media = [
-  'figures/color-balls.png',
-  'figures/color-shapes.png',
   'figures/diagonal.png',
   'figures/glines-demo.ogv',
   'figures/glines-gameover.png',
