@@ -7,8 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: five-or-more-help\n"
-"POT-Creation-Date: 2019-03-02 11:03+0000\n"
-"PO-Revision-Date: 2019-03-02 16:20+0100\n"
+"POT-Creation-Date: 2019-03-02 20:24+0000\n"
+"PO-Revision-Date: 2019-03-03 14:58+0100\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <community-poland@mozilla.org>\n"
 "Language: pl\n"
@@ -148,17 +148,13 @@ msgstr "Aby zmienić rozmiar planszy:"
 
 #. (itstool) path: item/p
 #: C/change-board-size.page:26
-msgid "Click <guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq>"
-msgstr "Kliknij <guiseq><gui>Ustawienia</gui><gui>Preferencje</gui></guiseq>."
+msgid "Press the menu button in the top-right corner of the window."
+msgstr "Kliknij przycisk menu w górnym prawym rogu okna."
 
 #. (itstool) path: item/p
 #: C/change-board-size.page:27
-msgid ""
-"Under <gui>Board Size</gui>, select <gui>Small</gui>, <gui>Medium</gui>, or "
-"<gui>Large</gui>."
-msgstr ""
-"W sekcji <gui>Rozmiar planszy</gui> wybierz <gui>Mała</gui>, <gui>Średnia</"
-"gui> lub <gui>Duża</gui>."
+msgid "Select <gui>Small</gui>, <gui>Medium</gui>, or <gui>Large</gui>."
+msgstr "Wybierz <gui>Mała</gui>, <gui>Średnia</gui> lub <gui>Duża</gui>."
 
 #. (itstool) path: note/p
 #: C/change-board-size.page:31
