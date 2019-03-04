@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: five-or-more.DOC\n"
-"POT-Creation-Date: 2019-03-02 11:03+0000\n"
-"PO-Revision-Date: 2019-03-02 17:58+0100\n"
+"POT-Creation-Date: 2019-03-02 20:24+0000\n"
+"PO-Revision-Date: 2019-03-04 01:39+0100\n"
 "Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
@@ -145,18 +145,13 @@ msgstr "För att ändra brädstorlek:"
 
 #. (itstool) path: item/p
 #: C/change-board-size.page:26
-msgid "Click <guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq>"
-msgstr ""
-"Klicka <guiseq><gui>Inställningar</gui><gui>Inställningar</gui></guiseq>"
+msgid "Press the menu button in the top-right corner of the window."
+msgstr "Tryck på menyknappen i fönstrets övre högra hörn."
 
 #. (itstool) path: item/p
 #: C/change-board-size.page:27
-msgid ""
-"Under <gui>Board Size</gui>, select <gui>Small</gui>, <gui>Medium</gui>, or "
-"<gui>Large</gui>."
-msgstr ""
-"Under <gui>Brädstorlek</gui>, välj <gui>Liten</gui>, <gui>Mellan</gui>, "
-"eller <gui>Stor</gui>."
+msgid "Select <gui>Small</gui>, <gui>Medium</gui>, or <gui>Large</gui>."
+msgstr "Välj <gui>Liten</gui>, <gui>Mellan</gui>, eller <gui>Stor</gui>."
 
 #. (itstool) path: note/p
 #: C/change-board-size.page:31
@@ -310,7 +305,7 @@ msgid ""
 "Press the menu button in the top-right corner of the window and select <gui "
 "style=\"menuitem\">Preferences</gui>."
 msgstr ""
-"Tryck på menyknappen i övre högra hörnet av fönstret och välj <gui style="
+"Tryck på menyknappen i fönstrets övre högra hörn och välj <gui style="
 "\"menuitem\">Inställningar</gui>."
 
 #. (itstool) path: item/p
@@ -575,8 +570,8 @@ msgid ""
 "To start a new game, press the menu button in the top-right corner of the "
 "window and select <gui style=\"menuitem\">New Game</gui>."
 msgstr ""
-"För att starta ett nytt spel trycker du på menyknappen i övre högra hörnet "
-"av fönstret och väljer <gui style=\"menuitem\">Nytt spel</gui>."
+"För att starta ett nytt spel trycker du på menyknappen i fönstrets övre "
+"högra hörn och väljer <gui style=\"menuitem\">Nytt spel</gui>."
 
 #. (itstool) path: section/title
 #: C/play.page:29
@@ -839,8 +834,8 @@ msgid ""
 "You can view the high scores by pressing the menu button in the top-right "
 "corner of the window and selecting <gui style=\"menuitem\">Scores</gui>."
 msgstr ""
-"Du kan se de högsta poängen genom att trycka på menyknappen i övre högra "
-"hörnet av fönstret och välja <gui style=\"menuitem\">Poäng</gui>."
+"Du kan se de högsta poängen genom att trycka på menyknappen i fönstrets övre "
+"högra hörn och välja <gui style=\"menuitem\">Poäng</gui>."
 
 #. (itstool) path: note/p
 #: C/scores.page:83
@@ -990,6 +985,10 @@ msgstr ""
 "Alternativt kan du kontakta internationaliseringsgruppen genom att använda "
 "deras <link href=\"http://mail.gnome.org/mailman/listinfo/gnome-i18n"
 "\">sändlista</link>."
+
+#~ msgid "Click <guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq>"
+#~ msgstr ""
+#~ "Klicka <guiseq><gui>Inställningar</gui><gui>Inställningar</gui></guiseq>"
 
 #~ msgid "Click <guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq>."
 #~ msgstr ""
