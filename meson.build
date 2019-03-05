@@ -24,8 +24,8 @@ libgnome_games_support_dep = dependency('libgnome-games-support-1')
 librsvg_dep = dependency('librsvg-2.0', version: '>= 2.32.0')
 
 # Libraries
-#cc = meson.get_compiler('c')
-#libmath_dep = cc.find_library('m')
+cc = meson.get_compiler('c')
+libmath_dep = cc.find_library('m')
 
 # Configuration
 conf = configuration_data()

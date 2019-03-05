@@ -21,6 +21,7 @@ five_or_more_deps = [
   gtk_dep,
   libgnome_games_support_dep,
   librsvg_dep,
+  libmath_dep,
 ]
 
 five_or_more_vala_args = [
