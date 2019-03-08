@@ -3,8 +3,8 @@
 #
 # GwanSun Back <backiss@kornet.net>, 2001
 # ChiHyeon Kim <pipi910327@gmail.com>, 2017.
-# Changwoo Ryu <cwryu@debian.org>, 1998, 2002-2015, 2017.
 # Hyunwoo Park <ez.amiryo@gmail.com>, 2018.
+# Changwoo Ryu <cwryu@debian.org>, 1998, 2002-2015, 2017, 2019.
 #
 #
 # 새로 번역하신 분은 아래 "translator-credits"에 추가하세요.
@@ -26,8 +26,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/five-or-more/issues\n"
-"POT-Creation-Date: 2018-08-22 09:01+0000\n"
-"PO-Revision-Date: 2018-08-25 17:48+0900\n"
+"POT-Creation-Date: 2019-01-11 15:40+0000\n"
+"PO-Revision-Date: 2019-03-08 15:01+0900\n"
 "Last-Translator: Hyunwoo Park <ez.amiryo@gmail.com>\n"
 "Language-Team: GNOME Korea <gnome-kr@googlegroups.com>\n"
 "Language: ko\n"
@@ -37,16 +37,81 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Poedit 2.1.1\n"
 
-#: data/five-or-more.appdata.xml.in:7 data/five-or-more.desktop.in:3
-#: data/five-or-more.ui:18 src/five-or-more.c:70 src/five-or-more-app.c:576
+#: data/five-or-more-preferences.ui:13
+msgid "Preferences"
+msgstr "기본 설정"
+
+#: data/five-or-more-preferences.ui:36
+msgid "Appearance"
+msgstr "모양"
+
+#: data/five-or-more-preferences.ui:60
+msgid "_Theme:"
+msgstr "테마(_T):"
+
+#: data/five-or-more-preferences.ui:76
+msgid "balls"
+msgstr "공"
+
+#: data/five-or-more-preferences.ui:77
+msgid "shapes"
+msgstr "모양"
+
+#: data/five-or-more-preferences.ui:78
+msgid "tango"
+msgstr ""
+
+#: data/five-or-more-preferences.ui:87
+msgid "B_ackground color:"
+msgstr "배경색(_A):"
+
+#: data/five-or-more.ui:7
+msgid "_New Game"
+msgstr "새 게임(_N)"
+
+#: data/five-or-more.ui:13
+msgid "S_cores"
+msgstr "점수(_C)"
+
+#: data/five-or-more.ui:19
+msgid "_Small"
+msgstr "작게(_S)"
+
+#: data/five-or-more.ui:24
+msgid "_Medium"
+msgstr "중간(_M)"
+
+#: data/five-or-more.ui:29
+msgid "_Large"
+msgstr "크게(_L)"
+
+#: data/five-or-more.ui:36
+msgid "_Preferences"
+msgstr "기본 설정(_P)"
+
+#: data/five-or-more.ui:40
+msgid "_Help"
+msgstr "도움말(_H)"
+
+#: data/five-or-more.ui:45
+msgid "_About Five or More"
+msgstr "다섯개 정보(_A)"
+
+#: data/five-or-more.ui:65 data/org.gnome.five-or-more.appdata.xml.in:7
+#: data/org.gnome.five-or-more.desktop.in:3 src/main.vala:74 src/main.vala:168
 msgid "Five or More"
 msgstr "다섯개"
 
-#: data/five-or-more.appdata.xml.in:8 data/five-or-more.desktop.in:4
+#: data/five-or-more.ui:77
+msgid "Next:"
+msgstr "다음:"
+
+#: data/org.gnome.five-or-more.appdata.xml.in:8
+#: data/org.gnome.five-or-more.desktop.in:4
 msgid "Remove colored balls from the board by forming lines"
 msgstr "색색의 공을 제거해 한 줄로 만듭니다"
 
-#: data/five-or-more.appdata.xml.in:10
+#: data/org.gnome.five-or-more.appdata.xml.in:10
 msgid ""
 "Five or More is the GNOME port of a once-popular computer game. Align five "
 "or more objects of the same color into a line to cause them to disappear and "
@@ -57,7 +122,7 @@ msgstr ""
 "의 물체를 다섯개 이상 한 줄로 모으면 사라지고 점수를 얻습니다. 물체가 사라질 "
 "때 가능한 많은 물체를 한 줄로 모아서 점수를 얻으십시오."
 
-#: data/five-or-more.appdata.xml.in:16
+#: data/org.gnome.five-or-more.appdata.xml.in:16
 msgid ""
 "More objects appear after every turn. Play for as long as possible, until "
 "the board is completely full!"
@@ -65,91 +130,19 @@ msgstr ""
 "매 턴이 끝나면 물체가 나타납니다. 게임판이 가득 찰 때까지 가능한 오래 플레이"
 "하십시오!"
 
-#: data/five-or-more.appdata.xml.in:40
+#: data/org.gnome.five-or-more.appdata.xml.in:40
 msgid "The GNOME Project"
 msgstr "그놈 프로젝트"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/five-or-more.desktop.in:6
+#: data/org.gnome.five-or-more.desktop.in:6
 msgid "game;strategy;logic;"
 msgstr "game;게임;strategy;전략;logic;논리;로직;"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: data/five-or-more.desktop.in:9
-msgid "five-or-more"
-msgstr "five-or-more"
-
-#: data/five-or-more-preferences.ui:12 data/menu.ui:11 src/game-area.c:858
-msgid "Preferences"
-msgstr "기본 설정"
-
-#: data/five-or-more-preferences.ui:35
-msgid "Appearance"
-msgstr "모양"
-
-#: data/five-or-more-preferences.ui:59
-msgid "_Image:"
-msgstr "그림(_I):"
-
-#: data/five-or-more-preferences.ui:74
-msgid "B_ackground color:"
-msgstr "배경색(_A):"
-
-#: data/five-or-more-preferences.ui:116
-msgid "Board Size"
-msgstr "게임판 크기"
-
-#: data/five-or-more-preferences.ui:135
-msgid "_Small"
-msgstr "작게(_S)"
-
-#: data/five-or-more-preferences.ui:154
-msgid "_Medium"
-msgstr "중간(_M)"
-
-#: data/five-or-more-preferences.ui:173
-msgid "_Large"
-msgstr "크게(_L)"
-
-#: data/five-or-more-preferences.ui:203
-msgid "General"
-msgstr "일반"
-
-#: data/five-or-more-preferences.ui:216
-msgid "_Use fast moves"
-msgstr "빨리 움직임(_U)"
-
-#: data/five-or-more.ui:30
-msgid "Next:"
-msgstr "다음:"
-
-#: data/five-or-more.ui:56
-msgid "Score:"
-msgstr "점수:"
-
-#: data/five-or-more.ui:76
-msgid "_New Game"
-msgstr "새 게임(_N)"
-
-#: data/five-or-more.ui:80
-msgid "Start a new puzzle"
-msgstr "새 퍼즐을 시작합니다"
-
-#: data/menu.ui:7
-msgid "Scores"
-msgstr "점수"
-
-#: data/menu.ui:17
-msgid "Help"
-msgstr "도움말"
-
-#: data/menu.ui:22
-msgid "About"
-msgstr "정보"
-
-#: data/menu.ui:26
-msgid "Quit"
-msgstr "끝내기"
+#: data/org.gnome.five-or-more.desktop.in:9
+msgid "org.gnome.five-or-more"
+msgstr "org.gnome.five-or-more"
 
 #: data/org.gnome.five-or-more.gschema.xml:5
 msgid "Playing field size"
@@ -220,145 +213,61 @@ msgstr "창의 높이, 픽셀 단위"
 msgid "true if the window is maximized"
 msgstr "참이면 창을 최대화"
 
-#.
-#. * Translatable strings file.
-#. * Add this file to your project's POTFILES.in.
-#. * DO NOT compile it as part of your application.
-#.
-#: data/translatable_themes.h:6
-msgctxt "themes"
-msgid "balls"
-msgstr "공"
-
-#: data/translatable_themes.h:7
-msgctxt "themes"
-msgid "dots"
-msgstr "점"
-
-#: data/translatable_themes.h:8
-msgctxt "themes"
-msgid "gumball"
-msgstr "풍선공"
-
-#: data/translatable_themes.h:9
-msgctxt "themes"
-msgid "shapes"
-msgstr "모양"
-
-#: src/five-or-more-app.c:57
+#: src/game.vala:94
 msgctxt "board size"
 msgid "Small"
 msgstr "작게"
 
-#: src/five-or-more-app.c:58
+#: src/game.vala:95
 msgctxt "board size"
 msgid "Medium"
 msgstr "중간"
 
-#: src/five-or-more-app.c:59
+#: src/game.vala:96
 msgctxt "board size"
 msgid "Large"
 msgstr "크게"
 
-#: src/five-or-more-app.c:233
-msgid "Game Over!"
-msgstr "게임 끝!"
-
-#: src/five-or-more-app.c:250
-msgid "Match five objects of the same type in a row to score!"
-msgstr "점수를 올리려면 같은 색의 동그라미 다섯 개를 한 줄에 늘어 놓으십시오!"
-
-#: src/five-or-more-app.c:405
-msgid "Are you sure you want to restart the game?"
-msgstr "정말로 게임을 다시 시작하시겠습니까?"
-
-#: src/five-or-more-app.c:408
-msgid "_Cancel"
-msgstr "취소(_C)"
-
-#: src/five-or-more-app.c:409
-msgid "_Restart"
-msgstr "다시 시작(_R)"
-
-#: src/five-or-more-app.c:578
+#: src/main.vala:171
 msgid "GNOME port of the once-popular Color Lines game"
 msgstr "한때 유행했던 색상 라인 게임을 그놈으로 옮겼습니다"
 
-#: src/five-or-more-app.c:584
+#: src/main.vala:177
 msgid "translator-credits"
 msgstr ""
 "류창우 <cwryu@debian.org>\n"
 "김치현 <pipi910327@gmail.com>\n"
 "박현우 <ez.amiryo@gmail.com>"
 
-#: src/five-or-more-app.c:694
-msgid "Board Size: "
-msgstr "게임판 크기: "
+#: src/window.vala:50
+msgid "Match five objects of the same type in a row to score!"
+msgstr "점수를 올리려면 같은 색의 동그라미 다섯 개를 한 줄에 늘어 놓으십시오!"
 
-#. Can't move there!
-#: src/game-area.c:635
+#: src/window.vala:51
 msgid "You can’t move there!"
 msgstr "거기로 이동할 수 없습니다!"
 
-#: src/game-area.c:818
+#: src/window.vala:52
+msgid "Game Over!"
+msgstr "게임 끝!"
+
+#: src/window.vala:53
 #, c-format
-msgid ""
-"Unable to locate file:\n"
-"%s\n"
-"\n"
-"The default theme will be loaded instead."
-msgstr ""
-"파일을 찾을 수 없습니다: \n"
-"%s\n"
-"\n"
-"기본 타일 세트를 읽어들입니다."
+msgid "Score: %d"
+msgstr "점수: %d"
 
-#: src/game-area.c:825
-#, c-format
-msgid ""
-"Unable to locate file:\n"
-"%s\n"
-"\n"
-"Please check that Five or More is installed correctly."
-msgstr ""
-"파일을 찾을 수 없습니다: \n"
-"%s\n"
-"\n"
-"다섯개가 제대로 설치되었는지 확인하십시오."
+#: src/window.vala:87
+msgid "Board Size: "
+msgstr "게임판 크기: "
 
-#: src/game-area.c:852
-msgid "Could not load theme"
-msgstr "테마를 읽어들일 수 없습니다"
+#: src/window.vala:159
+msgid "Are you sure you want to restart the game?"
+msgstr "정말로 게임을 다시 시작하시겠습니까?"
 
-#~ msgid "0"
-#~ msgstr "0"
+#: src/window.vala:161
+msgid "_Cancel"
+msgstr "취소(_C)"
 
-#~ msgid "Five or More Scores"
-#~ msgstr "다섯개 점수"
-
-#~ msgid "_Board size:"
-#~ msgstr "보드 크기(_B):"
-
-#~ msgctxt "score-dialog"
-#~ msgid "Time"
-#~ msgstr "시간"
-
-#~ msgctxt "score-dialog"
-#~ msgid "Score"
-#~ msgstr "점수"
-
-#~ msgctxt "score-dialog"
-#~ msgid "%1$dm %2$ds"
-#~ msgstr "%1$d분 %2$d초"
-
-#~ msgid "_Quit"
-#~ msgstr "끝내기(_Q)"
-
-#~ msgid "_Undo"
-#~ msgstr "실행 취소(_U)"
-
-#~ msgid "_Close"
-#~ msgstr "닫기(_C)"
-
-#~ msgid "Date"
-#~ msgstr "시각"
+#: src/window.vala:162
+msgid "_Restart"
+msgstr "다시 시작(_R)"
