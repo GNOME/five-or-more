@@ -62,6 +62,14 @@
     <content_attribute id="money-gambling">none</content_attribute>
   </content_rating>
   <releases>
+    <release version="3.32.0" date="2019-03-11">
+      <description>
+        <p>Overview of changes in five-or-more 3.32.0</p>
+        <ul>
+          <li>Updated translations</li>
+        </ul>
+      </description>
+    </release>
     <release version="3.31.92" date="2019-03-05">
       <description>
         <p>Overview of changes in five-or-more 3.31.92</p>
