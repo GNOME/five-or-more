@@ -1,13 +1,13 @@
 # Czech translation of glines help.
 # Copyright (C) 2009 the author(s) of gnome-games.
 # This file is distributed under the same license as the glines help.
-# Marek Černocký <marek@manet.cz>, 2009, 2013, 2017, 2018.
+# Marek Černocký <marek@manet.cz>, 2009, 2013, 2017, 2018, 2019.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games gnome-2-28\n"
-"POT-Creation-Date: 2018-03-27 20:38+0000\n"
-"PO-Revision-Date: 2018-04-15 23:39+0200\n"
+"POT-Creation-Date: 2019-03-02 20:24+0000\n"
+"PO-Revision-Date: 2019-03-13 09:12+0100\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: čeština <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -27,16 +27,15 @@ msgstr "Marek Černocký <marek@manet.cz>, 2009, 2013"
 
 #. (itstool) path: credit/name
 #: C/bug-filing.page:10 C/change-board-size.page:14 C/change-theme.page:14
-#: C/develop.page:10 C/documentation.page:8 C/fast-moves.page:14
-#: C/index.page:17 C/scores.page:14 C/shortcuts.page:9 C/strategy.page:9
-#: C/translate.page:10
+#: C/develop.page:10 C/documentation.page:8 C/index.page:17 C/scores.page:14
+#: C/shortcuts.page:9 C/strategy.page:9 C/translate.page:10
 msgid "Tiffany Antopolski"
 msgstr "Tiffany Antopolski"
 
 #. (itstool) path: credit/years
 #: C/bug-filing.page:12 C/change-board-size.page:11 C/develop.page:12
-#: C/documentation.page:10 C/fast-moves.page:11 C/play.page:12 C/rules.page:12
-#: C/scores.page:11 C/shortcuts.page:11 C/translate.page:12
+#: C/documentation.page:10 C/play.page:12 C/rules.page:12 C/scores.page:11
+#: C/shortcuts.page:11 C/translate.page:12
 msgid "2011"
 msgstr "2011"
 
@@ -61,8 +60,8 @@ msgid ""
 msgstr ""
 "O hru <app>Pět nebo víc</app> se stará komunita dobrovolníků. Vaše případná "
 "účast bude vítána. Pokud si povšimnete nějakého problému, můžete vyplnit "
-"<em>chybové hlášení</em> na <link href=\"https://gitlab.gnome.org/GNOME/"
-"five-or-more/issues/new\"/>."
+"<em>chybové hlášení</em> na <link href=\"https://gitlab.gnome.org/GNOME/five-"
+"or-more/issues/new\"/>."
 
 #. (itstool) path: page/p
 #: C/bug-filing.page:23
@@ -85,10 +84,10 @@ msgid ""
 "<gui>Register</gui> link to create one."
 msgstr ""
 "Abyste se mohli zapojit, musíte si vytvořit účet, díky kterému získáte "
-"přistup, můžete hlásit chyby a psát komentáře. Účet potřebujete také k "
-"tomu, aby vám přicházely na e-mail informace o stavu vaší chyby. Jestli účet "
-"zatím nemáte, a nechcete použít některou z dostupných možností pro přihlášení "
-"přes externí účty, vytvořte si nový účet kliknutím na <gui>Register</gui>."
+"přistup, můžete hlásit chyby a psát komentáře. Účet potřebujete také k tomu, "
+"aby vám přicházely na e-mail informace o stavu vaší chyby. Jestli účet zatím "
+"nemáte, a nechcete použít některou z dostupných možností pro přihlášení přes "
+"externí účty, vytvořte si nový účet kliknutím na <gui>Register</gui>."
 
 #. (itstool) path: page/p
 #: C/bug-filing.page:30
@@ -103,13 +102,13 @@ msgstr ""
 "Když už účet máte, přihlaste se a klikněte na <guiseq><gui>Projects</"
 "gui><gui>five-or-more</gui><gui>Issues</gui><gui>New issue</gui></guiseq>. "
 "Před nahlášením chyby si prosím přečtěte <link href=\"https://bugzilla.gnome."
-"org/page.cgi?id=bug-writing.html\">přiručku k hlášení chyb</link> (odkaz je v "
-"angličtině) a <link href=\"https://gitlab.gnome.org/GNOME/five-or-more/"
+"org/page.cgi?id=bug-writing.html\">přiručku k hlášení chyb</link> (odkaz je "
+"v angličtině) a <link href=\"https://gitlab.gnome.org/GNOME/five-or-more/"
 "issues\">podívejte</link> se prosím, jestli stejnou chybu nenahlásil již "
 "někdo jiný."
 
 #. (itstool) path: page/p
-#: C/bug-filing.page:37
+#: C/bug-filing.page:33
 msgid ""
 "Fill in the Title and Description sections and click <gui>Submit issue</gui>."
 msgstr ""
@@ -117,7 +116,7 @@ msgstr ""
 "<gui>Submit issue</gui>."
 
 #. (itstool) path: page/p
-#: C/bug-filing.page:40
+#: C/bug-filing.page:36
 msgid ""
 "Your report will be given an ID number, and its status will be updated as it "
 "is being dealt with."
@@ -126,14 +125,13 @@ msgstr ""
 "řešeno, bude se měnit jeho stav."
 
 #. (itstool) path: credit/name
-#: C/change-board-size.page:9 C/change-theme.page:9 C/fast-moves.page:9
-#: C/index.page:13 C/play.page:10 C/scores.page:9
+#: C/change-board-size.page:9 C/change-theme.page:9 C/index.page:13
+#: C/play.page:10 C/scores.page:9
 msgid "Lahiru lanka"
 msgstr "Lahiru lanka"
 
 #. (itstool) path: credit/name
-#: C/change-board-size.page:18 C/fast-moves.page:18 C/play.page:15
-#: C/translate.page:15
+#: C/change-board-size.page:18 C/play.page:15 C/translate.page:15
 msgid "Michael Hill"
 msgstr "Michael Hill"
 
@@ -149,20 +147,16 @@ msgstr "Když chcete změnit velikost hrací desky:"
 
 #. (itstool) path: item/p
 #: C/change-board-size.page:26
-msgid "Click <guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq>"
-msgstr "Klikněte na <guiseq><gui>Nastavení</gui><gui>Předvolby</gui></guiseq>"
+msgid "Press the menu button in the top-right corner of the window."
+msgstr "Zmáčkněte tlačítko nabídky v pravém horním rohu okna."
 
 #. (itstool) path: item/p
 #: C/change-board-size.page:27
-msgid ""
-"Under <gui>Board Size</gui>, select <gui>Small</gui>, <gui>Medium</gui>, or "
-"<gui>Large</gui>."
-msgstr ""
-"Pod <gui>Velikost hrací desky</gui> si vyberte z <gui>Malá</gui>, "
-"<gui>Střední</gui> nebo <gui>Velká</gui>."
+msgid "Select <gui>Small</gui>, <gui>Medium</gui>, or <gui>Large</gui>."
+msgstr "Vyberte z <gui>Malá</gui>, <gui>Střední</gui> nebo <gui>Velká</gui>."
 
 #. (itstool) path: note/p
-#: C/change-board-size.page:32
+#: C/change-board-size.page:31
 msgid ""
 "While a larger board gives you more space, there are also more objects in "
 "play for each turn."
@@ -171,123 +165,124 @@ msgstr ""
 "tahu také více kamenů."
 
 #. (itstool) path: section/title
-#: C/change-board-size.page:37
+#: C/change-board-size.page:36
 msgid "Board parameters"
 msgstr "Parametry hrací desky"
 
 #. (itstool) path: section/p
-#: C/change-board-size.page:38
+#: C/change-board-size.page:37
 msgid "The 3 different board sizes have the following parameters:"
 msgstr "Tři různě velké hrací desky mají následující parametry:"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:42
+#: C/change-board-size.page:41
 msgid "<em>Size</em>"
 msgstr "<em>Velikost</em>"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:43
+#: C/change-board-size.page:42
 msgid "<em>Width</em>"
 msgstr "<em>Šířka</em>"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:44
+#: C/change-board-size.page:43
 msgid "<em>Height</em>"
 msgstr "<em>Výška</em>"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:45
+#: C/change-board-size.page:44
 msgid "<em>Number of types</em>"
 msgstr "<em>Počet typů</em>"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:46
+#: C/change-board-size.page:45
 msgid "<em>New objects per turn</em>"
 msgstr "<em>Nových kamenů v tahu</em>"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:47
+#: C/change-board-size.page:46
 msgid "<em>Number of cells</em>"
 msgstr "<em>Počet polí</em>"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:51
+#: C/change-board-size.page:50
 msgid "Small"
 msgstr "Malá"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:52 C/change-board-size.page:53
-#: C/change-board-size.page:61 C/change-board-size.page:66 C/scores.page:41
+#: C/change-board-size.page:51 C/change-board-size.page:52
+#: C/change-board-size.page:62 C/change-board-size.page:71
+#: C/change-board-size.page:72 C/scores.page:41
 msgid "7"
 msgstr "7"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:54 C/scores.page:33
+#: C/change-board-size.page:53 C/scores.page:33
 msgid "5"
 msgstr "5"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:55 C/change-board-size.page:61
+#: C/change-board-size.page:54 C/change-board-size.page:63
 msgid "3"
 msgstr "3"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:56
+#: C/change-board-size.page:55 C/scores.page:62
 msgid "49"
 msgstr "49"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:60
+#: C/change-board-size.page:59
 msgid "Medium"
 msgstr "Střední"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:60 C/scores.page:49
+#: C/change-board-size.page:60 C/change-board-size.page:61 C/scores.page:49
 msgid "9"
 msgstr "9"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:61
+#: C/change-board-size.page:64
 msgid "81"
 msgstr "81"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:65
+#: C/change-board-size.page:68
 msgid "Large"
 msgstr "Velká"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:65
+#: C/change-board-size.page:69
 msgid "20"
 msgstr "20"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:65
+#: C/change-board-size.page:70
 msgid "15"
 msgstr "15"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:66
+#: C/change-board-size.page:73
 msgid "300"
 msgstr "300"
 
 #. (itstool) path: section/title
-#: C/change-board-size.page:74
+#: C/change-board-size.page:80
 msgid "The 3 board sizes"
 msgstr "Tři velikosti hrací desky"
 
 #. (itstool) path: media/p
-#: C/change-board-size.page:80
+#: C/change-board-size.page:86
 msgid "<app>Five or More</app> Small board"
 msgstr "Malá hrací deska hry <application>Pět nebo víc</application>"
 
 #. (itstool) path: media/p
-#: C/change-board-size.page:85
+#: C/change-board-size.page:91
 msgid "<app>Five or More</app> medium size board"
 msgstr "Střední hrací deska hry <application>Pět nebo víc</application>"
 
 #. (itstool) path: media/p
-#: C/change-board-size.page:90
+#: C/change-board-size.page:96
 msgid "<app>Five or More</app> large size board"
 msgstr "Velká hrací deska hry <application>Pět nebo víc</application>"
 
@@ -307,21 +302,25 @@ msgid "To change the appearance of the pieces and the board:"
 msgstr "Pokud si chcete změnit vzhled hracích kamenů a hrací desky:"
 
 #. (itstool) path: item/p
-#: C/change-theme.page:24 C/fast-moves.page:28
-msgid "Click <guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq>."
-msgstr "Klikněte na <guiseq><gui>Nastavení</gui><gui>Předvolby</gui></guiseq>."
-
-#. (itstool) path: item/p
-#: C/change-theme.page:27
+#: C/change-theme.page:24
 msgid ""
-"Select <gui>balls</gui>, <gui>dots</gui>, <gui>gumball</gui> or <gui>shapes</"
-"gui> from the <gui>Image</gui> drop down menu to change the playing pieces."
+"Press the menu button in the top-right corner of the window and select <gui "
+"style=\"menuitem\">Preferences</gui>."
 msgstr ""
-"Výběrem <gui>kuliček</gui>, <gui>teček</gui>, <gui>hopskulek</gui> nebo "
-"<gui>tvarů</gui> v robalovací nabídce <gui>Obrázek</gui> změňte hrací kameny."
+"Zmáčkněte tlačítko nabídky v pravém horním rohu okna a vyberte <gui style="
+"\"menuitem\">Předvolby</gui>."
 
 #. (itstool) path: item/p
-#: C/change-theme.page:29
+#: C/change-theme.page:28
+msgid ""
+"Select <gui>balls</gui>, <gui>shapes</gui>, or <gui>tango</gui> from the "
+"<gui>Theme</gui> drop down menu to change the playing pieces."
+msgstr ""
+"Volbou <gui>kuličky</gui>, <gui>tvary</gui> nebo <gui>tango</gui> v "
+"robalovací nabídce <gui>Motiv</gui> změňte hrací kameny."
+
+#. (itstool) path: item/p
+#: C/change-theme.page:30
 msgid ""
 "Click on the colored box next to <gui>Background color</gui> to access the "
 "color palette."
@@ -330,44 +329,9 @@ msgstr ""
 "barevné paletě."
 
 #. (itstool) path: item/p
-#: C/change-theme.page:33 C/fast-moves.page:30
-msgid "Click <gui>Close</gui>."
-msgstr "Klikněte na <gui>Zavřít</gui>."
-
-#. (itstool) path: section/title
-#: C/change-theme.page:37
-msgid "Images available"
-msgstr "Dostupné obrázky"
-
-#. (itstool) path: media/p
-#: C/change-theme.page:39
-msgid "Five or More with different balls"
-msgstr "Hra <app>Pět nebo víc</app> s různými kuličkami"
-
-#. (itstool) path: media/p
-#: C/change-theme.page:43
-msgid "<app>Five or More</app> with different dots"
-msgstr "Hra <app>Pět nebo víc</app> s různými tečkami"
-
-#. (itstool) path: media/p
-#: C/change-theme.page:47
-msgid "<app>Five or More</app> with different gumballs"
-msgstr "Hra <app>Pět nebo víc</app> s různými hopskulkami"
-
-#. (itstool) path: media/p
-#: C/change-theme.page:51
-msgid "<app>Five or More</app> with different shapes"
-msgstr "Hra <app>Pět nebo víc</app> s různými tvary"
-
-#. (itstool) path: section/title
-#: C/change-theme.page:56
-msgid "Background colors available"
-msgstr "Dostupné barvy pozadí"
-
-#. (itstool) path: media/p
-#: C/change-theme.page:58
-msgid "Five or More color palette"
-msgstr "Barevná paleta ve hře <app>Pět nebo víc</app>"
+#: C/change-theme.page:34
+msgid "Close the <gui>Preferences</gui> dialog."
+msgstr "Zavřete dialogové okno <gui>Předvolby</gui>."
 
 #. (itstool) path: page/title
 #: C/develop.page:19
@@ -437,30 +401,6 @@ msgstr ""
 "Užitečné informace obsahuje naše <link href=\"https://wiki.gnome.org/"
 "DocumentationProject/Contributing\">wikistránka</link>."
 
-#. (itstool) path: page/title
-#: C/fast-moves.page:25
-msgid "Change speed"
-msgstr "Jak změnit rychlost"
-
-#. (itstool) path: page/p
-#: C/fast-moves.page:26
-msgid "To speed up object movements:"
-msgstr "Pro zrychlení přesunu kamenů:"
-
-#. (itstool) path: item/p
-#: C/fast-moves.page:29
-msgid "Under <gui>General</gui>, select <gui>Use fast moves</gui>."
-msgstr "V <gui>Obecné</gui> zaškrtněte <gui>Používat rychlé tahy</gui>."
-
-#. (itstool) path: note/p
-#: C/fast-moves.page:33
-msgid ""
-"Any changes you make are instantly applied and remembered for the next time "
-"you run <app>Five or More</app>."
-msgstr ""
-"Změny v nastavení se okamžitě promítnou do hry a zůstanou zachované i pro "
-"další spuštění <app>Pět nebo víc</app>."
-
 #. (itstool) path: info/title
 #: C/index.page:8
 msgctxt "link"
@@ -484,7 +424,7 @@ msgid "<_:media-1/> Five or More"
 msgstr "<_:media-1/> Pět nebo víc"
 
 #. (itstool) path: page/p
-#: C/index.page:29
+#: C/index.page:30
 msgid ""
 "<app>Five or More</app> is a deceptively simple brain workout. The goal is "
 "to place at least five objects of the same <link xref=\"change-theme#images"
@@ -629,18 +569,19 @@ msgstr "Jak hrát"
 #. (itstool) path: page/p
 #: C/play.page:24
 msgid ""
-"To start a new game click <guiseq><gui>Game</gui><gui>New</gui></guiseq>."
+"To start a new game, press the menu button in the top-right corner of the "
+"window and select <gui style=\"menuitem\">New Game</gui>."
 msgstr ""
-"Novou hru začnete kliknutím na <guiseq><gui>Hra</gui><gui>Nová</gui></"
-"guiseq>."
+"Když chcete spustit novou hru, zmáčkněte tlačítko nabídky v pravém horním "
+"rohu okna a vyberte <gui style=\"menuitem\">Nová hra</gui>."
 
 #. (itstool) path: section/title
-#: C/play.page:28
+#: C/play.page:29
 msgid "Using the mouse"
 msgstr "Používání myši"
 
 #. (itstool) path: item/p
-#: C/play.page:32
+#: C/play.page:33
 msgid ""
 "Click on the object you want to move. The selected object will begin "
 "spinning."
@@ -648,17 +589,21 @@ msgstr ""
 "Klikněte na kámen, který chcete přesunout. Vybraný kámen se začne točit."
 
 #. (itstool) path: item/p
-#: C/play.page:36
-msgid "Click on the destination cell."
-msgstr "Klikněte na cílové pole."
+#: C/play.page:37
+msgid ""
+"Click on the destination cell. The chosen object will move to the "
+"destination cell, if there is any clear path."
+msgstr ""
+"Klikněte na cílové pole. Pokud existuje volná cesta, zvolený kámen se na něj "
+"přesune."
 
 #. (itstool) path: section/title
-#: C/play.page:44
+#: C/play.page:46
 msgid "Using the keyboard"
 msgstr "Používání klávesnice"
 
 #. (itstool) path: item/p
-#: C/play.page:47
+#: C/play.page:50
 msgid ""
 "Press any of the arrow keys. An outline around a cell will appear on the "
 "board."
@@ -667,31 +612,37 @@ msgstr ""
 "pole objeví zvýrazněný obrys."
 
 #. (itstool) path: item/p
-#: C/play.page:49
-msgid "Using the arrow keys, navigate to the object you want to move."
+#: C/play.page:54
+msgid ""
+"Using the arrow keys, and the <key>Home</key>, <key>End</key>, <key>PageUp</"
+"key> and <key>PageDown</key> keys navigate to the object you want to move."
 msgstr ""
-"Použijte kurzorové šipky k zacílení hracího kamenu, který chcete přesunout."
+"Pomocí kurzorových šipek a kláves <key>Home</key>, <key>End</key>, "
+"<key>PageUp</key> a <key>PageDown</key> se dostaňte na objekt, který chcete "
+"přesunout."
 
 #. (itstool) path: item/p
-#: C/play.page:51
+#: C/play.page:57
 msgid ""
-"To select the object, press the <key>Enter</key> or <key>Spacebar</key>. The "
-"selected object will begin spinning."
+"To select the object, press the <key>Enter</key>, <key>Spacebar</key> or "
+"<key>Return</key>. The selected object will begin spinning."
 msgstr ""
 "Zmáčknutím <key>Enter</key> nebo <key>mezerníku</key> kámen vyberte. Kámen "
 "se začne točit."
 
 #. (itstool) path: item/p
-#: C/play.page:53
+#: C/play.page:60
 msgid ""
-"Move to the destination cell, and again press the <key>Enter</key> or "
-"<key>Spacebar</key>. The chosen object will move to the destination cell."
+"Move to the destination cell, and again press the <key>Enter</key>, "
+"<key>Spacebar</key> or <key>Return</key>. The chosen object will move to the "
+"destination cell, if there is any clear path."
 msgstr ""
 "Přesuňte se na cílové pole a znovu zmáčkněte <key>Enter</key> nebo "
-"<key>mezerník</key>. Zvolený kámen se přesune na cílové pole."
+"<key>mezerník</key>. Pokud existuje volná cesta, zvolený kámen se přemístí na "
+"cílové pole."
 
 #. (itstool) path: section/title
-#: C/play.page:62
+#: C/play.page:70
 msgid "Video demonstration"
 msgstr "Videoukázka"
 
@@ -815,14 +766,14 @@ msgid "6"
 msgstr "6"
 
 #. (itstool) path: td/p
-#: C/scores.page:38 C/scores.page:61
-msgid "12"
-msgstr "12"
+#: C/scores.page:38
+msgid "18"
+msgstr "18"
 
 #. (itstool) path: td/p
 #: C/scores.page:42
-msgid "18"
-msgstr "18"
+msgid "25"
+msgstr "25"
 
 #. (itstool) path: td/p
 #: C/scores.page:45
@@ -831,18 +782,18 @@ msgstr "8"
 
 #. (itstool) path: td/p
 #: C/scores.page:46
-msgid "28"
-msgstr "28"
+msgid "31"
+msgstr "31"
 
 #. (itstool) path: td/p
 #: C/scores.page:50
-msgid "42"
-msgstr "42"
+msgid "36"
+msgstr "36"
 
 #. (itstool) path: td/p
 #: C/scores.page:54
-msgid "82"
-msgstr "82"
+msgid "41"
+msgstr "41"
 
 #. (itstool) path: td/p
 #: C/scores.page:57
@@ -851,13 +802,13 @@ msgstr "11"
 
 #. (itstool) path: td/p
 #: C/scores.page:58
-msgid "108"
-msgstr "108"
+msgid "45"
+msgstr "45"
 
 #. (itstool) path: td/p
-#: C/scores.page:62
-msgid "138"
-msgstr "138"
+#: C/scores.page:61
+msgid "12"
+msgstr "12"
 
 #. (itstool) path: td/p
 #: C/scores.page:65
@@ -866,30 +817,30 @@ msgstr "13"
 
 #. (itstool) path: td/p
 #: C/scores.page:66
-msgid "172"
-msgstr "172"
+msgid "53"
+msgstr "53"
 
 #. (itstool) path: td/p
-#: C/scores.page:69
+#: C/scores.page:69 C/scores.page:73
 msgid "14"
 msgstr "14"
 
 #. (itstool) path: td/p
-#: C/scores.page:70
-msgid "210"
-msgstr "210"
+#: C/scores.page:70 C/scores.page:74
+msgid "56"
+msgstr "56"
 
 #. (itstool) path: note/p
-#: C/scores.page:76
+#: C/scores.page:81
 msgid ""
-"You can view the high scores by clicking <guiseq><gui>Game</gui><gui>Scores</"
-"gui></guiseq>."
+"You can view the high scores by pressing the menu button in the top-right "
+"corner of the window and selecting <gui style=\"menuitem\">Scores</gui>."
 msgstr ""
-"Nejvyšší skóre si můžete zobrazit kliknutím na <guiseq><gui>Hra</"
-"gui><gui>Skóre</gui></guiseq>."
+"Nejvyšší dosažená skóre si zobrazíte tak, že zmáčknete tlačítko nabídky v "
+"pravém horním rohu okna a vyberete <gui style=\"menuitem\">Skóre</gui>."
 
 #. (itstool) path: note/p
-#: C/scores.page:78
+#: C/scores.page:83
 msgid ""
 "The <app>Five or More</app> scores are recorded according to the board size. "
 "You can select the <gui>Board Size</gui> of interest using the drop down "
@@ -951,12 +902,12 @@ msgstr ""
 "a je dobré je mít při hraní na paměti:"
 
 #. (itstool) path: item/p
-#: C/strategy.page:22
+#: C/strategy.page:23
 msgid "Try to set at least three same objects with your every move."
 msgstr "V každé tahu se snažte získat seřazené alespoň tři hrací kameny."
 
 #. (itstool) path: item/p
-#: C/strategy.page:23
+#: C/strategy.page:24
 msgid ""
 "The board can quickly become very crowded with objects, so it is best to "
 "think ahead. Pay attention to the collection of <gui>Next</gui> objects, "
@@ -967,7 +918,7 @@ msgstr ""
 "tahle znalost může pomoci ovlivnit vaše tahy."
 
 #. (itstool) path: item/p
-#: C/strategy.page:24
+#: C/strategy.page:25
 msgid ""
 "Try to line up more than 5 objects. For example, if you have 6 objects, you "
 "can line up 2 and 3 with a space in between, and then connect them by "
@@ -1035,4 +986,5 @@ msgid ""
 "list</link>."
 msgstr ""
 "Případně můžete kontaktovat Internacionalizační tým přes jeho <link href="
-"\"http://mail.gnome.org/mailman/listinfo/gnome-i18n\">poštovní konferenci</link>."
+"\"http://mail.gnome.org/mailman/listinfo/gnome-i18n\">poštovní konferenci</"
+"link>."
