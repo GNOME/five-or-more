@@ -50,7 +50,7 @@ public class FiveOrMoreApp: Gtk.Application
 
     public override void activate ()
     {
-        window.present ();
+        window.show ();
     }
 
     protected override void startup ()
@@ -113,7 +113,7 @@ public class FiveOrMoreApp: Gtk.Application
     {
         if (preferences_dialog != null)
         {
-            preferences_dialog.present ();
+            preferences_dialog.show ();
             return;
         }
 
@@ -125,7 +125,7 @@ public class FiveOrMoreApp: Gtk.Application
             preferences_dialog = null;
         });
 
-        preferences_dialog.present ();
+        preferences_dialog.show ();
     }
 
     private void help_cb ()
