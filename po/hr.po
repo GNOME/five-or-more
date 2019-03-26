@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: gnome-games 0\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/five-or-more/issues\n"
 "POT-Creation-Date: 2019-03-14 09:20+0000\n"
-"PO-Revision-Date: 2019-03-26 13:40+0100\n"
+"PO-Revision-Date: 2019-03-26 18:44+0100\n"
 "Last-Translator: Launchpad Translations Administrators <rosetta@launchpad."
 "net>\n"
 "Language-Team: Croatian <lokalizacija@linux.hr>\n"
@@ -72,14 +72,12 @@ msgid "_Preferences"
 msgstr "_Osobitosti"
 
 #: data/five-or-more.ui:40
-#, fuzzy
-#| msgid "Help"
 msgid "_Help"
-msgstr "_Pomoć"
+msgstr "_Priručnik"
 
 #: data/five-or-more.ui:45
 msgid "_About Five or More"
-msgstr "Pet ili više"
+msgstr "_O Pet ili više"
 
 #: data/five-or-more.ui:65 data/org.gnome.five-or-more.appdata.xml.in:7
 #: data/org.gnome.five-or-more.desktop.in:3 src/main.vala:74 src/main.vala:168
