@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/five-or-more/issues\n"
-"POT-Creation-Date: 2019-01-11 15:40+0000\n"
+"POT-Creation-Date: 2019-03-26 12:41+0000\n"
 "PO-Revision-Date: 2019-02-13 00:03+0100\n"
 "Last-Translator: Ask Hjorth Larsen <asklarsen@gmail.com>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
@@ -130,11 +130,6 @@ msgstr "GNOME-projektet"
 msgid "game;strategy;logic;"
 msgstr "spil;strategi;logik;"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: data/org.gnome.five-or-more.desktop.in:9
-msgid "org.gnome.five-or-more"
-msgstr "org.gnome.five-or-more"
-
 #: data/org.gnome.five-or-more.gschema.xml:5
 msgid "Playing field size"
 msgstr "Banestørrelse"
@@ -234,8 +229,9 @@ msgstr ""
 "Ole Laursen\n"
 "Ask Hjorth Larsen\n"
 "\n"
-"Dansk-gruppen <dansk@dansk-gruppen.dk>\n"
-"Mere info: http://www.dansk-gruppen.dk"
+"Dansk-gruppen\n"
+"Websted <http://dansk-gruppen.dk>\n"
+"E-mail <dansk@dansk-gruppen.dk>"
 
 #: src/window.vala:50
 msgid "Match five objects of the same type in a row to score!"
@@ -269,6 +265,9 @@ msgstr "_Annullér"
 #: src/window.vala:162
 msgid "_Restart"
 msgstr "_Genstart"
+
+#~ msgid "org.gnome.five-or-more"
+#~ msgstr "org.gnome.five-or-more"
 
 #~ msgid "_Image:"
 #~ msgstr "_Billede:"
@@ -356,3 +355,4 @@ msgstr "_Genstart"
 
 #~ msgid "Date"
 #~ msgstr "Dato"
+
