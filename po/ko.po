@@ -5,6 +5,7 @@
 # ChiHyeon Kim <pipi910327@gmail.com>, 2017.
 # Hyunwoo Park <ez.amiryo@gmail.com>, 2018.
 # Changwoo Ryu <cwryu@debian.org>, 1998, 2002-2015, 2017, 2019.
+# Seong-ho Cho <shcho@gnome.org>, 2019.
 #
 #
 # 새로 번역하신 분은 아래 "translator-credits"에 추가하세요.
@@ -26,16 +27,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/five-or-more/issues\n"
-"POT-Creation-Date: 2019-01-11 15:40+0000\n"
-"PO-Revision-Date: 2019-03-08 15:01+0900\n"
-"Last-Translator: Hyunwoo Park <ez.amiryo@gmail.com>\n"
+"POT-Creation-Date: 2019-03-26 12:41+0000\n"
+"PO-Revision-Date: 2019-09-02 09:21+0900\n"
+"Last-Translator: Seong-ho Cho <shcho@gnome.org>\n"
 "Language-Team: GNOME Korea <gnome-kr@googlegroups.com>\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 2.1.1\n"
+"X-Generator: Poedit 2.2.3\n"
 
 #: data/five-or-more-preferences.ui:13
 msgid "Preferences"
@@ -59,7 +60,7 @@ msgstr "모양"
 
 #: data/five-or-more-preferences.ui:78
 msgid "tango"
-msgstr ""
+msgstr "탱고"
 
 #: data/five-or-more-preferences.ui:87
 msgid "B_ackground color:"
@@ -138,11 +139,6 @@ msgstr "그놈 프로젝트"
 #: data/org.gnome.five-or-more.desktop.in:6
 msgid "game;strategy;logic;"
 msgstr "game;게임;strategy;전략;logic;논리;로직;"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: data/org.gnome.five-or-more.desktop.in:9
-msgid "org.gnome.five-or-more"
-msgstr "org.gnome.five-or-more"
 
 #: data/org.gnome.five-or-more.gschema.xml:5
 msgid "Playing field size"
@@ -236,8 +232,10 @@ msgstr "한때 유행했던 색상 라인 게임을 그놈으로 옮겼습니다
 msgid "translator-credits"
 msgstr ""
 "류창우 <cwryu@debian.org>\n"
+"백관선 <backiss@kornet.net>\n"
 "김치현 <pipi910327@gmail.com>\n"
-"박현우 <ez.amiryo@gmail.com>"
+"박현우 <ez.amiryo@gmail.com>\n"
+"조성호 <shcho@gnome.org>"
 
 #: src/window.vala:50
 msgid "Match five objects of the same type in a row to score!"
@@ -271,3 +269,6 @@ msgstr "취소(_C)"
 #: src/window.vala:162
 msgid "_Restart"
 msgstr "다시 시작(_R)"
+
+#~ msgid "org.gnome.five-or-more"
+#~ msgstr "org.gnome.five-or-more"
