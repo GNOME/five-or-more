@@ -13,9 +13,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: five-or-more master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-"
-"or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-01-01 18:26+0000\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/five-or-more/issues\n"
+"POT-Creation-Date: 2019-03-26 12:41+0000\n"
 "PO-Revision-Date: 2016-01-02 13-28+0900\n"
 "Last-Translator: Jiro Matsuzawa <jmatsuzawa@gnome.org>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
@@ -25,17 +24,89 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../data/five-or-more.appdata.xml.in.h:1 ../data/five-or-more.desktop.in.h:1
-#: ../data/five-or-more.ui.h:1 ../src/five-or-more.c:1172
-#: ../src/five-or-more.c:1731
+#: data/five-or-more-preferences.ui:13
+msgid "Preferences"
+msgstr "設定"
+
+#: data/five-or-more-preferences.ui:36
+msgid "Appearance"
+msgstr "外観"
+
+#: data/five-or-more-preferences.ui:60
+msgid "_Theme:"
+msgstr ""
+
+#: data/five-or-more-preferences.ui:76
+msgid "balls"
+msgstr ""
+
+#: data/five-or-more-preferences.ui:77
+msgid "shapes"
+msgstr ""
+
+#: data/five-or-more-preferences.ui:78
+msgid "tango"
+msgstr ""
+
+#: data/five-or-more-preferences.ui:87
+msgid "B_ackground color:"
+msgstr "背景色(_A):"
+
+#: data/five-or-more.ui:7
+msgid "_New Game"
+msgstr "新しいゲーム(_N)"
+
+#: data/five-or-more.ui:13
+#, fuzzy
+#| msgid "Scores"
+msgid "S_cores"
+msgstr "得点"
+
+#: data/five-or-more.ui:19
+msgid "_Small"
+msgstr "小(_S)"
+
+#: data/five-or-more.ui:24
+msgid "_Medium"
+msgstr "中(_M)"
+
+#: data/five-or-more.ui:29
+msgid "_Large"
+msgstr "大(_L)"
+
+#: data/five-or-more.ui:36
+#, fuzzy
+#| msgid "Preferences"
+msgid "_Preferences"
+msgstr "設定"
+
+#: data/five-or-more.ui:40
+#, fuzzy
+#| msgid "Help"
+msgid "_Help"
+msgstr "ヘルプ"
+
+#: data/five-or-more.ui:45
+#, fuzzy
+#| msgid "Five or More"
+msgid "_About Five or More"
+msgstr "Five or More"
+
+#: data/five-or-more.ui:65 data/org.gnome.five-or-more.appdata.xml.in:7
+#: data/org.gnome.five-or-more.desktop.in:3 src/main.vala:74 src/main.vala:168
 msgid "Five or More"
 msgstr "Five or More"
 
-#: ../data/five-or-more.appdata.xml.in.h:2 ../data/five-or-more.desktop.in.h:2
+#: data/five-or-more.ui:77
+msgid "Next:"
+msgstr "次:"
+
+#: data/org.gnome.five-or-more.appdata.xml.in:8
+#: data/org.gnome.five-or-more.desktop.in:4
 msgid "Remove colored balls from the board by forming lines"
 msgstr "色の付いた石を並べて盤から取り去るゲームです"
 
-#: ../data/five-or-more.appdata.xml.in.h:3
+#: data/org.gnome.five-or-more.appdata.xml.in:10
 msgid ""
 "Five or More is the GNOME port of a once-popular computer game. Align five "
 "or more objects of the same color into a line to cause them to disappear and "
@@ -46,7 +117,7 @@ msgstr ""
 "色の石を 5 個以上一列に並べると、石が消えて得点が入ります。石を消すときにでき"
 "るだけ多くの石を並べると、その分得点もたくさん入ります。"
 
-#: ../data/five-or-more.appdata.xml.in.h:4
+#: data/org.gnome.five-or-more.appdata.xml.in:16
 msgid ""
 "More objects appear after every turn. Play for as long as possible, until "
 "the board is completely full!"
@@ -54,228 +125,106 @@ msgstr ""
 "ターン毎に石は増えていきます。盤が石で一杯になればゲーム終了です。できるだけ"
 "長くプレイしましょう。"
 
-#: ../data/five-or-more.desktop.in.h:3
+#: data/org.gnome.five-or-more.appdata.xml.in:40
+msgid "The GNOME Project"
+msgstr ""
+
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/org.gnome.five-or-more.desktop.in:6
 msgid "game;strategy;logic;"
 msgstr "game;strategy;logic;ゲーム;ストラテジー;ロジック;論理;puzzle;パズル;"
 
-#: ../data/five-or-more-preferences.ui.h:1 ../data/menu.ui.h:2
-#: ../src/five-or-more.c:171
-msgid "Preferences"
-msgstr "設定"
-
-#: ../data/five-or-more-preferences.ui.h:2
-msgid "Appearance"
-msgstr "外観"
-
-#: ../data/five-or-more-preferences.ui.h:3
-msgid "_Image:"
-msgstr "画像(_I):"
-
-#: ../data/five-or-more-preferences.ui.h:4
-msgid "B_ackground color:"
-msgstr "背景色(_A):"
-
-#: ../data/five-or-more-preferences.ui.h:5
-msgid "Board Size"
-msgstr "盤の大きさ"
-
-#: ../data/five-or-more-preferences.ui.h:6
-msgid "_Small"
-msgstr "小(_S)"
-
-#: ../data/five-or-more-preferences.ui.h:7
-msgid "_Medium"
-msgstr "中(_M)"
-
-#: ../data/five-or-more-preferences.ui.h:8
-msgid "_Large"
-msgstr "大(_L)"
-
-#: ../data/five-or-more-preferences.ui.h:9
-msgid "General"
-msgstr "全般"
-
-#: ../data/five-or-more-preferences.ui.h:10
-msgid "_Use fast moves"
-msgstr "素早く移動する(_U)"
-
-#: ../data/five-or-more.ui.h:2
-msgid "Next:"
-msgstr "次:"
-
-#: ../data/five-or-more.ui.h:3
-msgid "0"
-msgstr "0"
-
-#: ../data/five-or-more.ui.h:4
-msgid "Score:"
-msgstr "得点:"
-
-#: ../data/five-or-more.ui.h:5 ../src/games-scores-dialog.c:385
-msgid "_New Game"
-msgstr "新しいゲーム(_N)"
-
-#: ../data/five-or-more.ui.h:6
-msgid "Start a new puzzle"
-msgstr "新しいパズルでやり直します"
-
-#: ../data/menu.ui.h:1
-msgid "Scores"
-msgstr "得点"
-
-#: ../data/menu.ui.h:3
-msgid "Help"
-msgstr "ヘルプ"
-
-#: ../data/menu.ui.h:4
-msgid "About"
-msgstr "このアプリケーションについて"
-
-#: ../data/menu.ui.h:5
-msgid "Quit"
-msgstr "終了"
-
-#: ../data/org.gnome.five-or-more.gschema.xml.h:1
+#: data/org.gnome.five-or-more.gschema.xml:5
 msgid "Playing field size"
 msgstr "プレイするフィールドの大きさ"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:2
+#: data/org.gnome.five-or-more.gschema.xml:6
 msgid ""
 "Playing field size. 1=Small, 2=Medium, 3=Large. Any other value is invalid."
 msgstr ""
 "プレイするフィールドの大きさです。指定可能な値: 1=小さい、2=中くらい、3=大き"
 "い (それ以外の値は無効です)"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:3
+#: data/org.gnome.five-or-more.gschema.xml:10
 msgid "Ball style"
 msgstr "石のスタイル"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:4
+#: data/org.gnome.five-or-more.gschema.xml:11
 msgid "Ball style. The filename of the images to use for the balls."
 msgstr "石のスタイルで、石に使用する画像のファイル名です。"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:5
+#: data/org.gnome.five-or-more.gschema.xml:15
 msgid "Background color"
 msgstr "背景色"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:6
+#: data/org.gnome.five-or-more.gschema.xml:16
 msgid "Background color. The hex specification of the background color."
 msgstr "背景色 (16進表記)"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:7
+#: data/org.gnome.five-or-more.gschema.xml:20
 msgid "Time between moves"
 msgstr "移動する時間"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:8
+#: data/org.gnome.five-or-more.gschema.xml:21
 msgid "Time between moves in milliseconds."
 msgstr "石の移動に必要な時間 (ミリ秒単位) です。"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:9
+#: data/org.gnome.five-or-more.gschema.xml:25
 msgid "Game score"
 msgstr "ゲームの得点"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:10
+#: data/org.gnome.five-or-more.gschema.xml:26
 msgid "Game score from last saved session."
 msgstr "最後にプレイしたセッションを保存したゲームの得点です。"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:11
+#: data/org.gnome.five-or-more.gschema.xml:30
 msgid "Game field"
 msgstr "ゲームフィールド"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:12
+#: data/org.gnome.five-or-more.gschema.xml:31
 msgid "Game field from last saved session."
 msgstr "最後にプレイしたセッションを保存したゲームフィールドです。"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:13
+#: data/org.gnome.five-or-more.gschema.xml:35
 msgid "Game preview"
 msgstr "ゲームのプレビュー"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:14
+#: data/org.gnome.five-or-more.gschema.xml:36
 msgid "Game preview from last saved session."
 msgstr "最後にプレイしたセッションを保存したゲームプレビューです。"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:15
+#: data/org.gnome.five-or-more.gschema.xml:40
 msgid "Width of the window in pixels"
 msgstr "ウィンドウの幅 (ピクセル単位) です。"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:16
+#: data/org.gnome.five-or-more.gschema.xml:44
 msgid "Height of the window in pixels"
 msgstr "ウィンドウの高さ (ピクセル単位) です。"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:17
+#: data/org.gnome.five-or-more.gschema.xml:48
 msgid "true if the window is maximized"
 msgstr "ウィンドウが最小化されている場合は TRUE"
 
-#: ../src/five-or-more.c:80
+#: src/game.vala:94
 msgctxt "board size"
 msgid "Small"
 msgstr "小さい"
 
-#: ../src/five-or-more.c:81
+#: src/game.vala:95
 msgctxt "board size"
 msgid "Medium"
 msgstr "中くらい"
 
-#: ../src/five-or-more.c:82
+#: src/game.vala:96
 msgctxt "board size"
 msgid "Large"
 msgstr "大きい"
 
-#: ../src/five-or-more.c:165
-msgid "Could not load theme"
-msgstr "テーマを読み込めませんでした"
-
-#: ../src/five-or-more.c:191
-#, c-format
-msgid ""
-"Unable to locate file:\n"
-"%s\n"
-"\n"
-"The default theme will be loaded instead."
-msgstr ""
-"ファイルを特定できません: '%s'\n"
-"\n"
-"デフォルトのテーマを読み込むことにします。"
-
-#: ../src/five-or-more.c:198
-#, c-format
-msgid ""
-"Unable to locate file:\n"
-"%s\n"
-"\n"
-"Please check that Five or More is installed correctly."
-msgstr ""
-"ファイルを特定できません:\n"
-"%s\n"
-"\n"
-"正しく Five or More がインストールされているか確認してください。"
-
-#: ../src/five-or-more.c:407
-msgid "Match five objects of the same type in a row to score!"
-msgstr "同じ種類の石を5個並べると得点が入ります!"
-
-#: ../src/five-or-more.c:468
-msgid "Five or More Scores"
-msgstr "Five or More の得点"
-
-#: ../src/five-or-more.c:470
-msgid "_Board size:"
-msgstr "盤の大きさ(_B):"
-
-#: ../src/five-or-more.c:487
-msgid "Game Over!"
-msgstr "ゲームオーバー!"
-
-#. Can't move there!
-#: ../src/five-or-more.c:644
-msgid "You can’t move there!"
-msgstr "そこは移動できません!"
-
-#: ../src/five-or-more.c:1174
+#: src/main.vala:171
 msgid "GNOME port of the once-popular Color Lines game"
 msgstr "一世を風靡したカラーラインゲームの GNOME 版です。"
 
-#: ../src/five-or-more.c:1180
+#: src/main.vala:177
 msgid "translator-credits"
 msgstr ""
 "相花 毅 <takeshi.aihana@gmail.com>\n"
@@ -288,50 +237,113 @@ msgstr ""
 "松澤 二郎 <jmatsuzawa@gnome.org>\n"
 "日本GNOMEユーザー会 <http://www.gnome.gr.jp>"
 
-#: ../src/five-or-more.c:1304
+#: src/window.vala:50
+msgid "Match five objects of the same type in a row to score!"
+msgstr "同じ種類の石を5個並べると得点が入ります!"
+
+#: src/window.vala:51
+msgid "You can’t move there!"
+msgstr "そこは移動できません!"
+
+#: src/window.vala:52
+msgid "Game Over!"
+msgstr "ゲームオーバー!"
+
+#: src/window.vala:53
+#, fuzzy, c-format
+#| msgid "Score:"
+msgid "Score: %d"
+msgstr "得点:"
+
+#: src/window.vala:87
+#, fuzzy
+#| msgid "Board Size"
+msgid "Board Size: "
+msgstr "盤の大きさ"
+
+#: src/window.vala:159
 msgid "Are you sure you want to restart the game?"
 msgstr "ゲームを始めからやり直しますが、よろしいですか?"
 
-#: ../src/five-or-more.c:1307
+#: src/window.vala:161
 msgid "_Cancel"
 msgstr "キャンセル(_C)"
 
-#: ../src/five-or-more.c:1308
+#: src/window.vala:162
 msgid "_Restart"
 msgstr "やり直す(_R)"
 
-#. Score dialog column header for the score time (e.g. 1 minute)
-#: ../src/games-scores-dialog.c:132
-msgctxt "score-dialog"
-msgid "Time"
-msgstr "タイム"
+#~ msgid "_Image:"
+#~ msgstr "画像(_I):"
 
-#. Score dialog column header for the score value (e.g. 30 moves)
-#: ../src/games-scores-dialog.c:138
-msgctxt "score-dialog"
-msgid "Score"
-msgstr "得点"
+#~ msgid "General"
+#~ msgstr "全般"
 
-#. Score format for time based scores.  %1$d is the time in minutes, %2$d is the time in seconds
-#: ../src/games-scores-dialog.c:225
-#, c-format
-msgctxt "score-dialog"
-msgid "%1$dm %2$ds"
-msgstr "%1$d分 %2$d秒"
+#~ msgid "_Use fast moves"
+#~ msgstr "素早く移動する(_U)"
 
-#: ../src/games-scores-dialog.c:371
-msgid "_Quit"
-msgstr "終了(_Q)"
+#~ msgid "0"
+#~ msgstr "0"
 
-#: ../src/games-scores-dialog.c:378
-msgid "_Undo"
-msgstr "元に戻す(_U)"
+#~ msgid "Start a new puzzle"
+#~ msgstr "新しいパズルでやり直します"
 
-#: ../src/games-scores-dialog.c:392
-msgid "_Close"
-msgstr "閉じる(_C)"
+#~ msgid "About"
+#~ msgstr "このアプリケーションについて"
 
-#. Score dialog column header for the date the score was recorded
-#: ../src/games-scores-dialog.c:478
-msgid "Date"
-msgstr "日付"
+#~ msgid "Quit"
+#~ msgstr "終了"
+
+#~ msgid "Could not load theme"
+#~ msgstr "テーマを読み込めませんでした"
+
+#~ msgid ""
+#~ "Unable to locate file:\n"
+#~ "%s\n"
+#~ "\n"
+#~ "The default theme will be loaded instead."
+#~ msgstr ""
+#~ "ファイルを特定できません: '%s'\n"
+#~ "\n"
+#~ "デフォルトのテーマを読み込むことにします。"
+
+#~ msgid ""
+#~ "Unable to locate file:\n"
+#~ "%s\n"
+#~ "\n"
+#~ "Please check that Five or More is installed correctly."
+#~ msgstr ""
+#~ "ファイルを特定できません:\n"
+#~ "%s\n"
+#~ "\n"
+#~ "正しく Five or More がインストールされているか確認してください。"
+
+#~ msgid "Five or More Scores"
+#~ msgstr "Five or More の得点"
+
+#~ msgid "_Board size:"
+#~ msgstr "盤の大きさ(_B):"
+
+#~ msgctxt "score-dialog"
+#~ msgid "Time"
+#~ msgstr "タイム"
+
+#~ msgctxt "score-dialog"
+#~ msgid "Score"
+#~ msgstr "得点"
+
+#~ msgctxt "score-dialog"
+#~ msgid "%1$dm %2$ds"
+#~ msgstr "%1$d分 %2$d秒"
+
+#~ msgid "_Quit"
+#~ msgstr "終了(_Q)"
+
+#~ msgid "_Undo"
+#~ msgstr "元に戻す(_U)"
+
+#~ msgid "_Close"
+#~ msgstr "閉じる(_C)"
+
+#~ msgid "Date"
+#~ msgstr "日付"
