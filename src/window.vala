@@ -119,9 +119,9 @@ public class GameWindow : Gtk.ApplicationWindow
 
         string name = category_name_from_key (game.score_current_category);
         var current_category = new Games.Scores.Category (game.score_current_category, name);
-        highscores.add_score (game.score,
-                              current_category,
-                              new Cancellable ());
+        highscores.add_score.begin (game.score,
+                                    current_category,
+                                    new Cancellable ());
 
         show_scores ();
     }
