@@ -8,15 +8,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: glines.HEAD\n"
-"POT-Creation-Date: 2019-02-15 01:06+0000\n"
-"PO-Revision-Date: 2019-02-27 16:26+0100\n"
+"POT-Creation-Date: 2019-09-24 14:40+0000\n"
+"PO-Revision-Date: 2019-10-02 12:08+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
-"Language-Team: es <gnome-es-list@gnome.org>\n"
-"Language: es\n"
+"Language-Team: Spanish - Spain <gnome-es-list@gnome.org>\n"
+"Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Gtranslator 3.31.90\n"
+"X-Generator: Gtranslator 3.34.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
@@ -148,18 +148,17 @@ msgstr "Para cambiar el tamaño del tablero:"
 
 #. (itstool) path: item/p
 #: C/change-board-size.page:26
-msgid "Click <guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq>"
-msgstr ""
-"Pulse en <guiseq><gui>Configuración</gui><gui>Preferencias</gui></guiseq>."
+msgid "Press the menu button in the top-right corner of the window."
+msgstr "Pulse el botón de menú en la esquina superior derecha de la ventana."
 
 #. (itstool) path: item/p
 #: C/change-board-size.page:27
-msgid ""
-"Under <gui>Board Size</gui>, select <gui>Small</gui>, <gui>Medium</gui>, or "
-"<gui>Large</gui>."
+#| msgid ""
+#| "Under <gui>Board Size</gui>, select <gui>Small</gui>, <gui>Medium</gui>, "
+#| "or <gui>Large</gui>."
+msgid "Select <gui>Small</gui>, <gui>Medium</gui>, or <gui>Large</gui>."
 msgstr ""
-"En <gui>Tamaño del tablero</gui>, seleccione <gui>Pequeño</gui>, "
-"<gui>Mediano</gui>, o <gui>Grande</gui>."
+"Seleccione <gui>Pequeño</gui>, <gui>Mediano</gui>, o <gui>Grande</gui>."
 
 #. (itstool) path: note/p
 #: C/change-board-size.page:31
@@ -309,20 +308,27 @@ msgstr "Para cambiar la apariencia de las fichas y del tablero:"
 
 #. (itstool) path: item/p
 #: C/change-theme.page:24
-msgid "Click <guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq>."
-msgstr "Pulse <guiseq><gui>Editar</gui><gui>Preferencias</gui></guiseq>."
-
-#. (itstool) path: item/p
-#: C/change-theme.page:27
 msgid ""
-"Select <gui>balls</gui> or <gui>shapes</gui> from the <gui>Themes</gui> drop "
-"down menu to change the playing pieces."
+"Press the menu button in the top-right corner of the window and select <gui "
+"style=\"menuitem\">Preferences</gui>."
 msgstr ""
-"Seleccione <gui>bolas</gui> o <gui>formas</gui> en el menú desplegable "
-"<gui>Temas</gui> para cambiar las fichas del juego."
+"Pulse el botón de menú en la esquina superior derecha de la ventana y elija "
+"<gui style=\"menuitem\">Preferencias</gui>."
 
 #. (itstool) path: item/p
-#: C/change-theme.page:29
+#: C/change-theme.page:28
+#| msgid ""
+#| "Select <gui>balls</gui> or <gui>shapes</gui> from the <gui>Themes</gui> "
+#| "drop down menu to change the playing pieces."
+msgid ""
+"Select <gui>balls</gui>, <gui>shapes</gui>, or <gui>tango</gui> from the "
+"<gui>Theme</gui> drop down menu to change the playing pieces."
+msgstr ""
+"Seleccione <gui>bolas</gui>, <gui>formas</gui> o <gui>formas</gui> en el "
+"menú desplegable <gui>Temas</gui> para cambiar las fichas del juego."
+
+#. (itstool) path: item/p
+#: C/change-theme.page:30
 msgid ""
 "Click on the colored box next to <gui>Background color</gui> to access the "
 "color palette."
@@ -331,24 +337,9 @@ msgstr ""
 "la paleta de colores."
 
 #. (itstool) path: item/p
-#: C/change-theme.page:33
-msgid "Click <gui>Close</gui>."
-msgstr "Pulse <gui>Cerrar</gui>."
-
-#. (itstool) path: section/title
-#: C/change-theme.page:37
-msgid "Available Themes"
-msgstr "Temas disponibles"
-
-#. (itstool) path: media/p
-#: C/change-theme.page:39
-msgid "Five or More with different balls"
-msgstr "Cinco o más con diferentes bolas"
-
-#. (itstool) path: media/p
-#: C/change-theme.page:43
-msgid "<app>Five or More</app> with different shapes"
-msgstr "<app>Cinco o más</app> con diferentes formas"
+#: C/change-theme.page:34
+msgid "Close the <gui>Preferences</gui> dialog."
+msgstr "Cierre el diálogo <gui>Preferencias</gui>."
 
 #. (itstool) path: page/title
 #: C/develop.page:19
@@ -588,18 +579,19 @@ msgstr "Cómo jugar"
 #. (itstool) path: page/p
 #: C/play.page:24
 msgid ""
-"To start a new game click <guiseq><gui>Game</gui><gui>New</gui></guiseq>."
+"To start a new game, press the menu button in the top-right corner of the "
+"window and select <gui style=\"menuitem\">New Game</gui>."
 msgstr ""
-"Para empezar una partida nueva, pulse <guiseq><gui>Juego</gui><gui>Nuevo</"
-"gui></guiseq>."
+"Para empezar una partida nueva pulse el botón de menú en la esquina superior "
+"derecha de la ventana y elija <gui style=\"menuitem\">Juego nuevo</gui>."
 
 #. (itstool) path: section/title
-#: C/play.page:28
+#: C/play.page:29
 msgid "Using the mouse"
 msgstr "Usar el ratón"
 
 #. (itstool) path: item/p
-#: C/play.page:32
+#: C/play.page:33
 msgid ""
 "Click on the object you want to move. The selected object will begin "
 "spinning."
@@ -607,10 +599,7 @@ msgstr ""
 "Pulse en el objeto que quiere mover. El objeto seleccionado empezará a girar."
 
 #. (itstool) path: item/p
-#: C/play.page:36
-#| msgid ""
-#| "Move to the destination cell, and again press the <key>Enter</key> or "
-#| "<key>Spacebar</key>. The chosen object will move to the destination cell."
+#: C/play.page:37
 msgid ""
 "Click on the destination cell. The chosen object will move to the "
 "destination cell, if there is any clear path."
@@ -619,12 +608,12 @@ msgstr ""
 "destino si ha alguna ruta libre"
 
 #. (itstool) path: section/title
-#: C/play.page:45
+#: C/play.page:46
 msgid "Using the keyboard"
 msgstr "Usar el teclado"
 
 #. (itstool) path: item/p
-#: C/play.page:49
+#: C/play.page:50
 msgid ""
 "Press any of the arrow keys. An outline around a cell will appear on the "
 "board."
@@ -633,7 +622,7 @@ msgstr ""
 "en el tablero."
 
 #. (itstool) path: item/p
-#: C/play.page:53
+#: C/play.page:54
 msgid ""
 "Using the arrow keys, and the <key>Home</key>, <key>End</key>, <key>PageUp</"
 "key> and <key>PageDown</key> keys navigate to the object you want to move."
@@ -643,10 +632,7 @@ msgstr ""
 "mover."
 
 #. (itstool) path: item/p
-#: C/play.page:56
-#| msgid ""
-#| "To select the object, press the <key>Enter</key> or <key>Spacebar</key>. "
-#| "The selected object will begin spinning."
+#: C/play.page:57
 msgid ""
 "To select the object, press the <key>Enter</key>, <key>Spacebar</key> or "
 "<key>Return</key>. The selected object will begin spinning."
@@ -655,10 +641,7 @@ msgstr ""
 "<key>Barra espaciadora</key>. El objeto seleccionado empezará a girar."
 
 #. (itstool) path: item/p
-#: C/play.page:59
-#| msgid ""
-#| "Move to the destination cell, and again press the <key>Enter</key> or "
-#| "<key>Spacebar</key>. The chosen object will move to the destination cell."
+#: C/play.page:60
 msgid ""
 "Move to the destination cell, and again press the <key>Enter</key>, "
 "<key>Spacebar</key> or <key>Return</key>. The chosen object will move to the "
@@ -669,7 +652,7 @@ msgstr ""
 "a la casilla de destino si hay una ruta libre."
 
 #. (itstool) path: section/title
-#: C/play.page:69
+#: C/play.page:70
 msgid "Video demonstration"
 msgstr "Vídeo de demostración"
 
@@ -859,16 +842,17 @@ msgid "56"
 msgstr "56"
 
 #. (itstool) path: note/p
-#: C/scores.page:80
+#: C/scores.page:81
 msgid ""
-"You can view the high scores by clicking <guiseq><gui>Game</gui><gui>Scores</"
-"gui></guiseq>."
+"You can view the high scores by pressing the menu button in the top-right "
+"corner of the window and selecting <gui style=\"menuitem\">Scores</gui>."
 msgstr ""
-"Puede ver las puntuaciones pulsando <guiseq><gui>Juego</gui><gui>Puntuación</"
-"gui></guiseq>."
+"Puede ver las puntuaciones más altas pulsando en el botón de menú en la "
+"esquina superior derecha de la venana y eligiendo <gui style=\"menuitem"
+"\">Puntuaciones</gui>."
 
 #. (itstool) path: note/p
-#: C/scores.page:82
+#: C/scores.page:83
 msgid ""
 "The <app>Five or More</app> scores are recorded according to the board size. "
 "You can select the <gui>Board Size</gui> of interest using the drop down "
@@ -1018,6 +1002,38 @@ msgstr ""
 "Alternativamente, puede contactar con el equipo de internacionalización "
 "usando su <link href=\"http://mail.gnome.org/mailman/listinfo/gnome-i18n"
 "\">lista de correo</link>."
+
+#~ msgid "Click <guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq>"
+#~ msgstr ""
+#~ "Pulse en <guiseq><gui>Configuración</gui><gui>Preferencias</gui></guiseq>."
+
+#~ msgid "Click <guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq>."
+#~ msgstr "Pulse <guiseq><gui>Editar</gui><gui>Preferencias</gui></guiseq>."
+
+#~ msgid "Click <gui>Close</gui>."
+#~ msgstr "Pulse <gui>Cerrar</gui>."
+
+#~ msgid "Available Themes"
+#~ msgstr "Temas disponibles"
+
+#~ msgid "Five or More with different balls"
+#~ msgstr "Cinco o más con diferentes bolas"
+
+#~ msgid "<app>Five or More</app> with different shapes"
+#~ msgstr "<app>Cinco o más</app> con diferentes formas"
+
+#~ msgid ""
+#~ "To start a new game click <guiseq><gui>Game</gui><gui>New</gui></guiseq>."
+#~ msgstr ""
+#~ "Para empezar una partida nueva, pulse <guiseq><gui>Juego</gui><gui>Nuevo</"
+#~ "gui></guiseq>."
+
+#~ msgid ""
+#~ "You can view the high scores by clicking <guiseq><gui>Game</"
+#~ "gui><gui>Scores</gui></guiseq>."
+#~ msgstr ""
+#~ "Puede ver las puntuaciones pulsando <guiseq><gui>Juego</"
+#~ "gui><gui>Puntuación</gui></guiseq>."
 
 #~ msgid "Images available"
 #~ msgstr "Imágenes disponibles"
