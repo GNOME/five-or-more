@@ -9,10 +9,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
-"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=five-"
-"or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2018-03-12 22:13+0000\n"
-"PO-Revision-Date: 2018-03-17 15:00+0100\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/five-or-more/issues\n"
+"POT-Creation-Date: 2020-01-09 02:53+0000\n"
+"PO-Revision-Date: 2020-01-27 10:45+0100\n"
 "Last-Translator: Dušan Kazik <prescott66@gmail.com>\n"
 "Language-Team: Slovak <gnome-sk-list@gnome.org>\n"
 "Language: sk\n"
@@ -20,19 +19,84 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 1 : (n>=2 && n<=4) ? 2 : 0;\n"
-"X-Generator: Poedit 2.0.6\n"
+"X-Generator: Poedit 2.2.4\n"
 
-#: ../data/five-or-more.appdata.xml.in.h:1 ../data/five-or-more.desktop.in.h:1
-#: ../data/five-or-more.ui.h:1 ../src/five-or-more.c:1173
-#: ../src/five-or-more.c:1724
+#: data/five-or-more-preferences.ui:13
+msgid "Preferences"
+msgstr "Nastavenia"
+
+#: data/five-or-more-preferences.ui:36
+msgid "Appearance"
+msgstr "Vzhľad"
+
+#: data/five-or-more-preferences.ui:60
+msgid "_Theme:"
+msgstr "_Téma:"
+
+#: data/five-or-more-preferences.ui:76
+msgid "balls"
+msgstr "guľky"
+
+#: data/five-or-more-preferences.ui:77
+msgid "shapes"
+msgstr "tvary"
+
+#: data/five-or-more-preferences.ui:78
+msgid "tango"
+msgstr "tango"
+
+#: data/five-or-more-preferences.ui:87
+msgid "B_ackground color:"
+msgstr "_Farba pozadia:"
+
+#: data/five-or-more.ui:7
+msgid "_New Game"
+msgstr "_Nová hra"
+
+#: data/five-or-more.ui:13
+msgid "S_cores"
+msgstr "S_kóre"
+
+#: data/five-or-more.ui:19
+msgid "_Small"
+msgstr "_Malá"
+
+#: data/five-or-more.ui:24
+msgid "_Medium"
+msgstr "_Stredná"
+
+# veľkosť hracej plochy
+#: data/five-or-more.ui:29
+msgid "_Large"
+msgstr "_Veľká"
+
+#: data/five-or-more.ui:36
+msgid "_Preferences"
+msgstr "_Nastavenia"
+
+#: data/five-or-more.ui:40
+msgid "_Help"
+msgstr "_Pomocník"
+
+#: data/five-or-more.ui:45
+msgid "_About Five or More"
+msgstr "_O aplikácii Päť a viac"
+
+#: data/five-or-more.ui:65 data/org.gnome.five-or-more.appdata.xml.in:7
+#: data/org.gnome.five-or-more.desktop.in:3 src/main.vala:74 src/main.vala:168
 msgid "Five or More"
 msgstr "Päť a viac"
 
-#: ../data/five-or-more.appdata.xml.in.h:2 ../data/five-or-more.desktop.in.h:2
+#: data/five-or-more.ui:77
+msgid "Next:"
+msgstr "Ďalšie:"
+
+#: data/org.gnome.five-or-more.appdata.xml.in:8
+#: data/org.gnome.five-or-more.desktop.in:4
 msgid "Remove colored balls from the board by forming lines"
 msgstr "Odstráňte farebné loptičky z hracej plochy zoradením do radov"
 
-#: ../data/five-or-more.appdata.xml.in.h:3
+#: data/org.gnome.five-or-more.appdata.xml.in:10
 msgid ""
 "Five or More is the GNOME port of a once-popular computer game. Align five "
 "or more objects of the same color into a line to cause them to disappear and "
@@ -43,7 +107,7 @@ msgstr ""
 "GNOME. Zarovnajte päť a viac objektov rovnakej farby do riadka čím sa ich "
 "zbavíte a získate body. Čím viac objektov zarovnáte, tým viac bodov získate."
 
-#: ../data/five-or-more.appdata.xml.in.h:4
+#: data/org.gnome.five-or-more.appdata.xml.in:16
 msgid ""
 "More objects appear after every turn. Play for as long as possible, until "
 "the board is completely full!"
@@ -51,263 +115,108 @@ msgstr ""
 "Po každom ťahu sa objavia ďalšie objekty. Hrajte pokým nie je hracie pole "
 "zaplnené."
 
-#: ../data/five-or-more.appdata.xml.in.h:5
+#: data/org.gnome.five-or-more.appdata.xml.in:40
 msgid "The GNOME Project"
 msgstr "Projekt GNOME"
 
-#: ../data/five-or-more.desktop.in.h:3
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/org.gnome.five-or-more.desktop.in:6
 msgid "game;strategy;logic;"
 msgstr "hra;strategická;logická;stratégia;logika;"
 
-#: ../data/five-or-more-preferences.ui.h:1 ../data/menu.ui.h:2
-#: ../src/five-or-more.c:169
-msgid "Preferences"
-msgstr "Nastavenia"
-
-#: ../data/five-or-more-preferences.ui.h:2
-msgid "Appearance"
-msgstr "Vzhľad"
-
-#: ../data/five-or-more-preferences.ui.h:3
-msgid "_Image:"
-msgstr "_Obrázok:"
-
-#: ../data/five-or-more-preferences.ui.h:4
-msgid "B_ackground color:"
-msgstr "_Farba pozadia:"
-
-#: ../data/five-or-more-preferences.ui.h:5
-msgid "Board Size"
-msgstr "Veľkosť hracej plochy"
-
-#: ../data/five-or-more-preferences.ui.h:6
-msgid "_Small"
-msgstr "_Malá"
-
-#: ../data/five-or-more-preferences.ui.h:7
-msgid "_Medium"
-msgstr "_Stredná"
-
-# veľkosť hracej plochy
-#: ../data/five-or-more-preferences.ui.h:8
-msgid "_Large"
-msgstr "_Veľká"
-
-#: ../data/five-or-more-preferences.ui.h:9
-msgid "General"
-msgstr "Všeobecné"
-
-#: ../data/five-or-more-preferences.ui.h:10
-msgid "_Use fast moves"
-msgstr "_Použiť rýchle pohyby"
-
-#: ../data/five-or-more.ui.h:2
-msgid "Next:"
-msgstr "Ďalšie:"
-
-#: ../data/five-or-more.ui.h:3
-msgid "0"
-msgstr "0"
-
-#: ../data/five-or-more.ui.h:4
-msgid "Score:"
-msgstr "Skóre:"
-
-#: ../data/five-or-more.ui.h:5 ../src/games-scores-dialog.c:384
-msgid "_New Game"
-msgstr "_Nová hra"
-
-# tooltip
-#: ../data/five-or-more.ui.h:6
-msgid "Start a new puzzle"
-msgstr "Začne novú hru"
-
-#: ../data/menu.ui.h:1
-msgid "Scores"
-msgstr "Skóre"
-
-#: ../data/menu.ui.h:3
-msgid "Help"
-msgstr "Pomocník"
-
-#: ../data/menu.ui.h:4
-msgid "About"
-msgstr "O programe"
-
-#: ../data/menu.ui.h:5
-msgid "Quit"
-msgstr "Ukončiť"
-
-#: ../data/org.gnome.five-or-more.gschema.xml.h:1
+#: data/org.gnome.five-or-more.gschema.xml:5
 msgid "Playing field size"
 msgstr "Veľkosť hracieho poľa"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:2
+#: data/org.gnome.five-or-more.gschema.xml:6
 msgid ""
 "Playing field size. 1=Small, 2=Medium, 3=Large. Any other value is invalid."
 msgstr ""
 "Veľkosť hracieho poľa. 1=Malá, 2=Stredná, 3=Veľká. Všetky ostatné hodnoty sú "
 "neplatné."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:3
+#: data/org.gnome.five-or-more.gschema.xml:10
 msgid "Ball style"
 msgstr "Štýl loptičiek"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:4
+#: data/org.gnome.five-or-more.gschema.xml:11
 msgid "Ball style. The filename of the images to use for the balls."
 msgstr ""
 "Štýl loptičiek. Súbor s obrázkami, ktoré sa májú použiť na zobrazenie "
 "loptičiek."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:5
+#: data/org.gnome.five-or-more.gschema.xml:15
 msgid "Background color"
 msgstr "Farba pozadia"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:6
+#: data/org.gnome.five-or-more.gschema.xml:16
 msgid "Background color. The hex specification of the background color."
 msgstr "Farba pozadia. Farba pozadia v šestnástkovej sústave."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:7
+#: data/org.gnome.five-or-more.gschema.xml:20
 msgid "Time between moves"
 msgstr "Čas medzi ťahmi"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:8
+#: data/org.gnome.five-or-more.gschema.xml:21
 msgid "Time between moves in milliseconds."
 msgstr "Čas medzi ťahmi v milisekundách."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:9
+#: data/org.gnome.five-or-more.gschema.xml:25
 msgid "Game score"
 msgstr "Nahrané body"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:10
+#: data/org.gnome.five-or-more.gschema.xml:26
 msgid "Game score from last saved session."
 msgstr "Nahrané body poslednej uloženej relácie."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:11
+#: data/org.gnome.five-or-more.gschema.xml:30
 msgid "Game field"
 msgstr "Hracie pole"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:12
+#: data/org.gnome.five-or-more.gschema.xml:31
 msgid "Game field from last saved session."
 msgstr "Hracie pole poslednej uloženej relácie."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:13
+#: data/org.gnome.five-or-more.gschema.xml:35
 msgid "Game preview"
 msgstr "Náhľad hry"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:14
+#: data/org.gnome.five-or-more.gschema.xml:36
 msgid "Game preview from last saved session."
 msgstr "Náhľad hry poslednej uloženej relácie."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:15
+#: data/org.gnome.five-or-more.gschema.xml:40
 msgid "Width of the window in pixels"
 msgstr "Šírka okna v pixeloch."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:16
+#: data/org.gnome.five-or-more.gschema.xml:44
 msgid "Height of the window in pixels"
 msgstr "Výška okna v pixeloch."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:17
+#: data/org.gnome.five-or-more.gschema.xml:48
 msgid "true if the window is maximized"
 msgstr "true, ak je okno maximalizované"
 
-#.
-#. * Translatable strings file.
-#. * Add this file to your project's POTFILES.in.
-#. * DO NOT compile it as part of your application.
-#.
-#: ../data/translatable_themes.h:6
-msgctxt "themes"
-msgid "balls"
-msgstr "guľky"
-
-#: ../data/translatable_themes.h:7
-msgctxt "themes"
-msgid "dots"
-msgstr "bodky"
-
-#: ../data/translatable_themes.h:8
-msgctxt "themes"
-msgid "gumball"
-msgstr "gumová loptička"
-
-#: ../data/translatable_themes.h:9
-msgctxt "themes"
-msgid "shapes"
-msgstr "tvary"
-
-#: ../src/five-or-more.c:78
+#: src/game.vala:94
 msgctxt "board size"
 msgid "Small"
 msgstr "Malá"
 
-#: ../src/five-or-more.c:79
+#: src/game.vala:95
 msgctxt "board size"
 msgid "Medium"
 msgstr "Stredná"
 
-#: ../src/five-or-more.c:80
+#: src/game.vala:96
 msgctxt "board size"
 msgid "Large"
 msgstr "Veľká"
 
-#: ../src/five-or-more.c:163
-msgid "Could not load theme"
-msgstr "Nepodarilo sa načítať tému"
-
-#: ../src/five-or-more.c:189
-#, c-format
-msgid ""
-"Unable to locate file:\n"
-"%s\n"
-"\n"
-"The default theme will be loaded instead."
-msgstr ""
-"Nepodarilo sa nájsť súbor:\n"
-"%s\n"
-"\n"
-"Namiesto toho bude načítaná predvolená téma."
-
-#: ../src/five-or-more.c:196
-#, c-format
-msgid ""
-"Unable to locate file:\n"
-"%s\n"
-"\n"
-"Please check that Five or More is installed correctly."
-msgstr ""
-"Nepodarilo sa nájsť súbor:\n"
-"%s\n"
-"\n"
-"Prosím, overte, či je program Päť a viac správne nainštalovaný."
-
-#: ../src/five-or-more.c:408
-msgid "Match five objects of the same type in a row to score!"
-msgstr ""
-"Zarovnajte päť objektov rovnakého typu do jedného radu, aby ste získali body!"
-
-#: ../src/five-or-more.c:469
-msgid "Five or More Scores"
-msgstr "Skóre Päť a viac"
-
-#: ../src/five-or-more.c:471
-msgid "_Board size:"
-msgstr "_Veľkosť hracieho poľa:"
-
-#: ../src/five-or-more.c:488
-msgid "Game Over!"
-msgstr "Koniec hry!"
-
-#. Can't move there!
-#: ../src/five-or-more.c:645
-msgid "You can’t move there!"
-msgstr "Tam nemôžete ťahať!"
-
-#: ../src/five-or-more.c:1175
+#: src/main.vala:171
 msgid "GNOME port of the once-popular Color Lines game"
 msgstr "GNOME verzia populárnej hry Color Lines"
 
-#: ../src/five-or-more.c:1181
+#: src/main.vala:177
 msgid "translator-credits"
 msgstr ""
 "Stanislav Višňovský (visnovsky@nenya.ms.mff.cuni.cz)\n"
@@ -315,50 +224,121 @@ msgstr ""
 "Peter Mráz <etkinator@gmail.com>\n"
 "Dušan Kazik <prescott66@gmail.com>"
 
-#: ../src/five-or-more.c:1305
+#: src/window.vala:50
+msgid "Match five objects of the same type in a row to score!"
+msgstr ""
+"Zarovnajte päť objektov rovnakého typu do jedného radu, aby ste získali body!"
+
+#: src/window.vala:51
+msgid "You can’t move there!"
+msgstr "Tam nemôžete ťahať!"
+
+#: src/window.vala:52
+msgid "Game Over!"
+msgstr "Koniec hry!"
+
+#: src/window.vala:53
+#, c-format
+msgid "Score: %d"
+msgstr "Skóre: %d"
+
+#: src/window.vala:87
+msgid "Board Size: "
+msgstr "Veľkosť hracej plochy: "
+
+#: src/window.vala:159
 msgid "Are you sure you want to restart the game?"
 msgstr "Naozaj chcete reštartovať hru?"
 
-#: ../src/five-or-more.c:1308
+#: src/window.vala:161
 msgid "_Cancel"
 msgstr "_Zrušiť"
 
-#: ../src/five-or-more.c:1309
+#: src/window.vala:162
 msgid "_Restart"
 msgstr "Hrať _odznova"
 
-#. Score dialog column header for the score time (e.g. 1 minute)
-#: ../src/games-scores-dialog.c:131
-msgctxt "score-dialog"
-msgid "Time"
-msgstr "Čas"
+#~ msgid "_Image:"
+#~ msgstr "_Obrázok:"
 
-#. Score dialog column header for the score value (e.g. 30 moves)
-#: ../src/games-scores-dialog.c:137
-msgctxt "score-dialog"
-msgid "Score"
-msgstr "Skóre"
+#~ msgid "General"
+#~ msgstr "Všeobecné"
 
-#. Score format for time based scores.  %1$d is the time in minutes, %2$d is the time in seconds
-#: ../src/games-scores-dialog.c:224
-#, c-format
-msgctxt "score-dialog"
-msgid "%1$dm %2$ds"
-msgstr "%1$dm %2$ds"
+#~ msgid "_Use fast moves"
+#~ msgstr "_Použiť rýchle pohyby"
 
-#: ../src/games-scores-dialog.c:370
-msgid "_Quit"
-msgstr "_Ukončiť"
+#~ msgid "0"
+#~ msgstr "0"
 
-#: ../src/games-scores-dialog.c:377
-msgid "_Undo"
-msgstr "_Vrátiť späť"
+# tooltip
+#~ msgid "Start a new puzzle"
+#~ msgstr "Začne novú hru"
 
-#: ../src/games-scores-dialog.c:391
-msgid "_Close"
-msgstr "Za_vrieť"
+#~ msgid "About"
+#~ msgstr "O programe"
 
-#. Score dialog column header for the date the score was recorded
-#: ../src/games-scores-dialog.c:477
-msgid "Date"
-msgstr "Dátum"
+#~ msgid "Quit"
+#~ msgstr "Ukončiť"
+
+#~ msgctxt "themes"
+#~ msgid "dots"
+#~ msgstr "bodky"
+
+#~ msgctxt "themes"
+#~ msgid "gumball"
+#~ msgstr "gumová loptička"
+
+#~ msgid "Could not load theme"
+#~ msgstr "Nepodarilo sa načítať tému"
+
+#~ msgid ""
+#~ "Unable to locate file:\n"
+#~ "%s\n"
+#~ "\n"
+#~ "The default theme will be loaded instead."
+#~ msgstr ""
+#~ "Nepodarilo sa nájsť súbor:\n"
+#~ "%s\n"
+#~ "\n"
+#~ "Namiesto toho bude načítaná predvolená téma."
+
+#~ msgid ""
+#~ "Unable to locate file:\n"
+#~ "%s\n"
+#~ "\n"
+#~ "Please check that Five or More is installed correctly."
+#~ msgstr ""
+#~ "Nepodarilo sa nájsť súbor:\n"
+#~ "%s\n"
+#~ "\n"
+#~ "Prosím, overte, či je program Päť a viac správne nainštalovaný."
+
+#~ msgid "Five or More Scores"
+#~ msgstr "Skóre Päť a viac"
+
+#~ msgid "_Board size:"
+#~ msgstr "_Veľkosť hracieho poľa:"
+
+#~ msgctxt "score-dialog"
+#~ msgid "Time"
+#~ msgstr "Čas"
+
+#~ msgctxt "score-dialog"
+#~ msgid "Score"
+#~ msgstr "Skóre"
+
+#~ msgctxt "score-dialog"
+#~ msgid "%1$dm %2$ds"
+#~ msgstr "%1$dm %2$ds"
+
+#~ msgid "_Quit"
+#~ msgstr "_Ukončiť"
+
+#~ msgid "_Undo"
+#~ msgstr "_Vrátiť späť"
+
+#~ msgid "_Close"
+#~ msgstr "Za_vrieť"
+
+#~ msgid "Date"
+#~ msgstr "Dátum"
