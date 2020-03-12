@@ -105,7 +105,7 @@ private class GameWindow : ApplicationWindow
             maximize ();
 
         NextPiecesWidget next_pieces_widget = new NextPiecesWidget (settings, game, theme);
-        preview_hbox.pack_start (next_pieces_widget);
+        preview_hbox.add (next_pieces_widget);
         next_pieces_widget.realize ();
         next_pieces_widget.show ();
 
