@@ -43,6 +43,20 @@ public class FiveOrMoreApp: Gtk.Application
         {"quit", quit                   }
     };
 
+    public static int main (string[] args)
+    {
+        Intl.setlocale (LocaleCategory.ALL, "");
+        Intl.bindtextdomain (GETTEXT_PACKAGE, LOCALE_DIRECTORY);
+        Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
+        Intl.textdomain (GETTEXT_PACKAGE);
+
+        Environment.set_application_name (_("Five or More"));
+        Gtk.Window.set_default_icon_name ("org.gnome.five-or-more");
+
+        FiveOrMoreApp app = new FiveOrMoreApp ();
+        return app.run (args);
+    }
+
     public FiveOrMoreApp ()
     {
         Object (application_id: "org.gnome.five-or-more", flags: ApplicationFlags.FLAGS_NONE);
@@ -67,15 +81,6 @@ public class FiveOrMoreApp: Gtk.Application
         var board_size_action = lookup_action("change-size");
         BoardSize size = (BoardSize)settings.get_int (FiveOrMoreApp.KEY_SIZE);
         (board_size_action as SimpleAction).set_state (new Variant.string(size.to_string()));
-    }
-
-    public static int main (string[] args)
-    {
-        Environment.set_application_name (_("Five or More"));
-        Gtk.Window.set_default_icon_name ("org.gnome.five-or-more");
-
-        var app = new FiveOrMoreApp ();
-        return app.run (args);
     }
 
     private void new_game_cb ()
