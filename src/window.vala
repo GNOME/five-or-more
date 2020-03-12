@@ -55,6 +55,11 @@ private class GameWindow : ApplicationWindow
             _("Score: %d")
     };
 
+    construct
+    {
+        map.connect (init_state_watcher);
+    }
+
     internal GameWindow (Gtk.Application app, GLib.Settings settings)
     {
         Object (application: app);
@@ -94,15 +99,27 @@ private class GameWindow : ApplicationWindow
         game.game_over.connect (score_cb);
     }
 
-    protected override bool window_state_event (Gdk.EventWindowState event)
+    private void init_state_watcher ()
     {
-        if ((event.changed_mask & Gdk.WindowState.MAXIMIZED) != 0)
-            window_maximized = (event.new_window_state & Gdk.WindowState.MAXIMIZED) != 0;
+        Gdk.Surface? nullable_surface = get_surface ();     // TODO report bug, get_surface() returns a nullable Surface
+        if (nullable_surface == null || !((!) nullable_surface is Gdk.Toplevel))
+            assert_not_reached ();
+        surface = (Gdk.Toplevel) (!) nullable_surface;
+        surface.notify ["state"].connect (on_window_state_event);
+    }
 
-        if ((event.changed_mask & Gdk.WindowState.TILED) != 0)
-            window_tiled = (event.new_window_state & Gdk.WindowState.TILED) != 0;
+    private Gdk.Toplevel surface;
+    private const Gdk.SurfaceState tiled_state = Gdk.SurfaceState.TILED
+                                               | Gdk.SurfaceState.TOP_TILED
+                                               | Gdk.SurfaceState.BOTTOM_TILED
+                                               | Gdk.SurfaceState.LEFT_TILED
+                                               | Gdk.SurfaceState.RIGHT_TILED;
+    private void on_window_state_event ()
+    {
+        Gdk.SurfaceState state = surface.get_state ();
 
-        return false;
+        window_maximized =  (state & Gdk.SurfaceState.MAXIMIZED) != 0;
+        window_tiled =      (state & Gdk.SurfaceState.TILED)     != 0;
     }
 
     protected override void size_allocate (Allocation allocation)
