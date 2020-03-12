@@ -21,11 +21,11 @@
  * along with this program; if not, see <https://www.gnu.org/licenses/>.
  */
 
-public class ThemeRenderer
+private class ThemeRenderer
 {
     private Settings settings;
 
-    public const int DEFAULT_SPRITE_SIZE = 20;
+    internal const int DEFAULT_SPRITE_SIZE = 20;
     private int sprite_size = DEFAULT_SPRITE_SIZE;
     private float sprite_sheet_width;
     private float sprite_sheet_height;
@@ -33,7 +33,7 @@ public class ThemeRenderer
 
     private string theme_name;
     private Rsvg.Handle? theme = null;
-    public const string themes[] = {
+    internal const string themes[] = {
             "balls.svg",
             "shapes.svg",
             "tango.svg",
@@ -42,10 +42,10 @@ public class ThemeRenderer
     private Cairo.Pattern? tile_pattern = null;
     private Cairo.Context cr_preview;
 
-    public signal void theme_changed ();
+    internal signal void theme_changed ();
     private bool is_theme_changed;
 
-    public ThemeRenderer (Settings settings)
+    internal ThemeRenderer (Settings settings)
     {
         this.settings = settings;
 
@@ -94,7 +94,7 @@ public class ThemeRenderer
         is_theme_changed = true;
     }
 
-    public void render_sprite (Cairo.Context cr, int type, int animation, double x, double y, int size)
+    internal void render_sprite (Cairo.Context cr, int type, int animation, double x, double y, int size)
     {
         if (is_theme_changed || tile_pattern == null || sprite_size != size)
         {

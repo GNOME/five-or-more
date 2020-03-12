@@ -21,7 +21,7 @@
  * along with this program; if not, see <https://www.gnu.org/licenses/>.
  */
 
-public class View : Gtk.DrawingArea
+private class View : Gtk.DrawingArea
 {
     private const int MINIMUM_BOARD_SIZE = 256;
 
@@ -49,7 +49,7 @@ public class View : Gtk.DrawingArea
     private int animation_state;
     private uint animation_id;
 
-    public View (Settings settings, Game game, ThemeRenderer theme)
+    internal View (Settings settings, Game game, ThemeRenderer theme)
     {
         this.settings = settings;
         this.game = game;
@@ -155,7 +155,7 @@ public class View : Gtk.DrawingArea
         queue_draw_area (keyboard_cursor_x * piece_size, keyboard_cursor_y * piece_size, piece_size, piece_size);
     }
 
-    public override bool key_press_event (Gdk.EventKey event)
+    protected override bool key_press_event (Gdk.EventKey event)
     {
         uint key = event.keyval;
         switch (key)
@@ -275,7 +275,7 @@ public class View : Gtk.DrawingArea
         return true;
     }
 
-    public override bool button_press_event (Gdk.EventButton event)
+    protected override bool button_press_event (Gdk.EventButton event)
     {
         if (game == null || game.animating)
             return false;
@@ -311,7 +311,7 @@ public class View : Gtk.DrawingArea
         board_rectangle.height = piece_size * game.n_rows;
     }
 
-    public override bool configure_event (Gdk.EventConfigure event)
+    protected override bool configure_event (Gdk.EventConfigure event)
     {
         update_sizes (event.width, event.height);
         queue_draw ();
@@ -402,7 +402,7 @@ public class View : Gtk.DrawingArea
         }
     }
 
-    public override bool draw (Cairo.Context cr)
+    protected override bool draw (Cairo.Context cr)
     {
         if (theme == null)
             return false;
