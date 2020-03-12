@@ -22,7 +22,7 @@
  */
 
 [GtkTemplate (ui = "/org/gnome/five-or-more/ui/preferences-dialog.ui")]
-public class PreferencesDialog : Gtk.Dialog
+private class PreferencesDialog : Gtk.Dialog
 {
     private Settings settings;
 
@@ -55,7 +55,7 @@ public class PreferencesDialog : Gtk.Dialog
             warning ("Failed to set color: %s", color.to_string ());
     }
 
-    public PreferencesDialog (Settings settings)
+    internal PreferencesDialog (Settings settings)
     {
         this.settings = settings;
 

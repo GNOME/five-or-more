@@ -21,7 +21,7 @@
  * along with this program; if not, see <https://www.gnu.org/licenses/>.
  */
 
-public class NextPiecesWidget : Gtk.DrawingArea
+private class NextPiecesWidget : Gtk.DrawingArea
 {
     private Settings settings;
     private Game? game;
@@ -30,7 +30,7 @@ public class NextPiecesWidget : Gtk.DrawingArea
     private Gee.ArrayList<Piece> local_pieces_queue;
     private int widget_height = -1;
 
-    public NextPiecesWidget (Settings settings, Game game, ThemeRenderer theme)
+    internal NextPiecesWidget (Settings settings, Game game, ThemeRenderer theme)
     {
         this.settings = settings;
         this.game = game;
@@ -59,7 +59,7 @@ public class NextPiecesWidget : Gtk.DrawingArea
         queue_draw ();
     }
 
-    public override bool draw (Cairo.Context cr)
+    protected override bool draw (Cairo.Context cr)
     {
         if (theme == null)
             return false;
