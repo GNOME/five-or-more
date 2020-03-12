@@ -51,11 +51,15 @@ private class View : DrawingArea
     private int animation_state;
     private uint animation_id;
 
+    private GestureMultiPress click_controller;         // for keeping in memory
+
     internal View (GLib.Settings settings, Game game, ThemeRenderer theme)
     {
         this.settings = settings;
         this.game = game;
         this.theme = theme;
+
+        init_mouse ();
 
         cs = get_style_context ();
         provider = new CssProvider ();
@@ -217,10 +221,10 @@ private class View : DrawingArea
         return true;
     }
 
-    private bool cell_clicked (int cell_x, int cell_y)
+    private void cell_clicked (int cell_x, int cell_y)
     {
         if (cell_x >= game.n_cols || cell_y >= game.n_rows)
-            return false;
+            return;
 
         keyboard_cursor_x = cell_x;
         keyboard_cursor_y = cell_y;
@@ -242,7 +246,7 @@ private class View : DrawingArea
                 animation_state = 0;
                 queue_draw ();
 
-                return true;
+                return;
             }
 
             start_x = cell_x;
@@ -262,7 +266,7 @@ private class View : DrawingArea
             bool move = game.make_move (start_y, start_x, end_y, end_x);
 
             if (!move)
-                return false;
+                return;
 
             start_x = -1;
             start_y = -1;
@@ -273,18 +277,23 @@ private class View : DrawingArea
                 animation_id = -1;
             }
         }
-
-        return true;
     }
 
-    protected override bool button_press_event (Gdk.EventButton event)
+    private void init_mouse ()
+    {
+        click_controller = new GestureMultiPress (this);
+        click_controller.pressed.connect (on_click);
+    }
+
+    private inline void on_click (GestureMultiPress _click_controller, int n_press, double event_x, double event_y)
     {
         if (game == null || game.animating)
-            return false;
+            return;
 
         /* Ignore the 2BUTTON and 3BUTTON events. */
-        if (event.type != Gdk.EventType.BUTTON_PRESS)
-            return false;
+        uint button = _click_controller.get_button ();
+        if (button != Gdk.BUTTON_PRIMARY)
+            return;
 
         if (show_cursor)
         {
@@ -292,10 +301,10 @@ private class View : DrawingArea
             queue_draw_area (keyboard_cursor_x * piece_size, keyboard_cursor_y * piece_size, piece_size, piece_size);
         }
 
-        cell_x = (int)event.x / piece_size;
-        cell_y = (int)event.y / piece_size;
+        cell_x = (int)event_x / piece_size;
+        cell_y = (int)event_y / piece_size;
 
-        return cell_clicked (cell_x, cell_y);
+        cell_clicked (cell_x, cell_y);
     }
 
     private bool animate_clicked ()
