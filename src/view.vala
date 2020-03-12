@@ -52,7 +52,7 @@ private class View : DrawingArea
     private uint animation_id;
 
     private EventControllerKey key_controller;          // for keeping in memory
-    private GestureMultiPress click_controller;         // for keeping in memory
+    private GestureClick click_controller;              // for keeping in memory
 
     internal View (GLib.Settings settings, Game game, ThemeRenderer theme)
     {
@@ -165,8 +165,9 @@ private class View : DrawingArea
 
     private void init_keyboard ()
     {
-        key_controller = new Gtk.EventControllerKey (this);
+        key_controller = new Gtk.EventControllerKey ();
         key_controller.key_pressed.connect (on_key_pressed);
+        add_controller (key_controller);
     }
 
     private inline bool on_key_pressed (Gtk.EventControllerKey _key_controller, uint keyval, uint keycode, Gdk.ModifierType state)
@@ -290,11 +291,12 @@ private class View : DrawingArea
 
     private void init_mouse ()
     {
-        click_controller = new GestureMultiPress (this);
+        click_controller = new GestureClick ();
         click_controller.pressed.connect (on_click);
+        add_controller (click_controller);
     }
 
-    private inline void on_click (GestureMultiPress _click_controller, int n_press, double event_x, double event_y)
+    private inline void on_click (GestureClick _click_controller, int n_press, double event_x, double event_y)
     {
         if (game == null || game.animating)
             return;
