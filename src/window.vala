@@ -88,7 +88,8 @@ private class GameWindow : Gtk.ApplicationWindow
                                                 this,
                                                 create_category_from_key,
                                                 Games.Scores.Style.POINTS_GREATER_IS_BETTER,
-                                                importer);
+                                                importer,
+                                                "org.gnome.five-or-more");
         game.game_over.connect (score_cb);
     }
 
