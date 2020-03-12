@@ -107,8 +107,6 @@ private class View : DrawingArea
         });
 
         game.board.grid_changed.connect (queue_draw);
-        add_events (Gdk.EventMask.BUTTON_PRESS_MASK | Gdk.EventMask.BUTTON_RELEASE_MASK);
-        add_events (Gdk.EventMask.KEY_PRESS_MASK | Gdk.EventMask.KEY_RELEASE_MASK);
 
         set_can_focus (true);
         grab_focus ();
