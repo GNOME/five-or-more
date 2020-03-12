@@ -21,15 +21,17 @@
  * along with this program; if not, see <https://www.gnu.org/licenses/>.
  */
 
-private class View : Gtk.DrawingArea
+using Gtk;
+
+private class View : DrawingArea
 {
     private const int MINIMUM_BOARD_SIZE = 256;
 
-    private Settings settings;
+    private GLib.Settings settings;
     private Game? game = null;
     private ThemeRenderer? theme = null;
-    private Gtk.StyleContext cs;
-    private Gtk.CssProvider provider;
+    private StyleContext cs;
+    private CssProvider provider;
 
     private Gdk.Rectangle board_rectangle;
 
@@ -49,16 +51,16 @@ private class View : Gtk.DrawingArea
     private int animation_state;
     private uint animation_id;
 
-    internal View (Settings settings, Game game, ThemeRenderer theme)
+    internal View (GLib.Settings settings, Game game, ThemeRenderer theme)
     {
         this.settings = settings;
         this.game = game;
         this.theme = theme;
 
         cs = get_style_context ();
-        provider = new Gtk.CssProvider ();
+        provider = new CssProvider ();
         cs.add_class ("game-view");
-        cs.add_provider (provider, Gtk.STYLE_PROVIDER_PRIORITY_USER);
+        cs.add_provider (provider, STYLE_PROVIDER_PRIORITY_USER);
 
         set_background_color ();
         settings.changed[FiveOrMoreApp.KEY_BACKGROUND_COLOR].connect (() => {

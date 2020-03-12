@@ -80,7 +80,7 @@ private class FiveOrMoreApp: Gtk.Application
         set_accels_for_action ("app.help", {"F1"});
         var board_size_action = lookup_action("change-size");
         BoardSize size = (BoardSize)settings.get_int (FiveOrMoreApp.KEY_SIZE);
-        (board_size_action as SimpleAction).set_state (new Variant.string(size.to_string()));
+        ((SimpleAction)board_size_action).set_state (new Variant.string(size.to_string()));
     }
 
     private void new_game_cb ()
