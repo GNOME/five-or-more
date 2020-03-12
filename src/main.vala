@@ -185,9 +185,11 @@ private class FiveOrMoreApp: Gtk.Application
 
     protected override void shutdown ()
     {
+        settings.delay ();
         settings.set_int ("window-width", window.window_width);
         settings.set_int ("window-height", window.window_height);
         settings.set_boolean ("window-is-maximized", window.window_maximized);
+        settings.apply ();
 
         base.shutdown ();
     }
