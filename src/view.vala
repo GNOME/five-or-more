@@ -62,6 +62,7 @@ private class View : DrawingArea
 
         init_keyboard ();
         init_mouse ();
+        size_allocate.connect (on_size_allocate);
 
         cs = get_style_context ();
         provider = new CssProvider ();
@@ -333,12 +334,9 @@ private class View : DrawingArea
         board_rectangle.height = piece_size * game.n_rows;
     }
 
-    protected override bool configure_event (Gdk.EventConfigure event)
+    private inline void on_size_allocate (int width, int height)
     {
-        update_sizes (event.width, event.height);
-        queue_draw ();
-
-        return true;
+        update_sizes (width, height);
     }
 
     private void fill_background (Cairo.Context cr)
