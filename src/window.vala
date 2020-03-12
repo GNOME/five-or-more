@@ -21,22 +21,24 @@
  * along with this program; if not, see <https://www.gnu.org/licenses/>.
  */
 
+using Gtk;
+
 [GtkTemplate (ui = "/org/gnome/five-or-more/ui/five-or-more.ui")]
-private class GameWindow : Gtk.ApplicationWindow
+private class GameWindow : ApplicationWindow
 {
     [GtkChild]
-    private Gtk.HeaderBar headerbar;
+    private HeaderBar headerbar;
 
     [GtkChild]
-    private Gtk.Box preview_hbox;
+    private Box preview_hbox;
 
     [GtkChild]
-    private Gtk.MenuButton primary_menu_button;
+    private MenuButton primary_menu_button;
 
     [GtkChild]
     private Games.GridFrame grid_frame;
 
-    private Settings? settings = null;
+    private GLib.Settings? settings = null;
     private bool window_tiled;
     internal bool window_maximized { internal get; private set; }
     internal int window_width { internal get; private set; }
@@ -53,7 +55,7 @@ private class GameWindow : Gtk.ApplicationWindow
             _("Score: %d")
     };
 
-    internal GameWindow (Gtk.Application app, Settings settings)
+    internal GameWindow (Gtk.Application app, GLib.Settings settings)
     {
         Object (application: app);
 
@@ -104,7 +106,7 @@ private class GameWindow : Gtk.ApplicationWindow
         return false;
     }
 
-    protected override void size_allocate (Gtk.Allocation allocation)
+    protected override void size_allocate (Allocation allocation)
     {
         base.size_allocate (allocation);
 
@@ -152,26 +154,24 @@ private class GameWindow : Gtk.ApplicationWindow
         primary_menu_button.set_active (false);
 
         if (game.score > 0) {
-            var flags = Gtk.DialogFlags.DESTROY_WITH_PARENT;
-            var restart_game_dialog = new Gtk.MessageDialog (this,
-                                                             flags,
-                                                             Gtk.MessageType.WARNING,
-                                                             Gtk.ButtonsType.NONE,
-                                                             _("Are you sure you want to restart the game?"),
-                                                             null);
-            restart_game_dialog.add_buttons (_("_Cancel"), Gtk.ResponseType.CANCEL,
-                                             _("_Restart"), Gtk.ResponseType.OK,
-                                             null);
+            var flags = DialogFlags.DESTROY_WITH_PARENT;
+            var restart_game_dialog = new MessageDialog (this,
+                                                         flags,
+                                                         MessageType.WARNING,
+                                                         ButtonsType.NONE,
+                                                         _("Are you sure you want to restart the game?"));
+            restart_game_dialog.add_buttons (_("_Cancel"), ResponseType.CANCEL,
+                                             _("_Restart"), ResponseType.OK);
 
             var result = restart_game_dialog.run ();
             restart_game_dialog.destroy ();
             switch (result)
             {
-                case Gtk.ResponseType.OK:
+                case ResponseType.OK:
                      if (!settings.set_int (FiveOrMoreApp.KEY_SIZE, size))
                         warning ("Failed to set size: %d", size);
                     break;
-                case Gtk.ResponseType.CANCEL:
+                case ResponseType.CANCEL:
                     break;
             }
         } else {
