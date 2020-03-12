@@ -51,6 +51,7 @@ private class View : DrawingArea
     private int animation_state;
     private uint animation_id;
 
+    private EventControllerKey key_controller;          // for keeping in memory
     private GestureMultiPress click_controller;         // for keeping in memory
 
     internal View (GLib.Settings settings, Game game, ThemeRenderer theme)
@@ -59,6 +60,7 @@ private class View : DrawingArea
         this.game = game;
         this.theme = theme;
 
+        init_keyboard ();
         init_mouse ();
 
         cs = get_style_context ();
@@ -161,10 +163,15 @@ private class View : DrawingArea
         queue_draw_area (keyboard_cursor_x * piece_size, keyboard_cursor_y * piece_size, piece_size, piece_size);
     }
 
-    protected override bool key_press_event (Gdk.EventKey event)
+    private void init_keyboard ()
     {
-        uint key = event.keyval;
-        switch (key)
+        key_controller = new Gtk.EventControllerKey (this);
+        key_controller.key_pressed.connect (on_key_pressed);
+    }
+
+    private inline bool on_key_pressed (Gtk.EventControllerKey _key_controller, uint keyval, uint keycode, Gdk.ModifierType state)
+    {
+        switch (keyval)
         {
             case (Gdk.Key.Left):
                 /* fall-thru */
@@ -216,6 +223,8 @@ private class View : DrawingArea
                 if (show_cursor)
                     cell_clicked (keyboard_cursor_x, keyboard_cursor_y);
                 break;
+            default:
+                return false;
         }
 
         return true;
