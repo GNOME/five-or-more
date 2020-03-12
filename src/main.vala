@@ -137,7 +137,7 @@ private class FiveOrMoreApp: Gtk.Application
     {
         try
         {
-            Gtk.show_uri (window.get_screen (), "help:five-or-more", Gtk.get_current_event_time ());
+            Gtk.show_uri_on_window (window, "help:five-or-more", Gtk.get_current_event_time ());
         }
         catch (GLib.Error e)
         {
