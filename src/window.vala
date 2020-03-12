@@ -168,7 +168,7 @@ private class GameWindow : ApplicationWindow
         if (game_size == size)
             return;
 
-        primary_menu_button.set_active (false);
+        primary_menu_button.popdown ();
 
         if (game.score > 0) {
             var flags = DialogFlags.DESTROY_WITH_PARENT;
