@@ -21,88 +21,88 @@
  * along with this program; if not, see <https://www.gnu.org/licenses/>.
  */
 
-public class Game : Object
+private class Game : Object
 {
-    public const int N_TYPES = 7;
-    public const int N_ANIMATIONS = 4;
-    public const int N_MATCH = 5;
+    internal const int N_TYPES = 7;
+    internal const int N_ANIMATIONS = 4;
+    internal const int N_MATCH = 5;
 
     private Settings settings;
 
     private int size;
     private NextPiecesGenerator next_pieces_generator;
 
-    public Board board = null;
-    public int n_rows {
-        get {
+    internal Board? board = null;
+    internal int n_rows {
+        internal get {
             assert (board != null);
             return board.n_rows;
         }
     }
 
-    public int n_cols {
-        get {
+    internal int n_cols {
+        internal get {
             assert (board != null);
             return board.n_cols;
         }
     }
 
-    public int n_next_pieces;
+    internal int n_next_pieces;
 
     private int n_cells;
-    public int n_filled_cells;
+    internal int n_filled_cells;
 
-    public Gee.ArrayList<Cell>? current_path = null;
-    public bool animating = false;
-    public Piece animating_piece;
+    internal Gee.ArrayList<Cell>? current_path = null;
+    internal bool animating = false;
+    internal Piece animating_piece;
 
-    public int score { get; private set; }
+    internal int score { get; private set; }
 
-    public signal void current_path_cell_pos_changed ();
+    internal signal void current_path_cell_pos_changed ();
     private int _current_path_cell_pos = -1;
-    public int current_path_cell_pos
+    internal int current_path_cell_pos
     {
-        get { return _current_path_cell_pos; }
-        set
+        internal get { return _current_path_cell_pos; }
+        internal set
         {
             _current_path_cell_pos = value;
             current_path_cell_pos_changed ();
         }
     }
 
-    public signal void queue_changed (Gee.ArrayList<Piece> next_pieces_queue);
+    internal signal void queue_changed (Gee.ArrayList<Piece> next_pieces_queue);
 
     private Gee.ArrayList<Piece> _next_pieces_queue;
-    public Gee.ArrayList<Piece> next_pieces_queue
+    internal Gee.ArrayList<Piece> next_pieces_queue
     {
-        get { return _next_pieces_queue; }
-        set
+        internal get { return _next_pieces_queue; }
+        internal set
         {
             _next_pieces_queue = value;
             queue_changed (_next_pieces_queue);
         }
     }
 
-    const GameDifficulty[] game_difficulty = {
+    private const GameDifficulty[] game_difficulty = {
         { -1, -1, -1, -1 },
         { 7, 7, 5, 3 },
         { 9, 9, 7, 3 },
         { 20, 15, 7, 7 }
     };
 
-    public const KeyValue scorecats[] = {
+    internal const KeyValue scorecats[] = {
         { "Small",  NC_("board size", "Small")  },
         { "Medium", NC_("board size", "Medium") },
         { "Large",  NC_("board size", "Large")  }
     };
 
-    public signal void game_over ();
-    public int n_categories = 3;
-    public string score_current_category = null;
+    internal signal void game_over ();
+    internal int n_categories = 3;
+    internal string score_current_category = null;
 
-    public StatusMessage status_message { get; set; }
+    internal StatusMessage status_message { get; set; }
 
-    public Game (Settings settings)
+    internal Game (Settings settings)
     {
         this.settings = settings;
 
@@ -143,7 +143,7 @@ public class Game : Object
         generate_next_pieces ();
     }
 
-    public void generate_next_pieces ()
+    internal void generate_next_pieces ()
     {
         this.next_pieces_queue = this.next_pieces_generator.yield_next_pieces ();
     }
@@ -203,13 +203,13 @@ public class Game : Object
         return false;
     }
 
-    public void next_step ()
+    internal void next_step ()
     {
         fill_board (this.n_rows, this.n_cols);
         generate_next_pieces ();
     }
 
-    public bool make_move (int start_row, int start_col, int end_row, int end_col)
+    internal bool make_move (int start_row, int start_col, int end_row, int end_col)
     {
         current_path = board.find_path (start_row,
                                         start_col,
@@ -229,7 +229,7 @@ public class Game : Object
         return true;
     }
 
-    public bool animate ()
+    internal bool animate ()
     {
         animating = true;
 
@@ -271,13 +271,13 @@ public class Game : Object
         return Source.CONTINUE;
     }
 
-    public void restart ()
+    internal void restart ()
     {
         init_game ();
     }
 }
 
-public enum BoardSize
+private enum BoardSize
 {
     UNSET,
     SMALL,
@@ -286,7 +286,7 @@ public enum BoardSize
     MAX_SIZE,
 }
 
-struct GameDifficulty
+private struct GameDifficulty
 {
     public int n_cols;
     public int n_rows;
@@ -294,13 +294,13 @@ struct GameDifficulty
     public int n_next_pieces;
 }
 
-struct KeyValue
+private struct KeyValue
 {
-  public string key;
-  public string name;
+    public string key;
+    public string name;
 }
 
-public enum StatusMessage
+private enum StatusMessage
 {
     DESCRIPTION,
     NO_PATH,
