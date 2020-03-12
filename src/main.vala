@@ -21,11 +21,11 @@
  * along with this program; if not, see <https://www.gnu.org/licenses/>.
  */
 
-public class FiveOrMoreApp: Gtk.Application
+private class FiveOrMoreApp: Gtk.Application
 {
-    public const string KEY_SIZE = "size";
-    public const string KEY_BACKGROUND_COLOR = "background-color";
-    public const string KEY_THEME = "ball-theme";
+    internal const string KEY_SIZE = "size";
+    internal const string KEY_BACKGROUND_COLOR = "background-color";
+    internal const string KEY_THEME = "ball-theme";
 
     private Settings settings;
 
@@ -43,7 +43,7 @@ public class FiveOrMoreApp: Gtk.Application
         {"quit", quit                   }
     };
 
-    public static int main (string[] args)
+    private static int main (string[] args)
     {
         Intl.setlocale (LocaleCategory.ALL, "");
         Intl.bindtextdomain (GETTEXT_PACKAGE, LOCALE_DIRECTORY);
@@ -57,12 +57,12 @@ public class FiveOrMoreApp: Gtk.Application
         return app.run (args);
     }
 
-    public FiveOrMoreApp ()
+    private FiveOrMoreApp ()
     {
         Object (application_id: "org.gnome.five-or-more", flags: ApplicationFlags.FLAGS_NONE);
     }
 
-    public override void activate ()
+    protected override void activate ()
     {
         window.show ();
     }
@@ -183,7 +183,7 @@ public class FiveOrMoreApp: Gtk.Application
                                "website", "https://wiki.gnome.org/Apps/Five%20or%20more");
     }
 
-    public override void shutdown ()
+    protected override void shutdown ()
     {
         settings.set_int ("window-width", window.window_width);
         settings.set_int ("window-height", window.window_height);
