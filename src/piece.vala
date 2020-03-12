@@ -21,16 +21,16 @@
  * along with this program; if not, see <https://www.gnu.org/licenses/>.
  */
 
-public class Piece
+private class Piece
 {
-    public int id;
+    internal int id;
 
-    public Piece (int id)
+    internal Piece (int id)
     {
         this.id = id;
     }
 
-    public bool equal (Piece piece)
+    internal bool equal (Piece piece)
     {
         return this.id == piece.id;
     }

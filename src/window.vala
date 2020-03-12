@@ -22,7 +22,7 @@
  */
 
 [GtkTemplate (ui = "/org/gnome/five-or-more/ui/five-or-more.ui")]
-public class GameWindow : Gtk.ApplicationWindow
+private class GameWindow : Gtk.ApplicationWindow
 {
     [GtkChild]
     private Gtk.HeaderBar headerbar;
@@ -38,9 +38,9 @@ public class GameWindow : Gtk.ApplicationWindow
 
     private Settings? settings = null;
     private bool window_tiled;
-    public bool window_maximized { get; private set; }
-    public int window_width { get; private set; }
-    public int window_height { get; private set; }
+    internal bool window_maximized { internal get; private set; }
+    internal int window_width { internal get; private set; }
+    internal int window_height { internal get; private set; }
 
     private Game? game = null;
     private ThemeRenderer? theme = null;
@@ -53,7 +53,7 @@ public class GameWindow : Gtk.ApplicationWindow
             _("Score: %d")
     };
 
-    public GameWindow (Gtk.Application app, Settings settings)
+    internal GameWindow (Gtk.Application app, Settings settings)
     {
         Object (application: app);
 
@@ -126,7 +126,7 @@ public class GameWindow : Gtk.ApplicationWindow
         show_scores ();
     }
 
-    public void restart_game ()
+    internal void restart_game ()
     {
         game.restart ();
     }
@@ -136,12 +136,12 @@ public class GameWindow : Gtk.ApplicationWindow
         headerbar.set_subtitle (message);
     }
 
-    public void show_scores ()
+    internal void show_scores ()
     {
         highscores.run_dialog ();
     }
 
-    public void change_size (BoardSize size)
+    internal void change_size (BoardSize size)
     {
         var game_size = settings.get_int ("size");
 
