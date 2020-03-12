@@ -21,13 +21,13 @@
  * along with this program; if not, see <https://www.gnu.org/licenses/>.
  */
 
-public class NextPiecesGenerator
+private class NextPiecesGenerator
 {
     private int n_types;
     private int n_next_pieces;
     private Gee.ArrayList<Piece> pieces;
 
-    public NextPiecesGenerator (int n_next_pieces, int n_types)
+    internal NextPiecesGenerator (int n_next_pieces, int n_types)
     {
         this.pieces = new Gee.ArrayList<Piece> ();
         this.n_next_pieces = n_next_pieces;
@@ -39,7 +39,7 @@ public class NextPiecesGenerator
         return GLib.Random.int_range (0, this.n_types);
     }
 
-    public Gee.ArrayList<Piece> yield_next_pieces ()
+    internal Gee.ArrayList<Piece> yield_next_pieces ()
     {
         this.pieces.clear ();
 

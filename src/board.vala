@@ -21,35 +21,35 @@
  * along with this program; if not, see <https://www.gnu.org/licenses/>.
  */
 
-public class Board
+private class Board
 {
     private Cell[,] grid = null;
 
-    public int n_rows {
-        get {
+    internal int n_rows {
+        internal get {
             assert (grid != null);
             return grid.length[0];
         }
     }
 
-    public int n_cols {
-        get {
+    internal int n_cols {
+        internal get {
             assert (grid != null);
             return grid.length[1];
         }
     }
 
-    public signal void grid_changed ();
-    public signal void board_changed ();
+    internal signal void grid_changed ();
+    internal signal void board_changed ();
 
     private Cell src;
     private Cell dst;
 
-    private Gee.ArrayList<Cell> open = null;
-    public Gee.ArrayList<Cell> closed = null;
-    public Gee.ArrayList<Cell>? path = null;
+    private  Gee.ArrayList<Cell> open = null;
+    internal Gee.ArrayList<Cell> closed = null;
+    internal Gee.ArrayList<Cell>? path = null;
 
-    public Board (int n_rows, int n_cols)
+    internal Board (int n_rows, int n_cols)
     {
         grid = new Cell[n_rows, n_cols];
         for (int col = 0; col < n_cols; col++)
@@ -61,7 +61,7 @@ public class Board
         }
     }
 
-    public void reset (int n_rows, int n_cols)
+    internal void reset (int n_rows, int n_cols)
     {
         grid = new Cell[n_rows, n_cols];
 
@@ -83,30 +83,30 @@ public class Board
         board_changed ();
     }
 
-    public Cell[,]? get_grid ()
+    internal Cell[,]? get_grid ()
     {
         return this.grid;
     }
 
-    public void set_piece (int row, int col, Piece? piece)
+    internal void set_piece (int row, int col, Piece? piece)
     {
         grid[row, col].piece = piece;
     }
 
-    public Piece? get_piece (int row, int col)
+    internal Piece? get_piece (int row, int col)
     {
         return grid[row, col].piece;
     }
 
-    public Cell? get_cell (int row, int col)
+    internal Cell? get_cell (int row, int col)
     {
         return grid[row, col];
     }
 
-    public Gee.ArrayList<Cell> find_path (int start_row,
-                                          int start_col,
-                                          int end_row,
-                                          int end_col)
+    internal Gee.ArrayList<Cell> find_path (int start_row,
+                                            int start_col,
+                                            int end_row,
+                                            int end_col)
     {
         reset_path_search ();
 
@@ -233,15 +233,15 @@ public class Board
     }
 }
 
-public class Cell
+private class Cell
 {
-    public int row;
-    public int col;
-    public Cell? parent;
-    public Piece? piece;
-    public int cost;
+    internal int row;
+    internal int col;
+    internal Cell? parent;
+    internal Piece? piece;
+    internal int cost;
 
-    public Cell (int row, int col, Cell? parent, Piece? piece)
+    internal Cell (int row, int col, Cell? parent, Piece? piece)
     {
         this.row = row;
         this.col = col;
@@ -250,7 +250,7 @@ public class Cell
         this.cost = int.MAX;
     }
 
-    public bool equal (Cell cell)
+    internal bool equal (Cell cell)
     {
         return this.row == cell.row && this.col == cell.col;
     }
@@ -303,7 +303,7 @@ public class Cell
         return neighbour;
     }
 
-    public Gee.ArrayList<Cell> get_neighbours (Cell[,] board)
+    internal Gee.ArrayList<Cell> get_neighbours (Cell[,] board)
     {
         Gee.ArrayList<Cell> neighbours = new Gee.ArrayList<Cell> ();
         Cell? right = null, left = null, up = null, down = null;
@@ -381,7 +381,7 @@ public class Cell
         return list;
     }
 
-    public Gee.HashSet<Cell> get_all_directions (Cell[,] board)
+    internal Gee.HashSet<Cell> get_all_directions (Cell[,] board)
     {
         Gee.ArrayList<Cell>? list;
         Gee.HashSet<Cell>? inactivate = new Gee.HashSet<Cell> ();
@@ -418,7 +418,7 @@ public class Cell
     }
 }
 
-enum Direction
+private enum Direction
 {
     RIGHT,
     LEFT,
