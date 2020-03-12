@@ -74,6 +74,8 @@ private class GameWindow : ApplicationWindow
     {
         add_action_entries (win_actions, this);
 
+        map.connect (init_state_watcher);
+
         SimpleAction theme_action = (SimpleAction) lookup_action ("change-theme");
         string theme_value = settings.get_string (FiveOrMoreApp.KEY_THEME);
         if (theme_value != "balls.svg" && theme_value != "shapes.svg" && theme_value != "tango.svg") /* TODO use an enum in GSchema file? */
@@ -125,15 +127,27 @@ private class GameWindow : ApplicationWindow
         init_scores_dialog ();
     }
 
-    protected override bool window_state_event (Gdk.EventWindowState event)
+    private void init_state_watcher ()
     {
-        if ((event.changed_mask & Gdk.WindowState.MAXIMIZED) != 0)
-            window_maximized = (event.new_window_state & Gdk.WindowState.MAXIMIZED) != 0;
+        Gdk.Surface? nullable_surface = get_surface ();     // TODO report bug, get_surface() returns a nullable Surface
+        if (nullable_surface == null || !((!) nullable_surface is Gdk.Toplevel))
+            assert_not_reached ();
+        surface = (Gdk.Toplevel) (!) nullable_surface;
+        surface.notify ["state"].connect (on_window_state_event);
+    }
 
-        if ((event.changed_mask & Gdk.WindowState.TILED) != 0)
-            window_tiled = (event.new_window_state & Gdk.WindowState.TILED) != 0;
+    private Gdk.Toplevel surface;
+    private const Gdk.SurfaceState tiled_state = Gdk.SurfaceState.TILED
+                                               | Gdk.SurfaceState.TOP_TILED
+                                               | Gdk.SurfaceState.BOTTOM_TILED
+                                               | Gdk.SurfaceState.LEFT_TILED
+                                               | Gdk.SurfaceState.RIGHT_TILED;
+    private void on_window_state_event ()
+    {
+        Gdk.SurfaceState state = surface.get_state ();
 
-        return false;
+        window_maximized =  (state & Gdk.SurfaceState.MAXIMIZED) != 0;
+        window_tiled =      (state & tiled_state)                != 0;
     }
 
     protected override void size_allocate (Allocation allocation)
