@@ -122,15 +122,13 @@ private class GameWindow : ApplicationWindow
         window_tiled =      (state & tiled_state)                != 0;
     }
 
-    protected override void size_allocate (Allocation allocation)
+    protected override void size_allocate (int width, int height, int baseline)
     {
-        base.size_allocate (allocation);
-
         if (window_maximized || window_tiled)
             return;
 
-        window_width = allocation.width;
-        window_height = allocation.height;
+        window_width  = width;
+        window_height = height;
     }
 
     private void score_cb ()
