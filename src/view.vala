@@ -347,7 +347,7 @@ private class View : DrawingArea
 
     private void draw_gridlines (Cairo.Context cr)
     {
-        Gdk.RGBA grid_color = cs.get_color (cs.get_state ());
+        Gdk.RGBA grid_color = cs.get_color ();
         Gdk.cairo_set_source_rgba (cr, grid_color);
         cr.set_line_width (1.0);
 
@@ -376,7 +376,7 @@ private class View : DrawingArea
     {
         if (show_cursor)
         {
-            Gdk.RGBA grid_color = cs.get_color (cs.get_state ());
+            Gdk.RGBA grid_color = cs.get_color ();
             Gdk.cairo_set_source_rgba (cr, grid_color);
             cr.set_line_width (2.0);
 
