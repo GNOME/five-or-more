@@ -122,15 +122,15 @@ private class View : DrawingArea
     {
         var color_str = settings.get_string (FiveOrMoreApp.KEY_BACKGROUND_COLOR);
 
-        try
-        {
-            provider.load_from_data (".game-view { background-color: %s; }".printf (color_str));
-        }
-        catch (Error e)
-        {
-            warning ("Failed to load CSS data to provider");
-            return;
-        }
+//        try
+//        {
+//            provider.load_from_data (".game-view { background-color: %s; }".printf (color_str));
+//        }
+//        catch (Error e)
+//        {
+//            warning ("Failed to load CSS data to provider");
+//            return;
+//        }
     }
 
     private void move_keyboard_cursor (int x, int y)
