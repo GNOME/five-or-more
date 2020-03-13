@@ -62,25 +62,28 @@ private class FiveOrMoreApp: Gtk.Application
         Object (application_id: "org.gnome.five-or-more", flags: ApplicationFlags.FLAGS_NONE);
     }
 
-    protected override void activate ()
-    {
-        window.show ();
-    }
-
     protected override void startup ()
     {
         base.startup ();
 
         settings = new Settings ("org.gnome.five-or-more");
-        window = new GameWindow (this, settings);
-
         add_action_entries (action_entries, this);
+
+        window = new GameWindow (settings);
+        add_window (window);
+
         set_accels_for_action ("app.new-game", {"<Primary>n"});
         set_accels_for_action ("app.quit", {"<Primary>q"});
         set_accels_for_action ("app.help", {"F1"});
+
         var board_size_action = lookup_action("change-size");
         BoardSize size = (BoardSize)settings.get_int (FiveOrMoreApp.KEY_SIZE);
         ((SimpleAction)board_size_action).set_state (new Variant.string(size.to_string()));
+    }
+
+    protected override void activate ()
+    {
+        window.present ();
     }
 
     private void new_game_cb ()

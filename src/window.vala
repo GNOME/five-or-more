@@ -38,7 +38,7 @@ private class GameWindow : ApplicationWindow
     [GtkChild]
     private Games.GridFrame grid_frame;
 
-    private GLib.Settings? settings = null;
+    public GLib.Settings settings { private get; protected construct; }
     private bool window_tiled;
     internal bool window_maximized { internal get; private set; }
     internal int window_width { internal get; private set; }
@@ -57,17 +57,11 @@ private class GameWindow : ApplicationWindow
 
     construct
     {
-        size_allocate.connect (on_size_allocate);
-        map.connect (init_state_watcher);
-    }
-
-    internal GameWindow (Gtk.Application app, GLib.Settings settings)
-    {
-        Object (application: app);
-
-        this.settings = settings;
         game = new Game (settings);
         theme = new ThemeRenderer (settings);
+
+        size_allocate.connect (on_size_allocate);
+        map.connect (init_state_watcher);
 
         set_default_size (settings.get_int ("window-width"), settings.get_int ("window-height"));
         if (settings.get_boolean ("window-is-maximized"))
@@ -75,8 +69,6 @@ private class GameWindow : ApplicationWindow
 
         NextPiecesWidget next_pieces_widget = new NextPiecesWidget (settings, game, theme);
         preview_hbox.add (next_pieces_widget);
-        next_pieces_widget.realize ();
-        next_pieces_widget.show ();
 
         grid_frame.set (game.n_cols, game.n_rows);
         game.board.board_changed.connect (() => { grid_frame.set (game.n_cols, game.n_rows); });
@@ -86,9 +78,6 @@ private class GameWindow : ApplicationWindow
 
         View game_view = new View (settings, game, theme);
         grid_frame.add (game_view);
-        game_view.show ();
-
-        grid_frame.show ();
 
         var importer = new Games.Scores.DirectoryImporter ();
         highscores = new Games.Scores.Context.with_importer ("five-or-more",
@@ -99,6 +88,11 @@ private class GameWindow : ApplicationWindow
                                                 importer,
                                                 "org.gnome.five-or-more");
         game.game_over.connect (score_cb);
+    }
+
+    internal GameWindow (GLib.Settings settings)
+    {
+        Object (settings: settings);
     }
 
     private void init_state_watcher ()
