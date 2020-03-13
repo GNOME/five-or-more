@@ -62,6 +62,7 @@ private class View : DrawingArea
 
         init_keyboard ();
         init_mouse ();
+        set_draw_func (draw);
         size_allocate.connect (on_size_allocate);
 
         cs = get_style_context ();
@@ -420,17 +421,15 @@ private class View : DrawingArea
         }
     }
 
-    protected override bool draw (Cairo.Context cr)
+    private inline void draw (Gtk.DrawingArea _this, Cairo.Context cr, int new_width, int new_height)
     {
         if (theme == null)
-            return false;
+            return;
 
         fill_background (cr);
         draw_gridlines (cr);
         draw_shapes (cr);
         draw_cursor_box (cr);
         draw_path (cr);
-
-        return true;
     }
 }
