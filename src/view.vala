@@ -86,6 +86,7 @@ private class View : DrawingArea
 
         init_keyboard ();
         init_mouse ();
+        set_draw_func (draw);
 
         cs = get_style_context ();
         provider = new CssProvider ();
@@ -331,14 +332,6 @@ private class View : DrawingArea
         board_rectangle.height = piece_size * game.n_rows;
     }
 
-    protected override bool configure_event (Gdk.EventConfigure event)
-    {
-        update_sizes (event.width, event.height);
-        queue_draw ();
-
-        return true;
-    }
-
     private void fill_background (Cairo.Context cr)
     {
         cs.render_background (cr, board_rectangle.x, board_rectangle.y, board_rectangle.width, board_rectangle.height);
@@ -422,17 +415,17 @@ private class View : DrawingArea
         }
     }
 
-    protected override bool draw (Cairo.Context cr)
+    private inline void draw (Gtk.DrawingArea _this, Cairo.Context cr, int new_width, int new_height)
     {
         if (theme == null)
-            return false;
+            return;
+
+        update_sizes (new_width, new_height);
 
         fill_background (cr);
         draw_gridlines (cr);
         draw_shapes (cr);
         draw_cursor_box (cr);
         draw_path (cr);
-
-        return true;
     }
 }
