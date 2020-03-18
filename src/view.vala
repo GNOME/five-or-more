@@ -345,8 +345,7 @@ private class View : DrawingArea
 
     private void draw_gridlines (Cairo.Context cr)
     {
-        Gdk.RGBA grid_color = cs.get_color ();
-        Gdk.cairo_set_source_rgba (cr, grid_color);
+        cr.set_source_rgba (0.0, 0.0, 0.0, 0.8);
         cr.set_line_width (1.0);
 
         for (int i = piece_size; i < board_rectangle.width; i += piece_size)
@@ -366,6 +365,7 @@ private class View : DrawingArea
         border.width = board_rectangle.width;
         border.height = board_rectangle.height;
 
+        cr.set_source_rgba (0.0, 0.0, 0.0, 1.0);
         Gdk.cairo_rectangle (cr, border);
         cr.stroke ();
     }
