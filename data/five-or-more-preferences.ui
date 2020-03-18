@@ -1,131 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
-  <!-- interface-requires gtk+ 3.12 -->
+  <requires lib="gtk+" version="3.96"/>
   <template class="PreferencesDialog" parent="GtkDialog">
-    <property name="can_focus">False</property>
     <property name="resizable">False</property>
-    <property name="destroy_with_parent">True</property>
-    <property name="type_hint">dialog</property>
+    <property name="destroy-with-parent">True</property>
     <property name="use-header-bar">1</property>
-    <property name="border-width">18</property>
     <child internal-child="headerbar">
       <object class="GtkHeaderBar">
         <property name="title" translatable="yes">Preferences</property>
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="show-close-button">True</property>
+        <property name="show-title-buttons">True</property>
       </object>
     </child>
-    <child internal-child="vbox">
-      <object class="GtkBox" id="dialog-vbox1">
-        <property name="can_focus">False</property>
+    <child internal-child="content_area">
+      <object class="GtkBox">
+        <property name="margin-top">24</property>
+        <property name="margin-start">30</property>
+        <property name="margin-bottom">24</property>
+        <property name="margin-end">30</property>
         <property name="orientation">vertical</property>
-        <property name="spacing">2</property>
+        <property name="spacing">6</property>
         <child>
-          <object class="GtkBox" id="content_area">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="border_width">5</property>
-            <property name="orientation">vertical</property>
-            <property name="spacing">6</property>
+          <object class="GtkLabel">
+            <property name="halign">start</property>
+            <property name="label" translatable="yes">Appearance</property>
+            <attributes>
+              <attribute name="weight" value="bold"/>
+            </attributes>
+          </object>
+        </child>
+        <child>
+          <object class="GtkGrid">
+            <property name="margin-start">12</property>
+            <property name="hexpand">True</property>
+            <property name="row-spacing">6</property>
+            <property name="column-spacing">12</property>
             <child>
-              <object class="GtkLabel" id="appearance">
-                <property name="visible">True</property>
-                <property name="can_focus">False</property>
+              <object class="GtkLabel">
                 <property name="halign">start</property>
-                <property name="label" translatable="yes">Appearance</property>
-                <attributes>
-                  <attribute name="weight" value="bold"/>
-                </attributes>
+                <property name="label" translatable="yes">_Theme:</property>
+                <property name="use-underline">True</property>
+                <property name="mnemonic-widget">theme_box</property>
+                <layout>
+                  <property name="left-attach">0</property>
+                  <property name="top-attach">0</property>
+                </layout>
               </object>
-              <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
-                <property name="position">0</property>
-              </packing>
             </child>
             <child>
-              <object class="GtkGrid" id="grid1">
-                <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="margin_start">12</property>
-                <property name="hexpand">True</property>
-                <property name="row_spacing">6</property>
-                <property name="column_spacing">12</property>
-                <child>
-                  <object class="GtkLabel" id="label1">
-                    <property name="visible">True</property>
-                    <property name="can_focus">False</property>
-                    <property name="halign">start</property>
-                    <property name="label" translatable="yes">_Theme:</property>
-                    <property name="use_underline">True</property>
-                  </object>
-                  <packing>
-                    <property name="left_attach">0</property>
-                    <property name="top_attach">0</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
-                  </packing>
-                </child>
-                <child>
-                  <object class="GtkComboBoxText" id="theme_box">
-                    <property name="visible">True</property>
-                    <property name="can_focus">False</property>
-                    <property name="active">0</property>
-                    <items>
-                      <item translatable="yes" id="balls">balls</item>
-                      <item translatable="yes" id="shapes">shapes</item>
-                      <item translatable="yes" id="tango">tango</item>
-                    </items>
-                  </object>
-                </child>
-                <child>
-                  <object class="GtkLabel" id="label2">
-                    <property name="visible">True</property>
-                    <property name="can_focus">False</property>
-                    <property name="halign">start</property>
-                    <property name="label" translatable="yes">B_ackground color:</property>
-                    <property name="use_underline">True</property>
-                    <property name="mnemonic_widget">color_button</property>
-                  </object>
-                  <packing>
-                    <property name="left_attach">0</property>
-                    <property name="top_attach">1</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
-                  </packing>
-                </child>
-                <child>
-                  <object class="GtkColorButton" id="color_button">
-                    <property name="visible">True</property>
-                    <property name="can_focus">True</property>
-                    <property name="receives_default">True</property>
-                    <property name="hexpand">True</property>
-                    <property name="use_action_appearance">False</property>
-                  </object>
-                  <packing>
-                    <property name="left_attach">1</property>
-                    <property name="top_attach">1</property>
-                    <property name="width">1</property>
-                    <property name="height">1</property>
-                  </packing>
-                </child>
-                <child>
-                  <placeholder/>
-                </child>
+              <object class="GtkComboBoxText" id="theme_box">
+                <property name="active">0</property>
+                <items>
+                  <item translatable="yes" id="balls">balls</item>
+                  <item translatable="yes" id="shapes">shapes</item>
+                  <item translatable="yes" id="tango">tango</item>
+                </items>
+                <layout>
+                  <property name="left-attach">1</property>
+                  <property name="top-attach">0</property>
+                </layout>
               </object>
-              <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
-                <property name="position">1</property>
-              </packing>
+            </child>
+            <child>
+              <object class="GtkLabel">
+                <property name="halign">start</property>
+                <property name="label" translatable="yes">B_ackground color:</property>
+                <property name="use-underline">True</property>
+                <property name="mnemonic-widget">color_button</property>
+                <layout>
+                  <property name="left-attach">0</property>
+                  <property name="top-attach">1</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="GtkColorButton" id="color_button">
+                <property name="receives-default">True</property>
+                <property name="hexpand">True</property>
+                <layout>
+                  <property name="left-attach">1</property>
+                  <property name="top-attach">1</property>
+                </layout>
+              </object>
             </child>
           </object>
-          <packing>
-            <property name="expand">True</property>
-            <property name="fill">True</property>
-            <property name="position">0</property>
-          </packing>
         </child>
       </object>
     </child>
