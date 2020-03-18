@@ -54,6 +54,8 @@ private class View : DrawingArea
     private EventControllerKey key_controller;          // for keeping in memory
     private GestureClick click_controller;              // for keeping in memory
 
+    private Gdk.RGBA background_color;
+
     internal View (GLib.Settings settings, Game game, ThemeRenderer theme)
     {
         this.settings = settings;
@@ -70,11 +72,11 @@ private class View : DrawingArea
         cs.add_class ("game-view");
         cs.add_provider (provider, STYLE_PROVIDER_PRIORITY_USER);
 
-        set_background_color ();
         settings.changed[FiveOrMoreApp.KEY_BACKGROUND_COLOR].connect (() => {
             set_background_color ();
             queue_draw ();
         });
+        set_background_color ();
 
         set_size_request (MINIMUM_BOARD_SIZE, MINIMUM_BOARD_SIZE);
 
@@ -118,19 +120,10 @@ private class View : DrawingArea
         queue_draw ();
     }
 
-    private void set_background_color ()
+    private inline void set_background_color ()
     {
-        var color_str = settings.get_string (FiveOrMoreApp.KEY_BACKGROUND_COLOR);
-
-//        try
-//        {
-//            provider.load_from_data (".game-view { background-color: %s; }".printf (color_str));
-//        }
-//        catch (Error e)
-//        {
-//            warning ("Failed to load CSS data to provider");
-//            return;
-//        }
+        if (!background_color.parse (settings.get_string (FiveOrMoreApp.KEY_BACKGROUND_COLOR)))
+            warning ("Bad background color value.");
     }
 
     private void move_keyboard_cursor (int x, int y)
@@ -331,7 +324,7 @@ private class View : DrawingArea
     private void update_sizes (int width, int height)
     {
         piece_size = (width - 1) / game.n_cols;
-        board_rectangle.width = piece_size * game.n_cols;
+        board_rectangle.width  = piece_size * game.n_cols;
         board_rectangle.height = piece_size * game.n_rows;
     }
 
@@ -342,7 +335,12 @@ private class View : DrawingArea
 
     private void fill_background (Cairo.Context cr)
     {
-        cs.render_background (cr, board_rectangle.x, board_rectangle.y, board_rectangle.width, board_rectangle.height);
+        Gdk.cairo_set_source_rgba (cr, background_color);
+        cr.rectangle (/* x and y */ board_rectangle.x + 1.0,
+                                    board_rectangle.y + 1.0,
+                      /* w and h */ board_rectangle.width,
+                                    board_rectangle.height);
+        cr.fill ();
     }
 
     private void draw_gridlines (Cairo.Context cr)
