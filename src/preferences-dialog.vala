@@ -35,7 +35,7 @@ public class PreferencesDialog : Gtk.Dialog
     private void theme_set_cb (Gtk.ComboBox self)
     {
         var combo_box_text = self as Gtk.ComboBoxText;
-        var theme = combo_box_text.get_active_text ();
+        var theme = combo_box_text.get_active_id ();
         foreach (var t in ThemeRenderer.themes)
         {
             if (t.split (".")[0] == theme)
