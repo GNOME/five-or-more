@@ -57,6 +57,7 @@ private class GameWindow : ApplicationWindow
 
     construct
     {
+        size_allocate.connect (on_size_allocate);
         map.connect (init_state_watcher);
     }
 
@@ -123,7 +124,7 @@ private class GameWindow : ApplicationWindow
         window_tiled =      (state & Gdk.SurfaceState.TILED)     != 0;
     }
 
-    protected override void size_allocate (int width, int height, int baseline)
+    private void on_size_allocate (int width, int height, int baseline)
     {
         if (window_maximized || window_tiled)
             return;
