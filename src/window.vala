@@ -36,7 +36,7 @@ private class GameWindow : ApplicationWindow
     private MenuButton primary_menu_button;
 
     [GtkChild]
-    private Games.GridFrame grid_frame;
+    private AspectFrame grid_frame;
 
     public GLib.Settings settings { private get; protected construct; }
     private bool window_tiled;
@@ -70,8 +70,6 @@ private class GameWindow : ApplicationWindow
         NextPiecesWidget next_pieces_widget = new NextPiecesWidget (settings, game, theme);
         preview_hbox.add (next_pieces_widget);
 
-        grid_frame.set (game.n_cols, game.n_rows);
-        game.board.board_changed.connect (() => { grid_frame.set (game.n_cols, game.n_rows); });
         game.notify["score"].connect ((s, p) => { set_status_message (status[StatusMessage.NONE].printf(game.score)); });
         game.notify["status-message"].connect ((s, p) => { set_status_message (status[game.status_message].printf(game.score)); });
         set_status_message (status[game.status_message]);
