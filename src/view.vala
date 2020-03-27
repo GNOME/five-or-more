@@ -326,6 +326,8 @@ private class View : DrawingArea
         piece_size = (width - 1) / game.n_cols;
         board_rectangle.width  = piece_size * game.n_cols;
         board_rectangle.height = piece_size * game.n_rows;
+        board_rectangle.x = (width  - board_rectangle.width)  / 2;
+        board_rectangle.y = (height - board_rectangle.height) / 2;
     }
 
     private inline void on_size_allocate (int width, int height)
@@ -427,9 +429,12 @@ private class View : DrawingArea
             return;
 
         fill_background (cr);
+        cr.save ();
+        cr.translate (board_rectangle.x, board_rectangle.y);
         draw_gridlines (cr);
         draw_shapes (cr);
         draw_cursor_box (cr);
         draw_path (cr);
+        cr.restore ();
     }
 }
