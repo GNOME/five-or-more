@@ -33,7 +33,7 @@ private class GameWindow : ApplicationWindow
     private Box preview_hbox;
 
     [GtkChild]
-    private Games.GridFrame grid_frame;
+    private AspectFrame grid_frame;
 
     private GLib.Settings settings = new GLib.Settings ("org.gnome.five-or-more");
     private bool window_tiled;
@@ -96,6 +96,7 @@ private class GameWindow : ApplicationWindow
             default: assert_not_reached ();
         }
         ((SimpleAction) board_size_action).set_state (board_size_string);
+        update_ratio (board_size);
 
         game = new Game (board_size);
         theme = new ThemeRenderer (settings);
@@ -107,8 +108,6 @@ private class GameWindow : ApplicationWindow
         NextPiecesWidget next_pieces_widget = new NextPiecesWidget (settings, game, theme);
         preview_hbox.pack_start (next_pieces_widget);
 
-        grid_frame.set (game.n_cols, game.n_rows);
-        game.board.board_changed.connect (() => { grid_frame.set (game.n_cols, game.n_rows); });
         game.notify["score"].connect ((s, p) => { set_status_message (status[StatusMessage.NONE].printf(game.score)); });
         game.notify["status-message"].connect ((s, p) => { set_status_message (status[game.status_message].printf(game.score)); });
         set_status_message (status[game.status_message]);
@@ -117,7 +116,7 @@ private class GameWindow : ApplicationWindow
         SimpleAction reset_background_action = (SimpleAction) lookup_action ("reset-bg");
         game_view.notify ["background-color"].connect (() => { reset_background_action.set_enabled (game_view.background_color != View.default_background_color); });
         settings.bind (FiveOrMoreApp.KEY_BACKGROUND_COLOR, game_view, "background-color", SettingsBindFlags.DEFAULT);
-        grid_frame.add (game_view);
+        grid_frame.set_child (game_view);
 
         init_scores_dialog ();
     }
@@ -166,6 +165,14 @@ private class GameWindow : ApplicationWindow
     private void set_status_message (string? message)
     {
         headerbar.set_subtitle (message);
+    }
+
+    private void update_ratio (int size)
+    {
+        if (size == /* large */ 3)
+            grid_frame.ratio = 4.0f/3.0f;
+        else
+            grid_frame.ratio = 1.0f;
     }
 
     /*\
@@ -269,6 +276,7 @@ private class GameWindow : ApplicationWindow
             default: assert_not_reached ();
         }
         settings.set_int (FiveOrMoreApp.KEY_SIZE, size);
+        update_ratio (size);
     }
 
     private inline void new_game (/* SimpleAction action, Variant? parameter */)
