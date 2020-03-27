@@ -119,9 +119,13 @@ private class GameWindow : ApplicationWindow
     {
         if (window_maximized || window_tiled)
             return;
-
-        window_width  = width;
-        window_height = height;
+        int? _window_width = null;
+        int? _window_height = null;
+        get_size (out _window_width, out _window_height);
+        if (_window_width == null || _window_height == null)
+            return;
+        window_width = (!) _window_width;
+        window_height = (!) _window_height;
     }
 
     private void score_cb ()
