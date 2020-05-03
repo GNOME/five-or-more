@@ -1,5 +1,5 @@
-desktop = 'org.gnome.five-or-more.desktop'
 # Desktop file
+desktop = 'org.gnome.five-or-more.desktop'
 desktop_file = i18n.merge_file (
   input: desktop + '.in',
   output: desktop,
@@ -44,8 +44,22 @@ install_data (join_paths ('icons', 'hicolor', 'symbolic', 'org.gnome.five-or-mor
              install_dir: join_paths (data_dir, 'icons', 'hicolor', 'symbolic', 'apps')
              )
 
-appdata = 'org.gnome.five-or-more.appdata.xml'
+# Make D-Bus activatable
+service_conf = configuration_data ()
+service_conf.set ('bindir', bindir)
+
+service = 'org.gnome.five-or-more.service'
+
+configure_file (
+  input: service + '.in',
+  output: service,
+  install: true,
+  install_dir: join_paths (data_dir, 'dbus-1', 'services'),
+  configuration: service_conf
+)
+
 # Appdata
+appdata = 'org.gnome.five-or-more.appdata.xml'
 appdata_file = i18n.merge_file (
   input: appdata + '.in',
   output: appdata,
