@@ -7,10 +7,11 @@ project('five-or-more', ['c', 'vala'],
 gnome = import('gnome')
 i18n = import('i18n')
 
-locale_dir = join_paths(get_option('prefix'), get_option('localedir'))
-po_dir = join_paths(meson.source_root(), 'po')
-data_dir = join_paths (get_option ('prefix'), get_option ('datadir'))
+locale_dir  = join_paths (get_option ('prefix'), get_option ('localedir'))
+po_dir      = join_paths (meson.source_root (), 'po')
+data_dir    = join_paths (get_option ('prefix'), get_option ('datadir'))
 pkgdata_dir = join_paths (data_dir, 'five-or-more')
+bindir      = join_paths (get_option ('prefix'), get_option ('bindir'))
 
 # Dependencies
 glib_min_version = '2.32'
