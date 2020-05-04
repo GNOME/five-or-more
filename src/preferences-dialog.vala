@@ -21,20 +21,22 @@
  * along with this program; if not, see <https://www.gnu.org/licenses/>.
  */
 
+using Gtk;
+
 [GtkTemplate (ui = "/org/gnome/five-or-more/ui/preferences-dialog.ui")]
-public class PreferencesDialog : Gtk.Dialog
+private class PreferencesDialog : Dialog
 {
-    private Settings settings;
+    private GLib.Settings settings;
 
     [GtkChild]
-    private Gtk.ComboBoxText theme_box;
+    private ComboBoxText theme_box;
 
     [GtkChild]
-    private Gtk.ColorButton color_button;
+    private ColorButton color_button;
 
-    private void theme_set_cb (Gtk.ComboBox self)
+    private void theme_set_cb (ComboBox self)
     {
-        var combo_box_text = self as Gtk.ComboBoxText;
+        var combo_box_text = (ComboBoxText) self;
         var theme = combo_box_text.get_active_id ();
         foreach (var t in ThemeRenderer.themes)
         {
@@ -48,14 +50,14 @@ public class PreferencesDialog : Gtk.Dialog
         }
     }
 
-    private void color_set_cb (Gtk.ColorButton self)
+    private void color_set_cb (ColorButton self)
     {
         var color = self.get_rgba ();
         if (!settings.set_string (FiveOrMoreApp.KEY_BACKGROUND_COLOR, color.to_string ()))
             warning ("Failed to set color: %s", color.to_string ());
     }
 
-    public PreferencesDialog (Settings settings)
+    internal PreferencesDialog (GLib.Settings settings)
     {
         this.settings = settings;
 

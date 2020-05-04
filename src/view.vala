@@ -21,15 +21,17 @@
  * along with this program; if not, see <https://www.gnu.org/licenses/>.
  */
 
-public class View : Gtk.DrawingArea
+using Gtk;
+
+private class View : DrawingArea
 {
     private const int MINIMUM_BOARD_SIZE = 256;
 
-    private Settings settings;
+    private GLib.Settings settings;
     private Game? game = null;
     private ThemeRenderer? theme = null;
-    private Gtk.StyleContext cs;
-    private Gtk.CssProvider provider;
+    private StyleContext cs;
+    private CssProvider provider;
 
     private Gdk.Rectangle board_rectangle;
 
@@ -49,16 +51,22 @@ public class View : Gtk.DrawingArea
     private int animation_state;
     private uint animation_id;
 
-    public View (Settings settings, Game game, ThemeRenderer theme)
+    private EventControllerKey key_controller;          // for keeping in memory
+    private GestureMultiPress click_controller;         // for keeping in memory
+
+    internal View (GLib.Settings settings, Game game, ThemeRenderer theme)
     {
         this.settings = settings;
         this.game = game;
         this.theme = theme;
 
+        init_keyboard ();
+        init_mouse ();
+
         cs = get_style_context ();
-        provider = new Gtk.CssProvider ();
+        provider = new CssProvider ();
         cs.add_class ("game-view");
-        cs.add_provider (provider, Gtk.STYLE_PROVIDER_PRIORITY_USER);
+        cs.add_provider (provider, STYLE_PROVIDER_PRIORITY_USER);
 
         set_background_color ();
         settings.changed[FiveOrMoreApp.KEY_BACKGROUND_COLOR].connect (() => {
@@ -155,10 +163,15 @@ public class View : Gtk.DrawingArea
         queue_draw_area (keyboard_cursor_x * piece_size, keyboard_cursor_y * piece_size, piece_size, piece_size);
     }
 
-    public override bool key_press_event (Gdk.EventKey event)
+    private void init_keyboard ()
     {
-        uint key = event.keyval;
-        switch (key)
+        key_controller = new Gtk.EventControllerKey (this);
+        key_controller.key_pressed.connect (on_key_pressed);
+    }
+
+    private inline bool on_key_pressed (Gtk.EventControllerKey _key_controller, uint keyval, uint keycode, Gdk.ModifierType state)
+    {
+        switch (keyval)
         {
             case (Gdk.Key.Left):
                 /* fall-thru */
@@ -210,15 +223,17 @@ public class View : Gtk.DrawingArea
                 if (show_cursor)
                     cell_clicked (keyboard_cursor_x, keyboard_cursor_y);
                 break;
+            default:
+                return false;
         }
 
         return true;
     }
 
-    private bool cell_clicked (int cell_x, int cell_y)
+    private void cell_clicked (int cell_x, int cell_y)
     {
         if (cell_x >= game.n_cols || cell_y >= game.n_rows)
-            return false;
+            return;
 
         keyboard_cursor_x = cell_x;
         keyboard_cursor_y = cell_y;
@@ -240,7 +255,7 @@ public class View : Gtk.DrawingArea
                 animation_state = 0;
                 queue_draw ();
 
-                return true;
+                return;
             }
 
             start_x = cell_x;
@@ -260,7 +275,7 @@ public class View : Gtk.DrawingArea
             bool move = game.make_move (start_y, start_x, end_y, end_x);
 
             if (!move)
-                return false;
+                return;
 
             start_x = -1;
             start_y = -1;
@@ -271,18 +286,18 @@ public class View : Gtk.DrawingArea
                 animation_id = -1;
             }
         }
-
-        return true;
     }
 
-    public override bool button_press_event (Gdk.EventButton event)
+    private void init_mouse ()
+    {
+        click_controller = new GestureMultiPress (this);    // only reacts to Gdk.BUTTON_PRIMARY
+        click_controller.pressed.connect (on_click);
+    }
+
+    private inline void on_click (GestureMultiPress _click_controller, int n_press, double event_x, double event_y)
     {
         if (game == null || game.animating)
-            return false;
-
-        /* Ignore the 2BUTTON and 3BUTTON events. */
-        if (event.type != Gdk.EventType.BUTTON_PRESS)
-            return false;
+            return;
 
         if (show_cursor)
         {
@@ -290,10 +305,10 @@ public class View : Gtk.DrawingArea
             queue_draw_area (keyboard_cursor_x * piece_size, keyboard_cursor_y * piece_size, piece_size, piece_size);
         }
 
-        cell_x = (int)event.x / piece_size;
-        cell_y = (int)event.y / piece_size;
+        cell_x = (int)event_x / piece_size;
+        cell_y = (int)event_y / piece_size;
 
-        return cell_clicked (cell_x, cell_y);
+        cell_clicked (cell_x, cell_y);
     }
 
     private bool animate_clicked ()
@@ -311,7 +326,7 @@ public class View : Gtk.DrawingArea
         board_rectangle.height = piece_size * game.n_rows;
     }
 
-    public override bool configure_event (Gdk.EventConfigure event)
+    protected override bool configure_event (Gdk.EventConfigure event)
     {
         update_sizes (event.width, event.height);
         queue_draw ();
@@ -402,7 +417,7 @@ public class View : Gtk.DrawingArea
         }
     }
 
-    public override bool draw (Cairo.Context cr)
+    protected override bool draw (Cairo.Context cr)
     {
         if (theme == null)
             return false;
