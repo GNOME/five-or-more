@@ -5,9 +5,9 @@
     <property name="resizable">False</property>
     <property name="destroy-with-parent">True</property>
     <property name="use-header-bar">1</property>
+    <property name="title" translatable="yes">Preferences</property>
     <child internal-child="headerbar">
       <object class="GtkHeaderBar">
-        <property name="title" translatable="yes">Preferences</property>
         <property name="show-title-buttons">True</property>
       </object>
     </child>
