@@ -31,6 +31,13 @@
             <attribute name="target">BOARD_SIZE_LARGE</attribute>
           </item>
         </section>
+        <section>
+          <item>
+            <!-- Translators: entry of the Size submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game -->
+            <attribute name="label" translatable="yes">_New Game</attribute>
+            <attribute name="action">win.new-game</attribute>
+          </item>
+        </section>
       </submenu>
     </section>
     <section>
@@ -100,7 +107,7 @@
           </object>
         </child>
         <child>
-          <object class="GtkMenuButton" id="primary_menu_button">
+          <object class="GtkMenuButton">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="menu_model">primary-menu</property>

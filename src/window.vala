@@ -33,9 +33,6 @@ private class GameWindow : ApplicationWindow
     private Box preview_hbox;
 
     [GtkChild]
-    private MenuButton primary_menu_button;
-
-    [GtkChild]
     private Games.GridFrame grid_frame;
 
     private GLib.Settings? settings = null;
@@ -79,11 +76,6 @@ private class GameWindow : ApplicationWindow
 
         game = new Game ((int) board_size);
         theme = new ThemeRenderer (settings);
-
-        settings.changed[FiveOrMoreApp.KEY_SIZE].connect (() => {
-            int size = settings.get_int (FiveOrMoreApp.KEY_SIZE);
-            game.new_game (size);
-        });
 
         set_default_size (settings.get_int ("window-width"), settings.get_int ("window-height"));
         if (settings.get_boolean ("window-is-maximized"))
@@ -176,50 +168,37 @@ private class GameWindow : ApplicationWindow
 
     private inline void change_size (SimpleAction action, Variant? parameter)
     {
-        BoardSize new_size;
+        int size;
         action.set_state (parameter);
         switch (parameter.get_string()) {
-            case "BOARD_SIZE_SMALL":    new_size = BoardSize.SMALL;     break;
-            case "BOARD_SIZE_MEDIUM":   new_size = BoardSize.MEDIUM;    break;
-            case "BOARD_SIZE_LARGE":    new_size = BoardSize.LARGE;     break;
+            case "BOARD_SIZE_SMALL":    size = (int) BoardSize.SMALL;   break;
+            case "BOARD_SIZE_MEDIUM":   size = (int) BoardSize.MEDIUM;  break;
+            case "BOARD_SIZE_LARGE":    size = (int) BoardSize.LARGE;   break;
             default: assert_not_reached ();
         }
-
-        var old_size = settings.get_int ("size");
-        if (old_size == new_size)
-            return;
-
-        primary_menu_button.set_active (false);
-
-        if (game.score > 0) {
-            var flags = DialogFlags.DESTROY_WITH_PARENT;
-            var restart_game_dialog = new MessageDialog (this,
-                                                         flags,
-                                                         MessageType.WARNING,
-                                                         ButtonsType.NONE,
-                                                         _("Are you sure you want to restart the game?"));
-            restart_game_dialog.add_buttons (_("_Cancel"), ResponseType.CANCEL,
-                                             _("_Restart"), ResponseType.OK);
-
-            var result = restart_game_dialog.run ();
-            restart_game_dialog.destroy ();
-            switch (result)
-            {
-                case ResponseType.OK:
-                     if (!settings.set_int (FiveOrMoreApp.KEY_SIZE, (int) new_size))
-                        warning ("Failed to set size: %d", (int) new_size);
-                    break;
-                case ResponseType.CANCEL:
-                    break;
-            }
-        } else {
-            settings.set_int (FiveOrMoreApp.KEY_SIZE, (int) new_size);
-        }
+        settings.set_int (FiveOrMoreApp.KEY_SIZE, size);
     }
 
     private inline void new_game (/* SimpleAction action, Variant? parameter */)
     {
         int size = settings.get_int (FiveOrMoreApp.KEY_SIZE);
+        int n_rows = Game.game_difficulty[size].n_rows;
+        int n_cols = Game.game_difficulty[size].n_cols;
+        if (game.score > 0 && !game.is_game_over) {
+            var flags = DialogFlags.DESTROY_WITH_PARENT;
+            var restart_game_dialog = new MessageDialog (this,
+                                                         flags,
+                                                         MessageType.WARNING,
+                                                         ButtonsType.NONE,
+                                                         _("Are you sure you want to start a new %u × %u game?").printf (n_rows, n_cols));
+            restart_game_dialog.add_buttons (_("_Cancel"), ResponseType.CANCEL,
+                                             _("_Restart"), ResponseType.OK);
+
+            var result = restart_game_dialog.run ();
+            restart_game_dialog.destroy ();
+            if (result != ResponseType.OK)
+                return;
+        }
         game.new_game (size);
     }
 

@@ -81,7 +81,7 @@ private class Game : Object
         }
     }
 
-    private const GameDifficulty[] game_difficulty = {
+    internal const GameDifficulty[] game_difficulty = {
         { -1, -1, -1, -1 },
         { 7, 7, 5, 3 },
         { 9, 9, 7, 3 },
@@ -94,6 +94,7 @@ private class Game : Object
         { "Large",  NC_("board size", "Large")  }
     };
 
+    internal bool is_game_over { internal get; private set; default = false; }
     internal signal void game_over ();
     internal int n_categories = 3;
     internal string score_current_category = null;
@@ -108,6 +109,7 @@ private class Game : Object
 
     private void init_game ()
     {
+        is_game_over = false;
         var n_rows = game_difficulty[size].n_rows;
         var n_cols = game_difficulty[size].n_cols;
         this.n_next_pieces = game_difficulty[size].n_next_pieces;
@@ -187,6 +189,7 @@ private class Game : Object
     {
         if (n_cells - n_filled_cells == 0)
         {
+            is_game_over = true;
             game_over ();
             return true;
         }
