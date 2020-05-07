@@ -30,11 +30,9 @@ private class FiveOrMoreApp: Gtk.Application
     private Settings settings;
 
     private GameWindow window;
-    private PreferencesDialog? preferences_dialog = null;
 
     private const GLib.ActionEntry action_entries[] =
     {
-        { "preferences",    preferences_cb  },
         { "help",           help_cb         },
         { "about",          about_cb        },
         { "quit",           quit            }
@@ -75,25 +73,6 @@ private class FiveOrMoreApp: Gtk.Application
         set_accels_for_action ("win.new-game",  { "<Primary>n"  });
         set_accels_for_action ("app.quit",      { "<Primary>q"  });
         set_accels_for_action ("app.help",      {          "F1" });
-    }
-
-    private void preferences_cb ()
-    {
-        if (preferences_dialog != null)
-        {
-            preferences_dialog.show ();
-            return;
-        }
-
-        preferences_dialog = new PreferencesDialog (settings);
-        preferences_dialog.set_transient_for (window);
-
-        preferences_dialog.response.connect (() => {
-            preferences_dialog.destroy ();
-            preferences_dialog = null;
-        });
-
-        preferences_dialog.show ();
     }
 
     private void help_cb ()

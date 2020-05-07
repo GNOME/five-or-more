@@ -46,13 +46,46 @@
         <attribute name="label" translatable="yes">S_cores</attribute>
         <attribute name="action">win.scores</attribute>
       </item>
+      <submenu>
+        <!-- Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); displays allows to change the theme -->
+        <attribute name="label" translatable="yes">A_ppearance</attribute>
+        <section>
+          <item>
+            <!-- Translators: entry of the Appearance submenu of the hamburger menu; set theme to "balls"; other possible themes are "shapes" and "tango" -->
+            <attribute name="label" translatable="yes">balls</attribute>
+            <attribute name="action">win.change-theme</attribute>
+            <attribute name="target">balls.svg</attribute>
+          </item>
+          <item>
+            <!-- Translators: entry of the Appearance submenu of the hamburger menu; set theme to "shapes"; other possible themes are "balls" and "tango" -->
+            <attribute name="label" translatable="yes">shapes</attribute>
+            <attribute name="action">win.change-theme</attribute>
+            <attribute name="target">shapes.svg</attribute>
+          </item>
+          <item>
+            <!-- Translators: entry of the Appearance submenu of the hamburger menu; set theme to "tango"; other possible themes are "balls" and "shapes" -->
+            <attribute name="label" translatable="yes">tango</attribute>
+            <attribute name="action">win.change-theme</attribute>
+            <attribute name="target">tango.svg</attribute>
+          </item>
+        </section>
+        <section>
+          <!-- Translators: title of a section in the Appearance submenu of the hamburger menu; containes "Select color" and "Reset color" -->
+          <attribute name="label" translatable="yes">Background</attribute>
+          <item>
+            <!-- Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); opens a dialog for choosing background color -->
+            <attribute name="label" translatable="yes">_Select color</attribute>
+            <attribute name="action">win.background</attribute>
+          </item>
+          <item>
+            <!-- Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); resets background color -->
+            <attribute name="label" translatable="yes">_Default color</attribute>
+            <attribute name="action">win.reset-bg</attribute>
+          </item>
+        </section>
+      </submenu>
     </section>
     <section>
-      <item>
-        <!-- Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); opens the Preferences dialog -->
-        <attribute name="label" translatable="yes">_Preferences</attribute>
-        <attribute name="action">app.preferences</attribute>
-      </item>
       <item>
         <!-- Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); opens the help of the application -->
         <attribute name="label" translatable="yes">_Help</attribute>

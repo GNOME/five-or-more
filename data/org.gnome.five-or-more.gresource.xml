@@ -2,6 +2,5 @@
 <gresources>
   <gresource prefix="/org/gnome/five-or-more/ui">
     <file preprocess="xml-stripblanks">five-or-more.ui</file>
-    <file preprocess="xml-stripblanks" alias="preferences-dialog.ui">five-or-more-preferences.ui</file>
   </gresource>
 </gresources>

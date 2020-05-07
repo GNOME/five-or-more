@@ -1,4 +1,3 @@
 src/game.c
 src/main.c
-src/preferences-dialog.c
 src/window.c

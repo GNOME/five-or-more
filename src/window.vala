@@ -54,9 +54,14 @@ private class GameWindow : ApplicationWindow
 
     private const GLib.ActionEntry win_actions [] =
     {
-        {"change-size", null,       "s", "'SMALL'", change_size },
-        {"new-game",    new_game    },
-        {"scores",      show_scores }
+        { "background",     change_background  },
+        { "reset-bg",       reset_background   },
+
+        { "change-size",    null,               "s", "'BOARD_SIZE_SMALL'",  change_size     },
+        { "change-theme",   null,               "s", "'balls.svg'",         change_theme    },
+
+        { "new-game",       new_game           },
+        { "scores",         show_scores        }
     };
 
     construct
@@ -166,6 +171,29 @@ private class GameWindow : ApplicationWindow
     * * actions
     \*/
 
+    private inline void change_background ()
+    {
+        string old_color_string = settings.get_string (FiveOrMoreApp.KEY_BACKGROUND_COLOR);
+        ColorChooserDialog dialog = new ColorChooserDialog (_("Background color"), this);
+        if (!dialog.rgba.parse (old_color_string))
+            return;
+        dialog.notify ["rgba"].connect ((dialog, param) => {
+                var color = ((ColorChooserDialog) dialog).get_rgba ();
+                if (!settings.set_string (FiveOrMoreApp.KEY_BACKGROUND_COLOR, color.to_string ()))
+                    warning ("Failed to set color: %s", color.to_string ());
+            });
+        var result = dialog.run ();
+        dialog.destroy ();
+        if (result == ResponseType.OK)
+            return;
+        settings.set_string (FiveOrMoreApp.KEY_BACKGROUND_COLOR, old_color_string);
+    }
+
+    private inline void reset_background ()
+    {
+        settings.reset (FiveOrMoreApp.KEY_BACKGROUND_COLOR);
+    }
+
     private inline void change_size (SimpleAction action, Variant? parameter)
     {
         int size;
@@ -177,6 +205,13 @@ private class GameWindow : ApplicationWindow
             default: assert_not_reached ();
         }
         settings.set_int (FiveOrMoreApp.KEY_SIZE, size);
+    }
+
+    private inline void change_theme (SimpleAction action, Variant? parameter)
+        requires (parameter != null)
+    {
+        action.set_state (parameter);
+        settings.set_string (FiveOrMoreApp.KEY_THEME, ((!) parameter).get_string ());
     }
 
     private inline void new_game (/* SimpleAction action, Variant? parameter */)
