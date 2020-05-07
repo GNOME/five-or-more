@@ -77,8 +77,13 @@ private class GameWindow : ApplicationWindow
         BoardSize board_size = (BoardSize) settings.get_int (FiveOrMoreApp.KEY_SIZE);
         ((SimpleAction) board_size_action).set_state (new Variant.string (board_size.to_string ()));
 
-        game = new Game (settings);
+        game = new Game ((int) board_size);
         theme = new ThemeRenderer (settings);
+
+        settings.changed[FiveOrMoreApp.KEY_SIZE].connect (() => {
+            int size = settings.get_int (FiveOrMoreApp.KEY_SIZE);
+            game.new_game (size);
+        });
 
         set_default_size (settings.get_int ("window-width"), settings.get_int ("window-height"));
         if (settings.get_boolean ("window-is-maximized"))
@@ -214,7 +219,8 @@ private class GameWindow : ApplicationWindow
 
     private inline void new_game (/* SimpleAction action, Variant? parameter */)
     {
-        game.restart ();
+        int size = settings.get_int (FiveOrMoreApp.KEY_SIZE);
+        game.new_game (size);
     }
 
     private inline void show_scores (/* SimpleAction action, Variant? parameter */)

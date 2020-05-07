@@ -27,9 +27,7 @@ private class Game : Object
     internal const int N_ANIMATIONS = 4;
     internal const int N_MATCH = 5;
 
-    private Settings settings;
-
-    private int size;
+    public int size { private get; internal construct set; }
     private NextPiecesGenerator next_pieces_generator;
 
     internal Board? board = null;
@@ -102,16 +100,9 @@ private class Game : Object
 
     internal StatusMessage status_message { get; set; }
 
-    internal Game (Settings settings)
+    internal Game (int size)
     {
-        this.settings = settings;
-
-        size = settings.get_int (FiveOrMoreApp.KEY_SIZE);
-        settings.changed[FiveOrMoreApp.KEY_SIZE].connect (() => {
-            size = settings.get_int (FiveOrMoreApp.KEY_SIZE);
-            restart ();
-        });
-
+        Object (size: size);
         init_game ();
     }
 
@@ -271,8 +262,9 @@ private class Game : Object
         return Source.CONTINUE;
     }
 
-    internal void restart ()
+    internal void new_game (int _size)
     {
+        size = _size;
         init_game ();
     }
 }
