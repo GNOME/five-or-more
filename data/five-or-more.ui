@@ -4,43 +4,56 @@
   <menu id="primary-menu">
     <section>
       <item>
+        <!-- Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game -->
         <attribute name="label" translatable="yes">_New Game</attribute>
         <attribute name="action">win.new-game</attribute>
       </item>
-
+      <submenu>
+        <!-- Translators: submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); allows to change the size of the board -->
+        <attribute name="label" translatable="yes">Si_ze</attribute>
+        <section>
+          <item>
+            <!-- Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game of small size -->
+            <attribute name="label" translatable="yes">_Small</attribute>
+            <attribute name="action">win.change-size</attribute>
+            <attribute name="target">BOARD_SIZE_SMALL</attribute>
+          </item>
+          <item>
+            <!-- Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game of medium size -->
+            <attribute name="label" translatable="yes">_Medium</attribute>
+            <attribute name="action">win.change-size</attribute>
+            <attribute name="target">BOARD_SIZE_MEDIUM</attribute>
+          </item>
+          <item>
+            <!-- Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game of large size -->
+            <attribute name="label" translatable="yes">_Large</attribute>
+            <attribute name="action">win.change-size</attribute>
+            <attribute name="target">BOARD_SIZE_LARGE</attribute>
+          </item>
+        </section>
+      </submenu>
+    </section>
+    <section>
       <item>
+        <!-- Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); opens the Scores dialog -->
         <attribute name="label" translatable="yes">S_cores</attribute>
         <attribute name="action">win.scores</attribute>
       </item>
     </section>
     <section>
       <item>
-        <attribute name="label" translatable="yes">_Small</attribute>
-        <attribute name="action">win.change-size</attribute>
-        <attribute name="target">BOARD_SIZE_SMALL</attribute>
-      </item>
-      <item>
-        <attribute name="label" translatable="yes">_Medium</attribute>
-        <attribute name="action">win.change-size</attribute>
-        <attribute name="target">BOARD_SIZE_MEDIUM</attribute>
-      </item>
-      <item>
-        <attribute name="label" translatable="yes">_Large</attribute>
-        <attribute name="action">win.change-size</attribute>
-        <attribute name="target">BOARD_SIZE_LARGE</attribute>
-      </item>
-    </section>
-    <section>
-      <item>
+        <!-- Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); opens the Preferences dialog -->
         <attribute name="label" translatable="yes">_Preferences</attribute>
         <attribute name="action">app.preferences</attribute>
       </item>
       <item>
+        <!-- Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); opens the help of the application -->
         <attribute name="label" translatable="yes">_Help</attribute>
         <attribute name="action">app.help</attribute>
         <attribute name="accel">F1</attribute>
       </item>
       <item>
+        <!-- Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); opens the About dialog -->
         <attribute name="label" translatable="yes">_About Five or More</attribute>
         <attribute name="action">app.about</attribute>
       </item>
@@ -61,6 +74,7 @@
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="show_close_button">True</property>
+        <!-- Translators: name of the application, as displayed in the window manager -->
         <property name="title" translatable="yes">Five or More</property>
         <child>
           <object class="GtkBox" id="preview_hbox">
@@ -73,6 +87,7 @@
                 <property name="visible">True</property>
                 <property name="ellipsize">PANGO_ELLIPSIZE_END</property>
                 <property name="can_focus">False</property>
+                <!-- Translators: label displayed in the headerbar, introducing the next balls to be added to the board -->
                 <property name="label" translatable="yes">Next:</property>
                 <attributes>
                   <attribute name="weight" value="bold"/>
@@ -105,12 +120,9 @@
       </object>
     </child>
     <child>
-          <object class="GamesGridFrame" id="grid_frame">
-            <property name="visible">True</property>
-          </object>
+      <object class="GamesGridFrame" id="grid_frame">
+        <property name="visible">True</property>
+      </object>
     </child>
   </template>
 </interface>
-
-
-
