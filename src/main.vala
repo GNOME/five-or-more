@@ -34,13 +34,10 @@ private class FiveOrMoreApp: Gtk.Application
 
     private const GLib.ActionEntry action_entries[] =
     {
-        {"new-game", new_game_cb        },
-        {"change-size", null, "s", "'SMALL'", change_size_cb },
-        {"scores", scores_cb            },
-        {"preferences", preferences_cb  },
-        {"help", help_cb                },
-        {"about", about_cb              },
-        {"quit", quit                   }
+        { "preferences",    preferences_cb  },
+        { "help",           help_cb         },
+        { "about",          about_cb        },
+        { "quit",           quit            }
     };
 
     private static int main (string[] args)
@@ -75,43 +72,9 @@ private class FiveOrMoreApp: Gtk.Application
         window = new GameWindow (this, settings);
 
         add_action_entries (action_entries, this);
-        set_accels_for_action ("app.new-game", {"<Primary>n"});
-        set_accels_for_action ("app.quit", {"<Primary>q"});
-        set_accels_for_action ("app.help", {"F1"});
-        var board_size_action = lookup_action("change-size");
-        BoardSize size = (BoardSize)settings.get_int (FiveOrMoreApp.KEY_SIZE);
-        ((SimpleAction)board_size_action).set_state (new Variant.string(size.to_string()));
-    }
-
-    private void new_game_cb ()
-    {
-        if (window == null)
-        {
-            warning ("Failed to restart game");
-            return;
-        }
-        window.restart_game ();
-    }
-
-    private void scores_cb ()
-    {
-        window.show_scores ();
-    }
-
-    private void change_size_cb (SimpleAction action, Variant? parameter)
-    {
-        action.set_state (parameter);
-        switch (parameter.get_string()) {
-            case "BOARD_SIZE_SMALL":
-                window.change_size (BoardSize.SMALL);
-                break;
-            case "BOARD_SIZE_MEDIUM":
-                window.change_size (BoardSize.MEDIUM);
-                break;
-            case "BOARD_SIZE_LARGE":
-                window.change_size (BoardSize.LARGE);
-                break;
-        }
+        set_accels_for_action ("win.new-game",  { "<Primary>n"  });
+        set_accels_for_action ("app.quit",      { "<Primary>q"  });
+        set_accels_for_action ("app.help",      {          "F1" });
     }
 
     private void preferences_cb ()

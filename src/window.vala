@@ -55,11 +55,28 @@ private class GameWindow : ApplicationWindow
             _("Score: %d")
     };
 
+    private const GLib.ActionEntry win_actions [] =
+    {
+        {"change-size", null,       "s", "'SMALL'", change_size },
+        {"new-game",    new_game    },
+        {"scores",      show_scores }
+    };
+
+    construct
+    {
+        add_action_entries (win_actions, this);
+    }
+
     internal GameWindow (Gtk.Application app, GLib.Settings settings)
     {
         Object (application: app);
 
         this.settings = settings;
+
+        var board_size_action = lookup_action ("change-size");
+        BoardSize board_size = (BoardSize) settings.get_int (FiveOrMoreApp.KEY_SIZE);
+        ((SimpleAction) board_size_action).set_state (new Variant.string (board_size.to_string ()));
+
         game = new Game (settings);
         theme = new ThemeRenderer (settings);
 
@@ -86,11 +103,11 @@ private class GameWindow : ApplicationWindow
 
         var importer = new Games.Scores.DirectoryImporter ();
         highscores = new Games.Scores.Context.with_importer ("five-or-more",
-                                                _("Board Size: "),
-                                                this,
-                                                create_category_from_key,
-                                                Games.Scores.Style.POINTS_GREATER_IS_BETTER,
-                                                importer);
+                                                             _("Board Size: "),
+                                                             this,
+                                                             create_category_from_key,
+                                                             Games.Scores.Style.POINTS_GREATER_IS_BETTER,
+                                                             importer);
         game.game_over.connect (score_cb);
     }
 
@@ -128,26 +145,43 @@ private class GameWindow : ApplicationWindow
         show_scores ();
     }
 
-    internal void restart_game ()
-    {
-        game.restart ();
-    }
-
     private void set_status_message (string? message)
     {
         headerbar.set_subtitle (message);
     }
 
-    internal void show_scores ()
+    private Games.Scores.Category? create_category_from_key (string key)
     {
-        highscores.run_dialog ();
+        string? name = category_name_from_key (key);
+        return new Games.Scores.Category (key, name);
     }
 
-    internal void change_size (BoardSize size)
+    private string category_name_from_key (string key)
     {
-        var game_size = settings.get_int ("size");
+        for (int i = 0; i < game.n_categories; i++) {
+            if (Game.scorecats[i].key == key)
+                return Game.scorecats[i].name;
+        }
+        return "";
+    }
 
-        if (game_size == size)
+    /*\
+    * * actions
+    \*/
+
+    private inline void change_size (SimpleAction action, Variant? parameter)
+    {
+        BoardSize new_size;
+        action.set_state (parameter);
+        switch (parameter.get_string()) {
+            case "BOARD_SIZE_SMALL":    new_size = BoardSize.SMALL;     break;
+            case "BOARD_SIZE_MEDIUM":   new_size = BoardSize.MEDIUM;    break;
+            case "BOARD_SIZE_LARGE":    new_size = BoardSize.LARGE;     break;
+            default: assert_not_reached ();
+        }
+
+        var old_size = settings.get_int ("size");
+        if (old_size == new_size)
             return;
 
         primary_menu_button.set_active (false);
@@ -167,30 +201,24 @@ private class GameWindow : ApplicationWindow
             switch (result)
             {
                 case ResponseType.OK:
-                     if (!settings.set_int (FiveOrMoreApp.KEY_SIZE, size))
-                        warning ("Failed to set size: %d", size);
+                     if (!settings.set_int (FiveOrMoreApp.KEY_SIZE, (int) new_size))
+                        warning ("Failed to set size: %d", (int) new_size);
                     break;
                 case ResponseType.CANCEL:
                     break;
             }
         } else {
-            settings.set_int (FiveOrMoreApp.KEY_SIZE, size);
+            settings.set_int (FiveOrMoreApp.KEY_SIZE, (int) new_size);
         }
-
     }
 
-    private Games.Scores.Category? create_category_from_key (string key)
+    private inline void new_game (/* SimpleAction action, Variant? parameter */)
     {
-        string? name = category_name_from_key (key);
-        return new Games.Scores.Category (key, name);
+        game.restart ();
     }
 
-    private string category_name_from_key (string key)
+    private inline void show_scores (/* SimpleAction action, Variant? parameter */)
     {
-        for (int i = 0; i < game.n_categories; i++) {
-            if (Game.scorecats[i].key == key)
-                return Game.scorecats[i].name;
-        }
-        return "";
+        highscores.run_dialog ();
     }
 }

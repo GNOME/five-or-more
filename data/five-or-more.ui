@@ -5,29 +5,28 @@
     <section>
       <item>
         <attribute name="label" translatable="yes">_New Game</attribute>
-        <attribute name="action">app.new-game</attribute>
-        <attribute name="accel">&lt;Primary&gt;n</attribute>
+        <attribute name="action">win.new-game</attribute>
       </item>
 
       <item>
         <attribute name="label" translatable="yes">S_cores</attribute>
-        <attribute name="action">app.scores</attribute>
+        <attribute name="action">win.scores</attribute>
       </item>
     </section>
     <section>
       <item>
         <attribute name="label" translatable="yes">_Small</attribute>
-        <attribute name="action">app.change-size</attribute>
+        <attribute name="action">win.change-size</attribute>
         <attribute name="target">BOARD_SIZE_SMALL</attribute>
       </item>
       <item>
         <attribute name="label" translatable="yes">_Medium</attribute>
-        <attribute name="action">app.change-size</attribute>
+        <attribute name="action">win.change-size</attribute>
         <attribute name="target">BOARD_SIZE_MEDIUM</attribute>
       </item>
       <item>
         <attribute name="label" translatable="yes">_Large</attribute>
-        <attribute name="action">app.change-size</attribute>
+        <attribute name="action">win.change-size</attribute>
         <attribute name="target">BOARD_SIZE_LARGE</attribute>
       </item>
     </section>
