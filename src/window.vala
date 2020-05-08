@@ -168,10 +168,9 @@ private class GameWindow : ApplicationWindow
 
     private string category_name_from_key (string key)
     {
-        for (int i = 0; i < game.n_categories; i++) {
+        for (int i = 0; i < game.n_categories; i++)
             if (Game.scorecats[i].key == key)
-                return Game.scorecats[i].name;
-        }
+                return dpgettext2 (null, "board size", Game.scorecats[i].name); // C_() should work (and works if you rewrite every scorecat name here), but does not
         return "";
     }
 
