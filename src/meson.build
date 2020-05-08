@@ -8,7 +8,6 @@ five_or_more_sources = [
   'next-pieces-widget.vala',
   'piece.vala',
   'piece-generator.vala',
-  'preferences-dialog.vala',
   'theme-renderer.vala',
   'view.vala',
   'window.vala',

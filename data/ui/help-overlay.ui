@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  This file is part of Five-or-More
+
+  Five-or-More is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  Five-or-More is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with Five-or-More.  If not, see <https://www.gnu.org/licenses/>.
+-->
+<interface>
+  <requires lib="gtk+" version="3.12"/>
+  <object class="GtkShortcutsWindow" id="help_overlay">
+    <child>
+      <object class="GtkShortcutsSection">
+        <property name="visible">True</property>
+        <property name="max-height">6</property>
+        <child>
+          <object class="GtkShortcutsGroup">
+            <property name="visible">True</property>
+            <!-- Translators: header of the "Start a new game" (only) shortcut section -->
+            <property name="title" translatable="yes" context="shortcut window">New game</property>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="visible">True</property>
+                <!-- Translators: in the Keyboard Shortcuts window, section "New game"; action of the Ctrl-N shortcut -->
+                <property name="title" translatable="yes" context="shortcut window">Start a new game</property>
+                <property name="accelerator">&lt;Primary&gt;n</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkShortcutsGroup">
+            <property name="visible">True</property>
+            <!-- Translators: header of the "Play with keyboard" shortcut section -->
+            <property name="title" translatable="yes" context="shortcut window">Play with keyboard</property>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="visible">True</property>
+                <!-- Translators: in the Keyboard Shortcuts window, section "Play with keyboard"; action of the arrows -->
+                <property name="title" translatable="yes" context="shortcut window">Move keyboard cursor</property>
+                <property name="accelerator">Left Up Right Down</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="visible">True</property>
+                <!-- Translators: in the Keyboard Shortcuts window, section "Play with keyboard"; action of the return or space keys -->
+                <property name="title" translatable="yes" context="shortcut window">Select or drop tile</property>
+                <property name="accelerator">Return space</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkShortcutsGroup">
+            <property name="visible">True</property>
+            <!-- Translators: header of the "Toggle main menu," "Keyboard shortcuts," "About," "Quit," etc. shortcuts section -->
+            <property name="title" translatable="yes" context="shortcut window">Generic</property>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="visible">True</property>
+                <!-- Translators: in the Keyboard Shortcuts window, section "Generic"; action of the F10 shortcut; toggles the hamburger menu -->
+                <property name="title" translatable="yes" context="shortcut window">Toggle main menu</property>
+                <property name="accelerator">F10</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="visible">True</property>
+                <!-- Translators: in the Keyboard Shortcuts window, section "Generic"; action of the Ctrl-Shift-? shortcut; opens the Keyboard Shortcuts dialog -->
+                <property name="title" translatable="yes" context="shortcut window">Keyboard shortcuts</property>
+                <property name="accelerator">&lt;Primary&gt;question</property> <!-- TODO &lt;Primary&gt;F1 -->
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="visible">True</property>
+                <!-- Translators: in the Keyboard Shortcuts window, section "Generic"; action of the F1 shortcut; opens the help of the application -->
+                <property name="title" translatable="yes" context="shortcut window">Help</property>
+                <property name="accelerator">F1</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="visible">False</property>
+                <!-- Translators: future keyboard shortcut; action of the Shift-F1 shortcut; opens the About dialog -->
+                <property name="title" translatable="yes" context="shortcut window">About</property>
+                <property name="accelerator">&lt;Shift&gt;F1</property> <!-- TODO make this shortcuts work -->
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="visible">True</property>
+                <!-- Translators: in the Keyboard Shortcuts window, section "Generic"; action of the Ctrl-Q shortcut; quits the application -->
+                <property name="title" translatable="yes" context="shortcut window">Quit</property>
+                <property name="accelerator">&lt;Primary&gt;q</property>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

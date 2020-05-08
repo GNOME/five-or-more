@@ -23,6 +23,9 @@
 
 private class FiveOrMoreApp: Gtk.Application
 {
+    /* Translators: name of the application, as displayed in the About dialog, some window managers, etc. */
+    private const string PROGRAM_NAME = _("Five or More");
+
     internal const string KEY_SIZE = "size";
     internal const string KEY_BACKGROUND_COLOR = "background-color";
     internal const string KEY_THEME = "ball-theme";
@@ -30,17 +33,12 @@ private class FiveOrMoreApp: Gtk.Application
     private Settings settings;
 
     private GameWindow window;
-    private PreferencesDialog? preferences_dialog = null;
 
     private const GLib.ActionEntry action_entries[] =
     {
-        {"new-game", new_game_cb        },
-        {"change-size", null, "s", "'SMALL'", change_size_cb },
-        {"scores", scores_cb            },
-        {"preferences", preferences_cb  },
-        {"help", help_cb                },
-        {"about", about_cb              },
-        {"quit", quit                   }
+        { "help",           help_cb         },
+        { "about",          about_cb        },
+        { "quit",           quit            }
     };
 
     private static int main (string[] args)
@@ -50,7 +48,7 @@ private class FiveOrMoreApp: Gtk.Application
         Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
         Intl.textdomain (GETTEXT_PACKAGE);
 
-        Environment.set_application_name (_("Five or More"));
+        Environment.set_application_name (PROGRAM_NAME);
         Gtk.Window.set_default_icon_name ("org.gnome.five-or-more");
 
         FiveOrMoreApp app = new FiveOrMoreApp ();
@@ -75,62 +73,9 @@ private class FiveOrMoreApp: Gtk.Application
         window = new GameWindow (this, settings);
 
         add_action_entries (action_entries, this);
-        set_accels_for_action ("app.new-game", {"<Primary>n"});
-        set_accels_for_action ("app.quit", {"<Primary>q"});
-        set_accels_for_action ("app.help", {"F1"});
-        var board_size_action = lookup_action("change-size");
-        BoardSize size = (BoardSize)settings.get_int (FiveOrMoreApp.KEY_SIZE);
-        ((SimpleAction)board_size_action).set_state (new Variant.string(size.to_string()));
-    }
-
-    private void new_game_cb ()
-    {
-        if (window == null)
-        {
-            warning ("Failed to restart game");
-            return;
-        }
-        window.restart_game ();
-    }
-
-    private void scores_cb ()
-    {
-        window.show_scores ();
-    }
-
-    private void change_size_cb (SimpleAction action, Variant? parameter)
-    {
-        action.set_state (parameter);
-        switch (parameter.get_string()) {
-            case "BOARD_SIZE_SMALL":
-                window.change_size (BoardSize.SMALL);
-                break;
-            case "BOARD_SIZE_MEDIUM":
-                window.change_size (BoardSize.MEDIUM);
-                break;
-            case "BOARD_SIZE_LARGE":
-                window.change_size (BoardSize.LARGE);
-                break;
-        }
-    }
-
-    private void preferences_cb ()
-    {
-        if (preferences_dialog != null)
-        {
-            preferences_dialog.show ();
-            return;
-        }
-
-        preferences_dialog = new PreferencesDialog (settings);
-        preferences_dialog.set_transient_for (window);
-
-        preferences_dialog.response.connect (() => {
-            preferences_dialog.destroy ();
-            preferences_dialog = null;
-        });
-
-        preferences_dialog.show ();
+        set_accels_for_action ("win.new-game",  { "<Primary>n"  });
+        set_accels_for_action ("app.quit",      { "<Primary>q"  });
+        set_accels_for_action ("app.help",      {          "F1" });
     }
 
     private void help_cb ()
@@ -147,38 +92,51 @@ private class FiveOrMoreApp: Gtk.Application
 
     private void about_cb ()
     {
-        /* Appears on the About dialog. */
-        const string authors[] = {
-            "Robert Szokovacs <szo@appaloosacorp.hu>",
-            "Szabolcs B\xc3\xa1n <shooby@gnome.hu>",
-            null
+        string [] authors = {
+            /* Translators: About dialog text, name and email of one of the authors */
+            _("Robert Szokovacs <szo@appaloosacorp.hu>"),
+
+            /* Translators: About dialog text, name and email of one of the authors */
+            _("Szabolcs B\xc3\xa1n <shooby@gnome.hu>")
         };
 
-        const string artists[] = {
-            "Callum McKenzie",
-            "Kenney.nl",
-            "Robert Roth",
+        string [] artists = {
+            /* Translators: About dialog text, name of one of the artists */
+            _("Callum McKenzie"),
+
+            /* Translators: About dialog text, name of a website that provided some artworks */
+            _("kenney.nl"),
+
+            /* Translators: About dialog text, name of one of the artists */
+            _("Robert Roth")
         };
 
-        const string documenters[] = {
-            "Tiffany Antopolski",
-            "Lanka Rathnayaka",
-            null
+        string [] documenters = {
+            /* Translators: About dialog text, name of one of the documenters */
+            _("Tiffany Antopolski"),
+
+            /* Translators: About dialog text, name of one of the documenters */
+            _("Lanka Rathnayaka")
         };
 
-        const string copyright = "Copyright © 1997–2008 Free Software Foundation, Inc.\n
-            Copyright © 2013–2014 Michael Catanzaro";
+        /* Translators: About dialog text, first line of the copyright notice */
+        string copyright = _("Copyright © 1997–2008 Free Software Foundation, Inc.") + "\n"
+
+        /* Translators: About dialog text, second line of the copyright notice */
+                         + _("Copyright © 2013–2014 Michael Catanzaro");
 
         Gtk.show_about_dialog (window,
-                               "program-name", _("Five or More"),
+                               "program-name", PROGRAM_NAME,
                                "logo-icon-name", "org.gnome.five-or-more",
                                "version", VERSION,
+                               /* Translators: About dialog text, describing the application */
                                "comments", _("GNOME port of the once-popular Color Lines game"),
                                "copyright", copyright,
                                "license-type", Gtk.License.GPL_2_0,
                                "authors", authors,
                                "artists", artists,
                                "documenters", documenters,
+                               /* Translators: about dialog text; this string should be replaced by a text crediting yourselves and your translation team, or should be left empty. Do not translate literally! */
                                "translator-credits", _("translator-credits"),
                                "website", "https://wiki.gnome.org/Apps/Five%20or%20more");
     }

@@ -26,13 +26,6 @@ foreach file: ['balls.svg', 'shapes.svg', 'tango.svg']
   )
 endforeach
 
-# UI files
-foreach file: ['five-or-more.ui', 'five-or-more-preferences.ui']
-  install_data (file,
-    install_dir: join_paths (pkgdata_dir)
-  )
-endforeach
-
 # Icons
 foreach size: [ '16x16', '22x22', '24x24', '32x32', '48x48', '256x256', '512x512' ]
     install_data(join_paths('icons', 'hicolor', size, 'org.gnome.five-or-more.png'),

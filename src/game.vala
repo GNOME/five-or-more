@@ -27,9 +27,7 @@ private class Game : Object
     internal const int N_ANIMATIONS = 4;
     internal const int N_MATCH = 5;
 
-    private Settings settings;
-
-    private int size;
+    public int size { private get; internal construct set; }
     private NextPiecesGenerator next_pieces_generator;
 
     internal Board? board = null;
@@ -83,40 +81,40 @@ private class Game : Object
         }
     }
 
-    private const GameDifficulty[] game_difficulty = {
+    internal const GameDifficulty[] game_difficulty = {
         { -1, -1, -1, -1 },
-        { 7, 7, 5, 3 },
-        { 9, 9, 7, 3 },
-        { 20, 15, 7, 7 }
+        {  7,  7,  5,  3 },
+        {  9,  9,  7,  3 },
+        { 20, 15,  7,  7 }
     };
 
     internal const KeyValue scorecats[] = {
+        /* Translators: board size, as displayed in the Scores dialog */
         { "Small",  NC_("board size", "Small")  },
+
+        /* Translators: board size, as displayed in the Scores dialog */
         { "Medium", NC_("board size", "Medium") },
+
+        /* Translators: board size, as displayed in the Scores dialog */
         { "Large",  NC_("board size", "Large")  }
     };
 
+    internal bool is_game_over { internal get; private set; default = false; }
     internal signal void game_over ();
     internal int n_categories = 3;
     internal string score_current_category = null;
 
     internal StatusMessage status_message { get; set; }
 
-    internal Game (Settings settings)
+    internal Game (int size)
     {
-        this.settings = settings;
-
-        size = settings.get_int (FiveOrMoreApp.KEY_SIZE);
-        settings.changed[FiveOrMoreApp.KEY_SIZE].connect (() => {
-            size = settings.get_int (FiveOrMoreApp.KEY_SIZE);
-            restart ();
-        });
-
+        Object (size: size);
         init_game ();
     }
 
     private void init_game ()
     {
+        is_game_over = false;
         var n_rows = game_difficulty[size].n_rows;
         var n_cols = game_difficulty[size].n_cols;
         this.n_next_pieces = game_difficulty[size].n_next_pieces;
@@ -196,6 +194,7 @@ private class Game : Object
     {
         if (n_cells - n_filled_cells == 0)
         {
+            is_game_over = true;
             game_over ();
             return true;
         }
@@ -271,19 +270,11 @@ private class Game : Object
         return Source.CONTINUE;
     }
 
-    internal void restart ()
+    internal void new_game (int _size)
     {
+        size = _size;
         init_game ();
     }
-}
-
-private enum BoardSize
-{
-    UNSET,
-    SMALL,
-    MEDIUM,
-    LARGE,
-    MAX_SIZE,
 }
 
 private struct GameDifficulty

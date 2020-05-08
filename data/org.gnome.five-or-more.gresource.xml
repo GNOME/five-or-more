@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gresources>
   <gresource prefix="/org/gnome/five-or-more/ui">
-    <file preprocess="xml-stripblanks">five-or-more.ui</file>
-    <file preprocess="xml-stripblanks" alias="preferences-dialog.ui">five-or-more-preferences.ui</file>
+    <file preprocess="xml-stripblanks" alias="five-or-more.ui">ui/five-or-more.ui</file>
+  </gresource>
+  <gresource prefix="/org/gnome/five-or-more/gtk">
+    <file preprocess="xml-stripblanks" alias="help-overlay.ui">ui/help-overlay.ui</file>
   </gresource>
 </gresources>

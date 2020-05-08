@@ -33,9 +33,6 @@ private class GameWindow : ApplicationWindow
     private Box preview_hbox;
 
     [GtkChild]
-    private MenuButton primary_menu_button;
-
-    [GtkChild]
     private Games.GridFrame grid_frame;
 
     private GLib.Settings? settings = null;
@@ -49,18 +46,55 @@ private class GameWindow : ApplicationWindow
 
     private Games.Scores.Context highscores;
     private string[] status = {
-            _("Match five objects of the same type in a row to score!"),
-            _("You can’t move there!"),
-            _("Game Over!"),
-            _("Score: %d")
+        /* Translators: subtitle of the headerbar, at the application start */
+        _("Match five objects of the same type in a row to score!"),
+
+        /* Translators: subtitle of the headerbar, when the user clicked on a tile where the selected marble cannot move */
+        _("You can’t move there!"),
+
+        /* Translators: subtitle of the headerbar, at the end of a game */
+        _("Game Over!"),
+
+        /* Translators: subtitle of the headerbar, during a game; the %d is replaced by the score */
+        _("Score: %d")
     };
+
+    private const GLib.ActionEntry win_actions [] =
+    {
+        { "background",     change_background  },
+        { "reset-bg",       reset_background   },
+
+        { "change-size",    null,               "s", "'small'",     change_size     },
+        { "change-theme",   null,               "s", "'balls.svg'", change_theme    },
+
+        { "new-game",       new_game           },
+        { "scores",         show_scores        }
+    };
+
+    construct
+    {
+        add_action_entries (win_actions, this);
+    }
 
     internal GameWindow (Gtk.Application app, GLib.Settings settings)
     {
         Object (application: app);
 
         this.settings = settings;
-        game = new Game (settings);
+
+        var board_size_action = lookup_action ("change-size");
+        string board_size_string;
+        int board_size = settings.get_int (FiveOrMoreApp.KEY_SIZE);
+        switch (board_size)
+        {
+            case 1: board_size_string = "small";    break;
+            case 2: board_size_string = "medium";   break;
+            case 3: board_size_string = "large";    break;
+            default: assert_not_reached ();
+        }
+        ((SimpleAction) board_size_action).set_state (board_size_string);
+
+        game = new Game (board_size);
         theme = new ThemeRenderer (settings);
 
         set_default_size (settings.get_int ("window-width"), settings.get_int ("window-height"));
@@ -86,11 +120,12 @@ private class GameWindow : ApplicationWindow
 
         var importer = new Games.Scores.DirectoryImporter ();
         highscores = new Games.Scores.Context.with_importer ("five-or-more",
-                                                _("Board Size: "),
-                                                this,
-                                                create_category_from_key,
-                                                Games.Scores.Style.POINTS_GREATER_IS_BETTER,
-                                                importer);
+                                                             /* Translators: text in the Scores dialog, introducing the combobox */
+                                                             _("Board Size: "),
+                                                             this,
+                                                             create_category_from_key,
+                                                             Games.Scores.Style.POINTS_GREATER_IS_BETTER,
+                                                             importer);
         game.game_over.connect (score_cb);
     }
 
@@ -128,55 +163,9 @@ private class GameWindow : ApplicationWindow
         show_scores ();
     }
 
-    internal void restart_game ()
-    {
-        game.restart ();
-    }
-
     private void set_status_message (string? message)
     {
         headerbar.set_subtitle (message);
-    }
-
-    internal void show_scores ()
-    {
-        highscores.run_dialog ();
-    }
-
-    internal void change_size (BoardSize size)
-    {
-        var game_size = settings.get_int ("size");
-
-        if (game_size == size)
-            return;
-
-        primary_menu_button.set_active (false);
-
-        if (game.score > 0) {
-            var flags = DialogFlags.DESTROY_WITH_PARENT;
-            var restart_game_dialog = new MessageDialog (this,
-                                                         flags,
-                                                         MessageType.WARNING,
-                                                         ButtonsType.NONE,
-                                                         _("Are you sure you want to restart the game?"));
-            restart_game_dialog.add_buttons (_("_Cancel"), ResponseType.CANCEL,
-                                             _("_Restart"), ResponseType.OK);
-
-            var result = restart_game_dialog.run ();
-            restart_game_dialog.destroy ();
-            switch (result)
-            {
-                case ResponseType.OK:
-                     if (!settings.set_int (FiveOrMoreApp.KEY_SIZE, size))
-                        warning ("Failed to set size: %d", size);
-                    break;
-                case ResponseType.CANCEL:
-                    break;
-            }
-        } else {
-            settings.set_int (FiveOrMoreApp.KEY_SIZE, size);
-        }
-
     }
 
     private Games.Scores.Category? create_category_from_key (string key)
@@ -187,10 +176,91 @@ private class GameWindow : ApplicationWindow
 
     private string category_name_from_key (string key)
     {
-        for (int i = 0; i < game.n_categories; i++) {
+        for (int i = 0; i < game.n_categories; i++)
             if (Game.scorecats[i].key == key)
-                return Game.scorecats[i].name;
-        }
+                return dpgettext2 (null, "board size", Game.scorecats[i].name); // C_() should work (and works if you rewrite every scorecat name here), but does not
         return "";
+    }
+
+    /*\
+    * * actions
+    \*/
+
+    private inline void change_background ()
+    {
+        string old_color_string = settings.get_string (FiveOrMoreApp.KEY_BACKGROUND_COLOR);
+        /* Translators: title of the ColorChooser dialog that appears from the hamburger menu > "Appearance" submenu > "Background" section > "Select color" entry */
+        ColorChooserDialog dialog = new ColorChooserDialog (_("Background color"), this);
+        if (!dialog.rgba.parse (old_color_string))
+            return;
+        dialog.notify ["rgba"].connect ((dialog, param) => {
+                var color = ((ColorChooserDialog) dialog).get_rgba ();
+                if (!settings.set_string (FiveOrMoreApp.KEY_BACKGROUND_COLOR, color.to_string ()))
+                    warning ("Failed to set color: %s", color.to_string ());
+            });
+        var result = dialog.run ();
+        dialog.destroy ();
+        if (result == ResponseType.OK)
+            return;
+        settings.set_string (FiveOrMoreApp.KEY_BACKGROUND_COLOR, old_color_string);
+    }
+
+    private inline void reset_background ()
+    {
+        settings.reset (FiveOrMoreApp.KEY_BACKGROUND_COLOR);
+    }
+
+    private inline void change_size (SimpleAction action, Variant? parameter)
+        requires (parameter != null)
+    {
+        int size;
+        action.set_state (parameter);
+        switch (parameter.get_string ()) {
+            case "small":   size = 1;   break;
+            case "medium":  size = 2;   break;
+            case "large":   size = 3;   break;
+            default: assert_not_reached ();
+        }
+        settings.set_int (FiveOrMoreApp.KEY_SIZE, size);
+    }
+
+    private inline void change_theme (SimpleAction action, Variant? parameter)
+        requires (parameter != null)
+    {
+        action.set_state (parameter);
+        settings.set_string (FiveOrMoreApp.KEY_THEME, ((!) parameter).get_string ());
+    }
+
+    private inline void new_game (/* SimpleAction action, Variant? parameter */)
+    {
+        int size = settings.get_int (FiveOrMoreApp.KEY_SIZE);
+        int n_rows = Game.game_difficulty[size].n_rows;
+        int n_cols = Game.game_difficulty[size].n_cols;
+        if (game.score > 0 && !game.is_game_over) {
+            var flags = DialogFlags.DESTROY_WITH_PARENT;
+            var restart_game_dialog = new MessageDialog (this,
+                                                         flags,
+                                                         MessageType.WARNING,
+                                                         ButtonsType.NONE,
+                                                         /* Translators: text of a dialog that appears when the user starts a new game while the score is not null */
+                                                         _("Are you sure you want to start a new %u × %u game?").printf (n_rows, n_cols));
+
+            /* Translators: button of a dialog that appears when the user starts a new game while the score is not null; the other answer is "_Restart" */
+            restart_game_dialog.add_buttons (_("_Cancel"), ResponseType.CANCEL,
+
+            /* Translators: button of a dialog that appears when the user starts a new game while the score is not null; the other answer is "_Cancel" */
+                                             _("_Restart"), ResponseType.OK);
+
+            var result = restart_game_dialog.run ();
+            restart_game_dialog.destroy ();
+            if (result != ResponseType.OK)
+                return;
+        }
+        game.new_game (size);
+    }
+
+    private inline void show_scores (/* SimpleAction action, Variant? parameter */)
+    {
+        highscores.run_dialog ();
     }
 }
