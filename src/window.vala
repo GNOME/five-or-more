@@ -35,7 +35,7 @@ private class GameWindow : ApplicationWindow
     [GtkChild]
     private Games.GridFrame grid_frame;
 
-    private GLib.Settings? settings = null;
+    public GLib.Settings settings { private get; protected construct; }
     private bool window_tiled;
     internal bool window_maximized { internal get; private set; }
     internal int window_width { internal get; private set; }
@@ -74,13 +74,6 @@ private class GameWindow : ApplicationWindow
     construct
     {
         add_action_entries (win_actions, this);
-    }
-
-    internal GameWindow (Gtk.Application app, GLib.Settings settings)
-    {
-        Object (application: app);
-
-        this.settings = settings;
 
         var board_size_action = lookup_action ("change-size");
         string board_size_string;
@@ -127,6 +120,11 @@ private class GameWindow : ApplicationWindow
                                                              Games.Scores.Style.POINTS_GREATER_IS_BETTER,
                                                              importer);
         game.game_over.connect (score_cb);
+    }
+
+    internal GameWindow (GLib.Settings settings)
+    {
+        Object (settings: settings);
     }
 
     protected override bool window_state_event (Gdk.EventWindowState event)
