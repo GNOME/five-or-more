@@ -106,6 +106,8 @@ private class GameWindow : ApplicationWindow
         set_status_message (status[game.status_message]);
 
         View game_view = new View (game, theme);
+        SimpleAction reset_background_action = (SimpleAction) lookup_action ("reset-bg");
+        game_view.notify ["background-color"].connect (() => { reset_background_action.set_enabled (game_view.background_color != View.default_background_color); });
         settings.bind (FiveOrMoreApp.KEY_BACKGROUND_COLOR, game_view, "background-color", SettingsBindFlags.DEFAULT);
         grid_frame.add (game_view);
         game_view.show ();

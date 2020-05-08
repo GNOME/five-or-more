@@ -53,9 +53,9 @@ private class View : DrawingArea
     private EventControllerKey key_controller;          // for keeping in memory
     private GestureMultiPress click_controller;         // for keeping in memory
 
-    private const string default_background_color = "#7590AE";
+    internal const string default_background_color = "rgb(117,144,174)";
     private string _background_color = default_background_color;
-    public string background_color
+    internal string background_color
     {
         internal get { return _background_color; }
         internal set
