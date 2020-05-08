@@ -105,7 +105,8 @@ private class GameWindow : ApplicationWindow
         game.notify["status-message"].connect ((s, p) => { set_status_message (status[game.status_message].printf(game.score)); });
         set_status_message (status[game.status_message]);
 
-        View game_view = new View (settings, game, theme);
+        View game_view = new View (game, theme);
+        settings.bind (FiveOrMoreApp.KEY_BACKGROUND_COLOR, game_view, "background-color", SettingsBindFlags.DEFAULT);
         grid_frame.add (game_view);
         game_view.show ();
 
