@@ -60,11 +60,6 @@ private class FiveOrMoreApp: Gtk.Application
         Object (application_id: "org.gnome.five-or-more", flags: ApplicationFlags.FLAGS_NONE);
     }
 
-    protected override void activate ()
-    {
-        window.show ();
-    }
-
     protected override void startup ()
     {
         base.startup ();
@@ -77,6 +72,11 @@ private class FiveOrMoreApp: Gtk.Application
         set_accels_for_action ("win.new-game",  { "<Primary>n"  });
         set_accels_for_action ("app.quit",      { "<Primary>q"  });
         set_accels_for_action ("app.help",      {          "F1" });
+    }
+
+    protected override void activate ()
+    {
+        window.present ();
     }
 
     private void help_cb ()
