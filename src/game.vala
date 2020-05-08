@@ -83,14 +83,19 @@ private class Game : Object
 
     internal const GameDifficulty[] game_difficulty = {
         { -1, -1, -1, -1 },
-        { 7, 7, 5, 3 },
-        { 9, 9, 7, 3 },
-        { 20, 15, 7, 7 }
+        {  7,  7,  5,  3 },
+        {  9,  9,  7,  3 },
+        { 20, 15,  7,  7 }
     };
 
     internal const KeyValue scorecats[] = {
+        /* Translators: board size, as displayed in the Scores dialog */
         { "Small",  NC_("board size", "Small")  },
+
+        /* Translators: board size, as displayed in the Scores dialog */
         { "Medium", NC_("board size", "Medium") },
+
+        /* Translators: board size, as displayed in the Scores dialog */
         { "Large",  NC_("board size", "Large")  }
     };
 
