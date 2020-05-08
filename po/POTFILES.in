@@ -4,6 +4,7 @@ data/org.gnome.five-or-more.appdata.xml.in
 data/org.gnome.five-or-more.desktop.in
 data/org.gnome.five-or-more.gschema.xml
 data/ui/five-or-more.ui
+data/ui/help-overlay.ui
 src/game.vala
 src/main.vala
 src/window.vala
