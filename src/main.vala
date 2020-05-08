@@ -70,7 +70,8 @@ private class FiveOrMoreApp: Gtk.Application
         base.startup ();
 
         settings = new Settings ("org.gnome.five-or-more");
-        window = new GameWindow (this, settings);
+        window = new GameWindow (settings);
+        add_window (window);
 
         add_action_entries (action_entries, this);
         set_accels_for_action ("win.new-game",  { "<Primary>n"  });
