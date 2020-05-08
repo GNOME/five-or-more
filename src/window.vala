@@ -44,7 +44,6 @@ private class GameWindow : ApplicationWindow
     private Game? game = null;
     private ThemeRenderer? theme = null;
 
-    private Games.Scores.Context highscores;
     private string[] status = {
         /* Translators: subtitle of the headerbar, at the application start */
         _("Match five objects of the same type in a row to score!"),
@@ -64,8 +63,8 @@ private class GameWindow : ApplicationWindow
         { "background",     change_background  },
         { "reset-bg",       reset_background   },
 
-        { "change-size",    null,               "s", "'small'",     change_size     },
-        { "change-theme",   null,               "s", "'balls.svg'", change_theme    },
+        { "change-size",    null,   "s", "'small'",     change_size     },
+        { "change-theme",   null,   "s", "'balls.svg'", change_theme    },
 
         { "new-game",       new_game           },
         { "scores",         show_scores        }
@@ -114,15 +113,7 @@ private class GameWindow : ApplicationWindow
 
         grid_frame.show ();
 
-        var importer = new Games.Scores.DirectoryImporter ();
-        highscores = new Games.Scores.Context.with_importer ("five-or-more",
-                                                             /* Translators: text in the Scores dialog, introducing the combobox */
-                                                             _("Board Size: "),
-                                                             this,
-                                                             create_category_from_key,
-                                                             Games.Scores.Style.POINTS_GREATER_IS_BETTER,
-                                                             importer);
-        game.game_over.connect (score_cb);
+        init_scores_dialog ();
     }
 
     protected override bool window_state_event (Gdk.EventWindowState event)
@@ -156,9 +147,32 @@ private class GameWindow : ApplicationWindow
         settings.apply ();
     }
 
-    private void score_cb ()
+    private void set_status_message (string? message)
     {
+        headerbar.set_subtitle (message);
+    }
 
+    /*\
+    * * Scores dialog
+    \*/
+
+    private Games.Scores.Context highscores;
+
+    private inline void init_scores_dialog ()
+    {
+        var importer = new Games.Scores.DirectoryImporter ();
+        highscores = new Games.Scores.Context.with_importer ("five-or-more",
+                                                             /* Translators: text in the Scores dialog, introducing the combobox */
+                                                             _("Board Size: "),
+                                                             this,
+                                                             create_category_from_key,
+                                                             Games.Scores.Style.POINTS_GREATER_IS_BETTER,
+                                                             importer);
+        game.game_over.connect (score_cb);
+    }
+
+    private inline void score_cb ()
+    {
         string name = category_name_from_key (game.score_current_category);
         var current_category = new Games.Scores.Category (game.score_current_category, name);
         highscores.add_score.begin (game.score,
@@ -168,18 +182,13 @@ private class GameWindow : ApplicationWindow
         show_scores ();
     }
 
-    private void set_status_message (string? message)
-    {
-        headerbar.set_subtitle (message);
-    }
-
-    private Games.Scores.Category? create_category_from_key (string key)
+    private inline Games.Scores.Category? create_category_from_key (string key)
     {
         string? name = category_name_from_key (key);
         return new Games.Scores.Category (key, name);
     }
 
-    private string category_name_from_key (string key)
+    private inline string category_name_from_key (string key)
     {
         for (int i = 0; i < game.n_categories; i++)
             if (Game.scorecats[i].key == key)
@@ -187,8 +196,13 @@ private class GameWindow : ApplicationWindow
         return "";
     }
 
+    private inline void show_scores (/* SimpleAction action, Variant? parameter */)
+    {
+        highscores.run_dialog ();
+    }
+
     /*\
-    * * actions
+    * * Appearance actions
     \*/
 
     private inline void change_background ()
@@ -215,6 +229,17 @@ private class GameWindow : ApplicationWindow
         settings.reset (FiveOrMoreApp.KEY_BACKGROUND_COLOR);
     }
 
+    private inline void change_theme (SimpleAction action, Variant? parameter)
+        requires (parameter != null)
+    {
+        action.set_state (parameter);
+        settings.set_string (FiveOrMoreApp.KEY_THEME, ((!) parameter).get_string ());
+    }
+
+    /*\
+    * * new game actions
+    \*/
+
     private inline void change_size (SimpleAction action, Variant? parameter)
         requires (parameter != null)
     {
@@ -227,13 +252,6 @@ private class GameWindow : ApplicationWindow
             default: assert_not_reached ();
         }
         settings.set_int (FiveOrMoreApp.KEY_SIZE, size);
-    }
-
-    private inline void change_theme (SimpleAction action, Variant? parameter)
-        requires (parameter != null)
-    {
-        action.set_state (parameter);
-        settings.set_string (FiveOrMoreApp.KEY_THEME, ((!) parameter).get_string ());
     }
 
     private inline void new_game (/* SimpleAction action, Variant? parameter */)
@@ -262,10 +280,5 @@ private class GameWindow : ApplicationWindow
                 return;
         }
         game.new_game (size);
-    }
-
-    private inline void show_scores (/* SimpleAction action, Variant? parameter */)
-    {
-        highscores.run_dialog ();
     }
 }
