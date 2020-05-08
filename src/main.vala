@@ -23,6 +23,9 @@
 
 private class FiveOrMoreApp: Gtk.Application
 {
+    /* Translators: name of the application, as displayed in the About dialog, some window managers, etc. */
+    private const string PROGRAM_NAME = _("Five or More");
+
     internal const string KEY_SIZE = "size";
     internal const string KEY_BACKGROUND_COLOR = "background-color";
     internal const string KEY_THEME = "ball-theme";
@@ -45,7 +48,7 @@ private class FiveOrMoreApp: Gtk.Application
         Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
         Intl.textdomain (GETTEXT_PACKAGE);
 
-        Environment.set_application_name (_("Five or More"));
+        Environment.set_application_name (PROGRAM_NAME);
         Gtk.Window.set_default_icon_name ("org.gnome.five-or-more");
 
         FiveOrMoreApp app = new FiveOrMoreApp ();
@@ -89,38 +92,51 @@ private class FiveOrMoreApp: Gtk.Application
 
     private void about_cb ()
     {
-        /* Appears on the About dialog. */
-        const string authors[] = {
-            "Robert Szokovacs <szo@appaloosacorp.hu>",
-            "Szabolcs B\xc3\xa1n <shooby@gnome.hu>",
-            null
+        string [] authors = {
+            /* Translators: About dialog text, name and email of one of the authors */
+            _("Robert Szokovacs <szo@appaloosacorp.hu>"),
+
+            /* Translators: About dialog text, name and email of one of the authors */
+            _("Szabolcs B\xc3\xa1n <shooby@gnome.hu>")
         };
 
-        const string artists[] = {
-            "Callum McKenzie",
-            "Kenney.nl",
-            "Robert Roth",
+        string [] artists = {
+            /* Translators: About dialog text, name of one of the artists */
+            _("Callum McKenzie"),
+
+            /* Translators: About dialog text, name of a website that provided some artworks */
+            _("kenney.nl"),
+
+            /* Translators: About dialog text, name of one of the artists */
+            _("Robert Roth")
         };
 
-        const string documenters[] = {
-            "Tiffany Antopolski",
-            "Lanka Rathnayaka",
-            null
+        string [] documenters = {
+            /* Translators: About dialog text, name of one of the documenters */
+            _("Tiffany Antopolski"),
+
+            /* Translators: About dialog text, name of one of the documenters */
+            _("Lanka Rathnayaka")
         };
 
-        const string copyright = "Copyright © 1997–2008 Free Software Foundation, Inc.\n
-            Copyright © 2013–2014 Michael Catanzaro";
+        /* Translators: About dialog text, first line of the copyright notice */
+        string copyright = _("Copyright © 1997–2008 Free Software Foundation, Inc.") + "\n"
+
+        /* Translators: About dialog text, second line of the copyright notice */
+                         + _("Copyright © 2013–2014 Michael Catanzaro");
 
         Gtk.show_about_dialog (window,
-                               "program-name", _("Five or More"),
+                               "program-name", PROGRAM_NAME,
                                "logo-icon-name", "org.gnome.five-or-more",
                                "version", VERSION,
+                               /* Translators: About dialog text, describing the application */
                                "comments", _("GNOME port of the once-popular Color Lines game"),
                                "copyright", copyright,
                                "license-type", Gtk.License.GPL_2_0,
                                "authors", authors,
                                "artists", artists,
                                "documenters", documenters,
+                               /* Translators: about dialog text; this string should be replaced by a text crediting yourselves and your translation team, or should be left empty. Do not translate literally! */
                                "translator-credits", _("translator-credits"),
                                "website", "https://wiki.gnome.org/Apps/Five%20or%20more");
     }

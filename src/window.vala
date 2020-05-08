@@ -46,10 +46,17 @@ private class GameWindow : ApplicationWindow
 
     private Games.Scores.Context highscores;
     private string[] status = {
-            _("Match five objects of the same type in a row to score!"),
-            _("You can’t move there!"),
-            _("Game Over!"),
-            _("Score: %d")
+        /* Translators: subtitle of the headerbar, at the application start */
+        _("Match five objects of the same type in a row to score!"),
+
+        /* Translators: subtitle of the headerbar, when the user clicked on a tile where the selected marble cannot move */
+        _("You can’t move there!"),
+
+        /* Translators: subtitle of the headerbar, at the end of a game */
+        _("Game Over!"),
+
+        /* Translators: subtitle of the headerbar, during a game; the %d is replaced by the score */
+        _("Score: %d")
     };
 
     private const GLib.ActionEntry win_actions [] =
@@ -113,6 +120,7 @@ private class GameWindow : ApplicationWindow
 
         var importer = new Games.Scores.DirectoryImporter ();
         highscores = new Games.Scores.Context.with_importer ("five-or-more",
+                                                             /* Translators: text in the Scores dialog, introducing the combobox */
                                                              _("Board Size: "),
                                                              this,
                                                              create_category_from_key,
@@ -181,6 +189,7 @@ private class GameWindow : ApplicationWindow
     private inline void change_background ()
     {
         string old_color_string = settings.get_string (FiveOrMoreApp.KEY_BACKGROUND_COLOR);
+        /* Translators: title of the ColorChooser dialog that appears from the hamburger menu > "Appearance" submenu > "Background" section > "Select color" entry */
         ColorChooserDialog dialog = new ColorChooserDialog (_("Background color"), this);
         if (!dialog.rgba.parse (old_color_string))
             return;
@@ -233,8 +242,13 @@ private class GameWindow : ApplicationWindow
                                                          flags,
                                                          MessageType.WARNING,
                                                          ButtonsType.NONE,
+                                                         /* Translators: text of a dialog that appears when the user starts a new game while the score is not null */
                                                          _("Are you sure you want to start a new %u × %u game?").printf (n_rows, n_cols));
+
+            /* Translators: button of a dialog that appears when the user starts a new game while the score is not null; the other answer is "_Restart" */
             restart_game_dialog.add_buttons (_("_Cancel"), ResponseType.CANCEL,
+
+            /* Translators: button of a dialog that appears when the user starts a new game while the score is not null; the other answer is "_Cancel" */
                                              _("_Restart"), ResponseType.OK);
 
             var result = restart_game_dialog.run ();
