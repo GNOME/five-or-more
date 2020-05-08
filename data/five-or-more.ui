@@ -16,19 +16,19 @@
             <!-- Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game of small size -->
             <attribute name="label" translatable="yes">_Small</attribute>
             <attribute name="action">win.change-size</attribute>
-            <attribute name="target">BOARD_SIZE_SMALL</attribute>
+            <attribute name="target">small</attribute>
           </item>
           <item>
             <!-- Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game of medium size -->
             <attribute name="label" translatable="yes">_Medium</attribute>
             <attribute name="action">win.change-size</attribute>
-            <attribute name="target">BOARD_SIZE_MEDIUM</attribute>
+            <attribute name="target">medium</attribute>
           </item>
           <item>
             <!-- Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game of large size -->
             <attribute name="label" translatable="yes">_Large</attribute>
             <attribute name="action">win.change-size</attribute>
-            <attribute name="target">BOARD_SIZE_LARGE</attribute>
+            <attribute name="target">large</attribute>
           </item>
         </section>
         <section>

@@ -57,8 +57,8 @@ private class GameWindow : ApplicationWindow
         { "background",     change_background  },
         { "reset-bg",       reset_background   },
 
-        { "change-size",    null,               "s", "'BOARD_SIZE_SMALL'",  change_size     },
-        { "change-theme",   null,               "s", "'balls.svg'",         change_theme    },
+        { "change-size",    null,               "s", "'small'",     change_size     },
+        { "change-theme",   null,               "s", "'balls.svg'", change_theme    },
 
         { "new-game",       new_game           },
         { "scores",         show_scores        }
@@ -76,10 +76,18 @@ private class GameWindow : ApplicationWindow
         this.settings = settings;
 
         var board_size_action = lookup_action ("change-size");
-        BoardSize board_size = (BoardSize) settings.get_int (FiveOrMoreApp.KEY_SIZE);
-        ((SimpleAction) board_size_action).set_state (new Variant.string (board_size.to_string ()));
+        string board_size_string;
+        int board_size = settings.get_int (FiveOrMoreApp.KEY_SIZE);
+        switch (board_size)
+        {
+            case 1: board_size_string = "small";    break;
+            case 2: board_size_string = "medium";   break;
+            case 3: board_size_string = "large";    break;
+            default: assert_not_reached ();
+        }
+        ((SimpleAction) board_size_action).set_state (board_size_string);
 
-        game = new Game ((int) board_size);
+        game = new Game (board_size);
         theme = new ThemeRenderer (settings);
 
         set_default_size (settings.get_int ("window-width"), settings.get_int ("window-height"));
@@ -195,13 +203,14 @@ private class GameWindow : ApplicationWindow
     }
 
     private inline void change_size (SimpleAction action, Variant? parameter)
+        requires (parameter != null)
     {
         int size;
         action.set_state (parameter);
-        switch (parameter.get_string()) {
-            case "BOARD_SIZE_SMALL":    size = (int) BoardSize.SMALL;   break;
-            case "BOARD_SIZE_MEDIUM":   size = (int) BoardSize.MEDIUM;  break;
-            case "BOARD_SIZE_LARGE":    size = (int) BoardSize.LARGE;   break;
+        switch (parameter.get_string ()) {
+            case "small":   size = 1;   break;
+            case "medium":  size = 2;   break;
+            case "large":   size = 3;   break;
             default: assert_not_reached ();
         }
         settings.set_int (FiveOrMoreApp.KEY_SIZE, size);

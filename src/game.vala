@@ -272,15 +272,6 @@ private class Game : Object
     }
 }
 
-private enum BoardSize
-{
-    UNSET,
-    SMALL,
-    MEDIUM,
-    LARGE,
-    MAX_SIZE,
-}
-
 private struct GameDifficulty
 {
     public int n_cols;
