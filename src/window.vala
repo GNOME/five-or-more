@@ -35,11 +35,11 @@ private class GameWindow : ApplicationWindow
     [GtkChild]
     private Games.GridFrame grid_frame;
 
-    public GLib.Settings settings { private get; protected construct; }
+    private GLib.Settings settings = new GLib.Settings ("org.gnome.five-or-more");
     private bool window_tiled;
-    internal bool window_maximized { internal get; private set; }
-    internal int window_width { internal get; private set; }
-    internal int window_height { internal get; private set; }
+    private bool window_maximized;
+    private int window_width;
+    private int window_height;
 
     private Game? game = null;
     private ThemeRenderer? theme = null;
@@ -125,11 +125,6 @@ private class GameWindow : ApplicationWindow
         game.game_over.connect (score_cb);
     }
 
-    internal GameWindow (GLib.Settings settings)
-    {
-        Object (settings: settings);
-    }
-
     protected override bool window_state_event (Gdk.EventWindowState event)
     {
         if ((event.changed_mask & Gdk.WindowState.MAXIMIZED) != 0)
@@ -150,6 +145,15 @@ private class GameWindow : ApplicationWindow
 
         window_width = allocation.width;
         window_height = allocation.height;
+    }
+
+    internal inline void on_shutdown ()
+    {
+        settings.delay ();
+        settings.set_int ("window-width", window_width);
+        settings.set_int ("window-height", window_height);
+        settings.set_boolean ("window-is-maximized", window_maximized);
+        settings.apply ();
     }
 
     private void score_cb ()

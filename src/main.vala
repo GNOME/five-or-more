@@ -30,8 +30,6 @@ private class FiveOrMoreApp: Gtk.Application
     internal const string KEY_BACKGROUND_COLOR = "background-color";
     internal const string KEY_THEME = "ball-theme";
 
-    private Settings settings;
-
     private GameWindow window;
 
     private const GLib.ActionEntry action_entries[] =
@@ -64,8 +62,7 @@ private class FiveOrMoreApp: Gtk.Application
     {
         base.startup ();
 
-        settings = new Settings ("org.gnome.five-or-more");
-        window = new GameWindow (settings);
+        window = new GameWindow ();
         add_window (window);
 
         add_action_entries (action_entries, this);
@@ -144,12 +141,7 @@ private class FiveOrMoreApp: Gtk.Application
 
     protected override void shutdown ()
     {
-        settings.delay ();
-        settings.set_int ("window-width", window.window_width);
-        settings.set_int ("window-height", window.window_height);
-        settings.set_boolean ("window-is-maximized", window.window_maximized);
-        settings.apply ();
-
+        window.on_shutdown ();
         base.shutdown ();
     }
 }
