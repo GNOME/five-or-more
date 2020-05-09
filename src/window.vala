@@ -74,6 +74,15 @@ private class GameWindow : ApplicationWindow
     {
         add_action_entries (win_actions, this);
 
+        SimpleAction theme_action = (SimpleAction) lookup_action ("change-theme");
+        string theme_value = settings.get_string (FiveOrMoreApp.KEY_THEME);
+        if (theme_value != "balls.svg" && theme_value != "shapes.svg" && theme_value != "tango.svg") /* TODO use an enum in GSchema file? */
+        {
+            settings.set_string (FiveOrMoreApp.KEY_THEME, "balls.svg");
+            theme_value = "balls.svg";
+        }
+        theme_action.set_state (new Variant.@string (theme_value));
+
         var board_size_action = lookup_action ("change-size");
         string board_size_string;
         int board_size = settings.get_int (FiveOrMoreApp.KEY_SIZE);
