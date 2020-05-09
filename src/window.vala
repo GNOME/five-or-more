@@ -106,8 +106,6 @@ private class GameWindow : ApplicationWindow
 
         NextPiecesWidget next_pieces_widget = new NextPiecesWidget (settings, game, theme);
         preview_hbox.add (next_pieces_widget);
-        next_pieces_widget.realize ();
-        next_pieces_widget.show ();
 
         grid_frame.set (game.n_cols, game.n_rows);
         game.board.board_changed.connect (() => { grid_frame.set (game.n_cols, game.n_rows); });
@@ -120,9 +118,6 @@ private class GameWindow : ApplicationWindow
         game_view.notify ["background-color"].connect (() => { reset_background_action.set_enabled (game_view.background_color != View.default_background_color); });
         settings.bind (FiveOrMoreApp.KEY_BACKGROUND_COLOR, game_view, "background-color", SettingsBindFlags.DEFAULT);
         grid_frame.add (game_view);
-        game_view.show ();
-
-        grid_frame.show ();
 
         init_scores_dialog ();
     }
