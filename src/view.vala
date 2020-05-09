@@ -53,6 +53,7 @@ private class View : DrawingArea
     private EventControllerKey key_controller;          // for keeping in memory
     private GestureClick click_controller;              // for keeping in memory
 
+    private Gdk.RGBA background_color_rgba;
     internal const string default_background_color = "rgb(117,144,174)";
     private string _background_color = default_background_color;
     internal string background_color
@@ -60,21 +61,11 @@ private class View : DrawingArea
         internal get { return _background_color; }
         internal set
         {
-            Gdk.RGBA color = Gdk.RGBA ();
-            if (!color.parse (value))
-                _background_color = default_background_color;
-            else
-                _background_color = color.to_string ();
+            if (!background_color_rgba.parse (value))
+                if (!background_color_rgba.parse (default_background_color))
+                    assert_not_reached ();
+            _background_color = background_color_rgba.to_string ();
 
-            try
-            {
-                provider.load_from_data (".game-view { background-color: %s; }".printf (_background_color));
-            }
-            catch (Error e)
-            {
-                warning ("Failed to load CSS data to provider");
-                return;
-            }
             queue_draw ();
         }
     }
@@ -328,13 +319,18 @@ private class View : DrawingArea
     private void update_sizes (int width, int height)
     {
         piece_size = (width - 1) / game.n_cols;
-        board_rectangle.width = piece_size * game.n_cols;
+        board_rectangle.width  = piece_size * game.n_cols;
         board_rectangle.height = piece_size * game.n_rows;
     }
 
     private void fill_background (Cairo.Context cr)
     {
-        cs.render_background (cr, board_rectangle.x, board_rectangle.y, board_rectangle.width, board_rectangle.height);
+        Gdk.cairo_set_source_rgba (cr, background_color_rgba);
+        cr.rectangle (/* x and y */ board_rectangle.x + 1.0,
+                                    board_rectangle.y + 1.0,
+                      /* w and h */ board_rectangle.width,
+                                    board_rectangle.height);
+        cr.fill ();
     }
 
     private void draw_gridlines (Cairo.Context cr)
