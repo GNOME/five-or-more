@@ -29,7 +29,7 @@
               <object class="GtkShortcutsShortcut">
                 <!-- Translators: in the Keyboard Shortcuts window, section "New game"; action of the Ctrl-N shortcut -->
                 <property name="title" translatable="yes" context="shortcut window">Start a new game</property>
-                <property name="accelerator">&lt;Primary&gt;n</property>
+                <property name="accelerator">&lt;Control&gt;n</property>
               </object>
             </child>
           </object>
@@ -69,7 +69,7 @@
               <object class="GtkShortcutsShortcut">
                 <!-- Translators: in the Keyboard Shortcuts window, section "Generic"; action of the Ctrl-Shift-? shortcut; opens the Keyboard Shortcuts dialog -->
                 <property name="title" translatable="yes" context="shortcut window">Keyboard shortcuts</property>
-                <property name="accelerator">&lt;Primary&gt;question</property> <!-- TODO &lt;Primary&gt;F1 -->
+                <property name="accelerator">&lt;Control&gt;question</property> <!-- TODO &lt;Control&gt;F1 -->
               </object>
             </child>
             <child>
@@ -91,7 +91,7 @@
               <object class="GtkShortcutsShortcut">
                 <!-- Translators: in the Keyboard Shortcuts window, section "Generic"; action of the Ctrl-Q shortcut; quits the application -->
                 <property name="title" translatable="yes" context="shortcut window">Quit</property>
-                <property name="accelerator">&lt;Primary&gt;q</property>
+                <property name="accelerator">&lt;Control&gt;q</property>
               </object>
             </child>
           </object>
