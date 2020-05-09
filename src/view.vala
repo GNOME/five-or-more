@@ -27,7 +27,6 @@ private class View : DrawingArea
 {
     private const int MINIMUM_BOARD_SIZE = 256;
 
-    private GLib.Settings settings;
     private Game? game = null;
     private ThemeRenderer? theme = null;
     private StyleContext cs;
@@ -54,9 +53,34 @@ private class View : DrawingArea
     private EventControllerKey key_controller;          // for keeping in memory
     private GestureMultiPress click_controller;         // for keeping in memory
 
-    internal View (GLib.Settings settings, Game game, ThemeRenderer theme)
+    internal const string default_background_color = "rgb(117,144,174)";
+    private string _background_color = default_background_color;
+    internal string background_color
     {
-        this.settings = settings;
+        internal get { return _background_color; }
+        internal set
+        {
+            Gdk.RGBA color = Gdk.RGBA ();
+            if (!color.parse (value))
+                _background_color = default_background_color;
+            else
+                _background_color = color.to_string ();
+
+            try
+            {
+                provider.load_from_data (".game-view { background-color: %s; }".printf (_background_color));
+            }
+            catch (Error e)
+            {
+                warning ("Failed to load CSS data to provider");
+                return;
+            }
+            queue_draw ();
+        }
+    }
+
+    internal View (Game game, ThemeRenderer theme)
+    {
         this.game = game;
         this.theme = theme;
 
@@ -67,12 +91,6 @@ private class View : DrawingArea
         provider = new CssProvider ();
         cs.add_class ("game-view");
         cs.add_provider (provider, STYLE_PROVIDER_PRIORITY_USER);
-
-        set_background_color ();
-        settings.changed[FiveOrMoreApp.KEY_BACKGROUND_COLOR].connect (() => {
-            set_background_color ();
-            queue_draw ();
-        });
 
         set_size_request (MINIMUM_BOARD_SIZE, MINIMUM_BOARD_SIZE);
 
@@ -116,21 +134,6 @@ private class View : DrawingArea
         game.board.grid_changed ();
         game.queue_changed (game.next_pieces_queue);
         queue_draw ();
-    }
-
-    private void set_background_color ()
-    {
-        var color_str = settings.get_string (FiveOrMoreApp.KEY_BACKGROUND_COLOR);
-
-        try
-        {
-            provider.load_from_data (".game-view { background-color: %s; }".printf (color_str));
-        }
-        catch (Error e)
-        {
-            warning ("Failed to load CSS data to provider");
-            return;
-        }
     }
 
     private void move_keyboard_cursor (int x, int y)

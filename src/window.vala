@@ -35,16 +35,15 @@ private class GameWindow : ApplicationWindow
     [GtkChild]
     private Games.GridFrame grid_frame;
 
-    private GLib.Settings? settings = null;
+    private GLib.Settings settings = new GLib.Settings ("org.gnome.five-or-more");
     private bool window_tiled;
-    internal bool window_maximized { internal get; private set; }
-    internal int window_width { internal get; private set; }
-    internal int window_height { internal get; private set; }
+    private bool window_maximized;
+    private int window_width;
+    private int window_height;
 
     private Game? game = null;
     private ThemeRenderer? theme = null;
 
-    private Games.Scores.Context highscores;
     private string[] status = {
         /* Translators: subtitle of the headerbar, at the application start */
         _("Match five objects of the same type in a row to score!"),
@@ -64,8 +63,8 @@ private class GameWindow : ApplicationWindow
         { "background",     change_background  },
         { "reset-bg",       reset_background   },
 
-        { "change-size",    null,               "s", "'small'",     change_size     },
-        { "change-theme",   null,               "s", "'balls.svg'", change_theme    },
+        { "change-size",    null,   "s", "'small'",     change_size     },
+        { "change-theme",   null,   "s", "'balls.svg'", change_theme    },
 
         { "new-game",       new_game           },
         { "scores",         show_scores        }
@@ -74,13 +73,15 @@ private class GameWindow : ApplicationWindow
     construct
     {
         add_action_entries (win_actions, this);
-    }
 
-    internal GameWindow (Gtk.Application app, GLib.Settings settings)
-    {
-        Object (application: app);
-
-        this.settings = settings;
+        SimpleAction theme_action = (SimpleAction) lookup_action ("change-theme");
+        string theme_value = settings.get_string (FiveOrMoreApp.KEY_THEME);
+        if (theme_value != "balls.svg" && theme_value != "shapes.svg" && theme_value != "tango.svg") /* TODO use an enum in GSchema file? */
+        {
+            settings.set_string (FiveOrMoreApp.KEY_THEME, "balls.svg");
+            theme_value = "balls.svg";
+        }
+        theme_action.set_state (new Variant.@string (theme_value));
 
         var board_size_action = lookup_action ("change-size");
         string board_size_string;
@@ -112,21 +113,16 @@ private class GameWindow : ApplicationWindow
         game.notify["status-message"].connect ((s, p) => { set_status_message (status[game.status_message].printf(game.score)); });
         set_status_message (status[game.status_message]);
 
-        View game_view = new View (settings, game, theme);
+        View game_view = new View (game, theme);
+        SimpleAction reset_background_action = (SimpleAction) lookup_action ("reset-bg");
+        game_view.notify ["background-color"].connect (() => { reset_background_action.set_enabled (game_view.background_color != View.default_background_color); });
+        settings.bind (FiveOrMoreApp.KEY_BACKGROUND_COLOR, game_view, "background-color", SettingsBindFlags.DEFAULT);
         grid_frame.add (game_view);
         game_view.show ();
 
         grid_frame.show ();
 
-        var importer = new Games.Scores.DirectoryImporter ();
-        highscores = new Games.Scores.Context.with_importer ("five-or-more",
-                                                             /* Translators: text in the Scores dialog, introducing the combobox */
-                                                             _("Board Size: "),
-                                                             this,
-                                                             create_category_from_key,
-                                                             Games.Scores.Style.POINTS_GREATER_IS_BETTER,
-                                                             importer);
-        game.game_over.connect (score_cb);
+        init_scores_dialog ();
     }
 
     protected override bool window_state_event (Gdk.EventWindowState event)
@@ -151,9 +147,41 @@ private class GameWindow : ApplicationWindow
         window_height = allocation.height;
     }
 
-    private void score_cb ()
+    internal inline void on_shutdown ()
     {
+        settings.delay ();
+        settings.set_int ("window-width", window_width);
+        settings.set_int ("window-height", window_height);
+        settings.set_boolean ("window-is-maximized", window_maximized);
+        settings.apply ();
+    }
 
+    private void set_status_message (string? message)
+    {
+        headerbar.set_subtitle (message);
+    }
+
+    /*\
+    * * Scores dialog
+    \*/
+
+    private Games.Scores.Context highscores;
+
+    private inline void init_scores_dialog ()
+    {
+        var importer = new Games.Scores.DirectoryImporter ();
+        highscores = new Games.Scores.Context.with_importer ("five-or-more",
+                                                             /* Translators: text in the Scores dialog, introducing the combobox */
+                                                             _("Board Size: "),
+                                                             this,
+                                                             create_category_from_key,
+                                                             Games.Scores.Style.POINTS_GREATER_IS_BETTER,
+                                                             importer);
+        game.game_over.connect (score_cb);
+    }
+
+    private inline void score_cb ()
+    {
         string name = category_name_from_key (game.score_current_category);
         var current_category = new Games.Scores.Category (game.score_current_category, name);
         highscores.add_score.begin (game.score,
@@ -163,18 +191,13 @@ private class GameWindow : ApplicationWindow
         show_scores ();
     }
 
-    private void set_status_message (string? message)
-    {
-        headerbar.set_subtitle (message);
-    }
-
-    private Games.Scores.Category? create_category_from_key (string key)
+    private inline Games.Scores.Category? create_category_from_key (string key)
     {
         string? name = category_name_from_key (key);
         return new Games.Scores.Category (key, name);
     }
 
-    private string category_name_from_key (string key)
+    private inline string category_name_from_key (string key)
     {
         for (int i = 0; i < game.n_categories; i++)
             if (Game.scorecats[i].key == key)
@@ -182,8 +205,13 @@ private class GameWindow : ApplicationWindow
         return "";
     }
 
+    private inline void show_scores (/* SimpleAction action, Variant? parameter */)
+    {
+        highscores.run_dialog ();
+    }
+
     /*\
-    * * actions
+    * * Appearance actions
     \*/
 
     private inline void change_background ()
@@ -210,6 +238,17 @@ private class GameWindow : ApplicationWindow
         settings.reset (FiveOrMoreApp.KEY_BACKGROUND_COLOR);
     }
 
+    private inline void change_theme (SimpleAction action, Variant? parameter)
+        requires (parameter != null)
+    {
+        action.set_state (parameter);
+        settings.set_string (FiveOrMoreApp.KEY_THEME, ((!) parameter).get_string ());
+    }
+
+    /*\
+    * * new game actions
+    \*/
+
     private inline void change_size (SimpleAction action, Variant? parameter)
         requires (parameter != null)
     {
@@ -222,13 +261,6 @@ private class GameWindow : ApplicationWindow
             default: assert_not_reached ();
         }
         settings.set_int (FiveOrMoreApp.KEY_SIZE, size);
-    }
-
-    private inline void change_theme (SimpleAction action, Variant? parameter)
-        requires (parameter != null)
-    {
-        action.set_state (parameter);
-        settings.set_string (FiveOrMoreApp.KEY_THEME, ((!) parameter).get_string ());
     }
 
     private inline void new_game (/* SimpleAction action, Variant? parameter */)
@@ -257,10 +289,5 @@ private class GameWindow : ApplicationWindow
                 return;
         }
         game.new_game (size);
-    }
-
-    private inline void show_scores (/* SimpleAction action, Variant? parameter */)
-    {
-        highscores.run_dialog ();
     }
 }

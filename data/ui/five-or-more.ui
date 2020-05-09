@@ -47,7 +47,7 @@
         <attribute name="action">win.scores</attribute>
       </item>
       <submenu>
-        <!-- Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); displays allows to change the theme -->
+        <!-- Translators: submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); allows to change the theme -->
         <attribute name="label" translatable="yes">A_ppearance</attribute>
         <section>
           <item>
@@ -70,7 +70,7 @@
           </item>
         </section>
         <section>
-          <!-- Translators: title of a section in the Appearance submenu of the hamburger menu; contains "Select color" and "Reset color" -->
+          <!-- Translators: title of a section in the Appearance submenu of the hamburger menu; contains "Select color" and "Default color" -->
           <attribute name="label" translatable="yes">Background</attribute>
           <item>
             <!-- Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); opens a dialog for choosing background color -->
