@@ -66,8 +66,8 @@ private class FiveOrMoreApp: Gtk.Application
         add_window (window);
 
         add_action_entries (action_entries, this);
-        set_accels_for_action ("win.new-game",  { "<Primary>n"  });
-        set_accels_for_action ("app.quit",      { "<Primary>q"  });
+        set_accels_for_action ("win.new-game",  { "<Control>n"  });
+        set_accels_for_action ("app.quit",      { "<Control>q"  });
         set_accels_for_action ("app.help",      {          "F1" });
     }
 
