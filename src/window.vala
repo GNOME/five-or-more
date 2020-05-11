@@ -164,7 +164,7 @@ private class GameWindow : ApplicationWindow
 
     private void set_status_message (string? message)
     {
-        headerbar.set_subtitle (message);
+//        headerbar.set_subtitle (message);
     }
 
     private void update_ratio (int size)
