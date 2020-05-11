@@ -129,6 +129,7 @@ private class GameWindow : ApplicationWindow
             assert_not_reached ();
         surface = (Gdk.Toplevel) (!) nullable_surface;
         surface.notify ["state"].connect (on_window_state_event);
+        surface.size_changed.connect (on_size_changed);
     }
 
     private Gdk.Toplevel surface;
@@ -145,15 +146,12 @@ private class GameWindow : ApplicationWindow
         window_tiled =      (state & tiled_state)                 != 0;
     }
 
-    protected override void size_allocate (Allocation allocation)
+    private inline void on_size_changed (int width, int height)
     {
-        base.size_allocate (allocation);
-
         if (window_maximized || window_tiled)
             return;
-
-        window_width = allocation.width;
-        window_height = allocation.height;
+        window_width  = width;
+        window_height = height;
     }
 
     internal inline void on_shutdown ()
