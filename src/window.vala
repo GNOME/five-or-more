@@ -74,6 +74,7 @@ private class GameWindow : ApplicationWindow
     {
         add_action_entries (win_actions, this);
 
+//        size_allocate.connect (on_size_allocate);
         map.connect (init_state_watcher);
 
         SimpleAction theme_action = (SimpleAction) lookup_action ("change-theme");
@@ -145,15 +146,17 @@ private class GameWindow : ApplicationWindow
         window_tiled =      (state & tiled_state)                != 0;
     }
 
-    protected override void size_allocate (Allocation allocation)
+    private inline void on_size_allocate (int width, int height, int baseline)
     {
-        base.size_allocate (allocation);
-
         if (window_maximized || window_tiled)
             return;
-
-        window_width = allocation.width;
-        window_height = allocation.height;
+        int? _window_width = null;
+        int? _window_height = null;
+        get_size (out _window_width, out _window_height);
+        if (_window_width == null || _window_height == null)
+            return;
+        window_width = (!) _window_width;
+        window_height = (!) _window_height;
     }
 
     internal inline void on_shutdown ()
