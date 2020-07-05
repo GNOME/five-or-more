@@ -30,8 +30,8 @@
             "name": "libgnome-games-support",
             "sources": [{
                 "type": "archive",
-                "url": "https://download.gnome.org/sources/libgnome-games-support/1.4/libgnome-games-support-1.4.0.tar.xz",
-                "sha256": "1d89b145da7d4aedae3fa75456d97ed1b4a5bc062a01e7d0db93b006bdf11456"
+                "url": "https://download.gnome.org/sources/libgnome-games-support/1.7/libgnome-games-support-1.7.1.tar.xz",
+                "sha256": "a625b32e12634bf94fa643f928eb46a387ed8eeb2fe969d5a868a775efc8e185"
             }]
         },
         {
