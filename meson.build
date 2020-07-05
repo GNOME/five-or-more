@@ -21,7 +21,7 @@ gio_dep = dependency('gio-2.0', version: '>= ' + glib_min_version)
 glib_dep = dependency('glib-2.0', version: '>= ' + glib_min_version)
 gmodule_export_dep = dependency('gmodule-export-2.0')
 gtk_dep = dependency('gtk+-3.0', version: '>= 3.24.0')
-libgnome_games_support_dep = dependency('libgnome-games-support-1')
+libgnome_games_support_dep = dependency('libgnome-games-support-1', version: '>= 1.7.1')
 librsvg_dep = dependency('librsvg-2.0', version: '>= 2.32.0')
 
 # Libraries
