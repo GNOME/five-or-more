@@ -48,7 +48,7 @@ msgid ""
 msgstr ""
 "El Cinc o més és la versió del GNOME d'un joc d'ordinador que va ser "
 "popular. Alineeu cinc o més objectes del mateix color en una línia perquè "
-"desapareguin i aconseguir punts. Alineeu com més objectes millor per "
+"desapareguin i aconseguir punts. Alineeu com més objectes millor per a "
 "aconseguir encara més punts abans de netejar-los."
 
 #: data/org.gnome.five-or-more.appdata.xml.in:16
@@ -56,7 +56,7 @@ msgid ""
 "More objects appear after every turn. Play for as long as possible, until "
 "the board is completely full!"
 msgstr ""
-"A cada ronda apareixen més objectes. Jugueu tan com pugueu fins que "
+"A cada ronda apareixen més objectes. Jugueu tant com pugueu fins que "
 "s'empleni el tauler!"
 
 #: data/org.gnome.five-or-more.appdata.xml.in:40
@@ -412,7 +412,7 @@ msgstr ""
 #: src/window.vala:50
 msgid "Match five objects of the same type in a row to score!"
 msgstr ""
-"Per puntuar, heu de fer coincidir en una fila cinc objectes del mateix color"
+"Per a puntuar, heu de fer coincidir en una fila cinc objectes del mateix color"
 
 #. Translators: subtitle of the headerbar, when the user clicked on a tile
 #. where the selected marble cannot move
