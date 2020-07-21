@@ -1,0 +1,1015 @@
+# 
+# Translators:
+# Francesc Bassas i Bullich <francesc@babu.cat>, 2020
+# Benny Beat <bennybeat@gmail.com>, 2020
+# Assumpta, 2020
+# Daniel <danielof7@gmail.com>, 2020
+# Joan Sanchis <joansanchis@pm.me>, 2020
+# Miquel-Àngel Burgos i Fradeja <miquel.angel.burgos@gmail.com>, 2020
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: five-or-more\n"
+"POT-Creation-Date: 2020-03-12 16:26+0000\n"
+"PO-Revision-Date: 2020-03-14 20:52+0000\n"
+"Last-Translator: Miquel-Àngel Burgos i Fradeja <miquel.angel.burgos@gmail.com>, 2020\n"
+"Language-Team: Catalan (https://www.transifex.com/softcatala/teams/62837/ca/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ca\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
+msgctxt "_"
+msgid "translator-credits"
+msgstr "Daniel <danielof7@gmail.com>, 2020\n"
+"Joan Sanchis <joansanchis@pm.me>, 2020\n"
+"Miquel Àngel Burgos i Fradeja <miquel.angel.burgos@gmail.com>, 2020"
+
+#. (itstool) path: credit/name
+#: C/bug-filing.page:10 C/change-board-size.page:14 C/change-theme.page:14
+#: C/develop.page:10 C/documentation.page:8 C/index.page:17 C/scores.page:14
+#: C/shortcuts.page:9 C/strategy.page:9 C/translate.page:10
+msgid "Tiffany Antopolski"
+msgstr "Tiffany Antopolski"
+
+#. (itstool) path: credit/years
+#: C/bug-filing.page:12 C/change-board-size.page:11 C/develop.page:12
+#: C/documentation.page:10 C/play.page:12 C/rules.page:12 C/scores.page:11
+#: C/shortcuts.page:11 C/translate.page:12
+msgid "2011"
+msgstr "2011"
+
+#. (itstool) path: license/p
+#: C/bug-filing.page:15 C/develop.page:15 C/documentation.page:13
+#: C/index.page:21 C/translate.page:19
+msgid "Creative Commons Share Alike 3.0"
+msgstr "Creative Commons compartir igual 3.0"
+
+#. (itstool) path: page/title
+#: C/bug-filing.page:19
+msgid "Report a Problem"
+msgstr "Informeu d'un problema"
+
+#. (itstool) path: page/p
+#: C/bug-filing.page:20
+msgid ""
+"<app>Five or More</app> is maintained by a volunteer community. You are "
+"welcome to participate. If you notice a problem you can file a <em>bug "
+"report</em>. To file a bug, go to <link "
+"href=\"https://gitlab.gnome.org/GNOME/five-or-more/issues/new\"/>."
+msgstr ""
+"<app>Cinc o més</app> es mantingut gràcies al voluntariat de la comunitat. "
+"Donem la benvinguda a tothom qui vulgui participar. Si trobeu cap problema, "
+"podeu <em>notificar un error</em>. Per fer-ho, aneu a <link "
+"href=\"https://gitlab.gnome.org/GNOME/five-or-more/issues/new\"/>."
+
+#. (itstool) path: page/p
+#: C/bug-filing.page:23
+msgid ""
+"This is a bug tracking system where users and developers can file details "
+"about bugs, crashes and request enhancements."
+msgstr ""
+"Aquest és un sistema de seguiment d'errors en què els usuaris i "
+"desenvolupadors poden enviar detalls sobre errors, bloquejos i sol·licitar "
+"millores."
+
+#. (itstool) path: page/p
+#: C/bug-filing.page:26
+msgid ""
+"To participate you have to log in, which will give you the ability to gain "
+"access, file bugs, and make comments. Also, you need to log in using one of "
+"your existing accounts or register a new account so you can receive updates "
+"by e-mail about the status of your bug. If you don't already have an account"
+" and don't want to use any of the available log in options, just click on "
+"the <gui>Register</gui> link to create one."
+msgstr ""
+"Per participar-hi, heu d'iniciar la sessió, i així tindreu la possibilitat d"
+"'accedir-hi, d'enviar informes d'errors i de fer comentaris. A més, heu "
+"d'iniciar la sessió amb un dels vostres comptes existents o us heu de "
+"registrar per poder rebre actualitzacions per correu electrònic sobre "
+"l'estat de l'informe d'error. Si encara no teniu un compte i no voleu fer "
+"servir cap de les opcions d'inici de sessió disponibles, feu clic a l'enllaç"
+" <gui>Registra'm</gui> per crear-ne un. "
+
+#. (itstool) path: page/p
+#: C/bug-filing.page:30
+msgid ""
+"Once you have an account, log in, click on <guiseq><gui>Projects</gui><gui"
+">five-or-more</gui><gui>Issues</gui><gui>New issue</gui></guiseq>. Before "
+"reporting a bug, please read the <link "
+"href=\"https://bugzilla.gnome.org/page.cgi?id=bug-writing.html\">bug writing"
+" guidelines</link>, and please <link href=\"https://gitlab.gnome.org/GNOME"
+"/five-or-more/issues\">browse</link> for the bug to see if it already "
+"exists."
+msgstr ""
+"Quan tingueu un compte, inicieu la sessió i feu clic a "
+"<guiseq><gui>Projectes</gui><gui>cinc o "
+"més</gui><gui>Problemes</gui><gui>Problema noi</gui></guiseq>. Abnas "
+"d'enviar un informe d'error, llegiu les <link "
+"href=\"https://bugzilla.gnome.org/page.cgi?id=bug-writing.html\">pautes "
+"d'escriptura d'errors</link>, i <link href=\"https://gitlab.gnome.org/GNOME"
+"/five-or-more/issues\">cerqueu</link> l'error per veure si ja existeix."
+
+#. (itstool) path: page/p
+#: C/bug-filing.page:33
+msgid ""
+"Fill in the Title and Description sections and click <gui>Submit "
+"issue</gui>."
+msgstr ""
+"Emplena els camps de Títol i Descripció i fes clic a <gui>Enviar "
+"problema</gui>."
+
+#. (itstool) path: page/p
+#: C/bug-filing.page:36
+msgid ""
+"Your report will be given an ID number, and its status will be updated as it"
+" is being dealt with."
+msgstr ""
+"S'assignarà un identificador al teu informe i el seu estat serà actualitzat "
+"quan s'hagi atès."
+
+#. (itstool) path: credit/name
+#: C/change-board-size.page:9 C/change-theme.page:9 C/index.page:13
+#: C/play.page:10 C/scores.page:9
+msgid "Lahiru lanka"
+msgstr "Lahiru lanka"
+
+#. (itstool) path: credit/name
+#: C/change-board-size.page:18 C/play.page:15 C/translate.page:15
+msgid "Michael Hill"
+msgstr "Michael Hill"
+
+#. (itstool) path: page/title
+#: C/change-board-size.page:23
+msgid "Change board size"
+msgstr "Canvia la mida del tauler"
+
+#. (itstool) path: page/p
+#: C/change-board-size.page:24
+msgid "To change the board size:"
+msgstr "Per canviar la mida del tauler:"
+
+#. (itstool) path: item/p
+#: C/change-board-size.page:26
+msgid "Press the menu button in the top-right corner of the window."
+msgstr "Pressionar el botó del menú al cantó dret superior de la finestra."
+
+#. (itstool) path: item/p
+#: C/change-board-size.page:27
+msgid "Select <gui>Small</gui>, <gui>Medium</gui>, or <gui>Large</gui>."
+msgstr "Seleccioneu <gui>Petit</gui>, <gui>Mitjà</gui>, o <gui>Gran</gui>."
+
+#. (itstool) path: note/p
+#: C/change-board-size.page:31
+msgid ""
+"While a larger board gives you more space, there are also more objects in "
+"play for each turn."
+msgstr ""
+"Tot i que un tauler més gran et dona més espai, també hi han més objectes "
+"amb els que jugar en cada torn."
+
+#. (itstool) path: section/title
+#: C/change-board-size.page:36
+msgid "Board parameters"
+msgstr "Paràmetres del tauler"
+
+#. (itstool) path: section/p
+#: C/change-board-size.page:37
+msgid "The 3 different board sizes have the following parameters:"
+msgstr "Els 3 taulers de diferent mida tenen els següents paràmetres:"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:41
+msgid "<em>Size</em>"
+msgstr "<em>Mida</em>"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:42
+msgid "<em>Width</em>"
+msgstr "<em>Amplaria</em>"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:43
+msgid "<em>Height</em>"
+msgstr "<em>Alçada</em>"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:44
+msgid "<em>Number of types</em>"
+msgstr "<em>Nombre de tipus</em>"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:45
+msgid "<em>New objects per turn</em>"
+msgstr "<em>Nous objectes per torn</em>"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:46
+msgid "<em>Number of cells</em>"
+msgstr "<em>Nombre de cel·les</em>"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:50
+msgid "Small"
+msgstr "Petit"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:51 C/change-board-size.page:52
+#: C/change-board-size.page:62 C/change-board-size.page:71
+#: C/change-board-size.page:72 C/scores.page:41
+msgid "7"
+msgstr "7"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:53 C/scores.page:33
+msgid "5"
+msgstr "5"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:54 C/change-board-size.page:63
+msgid "3"
+msgstr "3"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:55 C/scores.page:62
+msgid "49"
+msgstr "49"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:59
+msgid "Medium"
+msgstr "Mig"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:60 C/change-board-size.page:61 C/scores.page:49
+msgid "9"
+msgstr "9"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:64
+msgid "81"
+msgstr "81"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:68
+msgid "Large"
+msgstr "Gran"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:69
+msgid "20"
+msgstr "20"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:70
+msgid "15"
+msgstr "15"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:73
+msgid "300"
+msgstr "300"
+
+#. (itstool) path: section/title
+#: C/change-board-size.page:80
+msgid "The 3 board sizes"
+msgstr "Les 3 mides del tauler"
+
+#. (itstool) path: media/p
+#: C/change-board-size.page:86
+msgid "<app>Five or More</app> Small board"
+msgstr "<app>Cinc o més</app> tauler petit"
+
+#. (itstool) path: media/p
+#: C/change-board-size.page:91
+msgid "<app>Five or More</app> medium size board"
+msgstr "<app>Cinc o més</app> tauler mitjà"
+
+#. (itstool) path: media/p
+#: C/change-board-size.page:96
+msgid "<app>Five or More</app> large size board"
+msgstr "<app>Cinc o més</app> tauler gran"
+
+#. (itstool) path: credit/years
+#: C/change-theme.page:11 C/strategy.page:11
+msgid "2012"
+msgstr "2012"
+
+#. (itstool) path: page/title
+#: C/change-theme.page:20
+msgid "Change the look and feel"
+msgstr "Canvia l'aparença"
+
+#. (itstool) path: page/p
+#: C/change-theme.page:21
+msgid "To change the appearance of the pieces and the board:"
+msgstr "Canviar l'aparença de les peces i del tauler:"
+
+#. (itstool) path: item/p
+#: C/change-theme.page:24
+msgid ""
+"Press the menu button in the top-right corner of the window and select <gui "
+"style=\"menuitem\">Preferences</gui>."
+msgstr ""
+"Presiona el botó del menú al cantó superior dret de la finestra i selecciona"
+" <gui style=\"menuitem\">Preferències</gui>."
+
+#. (itstool) path: item/p
+#: C/change-theme.page:28
+msgid ""
+"Select <gui>balls</gui>, <gui>shapes</gui>, or <gui>tango</gui> from the "
+"<gui>Theme</gui> drop down menu to change the playing pieces."
+msgstr ""
+"Seleccioneu <gui>boles</gui>, <gui>figures</gui>, o <gui>tango</gui> del "
+"<gui>Tema</gui> menú desplegable per a canviar les peces de joc."
+
+#. (itstool) path: item/p
+#: C/change-theme.page:30
+msgid ""
+"Click on the colored box next to <gui>Background color</gui> to access the "
+"color palette."
+msgstr ""
+"Fes clic en el requadre de color al costat <gui>Color de fons</gui> per "
+"accedir a la paleta de colors."
+
+#. (itstool) path: item/p
+#: C/change-theme.page:34
+msgid "Close the <gui>Preferences</gui> dialog."
+msgstr "Tanca el diàleg <gui>Preferències</gui>."
+
+#. (itstool) path: page/title
+#: C/develop.page:19
+msgid "Help develop"
+msgstr "Ajudar en el desenvolupament"
+
+#. (itstool) path: page/p
+#: C/develop.page:20
+msgid ""
+"The <app>GNOME Games</app> are developed and maintained by a volunteer "
+"community. You are welcome to participate."
+msgstr ""
+"Els <app>Jocs del GNOME</app> són desenvolupats i mantinguts per una "
+"comunitat de voluntaris i voluntàries. Ets benvingut/da a participar."
+
+#. (itstool) path: page/p
+#: C/develop.page:23
+msgid ""
+"If you would like to <link "
+"href=\"https://wiki.gnome.org/Apps/Games/Contributing\">help develop "
+"<app>GNOME Games</app></link>, you can get in touch with the developers "
+"using <link "
+"href=\"https://cbe005.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org"
+"%2Fgnome-games\">irc</link>, or via our <link "
+"href=\"http://mail.gnome.org/mailman/listinfo/games-list\">mailing "
+"list</link>."
+msgstr ""
+"Si t'agradaria <link "
+"href=\"https://wiki.gnome.org/Apps/Games/Contributing\">ajudar a "
+"desenvolupar <app>Jocs del GNOME</app></link>, pots posar-te en contacte amb"
+" els desenvolupadors utilitzant <link "
+"href=\"https://cbe005.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org"
+"%2Fgnome-games\">irc</link>, o bé a través de la nostra <link "
+"href=\"http://mail.gnome.org/mailman/listinfo/games-list\">llista de "
+"correu</link>."
+
+#. (itstool) path: page/title
+#: C/documentation.page:17
+msgid "Help write documentation"
+msgstr "Ajudeu a escriure documentació"
+
+#. (itstool) path: page/p
+#: C/documentation.page:19
+msgid ""
+"The <app>GNOME Games</app> documentation is maintained by a volunteer "
+"community. You are welcome to participate."
+msgstr ""
+"La documentació dels <app>Jocs del GNOME</app> es mantinguda per una "
+"comunitat de voluntaris i voluntàries. Ets benvingut/da a participar."
+
+#. (itstool) path: page/p
+#: C/documentation.page:22
+msgid ""
+"To contribute to the Documentation Project, feel free to get in touch with "
+"us using <link "
+"href=\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fdocs\">irc</link>,"
+" or via our <link href=\"http://mail.gnome.org/mailman/listinfo/gnome-doc-"
+"list\">mailing list</link>."
+msgstr ""
+"Per a contribuir al Projecte de Documentació, pots posar-te en contacte amb "
+"nosaltres utilitzant <link "
+"href=\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fdocs\">irc</link>,"
+" o a través de la nostra <link href=\"http://mail.gnome.org/mailman/listinfo"
+"/gnome-doc-list\">llista de correu</link>."
+
+#. (itstool) path: page/p
+#: C/documentation.page:26
+msgid ""
+"Our <link "
+"href=\"https://wiki.gnome.org/DocumentationProject/Contributing\">wiki</link>"
+" page contains useful information."
+msgstr ""
+"La nostra pàgina <link "
+"href=\"https://wiki.gnome.org/DocumentationProject/Contributing\">wiki</link>"
+" conté informació útil."
+
+#. (itstool) path: info/title
+#: C/index.page:8
+msgctxt "link"
+msgid "Five or More"
+msgstr "Cinc o més"
+
+#. (itstool) path: info/title
+#: C/index.page:9
+msgctxt "text"
+msgid "Five or More"
+msgstr "Cinc o més"
+
+#. (itstool) path: media/span
+#: C/index.page:27
+msgid "Five or More logo"
+msgstr "Logo del Cinc o més"
+
+#. (itstool) path: page/title
+#: C/index.page:26
+msgid "<_:media-1/> Five or More"
+msgstr "<_:media-1/>Cinc o més"
+
+#. (itstool) path: page/p
+#: C/index.page:30
+msgid ""
+"<app>Five or More</app> is a deceptively simple brain workout. The goal is "
+"to place at least five objects of the same <link xref=\"change-"
+"theme#images\">color or shape</link> into a straight line. The line can be "
+"horizontal, vertical or diagonal. Once five or more objects are grouped into"
+" a line, they disappear. The goal is to vanish as many objects as possible. "
+"The game is over when the entire board is full."
+msgstr ""
+"<app>Cinc o Més</app> és un exercici senzill per estimular el vostre "
+"cervell. L'objectiu és col·locat almenys cinc objectes del mateix<link xref"
+"=\"change-theme#images\">color o forma</link> en una línia recta. La línia "
+"pot ser horitzontal, vertical o diagonal. Una vegada cinc o més objectes es "
+"troben agrupats en la mateixa línia, desapareixen. L'objectiu és fer "
+"desaparèixer el major nombre d'objectes possibles. El joc s'acaba quan el "
+"tauler sencer es troba ple."
+
+#. (itstool) path: section/title
+#: C/index.page:34
+msgid "Game Play"
+msgstr "Jugar"
+
+#. (itstool) path: section/title
+#: C/index.page:38
+msgid "Useful Tips"
+msgstr "Consells útils"
+
+#. (itstool) path: section/title
+#: C/index.page:42
+msgid "Advanced"
+msgstr "Avançat"
+
+#. (itstool) path: section/title
+#: C/index.page:46
+msgid "Get Involved"
+msgstr "Participeu"
+
+#. (itstool) path: p/link
+#: C/legal.xml:3
+msgid "Creative Commons Attribution-ShareAlike 3.0 Unported License"
+msgstr "Reconeixement-CompartirIgual 3.0 Llicència no adaptada"
+
+#. (itstool) path: license/p
+#: C/legal.xml:3
+msgid "This work is licensed under a <_:link-1/>."
+msgstr "Aquest treball està llicenciat sota <_:link-1/>."
+
+#. (itstool) path: info/desc
+#: C/license.page:9
+msgid "Legal information."
+msgstr "Informació legal."
+
+#. (itstool) path: page/title
+#: C/license.page:12
+msgid "License"
+msgstr "Llicència"
+
+#. (itstool) path: page/p
+#: C/license.page:13
+msgid ""
+"This work is distributed under a CreativeCommons Attribution-Share Alike 3.0"
+" Unported license."
+msgstr ""
+"Aquesta obra es distribueix sota llicència no adaptada CreativeCommons "
+"Reconeixement-Compartir Igual 3.0."
+
+#. (itstool) path: page/p
+#: C/license.page:21
+msgid "You are free:"
+msgstr "Ets lliure de:"
+
+#. (itstool) path: item/title
+#: C/license.page:26
+msgid "<em>To share</em>"
+msgstr "<em>Compartir</em>"
+
+#. (itstool) path: item/p
+#: C/license.page:27
+msgid "To copy, distribute and transmit the work."
+msgstr "Per copiar, distribuir i trametre la feina."
+
+#. (itstool) path: item/title
+#: C/license.page:30
+msgid "<em>To remix</em>"
+msgstr "<em>Remesclar</em>"
+
+#. (itstool) path: item/p
+#: C/license.page:31
+msgid "To adapt the work."
+msgstr "Per adaptar el treball."
+
+#. (itstool) path: page/p
+#: C/license.page:34
+msgid "Under the following conditions:"
+msgstr "Amb les següents condicions:"
+
+#. (itstool) path: item/title
+#: C/license.page:39
+msgid "<em>Attribution</em>"
+msgstr "<em>Atribució</em>"
+
+#. (itstool) path: item/p
+#: C/license.page:40
+msgid ""
+"You must attribute the work in the manner specified by the author or "
+"licensor (but not in any way that suggests that they endorse you or your use"
+" of the work)."
+msgstr ""
+"Heu de reconèixer l'autoria del material de la forma especificada per "
+"l'autor o llicenciant (però no d'una manera que suggereixi que el "
+"llicenciador us dóna suport o patrocina l'ús que en feu)."
+
+#. (itstool) path: item/title
+#: C/license.page:47
+msgid "<em>Share Alike</em>"
+msgstr "<em>Compartir Igual</em>"
+
+#. (itstool) path: item/p
+#: C/license.page:48
+msgid ""
+"If you alter, transform, or build upon this work, you may distribute the "
+"resulting work only under the same, similar or a compatible license."
+msgstr ""
+"Si altereu, transformeu o creeu a partir del material, heu de difondre les "
+"vostres creacions amb la mateixa llicència, similar o compatible de l'obra "
+"original."
+
+#. (itstool) path: page/p
+#: C/license.page:54
+msgid ""
+"For the full text of the license, see the <link "
+"href=\"http://creativecommons.org/licenses/by-"
+"sa/3.0/legalcode\">CreativeCommons website</link>, or read the full <link "
+"href=\"http://creativecommons.org/licenses/by-sa/3.0/\">Commons Deed</link>."
+msgstr ""
+"Per al text complet de la llicència, veieu el <link "
+"href=\"https://creativecommons.org/licenses/by-sa/3.0/legalcode\">Web del "
+"CreativeCommons</link>, o llegiu el <link "
+"href=\"https://creativecommons.org/licenses/by-sa/3.0/\">Document complet de"
+" l'acte</link>."
+
+#. (itstool) path: page/title
+#: C/play.page:22
+msgid "How to Play"
+msgstr "Com jugar"
+
+#. (itstool) path: page/p
+#: C/play.page:24
+msgid ""
+"To start a new game, press the menu button in the top-right corner of the "
+"window and select <gui style=\"menuitem\">New Game</gui>."
+msgstr ""
+"Per a començar un nou joc, feu clic al botó del menú al cantó superior dret "
+"de la finestra i seleccioneu <gui style=\"menuitem\">Nova partida</gui>."
+
+#. (itstool) path: section/title
+#: C/play.page:29
+msgid "Using the mouse"
+msgstr "Utilització del ratolí"
+
+#. (itstool) path: item/p
+#: C/play.page:33
+msgid ""
+"Click on the object you want to move. The selected object will begin "
+"spinning."
+msgstr ""
+"Feu clic en el objecte que voleu moure. L'objecte seleccionat començarà a "
+"moure's. "
+
+#. (itstool) path: item/p
+#: C/play.page:37
+msgid ""
+"Click on the destination cell. The chosen object will move to the "
+"destination cell, if there is any clear path."
+msgstr ""
+"Fes click a la cel·la de destinació. L'objecte seleccionat es mourà a la "
+"cel·la de destinació, si hi ha camí lliure."
+
+#. (itstool) path: section/title
+#: C/play.page:46
+msgid "Using the keyboard"
+msgstr "Utilització del teclat"
+
+#. (itstool) path: item/p
+#: C/play.page:50
+msgid ""
+"Press any of the arrow keys. An outline around a cell will appear on the "
+"board."
+msgstr ""
+"Pressiona qualsevol tecla de les fletxes. Una línia envoltarà una cel·la al "
+"tauler."
+
+#. (itstool) path: item/p
+#: C/play.page:54
+msgid ""
+"Using the arrow keys, and the <key>Home</key>, <key>End</key>, "
+"<key>PageUp</key> and <key>PageDown</key> keys navigate to the object you "
+"want to move."
+msgstr ""
+"Utilitzant les tecles de direcció, i les <key>Inici</key>, <key>Final</key>,"
+" <key>PàginaAmunt</key> i <key>PàginaAvall</key> tecles per a desplaçar-se "
+"cap a l'objecte que vols moure."
+
+#. (itstool) path: item/p
+#: C/play.page:57
+msgid ""
+"To select the object, press the <key>Enter</key>, <key>Spacebar</key> or "
+"<key>Return</key>. The selected object will begin spinning."
+msgstr ""
+"Per a seleccionar el objecte, pressiona <key>Intro</key>, <key>Barra "
+"Espaiadora</key> o <key>Retorn</key>. L'objecte seleccionat començarà a "
+"moure's."
+
+#. (itstool) path: item/p
+#: C/play.page:60
+msgid ""
+"Move to the destination cell, and again press the <key>Enter</key>, "
+"<key>Spacebar</key> or <key>Return</key>. The chosen object will move to the"
+" destination cell, if there is any clear path."
+msgstr ""
+"Mou a la cel·la de destí, i de nou pressiona <key>Intro</key>, <key>Barra "
+"Espaiadora</key> o <key>Retorn</key>. L'objecte seleccionat es mourà cap a "
+"la cel·la de destí, si hi ha un camí lliure."
+
+#. (itstool) path: section/title
+#: C/play.page:70
+msgid "Video demonstration"
+msgstr "Demostració en vídeo"
+
+#. (itstool) path: page/title
+#: C/rules.page:18
+msgid "Rules"
+msgstr "Regles"
+
+#. (itstool) path: item/p
+#: C/rules.page:20
+msgid ""
+"At the start of the game there are either 3 or 7 objects placed on your "
+"board, depending on the <link xref=\"change-board-size\">board size</link>."
+msgstr ""
+"A l'inici del joc hi han entre 3 i 7 objectes col·locats al teu tauler, "
+"depenent de la <link xref=\"change-board-size\">dimensió del tauler</link>."
+
+#. (itstool) path: item/p
+#: C/rules.page:23
+msgid ""
+"Each time you <link xref=\"play\">move an object</link>, additional objects "
+"are placed randomly on the board. The number of new objects placed each turn"
+" also depends on the board. A preview of the objects to be placed on the "
+"board appears in the upper left corner of the game window."
+msgstr ""
+"Cada cop que <link xref=\"play\">moveu un objecte</link>, es col·loquen "
+"objectes addicionals de manera aleatòria al tauler. El nombre de nous "
+"objectes col·locats a cada torn depèn també del tauler. A la cantonada "
+"superior esquerra de la finestra podeu veure els objectes que s'hi "
+"col·locaran."
+
+#. (itstool) path: item/p
+#: C/rules.page:28
+msgid ""
+"There must be a clear path from the original position of the object to the "
+"destination cell (i.e you can not jump over objects)."
+msgstr ""
+"Cal que el camí des de la posició original de l'objecte a la cel·la de "
+"destinació sigui lliure d'obstacles (per exemple, no es pot saltar per sobre"
+" d'objectes)."
+
+#. (itstool) path: item/p
+#: C/rules.page:31
+msgid ""
+"A straight horizontal, vertical or diagonal line of five or more similar "
+"objects will disappear from the game board. When this happens you will have "
+"an extra move without additional objects being added to the board."
+msgstr ""
+"Les línies rectes horitzontals, verticals o diagonals de cinc o més objectes"
+" semblants desapareixeran del tauler. Quan això passi, tindreu un moviment "
+"addicional sense que s'afegeixin més objectes al tauler."
+
+#. (itstool) path: item/p
+#: C/rules.page:35
+msgid ""
+"The more objects you clear, the longer the game will go on. The longer you "
+"play, the higher your <link xref=\"scores\">score</link>."
+msgstr ""
+"Com més objectes en traieu, més temps durarà la partida. Com més temps duri "
+"la partida, més alta serà la vostra <link xref=\"scores\">puntuació</link>."
+
+#. (itstool) path: item/p
+#: C/rules.page:38
+msgid ""
+"The game is over when the board is full, since no object can be moved at "
+"that point."
+msgstr ""
+"La partida s'acaba quan el tauler és ple, ja que llavors no es pot moure cap"
+" objecte."
+
+#. (itstool) path: media/p
+#: C/rules.page:46
+msgid "Example horizontal alignment"
+msgstr "Exemple d'alineació horitzontal"
+
+#. (itstool) path: media/p
+#: C/rules.page:51
+msgid "Example vertical alignment"
+msgstr "Exemple d'alineació vertical"
+
+#. (itstool) path: media/p
+#: C/rules.page:56
+msgid "Example diagonal alignment"
+msgstr "Exemple d'alineació diagonal"
+
+#. (itstool) path: media/p
+#: C/rules.page:61
+msgid "<app>Five or More</app> game over position."
+msgstr "Fi de partida de <app>Cinc o més</app>"
+
+#. (itstool) path: page/title
+#: C/scores.page:20
+msgid "Scoring"
+msgstr "Puntuació"
+
+#. (itstool) path: page/p
+#: C/scores.page:21
+msgid ""
+"You score points by creating lines of 5 or more objects. The number of "
+"points depends on the number of objects that disappear."
+msgstr ""
+"Per puntuar, heu de crear línies de 5 objectes o més. El nombre de punts "
+"depèn del nombre d'objectes de la línia."
+
+#. (itstool) path: td/p
+#: C/scores.page:27
+msgid "<em>Number of objects</em>"
+msgstr "<em>Nombre d'objectes</em>"
+
+#. (itstool) path: td/p
+#: C/scores.page:28
+msgid "<em>Number of points</em>"
+msgstr "<em>Nombre de punts</em>"
+
+#. (itstool) path: td/p
+#: C/scores.page:34 C/scores.page:53
+msgid "10"
+msgstr "10"
+
+#. (itstool) path: td/p
+#: C/scores.page:37
+msgid "6"
+msgstr "6"
+
+#. (itstool) path: td/p
+#: C/scores.page:38
+msgid "18"
+msgstr "18"
+
+#. (itstool) path: td/p
+#: C/scores.page:42
+msgid "25"
+msgstr "25"
+
+#. (itstool) path: td/p
+#: C/scores.page:45
+msgid "8"
+msgstr "8"
+
+#. (itstool) path: td/p
+#: C/scores.page:46
+msgid "31"
+msgstr "31"
+
+#. (itstool) path: td/p
+#: C/scores.page:50
+msgid "36"
+msgstr "36"
+
+#. (itstool) path: td/p
+#: C/scores.page:54
+msgid "41"
+msgstr "41"
+
+#. (itstool) path: td/p
+#: C/scores.page:57
+msgid "11"
+msgstr "11"
+
+#. (itstool) path: td/p
+#: C/scores.page:58
+msgid "45"
+msgstr "45"
+
+#. (itstool) path: td/p
+#: C/scores.page:61
+msgid "12"
+msgstr "12"
+
+#. (itstool) path: td/p
+#: C/scores.page:65
+msgid "13"
+msgstr "13"
+
+#. (itstool) path: td/p
+#: C/scores.page:66
+msgid "53"
+msgstr "53"
+
+#. (itstool) path: td/p
+#: C/scores.page:69 C/scores.page:73
+msgid "14"
+msgstr "14"
+
+#. (itstool) path: td/p
+#: C/scores.page:70 C/scores.page:74
+msgid "56"
+msgstr "56"
+
+#. (itstool) path: note/p
+#: C/scores.page:81
+msgid ""
+"You can view the high scores by pressing the menu button in the top-right "
+"corner of the window and selecting <gui style=\"menuitem\">Scores</gui>."
+msgstr ""
+"Podeu consultar les millors puntuacions prement el botó de menú de la part "
+"superior dreta de la finestra i seleccionant <gui "
+"style=\"menuitem\">Puntuacions</gui>."
+
+#. (itstool) path: note/p
+#: C/scores.page:83
+msgid ""
+"The <app>Five or More</app> scores are recorded according to the board size."
+" You can select the <gui>Board Size</gui> of interest using the drop down "
+"menu."
+msgstr ""
+"Les puntuacions de <app>Cinc o més</app> es registren segons la mida del "
+"tauler. Podeu seleccionar la <gui>Mida del tauler</gui> mitjançant el menú "
+"desplegable. "
+
+#. (itstool) path: page/title
+#: C/shortcuts.page:17
+msgid "Keyboard shortcuts"
+msgstr "Dreceres de teclat"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:20
+msgid "New game"
+msgstr "Nova partida"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:21
+msgid "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
+msgstr "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:24
+msgid "Help"
+msgstr "Ajuda"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:25
+msgid "<key>F1</key>"
+msgstr "<key>F1</key>"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:28
+msgid "Quit"
+msgstr "Surt"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:29
+msgid "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
+msgstr "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
+
+#. (itstool) path: page/title
+#: C/strategy.page:17
+msgid "Strategy"
+msgstr "Estratègia"
+
+#. (itstool) path: page/p
+#: C/strategy.page:19
+msgid ""
+"There is no universal strategy for <app>Five or More</app>, but some "
+"strategic elements do exist. Here are some things to try and keep in mind as"
+" you play:"
+msgstr ""
+"No hi ha cap estratègia universal a <app>Cinc o més</app>, però sí que hi ha"
+" certs elements estratègics. A continuació us proposem algunes idees a "
+"provar i tenir en compte quan jugueu:"
+
+#. (itstool) path: item/p
+#: C/strategy.page:23
+msgid "Try to set at least three same objects with your every move."
+msgstr "Intenteu alinear almenys tres objectes iguals amb cada moviment."
+
+#. (itstool) path: item/p
+#: C/strategy.page:24
+msgid ""
+"The board can quickly become very crowded with objects, so it is best to "
+"think ahead. Pay attention to the collection of <gui>Next</gui> objects, "
+"because knowing these will influence your moves."
+msgstr ""
+"El tauler pot omplir-se d'objectes molt ràpidament, per la qual cosa és "
+"millor avançar-se als esdeveniments. Pareu atenció a la secció "
+"<gui>Següent</gui> i tingueu-la en compte a l'hora de moure els objectes."
+
+#. (itstool) path: item/p
+#: C/strategy.page:25
+msgid ""
+"Try to line up more than 5 objects. For example, if you have 6 objects, you "
+"can line up 2 and 3 with a space in between, and then connect them by "
+"placing the sixth object between them."
+msgstr ""
+"Proveu d'alinear més de 5 objectes. Per exemple, si teniu 6 objectes, podeu "
+"alinear-ne 2 i 3 amb un espai al mig i després connectar-los col·locant-hi "
+"el sisè objecte."
+
+#. (itstool) path: page/title
+#: C/translate.page:23
+msgid "Help translate"
+msgstr "Ajudeu amb la traducció"
+
+#. (itstool) path: page/p
+#: C/translate.page:25
+msgid ""
+"The <app>GNOME Games</app> user interface and documentation is being "
+"translated by a world-wide volunteer community. You are welcome to "
+"participate."
+msgstr ""
+"La interfície i la documentació d’usuari dels <app> Jocs de GNOME</app> està"
+" sent traduïda per una comunitat de voluntaris a tot el món. Us convidem a "
+"participar-hi."
+
+#. (itstool) path: page/p
+#: C/translate.page:28
+msgid ""
+"There are <link href=\"http://l10n.gnome.org/module/five-or-more/\">many "
+"languages</link> for which translations are still needed."
+msgstr ""
+"Encara hi ha <link href=\"https://l10n.gnome.org/module/eog/\">molts "
+"idiomes</link> en què hi ha traduccions per fer."
+
+#. (itstool) path: page/p
+#: C/translate.page:30
+msgid ""
+"To start translating you will need to <link "
+"href=\"http://l10n.gnome.org\">create an account</link> and join the <link "
+"href=\"http://l10n.gnome.org/teams/\">translation team</link> for your "
+"language. This will give you the ability to upload new translations."
+msgstr ""
+"Per poder començar a traduir, heu de <link href=\"http:l10n.gnome.org"
+"\">crear-vos un compte</link> i apuntar-vos a l'<link "
+"href=\"http://l10n.gnome.org/teams/\">equip de traducció</link> del vostre "
+"idioma. Això us permetrà pujar traduccions noves."
+
+#. (itstool) path: page/p
+#: C/translate.page:34
+msgid ""
+"You can chat with GNOME translators using <link "
+"href=\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fi18n\">irc</link>."
+" People on the channel are located worldwide, so you may not get an "
+"immediate response as a result of timezone differences."
+msgstr ""
+"Podeu xatejar amb els traductors del GNOME mitjançant <link "
+"href=\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fi18n\">IRC</link>."
+" Els participants d'aquest canal es troben distribuïts per tot el món, així "
+"que pot ser que no obtingueu una resposta immediatament degut a diferències "
+"entre zones horàries."
+
+#. (itstool) path: page/p
+#: C/translate.page:38
+msgid ""
+"Alternatively, you can contact the Internationalization Team using their "
+"<link href=\"http://mail.gnome.org/mailman/listinfo/gnome-i18n\">mailing "
+"list</link>."
+msgstr ""
+"Si ho preferiu, podeu contactar amb l'equip d'internacionalització "
+"utilitzant la seva<link href=\"http://mail.gnome.org/mailman/listinfo/gnome-"
+"i18n\">llista de correu</link>."
