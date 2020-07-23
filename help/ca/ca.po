@@ -50,7 +50,7 @@ msgstr "Creative Commons compartir igual 3.0"
 #. (itstool) path: page/title
 #: C/bug-filing.page:19
 msgid "Report a Problem"
-msgstr "Informeu d'un problema"
+msgstr "Informar d'un problema"
 
 #. (itstool) path: page/p
 #: C/bug-filing.page:20
@@ -60,7 +60,7 @@ msgid ""
 "report</em>. To file a bug, go to <link "
 "href=\"https://gitlab.gnome.org/GNOME/five-or-more/issues/new\"/>."
 msgstr ""
-"<app>Cinc o més</app> es mantingut gràcies al voluntariat de la comunitat. "
+"<app>Cinc o més</app> és mantingut gràcies al voluntariat de la comunitat. "
 "Donem la benvinguda a tothom qui vulgui participar. Si trobeu cap problema, "
 "podeu <em>notificar un error</em>. Per fer-ho, aneu a <link "
 "href=\"https://gitlab.gnome.org/GNOME/five-or-more/issues/new\"/>."
@@ -91,7 +91,7 @@ msgstr ""
 "registrar per poder rebre actualitzacions per correu electrònic sobre "
 "l'estat de l'informe d'error. Si encara no teniu un compte i no voleu fer "
 "servir cap de les opcions d'inici de sessió disponibles, feu clic a l'enllaç"
-" <gui>Registra'm</gui> per crear-ne un. "
+" <gui>Registra'm</gui> per crear-ne un."
 
 #. (itstool) path: page/p
 #: C/bug-filing.page:30
@@ -144,7 +144,7 @@ msgstr "Michael Hill"
 #. (itstool) path: page/title
 #: C/change-board-size.page:23
 msgid "Change board size"
-msgstr "Canvia la mida del tauler"
+msgstr "Canviar la mida del tauler"
 
 #. (itstool) path: page/p
 #: C/change-board-size.page:24
@@ -167,8 +167,8 @@ msgid ""
 "While a larger board gives you more space, there are also more objects in "
 "play for each turn."
 msgstr ""
-"Tot i que un tauler més gran et dona més espai, també hi han més objectes "
-"amb els que jugar en cada torn."
+"Tot i que un tauler més gran et dóna més espai, també hi ha més objectes "
+"amb els quals jugar en cada torn."
 
 #. (itstool) path: section/title
 #: C/change-board-size.page:36
@@ -300,7 +300,7 @@ msgstr "2012"
 #. (itstool) path: page/title
 #: C/change-theme.page:20
 msgid "Change the look and feel"
-msgstr "Canvia l'aparença"
+msgstr "Canviar l'aparença"
 
 #. (itstool) path: page/p
 #: C/change-theme.page:21
@@ -385,7 +385,7 @@ msgid ""
 "The <app>GNOME Games</app> documentation is maintained by a volunteer "
 "community. You are welcome to participate."
 msgstr ""
-"La documentació dels <app>Jocs del GNOME</app> es mantinguda per una "
+"La documentació dels <app>Jocs del GNOME</app> és mantinguda per una "
 "comunitat de voluntaris i voluntàries. Ets benvingut/da a participar."
 
 #. (itstool) path: page/p
@@ -446,8 +446,8 @@ msgid ""
 " a line, they disappear. The goal is to vanish as many objects as possible. "
 "The game is over when the entire board is full."
 msgstr ""
-"<app>Cinc o Més</app> és un exercici senzill per estimular el vostre "
-"cervell. L'objectiu és col·locat almenys cinc objectes del mateix<link xref"
+"<app>Cinc o més</app> és un exercici senzill per estimular el vostre "
+"cervell. L'objectiu és col·locat almenys cinc objectes del mateix <link xref"
 "=\"change-theme#images\">color o forma</link> en una línia recta. La línia "
 "pot ser horitzontal, vertical o diagonal. Una vegada cinc o més objectes es "
 "troben agrupats en la mateixa línia, desapareixen. L'objectiu és fer "
@@ -603,7 +603,7 @@ msgid ""
 "Click on the object you want to move. The selected object will begin "
 "spinning."
 msgstr ""
-"Feu clic en el objecte que voleu moure. L'objecte seleccionat començarà a "
+"Feu clic en l'objecte que voleu moure. L'objecte seleccionat començarà a "
 "moure's. "
 
 #. (itstool) path: item/p
@@ -626,7 +626,7 @@ msgid ""
 "Press any of the arrow keys. An outline around a cell will appear on the "
 "board."
 msgstr ""
-"Pressiona qualsevol tecla de les fletxes. Una línia envoltarà una cel·la al "
+"Pressioneu qualsevol tecla de les fletxes. Una línia envoltarà una cel·la al "
 "tauler."
 
 #. (itstool) path: item/p
@@ -636,8 +636,8 @@ msgid ""
 "<key>PageUp</key> and <key>PageDown</key> keys navigate to the object you "
 "want to move."
 msgstr ""
-"Utilitzant les tecles de direcció, i les <key>Inici</key>, <key>Final</key>,"
-" <key>PàginaAmunt</key> i <key>PàginaAvall</key> tecles per a desplaçar-se "
+"Utilitzant les tecles de direcció, i les <key>Inici</key>, <key>Fi</key>,"
+" <key>Re Pàg</key> i <key>Av Pàg</key> tecles per a desplaçar-se "
 "cap a l'objecte que vols moure."
 
 #. (itstool) path: item/p
@@ -646,7 +646,7 @@ msgid ""
 "To select the object, press the <key>Enter</key>, <key>Spacebar</key> or "
 "<key>Return</key>. The selected object will begin spinning."
 msgstr ""
-"Per a seleccionar el objecte, pressiona <key>Intro</key>, <key>Barra "
+"Per a seleccionar l'objecte, pressioneu <key>Intro</key>, <key>Barra "
 "Espaiadora</key> o <key>Retorn</key>. L'objecte seleccionat començarà a "
 "moure's."
 
@@ -657,7 +657,7 @@ msgid ""
 "<key>Spacebar</key> or <key>Return</key>. The chosen object will move to the"
 " destination cell, if there is any clear path."
 msgstr ""
-"Mou a la cel·la de destí, i de nou pressiona <key>Intro</key>, <key>Barra "
+"Mou a la cel·la de destí, i de nou pressioneu <key>Intro</key>, <key>Barra "
 "Espaiadora</key> o <key>Retorn</key>. L'objecte seleccionat es mourà cap a "
 "la cel·la de destí, si hi ha un camí lliure."
 
@@ -677,7 +677,7 @@ msgid ""
 "At the start of the game there are either 3 or 7 objects placed on your "
 "board, depending on the <link xref=\"change-board-size\">board size</link>."
 msgstr ""
-"A l'inici del joc hi han entre 3 i 7 objectes col·locats al teu tauler, "
+"A l'inici del joc hi ha entre 3 i 7 objectes col·locats al teu tauler, "
 "depenent de la <link xref=\"change-board-size\">dimensió del tauler</link>."
 
 #. (itstool) path: item/p
@@ -751,7 +751,7 @@ msgstr "Exemple d'alineació diagonal"
 #. (itstool) path: media/p
 #: C/rules.page:61
 msgid "<app>Five or More</app> game over position."
-msgstr "Fi de partida de <app>Cinc o més</app>"
+msgstr "Fi de partida de <app>Cinc o més</app>."
 
 #. (itstool) path: page/title
 #: C/scores.page:20
@@ -871,7 +871,7 @@ msgid ""
 msgstr ""
 "Les puntuacions de <app>Cinc o més</app> es registren segons la mida del "
 "tauler. Podeu seleccionar la <gui>Mida del tauler</gui> mitjançant el menú "
-"desplegable. "
+"desplegable."
 
 #. (itstool) path: page/title
 #: C/shortcuts.page:17
@@ -881,7 +881,7 @@ msgstr "Dreceres de teclat"
 #. (itstool) path: td/p
 #: C/shortcuts.page:20
 msgid "New game"
-msgstr "Nova partida"
+msgstr "Partida nova"
 
 #. (itstool) path: td/p
 #: C/shortcuts.page:21
@@ -1011,5 +1011,5 @@ msgid ""
 "list</link>."
 msgstr ""
 "Si ho preferiu, podeu contactar amb l'equip d'internacionalització "
-"utilitzant la seva<link href=\"http://mail.gnome.org/mailman/listinfo/gnome-"
+"utilitzant la seva <link href=\"http://mail.gnome.org/mailman/listinfo/gnome-"
 "i18n\">llista de correu</link>."
