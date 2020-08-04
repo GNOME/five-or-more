@@ -106,7 +106,7 @@ private class GameWindow : ApplicationWindow
             maximize ();
 
         NextPiecesWidget next_pieces_widget = new NextPiecesWidget (settings, game, theme);
-        preview_hbox.pack_start (next_pieces_widget);
+        preview_hbox.prepend (next_pieces_widget);
 
         game.notify["score"].connect ((s, p) => { set_status_message (status[StatusMessage.NONE].printf(game.score)); });
         game.notify["status-message"].connect ((s, p) => { set_status_message (status[game.status_message].printf(game.score)); });
