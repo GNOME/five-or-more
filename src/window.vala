@@ -241,11 +241,12 @@ private class GameWindow : ApplicationWindow
                 if (!settings.set_string (FiveOrMoreApp.KEY_BACKGROUND_COLOR, color.to_string ()))
                     warning ("Failed to set color: %s", color.to_string ());
             });
-        var result = dialog.run ();
-        dialog.destroy ();
-        if (result == ResponseType.OK)
-            return;
-        settings.set_string (FiveOrMoreApp.KEY_BACKGROUND_COLOR, old_color_string);
+        dialog.response.connect ((_dialog, response) => {
+                _dialog.destroy ();
+                if (response != ResponseType.OK)
+                    settings.set_string (FiveOrMoreApp.KEY_BACKGROUND_COLOR, old_color_string);
+            });
+        dialog.present ();
     }
 
     private inline void reset_background ()
@@ -299,10 +300,13 @@ private class GameWindow : ApplicationWindow
             /* Translators: button of a dialog that appears when the user starts a new game while the score is not null; the other answer is "_Cancel" */
                                              _("_Restart"), ResponseType.OK);
 
-            var result = restart_game_dialog.run ();
-            restart_game_dialog.destroy ();
-            if (result != ResponseType.OK)
-                return;
+            restart_game_dialog.response.connect ((_restart_game_dialog, response) => {
+                    _restart_game_dialog.destroy ();
+                    if (response == ResponseType.OK)
+                        game.new_game (size);
+                });
+            restart_game_dialog.present ();
+            return;
         }
         game.new_game (size);
     }
