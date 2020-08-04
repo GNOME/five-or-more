@@ -184,14 +184,14 @@ private class GameWindow : ApplicationWindow
     private inline void init_scores_dialog ()
     {
         var importer = new Games.Scores.DirectoryImporter ();
-        highscores = new Games.Scores.Context.with_importer_and_icon_name ("five-or-more",
-                                                                           /* Translators: text in the Scores dialog, introducing the combobox */
-                                                                           _("Board Size: "),
-                                                                           this,
-                                                                           create_category_from_key,
-                                                                           Games.Scores.Style.POINTS_GREATER_IS_BETTER,
-                                                                           importer,
-                                                                           "org.gnome.five-or-more");
+        highscores = new Games.Scores.Context.with_importer ("five-or-more",
+                                                             "org.gnome.five-or-more",
+                                                             /* Translators: text in the Scores dialog, introducing the combobox */
+                                                             _("Board Size: "),
+                                                             this,
+                                                             create_category_from_key,
+                                                             Games.Scores.Style.POINTS_GREATER_IS_BETTER,
+                                                             importer);
         game.game_over.connect (score_cb);
     }
 
