@@ -105,7 +105,6 @@
     </section>
   </menu>
   <template class="GameWindow" parent="GtkApplicationWindow">
-    <property name="can_focus">False</property>
     <property name="default_width">320</property>
     <property name="default_height">400</property>
     <property name="icon_name">five-or-more</property>
@@ -114,17 +113,14 @@
     <property name="title" translatable="yes">Five or More</property>
     <child type="titlebar">
       <object class="GtkHeaderBar" id="headerbar">
-        <property name="can_focus">False</property>
         <property name="show_title_buttons">True</property>
         <child type="start">
           <object class="GtkBox" id="preview_hbox">
-            <property name="can_focus">False</property>
 <!--            <property name="border_width">12</property> FIXME -->
             <property name="orientation">horizontal</property>
             <child>
               <object class="GtkLabel" id="labelNext">
                 <property name="ellipsize">PANGO_ELLIPSIZE_END</property>
-                <property name="can_focus">False</property>
                 <!-- Translators: label displayed in the headerbar, introducing the next balls to be added to the board -->
                 <property name="label" translatable="yes">Next:</property>
                 <attributes>
@@ -136,7 +132,6 @@
         </child>
         <child type="end">
           <object class="GtkMenuButton">
-            <property name="can_focus">True</property>
             <property name="menu_model">primary-menu</property>
             <property name="icon_name">open-menu-symbolic</property>
 <!--            <accelerator key="F10" signal="activate"/> FIXME -->

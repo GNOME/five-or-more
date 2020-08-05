@@ -75,6 +75,8 @@ private class View : DrawingArea
         this.game = game;
         this.theme = theme;
 
+        focusable = true;
+
         init_keyboard ();
         init_mouse ();
         set_draw_func (draw);
@@ -99,7 +101,6 @@ private class View : DrawingArea
 
         game.board.grid_changed.connect (queue_draw);
 
-        set_can_focus (true);
         grab_focus ();
 
         game.current_path_cell_pos_changed.connect (queue_draw);
@@ -159,12 +160,12 @@ private class View : DrawingArea
 
     private void init_keyboard ()
     {
-        key_controller = new Gtk.EventControllerKey ();
+        key_controller = new EventControllerKey ();
         key_controller.key_pressed.connect (on_key_pressed);
         add_controller (key_controller);
     }
 
-    private inline bool on_key_pressed (Gtk.EventControllerKey _key_controller, uint keyval, uint keycode, Gdk.ModifierType state)
+    private inline bool on_key_pressed (EventControllerKey _key_controller, uint keyval, uint keycode, Gdk.ModifierType state)
     {
         switch (keyval)
         {
@@ -413,7 +414,7 @@ private class View : DrawingArea
         }
     }
 
-    private inline void draw (Gtk.DrawingArea _this, Cairo.Context cr, int new_width, int new_height)
+    private inline void draw (DrawingArea _this, Cairo.Context cr, int new_width, int new_height)
     {
         if (theme == null)
             return;
