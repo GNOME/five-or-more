@@ -286,7 +286,7 @@ private class GameWindow : ApplicationWindow
         int n_rows = Game.game_difficulty[size].n_rows;
         int n_cols = Game.game_difficulty[size].n_cols;
         if (game.score > 0 && !game.is_game_over) {
-            var flags = DialogFlags.DESTROY_WITH_PARENT;
+            var flags = DialogFlags.DESTROY_WITH_PARENT | DialogFlags.MODAL;
             var restart_game_dialog = new MessageDialog (this,
                                                          flags,
                                                          MessageType.WARNING,
