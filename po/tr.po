@@ -1,25 +1,23 @@
-# Turkish translation of gnome-games.
+# Turkish translation of five-or-more.
+# Copyright (C) 2009-2020 five-or-more's COPYRIGHT HOLDER
 # Copyright (C) 2000-2002, 2004, 2005, 2008 Free Software Foundation, Inc.
+# This file is distributed under the same license as the five-or-more package.
 #
-# foundation: sıralama
-# Tableau: orta sıra
-# reserve: yedek
-# waste: kullanılamayan
-# stock : eldeki kartlar
 # Onur Kucuk, <okucuk@yahoo.com>, 2000.
 # Ömer Fadıl USTA <omer_fad@hotmail.com>,2002.
 # Hakan Bekdas <hakanbekdas@yahoo.com>, 2006.
 # Baris Cicek <baris@teamforce.name.tr>, 2004, 2005, 2008, 2009.
 # Furkan Ahmet Kara <furkanahmetkara.fk@gmail.com>, 2017.
 # Muhammet Kara <muhammetk@gmail.com>, 2011, 2014, 2015, 2018.
-# Emin Tufan Çetin <etcetin@gmail.com>, 2017-2019.
+# Sabri Ünal <libreajans@gmail.com>, 2020.
+# Emin Tufan Çetin <etcetin@gmail.com>, 2017-2020.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-games\n"
+"Project-Id-Version: five-or-more\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/five-or-more/issues\n"
-"POT-Creation-Date: 2019-02-08 15:41+0000\n"
-"PO-Revision-Date: 2019-02-10 20:27+0300\n"
+"POT-Creation-Date: 2020-08-11 07:00+0000\n"
+"PO-Revision-Date: 2020-08-23 01:18+0300\n"
 "Last-Translator: Emin Tufan Çetin <etcetin@gmail.com>\n"
 "Language-Team: Türkçe <gnome-turk@gnome.org>\n"
 "Language: tr\n"
@@ -27,76 +25,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Gtranslator 3.30.1\n"
+"X-Generator: Poedit 2.0.6\n"
 
-#: data/five-or-more-preferences.ui:13
-msgid "Preferences"
-msgstr "Tercihler"
-
-#: data/five-or-more-preferences.ui:36
-msgid "Appearance"
-msgstr "Görünüm"
-
-#: data/five-or-more-preferences.ui:60
-msgid "_Theme:"
-msgstr "_Gövde:"
-
-#: data/five-or-more-preferences.ui:76
-msgid "balls"
-msgstr "toplar"
-
-#: data/five-or-more-preferences.ui:77
-msgid "shapes"
-msgstr "şekiller"
-
-#: data/five-or-more-preferences.ui:78
-msgid "tango"
-msgstr "tango"
-
-#: data/five-or-more-preferences.ui:87
-msgid "B_ackground color:"
-msgstr "_Arka plan rengi:"
-
-#: data/five-or-more.ui:7
-msgid "_New Game"
-msgstr "_Yeni Oyun"
-
-#: data/five-or-more.ui:13
-msgid "S_cores"
-msgstr "_Puanlar"
-
-#: data/five-or-more.ui:19
-msgid "_Small"
-msgstr "_Küçük"
-
-#: data/five-or-more.ui:24
-msgid "_Medium"
-msgstr "_Orta"
-
-#: data/five-or-more.ui:29
-msgid "_Large"
-msgstr "_Büyük"
-
-#: data/five-or-more.ui:36
-msgid "_Preferences"
-msgstr "_Tercihler"
-
-#: data/five-or-more.ui:40
-msgid "_Help"
-msgstr "_Yardım"
-
-#: data/five-or-more.ui:45
-msgid "_About Five or More"
-msgstr "Beş veya Fazlası _Hakkında"
-
-#: data/five-or-more.ui:65 data/org.gnome.five-or-more.appdata.xml.in:7
-#: data/org.gnome.five-or-more.desktop.in:3 src/main.vala:74 src/main.vala:168
+#. Translators: name of the application, as displayed in the window manager
+#. Translators: name of the application, as displayed in the About dialog, some window managers, etc.
+#: data/org.gnome.five-or-more.appdata.xml.in:7
+#: data/org.gnome.five-or-more.desktop.in:3 data/ui/five-or-more.ui:123
+#: src/main.vala:27
 msgid "Five or More"
-msgstr "Beş veya Fazlası"
-
-#: data/five-or-more.ui:77
-msgid "Next:"
-msgstr "Sonraki:"
+msgstr "Beş veya Daha Çoğu"
 
 #: data/org.gnome.five-or-more.appdata.xml.in:8
 #: data/org.gnome.five-or-more.desktop.in:4
@@ -110,18 +47,18 @@ msgid ""
 "score points. Earn many more points by lining up as many objects as possible "
 "before clearing them."
 msgstr ""
-"Five or More, bir zamanlar gözde olan bir bilgisayar oyununun GNOME "
-"sürümüdür. Aynı renkteki beş veya daha çok nesneyi kaybolmaları için tek "
-"çizgide hizalayın ve puanları kazanın. Onları temizlemeden önce mümkün "
-"olduğunca çok nesneyi sıralayarak daha çok puan kazanın."
+"Beş veya Daha Çoğu, zamanının gözde bilgisayar oyununun GNOME sürümüdür. Aynı "
+"renkteki beş veya daha çok nesneyi kaybolmaları için tek çizgide hizalayın "
+"ve puanları kazanın. Onları temizlemeden önce olabildiğince çok nesneyi "
+"sıralayarak daha çok puan kazanın."
 
 #: data/org.gnome.five-or-more.appdata.xml.in:16
 msgid ""
 "More objects appear after every turn. Play for as long as possible, until "
 "the board is completely full!"
 msgstr ""
-"Her turdan sonra daha çok öge meydana gelir. Pano tümüyle doluncaya kadar "
-"mümkün olduğunca uzun süre oyna!"
+"Her turdan sonra daha çok öge ortaya çıkar. Pano tümüyle doluncaya dek "
+"olabildiğince uzun süre oyna!"
 
 #: data/org.gnome.five-or-more.appdata.xml.in:40
 msgid "The GNOME Project"
@@ -132,138 +69,362 @@ msgstr "GNOME Projesi"
 msgid "game;strategy;logic;"
 msgstr "oyun;strateji;mantık;"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: data/org.gnome.five-or-more.desktop.in:9
-msgid "org.gnome.five-or-more"
-msgstr "org.gnome.five-or-more"
-
-#: data/org.gnome.five-or-more.gschema.xml:5
+#: data/org.gnome.five-or-more.gschema.xml:6
 msgid "Playing field size"
 msgstr "Oyun alanı boyutu"
 
-#: data/org.gnome.five-or-more.gschema.xml:6
+#: data/org.gnome.five-or-more.gschema.xml:7
 msgid ""
 "Playing field size. 1=Small, 2=Medium, 3=Large. Any other value is invalid."
 msgstr ""
 "Oyun alanı boyutu: 1=Küçük, 2=Orta, 3=Büyük. Diğer değerler geçersizdir."
 
-#: data/org.gnome.five-or-more.gschema.xml:10
+#: data/org.gnome.five-or-more.gschema.xml:11
 msgid "Ball style"
 msgstr "Top stili"
 
-#: data/org.gnome.five-or-more.gschema.xml:11
+#: data/org.gnome.five-or-more.gschema.xml:12
 msgid "Ball style. The filename of the images to use for the balls."
 msgstr "Top stili. Toplar için kullanılacak resimlerin dosya adı."
 
-#: data/org.gnome.five-or-more.gschema.xml:15
+#. Translators: title of the ColorChooser dialog that appears from the hamburger menu > "Appearance" submenu > "Background" section > "Select color" entry
+#: data/org.gnome.five-or-more.gschema.xml:16 src/window.vala:222
 msgid "Background color"
 msgstr "Arka plan rengi"
 
-#: data/org.gnome.five-or-more.gschema.xml:16
+#: data/org.gnome.five-or-more.gschema.xml:17
 msgid "Background color. The hex specification of the background color."
 msgstr "Arka plan rengi. Arka plan renginin hex belirtimi."
 
-#: data/org.gnome.five-or-more.gschema.xml:20
+#: data/org.gnome.five-or-more.gschema.xml:21
 msgid "Time between moves"
 msgstr "Hareketler arasıdaki süre"
 
-#: data/org.gnome.five-or-more.gschema.xml:21
+#: data/org.gnome.five-or-more.gschema.xml:22
 msgid "Time between moves in milliseconds."
 msgstr "Milisaniye olarak hareketler arasıdaki süre."
 
-#: data/org.gnome.five-or-more.gschema.xml:25
+#: data/org.gnome.five-or-more.gschema.xml:26
 msgid "Game score"
 msgstr "Oyun puanı"
 
-#: data/org.gnome.five-or-more.gschema.xml:26
+#: data/org.gnome.five-or-more.gschema.xml:27
 msgid "Game score from last saved session."
 msgstr "Son kaydedilen oturumdan kalan oyun puanı."
 
-#: data/org.gnome.five-or-more.gschema.xml:30
+#: data/org.gnome.five-or-more.gschema.xml:31
 msgid "Game field"
 msgstr "Oyun sahası"
 
-#: data/org.gnome.five-or-more.gschema.xml:31
+#: data/org.gnome.five-or-more.gschema.xml:32
 msgid "Game field from last saved session."
 msgstr "Son kaydedilen oturumdan kalan oyun alanı."
 
-#: data/org.gnome.five-or-more.gschema.xml:35
-msgid "Game preview"
-msgstr "Oyun önizleme"
-
 #: data/org.gnome.five-or-more.gschema.xml:36
+msgid "Game preview"
+msgstr "Oyun ön izleme"
+
+#: data/org.gnome.five-or-more.gschema.xml:37
 msgid "Game preview from last saved session."
 msgstr "Son kaydedilen oturumdan oyun önizlemesi."
 
-#: data/org.gnome.five-or-more.gschema.xml:40
+#: data/org.gnome.five-or-more.gschema.xml:41
 msgid "Width of the window in pixels"
 msgstr "Piksel olarak pencerenin genişliği"
 
-#: data/org.gnome.five-or-more.gschema.xml:44
+#: data/org.gnome.five-or-more.gschema.xml:45
 msgid "Height of the window in pixels"
 msgstr "Piksel olarak pencerenin yüksekliği"
 
-#: data/org.gnome.five-or-more.gschema.xml:48
+#: data/org.gnome.five-or-more.gschema.xml:49
 msgid "true if the window is maximized"
 msgstr "eğer pencere en büyük hale getirilmişse işaretle"
 
-#: src/game.vala:94
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
+#. Translators: entry of the Size submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
+#: data/ui/five-or-more.ui:8 data/ui/five-or-more.ui:37
+msgid "_New Game"
+msgstr "_Yeni Oyun"
+
+#. Translators: submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); allows to change the size of the board
+#: data/ui/five-or-more.ui:13
+msgid "Si_ze"
+msgstr "_Boyut"
+
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game of small size
+#: data/ui/five-or-more.ui:17
+msgid "_Small"
+msgstr "_Küçük"
+
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game of medium size
+#: data/ui/five-or-more.ui:23
+msgid "_Medium"
+msgstr "_Orta"
+
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game of large size
+#: data/ui/five-or-more.ui:29
+msgid "_Large"
+msgstr "_Büyük"
+
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); opens the Scores dialog
+#: data/ui/five-or-more.ui:46
+msgid "S_cores"
+msgstr "_Puanlar"
+
+#. Translators: submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); allows to change the theme
+#: data/ui/five-or-more.ui:51
+msgid "A_ppearance"
+msgstr "_Görünüm"
+
+#. Translators: entry of the Appearance submenu of the hamburger menu; set theme to "balls"; other possible themes are "shapes" and "tango"
+#: data/ui/five-or-more.ui:55
+msgid "balls"
+msgstr "toplar"
+
+#. Translators: entry of the Appearance submenu of the hamburger menu; set theme to "shapes"; other possible themes are "balls" and "tango"
+#: data/ui/five-or-more.ui:61
+msgid "shapes"
+msgstr "şekiller"
+
+#. Translators: entry of the Appearance submenu of the hamburger menu; set theme to "tango"; other possible themes are "balls" and "shapes"
+#: data/ui/five-or-more.ui:67
+msgid "tango"
+msgstr "tango"
+
+#. Translators: title of a section in the Appearance submenu of the hamburger menu; contains "Select color" and "Default color"
+#: data/ui/five-or-more.ui:74
+msgid "Background"
+msgstr "Arka plan"
+
+#. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); opens a dialog for choosing background color
+#: data/ui/five-or-more.ui:77
+msgid "_Select color"
+msgstr "Renk _seç"
+
+#. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); resets background color
+#: data/ui/five-or-more.ui:82
+msgid "_Default color"
+msgstr "_Öntanımlı renk"
+
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); displays Keyboard Shortcuts dialog
+#: data/ui/five-or-more.ui:91
+msgid "_Keyboard Shortcuts"
+msgstr "Klavye _Kısayolları"
+
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); opens the help of the application
+#: data/ui/five-or-more.ui:96
+msgid "_Help"
+msgstr "_Yardım"
+
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); opens the About dialog
+#: data/ui/five-or-more.ui:102
+msgid "_About Five or More"
+msgstr "Beş veya Daha Çoğu _Hakkında"
+
+#. Translators: label displayed in the headerbar, introducing the next balls to be added to the board
+#: data/ui/five-or-more.ui:136
+msgid "Next:"
+msgstr "Sonraki:"
+
+#. Translators: header of the "Start a new game" (only) shortcut section
+#: data/ui/help-overlay.ui:29
+msgctxt "shortcut window"
+msgid "New game"
+msgstr "Yeni oyun"
+
+#. Translators: in the Keyboard Shortcuts window, section "New game"; action of the Ctrl-N shortcut
+#: data/ui/help-overlay.ui:34
+msgctxt "shortcut window"
+msgid "Start a new game"
+msgstr "Yeni oyun başlat"
+
+#. Translators: header of the "Play with keyboard" shortcut section
+#: data/ui/help-overlay.ui:44
+msgctxt "shortcut window"
+msgid "Play with keyboard"
+msgstr "Klavyeyle oyna"
+
+#. Translators: in the Keyboard Shortcuts window, section "Play with keyboard"; action of the arrows
+#: data/ui/help-overlay.ui:49
+msgctxt "shortcut window"
+msgid "Move keyboard cursor"
+msgstr "Klavye imlecini taşı"
+
+#. Translators: in the Keyboard Shortcuts window, section "Play with keyboard"; action of the return or space keys
+#: data/ui/help-overlay.ui:57
+msgctxt "shortcut window"
+msgid "Select or drop tile"
+msgstr "Döşemeyi seç veya bırak"
+
+#. Translators: header of the "Toggle main menu," "Keyboard shortcuts," "About," "Quit," etc. shortcuts section
+#: data/ui/help-overlay.ui:67
+msgctxt "shortcut window"
+msgid "Generic"
+msgstr "Genel"
+
+#. Translators: in the Keyboard Shortcuts window, section "Generic"; action of the F10 shortcut; toggles the hamburger menu
+#: data/ui/help-overlay.ui:72
+msgctxt "shortcut window"
+msgid "Toggle main menu"
+msgstr "Ana menüyü aç veya kapat"
+
+#. Translators: in the Keyboard Shortcuts window, section "Generic"; action of the Ctrl-Shift-? shortcut; opens the Keyboard Shortcuts dialog
+#: data/ui/help-overlay.ui:80
+msgctxt "shortcut window"
+msgid "Keyboard shortcuts"
+msgstr "Klavye kısayolları"
+
+#. Translators: in the Keyboard Shortcuts window, section "Generic"; action of the F1 shortcut; opens the help of the application
+#: data/ui/help-overlay.ui:88
+msgctxt "shortcut window"
+msgid "Help"
+msgstr "Yardım"
+
+#. Translators: future keyboard shortcut; action of the Shift-F1 shortcut; opens the About dialog
+#: data/ui/help-overlay.ui:96
+msgctxt "shortcut window"
+msgid "About"
+msgstr "Hakkında"
+
+#. Translators: in the Keyboard Shortcuts window, section "Generic"; action of the Ctrl-Q shortcut; quits the application
+#: data/ui/help-overlay.ui:104
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Çık"
+
+#. Translators: board size, as displayed in the Scores dialog
+#: src/game.vala:93
 msgctxt "board size"
 msgid "Small"
 msgstr "Küçük"
 
-#: src/game.vala:95
+#. Translators: board size, as displayed in the Scores dialog
+#: src/game.vala:96
 msgctxt "board size"
 msgid "Medium"
 msgstr "Orta"
 
-#: src/game.vala:96
+#. Translators: board size, as displayed in the Scores dialog
+#: src/game.vala:99
 msgctxt "board size"
 msgid "Large"
 msgstr "Büyük"
 
-#: src/main.vala:171
-msgid "GNOME port of the once-popular Color Lines game"
-msgstr "Bir zamanların gözde Renkli Çizgiler oyununun GNOME sürümü"
+#. Translators: About dialog text, name and email of one of the authors
+#: src/main.vala:95
+msgid "Robert Szokovacs <szo@appaloosacorp.hu>"
+msgstr "Robert Szokovacs <szo@appaloosacorp.hu>"
 
-#: src/main.vala:177
+#. Translators: About dialog text, name and email of one of the authors
+#: src/main.vala:98
+msgid "Szabolcs Bán <shooby@gnome.hu>"
+msgstr "Szabolcs Bán <shooby@gnome.hu>"
+
+#. Translators: About dialog text, name of one of the artists
+#: src/main.vala:103
+msgid "Callum McKenzie"
+msgstr "Callum McKenzie"
+
+#. Translators: About dialog text, name of a website that provided some artworks
+#: src/main.vala:106
+msgid "kenney.nl"
+msgstr "kenney.nl"
+
+#. Translators: About dialog text, name of one of the artists
+#: src/main.vala:109
+msgid "Robert Roth"
+msgstr "Robert Roth"
+
+#. Translators: About dialog text, name of one of the documenters
+#: src/main.vala:114
+msgid "Tiffany Antopolski"
+msgstr "Tiffany Antopolski"
+
+#. Translators: About dialog text, name of one of the documenters
+#: src/main.vala:117
+msgid "Lanka Rathnayaka"
+msgstr "Lanka Rathnayaka"
+
+#. Translators: About dialog text, first line of the copyright notice
+#: src/main.vala:121
+msgid "Copyright © 1997–2008 Free Software Foundation, Inc."
+msgstr "Telif Hakkı © 1997–2008 Free Software Foundation, Inc."
+
+#. Translators: About dialog text, second line of the copyright notice
+#: src/main.vala:124
+msgid "Copyright © 2013–2014 Michael Catanzaro"
+msgstr "Telif Hakkı © 2013–2014 Michael Catanzaro"
+
+#. Translators: About dialog text, describing the application
+#: src/main.vala:131
+msgid "GNOME port of the once-popular Color Lines game"
+msgstr "Zamanının gözde Renkli Çizgiler oyununun GNOME sürümü"
+
+#. Translators: about dialog text; this string should be replaced by a text crediting yourselves and your translation team, or should be left empty. Do not translate literally!
+#: src/main.vala:138
 msgid "translator-credits"
 msgstr ""
 "Barış Çiçek <baris@teamforce.name.tr> \n"
-"Muhammet Kara <muhammetk@gmail.com>"
+"Muhammet Kara <muhammetk@gmail.com>\n"
+"Sabri Ünal <libreajans@gmail.com>\n"
+"Emin Tufan Çetin <etcetin@gmail.com>"
 
-#: src/window.vala:50
+#. Translators: subtitle of the headerbar, at the application start
+#: src/window.vala:49
 msgid "Match five objects of the same type in a row to score!"
-msgstr "Puan almak için bir sırada aynı renkten beş nesneyi eşleştirin!"
+msgstr "Puan almak için sıradaki aynı renkten beş nesneyi eşleştirin!"
 
-#: src/window.vala:51
+#. Translators: subtitle of the headerbar, when the user clicked on a tile where the selected marble cannot move
+#: src/window.vala:52
 msgid "You can’t move there!"
 msgstr "Oraya hareket edemezsin!"
 
-#: src/window.vala:52
+#. Translators: subtitle of the headerbar, at the end of a game
+#: src/window.vala:55
 msgid "Game Over!"
 msgstr "Oyun Bitti!"
 
-#: src/window.vala:53
+#. Translators: subtitle of the headerbar, during a game; the %d is replaced by the score
+#: src/window.vala:58
 #, c-format
 msgid "Score: %d"
 msgstr "Puan: %d"
 
-#: src/window.vala:87
+#. Translators: text in the Scores dialog, introducing the combobox
+#: src/window.vala:175
 msgid "Board Size: "
 msgstr "Tablo Boyutu: "
 
-#: src/window.vala:159
-msgid "Are you sure you want to restart the game?"
-msgstr "Oyunu yeniden başlatmak istediğinizden emin misiniz?"
+#. Translators: text of a dialog that appears when the user starts a new game while the score is not null
+#: src/window.vala:279
+#, c-format
+msgid "Are you sure you want to start a new %u × %u game?"
+msgstr "Yeni %u × %u oyun başlatmak istediğinizden emin misiniz?"
 
-#: src/window.vala:161
+#. Translators: button of a dialog that appears when the user starts a new game while the score is not null; the other answer is "_Restart"
+#: src/window.vala:282
 msgid "_Cancel"
 msgstr "İptal _Et"
 
-#: src/window.vala:162
+#. Translators: button of a dialog that appears when the user starts a new game while the score is not null; the other answer is "_Cancel"
+#: src/window.vala:285
 msgid "_Restart"
 msgstr "_Yeniden Başla"
+
+#~ msgid "Preferences"
+#~ msgstr "Tercihler"
+
+#~ msgid "_Theme:"
+#~ msgstr "_Gövde:"
+
+#~ msgid "B_ackground color:"
+#~ msgstr "_Arka plan rengi:"
+
+#~ msgid "_Preferences"
+#~ msgstr "_Tercihler"
+
+#~ msgid "org.gnome.five-or-more"
+#~ msgstr "org.gnome.five-or-more"
 
 #~ msgid "_Image:"
 #~ msgstr "_Resim:"
@@ -271,20 +432,8 @@ msgstr "_Yeniden Başla"
 #~ msgid "Board Size"
 #~ msgstr "Tablo Boyutu"
 
-#~ msgid "General"
-#~ msgstr "Genel"
-
 #~ msgid "_Use fast moves"
 #~ msgstr "_Hızlı hareketleri kullan"
-
-#~ msgid "Start a new puzzle"
-#~ msgstr "Yeni bulmaca başlat"
-
-#~ msgid "About"
-#~ msgstr "Hakkında"
-
-#~ msgid "Quit"
-#~ msgstr "Çık"
 
 #~ msgctxt "themes"
 #~ msgid "dots"
