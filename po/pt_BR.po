@@ -24,100 +24,31 @@
 # Fábio Nogueira <fnogueira@gnome.org>, 2014.
 # Enrico Nicoletto <liverig@gmail.com>, 2014.
 # Bruno Lopes da Silva <brunolopesbldsb@gmail.com>, 2018.
-# Rafael Fontenelle <rafaelff@gnome.org>, 2013-2019.
+# Rafael Fontenelle <rafaelff@gnome.org>, 2013-2020.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: five-or-more\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/five-or-more/issues\n"
-"POT-Creation-Date: 2019-01-11 15:40+0000\n"
-"PO-Revision-Date: 2019-02-27 01:39-0300\n"
+"POT-Creation-Date: 2020-05-31 06:52+0000\n"
+"PO-Revision-Date: 2020-08-24 09:09-0300\n"
 "Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
-"Language-Team: Portuguese - Brazil <gnome-pt_br-list@gnome.org>\n"
+"Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1)\n"
-"X-Generator: Gtranslator 3.31.90\n"
+"X-Generator: Gtranslator 3.36.0\n"
 "X-Project-Style: gnome\n"
 
-#: data/five-or-more-preferences.ui:13
-msgid "Preferences"
-msgstr "Preferências"
-
-#: data/five-or-more-preferences.ui:36
-msgid "Appearance"
-msgstr "Aparência"
-
-#: data/five-or-more-preferences.ui:60
-msgid "_Theme:"
-msgstr "_Tema:"
-
-#: data/five-or-more-preferences.ui:76
-#| msgctxt "themes"
-#| msgid "balls"
-msgid "balls"
-msgstr "bolas"
-
-#: data/five-or-more-preferences.ui:77
-#| msgctxt "themes"
-#| msgid "shapes"
-msgid "shapes"
-msgstr "formas"
-
-#: data/five-or-more-preferences.ui:78
-msgid "tango"
-msgstr "tango"
-
-#: data/five-or-more-preferences.ui:87
-msgid "B_ackground color:"
-msgstr "Cor de _fundo:"
-
-#: data/five-or-more.ui:7
-msgid "_New Game"
-msgstr "_Novo jogo"
-
-#: data/five-or-more.ui:13
-#| msgid "Scores"
-msgid "S_cores"
-msgstr "P_ontuações"
-
-#: data/five-or-more.ui:19
-msgid "_Small"
-msgstr "_Pequeno"
-
-#: data/five-or-more.ui:24
-msgid "_Medium"
-msgstr "_Médio"
-
-#: data/five-or-more.ui:29
-msgid "_Large"
-msgstr "_Grande"
-
-#: data/five-or-more.ui:36
-#| msgid "Preferences"
-msgid "_Preferences"
-msgstr "P_referências"
-
-#: data/five-or-more.ui:40
-#| msgid "Help"
-msgid "_Help"
-msgstr "Aj_uda"
-
-#: data/five-or-more.ui:45
-#| msgid "Five or More"
-msgid "_About Five or More"
-msgstr "_Sobre o Cinco ou Mais"
-
-#: data/five-or-more.ui:65 data/org.gnome.five-or-more.appdata.xml.in:7
-#: data/org.gnome.five-or-more.desktop.in:3 src/main.vala:74 src/main.vala:168
+#. Translators: name of the application, as displayed in the window manager
+#. Translators: name of the application, as displayed in the About dialog, some window managers, etc.
+#: data/org.gnome.five-or-more.appdata.xml.in:7
+#: data/org.gnome.five-or-more.desktop.in:3 data/ui/five-or-more.ui:123
+#: src/main.vala:27
 msgid "Five or More"
 msgstr "Cinco ou Mais"
-
-#: data/five-or-more.ui:77
-msgid "Next:"
-msgstr "Próxima:"
 
 #: data/org.gnome.five-or-more.appdata.xml.in:8
 #: data/org.gnome.five-or-more.desktop.in:4
@@ -153,103 +84,308 @@ msgstr "O Projeto GNOME"
 msgid "game;strategy;logic;"
 msgstr "game;jogo;estratégia;lógica;"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: data/org.gnome.five-or-more.desktop.in:9
-#| msgid "five-or-more"
-msgid "org.gnome.five-or-more"
-msgstr "org.gnome.five-or-more"
-
-#: data/org.gnome.five-or-more.gschema.xml:5
+#: data/org.gnome.five-or-more.gschema.xml:6
 msgid "Playing field size"
 msgstr "Tamanho do campo de jogo"
 
-#: data/org.gnome.five-or-more.gschema.xml:6
+#: data/org.gnome.five-or-more.gschema.xml:7
 msgid ""
 "Playing field size. 1=Small, 2=Medium, 3=Large. Any other value is invalid."
 msgstr ""
 "Tamanho do campo de jogo. 1=Pequeno, 2=Médio, 3=Grande. Qualquer outro valor "
 "é inválido."
 
-#: data/org.gnome.five-or-more.gschema.xml:10
+#: data/org.gnome.five-or-more.gschema.xml:11
 msgid "Ball style"
 msgstr "Estilo da bola"
 
-#: data/org.gnome.five-or-more.gschema.xml:11
+#: data/org.gnome.five-or-more.gschema.xml:12
 msgid "Ball style. The filename of the images to use for the balls."
 msgstr "Estilo da bola. O nome do arquivo das imagens para usar para as bolas."
 
-#: data/org.gnome.five-or-more.gschema.xml:15
+#. Translators: title of the ColorChooser dialog that appears from the hamburger menu > "Appearance" submenu > "Background" section > "Select color" entry
+#: data/org.gnome.five-or-more.gschema.xml:16 src/window.vala:221
 msgid "Background color"
 msgstr "Cor de fundo"
 
-#: data/org.gnome.five-or-more.gschema.xml:16
+#: data/org.gnome.five-or-more.gschema.xml:17
 msgid "Background color. The hex specification of the background color."
 msgstr "Cor de fundo. A especificação hexadecimal da cor de fundo."
 
-#: data/org.gnome.five-or-more.gschema.xml:20
+#: data/org.gnome.five-or-more.gschema.xml:21
 msgid "Time between moves"
 msgstr "Tempo entre jogadas"
 
-#: data/org.gnome.five-or-more.gschema.xml:21
+#: data/org.gnome.five-or-more.gschema.xml:22
 msgid "Time between moves in milliseconds."
 msgstr "Tempo entre jogadas em milissegundos."
 
-#: data/org.gnome.five-or-more.gschema.xml:25
+#: data/org.gnome.five-or-more.gschema.xml:26
 msgid "Game score"
 msgstr "Pontuação do jogo"
 
-#: data/org.gnome.five-or-more.gschema.xml:26
+#: data/org.gnome.five-or-more.gschema.xml:27
 msgid "Game score from last saved session."
 msgstr "Pontuação do jogo da última sessão salva."
 
-#: data/org.gnome.five-or-more.gschema.xml:30
+#: data/org.gnome.five-or-more.gschema.xml:31
 msgid "Game field"
 msgstr "Campo do jogo"
 
-#: data/org.gnome.five-or-more.gschema.xml:31
+#: data/org.gnome.five-or-more.gschema.xml:32
 msgid "Game field from last saved session."
 msgstr "Campo do jogo da última sessão salva."
 
-#: data/org.gnome.five-or-more.gschema.xml:35
+#: data/org.gnome.five-or-more.gschema.xml:36
 msgid "Game preview"
 msgstr "Visualização do jogo"
 
-#: data/org.gnome.five-or-more.gschema.xml:36
+#: data/org.gnome.five-or-more.gschema.xml:37
 msgid "Game preview from last saved session."
 msgstr "Visualização do jogo da última sessão salva."
 
-#: data/org.gnome.five-or-more.gschema.xml:40
+#: data/org.gnome.five-or-more.gschema.xml:41
 msgid "Width of the window in pixels"
 msgstr "A largura da janela em pixels."
 
-#: data/org.gnome.five-or-more.gschema.xml:44
+#: data/org.gnome.five-or-more.gschema.xml:45
 msgid "Height of the window in pixels"
 msgstr "A altura da janela em pixels."
 
-#: data/org.gnome.five-or-more.gschema.xml:48
+#: data/org.gnome.five-or-more.gschema.xml:49
 msgid "true if the window is maximized"
 msgstr "verdadeiro se a janela estiver maximizada"
 
-#: src/game.vala:94
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
+#. Translators: entry of the Size submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
+#: data/ui/five-or-more.ui:8 data/ui/five-or-more.ui:37
+msgid "_New Game"
+msgstr "_Novo jogo"
+
+#. Translators: submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); allows to change the size of the board
+#: data/ui/five-or-more.ui:13
+msgid "Si_ze"
+msgstr "_Tamanho"
+
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game of small size
+#: data/ui/five-or-more.ui:17
+msgid "_Small"
+msgstr "_Pequeno"
+
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game of medium size
+#: data/ui/five-or-more.ui:23
+msgid "_Medium"
+msgstr "_Médio"
+
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game of large size
+#: data/ui/five-or-more.ui:29
+msgid "_Large"
+msgstr "_Grande"
+
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); opens the Scores dialog
+#: data/ui/five-or-more.ui:46
+msgid "S_cores"
+msgstr "P_ontuações"
+
+#. Translators: submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); allows to change the theme
+#: data/ui/five-or-more.ui:51
+#| msgid "Appearance"
+msgid "A_ppearance"
+msgstr "_Aparência"
+
+#. Translators: entry of the Appearance submenu of the hamburger menu; set theme to "balls"; other possible themes are "shapes" and "tango"
+#: data/ui/five-or-more.ui:55
+msgid "balls"
+msgstr "bolas"
+
+#. Translators: entry of the Appearance submenu of the hamburger menu; set theme to "shapes"; other possible themes are "balls" and "tango"
+#: data/ui/five-or-more.ui:61
+msgid "shapes"
+msgstr "formas"
+
+#. Translators: entry of the Appearance submenu of the hamburger menu; set theme to "tango"; other possible themes are "balls" and "shapes"
+#: data/ui/five-or-more.ui:67
+msgid "tango"
+msgstr "tango"
+
+#. Translators: title of a section in the Appearance submenu of the hamburger menu; contains "Select color" and "Default color"
+#: data/ui/five-or-more.ui:74
+#| msgid "Background color"
+msgid "Background"
+msgstr "Plano de fundo"
+
+#. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); opens a dialog for choosing background color
+#: data/ui/five-or-more.ui:77
+msgid "_Select color"
+msgstr "_Selecionar cor"
+
+#. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); resets background color
+#: data/ui/five-or-more.ui:82
+msgid "_Default color"
+msgstr "_Cor padrão"
+
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); displays Keyboard Shortcuts dialog
+#: data/ui/five-or-more.ui:91
+msgid "_Keyboard Shortcuts"
+msgstr "Atalhos de _teclado"
+
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); opens the help of the application
+#: data/ui/five-or-more.ui:96
+msgid "_Help"
+msgstr "Aj_uda"
+
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); opens the About dialog
+#: data/ui/five-or-more.ui:102
+msgid "_About Five or More"
+msgstr "_Sobre o Cinco ou Mais"
+
+#. Translators: label displayed in the headerbar, introducing the next balls to be added to the board
+#: data/ui/five-or-more.ui:136
+msgid "Next:"
+msgstr "Próxima:"
+
+#. Translators: header of the "Start a new game" (only) shortcut section
+#: data/ui/help-overlay.ui:29
+#| msgid "_New Game"
+msgctxt "shortcut window"
+msgid "New game"
+msgstr "Novo jogo"
+
+#. Translators: in the Keyboard Shortcuts window, section "New game"; action of the Ctrl-N shortcut
+#: data/ui/help-overlay.ui:34
+#| msgid "Start a new puzzle"
+msgctxt "shortcut window"
+msgid "Start a new game"
+msgstr "Inicia um novo jogo"
+
+#. Translators: header of the "Play with keyboard" shortcut section
+#: data/ui/help-overlay.ui:44
+msgctxt "shortcut window"
+msgid "Play with keyboard"
+msgstr "Jogo com o teclado"
+
+#. Translators: in the Keyboard Shortcuts window, section "Play with keyboard"; action of the arrows
+#: data/ui/help-overlay.ui:49
+msgctxt "shortcut window"
+msgid "Move keyboard cursor"
+msgstr "Move o cursor do teclado"
+
+#. Translators: in the Keyboard Shortcuts window, section "Play with keyboard"; action of the return or space keys
+#: data/ui/help-overlay.ui:57
+msgctxt "shortcut window"
+msgid "Select or drop tile"
+msgstr "Seleciona ou libera a peça"
+
+#. Translators: header of the "Toggle main menu," "Keyboard shortcuts," "About," "Quit," etc. shortcuts section
+#: data/ui/help-overlay.ui:67
+#| msgid "General"
+msgctxt "shortcut window"
+msgid "Generic"
+msgstr "Geral"
+
+#. Translators: in the Keyboard Shortcuts window, section "Generic"; action of the F10 shortcut; toggles the hamburger menu
+#: data/ui/help-overlay.ui:72
+msgctxt "shortcut window"
+msgid "Toggle main menu"
+msgstr "Acessa o menu principal"
+
+#. Translators: in the Keyboard Shortcuts window, section "Generic"; action of the Ctrl-Shift-? shortcut; opens the Keyboard Shortcuts dialog
+#: data/ui/help-overlay.ui:80
+msgctxt "shortcut window"
+msgid "Keyboard shortcuts"
+msgstr "Atalhos de teclado"
+
+#. Translators: in the Keyboard Shortcuts window, section "Generic"; action of the F1 shortcut; opens the help of the application
+#: data/ui/help-overlay.ui:88
+#| msgid "_Help"
+msgctxt "shortcut window"
+msgid "Help"
+msgstr "Ajuda"
+
+#. Translators: future keyboard shortcut; action of the Shift-F1 shortcut; opens the About dialog
+#: data/ui/help-overlay.ui:96
+#| msgid "About"
+msgctxt "shortcut window"
+msgid "About"
+msgstr "Sobre"
+
+#. Translators: in the Keyboard Shortcuts window, section "Generic"; action of the Ctrl-Q shortcut; quits the application
+#: data/ui/help-overlay.ui:104
+#| msgid "Quit"
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Sai"
+
+#. Translators: board size, as displayed in the Scores dialog
+#: src/game.vala:93
 msgctxt "board size"
 msgid "Small"
 msgstr "Pequeno"
 
-#: src/game.vala:95
+#. Translators: board size, as displayed in the Scores dialog
+#: src/game.vala:96
 msgctxt "board size"
 msgid "Medium"
 msgstr "Médio"
 
-#: src/game.vala:96
+#. Translators: board size, as displayed in the Scores dialog
+#: src/game.vala:99
 msgctxt "board size"
 msgid "Large"
 msgstr "Grande"
 
-#: src/main.vala:171
+#. Translators: About dialog text, name and email of one of the authors
+#: src/main.vala:95
+msgid "Robert Szokovacs <szo@appaloosacorp.hu>"
+msgstr "Robert Szokovacs <szo@appaloosacorp.hu>"
+
+#. Translators: About dialog text, name and email of one of the authors
+#: src/main.vala:98
+msgid "Szabolcs Bán <shooby@gnome.hu>"
+msgstr "Szabolcs Bán <shooby@gnome.hu>"
+
+#. Translators: About dialog text, name of one of the artists
+#: src/main.vala:103
+msgid "Callum McKenzie"
+msgstr "Callum McKenzie"
+
+#. Translators: About dialog text, name of a website that provided some artworks
+#: src/main.vala:106
+msgid "kenney.nl"
+msgstr "kenney.nl"
+
+#. Translators: About dialog text, name of one of the artists
+#: src/main.vala:109
+msgid "Robert Roth"
+msgstr "Robert Roth"
+
+#. Translators: About dialog text, name of one of the documenters
+#: src/main.vala:114
+msgid "Tiffany Antopolski"
+msgstr "Tiffany Antopolski"
+
+#. Translators: About dialog text, name of one of the documenters
+#: src/main.vala:117
+msgid "Lanka Rathnayaka"
+msgstr "Lanka Rathnayaka"
+
+#. Translators: About dialog text, first line of the copyright notice
+#: src/main.vala:121
+msgid "Copyright © 1997–2008 Free Software Foundation, Inc."
+msgstr "Copyright © 1997–2008 Free Software Foundation, Inc."
+
+#. Translators: About dialog text, second line of the copyright notice
+#: src/main.vala:124
+msgid "Copyright © 2013–2014 Michael Catanzaro"
+msgstr "Copyright © 2013–2014 Michael Catanzaro"
+
+#. Translators: About dialog text, describing the application
+#: src/main.vala:131
 msgid "GNOME port of the once-popular Color Lines game"
 msgstr "Versão para GNOME do popular jogo Color Lines"
 
-#: src/main.vala:177
+#. Translators: about dialog text; this string should be replaced by a text crediting yourselves and your translation team, or should be left empty. Do not translate literally!
+#: src/main.vala:138
 msgid "translator-credits"
 msgstr ""
 "Sandro Nunes Henrique <sandro@conectiva.com.br>\n"
@@ -269,39 +405,65 @@ msgstr ""
 "Rafael Fontenelle <rafaelff@gnome.org>\n"
 "Bruno Lopes da Silva <brunolopesbldsb@gmail.com>"
 
-#: src/window.vala:50
+#. Translators: subtitle of the headerbar, at the application start
+#: src/window.vala:49
 msgid "Match five objects of the same type in a row to score!"
 msgstr "Junte cinco objetos do mesmo tipo em uma linha para marcar pontos!"
 
-#: src/window.vala:51
+#. Translators: subtitle of the headerbar, when the user clicked on a tile where the selected marble cannot move
+#: src/window.vala:52
 msgid "You can’t move there!"
 msgstr "Você não pode mover para lá!"
 
-#: src/window.vala:52
+#. Translators: subtitle of the headerbar, at the end of a game
+#: src/window.vala:55
 msgid "Game Over!"
 msgstr "Fim do jogo!"
 
-#: src/window.vala:53
+#. Translators: subtitle of the headerbar, during a game; the %d is replaced by the score
+#: src/window.vala:58
 #, c-format
-#| msgid "Score:"
 msgid "Score: %d"
 msgstr "Pontuação: %d"
 
-#: src/window.vala:87
+#. Translators: text in the Scores dialog, introducing the combobox
+#: src/window.vala:175
 msgid "Board Size: "
 msgstr "Tamanho do tabuleiro: "
 
-#: src/window.vala:159
-msgid "Are you sure you want to restart the game?"
-msgstr "Você tem certeza que deseja reiniciar o jogo?"
+#. Translators: text of a dialog that appears when the user starts a new game while the score is not null
+#: src/window.vala:278
+#, c-format
+#| msgid "Are you sure you want to restart the game?"
+msgid "Are you sure you want to start a new %u × %u game?"
+msgstr "Você tem certeza que deseja iniciar um novo jogo %u × %u?"
 
-#: src/window.vala:161
+#. Translators: button of a dialog that appears when the user starts a new game while the score is not null; the other answer is "_Restart"
+#: src/window.vala:281
 msgid "_Cancel"
 msgstr "_Cancelar"
 
-#: src/window.vala:162
+#. Translators: button of a dialog that appears when the user starts a new game while the score is not null; the other answer is "_Cancel"
+#: src/window.vala:284
 msgid "_Restart"
 msgstr "_Reiniciar"
+
+#~ msgid "Preferences"
+#~ msgstr "Preferências"
+
+#~ msgid "_Theme:"
+#~ msgstr "_Tema:"
+
+#~ msgid "B_ackground color:"
+#~ msgstr "Cor de _fundo:"
+
+#~| msgid "Preferences"
+#~ msgid "_Preferences"
+#~ msgstr "P_referências"
+
+#~| msgid "five-or-more"
+#~ msgid "org.gnome.five-or-more"
+#~ msgstr "org.gnome.five-or-more"
 
 #~ msgid "_Image:"
 #~ msgstr "_Imagem:"
@@ -309,20 +471,8 @@ msgstr "_Reiniciar"
 #~ msgid "Board Size"
 #~ msgstr "Tamanho do tabuleiro"
 
-#~ msgid "General"
-#~ msgstr "General"
-
 #~ msgid "_Use fast moves"
 #~ msgstr "_Usar movimentos rápidos"
-
-#~ msgid "Start a new puzzle"
-#~ msgstr "Inicia um novo quebra-cabeça"
-
-#~ msgid "About"
-#~ msgstr "Sobre"
-
-#~ msgid "Quit"
-#~ msgstr "Sair"
 
 #~ msgctxt "themes"
 #~ msgid "dots"
