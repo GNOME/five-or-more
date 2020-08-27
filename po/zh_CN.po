@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/five-or-more/issues\n"
-"POT-Creation-Date: 2018-03-27 17:19+0000\n"
-"PO-Revision-Date: 2018-05-10 12:04-0500\n"
+"POT-Creation-Date: 2020-05-31 06:52+0000\n"
+"PO-Revision-Date: 2020-08-16 11:38+0800\n"
 "Last-Translator: Mingcong Bai <jeffbai@aosc.xyz>\n"
 "Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
 "Language: zh_CN\n"
@@ -17,18 +17,22 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 2.0.6\n"
+"X-Generator: Poedit 2.4.1\n"
 
-#: data/five-or-more.appdata.xml.in:7 data/five-or-more.desktop.in:3
-#: data/five-or-more.ui:18 src/five-or-more.c:70 src/five-or-more-app.c:573
+#. Translators: name of the application, as displayed in the window manager
+#. Translators: name of the application, as displayed in the About dialog, some window managers, etc.
+#: data/org.gnome.five-or-more.appdata.xml.in:7
+#: data/org.gnome.five-or-more.desktop.in:3 data/ui/five-or-more.ui:123
+#: src/main.vala:27
 msgid "Five or More"
 msgstr "连珠消球"
 
-#: data/five-or-more.appdata.xml.in:8 data/five-or-more.desktop.in:4
+#: data/org.gnome.five-or-more.appdata.xml.in:8
+#: data/org.gnome.five-or-more.desktop.in:4
 msgid "Remove colored balls from the board by forming lines"
 msgstr "将彩球连成一线以消去"
 
-#: data/five-or-more.appdata.xml.in:10
+#: data/org.gnome.five-or-more.appdata.xml.in:10
 msgid ""
 "Five or More is the GNOME port of a once-popular computer game. Align five "
 "or more objects of the same color into a line to cause them to disappear and "
@@ -38,277 +42,413 @@ msgstr ""
 "Five or More 是曾经风行的计算机游戏连珠消球的 GNOME 移植版本。将同色的五个或"
 "更多个物体连成一线来消除它们并得分。一次连线消除得越多，得分越高。"
 
-#: data/five-or-more.appdata.xml.in:16
+#: data/org.gnome.five-or-more.appdata.xml.in:16
 msgid ""
 "More objects appear after every turn. Play for as long as possible, until "
 "the board is completely full!"
 msgstr "每轮后新的物体会出现。想办法玩下去，不要让棋盘被塞满！"
 
-#: data/five-or-more.appdata.xml.in:40
+#: data/org.gnome.five-or-more.appdata.xml.in:40
 msgid "The GNOME Project"
 msgstr "GNOME 项目"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/five-or-more.desktop.in:6
+#: data/org.gnome.five-or-more.desktop.in:6
 msgid "game;strategy;logic;"
 msgstr "game;strategy;logic;游戏;策略;逻辑;"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: data/five-or-more.desktop.in:9
-msgid "five-or-more"
-msgstr "five-or-more"
-
-#: data/five-or-more-preferences.ui:12 data/menu.ui:11 src/game-area.c:858
-msgid "Preferences"
-msgstr "首选项"
-
-#: data/five-or-more-preferences.ui:35
-msgid "Appearance"
-msgstr "外观"
-
-#: data/five-or-more-preferences.ui:59
-msgid "_Image:"
-msgstr "图像(_I)："
-
-#: data/five-or-more-preferences.ui:74
-msgid "B_ackground color:"
-msgstr "背景颜色(_A)："
-
-#: data/five-or-more-preferences.ui:116
-msgid "Board Size"
-msgstr "盘面大小"
-
-#: data/five-or-more-preferences.ui:135
-msgid "_Small"
-msgstr "小(_S)"
-
-#: data/five-or-more-preferences.ui:154
-msgid "_Medium"
-msgstr "中等(_M)"
-
-#: data/five-or-more-preferences.ui:173
-msgid "_Large"
-msgstr "大(_L)"
-
-#: data/five-or-more-preferences.ui:203
-msgid "General"
-msgstr "常规"
-
-#: data/five-or-more-preferences.ui:216
-msgid "_Use fast moves"
-msgstr "使用快速移动(_U)"
-
-#: data/five-or-more.ui:30
-msgid "Next:"
-msgstr "下个球："
-
-#: data/five-or-more.ui:56
-msgid "Score:"
-msgstr "得分："
-
-#: data/five-or-more.ui:76
-msgid "_New Game"
-msgstr "新建游戏(_N)"
-
-#: data/five-or-more.ui:80
-msgid "Start a new puzzle"
-msgstr "开始新游戏"
-
-#: data/menu.ui:7
-msgid "Scores"
-msgstr "得分"
-
-#: data/menu.ui:17
-msgid "Help"
-msgstr "帮助"
-
-#: data/menu.ui:22
-msgid "About"
-msgstr "关于"
-
-#: data/menu.ui:26
-msgid "Quit"
-msgstr "退出"
-
-#: data/org.gnome.five-or-more.gschema.xml:5
+#: data/org.gnome.five-or-more.gschema.xml:6
 msgid "Playing field size"
 msgstr "场地大小"
 
-#: data/org.gnome.five-or-more.gschema.xml:6
+#: data/org.gnome.five-or-more.gschema.xml:7
 msgid ""
 "Playing field size. 1=Small, 2=Medium, 3=Large. Any other value is invalid."
 msgstr "游戏区大小。1=小，2=中，3=大。其他值无效。"
 
-#: data/org.gnome.five-or-more.gschema.xml:10
+#: data/org.gnome.five-or-more.gschema.xml:11
 msgid "Ball style"
 msgstr "小球样式"
 
-#: data/org.gnome.five-or-more.gschema.xml:11
+#: data/org.gnome.five-or-more.gschema.xml:12
 msgid "Ball style. The filename of the images to use for the balls."
 msgstr "球的样式。球所使用的图片文件。"
 
-#: data/org.gnome.five-or-more.gschema.xml:15
+#. Translators: title of the ColorChooser dialog that appears from the hamburger menu > "Appearance" submenu > "Background" section > "Select color" entry
+#: data/org.gnome.five-or-more.gschema.xml:16 src/window.vala:221
 msgid "Background color"
 msgstr "背景颜色"
 
-#: data/org.gnome.five-or-more.gschema.xml:16
+#: data/org.gnome.five-or-more.gschema.xml:17
 msgid "Background color. The hex specification of the background color."
 msgstr "背景颜色，用十六进制表示。"
 
-#: data/org.gnome.five-or-more.gschema.xml:20
+#: data/org.gnome.five-or-more.gschema.xml:21
 msgid "Time between moves"
 msgstr "移动之间的时间"
 
-#: data/org.gnome.five-or-more.gschema.xml:21
+#: data/org.gnome.five-or-more.gschema.xml:22
 msgid "Time between moves in milliseconds."
 msgstr "移动之间的时间，以毫秒计。"
 
-#: data/org.gnome.five-or-more.gschema.xml:25
+#: data/org.gnome.five-or-more.gschema.xml:26
 msgid "Game score"
 msgstr "游戏得分"
 
-#: data/org.gnome.five-or-more.gschema.xml:26
+#: data/org.gnome.five-or-more.gschema.xml:27
 msgid "Game score from last saved session."
 msgstr "自上次保存的会话后的游戏得分。"
 
-#: data/org.gnome.five-or-more.gschema.xml:30
+#: data/org.gnome.five-or-more.gschema.xml:31
 msgid "Game field"
 msgstr "游戏状态"
 
-#: data/org.gnome.five-or-more.gschema.xml:31
+#: data/org.gnome.five-or-more.gschema.xml:32
 msgid "Game field from last saved session."
 msgstr "游戏上次保存时的状态。"
 
-#: data/org.gnome.five-or-more.gschema.xml:35
+#: data/org.gnome.five-or-more.gschema.xml:36
 msgid "Game preview"
 msgstr "游戏预览"
 
-#: data/org.gnome.five-or-more.gschema.xml:36
+#: data/org.gnome.five-or-more.gschema.xml:37
 msgid "Game preview from last saved session."
 msgstr "自上次保存的会话后的游戏预览。"
 
-#: data/org.gnome.five-or-more.gschema.xml:40
+#: data/org.gnome.five-or-more.gschema.xml:41
 msgid "Width of the window in pixels"
 msgstr "主窗口宽度（像素）"
 
-#: data/org.gnome.five-or-more.gschema.xml:44
+#: data/org.gnome.five-or-more.gschema.xml:45
 msgid "Height of the window in pixels"
 msgstr "主窗口高度（像素）"
 
-#: data/org.gnome.five-or-more.gschema.xml:48
+#: data/org.gnome.five-or-more.gschema.xml:49
 msgid "true if the window is maximized"
 msgstr "若窗口已最大化则为 true"
 
-#.
-#. * Translatable strings file.
-#. * Add this file to your project's POTFILES.in.
-#. * DO NOT compile it as part of your application.
-#.
-#: data/translatable_themes.h:6
-msgctxt "themes"
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
+#. Translators: entry of the Size submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
+#: data/ui/five-or-more.ui:8 data/ui/five-or-more.ui:37
+msgid "_New Game"
+msgstr "新建游戏(_N)"
+
+#. Translators: submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); allows to change the size of the board
+#: data/ui/five-or-more.ui:13
+msgid "Si_ze"
+msgstr "大小(_Z)"
+
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game of small size
+#: data/ui/five-or-more.ui:17
+msgid "_Small"
+msgstr "小(_S)"
+
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game of medium size
+#: data/ui/five-or-more.ui:23
+msgid "_Medium"
+msgstr "中等(_M)"
+
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game of large size
+#: data/ui/five-or-more.ui:29
+msgid "_Large"
+msgstr "大(_L)"
+
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); opens the Scores dialog
+#: data/ui/five-or-more.ui:46
+msgid "S_cores"
+msgstr "得分(_C)"
+
+#. Translators: submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); allows to change the theme
+#: data/ui/five-or-more.ui:51
+msgid "A_ppearance"
+msgstr "外观(_P)"
+
+#. Translators: entry of the Appearance submenu of the hamburger menu; set theme to "balls"; other possible themes are "shapes" and "tango"
+#: data/ui/five-or-more.ui:55
 msgid "balls"
-msgstr "球"
+msgstr "balls"
 
-#: data/translatable_themes.h:7
-msgctxt "themes"
-msgid "dots"
-msgstr "点"
-
-#: data/translatable_themes.h:8
-msgctxt "themes"
-msgid "gumball"
-msgstr "橡皮球"
-
-#: data/translatable_themes.h:9
-msgctxt "themes"
+#. Translators: entry of the Appearance submenu of the hamburger menu; set theme to "shapes"; other possible themes are "balls" and "tango"
+#: data/ui/five-or-more.ui:61
 msgid "shapes"
-msgstr "形状"
+msgstr "shapes"
 
-#: src/five-or-more-app.c:57
+#. Translators: entry of the Appearance submenu of the hamburger menu; set theme to "tango"; other possible themes are "balls" and "shapes"
+#: data/ui/five-or-more.ui:67
+msgid "tango"
+msgstr "tango"
+
+#. Translators: title of a section in the Appearance submenu of the hamburger menu; contains "Select color" and "Default color"
+#: data/ui/five-or-more.ui:74
+msgid "Background"
+msgstr "背景"
+
+#. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); opens a dialog for choosing background color
+#: data/ui/five-or-more.ui:77
+msgid "_Select color"
+msgstr "选择颜色(_S)"
+
+#. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); resets background color
+#: data/ui/five-or-more.ui:82
+msgid "_Default color"
+msgstr "默认颜色(_D)"
+
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); displays Keyboard Shortcuts dialog
+#: data/ui/five-or-more.ui:91
+msgid "_Keyboard Shortcuts"
+msgstr "键盘快捷键(_K)"
+
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); opens the help of the application
+#: data/ui/five-or-more.ui:96
+msgid "_Help"
+msgstr "帮助(_H)"
+
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); opens the About dialog
+#: data/ui/five-or-more.ui:102
+msgid "_About Five or More"
+msgstr "关于连珠消球(_A)"
+
+#. Translators: label displayed in the headerbar, introducing the next balls to be added to the board
+#: data/ui/five-or-more.ui:136
+msgid "Next:"
+msgstr "下个球："
+
+#. Translators: header of the "Start a new game" (only) shortcut section
+#: data/ui/help-overlay.ui:29
+msgctxt "shortcut window"
+msgid "New game"
+msgstr "新建游戏"
+
+#. Translators: in the Keyboard Shortcuts window, section "New game"; action of the Ctrl-N shortcut
+#: data/ui/help-overlay.ui:34
+msgctxt "shortcut window"
+msgid "Start a new game"
+msgstr "开始新游戏"
+
+#. Translators: header of the "Play with keyboard" shortcut section
+#: data/ui/help-overlay.ui:44
+msgctxt "shortcut window"
+msgid "Play with keyboard"
+msgstr "使用键盘进行游戏"
+
+#. Translators: in the Keyboard Shortcuts window, section "Play with keyboard"; action of the arrows
+#: data/ui/help-overlay.ui:49
+msgctxt "shortcut window"
+msgid "Move keyboard cursor"
+msgstr "移动键盘光标"
+
+#. Translators: in the Keyboard Shortcuts window, section "Play with keyboard"; action of the return or space keys
+#: data/ui/help-overlay.ui:57
+msgctxt "shortcut window"
+msgid "Select or drop tile"
+msgstr "选择或删除平铺视图"
+
+#. Translators: header of the "Toggle main menu," "Keyboard shortcuts," "About," "Quit," etc. shortcuts section
+#: data/ui/help-overlay.ui:67
+msgctxt "shortcut window"
+msgid "Generic"
+msgstr "通用"
+
+#. Translators: in the Keyboard Shortcuts window, section "Generic"; action of the F10 shortcut; toggles the hamburger menu
+#: data/ui/help-overlay.ui:72
+msgctxt "shortcut window"
+msgid "Toggle main menu"
+msgstr "切换主菜单"
+
+#. Translators: in the Keyboard Shortcuts window, section "Generic"; action of the Ctrl-Shift-? shortcut; opens the Keyboard Shortcuts dialog
+#: data/ui/help-overlay.ui:80
+msgctxt "shortcut window"
+msgid "Keyboard shortcuts"
+msgstr "键盘快捷键"
+
+#. Translators: in the Keyboard Shortcuts window, section "Generic"; action of the F1 shortcut; opens the help of the application
+#: data/ui/help-overlay.ui:88
+msgctxt "shortcut window"
+msgid "Help"
+msgstr "帮助"
+
+#. Translators: future keyboard shortcut; action of the Shift-F1 shortcut; opens the About dialog
+#: data/ui/help-overlay.ui:96
+msgctxt "shortcut window"
+msgid "About"
+msgstr "关于"
+
+#. Translators: in the Keyboard Shortcuts window, section "Generic"; action of the Ctrl-Q shortcut; quits the application
+#: data/ui/help-overlay.ui:104
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "退出"
+
+#. Translators: board size, as displayed in the Scores dialog
+#: src/game.vala:93
 msgctxt "board size"
 msgid "Small"
 msgstr "小"
 
-#: src/five-or-more-app.c:58
+#. Translators: board size, as displayed in the Scores dialog
+#: src/game.vala:96
 msgctxt "board size"
 msgid "Medium"
 msgstr "中"
 
-#: src/five-or-more-app.c:59
+#. Translators: board size, as displayed in the Scores dialog
+#: src/game.vala:99
 msgctxt "board size"
 msgid "Large"
 msgstr "大"
 
-#: src/five-or-more-app.c:233
-msgid "Game Over!"
-msgstr "游戏结束！"
+#. Translators: About dialog text, name and email of one of the authors
+#: src/main.vala:95
+msgid "Robert Szokovacs <szo@appaloosacorp.hu>"
+msgstr "Robert Szokovacs <szo@appaloosacorp.hu>"
 
-#: src/five-or-more-app.c:250
-msgid "Match five objects of the same type in a row to score!"
-msgstr "在一线上放置五个以上同色球以便得分！"
+#. Translators: About dialog text, name and email of one of the authors
+#: src/main.vala:98
+msgid "Szabolcs Bán <shooby@gnome.hu>"
+msgstr "Szabolcs Bán <shooby@gnome.hu>"
 
-#: src/five-or-more-app.c:405
-msgid "Are you sure you want to restart the game?"
-msgstr "您确定要重新开始游戏吗？"
+#. Translators: About dialog text, name of one of the artists
+#: src/main.vala:103
+msgid "Callum McKenzie"
+msgstr "Callum McKenzie"
 
-#: src/five-or-more-app.c:408
-msgid "_Cancel"
-msgstr "取消(_C)"
+#. Translators: About dialog text, name of a website that provided some artworks
+#: src/main.vala:106
+msgid "kenney.nl"
+msgstr "kenney.nl"
 
-#: src/five-or-more-app.c:409
-msgid "_Restart"
-msgstr "重新开始(_R)"
+#. Translators: About dialog text, name of one of the artists
+#: src/main.vala:109
+msgid "Robert Roth"
+msgstr "Robert Roth"
 
-#: src/five-or-more-app.c:575
+#. Translators: About dialog text, name of one of the documenters
+#: src/main.vala:114
+msgid "Tiffany Antopolski"
+msgstr "Tiffany Antopolski"
+
+#. Translators: About dialog text, name of one of the documenters
+#: src/main.vala:117
+msgid "Lanka Rathnayaka"
+msgstr "Lanka Rathnayaka"
+
+#. Translators: About dialog text, first line of the copyright notice
+#: src/main.vala:121
+msgid "Copyright © 1997–2008 Free Software Foundation, Inc."
+msgstr "Copyright © 1997–2008 Free Software Foundation, Inc."
+
+#. Translators: About dialog text, second line of the copyright notice
+#: src/main.vala:124
+msgid "Copyright © 2013–2014 Michael Catanzaro"
+msgstr "Copyright © 2013–2014 Michael Catanzaro"
+
+#. Translators: About dialog text, describing the application
+#: src/main.vala:131
 msgid "GNOME port of the once-popular Color Lines game"
 msgstr "一度非常流行的连珠消球游戏的 GNOME 版本"
 
-#: src/five-or-more-app.c:581
+#. Translators: about dialog text; this string should be replaced by a text crediting yourselves and your translation team, or should be left empty. Do not translate literally!
+#: src/main.vala:138
 msgid "translator-credits"
 msgstr ""
 "Yang Zhang <zyangmath@gmail.com>, 2007\n"
 "Ping Z <zpsigma@gmail.com>, 2007\n"
 "Xhacker Liu <liu.dongyuan@gmail.com>, 2010\n"
-"Mingcong Bai <jeffbai@aosc.xyz>, 2018"
+"Mingcong Bai <jeffbai@aosc.xyz>, 2018\n"
+"Weiyi Xu <xuweiyi0923@gmail.com>, 2020"
 
-#: src/five-or-more-app.c:693
-msgid "Board Size: "
-msgstr "盘面大小："
+#. Translators: subtitle of the headerbar, at the application start
+#: src/window.vala:49
+msgid "Match five objects of the same type in a row to score!"
+msgstr "在一线上放置五个以上同色球以便得分！"
 
-#. Can't move there!
-#: src/game-area.c:635
+#. Translators: subtitle of the headerbar, when the user clicked on a tile where the selected marble cannot move
+#: src/window.vala:52
 msgid "You can’t move there!"
 msgstr "不能移到那儿！"
 
-#: src/game-area.c:818
-#, c-format
-msgid ""
-"Unable to locate file:\n"
-"%s\n"
-"\n"
-"The default theme will be loaded instead."
-msgstr ""
-"无法定位文件：\n"
-"%s\n"
-"\n"
-"将载入默认主题。"
+#. Translators: subtitle of the headerbar, at the end of a game
+#: src/window.vala:55
+msgid "Game Over!"
+msgstr "游戏结束！"
 
-#: src/game-area.c:825
+#. Translators: subtitle of the headerbar, during a game; the %d is replaced by the score
+#: src/window.vala:58
 #, c-format
-msgid ""
-"Unable to locate file:\n"
-"%s\n"
-"\n"
-"Please check that Five or More is installed correctly."
-msgstr ""
-"无法定位文件：\n"
-"%s\n"
-"\n"
-"请检查您的连珠消球安装是否正确。"
+msgid "Score: %d"
+msgstr "得分：%d"
 
-#: src/game-area.c:852
-msgid "Could not load theme"
-msgstr "无法载入主题"
+#. Translators: text in the Scores dialog, introducing the combobox
+#: src/window.vala:175
+msgid "Board Size: "
+msgstr "盘面大小："
+
+#. Translators: text of a dialog that appears when the user starts a new game while the score is not null
+#: src/window.vala:278
+#, c-format
+msgid "Are you sure you want to start a new %u × %u game?"
+msgstr "您确定要开始新的 %u × %u 游戏吗？"
+
+#. Translators: button of a dialog that appears when the user starts a new game while the score is not null; the other answer is "_Restart"
+#: src/window.vala:281
+msgid "_Cancel"
+msgstr "取消(_C)"
+
+#. Translators: button of a dialog that appears when the user starts a new game while the score is not null; the other answer is "_Cancel"
+#: src/window.vala:284
+msgid "_Restart"
+msgstr "重新开始(_R)"
+
+#~ msgid "five-or-more"
+#~ msgstr "five-or-more"
+
+#~ msgid "Preferences"
+#~ msgstr "首选项"
+
+#~ msgid "_Image:"
+#~ msgstr "图像(_I)："
+
+#~ msgid "B_ackground color:"
+#~ msgstr "背景颜色(_A)："
+
+#~ msgid "Board Size"
+#~ msgstr "盘面大小"
+
+#~ msgid "_Use fast moves"
+#~ msgstr "使用快速移动(_U)"
+
+#~ msgctxt "themes"
+#~ msgid "dots"
+#~ msgstr "点"
+
+#~ msgctxt "themes"
+#~ msgid "gumball"
+#~ msgstr "橡皮球"
+
+#~ msgid ""
+#~ "Unable to locate file:\n"
+#~ "%s\n"
+#~ "\n"
+#~ "The default theme will be loaded instead."
+#~ msgstr ""
+#~ "无法定位文件：\n"
+#~ "%s\n"
+#~ "\n"
+#~ "将载入默认主题。"
+
+#~ msgid ""
+#~ "Unable to locate file:\n"
+#~ "%s\n"
+#~ "\n"
+#~ "Please check that Five or More is installed correctly."
+#~ msgstr ""
+#~ "无法定位文件：\n"
+#~ "%s\n"
+#~ "\n"
+#~ "请检查您的连珠消球安装是否正确。"
+
+#~ msgid "Could not load theme"
+#~ msgstr "无法载入主题"
 
 #~ msgid "0"
 #~ msgstr "0"
