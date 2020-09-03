@@ -105,12 +105,12 @@ msgid ""
 "exists."
 msgstr ""
 "Quan tingueu un compte, inicieu la sessió i feu clic a "
-"<guiseq><gui>Projectes</gui><gui>cinc o "
-"més</gui><gui>Problemes</gui><gui>Problema noi</gui></guiseq>. Abnas "
+"<guiseq><gui>Projects</gui><gui>five-or-more"
+"</gui><gui>Issues</gui><gui>New issue</gui></guiseq>. Abans "
 "d'enviar un informe d'error, llegiu les <link "
 "href=\"https://bugzilla.gnome.org/page.cgi?id=bug-writing.html\">pautes "
 "d'escriptura d'errors</link>, i <link href=\"https://gitlab.gnome.org/GNOME"
-"/five-or-more/issues\">cerqueu</link> l'error per veure si ja existeix."
+"/five-or-more/issues\">cerqueu</link> l'error per comprovar si ja existeix."
 
 #. (itstool) path: page/p
 #: C/bug-filing.page:33
@@ -118,8 +118,8 @@ msgid ""
 "Fill in the Title and Description sections and click <gui>Submit "
 "issue</gui>."
 msgstr ""
-"Emplena els camps de Títol i Descripció i fes clic a <gui>Enviar "
-"problema</gui>."
+"Emplena els camps de Títol i Descripció i fes clic a <gui>Submit "
+"issue</gui>."
 
 #. (itstool) path: page/p
 #: C/bug-filing.page:36
@@ -313,7 +313,7 @@ msgid ""
 "Press the menu button in the top-right corner of the window and select <gui "
 "style=\"menuitem\">Preferences</gui>."
 msgstr ""
-"Presiona el botó del menú al cantó superior dret de la finestra i selecciona"
+"Premeu el botó del menú al cantó superior dret de la finestra i seleccioneu"
 " <gui style=\"menuitem\">Preferències</gui>."
 
 #. (itstool) path: item/p
@@ -322,8 +322,8 @@ msgid ""
 "Select <gui>balls</gui>, <gui>shapes</gui>, or <gui>tango</gui> from the "
 "<gui>Theme</gui> drop down menu to change the playing pieces."
 msgstr ""
-"Seleccioneu <gui>boles</gui>, <gui>figures</gui>, o <gui>tango</gui> del "
-"<gui>Tema</gui> menú desplegable per a canviar les peces de joc."
+"Seleccioneu <gui>boles</gui>, <gui>figures</gui>, o <gui>tango</gui> des del "
+"menú desplegable <gui>Tema</gui> per a canviar les peces de joc."
 
 #. (itstool) path: item/p
 #: C/change-theme.page:30
@@ -331,13 +331,13 @@ msgid ""
 "Click on the colored box next to <gui>Background color</gui> to access the "
 "color palette."
 msgstr ""
-"Fes clic en el requadre de color al costat <gui>Color de fons</gui> per "
+"Feu clic en el requadre de color al costat <gui>Color de fons</gui> per "
 "accedir a la paleta de colors."
 
 #. (itstool) path: item/p
 #: C/change-theme.page:34
 msgid "Close the <gui>Preferences</gui> dialog."
-msgstr "Tanca el diàleg <gui>Preferències</gui>."
+msgstr "Tanqueu el diàleg <gui>Preferències</gui>."
 
 #. (itstool) path: page/title
 #: C/develop.page:19
@@ -604,7 +604,7 @@ msgid ""
 "spinning."
 msgstr ""
 "Feu clic en l'objecte que voleu moure. L'objecte seleccionat començarà a "
-"moure's. "
+"moure's."
 
 #. (itstool) path: item/p
 #: C/play.page:37
@@ -612,7 +612,7 @@ msgid ""
 "Click on the destination cell. The chosen object will move to the "
 "destination cell, if there is any clear path."
 msgstr ""
-"Fes click a la cel·la de destinació. L'objecte seleccionat es mourà a la "
+"Feu clic a la cel·la de destinació. L'objecte seleccionat es mourà a la "
 "cel·la de destinació, si hi ha camí lliure."
 
 #. (itstool) path: section/title
