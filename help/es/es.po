@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: glines.HEAD\n"
-"POT-Creation-Date: 2019-09-24 14:40+0000\n"
+"POT-Creation-Date: 2020-07-19 06:57+0000\n"
 "PO-Revision-Date: 2019-10-02 12:08+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Spanish - Spain <gnome-es-list@gnome.org>\n"
@@ -60,7 +60,7 @@ msgid ""
 "GNOME/five-or-more/issues/new\"/>."
 msgstr ""
 "<app>Cinco o más</app> lo mantiene la comunidad de manera voluntaria. Si "
-"quiere participar, es bienvenido. Si encuentra un error, puede rellenar un "
+"quiere participar, es bienvenido/a . Si encuentra un error, puede rellenar un "
 "<em>informe de error</em>. Para informar de un error, vaya a <link href="
 "\"https://gitlab.gnome.org/GNOME/five-or-more/issues/new\"/>."
 
@@ -153,9 +153,6 @@ msgstr "Pulse el botón de menú en la esquina superior derecha de la ventana."
 
 #. (itstool) path: item/p
 #: C/change-board-size.page:27
-#| msgid ""
-#| "Under <gui>Board Size</gui>, select <gui>Small</gui>, <gui>Medium</gui>, "
-#| "or <gui>Large</gui>."
 msgid "Select <gui>Small</gui>, <gui>Medium</gui>, or <gui>Large</gui>."
 msgstr ""
 "Seleccione <gui>Pequeño</gui>, <gui>Mediano</gui>, o <gui>Grande</gui>."
@@ -317,9 +314,6 @@ msgstr ""
 
 #. (itstool) path: item/p
 #: C/change-theme.page:28
-#| msgid ""
-#| "Select <gui>balls</gui> or <gui>shapes</gui> from the <gui>Themes</gui> "
-#| "drop down menu to change the playing pieces."
 msgid ""
 "Select <gui>balls</gui>, <gui>shapes</gui>, or <gui>tango</gui> from the "
 "<gui>Theme</gui> drop down menu to change the playing pieces."
@@ -353,7 +347,7 @@ msgid ""
 "community. You are welcome to participate."
 msgstr ""
 "Los <app>juegos de GNOME</app> los desarrolla y los mantiene una comunidad "
-"de voluntarios. Si quiere participar es bienvenido."
+"de voluntarios. Si quiere participar es bienvenido/a ."
 
 #. (itstool) path: page/p
 #: C/develop.page:23
@@ -384,7 +378,7 @@ msgid ""
 "community. You are welcome to participate."
 msgstr ""
 "La documentación de los <app>juegos de GNOME</app> las mantiene una "
-"comunidad de voluntarios. Si quiere participar es bienvenido."
+"comunidad de voluntarios. Si quiere participar es bienvenido/a ."
 
 #. (itstool) path: page/p
 #: C/documentation.page:22
@@ -954,7 +948,7 @@ msgid ""
 msgstr ""
 "La interfaz de usuario de los <app>juegos de GNOME</app> y la documentación "
 "las traduce una comunidad de voluntarios de todo el mundo. Si quiere "
-"participar, es bienvenido."
+"participar, es bienvenido/a ."
 
 #. (itstool) path: page/p
 #: C/translate.page:28
