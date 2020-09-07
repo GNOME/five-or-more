@@ -188,7 +188,7 @@ msgstr "<em>Mida</em>"
 #. (itstool) path: td/p
 #: C/change-board-size.page:42
 msgid "<em>Width</em>"
-msgstr "<em>Amplaria</em>"
+msgstr "<em>Amplada</em>"
 
 #. (itstool) path: td/p
 #: C/change-board-size.page:43
