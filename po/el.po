@@ -37,94 +37,25 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.HEAD.el\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/five-or-more/issues\n"
-"POT-Creation-Date: 2019-01-11 15:40+0000\n"
-"PO-Revision-Date: 2019-01-24 23:10+0200\n"
-"Last-Translator: Tom Tryfonidis <tomtryf@gnome.org>\n"
+"POT-Creation-Date: 2020-05-31 06:52+0000\n"
+"PO-Revision-Date: 2020-09-11 21:38+0300\n"
+"Last-Translator: Efstathios Iosifidis <eiosifidis@gnome.org>\n"
 "Language-Team: Greek, Modern (1453-) <gnome-el-list@gnome.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"X-Generator: Gtranslator 3.30.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.3\n"
 "X-Project-Style: gnome\n"
 
-#: data/five-or-more-preferences.ui:13
-msgid "Preferences"
-msgstr "Προτιμήσεις"
-
-#: data/five-or-more-preferences.ui:36
-msgid "Appearance"
-msgstr "Εμφάνιση"
-
-#: data/five-or-more-preferences.ui:60
-msgid "_Theme:"
-msgstr "_Θέμα:"
-
-#: data/five-or-more-preferences.ui:76
-#| msgctxt "themes"
-#| msgid "balls"
-msgid "balls"
-msgstr "μπάλες"
-
-#: data/five-or-more-preferences.ui:77
-#| msgctxt "themes"
-#| msgid "shapes"
-msgid "shapes"
-msgstr "σχήματα"
-
-#: data/five-or-more-preferences.ui:78
-msgid "tango"
-msgstr "tango"
-
-#: data/five-or-more-preferences.ui:87
-msgid "B_ackground color:"
-msgstr "Χρώμα _παρασκηνίου:"
-
-#: data/five-or-more.ui:7
-msgid "_New Game"
-msgstr "_Νέο παιχνίδι"
-
-#: data/five-or-more.ui:13
-#| msgid "Scores"
-msgid "S_cores"
-msgstr "Βαθ_μολογίες"
-
-#: data/five-or-more.ui:19
-msgid "_Small"
-msgstr "_Μικρό"
-
-#: data/five-or-more.ui:24
-msgid "_Medium"
-msgstr "_Μεσαίο"
-
-#: data/five-or-more.ui:29
-msgid "_Large"
-msgstr "_Μεγάλο"
-
-#: data/five-or-more.ui:36
-#| msgid "Preferences"
-msgid "_Preferences"
-msgstr "_Προτιμήσεις"
-
-#: data/five-or-more.ui:40
-#| msgid "Help"
-msgid "_Help"
-msgstr "_Βοήθεια"
-
-#: data/five-or-more.ui:45
-#| msgid "Five or More"
-msgid "_About Five or More"
-msgstr "Π_ερί Πέντε ή περισσότερα"
-
-#: data/five-or-more.ui:65 data/org.gnome.five-or-more.appdata.xml.in:7
-#: data/org.gnome.five-or-more.desktop.in:3 src/main.vala:74 src/main.vala:168
+#. Translators: name of the application, as displayed in the window manager
+#. Translators: name of the application, as displayed in the About dialog, some window managers, etc.
+#: data/org.gnome.five-or-more.appdata.xml.in:7
+#: data/org.gnome.five-or-more.desktop.in:3 data/ui/five-or-more.ui:123
+#: src/main.vala:27
 msgid "Five or More"
 msgstr "Πέντε ή περισσότερα"
-
-#: data/five-or-more.ui:77
-msgid "Next:"
-msgstr "Επόμενο:"
 
 #: data/org.gnome.five-or-more.appdata.xml.in:8
 #: data/org.gnome.five-or-more.desktop.in:4
@@ -162,105 +93,302 @@ msgstr "Το έργο GNOME"
 msgid "game;strategy;logic;"
 msgstr "παιχνίδι;στρατηγική;λογική;game;strategy;logic;"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: data/org.gnome.five-or-more.desktop.in:9
-#| msgid "five-or-more"
-msgid "org.gnome.five-or-more"
-msgstr "org.gnome.five-or-more"
-
-#: data/org.gnome.five-or-more.gschema.xml:5
+#: data/org.gnome.five-or-more.gschema.xml:6
 msgid "Playing field size"
 msgstr "Μέγεθος πεδίου παιχνιδιού"
 
-#: data/org.gnome.five-or-more.gschema.xml:6
+#: data/org.gnome.five-or-more.gschema.xml:7
 msgid ""
 "Playing field size. 1=Small, 2=Medium, 3=Large. Any other value is invalid."
 msgstr ""
 "Μέγεθος πεδίου παιχνιδιού. 1=Μικρό, 2=Μεσαίο, 3=Μεγάλο. Οποιαδήποτε άλλη "
 "τιμή δεν είναι έγκυρη."
 
-#: data/org.gnome.five-or-more.gschema.xml:10
+#: data/org.gnome.five-or-more.gschema.xml:11
 msgid "Ball style"
 msgstr "Στυλ μπάλας"
 
-#: data/org.gnome.five-or-more.gschema.xml:11
+#: data/org.gnome.five-or-more.gschema.xml:12
 msgid "Ball style. The filename of the images to use for the balls."
 msgstr ""
 "Στυλ μπάλας. Τα ονόματα των αρχείων εικόνας που θα χρησιμοποιούνται για τις "
 "μπάλες."
 
-#: data/org.gnome.five-or-more.gschema.xml:15
+#. Translators: title of the ColorChooser dialog that appears from the hamburger menu > "Appearance" submenu > "Background" section > "Select color" entry
+#: data/org.gnome.five-or-more.gschema.xml:16 src/window.vala:221
 msgid "Background color"
 msgstr "Χρώμα παρασκηνίου"
 
-#: data/org.gnome.five-or-more.gschema.xml:16
+#: data/org.gnome.five-or-more.gschema.xml:17
 msgid "Background color. The hex specification of the background color."
 msgstr "Χρώμα παρασκηνίου. Το δεκαεξαδικό πρότυπο για το χρώμα παρασκηνίου."
 
-#: data/org.gnome.five-or-more.gschema.xml:20
+#: data/org.gnome.five-or-more.gschema.xml:21
 msgid "Time between moves"
 msgstr "Χρόνος μεταξύ των κινήσεων"
 
-#: data/org.gnome.five-or-more.gschema.xml:21
+#: data/org.gnome.five-or-more.gschema.xml:22
 msgid "Time between moves in milliseconds."
 msgstr "Χρόνος μεταξύ των κινήσεων σε χιλιοστά του δευτερολέπτου."
 
-#: data/org.gnome.five-or-more.gschema.xml:25
+#: data/org.gnome.five-or-more.gschema.xml:26
 msgid "Game score"
 msgstr "Βαθμολογία παιχνιδιού"
 
-#: data/org.gnome.five-or-more.gschema.xml:26
+#: data/org.gnome.five-or-more.gschema.xml:27
 msgid "Game score from last saved session."
 msgstr "Βαθμολογία παιχνιδιού από την τελευταία αποθηκευμένη συνεδρία."
 
-#: data/org.gnome.five-or-more.gschema.xml:30
+#: data/org.gnome.five-or-more.gschema.xml:31
 msgid "Game field"
 msgstr "Πεδίο παιχνιδιού"
 
-#: data/org.gnome.five-or-more.gschema.xml:31
+#: data/org.gnome.five-or-more.gschema.xml:32
 msgid "Game field from last saved session."
 msgstr "Πεδίο παιχνιδιού από την τελευταία αποθηκευμένη συνεδρία."
 
-#: data/org.gnome.five-or-more.gschema.xml:35
+#: data/org.gnome.five-or-more.gschema.xml:36
 msgid "Game preview"
 msgstr "Προεπισκόπηση παιχνιδιού"
 
-#: data/org.gnome.five-or-more.gschema.xml:36
+#: data/org.gnome.five-or-more.gschema.xml:37
 msgid "Game preview from last saved session."
 msgstr "Προεπισκόπηση παιχνιδιού από την τελευταία αποθηκευμένη συνεδρία."
 
-#: data/org.gnome.five-or-more.gschema.xml:40
+#: data/org.gnome.five-or-more.gschema.xml:41
 msgid "Width of the window in pixels"
 msgstr "Το πλάτος του παραθύρου σε εικονοστοιχεία"
 
-#: data/org.gnome.five-or-more.gschema.xml:44
+#: data/org.gnome.five-or-more.gschema.xml:45
 msgid "Height of the window in pixels"
 msgstr "Το ύψος του παραθύρου σε εικονοστοιχεία"
 
-#: data/org.gnome.five-or-more.gschema.xml:48
+#: data/org.gnome.five-or-more.gschema.xml:49
 msgid "true if the window is maximized"
 msgstr "αληθής αν το παράθυρο είναι μεγιστοποιημένο"
 
-#: src/game.vala:94
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
+#. Translators: entry of the Size submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
+#: data/ui/five-or-more.ui:8 data/ui/five-or-more.ui:37
+msgid "_New Game"
+msgstr "_Νέο παιχνίδι"
+
+#. Translators: submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); allows to change the size of the board
+#: data/ui/five-or-more.ui:13
+msgid "Si_ze"
+msgstr "Μέ_γεθος:"
+
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game of small size
+#: data/ui/five-or-more.ui:17
+msgid "_Small"
+msgstr "_Μικρό"
+
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game of medium size
+#: data/ui/five-or-more.ui:23
+msgid "_Medium"
+msgstr "_Μεσαίο"
+
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game of large size
+#: data/ui/five-or-more.ui:29
+msgid "_Large"
+msgstr "_Μεγάλο"
+
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); opens the Scores dialog
+#: data/ui/five-or-more.ui:46
+msgid "S_cores"
+msgstr "Βαθ_μολογίες"
+
+#. Translators: submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); allows to change the theme
+#: data/ui/five-or-more.ui:51
+msgid "A_ppearance"
+msgstr "Ε_μφάνιση"
+
+#. Translators: entry of the Appearance submenu of the hamburger menu; set theme to "balls"; other possible themes are "shapes" and "tango"
+#: data/ui/five-or-more.ui:55
+msgid "balls"
+msgstr "μπάλες"
+
+#. Translators: entry of the Appearance submenu of the hamburger menu; set theme to "shapes"; other possible themes are "balls" and "tango"
+#: data/ui/five-or-more.ui:61
+msgid "shapes"
+msgstr "σχήματα"
+
+#. Translators: entry of the Appearance submenu of the hamburger menu; set theme to "tango"; other possible themes are "balls" and "shapes"
+#: data/ui/five-or-more.ui:67
+msgid "tango"
+msgstr "tango"
+
+#. Translators: title of a section in the Appearance submenu of the hamburger menu; contains "Select color" and "Default color"
+#: data/ui/five-or-more.ui:74
+msgid "Background"
+msgstr "Παρασκήνιο"
+
+#. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); opens a dialog for choosing background color
+#: data/ui/five-or-more.ui:77
+msgid "_Select color"
+msgstr "_Επιλογή χρώματος"
+
+#. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); resets background color
+#: data/ui/five-or-more.ui:82
+msgid "_Default color"
+msgstr "_Προεπιλεγμένο χρώμα"
+
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); displays Keyboard Shortcuts dialog
+#: data/ui/five-or-more.ui:91
+msgid "_Keyboard Shortcuts"
+msgstr "_Συντομεύσεις πληκτρολογίου"
+
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); opens the help of the application
+#: data/ui/five-or-more.ui:96
+msgid "_Help"
+msgstr "_Βοήθεια"
+
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); opens the About dialog
+#: data/ui/five-or-more.ui:102
+msgid "_About Five or More"
+msgstr "Π_ερί Πέντε ή περισσότερα"
+
+#. Translators: label displayed in the headerbar, introducing the next balls to be added to the board
+#: data/ui/five-or-more.ui:136
+msgid "Next:"
+msgstr "Επόμενο:"
+
+#. Translators: header of the "Start a new game" (only) shortcut section
+#: data/ui/help-overlay.ui:29
+msgctxt "shortcut window"
+msgid "New game"
+msgstr "Νέο παιxνίδι"
+
+#. Translators: in the Keyboard Shortcuts window, section "New game"; action of the Ctrl-N shortcut
+#: data/ui/help-overlay.ui:34
+msgctxt "shortcut window"
+msgid "Start a new game"
+msgstr "Εκκίνηση νέου παιχνιδιού"
+
+#. Translators: header of the "Play with keyboard" shortcut section
+#: data/ui/help-overlay.ui:44
+msgctxt "shortcut window"
+msgid "Play with keyboard"
+msgstr "Παίξτε με το πληκτρολόγιο"
+
+#. Translators: in the Keyboard Shortcuts window, section "Play with keyboard"; action of the arrows
+#: data/ui/help-overlay.ui:49
+msgctxt "shortcut window"
+msgid "Move keyboard cursor"
+msgstr "Μετακινήστε τον κέρσορα πληκτρολογίου"
+
+#. Translators: in the Keyboard Shortcuts window, section "Play with keyboard"; action of the return or space keys
+#: data/ui/help-overlay.ui:57
+msgctxt "shortcut window"
+msgid "Select or drop tile"
+msgstr "Επιλογή ή απόθεση πλακιδίου"
+
+#. Translators: header of the "Toggle main menu," "Keyboard shortcuts," "About," "Quit," etc. shortcuts section
+#: data/ui/help-overlay.ui:67
+msgctxt "shortcut window"
+msgid "Generic"
+msgstr "Γενικά"
+
+#. Translators: in the Keyboard Shortcuts window, section "Generic"; action of the F10 shortcut; toggles the hamburger menu
+#: data/ui/help-overlay.ui:72
+msgctxt "shortcut window"
+msgid "Toggle main menu"
+msgstr "Εναλλαγή κυρίως μενού"
+
+#. Translators: in the Keyboard Shortcuts window, section "Generic"; action of the Ctrl-Shift-? shortcut; opens the Keyboard Shortcuts dialog
+#: data/ui/help-overlay.ui:80
+msgctxt "shortcut window"
+msgid "Keyboard shortcuts"
+msgstr "Συντομεύσεις πληκτρολογίου"
+
+#. Translators: in the Keyboard Shortcuts window, section "Generic"; action of the F1 shortcut; opens the help of the application
+#: data/ui/help-overlay.ui:88
+msgctxt "shortcut window"
+msgid "Help"
+msgstr "Βοήθεια"
+
+#. Translators: future keyboard shortcut; action of the Shift-F1 shortcut; opens the About dialog
+#: data/ui/help-overlay.ui:96
+msgctxt "shortcut window"
+msgid "About"
+msgstr "Περί"
+
+#. Translators: in the Keyboard Shortcuts window, section "Generic"; action of the Ctrl-Q shortcut; quits the application
+#: data/ui/help-overlay.ui:104
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Έξοδος"
+
+#. Translators: board size, as displayed in the Scores dialog
+#: src/game.vala:93
 msgctxt "board size"
 msgid "Small"
 msgstr "Μικρό"
 
-#: src/game.vala:95
+#. Translators: board size, as displayed in the Scores dialog
+#: src/game.vala:96
 msgctxt "board size"
 msgid "Medium"
 msgstr "Μεσαίο"
 
-#: src/game.vala:96
+#. Translators: board size, as displayed in the Scores dialog
+#: src/game.vala:99
 msgctxt "board size"
 msgid "Large"
 msgstr "Μεγάλο"
 
-#: src/main.vala:171
+#. Translators: About dialog text, name and email of one of the authors
+#: src/main.vala:95
+msgid "Robert Szokovacs <szo@appaloosacorp.hu>"
+msgstr "Robert Szokovacs <szo@appaloosacorp.hu>"
+
+#. Translators: About dialog text, name and email of one of the authors
+#: src/main.vala:98
+msgid "Szabolcs Bán <shooby@gnome.hu>"
+msgstr "Szabolcs Bán <shooby@gnome.hu>"
+
+#. Translators: About dialog text, name of one of the artists
+#: src/main.vala:103
+msgid "Callum McKenzie"
+msgstr "Callum McKenzie"
+
+#. Translators: About dialog text, name of a website that provided some artworks
+#: src/main.vala:106
+msgid "kenney.nl"
+msgstr "kenney.nl"
+
+#. Translators: About dialog text, name of one of the artists
+#: src/main.vala:109
+msgid "Robert Roth"
+msgstr "Robert Roth"
+
+#. Translators: About dialog text, name of one of the documenters
+#: src/main.vala:114
+msgid "Tiffany Antopolski"
+msgstr "Tiffany Antopolski"
+
+#. Translators: About dialog text, name of one of the documenters
+#: src/main.vala:117
+msgid "Lanka Rathnayaka"
+msgstr "Lanka Rathnayaka"
+
+#. Translators: About dialog text, first line of the copyright notice
+#: src/main.vala:121
+msgid "Copyright © 1997–2008 Free Software Foundation, Inc."
+msgstr "Πνευματικά δικαιώματα © 1997–2008 Free Software Foundation, Inc."
+
+#. Translators: About dialog text, second line of the copyright notice
+#: src/main.vala:124
+msgid "Copyright © 2013–2014 Michael Catanzaro"
+msgstr "Πνευματικά δικαιώματα © 2013–2014 Michael Catanzaro"
+
+#. Translators: About dialog text, describing the application
+#: src/main.vala:131
 msgid "GNOME port of the once-popular Color Lines game"
 msgstr "Μεταφορά στο GNOME του, πάλαι ποτέ, δημοφιλούς παιχνιδιού Color Lines"
 
-#: src/main.vala:177
+#. Translators: about dialog text; this string should be replaced by a text crediting yourselves and your translation team, or should be left empty. Do not translate literally!
+#: src/main.vala:138
 msgid "translator-credits"
 msgstr ""
 "Ελληνική μεταφραστική ομάδα GNOME\n"
@@ -274,40 +402,65 @@ msgstr ""
 "Για περισστερες πληροφορίες, επισκεφθείτε τη σελίδα\n"
 "http://gnome.gr/"
 
-#: src/window.vala:50
+#. Translators: subtitle of the headerbar, at the application start
+#: src/window.vala:49
 msgid "Match five objects of the same type in a row to score!"
 msgstr ""
 "Ταιριάξτε πέντε αντικείμενα του ίδιου τύπου σε μια σειρά για να σκοράρετε!"
 
-#: src/window.vala:51
+#. Translators: subtitle of the headerbar, when the user clicked on a tile where the selected marble cannot move
+#: src/window.vala:52
 msgid "You can’t move there!"
 msgstr "Δεν μπορείτε να μετακινηθείτε εκεί!"
 
-#: src/window.vala:52
+#. Translators: subtitle of the headerbar, at the end of a game
+#: src/window.vala:55
 msgid "Game Over!"
 msgstr "Τέλος παιχνιδιού!"
 
-#: src/window.vala:53
+#. Translators: subtitle of the headerbar, during a game; the %d is replaced by the score
+#: src/window.vala:58
 #, c-format
-#| msgid "Score:"
 msgid "Score: %d"
 msgstr "Βαθμολογία: %d"
 
-#: src/window.vala:87
+#. Translators: text in the Scores dialog, introducing the combobox
+#: src/window.vala:175
 msgid "Board Size: "
-msgstr "Μέγεθος πίνακα:"
+msgstr "Μέγεθος πίνακα: "
 
-#: src/window.vala:159
-msgid "Are you sure you want to restart the game?"
-msgstr "Θέλετε σίγουρα να επανεκκινήσετε το παιχνίδι;"
+#. Translators: text of a dialog that appears when the user starts a new game while the score is not null
+#: src/window.vala:278
+#, c-format
+msgid "Are you sure you want to start a new %u × %u game?"
+msgstr "Θέλετε σίγουρα να ξεκινήσετε νέο παιχνίδι %u × %u;"
 
-#: src/window.vala:161
+#. Translators: button of a dialog that appears when the user starts a new game while the score is not null; the other answer is "_Restart"
+#: src/window.vala:281
 msgid "_Cancel"
 msgstr "Ά_κυρο"
 
-#: src/window.vala:162
+#. Translators: button of a dialog that appears when the user starts a new game while the score is not null; the other answer is "_Cancel"
+#: src/window.vala:284
 msgid "_Restart"
 msgstr "Επα_νεκκίνηση"
+
+#~ msgid "Preferences"
+#~ msgstr "Προτιμήσεις"
+
+#~ msgid "_Theme:"
+#~ msgstr "_Θέμα:"
+
+#~ msgid "B_ackground color:"
+#~ msgstr "Χρώμα _παρασκηνίου:"
+
+#~| msgid "Preferences"
+#~ msgid "_Preferences"
+#~ msgstr "_Προτιμήσεις"
+
+#~| msgid "five-or-more"
+#~ msgid "org.gnome.five-or-more"
+#~ msgstr "org.gnome.five-or-more"
 
 #~ msgid "_Image:"
 #~ msgstr "_Εικόνα:"
@@ -315,20 +468,8 @@ msgstr "Επα_νεκκίνηση"
 #~ msgid "Board Size"
 #~ msgstr "Μέγεθος πίνακα"
 
-#~ msgid "General"
-#~ msgstr "Γενικά"
-
 #~ msgid "_Use fast moves"
 #~ msgstr "_Χρήση γρήγορων κινήσεων"
-
-#~ msgid "Start a new puzzle"
-#~ msgstr "Εκκίνηση νέου παιχνιδιού"
-
-#~ msgid "About"
-#~ msgstr "Περί"
-
-#~ msgid "Quit"
-#~ msgstr "Έξοδος"
 
 #~ msgctxt "themes"
 #~ msgid "dots"
