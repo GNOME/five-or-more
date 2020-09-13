@@ -322,7 +322,7 @@ msgid ""
 "Select <gui>balls</gui>, <gui>shapes</gui>, or <gui>tango</gui> from the "
 "<gui>Theme</gui> drop down menu to change the playing pieces."
 msgstr ""
-"Seleccioneu <gui>boles</gui>, <gui>figures</gui>, o <gui>tango</gui> des del "
+"Seleccioneu <gui>boles</gui>, <gui>formes</gui>, o <gui>tango</gui> des del "
 "menú desplegable <gui>Tema</gui> per a canviar les peces de joc."
 
 #. (itstool) path: item/p
@@ -377,7 +377,7 @@ msgstr ""
 #. (itstool) path: page/title
 #: C/documentation.page:17
 msgid "Help write documentation"
-msgstr "Ajudeu a escriure documentació"
+msgstr "Ajudar a escriure documentació"
 
 #. (itstool) path: page/p
 #: C/documentation.page:19
@@ -590,7 +590,7 @@ msgid ""
 "window and select <gui style=\"menuitem\">New Game</gui>."
 msgstr ""
 "Per a començar un nou joc, feu clic al botó del menú al cantó superior dret "
-"de la finestra i seleccioneu <gui style=\"menuitem\">Nova partida</gui>."
+"de la finestra i seleccioneu <gui style=\"menuitem\">Partida nova</gui>."
 
 #. (itstool) path: section/title
 #: C/play.page:29
@@ -954,7 +954,7 @@ msgstr ""
 #. (itstool) path: page/title
 #: C/translate.page:23
 msgid "Help translate"
-msgstr "Ajudeu amb la traducció"
+msgstr "Ajudar amb la traducció"
 
 #. (itstool) path: page/p
 #: C/translate.page:25
