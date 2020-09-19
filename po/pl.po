@@ -20,7 +20,7 @@ msgstr ""
 "Project-Id-Version: five-or-more\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/five-or-more/issues\n"
 "POT-Creation-Date: 2020-05-31 06:52+0000\n"
-"PO-Revision-Date: 2020-09-19 13:01+0200\n"
+"PO-Revision-Date: 2020-09-19 13:08+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <community-poland@mozilla.org>\n"
 "Language: pl\n"
@@ -288,7 +288,7 @@ msgstr "Pomoc"
 #: data/ui/help-overlay.ui:96
 msgctxt "shortcut window"
 msgid "About"
-msgstr "O programie"
+msgstr "O grze"
 
 #. Translators: in the Keyboard Shortcuts window, section "Generic"; action of the Ctrl-Q shortcut; quits the application
 #: data/ui/help-overlay.ui:104
