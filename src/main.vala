@@ -134,7 +134,7 @@ private class FiveOrMoreApp: Gtk.Application
 
     protected override void shutdown ()
     {
-        window.on_shutdown ();
+        window.destroy ();
         base.shutdown ();
     }
 }
