@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
-  <requires lib="gtk+" version="3.99"/>
+  <!-- interface-requires gtk+ 3.10 -->
   <menu id="primary-menu">
     <section>
       <item>
@@ -104,51 +104,69 @@
       </item>
     </section>
   </menu>
+  <object class="GtkAccelGroup" id="accelgroup"/>
   <template class="GameWindow" parent="GtkApplicationWindow">
+    <property name="can_focus">False</property>
     <property name="default_width">320</property>
     <property name="default_height">400</property>
     <property name="icon_name">five-or-more</property>
-<!--    <property name="border-width">18</property> FIXME -->
-    <!-- Translators: name of the application, as displayed in the window manager -->
-    <property name="title" translatable="yes">Five or More</property>
+    <property name="border-width">18</property>
+    <accel-groups>
+      <group name="accelgroup"/>
+    </accel-groups>
     <child type="titlebar">
       <object class="GtkHeaderBar" id="headerbar">
-        <property name="show_title_buttons">True</property>
-        <child type="start">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="show_close_button">True</property>
+        <!-- Translators: name of the application, as displayed in the window manager -->
+        <property name="title" translatable="yes">Five or More</property>
+        <child>
           <object class="GtkBox" id="preview_hbox">
-<!--            <property name="border_width">12</property> FIXME -->
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="border_width">12</property>
             <property name="orientation">horizontal</property>
             <child>
               <object class="GtkLabel" id="labelNext">
+                <property name="visible">True</property>
                 <property name="ellipsize">PANGO_ELLIPSIZE_END</property>
+                <property name="can_focus">False</property>
                 <!-- Translators: label displayed in the headerbar, introducing the next balls to be added to the board -->
                 <property name="label" translatable="yes">Next:</property>
                 <attributes>
                   <attribute name="weight" value="bold"/>
                 </attributes>
               </object>
+              <packing>
+                <property name="pack_type">start</property>
+              </packing>
             </child>
           </object>
         </child>
-        <child type="end">
+        <child>
           <object class="GtkMenuButton">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
             <property name="menu_model">primary-menu</property>
-            <property name="icon_name">open-menu-symbolic</property>
-<!--            <accelerator key="F10" signal="activate"/> FIXME -->
+            <accelerator key="F10" signal="activate"/>
+            <child>
+              <object class="GtkImage" id="primary-menu-button-image">
+                <property name="visible">True</property>
+                <property name="icon_size">1</property>
+                <property name="icon_name">open-menu-symbolic</property>
+              </object>
+            </child>
           </object>
+          <packing>
+            <property name="pack_type">end</property>
+          </packing>
         </child>
       </object>
     </child>
     <child>
-      <object class="GtkAspectFrame" id="grid_frame">
-        <property name="obey-child">False</property>
-        <property name="ratio">1.0</property>
-        <property name="xalign">0.5</property>
-        <property name="yalign">0.5</property>
-        <property name="margin-top">10</property>
-        <property name="margin-start">10</property>
-        <property name="margin-end">10</property>
-        <property name="margin-bottom">10</property>
+      <object class="GamesGridFrame" id="grid_frame">
+        <property name="visible">True</property>
       </object>
     </child>
   </template>

@@ -16,30 +16,35 @@
   along with Five-or-More.  If not, see <https://www.gnu.org/licenses/>.
 -->
 <interface>
-  <requires lib="gtk+" version="3.99"/>
+  <requires lib="gtk+" version="3.12"/>
   <object class="GtkShortcutsWindow" id="help_overlay">
     <child>
       <object class="GtkShortcutsSection">
+        <property name="visible">True</property>
         <property name="max-height">6</property>
         <child>
           <object class="GtkShortcutsGroup">
+            <property name="visible">True</property>
             <!-- Translators: header of the "Start a new game" (only) shortcut section -->
             <property name="title" translatable="yes" context="shortcut window">New game</property>
             <child>
               <object class="GtkShortcutsShortcut">
+                <property name="visible">True</property>
                 <!-- Translators: in the Keyboard Shortcuts window, section "New game"; action of the Ctrl-N shortcut -->
                 <property name="title" translatable="yes" context="shortcut window">Start a new game</property>
-                <property name="accelerator">&lt;Control&gt;n</property>
+                <property name="accelerator">&lt;Primary&gt;n</property>
               </object>
             </child>
           </object>
         </child>
         <child>
           <object class="GtkShortcutsGroup">
+            <property name="visible">True</property>
             <!-- Translators: header of the "Play with keyboard" shortcut section -->
             <property name="title" translatable="yes" context="shortcut window">Play with keyboard</property>
             <child>
               <object class="GtkShortcutsShortcut">
+                <property name="visible">True</property>
                 <!-- Translators: in the Keyboard Shortcuts window, section "Play with keyboard"; action of the arrows -->
                 <property name="title" translatable="yes" context="shortcut window">Move keyboard cursor</property>
                 <property name="accelerator">Left Up Right Down</property>
@@ -47,6 +52,7 @@
             </child>
             <child>
               <object class="GtkShortcutsShortcut">
+                <property name="visible">True</property>
                 <!-- Translators: in the Keyboard Shortcuts window, section "Play with keyboard"; action of the return or space keys -->
                 <property name="title" translatable="yes" context="shortcut window">Select or drop tile</property>
                 <property name="accelerator">Return space</property>
@@ -56,10 +62,12 @@
         </child>
         <child>
           <object class="GtkShortcutsGroup">
+            <property name="visible">True</property>
             <!-- Translators: header of the "Toggle main menu," "Keyboard shortcuts," "About," "Quit," etc. shortcuts section -->
             <property name="title" translatable="yes" context="shortcut window">Generic</property>
             <child>
               <object class="GtkShortcutsShortcut">
+                <property name="visible">True</property>
                 <!-- Translators: in the Keyboard Shortcuts window, section "Generic"; action of the F10 shortcut; toggles the hamburger menu -->
                 <property name="title" translatable="yes" context="shortcut window">Toggle main menu</property>
                 <property name="accelerator">F10</property>
@@ -67,13 +75,15 @@
             </child>
             <child>
               <object class="GtkShortcutsShortcut">
+                <property name="visible">True</property>
                 <!-- Translators: in the Keyboard Shortcuts window, section "Generic"; action of the Ctrl-Shift-? shortcut; opens the Keyboard Shortcuts dialog -->
                 <property name="title" translatable="yes" context="shortcut window">Keyboard shortcuts</property>
-                <property name="accelerator">&lt;Control&gt;question</property> <!-- TODO &lt;Control&gt;F1 -->
+                <property name="accelerator">&lt;Primary&gt;question</property> <!-- TODO &lt;Primary&gt;F1 -->
               </object>
             </child>
             <child>
               <object class="GtkShortcutsShortcut">
+                <property name="visible">True</property>
                 <!-- Translators: in the Keyboard Shortcuts window, section "Generic"; action of the F1 shortcut; opens the help of the application -->
                 <property name="title" translatable="yes" context="shortcut window">Help</property>
                 <property name="accelerator">F1</property>
@@ -89,9 +99,10 @@
             </child>
             <child>
               <object class="GtkShortcutsShortcut">
+                <property name="visible">True</property>
                 <!-- Translators: in the Keyboard Shortcuts window, section "Generic"; action of the Ctrl-Q shortcut; quits the application -->
                 <property name="title" translatable="yes" context="shortcut window">Quit</property>
-                <property name="accelerator">&lt;Control&gt;q</property>
+                <property name="accelerator">&lt;Primary&gt;q</property>
               </object>
             </child>
           </object>

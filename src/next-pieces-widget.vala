@@ -36,8 +36,6 @@ private class NextPiecesWidget : Gtk.DrawingArea
         this.game = game;
         this.theme = theme;
 
-        set_draw_func (draw);
-
         set_queue_size ();
         settings.changed[FiveOrMoreApp.KEY_SIZE].connect (() => {
             set_queue_size ();
@@ -61,10 +59,10 @@ private class NextPiecesWidget : Gtk.DrawingArea
         queue_draw ();
     }
 
-    private void draw (Gtk.DrawingArea _this, Cairo.Context cr, int new_width, int new_height)
+    protected override bool draw (Cairo.Context cr)
     {
         if (theme == null)
-            return;
+            return false;
 
         if (widget_height == -1)
         {
@@ -88,5 +86,7 @@ private class NextPiecesWidget : Gtk.DrawingArea
         }
 
         cr.stroke ();
+
+        return true;
     }
 }

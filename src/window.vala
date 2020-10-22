@@ -33,11 +33,11 @@ private class GameWindow : ApplicationWindow
     private Box preview_hbox;
 
     [GtkChild]
-    private AspectFrame grid_frame;
+    private Games.GridFrame grid_frame;
 
     private GLib.Settings settings = new GLib.Settings ("org.gnome.five-or-more");
-    private bool window_is_tiled;
-    private bool window_is_maximized;
+    private bool window_tiled;
+    private bool window_maximized;
     private int window_width;
     private int window_height;
 
@@ -74,9 +74,6 @@ private class GameWindow : ApplicationWindow
     {
         add_action_entries (win_actions, this);
 
-        map.connect (init_state_watcher);
-        unmap.connect (on_unmap);
-
         SimpleAction theme_action = (SimpleAction) lookup_action ("change-theme");
         string theme_value = settings.get_string (FiveOrMoreApp.KEY_THEME);
         if (theme_value != "balls.svg" && theme_value != "shapes.svg" && theme_value != "tango.svg") /* TODO use an enum in GSchema file? */
@@ -97,21 +94,21 @@ private class GameWindow : ApplicationWindow
             default: assert_not_reached ();
         }
         ((SimpleAction) board_size_action).set_state (board_size_string);
-        update_ratio (board_size);
 
         game = new Game (board_size);
         theme = new ThemeRenderer (settings);
 
-        window_width = settings.get_int ("window-width");
-        window_height = settings.get_int ("window-height");
-        window_is_maximized = settings.get_boolean ("window-is-maximized");
-        if (window_is_maximized)
+        set_default_size (settings.get_int ("window-width"), settings.get_int ("window-height"));
+        if (settings.get_boolean ("window-is-maximized"))
             maximize ();
-        set_default_size (window_width, window_height);
 
         NextPiecesWidget next_pieces_widget = new NextPiecesWidget (settings, game, theme);
-        preview_hbox.prepend (next_pieces_widget);
+        preview_hbox.pack_start (next_pieces_widget);
+        next_pieces_widget.realize ();
+        next_pieces_widget.show ();
 
+        grid_frame.set (game.n_cols, game.n_rows);
+        game.board.board_changed.connect (() => { grid_frame.set (game.n_cols, game.n_rows); });
         game.notify["score"].connect ((s, p) => { set_status_message (status[StatusMessage.NONE].printf(game.score)); });
         game.notify["status-message"].connect ((s, p) => { set_status_message (status[game.status_message].printf(game.score)); });
         set_status_message (status[game.status_message]);
@@ -120,64 +117,48 @@ private class GameWindow : ApplicationWindow
         SimpleAction reset_background_action = (SimpleAction) lookup_action ("reset-bg");
         game_view.notify ["background-color"].connect (() => { reset_background_action.set_enabled (game_view.background_color != View.default_background_color); });
         settings.bind (FiveOrMoreApp.KEY_BACKGROUND_COLOR, game_view, "background-color", SettingsBindFlags.DEFAULT);
-        grid_frame.set_child (game_view);
+        grid_frame.add (game_view);
+        game_view.show ();
+
+        grid_frame.show ();
 
         init_scores_dialog ();
     }
 
-    private void init_state_watcher ()
+    protected override bool window_state_event (Gdk.EventWindowState event)
     {
-        Gdk.Surface? nullable_surface = get_surface ();     // TODO report bug, get_surface() returns a nullable Surface
-        if (nullable_surface == null || !((!) nullable_surface is Gdk.Toplevel))
-            assert_not_reached ();
-        surface = (Gdk.Toplevel) (!) nullable_surface;
-        surface.notify ["state"].connect (on_window_state_event);
-        surface.size_changed.connect (on_size_changed);
+        if ((event.changed_mask & Gdk.WindowState.MAXIMIZED) != 0)
+            window_maximized = (event.new_window_state & Gdk.WindowState.MAXIMIZED) != 0;
+
+        if ((event.changed_mask & Gdk.WindowState.TILED) != 0)
+            window_tiled = (event.new_window_state & Gdk.WindowState.TILED) != 0;
+
+        return false;
     }
 
-    private Gdk.Toplevel surface;
-    private const Gdk.ToplevelState tiled_state = Gdk.ToplevelState.TILED
-                                                | Gdk.ToplevelState.TOP_TILED
-                                                | Gdk.ToplevelState.BOTTOM_TILED
-                                                | Gdk.ToplevelState.LEFT_TILED
-                                                | Gdk.ToplevelState.RIGHT_TILED;
-    private inline void on_window_state_event ()
+    protected override void size_allocate (Allocation allocation)
     {
-        Gdk.ToplevelState state = surface.get_state ();
+        base.size_allocate (allocation);
 
-        window_is_maximized =   (state & Gdk.ToplevelState.MAXIMIZED)   != 0;
-        window_is_tiled =       (state & tiled_state)                   != 0;
-    }
-
-    private inline void on_size_changed (int width, int height)
-    {
-        if (window_is_maximized || window_is_tiled)
+        if (window_maximized || window_tiled)
             return;
-        get_size (out window_width, out window_height);
+
+        window_width = allocation.width;
+        window_height = allocation.height;
     }
 
-    private inline void on_unmap ()
+    internal inline void on_shutdown ()
     {
         settings.delay ();
         settings.set_int ("window-width", window_width);
         settings.set_int ("window-height", window_height);
-        settings.set_boolean ("window-is-maximized", window_is_maximized);
+        settings.set_boolean ("window-is-maximized", window_maximized);
         settings.apply ();
-
-        application.quit ();
     }
 
     private void set_status_message (string? message)
     {
-//        headerbar.set_subtitle (message);
-    }
-
-    private void update_ratio (int size)
-    {
-        if (size == /* large */ 3)
-            grid_frame.ratio = 4.0f/3.0f;
-        else
-            grid_frame.ratio = 1.0f;
+        headerbar.set_subtitle (message);
     }
 
     /*\
@@ -189,14 +170,14 @@ private class GameWindow : ApplicationWindow
     private inline void init_scores_dialog ()
     {
         var importer = new Games.Scores.DirectoryImporter ();
-        highscores = new Games.Scores.Context.with_importer ("five-or-more",
-                                                             "org.gnome.five-or-more",
-                                                             /* Translators: text in the Scores dialog, introducing the combobox */
-                                                             _("Board Size: "),
-                                                             this,
-                                                             create_category_from_key,
-                                                             Games.Scores.Style.POINTS_GREATER_IS_BETTER,
-                                                             importer);
+        highscores = new Games.Scores.Context.with_importer_and_icon_name ("five-or-more",
+                                                                           /* Translators: text in the Scores dialog, introducing the combobox */
+                                                                           _("Board Size: "),
+                                                                           this,
+                                                                           create_category_from_key,
+                                                                           Games.Scores.Style.POINTS_GREATER_IS_BETTER,
+                                                                           importer,
+                                                                           "org.gnome.five-or-more");
         game.game_over.connect (score_cb);
     }
 
@@ -246,12 +227,11 @@ private class GameWindow : ApplicationWindow
                 if (!settings.set_string (FiveOrMoreApp.KEY_BACKGROUND_COLOR, color.to_string ()))
                     warning ("Failed to set color: %s", color.to_string ());
             });
-        dialog.response.connect ((_dialog, response) => {
-                _dialog.destroy ();
-                if (response != ResponseType.OK)
-                    settings.set_string (FiveOrMoreApp.KEY_BACKGROUND_COLOR, old_color_string);
-            });
-        dialog.present ();
+        var result = dialog.run ();
+        dialog.destroy ();
+        if (result == ResponseType.OK)
+            return;
+        settings.set_string (FiveOrMoreApp.KEY_BACKGROUND_COLOR, old_color_string);
     }
 
     private inline void reset_background ()
@@ -282,7 +262,6 @@ private class GameWindow : ApplicationWindow
             default: assert_not_reached ();
         }
         settings.set_int (FiveOrMoreApp.KEY_SIZE, size);
-        update_ratio (size);
     }
 
     private inline void new_game (/* SimpleAction action, Variant? parameter */)
@@ -291,7 +270,7 @@ private class GameWindow : ApplicationWindow
         int n_rows = Game.game_difficulty[size].n_rows;
         int n_cols = Game.game_difficulty[size].n_cols;
         if (game.score > 0 && !game.is_game_over) {
-            var flags = DialogFlags.DESTROY_WITH_PARENT | DialogFlags.MODAL;
+            var flags = DialogFlags.DESTROY_WITH_PARENT;
             var restart_game_dialog = new MessageDialog (this,
                                                          flags,
                                                          MessageType.WARNING,
@@ -305,13 +284,10 @@ private class GameWindow : ApplicationWindow
             /* Translators: button of a dialog that appears when the user starts a new game while the score is not null; the other answer is "_Cancel" */
                                              _("_Restart"), ResponseType.OK);
 
-            restart_game_dialog.response.connect ((_restart_game_dialog, response) => {
-                    _restart_game_dialog.destroy ();
-                    if (response == ResponseType.OK)
-                        game.new_game (size);
-                });
-            restart_game_dialog.present ();
-            return;
+            var result = restart_game_dialog.run ();
+            restart_game_dialog.destroy ();
+            if (result != ResponseType.OK)
+                return;
         }
         game.new_game (size);
     }

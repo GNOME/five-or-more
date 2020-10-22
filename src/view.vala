@@ -51,9 +51,8 @@ private class View : DrawingArea
     private uint animation_id;
 
     private EventControllerKey key_controller;          // for keeping in memory
-    private GestureClick click_controller;              // for keeping in memory
+    private GestureMultiPress click_controller;         // for keeping in memory
 
-    private Gdk.RGBA background_color_rgba;
     internal const string default_background_color = "rgb(117,144,174)";
     private string _background_color = default_background_color;
     internal string background_color
@@ -61,11 +60,21 @@ private class View : DrawingArea
         internal get { return _background_color; }
         internal set
         {
-            if (!background_color_rgba.parse (value))
-                if (!background_color_rgba.parse (default_background_color))
-                    assert_not_reached ();
-            _background_color = background_color_rgba.to_string ();
+            Gdk.RGBA color = Gdk.RGBA ();
+            if (!color.parse (value))
+                _background_color = default_background_color;
+            else
+                _background_color = color.to_string ();
 
+            try
+            {
+                provider.load_from_data (".game-view { background-color: %s; }".printf (_background_color));
+            }
+            catch (Error e)
+            {
+                warning ("Failed to load CSS data to provider");
+                return;
+            }
             queue_draw ();
         }
     }
@@ -75,11 +84,8 @@ private class View : DrawingArea
         this.game = game;
         this.theme = theme;
 
-        focusable = true;
-
         init_keyboard ();
         init_mouse ();
-        set_draw_func (draw);
 
         cs = get_style_context ();
         provider = new CssProvider ();
@@ -100,7 +106,10 @@ private class View : DrawingArea
         });
 
         game.board.grid_changed.connect (queue_draw);
+        add_events (Gdk.EventMask.BUTTON_PRESS_MASK | Gdk.EventMask.BUTTON_RELEASE_MASK);
+        add_events (Gdk.EventMask.KEY_PRESS_MASK | Gdk.EventMask.KEY_RELEASE_MASK);
 
+        set_can_focus (true);
         grab_focus ();
 
         game.current_path_cell_pos_changed.connect (queue_draw);
@@ -135,7 +144,7 @@ private class View : DrawingArea
         if (!show_cursor)
         {
             show_cursor = true;
-         // queue_draw_area (keyboard_cursor_x * piece_size, keyboard_cursor_y * piece_size, piece_size, piece_size);
+            queue_draw_area (keyboard_cursor_x * piece_size, keyboard_cursor_y * piece_size, piece_size, piece_size);
         }
 
         keyboard_cursor_x += x;
@@ -153,19 +162,17 @@ private class View : DrawingArea
         if (keyboard_cursor_x == prev_x && keyboard_cursor_y == prev_y)
             return;
 
-     // queue_draw_area (prev_x * piece_size, prev_y * piece_size, piece_size, piece_size);
-     // queue_draw_area (keyboard_cursor_x * piece_size, keyboard_cursor_y * piece_size, piece_size, piece_size);
-        queue_draw ();
+        queue_draw_area (prev_x * piece_size, prev_y * piece_size, piece_size, piece_size);
+        queue_draw_area (keyboard_cursor_x * piece_size, keyboard_cursor_y * piece_size, piece_size, piece_size);
     }
 
     private void init_keyboard ()
     {
-        key_controller = new EventControllerKey ();
+        key_controller = new Gtk.EventControllerKey (this);
         key_controller.key_pressed.connect (on_key_pressed);
-        add_controller (key_controller);
     }
 
-    private inline bool on_key_pressed (EventControllerKey _key_controller, uint keyval, uint keycode, Gdk.ModifierType state)
+    private inline bool on_key_pressed (Gtk.EventControllerKey _key_controller, uint keyval, uint keycode, Gdk.ModifierType state)
     {
         switch (keyval)
         {
@@ -286,12 +293,11 @@ private class View : DrawingArea
 
     private void init_mouse ()
     {
-        click_controller = new GestureClick ();         // only reacts to Gdk.BUTTON_PRIMARY
+        click_controller = new GestureMultiPress (this);    // only reacts to Gdk.BUTTON_PRIMARY
         click_controller.pressed.connect (on_click);
-        add_controller (click_controller);
     }
 
-    private inline void on_click (GestureClick _click_controller, int n_press, double event_x, double event_y)
+    private inline void on_click (GestureMultiPress _click_controller, int n_press, double event_x, double event_y)
     {
         if (game == null || game.animating)
             return;
@@ -299,8 +305,7 @@ private class View : DrawingArea
         if (show_cursor)
         {
             show_cursor = false;
-         // queue_draw_area (keyboard_cursor_x * piece_size, keyboard_cursor_y * piece_size, piece_size, piece_size);
-            queue_draw ();
+            queue_draw_area (keyboard_cursor_x * piece_size, keyboard_cursor_y * piece_size, piece_size, piece_size);
         }
 
         cell_x = (int)event_x / piece_size;
@@ -320,25 +325,27 @@ private class View : DrawingArea
     private void update_sizes (int width, int height)
     {
         piece_size = (width - 1) / game.n_cols;
-        board_rectangle.width  = piece_size * game.n_cols;
+        board_rectangle.width = piece_size * game.n_cols;
         board_rectangle.height = piece_size * game.n_rows;
-        board_rectangle.x = (width  - board_rectangle.width)  / 2;
-        board_rectangle.y = (height - board_rectangle.height) / 2;
+    }
+
+    protected override bool configure_event (Gdk.EventConfigure event)
+    {
+        update_sizes (event.width, event.height);
+        queue_draw ();
+
+        return true;
     }
 
     private void fill_background (Cairo.Context cr)
     {
-        Gdk.cairo_set_source_rgba (cr, background_color_rgba);
-        cr.rectangle (/* x and y */ board_rectangle.x + 1.0,
-                                    board_rectangle.y + 1.0,
-                      /* w and h */ board_rectangle.width,
-                                    board_rectangle.height);
-        cr.fill ();
+        cs.render_background (cr, board_rectangle.x, board_rectangle.y, board_rectangle.width, board_rectangle.height);
     }
 
     private void draw_gridlines (Cairo.Context cr)
     {
-        cr.set_source_rgba (0.0, 0.0, 0.0, 0.8);
+        Gdk.RGBA grid_color = cs.get_color (cs.get_state ());
+        Gdk.cairo_set_source_rgba (cr, grid_color);
         cr.set_line_width (1.0);
 
         for (int i = piece_size; i < board_rectangle.width; i += piece_size)
@@ -358,7 +365,6 @@ private class View : DrawingArea
         border.width = board_rectangle.width;
         border.height = board_rectangle.height;
 
-        cr.set_source_rgba (0.0, 0.0, 0.0, 1.0);
         Gdk.cairo_rectangle (cr, border);
         cr.stroke ();
     }
@@ -367,7 +373,7 @@ private class View : DrawingArea
     {
         if (show_cursor)
         {
-            Gdk.RGBA grid_color = cs.get_color ();
+            Gdk.RGBA grid_color = cs.get_color (cs.get_state ());
             Gdk.cairo_set_source_rgba (cr, grid_color);
             cr.set_line_width (2.0);
 
@@ -414,20 +420,17 @@ private class View : DrawingArea
         }
     }
 
-    private inline void draw (DrawingArea _this, Cairo.Context cr, int new_width, int new_height)
+    protected override bool draw (Cairo.Context cr)
     {
         if (theme == null)
-            return;
-
-        update_sizes (new_width, new_height);
+            return false;
 
         fill_background (cr);
-        cr.save ();
-        cr.translate (board_rectangle.x, board_rectangle.y);
         draw_gridlines (cr);
         draw_shapes (cr);
         draw_cursor_box (cr);
         draw_path (cr);
-        cr.restore ();
+
+        return true;
     }
 }

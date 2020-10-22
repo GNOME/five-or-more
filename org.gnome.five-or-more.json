@@ -30,9 +30,9 @@
             "name": "libgnome-games-support",
             "buildsystem": "meson",
             "sources": [{
-                "type": "git",
-                "url": "https://gitlab.gnome.org/GNOME/libgnome-games-support.git",
-                "branch": "arnaudb/wip/gtk4"
+                "type": "archive",
+                "url": "https://download.gnome.org/sources/libgnome-games-support/1.7/libgnome-games-support-1.7.1.tar.xz",
+                "sha256": "a625b32e12634bf94fa643f928eb46a387ed8eeb2fe969d5a868a775efc8e185"
             }]
         },
         {

@@ -66,8 +66,8 @@ private class FiveOrMoreApp: Gtk.Application
         add_window (window);
 
         add_action_entries (action_entries, this);
-        set_accels_for_action ("win.new-game",  { "<Control>n"  });
-        set_accels_for_action ("app.quit",      { "<Control>q"  });
+        set_accels_for_action ("win.new-game",  { "<Primary>n"  });
+        set_accels_for_action ("app.quit",      { "<Primary>q"  });
         set_accels_for_action ("app.help",      {          "F1" });
     }
 
@@ -78,7 +78,14 @@ private class FiveOrMoreApp: Gtk.Application
 
     private void help_cb ()
     {
-        Gtk.show_uri (window, "help:five-or-more", Gdk.CURRENT_TIME);
+        try
+        {
+            Gtk.show_uri_on_window (window, "help:five-or-more", Gtk.get_current_event_time ());
+        }
+        catch (GLib.Error e)
+        {
+            GLib.warning ("Unable to open help: %s", e.message);
+        }
     }
 
     private void about_cb ()
@@ -134,7 +141,7 @@ private class FiveOrMoreApp: Gtk.Application
 
     protected override void shutdown ()
     {
-        window.destroy ();
+        window.on_shutdown ();
         base.shutdown ();
     }
 }
