@@ -1,0 +1,996 @@
+# Indonesian translation for five-or-more.
+# Copyright (C) 2020 five-or-more's COPYRIGHT HOLDER
+# This file is distributed under the same license as the five-or-more package.
+# Triyan W. Nugroho <triyan.wn@gmail.com>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: five-or-more master\n"
+"POT-Creation-Date: 2020-06-21 19:22+0000\n"
+"PO-Revision-Date: 2020-06-26 19:22+0700\n"
+"Language-Team: Indonesian <gnome-l10n-id@googlegroups.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: id\n"
+"Last-Translator: \n"
+"X-Generator: Poedit 2.3.1\n"
+
+#. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
+msgctxt "_"
+msgid "translator-credits"
+msgstr "Triyan W. Nugroho <triyan.wn@gmail.com>, 2020."
+
+#. (itstool) path: credit/name
+#: C/bug-filing.page:10 C/change-board-size.page:14 C/change-theme.page:14
+#: C/develop.page:10 C/documentation.page:8 C/index.page:17 C/scores.page:14
+#: C/shortcuts.page:9 C/strategy.page:9 C/translate.page:10
+msgid "Tiffany Antopolski"
+msgstr "Tiffany Antopolski"
+
+#. (itstool) path: credit/years
+#: C/bug-filing.page:12 C/change-board-size.page:11 C/develop.page:12
+#: C/documentation.page:10 C/play.page:12 C/rules.page:12 C/scores.page:11
+#: C/shortcuts.page:11 C/translate.page:12
+msgid "2011"
+msgstr "2011"
+
+#. (itstool) path: license/p
+#: C/bug-filing.page:15 C/develop.page:15 C/documentation.page:13
+#: C/index.page:21 C/translate.page:19
+msgid "Creative Commons Share Alike 3.0"
+msgstr "Creative Commons Share Alike 3.0"
+
+#. (itstool) path: page/title
+#: C/bug-filing.page:19
+msgid "Report a Problem"
+msgstr "Laporkan Masalah"
+
+#. (itstool) path: page/p
+#: C/bug-filing.page:20
+msgid ""
+"<app>Five or More</app> is maintained by a volunteer community. You are "
+"welcome to participate. If you notice a problem you can file a <em>bug "
+"report</em>. To file a bug, go to <link href=\"https://gitlab.gnome.org/"
+"GNOME/five-or-more/issues/new\"/>."
+msgstr ""
+"<app>Five or More</app> dikelola oleh komunitas sukarelawan. Anda "
+"dipersilakan untuk berpartisipasi. Jika Anda menemukan sebuah masalah, Anda "
+"dapat membuat sebuah <em>laporan kutu</em>. Untuk melaporkan kutu, kunjungi "
+"<link href=\"https://gitlab.gnome.org/GNOME/five-or-more/issues/new\"/>."
+
+#. (itstool) path: page/p
+#: C/bug-filing.page:23
+msgid ""
+"This is a bug tracking system where users and developers can file details "
+"about bugs, crashes and request enhancements."
+msgstr ""
+"Ini adalah sistem pelacakan kutu dimana pengguna dan pengembang dapat "
+"mengajukan rincian tentang kutu, kres dan permintaan fitur tambahan."
+
+#. (itstool) path: page/p
+#: C/bug-filing.page:26
+msgid ""
+"To participate you have to log in, which will give you the ability to gain "
+"access, file bugs, and make comments. Also, you need to log in using one of "
+"your existing accounts or register a new account so you can receive updates "
+"by e-mail about the status of your bug. If you don't already have an account "
+"and don't want to use any of the available log in options, just click on the "
+"<gui>Register</gui> link to create one."
+msgstr ""
+"Untuk berpartisipasi, Anda harus melakukan login, sehingga Anda bisa "
+"mendapatkan akses, melaporkan kutu, dan menambahkan komentar. Anda juga "
+"harus login menggunakan salah satu akun Anda atau mendaftar akun yang baru, "
+"sehingga Anda bisa mendapatkan informasi pemutakhiran melalui surel tentang "
+"status kutu yang Anda laporkan. Jika Anda belum memiliki akun, dan tidak "
+"ingin menggunakan pilihan login yang tersedia, klik pada taut <gui>Register</"
+"gui> untuk membuat akun."
+
+#. (itstool) path: page/p
+#: C/bug-filing.page:30
+msgid ""
+"Once you have an account, log in, click on <guiseq><gui>Projects</"
+"gui><gui>five-or-more</gui><gui>Issues</gui><gui>New issue</gui></guiseq>. "
+"Before reporting a bug, please read the <link href=\"https://bugzilla.gnome."
+"org/page.cgi?id=bug-writing.html\">bug writing guidelines</link>, and please "
+"<link href=\"https://gitlab.gnome.org/GNOME/five-or-more/issues\">browse</"
+"link> for the bug to see if it already exists."
+msgstr ""
+"Jika Anda sudah memiliki akun, silakan melakukan login, klik pada "
+"<guiseq><gui>Proyek</gui><gui>five-or-more</gui><gui>Masalah</"
+"gui><gui>Masalah baru</gui></guiseq>. Sebelum melaporkan sebuah kutu, "
+"silakan baca <link href=\"https://bugzilla.gnome.org/page.cgi?id=bug-writing."
+"html\">panduan pelaporan kutu</link>, dan silakan <link href=\"https://"
+"gitlab.gnome.org/GNOME/five-or-more/issues\">menjelajah</link> laporan kutu "
+"yang lain untuk melihat apakah sudah ada laporan yang sama."
+
+#. (itstool) path: page/p
+#: C/bug-filing.page:33
+msgid ""
+"Fill in the Title and Description sections and click <gui>Submit issue</gui>."
+msgstr "Isi bagian Judul dan Deskripsi dan klik <gui>Kirim masalah</gui>."
+
+#. (itstool) path: page/p
+#: C/bug-filing.page:36
+msgid ""
+"Your report will be given an ID number, and its status will be updated as it "
+"is being dealt with."
+msgstr ""
+"Laporan Anda akan diberi suatu nomor ID, dan statusnya akan dimutakhirkan "
+"ketika sedang ditangani."
+
+#. (itstool) path: credit/name
+#: C/change-board-size.page:9 C/change-theme.page:9 C/index.page:13
+#: C/play.page:10 C/scores.page:9
+msgid "Lahiru lanka"
+msgstr "Lahiru lanka"
+
+#. (itstool) path: credit/name
+#: C/change-board-size.page:18 C/play.page:15 C/translate.page:15
+msgid "Michael Hill"
+msgstr "Michael Hill"
+
+#. (itstool) path: page/title
+#: C/change-board-size.page:23
+msgid "Change board size"
+msgstr "Ubah ukuran papan"
+
+#. (itstool) path: page/p
+#: C/change-board-size.page:24
+msgid "To change the board size:"
+msgstr "Untuk mengubah ukuran papan:"
+
+#. (itstool) path: item/p
+#: C/change-board-size.page:26
+msgid "Press the menu button in the top-right corner of the window."
+msgstr "Tekan tombol menu di pojok kanan atas jendela."
+
+#. (itstool) path: item/p
+#: C/change-board-size.page:27
+msgid "Select <gui>Small</gui>, <gui>Medium</gui>, or <gui>Large</gui>."
+msgstr "Pilih <gui>Kecil</gui>, <gui>Sedang</gui>, atau <gui>Besar</gui>."
+
+#. (itstool) path: note/p
+#: C/change-board-size.page:31
+msgid ""
+"While a larger board gives you more space, there are also more objects in "
+"play for each turn."
+msgstr ""
+"Papan lebih besar memberi Anda ruang lebih, serta lebih banyak objek untuk "
+"dimainkan."
+
+#. (itstool) path: section/title
+#: C/change-board-size.page:36
+msgid "Board parameters"
+msgstr "Parameter papan"
+
+#. (itstool) path: section/p
+#: C/change-board-size.page:37
+msgid "The 3 different board sizes have the following parameters:"
+msgstr "Tiga ukuran papan yang berbeda memiliki parameter berikut:"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:41
+msgid "<em>Size</em>"
+msgstr "<em>Ukuran</em>"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:42
+msgid "<em>Width</em>"
+msgstr "<em>Lebar</em>"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:43
+msgid "<em>Height</em>"
+msgstr "<em>Tinggi</em>"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:44
+msgid "<em>Number of types</em>"
+msgstr "<em>Jumlah tipe</em>"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:45
+msgid "<em>New objects per turn</em>"
+msgstr "<em>Objek baru tiap langkah</em>"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:46
+msgid "<em>Number of cells</em>"
+msgstr "<em>Jumlah sel</em>"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:50
+msgid "Small"
+msgstr "Kecil"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:51 C/change-board-size.page:52
+#: C/change-board-size.page:62 C/change-board-size.page:71
+#: C/change-board-size.page:72 C/scores.page:41
+msgid "7"
+msgstr "7"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:53 C/scores.page:33
+msgid "5"
+msgstr "5"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:54 C/change-board-size.page:63
+msgid "3"
+msgstr "3"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:55 C/scores.page:62
+msgid "49"
+msgstr "49"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:59
+msgid "Medium"
+msgstr "Sedang"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:60 C/change-board-size.page:61 C/scores.page:49
+msgid "9"
+msgstr "9"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:64
+msgid "81"
+msgstr "81"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:68
+msgid "Large"
+msgstr "Besar"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:69
+msgid "20"
+msgstr "20"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:70
+msgid "15"
+msgstr "15"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:73
+msgid "300"
+msgstr "300"
+
+#. (itstool) path: section/title
+#: C/change-board-size.page:80
+msgid "The 3 board sizes"
+msgstr "Tiga ukuran papan"
+
+#. (itstool) path: media/p
+#: C/change-board-size.page:86
+msgid "<app>Five or More</app> Small board"
+msgstr "<app>Five or More</app> Papan kecil"
+
+#. (itstool) path: media/p
+#: C/change-board-size.page:91
+msgid "<app>Five or More</app> medium size board"
+msgstr "<app>Five or More</app> papan ukuran sedang"
+
+#. (itstool) path: media/p
+#: C/change-board-size.page:96
+msgid "<app>Five or More</app> large size board"
+msgstr "<app>Five or More</app> papan ukuran besar"
+
+#. (itstool) path: credit/years
+#: C/change-theme.page:11 C/strategy.page:11
+msgid "2012"
+msgstr "2012"
+
+#. (itstool) path: page/title
+#: C/change-theme.page:20
+msgid "Change the look and feel"
+msgstr "Mengubah tampilan dan nuansa"
+
+#. (itstool) path: page/p
+#: C/change-theme.page:21
+msgid "To change the appearance of the pieces and the board:"
+msgstr "Untuk mengubah tampilan kepingan dan papan permainan:"
+
+#. (itstool) path: item/p
+#: C/change-theme.page:24
+msgid ""
+"Press the menu button in the top-right corner of the window and select <gui "
+"style=\"menuitem\">Preferences</gui>."
+msgstr ""
+"Tekan tombol menu di pojok kanan atas jendela dan pilih <gui style=\"menuitem"
+"\">Preferensi</gui>."
+
+#. (itstool) path: item/p
+#: C/change-theme.page:28
+msgid ""
+"Select <gui>balls</gui>, <gui>shapes</gui>, or <gui>tango</gui> from the "
+"<gui>Theme</gui> drop down menu to change the playing pieces."
+msgstr ""
+"Pilih <gui>bola</gui>, <gui>bentuk</gui>, atau <gui>tango</gui> dari menu "
+"<gui>Tema</gui> untuk mengubah kepingan permainan."
+
+#. (itstool) path: item/p
+#: C/change-theme.page:30
+msgid ""
+"Click on the colored box next to <gui>Background color</gui> to access the "
+"color palette."
+msgstr ""
+"Klik pada kotak berwarna di sebelah <gui>Warna latar belakang</gui> untuk "
+"mengakses palet warna."
+
+#. (itstool) path: item/p
+#: C/change-theme.page:34
+msgid "Close the <gui>Preferences</gui> dialog."
+msgstr "Tutup dialog <gui>Preferensi</gui>."
+
+#. (itstool) path: page/title
+#: C/develop.page:19
+msgid "Help develop"
+msgstr "Bantu mengembangkan"
+
+#. (itstool) path: page/p
+#: C/develop.page:20
+msgid ""
+"The <app>GNOME Games</app> are developed and maintained by a volunteer "
+"community. You are welcome to participate."
+msgstr ""
+"<app>Permainan GNOME</app> dikembangkan dan dikelola oleh komunitas "
+"sukarelawan. Anda dipersilahkan untuk berpartisipasi."
+
+#. (itstool) path: page/p
+#: C/develop.page:23
+msgid ""
+"If you would like to <link href=\"https://wiki.gnome.org/Apps/Games/"
+"Contributing\">help develop <app>GNOME Games</app></link>, you can get in "
+"touch with the developers using <link href=\"https://cbe005.chat.mibbit.com/?"
+"url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, or via our <link "
+"href=\"http://mail.gnome.org/mailman/listinfo/games-list\">mailing list</"
+"link>."
+msgstr ""
+"Jika Anda ingin <link href=\"https://wiki.gnome.org/Apps/Games/Contributing"
+"\">membantu pengembangan <app>Permainan GNOME</app></link>, Anda dapat "
+"menghubungi pengembang menggunakan <link href=\"https://cbe005.chat.mibbit."
+"com/?url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, atau melalui "
+"<link href=\"http://mail.gnome.org/mailman/listinfo/games-list\">milis</"
+"link> kami."
+
+#. (itstool) path: page/title
+#: C/documentation.page:17
+msgid "Help write documentation"
+msgstr "Bantu menulis dokumentasi"
+
+#. (itstool) path: page/p
+#: C/documentation.page:19
+msgid ""
+"The <app>GNOME Games</app> documentation is maintained by a volunteer "
+"community. You are welcome to participate."
+msgstr ""
+"<app>Permainan GNOME</app> dikembangkan dan dikelola oleh komunitas "
+"sukarelawan. Anda dipersilahkan untuk berpartisipasi."
+
+#. (itstool) path: page/p
+#: C/documentation.page:22
+msgid ""
+"To contribute to the Documentation Project, feel free to get in touch with "
+"us using <link href=\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc."
+"gnome.org%2Fdocs\">irc</link>, or via our <link href=\"http://mail.gnome.org/"
+"mailman/listinfo/gnome-doc-list\">mailing list</link>."
+msgstr ""
+"Untuk berkontribusi ke Projek Dokumentasi, silakan kontak kami memakai <link "
+"href=\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fdocs"
+"\">irc</link>, atau melalui <link href=\"http://mail.gnome.org/mailman/"
+"listinfo/gnome-doc-list\">milis</link> kami."
+
+#. (itstool) path: page/p
+#: C/documentation.page:26
+msgid ""
+"Our <link href=\"https://wiki.gnome.org/DocumentationProject/Contributing"
+"\">wiki</link> page contains useful information."
+msgstr ""
+"Laman <link href=\"https://wiki.gnome.org/DocumentationProject/Contributing"
+"\">wiki</link> kami memuat informasi yang berguna."
+
+#. (itstool) path: info/title
+#: C/index.page:8
+msgctxt "link"
+msgid "Five or More"
+msgstr "Five or More"
+
+#. (itstool) path: info/title
+#: C/index.page:9
+msgctxt "text"
+msgid "Five or More"
+msgstr "Five or More"
+
+#. (itstool) path: media/span
+#: C/index.page:27
+msgid "Five or More logo"
+msgstr "Logo Five or More"
+
+#. (itstool) path: page/title
+#: C/index.page:26
+msgid "<_:media-1/> Five or More"
+msgstr "<_:media-1/> Five or More"
+
+#. (itstool) path: page/p
+#: C/index.page:30
+msgid ""
+"<app>Five or More</app> is a deceptively simple brain workout. The goal is "
+"to place at least five objects of the same <link xref=\"change-theme#images"
+"\">color or shape</link> into a straight line. The line can be horizontal, "
+"vertical or diagonal. Once five or more objects are grouped into a line, "
+"they disappear. The goal is to vanish as many objects as possible. The game "
+"is over when the entire board is full."
+msgstr ""
+"<app>Five or More</app> tampak seperti olahraga otak yang sederhana. "
+"Tujuannya adalah meletakkan setidaknya lima objek dengan <link xref=\"change-"
+"theme#images\">warna atau bentuk</link> yang sama menjadi sebuah garis "
+"lurus. Garis tersebut bisa horisontal, vertikal atau diagonal. Jika ada lima "
+"atau lebih objek yang sama dalam satu baris, mereka akan menghilang. Tujuan "
+"permainan ini adalah menghilangkan sebanyak mungkin objek. Permainan selesai "
+"ketika keseluruhan papan permainan telah penuh."
+
+#. (itstool) path: section/title
+#: C/index.page:34
+msgid "Game Play"
+msgstr "Bermain Permainan"
+
+#. (itstool) path: section/title
+#: C/index.page:38
+msgid "Useful Tips"
+msgstr "Tips yang Berguna"
+
+#. (itstool) path: section/title
+#: C/index.page:42
+msgid "Advanced"
+msgstr "Tingkat Lanjut"
+
+#. (itstool) path: section/title
+#: C/index.page:46
+msgid "Get Involved"
+msgstr "Ikut Terlibat"
+
+#. (itstool) path: p/link
+#: C/legal.xml:3
+msgid "Creative Commons Attribution-ShareAlike 3.0 Unported License"
+msgstr "Creative Commons Attribution-ShareAlike 3.0 Unported License"
+
+#. (itstool) path: license/p
+#: C/legal.xml:3
+msgid "This work is licensed under a <_:link-1/>."
+msgstr "Karya ini dilisensikan di bawah <_:link-1/>."
+
+#. (itstool) path: info/desc
+#: C/license.page:9
+msgid "Legal information."
+msgstr "Informasi legal."
+
+#. (itstool) path: page/title
+#: C/license.page:12
+msgid "License"
+msgstr "Lisensi"
+
+#. (itstool) path: page/p
+#: C/license.page:13
+msgid ""
+"This work is distributed under a CreativeCommons Attribution-Share Alike 3.0 "
+"Unported license."
+msgstr ""
+"Karya ini didistribusikan di bawah lisensi CreativeCommons Attribution-Share "
+"Alike 3.0 Unported."
+
+#. (itstool) path: page/p
+#: C/license.page:21
+msgid "You are free:"
+msgstr "Anda bebas:"
+
+#. (itstool) path: item/title
+#: C/license.page:26
+msgid "<em>To share</em>"
+msgstr "<em>Untuk berbagi</em>"
+
+#. (itstool) path: item/p
+#: C/license.page:27
+msgid "To copy, distribute and transmit the work."
+msgstr "Untuk menyalin, mendistribusikan, dan mentransmisikan karya ini."
+
+#. (itstool) path: item/title
+#: C/license.page:30
+msgid "<em>To remix</em>"
+msgstr "<em>Untuk mencampur ulang</em>"
+
+#. (itstool) path: item/p
+#: C/license.page:31
+msgid "To adapt the work."
+msgstr "Untuk mengadaptasi karya ini."
+
+#. (itstool) path: page/p
+#: C/license.page:34
+msgid "Under the following conditions:"
+msgstr "Di bawah syarat-syarat berikut:"
+
+#. (itstool) path: item/title
+#: C/license.page:39
+msgid "<em>Attribution</em>"
+msgstr "<em>Atribusi</em>"
+
+#. (itstool) path: item/p
+#: C/license.page:40
+msgid ""
+"You must attribute the work in the manner specified by the author or "
+"licensor (but not in any way that suggests that they endorse you or your use "
+"of the work)."
+msgstr ""
+"Anda harus memberi penghargaan atas karya dalam cara yang ditentukan oleh "
+"pengarang atau pemberi lisensi (tapi tidak dengan cara apapun yang "
+"mengesankan bahwa mereka mendorong Anda atau penggunaan Anda terhadap karya)."
+
+#. (itstool) path: item/title
+#: C/license.page:47
+msgid "<em>Share Alike</em>"
+msgstr "<em>Saling Berbagi</em>"
+
+#. (itstool) path: item/p
+#: C/license.page:48
+msgid ""
+"If you alter, transform, or build upon this work, you may distribute the "
+"resulting work only under the same, similar or a compatible license."
+msgstr ""
+"Jika Anda mengubah isi, mengubah bentuk, atau membangun sesuatu atas dasar "
+"karya ini, Anda dapat mendistribusikan karya yang dihasilkan hanya di bawah "
+"lisensi yang sama, mirip, atau yang kompatibel."
+
+#. (itstool) path: page/p
+#: C/license.page:54
+msgid ""
+"For the full text of the license, see the <link href=\"http://"
+"creativecommons.org/licenses/by-sa/3.0/legalcode\">CreativeCommons website</"
+"link>, or read the full <link href=\"http://creativecommons.org/licenses/by-"
+"sa/3.0/\">Commons Deed</link>."
+msgstr ""
+"Untuk teks lengkap lisensi, lihat <link href=\"http://creativecommons.org/"
+"licenses/by-sa/3.0/legalcode\">situs web CreativeCommons</link> atau baca "
+"<link href=\"http://creativecommons.org/licenses/by-sa/3.0/\">Commons Deed</"
+"link> yang lengkap."
+
+#. (itstool) path: page/title
+#: C/play.page:22
+msgid "How to Play"
+msgstr "Cara Bermain"
+
+#. (itstool) path: page/p
+#: C/play.page:24
+msgid ""
+"To start a new game, press the menu button in the top-right corner of the "
+"window and select <gui style=\"menuitem\">New Game</gui>."
+msgstr ""
+"Untuk memulai permainan baru, tekan tombol menu pada sudut kanan atas "
+"jendela, dan pilih <gui style=\"menuitem\">Permainan Baru</gui>."
+
+#. (itstool) path: section/title
+#: C/play.page:29
+msgid "Using the mouse"
+msgstr "Menggunakan tetikus"
+
+#. (itstool) path: item/p
+#: C/play.page:33
+msgid ""
+"Click on the object you want to move. The selected object will begin "
+"spinning."
+msgstr ""
+"Klik pada objek yang ingin Anda pindahkan. Objek yang dipilih akan mulai "
+"berputar."
+
+#. (itstool) path: item/p
+#: C/play.page:37
+msgid ""
+"Click on the destination cell. The chosen object will move to the "
+"destination cell, if there is any clear path."
+msgstr ""
+"Klik pada sel tujuan. Objek yang dipilih akan berpindah ke sel tujuan, jika "
+"ada jalur yang kosong."
+
+#. (itstool) path: section/title
+#: C/play.page:46
+msgid "Using the keyboard"
+msgstr "Menggunakan papan tik"
+
+#. (itstool) path: item/p
+#: C/play.page:50
+msgid ""
+"Press any of the arrow keys. An outline around a cell will appear on the "
+"board."
+msgstr ""
+"Tekan salah satu tombol panah. Akan muncul tanda garis luar pada satu sel di "
+"papan permainan."
+
+#. (itstool) path: item/p
+#: C/play.page:54
+msgid ""
+"Using the arrow keys, and the <key>Home</key>, <key>End</key>, <key>PageUp</"
+"key> and <key>PageDown</key> keys navigate to the object you want to move."
+msgstr ""
+"Menggunakan tombol panah dan <key>Home</key>, <key>End</key>, <key>PageUp</"
+"key> dan <key>PageDown</key>, pilih objek yang ingin Anda pindahkan."
+
+#. (itstool) path: item/p
+#: C/play.page:57
+msgid ""
+"To select the object, press the <key>Enter</key>, <key>Spacebar</key> or "
+"<key>Return</key>. The selected object will begin spinning."
+msgstr ""
+"Untuk memilih objek, tekan <key>Enter</key>, <key>Spasi</key> atau "
+"<key>Return</key>. Objek terpilih akan mulai berputar."
+
+#. (itstool) path: item/p
+#: C/play.page:60
+msgid ""
+"Move to the destination cell, and again press the <key>Enter</key>, "
+"<key>Spacebar</key> or <key>Return</key>. The chosen object will move to the "
+"destination cell, if there is any clear path."
+msgstr ""
+"Pindahkan ke sel tujuan, dan kembali tekan <key>Enter</key>, <key>Spasi</"
+"key> atau <key>Return</key>. Objek yang dipilih akan berpindah ke sel "
+"tujuan, jika terdapat jalur yang kosong."
+
+#. (itstool) path: section/title
+#: C/play.page:70
+msgid "Video demonstration"
+msgstr "Peragaan video"
+
+#. (itstool) path: page/title
+#: C/rules.page:18
+msgid "Rules"
+msgstr "Peraturan"
+
+#. (itstool) path: item/p
+#: C/rules.page:20
+msgid ""
+"At the start of the game there are either 3 or 7 objects placed on your "
+"board, depending on the <link xref=\"change-board-size\">board size</link>."
+msgstr ""
+"Pada awal permainan, ada 3 atau 7 objek yang diletakkan pada papan "
+"permainan, tergantung pada <link xref=\"change-board-size\">ukuran papan</"
+"link>."
+
+#. (itstool) path: item/p
+#: C/rules.page:23
+msgid ""
+"Each time you <link xref=\"play\">move an object</link>, additional objects "
+"are placed randomly on the board. The number of new objects placed each turn "
+"also depends on the board. A preview of the objects to be placed on the "
+"board appears in the upper left corner of the game window."
+msgstr ""
+"Setiap kali Anda <link xref=\"play\">memindahkan sebuah objek</link>, objek-"
+"objek tambahan akan diletakkan secara acak pada papan permainan. Jumlah dari "
+"objek yang diletakkan pada tiap langkah juga tergantung pada papan "
+"permainan. Pratinjau objek yang akan diletakkan pada papan akan tampil di "
+"sudut kiri atas jendela permainan."
+
+#. (itstool) path: item/p
+#: C/rules.page:28
+msgid ""
+"There must be a clear path from the original position of the object to the "
+"destination cell (i.e you can not jump over objects)."
+msgstr ""
+"Harus ada jalur yang kosong dari posisi awal suatu objek ke sel tujuan. Anda "
+"tidak dapat melompat di atas objek yang lain."
+
+#. (itstool) path: item/p
+#: C/rules.page:31
+msgid ""
+"A straight horizontal, vertical or diagonal line of five or more similar "
+"objects will disappear from the game board. When this happens you will have "
+"an extra move without additional objects being added to the board."
+msgstr ""
+"Garis lurus horisontal, vertikal atau diagonal dari lima atau lebih objek "
+"yang sama akan menghilang dari papan permainan. Jika ini terjadi, Anda akan "
+"memiliki langkah ekstra tanpa ada objek tambahan yang ditambahkan pada papan "
+"permainan."
+
+#. (itstool) path: item/p
+#: C/rules.page:35
+msgid ""
+"The more objects you clear, the longer the game will go on. The longer you "
+"play, the higher your <link xref=\"scores\">score</link>."
+msgstr ""
+"Semakin banyak objek yang dihilangkan, semakin lama permainan akan "
+"berlangsung. Semakin lama Anda bermain, semakin tinggi <link xref=\"score"
+"\">skor</link> Anda."
+
+#. (itstool) path: item/p
+#: C/rules.page:38
+msgid ""
+"The game is over when the board is full, since no object can be moved at "
+"that point."
+msgstr ""
+"Permainan selesai ketika papan sudah penuh, sehingga sudah tidak ada lagi "
+"objek yang bisa dipindahkan."
+
+#. (itstool) path: media/p
+#: C/rules.page:46
+msgid "Example horizontal alignment"
+msgstr "Contoh perataan horisontal"
+
+#. (itstool) path: media/p
+#: C/rules.page:51
+msgid "Example vertical alignment"
+msgstr "Contoh perataan vertikal"
+
+#. (itstool) path: media/p
+#: C/rules.page:56
+msgid "Example diagonal alignment"
+msgstr "Contoh perataan diagonal"
+
+#. (itstool) path: media/p
+#: C/rules.page:61
+msgid "<app>Five or More</app> game over position."
+msgstr "Permainan <app>Five or More</app> selesai."
+
+#. (itstool) path: page/title
+#: C/scores.page:20
+msgid "Scoring"
+msgstr "Penilaian"
+
+#. (itstool) path: page/p
+#: C/scores.page:21
+msgid ""
+"You score points by creating lines of 5 or more objects. The number of "
+"points depends on the number of objects that disappear."
+msgstr ""
+"Anda mendapatkan nilai dengan membuat garis dari 5 atau lebih objek. Jumlah "
+"poin yang Anda dapatkan tergantung pada jumlah objek yang menghilang."
+
+#. (itstool) path: td/p
+#: C/scores.page:27
+msgid "<em>Number of objects</em>"
+msgstr "<em>Jumlah objek</em>"
+
+#. (itstool) path: td/p
+#: C/scores.page:28
+msgid "<em>Number of points</em>"
+msgstr "<em>Jumlah poin</em>"
+
+#. (itstool) path: td/p
+#: C/scores.page:34 C/scores.page:53
+msgid "10"
+msgstr "10"
+
+#. (itstool) path: td/p
+#: C/scores.page:37
+msgid "6"
+msgstr "6"
+
+#. (itstool) path: td/p
+#: C/scores.page:38
+msgid "18"
+msgstr "18"
+
+#. (itstool) path: td/p
+#: C/scores.page:42
+msgid "25"
+msgstr "25"
+
+#. (itstool) path: td/p
+#: C/scores.page:45
+msgid "8"
+msgstr "8"
+
+#. (itstool) path: td/p
+#: C/scores.page:46
+msgid "31"
+msgstr "31"
+
+#. (itstool) path: td/p
+#: C/scores.page:50
+msgid "36"
+msgstr "36"
+
+#. (itstool) path: td/p
+#: C/scores.page:54
+msgid "41"
+msgstr "41"
+
+#. (itstool) path: td/p
+#: C/scores.page:57
+msgid "11"
+msgstr "11"
+
+#. (itstool) path: td/p
+#: C/scores.page:58
+msgid "45"
+msgstr "45"
+
+#. (itstool) path: td/p
+#: C/scores.page:61
+msgid "12"
+msgstr "12"
+
+#. (itstool) path: td/p
+#: C/scores.page:65
+msgid "13"
+msgstr "13"
+
+#. (itstool) path: td/p
+#: C/scores.page:66
+msgid "53"
+msgstr "53"
+
+#. (itstool) path: td/p
+#: C/scores.page:69 C/scores.page:73
+msgid "14"
+msgstr "14"
+
+#. (itstool) path: td/p
+#: C/scores.page:70 C/scores.page:74
+msgid "56"
+msgstr "56"
+
+#. (itstool) path: note/p
+#: C/scores.page:81
+msgid ""
+"You can view the high scores by pressing the menu button in the top-right "
+"corner of the window and selecting <gui style=\"menuitem\">Scores</gui>."
+msgstr ""
+"Anda bisa melihat skor tertinggi dengan menekan tombol menu pada sudut kanan "
+"atas jendela dan memilih <gui style=\"menuitem\">Skor</gui>."
+
+#. (itstool) path: note/p
+#: C/scores.page:83
+msgid ""
+"The <app>Five or More</app> scores are recorded according to the board size. "
+"You can select the <gui>Board Size</gui> of interest using the drop down "
+"menu."
+msgstr ""
+"Skor pada <app>Five or More</app> disimpan berdasarkan ukuran papan. Anda "
+"bisa memilih <gui>Ukuran Papan</gui> melalui menu."
+
+#. (itstool) path: page/title
+#: C/shortcuts.page:17
+msgid "Keyboard shortcuts"
+msgstr "Pintasan papan tik"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:20
+msgid "New game"
+msgstr "Permainan baru"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:21
+msgid "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
+msgstr "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:24
+msgid "Help"
+msgstr "Bantuan"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:25
+msgid "<key>F1</key>"
+msgstr "<key>F1</key>"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:28
+msgid "Quit"
+msgstr "Keluar"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:29
+msgid "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
+msgstr "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
+
+#. (itstool) path: page/title
+#: C/strategy.page:17
+msgid "Strategy"
+msgstr "Strategi"
+
+#. (itstool) path: page/p
+#: C/strategy.page:19
+msgid ""
+"There is no universal strategy for <app>Five or More</app>, but some "
+"strategic elements do exist. Here are some things to try and keep in mind as "
+"you play:"
+msgstr ""
+"Tidak ada strategi umum untuk <app>Five or More</app>, tetapi ada beberapa "
+"elemen strategis. Berikut beberapa hal yang perlu mendapatkan perhatian dan "
+"bisa dicoba saat Anda bermain:"
+
+#. (itstool) path: item/p
+#: C/strategy.page:23
+msgid "Try to set at least three same objects with your every move."
+msgstr ""
+"Berusahalah mengatur setidaknya tiga objek yang sama pada setiap langkah "
+"Anda."
+
+#. (itstool) path: item/p
+#: C/strategy.page:24
+msgid ""
+"The board can quickly become very crowded with objects, so it is best to "
+"think ahead. Pay attention to the collection of <gui>Next</gui> objects, "
+"because knowing these will influence your moves."
+msgstr ""
+"Papan permainan bisa secara cepat menjadi sangat ramai dengan objek, jadi "
+"sebaiknya Anda berpikir sebelum bertindak. Berikan perhatian pada objek "
+"<gui>Berikutnya</gui>, karena dengan mengetahui hal tersebut, akan "
+"mempengaruhi langkah yang akan Anda ambil."
+
+#. (itstool) path: item/p
+#: C/strategy.page:25
+msgid ""
+"Try to line up more than 5 objects. For example, if you have 6 objects, you "
+"can line up 2 and 3 with a space in between, and then connect them by "
+"placing the sixth object between them."
+msgstr ""
+"Cobalah untuk mengurutkan lebih dari 5 objek. Misalnya, jika Anda memiliki 6 "
+"objek, Anda dapat mengurutkan 2 dan 3 dengan sebuah ruang di antaranya, dan "
+"kemudian menghubungkan mereka dengan meletakkan objek keenam pada ruang di "
+"antaranya."
+
+#. (itstool) path: page/title
+#: C/translate.page:23
+msgid "Help translate"
+msgstr "Bantu menerjemahkan"
+
+#. (itstool) path: page/p
+#: C/translate.page:25
+msgid ""
+"The <app>GNOME Games</app> user interface and documentation is being "
+"translated by a world-wide volunteer community. You are welcome to "
+"participate."
+msgstr ""
+"Antarmuka pengguna dan dokumentasi <app>Permainan GNOME</app> sedang "
+"diterjemahkan oleh komunitas sukarelawan di seluruh dunia. Anda dipersilakan "
+"untuk berpartisipasi."
+
+#. (itstool) path: page/p
+#: C/translate.page:28
+msgid ""
+"There are <link href=\"http://l10n.gnome.org/module/five-or-more/\">many "
+"languages</link> for which translations are still needed."
+msgstr ""
+"Ada <link href=\"http://l10n.gnome.org/module/five-or-more/\">banyak bahasa</"
+"link> yang masih perlu terjemahan."
+
+#. (itstool) path: page/p
+#: C/translate.page:30
+msgid ""
+"To start translating you will need to <link href=\"http://l10n.gnome.org"
+"\">create an account</link> and join the <link href=\"http://l10n.gnome.org/"
+"teams/\">translation team</link> for your language. This will give you the "
+"ability to upload new translations."
+msgstr ""
+"Untuk mulai menerjemahkan Anda akan perlu <link href=\"http://l10n.gnome.org"
+"\">membuat akun</link> dan bergabung dengan <link href=\"http://l10n.gnome."
+"org/teams/\">tim penerjemah</link> untuk bahasa Anda. Ini akan memberi Anda "
+"kemampuan untuk mengunggah terjemahan baru."
+
+#. (itstool) path: page/p
+#: C/translate.page:34
+msgid ""
+"You can chat with GNOME translators using <link href=\"https://cbe003.chat."
+"mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fi18n\">irc</link>. People on the "
+"channel are located worldwide, so you may not get an immediate response as a "
+"result of timezone differences."
+msgstr ""
+"Anda dapat mengobrol dengan penerjemah GNOME menggunakan <link href="
+"\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fi18n"
+"\">irc</link>. Orang-orang di kanal ini tersebar di seluruh dunia, sehingga "
+"Anda mungkin tidak mendapatkan tanggapan langsung sebagai akibat dari "
+"perbedaan zona waktu."
+
+#. (itstool) path: page/p
+#: C/translate.page:38
+msgid ""
+"Alternatively, you can contact the Internationalization Team using their "
+"<link href=\"http://mail.gnome.org/mailman/listinfo/gnome-i18n\">mailing "
+"list</link>."
+msgstr ""
+"Sebagai alternatif, Anda dapat mengubungi Tim Internasionalisasi memakai "
+"<link href=\"http://mail.gnome.org/mailman/listinfo/gnome-i18n\">milis</"
+"link> mereka."
