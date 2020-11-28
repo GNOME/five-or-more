@@ -1,13 +1,13 @@
 # Czech translation of glines help.
 # Copyright (C) 2009 the author(s) of gnome-games.
 # This file is distributed under the same license as the glines help.
-# Marek Černocký <marek@manet.cz>, 2009, 2013, 2017, 2018, 2019.
+# Marek Černocký <marek@manet.cz>, 2009, 2013, 2017, 2018, 2019, 2020.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-games gnome-2-28\n"
-"POT-Creation-Date: 2019-03-02 20:24+0000\n"
-"PO-Revision-Date: 2019-03-13 09:12+0100\n"
+"Project-Id-Version: fire-or-more\n"
+"POT-Creation-Date: 2020-11-28 10:12+0000\n"
+"PO-Revision-Date: 2020-11-28 12:24+0100\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: čeština <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -15,9 +15,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Poedit-Language: Czech\n"
-"X-Poedit-Country: CZECH REPUBLIC\n"
-"X-Poedit-SourceCharset: utf-8\n"
 "X-Generator: Gtranslator 2.91.7\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
@@ -257,7 +254,7 @@ msgid "20"
 msgstr "20"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:70
+#: C/change-board-size.page:70 C/scores.page:73
 msgid "15"
 msgstr "15"
 
@@ -638,8 +635,8 @@ msgid ""
 "destination cell, if there is any clear path."
 msgstr ""
 "Přesuňte se na cílové pole a znovu zmáčkněte <key>Enter</key> nebo "
-"<key>mezerník</key>. Pokud existuje volná cesta, zvolený kámen se přemístí na "
-"cílové pole."
+"<key>mezerník</key>. Pokud existuje volná cesta, zvolený kámen se přemístí "
+"na cílové pole."
 
 #. (itstool) path: section/title
 #: C/play.page:70
@@ -821,14 +818,19 @@ msgid "53"
 msgstr "53"
 
 #. (itstool) path: td/p
-#: C/scores.page:69 C/scores.page:73
+#: C/scores.page:69
 msgid "14"
 msgstr "14"
 
 #. (itstool) path: td/p
-#: C/scores.page:70 C/scores.page:74
+#: C/scores.page:70
 msgid "56"
 msgstr "56"
+
+#. (itstool) path: td/p
+#: C/scores.page:74
+msgid "59"
+msgstr "59"
 
 #. (itstool) path: note/p
 #: C/scores.page:81
