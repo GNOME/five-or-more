@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: five-or-more.DOC\n"
-"POT-Creation-Date: 2019-03-02 20:24+0000\n"
-"PO-Revision-Date: 2019-03-04 01:39+0100\n"
+"POT-Creation-Date: 2020-11-28 10:12+0000\n"
+"PO-Revision-Date: 2020-11-29 01:30+0100\n"
 "Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Generator: Poedit 2.4.2\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -255,7 +255,7 @@ msgid "20"
 msgstr "20"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:70
+#: C/change-board-size.page:70 C/scores.page:73
 msgid "15"
 msgstr "15"
 
@@ -819,14 +819,20 @@ msgid "53"
 msgstr "53"
 
 #. (itstool) path: td/p
-#: C/scores.page:69 C/scores.page:73
+#: C/scores.page:69
 msgid "14"
 msgstr "14"
 
 #. (itstool) path: td/p
-#: C/scores.page:70 C/scores.page:74
+#: C/scores.page:70
 msgid "56"
 msgstr "56"
+
+#. (itstool) path: td/p
+#: C/scores.page:74
+#| msgid "5"
+msgid "59"
+msgstr "59"
 
 #. (itstool) path: note/p
 #: C/scores.page:81
