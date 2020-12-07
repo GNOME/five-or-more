@@ -9,30 +9,93 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 3.12\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-"
-"or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-08-13 20:27+0000\n"
-"PO-Revision-Date: 2016-08-14 21:13+0100\n"
-"Last-Translator: Tiago Santos <iagofsantos81@sapo.pt>\n"
-"Language-Team: Português <palbuquerque73@openmailbox.com>\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/five-or-more/issues\n"
+"POT-Creation-Date: 2020-06-26 08:58+0000\n"
+"PO-Revision-Date: 2020-12-07 17:38+0000\n"
+"Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
+"Language-Team: https://l10n.gnome.org/teams/pt/\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.8.7.1\n"
+"X-Generator: Poedit 2.3\n"
 
-#: ../data/five-or-more.appdata.xml.in.h:1 ../data/five-or-more.desktop.in.h:1
-#: ../data/five-or-more.ui.h:1 ../src/five-or-more.c:1172
-#: ../src/five-or-more.c:1723
+#: data/five-or-more-preferences.ui:13
+msgid "Preferences"
+msgstr "Preferências"
+
+#: data/five-or-more-preferences.ui:36
+msgid "Appearance"
+msgstr "Aparência"
+
+#: data/five-or-more-preferences.ui:60
+msgid "_Theme:"
+msgstr "_Tema:"
+
+#: data/five-or-more-preferences.ui:76
+msgid "balls"
+msgstr "bolas"
+
+#: data/five-or-more-preferences.ui:77
+msgid "shapes"
+msgstr "formas"
+
+#: data/five-or-more-preferences.ui:78
+msgid "tango"
+msgstr "tango"
+
+#: data/five-or-more-preferences.ui:87
+msgid "B_ackground color:"
+msgstr "_Cor de fundo:"
+
+#: data/five-or-more.ui:7
+msgid "_New Game"
+msgstr "_Novo jogo"
+
+#: data/five-or-more.ui:13
+msgid "S_cores"
+msgstr "Pontuações"
+
+#: data/five-or-more.ui:19
+msgid "_Small"
+msgstr "Pequeno"
+
+#: data/five-or-more.ui:24
+msgid "_Medium"
+msgstr "_Médio"
+
+#: data/five-or-more.ui:29
+msgid "_Large"
+msgstr "_Grande"
+
+#: data/five-or-more.ui:36
+msgid "_Preferences"
+msgstr "_Preferências"
+
+#: data/five-or-more.ui:40
+msgid "_Help"
+msgstr "Ajuda"
+
+#: data/five-or-more.ui:45
+msgid "_About Five or More"
+msgstr "_Acerca do Cinco ou mais"
+
+#: data/five-or-more.ui:65 data/org.gnome.five-or-more.appdata.xml.in:7
+#: data/org.gnome.five-or-more.desktop.in:3 src/main.vala:53 src/main.vala:173
 msgid "Five or More"
 msgstr "Cinco ou mais"
 
-#: ../data/five-or-more.appdata.xml.in.h:2 ../data/five-or-more.desktop.in.h:2
+#: data/five-or-more.ui:77
+msgid "Next:"
+msgstr "Seguinte:"
+
+#: data/org.gnome.five-or-more.appdata.xml.in:8
+#: data/org.gnome.five-or-more.desktop.in:4
 msgid "Remove colored balls from the board by forming lines"
 msgstr "Remova bolas coloridas do tabuleiro formando linhas"
 
-#: ../data/five-or-more.appdata.xml.in.h:3
+#: data/org.gnome.five-or-more.appdata.xml.in:10
 msgid ""
 "Five or More is the GNOME port of a once-popular computer game. Align five "
 "or more objects of the same color into a line to cause them to disappear and "
@@ -44,292 +107,227 @@ msgstr ""
 "desaparecer e pontuar. Ganhe muito mais pontos se alinhar mais objetos antes "
 "de os limpar."
 
-#: ../data/five-or-more.appdata.xml.in.h:4
+#: data/org.gnome.five-or-more.appdata.xml.in:16
 msgid ""
 "More objects appear after every turn. Play for as long as possible, until "
 "the board is completely full!"
 msgstr ""
 "Aparecem mais objetos após turno. Jogue durante o máximo de tempo possível "
-"até que o tabuleiro esteja completo."
+"até que o tabuleiro esteja completo!"
 
-#: ../data/five-or-more.appdata.xml.in.h:5
+#: data/org.gnome.five-or-more.appdata.xml.in:40
 msgid "The GNOME Project"
 msgstr "O Projeto GNOME"
 
-#: ../data/five-or-more.desktop.in.h:3
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/org.gnome.five-or-more.desktop.in:6
 msgid "game;strategy;logic;"
 msgstr "jogo;estratégia;lógica;"
 
-#: ../data/five-or-more-preferences.ui.h:1 ../data/menu.ui.h:2
-#: ../src/five-or-more.c:171
-msgid "Preferences"
-msgstr "Preferências"
-
-#: ../data/five-or-more-preferences.ui.h:2
-msgid "Appearance"
-msgstr "Aparência"
-
-#: ../data/five-or-more-preferences.ui.h:3
-msgid "_Image:"
-msgstr "_Imagem:"
-
-#: ../data/five-or-more-preferences.ui.h:4
-msgid "B_ackground color:"
-msgstr "_Cor de fundo:"
-
-#: ../data/five-or-more-preferences.ui.h:5
-msgid "Board Size"
-msgstr "Tamanho do tabuleiro"
-
-#: ../data/five-or-more-preferences.ui.h:6
-msgid "_Small"
-msgstr "_Pequeno"
-
-#: ../data/five-or-more-preferences.ui.h:7
-msgid "_Medium"
-msgstr "_Médio"
-
-#: ../data/five-or-more-preferences.ui.h:8
-msgid "_Large"
-msgstr "_Grande"
-
-#: ../data/five-or-more-preferences.ui.h:9
-msgid "General"
-msgstr "Geral"
-
-#: ../data/five-or-more-preferences.ui.h:10
-msgid "_Use fast moves"
-msgstr "_Utilizar jogadas rápidas"
-
-#: ../data/five-or-more.ui.h:2
-msgid "Next:"
-msgstr "Seguinte:"
-
-#: ../data/five-or-more.ui.h:3
-msgid "0"
-msgstr "0"
-
-#: ../data/five-or-more.ui.h:4
-msgid "Score:"
-msgstr "Pontuação:"
-
-#: ../data/five-or-more.ui.h:5 ../src/games-scores-dialog.c:385
-msgid "_New Game"
-msgstr "_Novo jogo"
-
-#: ../data/five-or-more.ui.h:6
-msgid "Start a new puzzle"
-msgstr "Iniciar um novo jogo"
-
-#: ../data/menu.ui.h:1
-msgid "Scores"
-msgstr "Pontuações"
-
-#: ../data/menu.ui.h:3
-msgid "Help"
-msgstr "Ajuda"
-
-#: ../data/menu.ui.h:4
-msgid "About"
-msgstr "Sobre"
-
-#: ../data/menu.ui.h:5
-msgid "Quit"
-msgstr "Sair"
-
-#: ../data/org.gnome.five-or-more.gschema.xml.h:1
+#: data/org.gnome.five-or-more.gschema.xml:5
 msgid "Playing field size"
 msgstr "Tamanho do campo de jogo"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:2
+#: data/org.gnome.five-or-more.gschema.xml:6
 msgid ""
 "Playing field size. 1=Small, 2=Medium, 3=Large. Any other value is invalid."
 msgstr ""
 "Tamanho do campo de jogo. 1=Pequeno, 2=Médio, 3=Grande. Qualquer outro valor "
 "é inválido."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:3
+#: data/org.gnome.five-or-more.gschema.xml:10
 msgid "Ball style"
 msgstr "Estilo de bola"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:4
+#: data/org.gnome.five-or-more.gschema.xml:11
 msgid "Ball style. The filename of the images to use for the balls."
 msgstr ""
 "Estilo de bola. O nome do ficheiro de imagens a utilizar para as bolas."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:5
+#: data/org.gnome.five-or-more.gschema.xml:15
 msgid "Background color"
 msgstr "Cor do fundo"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:6
+#: data/org.gnome.five-or-more.gschema.xml:16
 msgid "Background color. The hex specification of the background color."
 msgstr "Cor do fundo. A especificação hexadecimal da cor de fundo."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:7
+#: data/org.gnome.five-or-more.gschema.xml:20
 msgid "Time between moves"
 msgstr "Pausa entre jogadas"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:8
+#: data/org.gnome.five-or-more.gschema.xml:21
 msgid "Time between moves in milliseconds."
 msgstr "Pausa, em milissegundos, entre jogadas."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:9
+#: data/org.gnome.five-or-more.gschema.xml:25
 msgid "Game score"
 msgstr "Pontuação do jogo"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:10
+#: data/org.gnome.five-or-more.gschema.xml:26
 msgid "Game score from last saved session."
 msgstr "Pontuação do jogo da última sessão gravada."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:11
+#: data/org.gnome.five-or-more.gschema.xml:30
 msgid "Game field"
 msgstr "Tabuleiro de jogo"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:12
+#: data/org.gnome.five-or-more.gschema.xml:31
 msgid "Game field from last saved session."
 msgstr "Tabuleiro de jogo da última sessão gravada."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:13
+#: data/org.gnome.five-or-more.gschema.xml:35
 msgid "Game preview"
 msgstr "Antevisão do jogo"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:14
+#: data/org.gnome.five-or-more.gschema.xml:36
 msgid "Game preview from last saved session."
 msgstr "Antevisão do jogo da última sessão gravada."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:15
+#: data/org.gnome.five-or-more.gschema.xml:40
 msgid "Width of the window in pixels"
 msgstr "Largura da janela em pixels"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:16
+#: data/org.gnome.five-or-more.gschema.xml:44
 msgid "Height of the window in pixels"
 msgstr "Altura da janela em pixels"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:17
+#: data/org.gnome.five-or-more.gschema.xml:48
 msgid "true if the window is maximized"
 msgstr "verdadeiro se a janela estiver maximizada"
 
-#: ../src/five-or-more.c:80
+#: src/game.vala:94
 msgctxt "board size"
 msgid "Small"
 msgstr "Pequeno"
 
-#: ../src/five-or-more.c:81
+#: src/game.vala:95
 msgctxt "board size"
 msgid "Medium"
 msgstr "Médio"
 
-#: ../src/five-or-more.c:82
+#: src/game.vala:96
 msgctxt "board size"
 msgid "Large"
 msgstr "Grande"
 
-#: ../src/five-or-more.c:165
-msgid "Could not load theme"
-msgstr "Impossível carregar o tema"
-
-#: ../src/five-or-more.c:191
-#, c-format
-msgid ""
-"Unable to locate file:\n"
-"%s\n"
-"\n"
-"The default theme will be loaded instead."
-msgstr ""
-"Impossível localizar o ficheiro:\n"
-"%s\n"
-"\n"
-"Será lido o tema predefinido."
-
-#: ../src/five-or-more.c:198
-#, c-format
-msgid ""
-"Unable to locate file:\n"
-"%s\n"
-"\n"
-"Please check that Five or More is installed correctly."
-msgstr ""
-"Impossível encontrar o ficheiro:\n"
-"%s\n"
-"\n"
-"Confirme se o Cinco ou mais está corretamente instalado."
-
-#: ../src/five-or-more.c:407
-msgid "Match five objects of the same type in a row to score!"
-msgstr "Coincida cinco objetos do mesmo tipo numa linha para pontuar!"
-
-#: ../src/five-or-more.c:468
-msgid "Five or More Scores"
-msgstr "Pontuações do Cinco ou mais"
-
-#: ../src/five-or-more.c:470
-msgid "_Board size:"
-msgstr "_Tamanho do tabuleiro:"
-
-#: ../src/five-or-more.c:487
-msgid "Game Over!"
-msgstr "Jogo terminado!"
-
-#. Can't move there!
-#: ../src/five-or-more.c:644
-msgid "You can’t move there!"
-msgstr "Não pode mover-se para aí!"
-
-#: ../src/five-or-more.c:1174
+#: src/main.vala:176
 msgid "GNOME port of the once-popular Color Lines game"
-msgstr "Conversão para o GNOME do popular jogo Color Lines."
+msgstr "Conversão para o GNOME do popular jogo Color Lines"
 
-#: ../src/five-or-more.c:1180
+#: src/main.vala:182
 msgid "translator-credits"
 msgstr ""
 "Duarte Loreto <happyguy_pt@hotmail.com>\n"
+"Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Pedro Albuquerque <palbuquerque73@gmail.com>\n"
 "Tiago Santos <iagofsantos81@sapo.pt>"
 
-#: ../src/five-or-more.c:1304
+#: src/window.vala:50
+msgid "Match five objects of the same type in a row to score!"
+msgstr "Coincida cinco objetos do mesmo tipo numa linha para pontuar!"
+
+#: src/window.vala:51
+msgid "You can’t move there!"
+msgstr "Não pode mover-se para aí!"
+
+#: src/window.vala:52
+msgid "Game Over!"
+msgstr "Jogo terminado!"
+
+#: src/window.vala:53
+#, c-format
+msgid "Score: %d"
+msgstr "Pontuação: %d"
+
+#: src/window.vala:87
+msgid "Board Size: "
+msgstr "Tamanho do tabuleiro: "
+
+#: src/window.vala:159
 msgid "Are you sure you want to restart the game?"
 msgstr "Tem a certeza que quer recomeçar o jogo?"
 
-#: ../src/five-or-more.c:1307
+#: src/window.vala:161
 msgid "_Cancel"
 msgstr "_Cancelar"
 
-#: ../src/five-or-more.c:1308
+#: src/window.vala:162
 msgid "_Restart"
 msgstr "_Reiniciar"
 
-#. Score dialog column header for the score time (e.g. 1 minute)
-#: ../src/games-scores-dialog.c:132
-msgctxt "score-dialog"
-msgid "Time"
-msgstr "Duração"
+#~ msgid "_Image:"
+#~ msgstr "_Imagem:"
 
-#. Score dialog column header for the score value (e.g. 30 moves)
-#: ../src/games-scores-dialog.c:138
-msgctxt "score-dialog"
-msgid "Score"
-msgstr "Pontuação"
+#~ msgid "General"
+#~ msgstr "Geral"
 
-#. Score format for time based scores.  %1$d is the time in minutes, %2$d is the time in seconds
-#: ../src/games-scores-dialog.c:225
-#, c-format
-msgctxt "score-dialog"
-msgid "%1$dm %2$ds"
-msgstr "%1$dm %2$ds"
+#~ msgid "_Use fast moves"
+#~ msgstr "_Utilizar jogadas rápidas"
 
-#: ../src/games-scores-dialog.c:371
-msgid "_Quit"
-msgstr "_Sair"
+#~ msgid "0"
+#~ msgstr "0"
 
-#: ../src/games-scores-dialog.c:378
-msgid "_Undo"
-msgstr "_Desfazer"
+#~ msgid "Start a new puzzle"
+#~ msgstr "Iniciar um novo jogo"
 
-#: ../src/games-scores-dialog.c:392
-msgid "_Close"
-msgstr "_Fechar"
+#~ msgid "About"
+#~ msgstr "Sobre"
 
-#. Score dialog column header for the date the score was recorded
-#: ../src/games-scores-dialog.c:478
-msgid "Date"
-msgstr "Data"
+#~ msgid "Quit"
+#~ msgstr "Sair"
+
+#~ msgid "Could not load theme"
+#~ msgstr "Impossível carregar o tema"
+
+#~ msgid ""
+#~ "Unable to locate file:\n"
+#~ "%s\n"
+#~ "\n"
+#~ "The default theme will be loaded instead."
+#~ msgstr ""
+#~ "Impossível localizar o ficheiro:\n"
+#~ "%s\n"
+#~ "\n"
+#~ "Será lido o tema predefinido."
+
+#~ msgid ""
+#~ "Unable to locate file:\n"
+#~ "%s\n"
+#~ "\n"
+#~ "Please check that Five or More is installed correctly."
+#~ msgstr ""
+#~ "Impossível encontrar o ficheiro:\n"
+#~ "%s\n"
+#~ "\n"
+#~ "Confirme se o Cinco ou mais está corretamente instalado."
+
+#~ msgid "Five or More Scores"
+#~ msgstr "Pontuações do Cinco ou mais"
+
+#~ msgid "_Board size:"
+#~ msgstr "_Tamanho do tabuleiro:"
+
+#~ msgctxt "score-dialog"
+#~ msgid "Time"
+#~ msgstr "Duração"
+
+#~ msgctxt "score-dialog"
+#~ msgid "Score"
+#~ msgstr "Pontuação"
+
+#~ msgctxt "score-dialog"
+#~ msgid "%1$dm %2$ds"
+#~ msgstr "%1$dm %2$ds"
+
+#~ msgid "_Quit"
+#~ msgstr "_Sair"
+
+#~ msgid "_Undo"
+#~ msgstr "_Desfazer"
+
+#~ msgid "_Close"
+#~ msgstr "_Fechar"
+
+#~ msgid "Date"
+#~ msgstr "Data"
