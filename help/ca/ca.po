@@ -87,7 +87,7 @@ msgid ""
 "and don't want to use any of the available log in options, just click on the "
 "<gui>Register</gui> link to create one."
 msgstr ""
-"Per participar-hi, heu d'iniciar la sessió, i així tindreu la possibilitat "
+"Per a participar-hi, heu d'iniciar la sessió, i així tindreu la possibilitat "
 "d'accedir-hi, d'enviar informes d'errors i de fer comentaris. A més, heu "
 "d'iniciar la sessió amb un dels vostres comptes existents o us heu de "
 "registrar per a poder rebre actualitzacions per correu electrònic sobre "
@@ -165,7 +165,7 @@ msgid ""
 "While a larger board gives you more space, there are also more objects in "
 "play for each turn."
 msgstr ""
-"Tot i que un tauler més gran et dóna més espai, també hi ha més objectes amb "
+"Tot i que un tauler més gran et dona més espai, també hi ha més objectes amb "
 "els quals jugar en cada torn."
 
 #. (itstool) path: section/title
@@ -437,7 +437,7 @@ msgid ""
 "they disappear. The goal is to vanish as many objects as possible. The game "
 "is over when the entire board is full."
 msgstr ""
-"<app>Cinc o més</app> és un exercici senzill per estimular el vostre "
+"<app>Cinc o més</app> és un exercici senzill per a estimular el vostre "
 "cervell. L'objectiu és col·locat almenys cinc objectes del mateix <link xref="
 "\"change-theme#images\">color o forma</link> en una línia recta. La línia "
 "pot ser horitzontal, vertical o diagonal. Una vegada cinc o més objectes es "
@@ -463,7 +463,7 @@ msgstr "Avançat"
 #. (itstool) path: section/title
 #: C/index.page:46
 msgid "Get Involved"
-msgstr "Participeu"
+msgstr "Participar"
 
 #. (itstool) path: p/link
 #: C/legal.xml:3
@@ -538,7 +538,7 @@ msgid ""
 msgstr ""
 "Heu de reconèixer l'autoria del material de la forma especificada per "
 "l'autor o llicenciant (però no d'una manera que suggereixi que el "
-"llicenciador us dóna suport o patrocina l'ús que en feu)."
+"llicenciador us dona suport o patrocina l'ús que en feu)."
 
 #. (itstool) path: item/title
 #: C/license.page:47
@@ -625,9 +625,9 @@ msgid ""
 "Using the arrow keys, and the <key>Home</key>, <key>End</key>, <key>PageUp</"
 "key> and <key>PageDown</key> keys navigate to the object you want to move."
 msgstr ""
-"Utilitzant les tecles de direcció, i les <key>Inici</key>, <key>Fi</key>, "
-"<key>Re Pàg</key> i <key>Av Pàg</key> tecles per a desplaçar-se cap a "
-"l'objecte que vols moure."
+"Utilitzant les tecles de direcció, i les tecles <key>Inici</key>, <key>Fi</key>, "
+"<key>Re Pàg</key> i <key>Av Pàg</key> per a desplaçar-se cap a "
+"l'objecte que voleu moure."
 
 #. (itstool) path: item/p
 #: C/play.page:57
@@ -753,7 +753,7 @@ msgid ""
 "You score points by creating lines of 5 or more objects. The number of "
 "points depends on the number of objects that disappear."
 msgstr ""
-"Per puntuar, heu de crear línies de 5 objectes o més. El nombre de punts "
+"Per a puntuar, heu de crear línies de 5 objectes o més. El nombre de punts "
 "depèn del nombre d'objectes de la línia."
 
 #. (itstool) path: td/p
