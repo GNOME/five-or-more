@@ -1,27 +1,28 @@
 # German translation of the glines manual.
-# Mario Blättermann <mario.blaettermann@gmail.com>, 2008-2009, 2011, 2016-2017.
+#
+# Mario Blättermann <mario.blaettermann@gmail.com>, 2008-2009, 2011, 2016-2017, 2021.
 # Christian Kirbach <christian.kirbach@gmail.com>, 2014.
 # Benjamin Steinwender <b@stbe.at>, 2015.
 # Tim Sabsch <tim@sabsch.com>, 2018-2019.
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: glines docs master\n"
-"POT-Creation-Date: 2019-03-14 15:32+0000\n"
-"PO-Revision-Date: 2019-03-27 22:11+0100\n"
-"Last-Translator: Tim Sabsch <tim@sabsch.com>\n"
+"POT-Creation-Date: 2020-11-28 10:12+0000\n"
+"PO-Revision-Date: 2021-02-28 15:47+0100\n"
+"Last-Translator: Mario Blättermann <mario.blaettermann@gmail.com>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Generator: Lokalize 20.12.2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
 msgid "translator-credits"
 msgstr ""
-"Mario Blättermann <mario.blaettermann@gmail.com>, 2008-2012, 2016\n"
+"Mario Blättermann <mario.blaettermann@gmail.com>, 2008-2012, 2016, 2021\n"
 "Christian Kirbach <christian.kirbach@gmail.com>, 2014,2019\n"
 "Benjamin Steinwender <b@stbe.at>, 2015\n"
 "Tim Sabsch <tim@sabsch.com>, 2018-2019"
@@ -262,7 +263,7 @@ msgid "20"
 msgstr "20"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:70
+#: C/change-board-size.page:70 C/scores.page:73
 msgid "15"
 msgstr "15"
 
@@ -841,14 +842,20 @@ msgid "53"
 msgstr "53"
 
 #. (itstool) path: td/p
-#: C/scores.page:69 C/scores.page:73
+#: C/scores.page:69
 msgid "14"
 msgstr "14"
 
 #. (itstool) path: td/p
-#: C/scores.page:70 C/scores.page:74
+#: C/scores.page:70
 msgid "56"
 msgstr "56"
+
+#. (itstool) path: td/p
+#: C/scores.page:74
+#| msgid "5"
+msgid "59"
+msgstr "59"
 
 #. (itstool) path: note/p
 #: C/scores.page:81
