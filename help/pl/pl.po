@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: five-or-more-help\n"
-"POT-Creation-Date: 2019-03-02 20:24+0000\n"
+"POT-Creation-Date: 2020-11-28 10:12+0000\n"
 "PO-Revision-Date: 2019-03-03 14:58+0100\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <community-poland@mozilla.org>\n"
@@ -258,7 +258,7 @@ msgid "20"
 msgstr "20"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:70
+#: C/change-board-size.page:70 C/scores.page:73
 msgid "15"
 msgstr "15"
 
@@ -820,14 +820,19 @@ msgid "53"
 msgstr "53"
 
 #. (itstool) path: td/p
-#: C/scores.page:69 C/scores.page:73
+#: C/scores.page:69
 msgid "14"
 msgstr "14"
 
 #. (itstool) path: td/p
-#: C/scores.page:70 C/scores.page:74
+#: C/scores.page:70
 msgid "56"
 msgstr "56"
+
+#. (itstool) path: td/p
+#: C/scores.page:74
+msgid "59"
+msgstr "59"
 
 #. (itstool) path: note/p
 #: C/scores.page:81
