@@ -1,0 +1,987 @@
+# Danish translation for five-or-more.
+# Copyright (C) 2020 five-or-more's COPYRIGHT HOLDER
+# This file is distributed under the same license as the five-or-more package.
+# scootergrisen, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: five-or-more master\n"
+"POT-Creation-Date: 2020-02-19 19:00+0000\n"
+"PO-Revision-Date: 2020-11-04 00:00+0200\n"
+"Last-Translator: scootergrisen\n"
+"Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
+"Language: da\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
+msgctxt "_"
+msgid "translator-credits"
+msgstr "scootergrisen <>, 2020"
+
+#. (itstool) path: credit/name
+#: C/bug-filing.page:10 C/change-board-size.page:14 C/change-theme.page:14
+#: C/develop.page:10 C/documentation.page:8 C/index.page:17 C/scores.page:14
+#: C/shortcuts.page:9 C/strategy.page:9 C/translate.page:10
+msgid "Tiffany Antopolski"
+msgstr "Tiffany Antopolski"
+
+#. (itstool) path: credit/years
+#: C/bug-filing.page:12 C/change-board-size.page:11 C/develop.page:12
+#: C/documentation.page:10 C/play.page:12 C/rules.page:12 C/scores.page:11
+#: C/shortcuts.page:11 C/translate.page:12
+msgid "2011"
+msgstr "2011"
+
+#. (itstool) path: license/p
+#: C/bug-filing.page:15 C/develop.page:15 C/documentation.page:13
+#: C/index.page:21 C/translate.page:19
+msgid "Creative Commons Share Alike 3.0"
+msgstr "Creative Commons Deling på samme vilkår 3.0"
+
+#. (itstool) path: page/title
+#: C/bug-filing.page:19
+msgid "Report a Problem"
+msgstr "Rapportér et problem"
+
+#. (itstool) path: page/p
+#: C/bug-filing.page:20
+msgid ""
+"<app>Five or More</app> is maintained by a volunteer community. You are "
+"welcome to participate. If you notice a problem you can file a <em>bug "
+"report</em>. To file a bug, go to <link href=\"https://gitlab.gnome.org/"
+"GNOME/five-or-more/issues/new\"/>."
+msgstr ""
+"<app>Fem eller flere</app> vedligeholdes af et fællesskab af frivillige. Du "
+"er velkommen til at deltage. Hvis du bemærker et problem, kan du oprette en "
+"<em>fejlrapport</em>. Rapportér en fejl ved at gå til <link "
+"href=\"https://gitlab.gnome.org/GNOME/five-or-more/issues/new\"/>."
+
+#. (itstool) path: page/p
+#: C/bug-filing.page:23
+msgid ""
+"This is a bug tracking system where users and developers can file details "
+"about bugs, crashes and request enhancements."
+msgstr ""
+"Det er et fejlsporingssystem, hvor brugere og udviklere kan rapportere detaljer "
+"om fejl og nedbrud eller anmode om forbedringer."
+
+#. (itstool) path: page/p
+#: C/bug-filing.page:26
+msgid ""
+"To participate you have to log in, which will give you the ability to gain "
+"access, file bugs, and make comments. Also, you need to log in using one of "
+"your existing accounts or register a new account so you can receive updates "
+"by e-mail about the status of your bug. If you don't already have an account "
+"and don't want to use any of the available log in options, just click on the "
+"<gui>Register</gui> link to create one."
+msgstr ""
+"For at deltage skal du logge ind, hvorved du får adgang, mulighed for at "
+"rapportere fejl og skrive kommentarer. Det er også nødvendigt at logge ind med "
+"en af dine eksisterende konti eller tilmelde en ny konto, så du kan modtage "
+"opdateringer om fejlens status via e-mail. Har du ikke allerede en konto, og "
+"vil du ikke bruge nogen af de tilgængelige loginmuligheder, så klik blot på "
+"<gui>Tilmeld</gui>-linket for at oprette en."
+
+#. (itstool) path: page/p
+#: C/bug-filing.page:30
+msgid ""
+"Once you have an account, log in, click on <guiseq><gui>Projects</"
+"gui><gui>five-or-more</gui><gui>Issues</gui><gui>New issue</gui></guiseq>. "
+"Before reporting a bug, please read the <link href=\"https://bugzilla.gnome."
+"org/page.cgi?id=bug-writing.html\">bug writing guidelines</link>, and please "
+"<link href=\"https://gitlab.gnome.org/GNOME/five-or-more/issues\">browse</"
+"link> for the bug to see if it already exists."
+msgstr ""
+"Når du har en konto, så log ind og klik på <guiseq><gui>Projects</gui><gui"
+">five-or-more</gui><gui>Issues</gui><gui>New issue</gui></guiseq>. Inden du "
+"rapporterer en fejl, så læs venligst <link "
+"href=\"https://bugzilla.gnome.org/page.cgi?id=bug-"
+"writing.html\">retningslinjer til fejlrapportering</link> og <link "
+"href=\"https://gitlab.gnome.org/GNOME/five-or-more/issues\">se</link> venligst "
+"om fejlen allerede er oprettet."
+
+#. (itstool) path: page/p
+#: C/bug-filing.page:33
+msgid ""
+"Fill in the Title and Description sections and click <gui>Submit issue</gui>."
+msgstr "Udfyld titlen og beskrivelsen og klik på <gui>Submit issue</gui>."
+
+#. (itstool) path: page/p
+#: C/bug-filing.page:36
+msgid ""
+"Your report will be given an ID number, and its status will be updated as it "
+"is being dealt with."
+msgstr ""
+"Din rapport gives et id-nummer og dens status opdateres, efterhånden som der "
+"arbejdes på den."
+
+#. (itstool) path: credit/name
+#: C/change-board-size.page:9 C/change-theme.page:9 C/index.page:13
+#: C/play.page:10 C/scores.page:9
+msgid "Lahiru lanka"
+msgstr "Lahiru lanka"
+
+#. (itstool) path: credit/name
+#: C/change-board-size.page:18 C/play.page:15 C/translate.page:15
+msgid "Michael Hill"
+msgstr "Michael Hill"
+
+#. (itstool) path: page/title
+#: C/change-board-size.page:23
+msgid "Change board size"
+msgstr "Ændr brætstørrelsen"
+
+#. (itstool) path: page/p
+#: C/change-board-size.page:24
+msgid "To change the board size:"
+msgstr "Sådan ændres brætstørrelsen:"
+
+#. (itstool) path: item/p
+#: C/change-board-size.page:26
+msgid "Press the menu button in the top-right corner of the window."
+msgstr "Tryk på menuknappen i øverste højre hjørne af vinduet."
+
+#. (itstool) path: item/p
+#: C/change-board-size.page:27
+msgid "Select <gui>Small</gui>, <gui>Medium</gui>, or <gui>Large</gui>."
+msgstr "Vælg <gui>Lille</gui>, <gui>Mellem</gui> eller <gui>Stor</gui>."
+
+#. (itstool) path: note/p
+#: C/change-board-size.page:31
+msgid ""
+"While a larger board gives you more space, there are also more objects in "
+"play for each turn."
+msgstr ""
+"Selvom et større bræt giver dig mere plads, så er der også flere objekter i "
+"spil i hver tur."
+
+#. (itstool) path: section/title
+#: C/change-board-size.page:36
+msgid "Board parameters"
+msgstr "Brætparametre"
+
+#. (itstool) path: section/p
+#: C/change-board-size.page:37
+msgid "The 3 different board sizes have the following parameters:"
+msgstr "De 3 forskellige brætstørrelser har følgende parametre:"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:41
+msgid "<em>Size</em>"
+msgstr "<em>Størrelse</em>"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:42
+msgid "<em>Width</em>"
+msgstr "<em>Bredde</em>"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:43
+msgid "<em>Height</em>"
+msgstr "<em>Højde</em>"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:44
+msgid "<em>Number of types</em>"
+msgstr "<em>Antal typer</em>"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:45
+msgid "<em>New objects per turn</em>"
+msgstr "<em>Nye objekter pr. tur</em>"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:46
+msgid "<em>Number of cells</em>"
+msgstr "<em>Antal celler</em>"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:50
+msgid "Small"
+msgstr "Lille"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:51 C/change-board-size.page:52
+#: C/change-board-size.page:62 C/change-board-size.page:71
+#: C/change-board-size.page:72 C/scores.page:41
+msgid "7"
+msgstr "7"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:53 C/scores.page:33
+msgid "5"
+msgstr "5"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:54 C/change-board-size.page:63
+msgid "3"
+msgstr "3"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:55 C/scores.page:62
+msgid "49"
+msgstr "49"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:59
+msgid "Medium"
+msgstr "Mellem"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:60 C/change-board-size.page:61 C/scores.page:49
+msgid "9"
+msgstr "9"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:64
+msgid "81"
+msgstr "81"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:68
+msgid "Large"
+msgstr "Stor"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:69
+msgid "20"
+msgstr "20"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:70
+msgid "15"
+msgstr "15"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:73
+msgid "300"
+msgstr "300"
+
+#. (itstool) path: section/title
+#: C/change-board-size.page:80
+msgid "The 3 board sizes"
+msgstr "De 3 brætstørrelser"
+
+#. (itstool) path: media/p
+#: C/change-board-size.page:86
+msgid "<app>Five or More</app> Small board"
+msgstr "Lille brætstørrelse i <app>Fem eller flere</app>"
+
+#. (itstool) path: media/p
+#: C/change-board-size.page:91
+msgid "<app>Five or More</app> medium size board"
+msgstr "Medium brætstørrelse i <app>Fem eller flere</app>"
+
+#. (itstool) path: media/p
+#: C/change-board-size.page:96
+msgid "<app>Five or More</app> large size board"
+msgstr "Stor brætstørrelse i <app>Fem eller flere</app>"
+
+#. (itstool) path: credit/years
+#: C/change-theme.page:11 C/strategy.page:11
+msgid "2012"
+msgstr "2012"
+
+#. (itstool) path: page/title
+#: C/change-theme.page:20
+msgid "Change the look and feel"
+msgstr "Ændr udseendet og fremtoningen"
+
+#. (itstool) path: page/p
+#: C/change-theme.page:21
+msgid "To change the appearance of the pieces and the board:"
+msgstr "Sådan ændres udseendet på brikkerne og brættet:"
+
+#. (itstool) path: item/p
+#: C/change-theme.page:24
+msgid ""
+"Press the menu button in the top-right corner of the window and select <gui "
+"style=\"menuitem\">Preferences</gui>."
+msgstr ""
+"Tryk på menuknappen i øverste højre hjørne af vinduet og vælg <gui "
+"style=\"menuitem\">Indstillinger</gui>."
+
+#. (itstool) path: item/p
+#: C/change-theme.page:28
+msgid ""
+"Select <gui>balls</gui>, <gui>shapes</gui>, or <gui>tango</gui> from the "
+"<gui>Theme</gui> drop down menu to change the playing pieces."
+msgstr ""
+"Vælg <gui>kugler</gui>, <gui>former</gui> eller <gui>tango</gui> fra "
+"rullegardinsmenuen <gui>Tema</gui> for at ændre spillets brikker."
+
+#. (itstool) path: item/p
+#: C/change-theme.page:30
+msgid ""
+"Click on the colored box next to <gui>Background color</gui> to access the "
+"color palette."
+msgstr ""
+"Klik på boksen med farverne ved siden af <gui>Baggrundsfarve</gui> for at få "
+"adgang til farvepaletten."
+
+#. (itstool) path: item/p
+#: C/change-theme.page:34
+msgid "Close the <gui>Preferences</gui> dialog."
+msgstr "Luk dialogen <gui>Indstillinger</gui>."
+
+#. (itstool) path: page/title
+#: C/develop.page:19
+msgid "Help develop"
+msgstr "Hjælp med at udvikle"
+
+#. (itstool) path: page/p
+#: C/develop.page:20
+msgid ""
+"The <app>GNOME Games</app> are developed and maintained by a volunteer "
+"community. You are welcome to participate."
+msgstr ""
+"<app>GNOME Spil</app> udvikles og vedligeholdes af et fællesskab af "
+"frivillige. Du er velkommen til at deltage."
+
+#. (itstool) path: page/p
+#: C/develop.page:23
+msgid ""
+"If you would like to <link href=\"https://wiki.gnome.org/Apps/Games/"
+"Contributing\">help develop <app>GNOME Games</app></link>, you can get in "
+"touch with the developers using <link href=\"https://cbe005.chat.mibbit.com/?"
+"url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, or via our <link "
+"href=\"http://mail.gnome.org/mailman/listinfo/games-list\">mailing list</"
+"link>."
+msgstr ""
+"Hvis du vil <link "
+"href=\"https://wiki.gnome.org/Apps/Games/Contributing\">hjælpe med at udvikle "
+"<app>GNOME Spil</app></link>, så kan du kontakte udviklerne med <link "
+"href=\"https://cbe005.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fgnome-"
+"games\">irc</link> eller via vores <link "
+"href=\"http://mail.gnome.org/mailman/listinfo/games-"
+"list\">mailingliste</link>."
+
+#. (itstool) path: page/title
+#: C/documentation.page:17
+msgid "Help write documentation"
+msgstr "Hjælp med at skrive dokumentationen"
+
+#. (itstool) path: page/p
+#: C/documentation.page:19
+msgid ""
+"The <app>GNOME Games</app> documentation is maintained by a volunteer "
+"community. You are welcome to participate."
+msgstr ""
+"Dokumentationen til <app>GNOME Spil</app> vedligeholdes af et "
+"fællesskab af frivillige. Du er velkommen til at deltage."
+
+#. (itstool) path: page/p
+#: C/documentation.page:22
+msgid ""
+"To contribute to the Documentation Project, feel free to get in touch with "
+"us using <link href=\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc."
+"gnome.org%2Fdocs\">irc</link>, or via our <link href=\"http://mail.gnome.org/"
+"mailman/listinfo/gnome-doc-list\">mailing list</link>."
+msgstr ""
+"Hvis du vil bidrage til dokumentationsprojektet, så er du velkommen til at kontakte os med "
+"<link href=\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%"
+"2Fdocs\">irc</link> eller via vores <link "
+"href=\"http://mail.gnome.org/mailman/listinfo/gnome-doc-"
+"list\">mailingliste</link>."
+
+#. (itstool) path: page/p
+#: C/documentation.page:26
+msgid ""
+"Our <link href=\"https://wiki.gnome.org/DocumentationProject/Contributing"
+"\">wiki</link> page contains useful information."
+msgstr ""
+"Vores <link href=\"https://wiki.gnome.org/DocumentationProject/Contributing\">"
+"wikiside</link> indeholder nyttig information."
+
+#. (itstool) path: info/title
+#: C/index.page:8
+msgctxt "link"
+msgid "Five or More"
+msgstr "Fem eller flere"
+
+#. (itstool) path: info/title
+#: C/index.page:9
+msgctxt "text"
+msgid "Five or More"
+msgstr "Fem eller flere"
+
+#. (itstool) path: media/span
+#: C/index.page:27
+msgid "Five or More logo"
+msgstr "Fem eller flere-logo"
+
+#. (itstool) path: page/title
+#: C/index.page:26
+msgid "<_:media-1/> Five or More"
+msgstr "<_:media-1/> Fem eller flere"
+
+#. (itstool) path: page/p
+#: C/index.page:30
+msgid ""
+"<app>Five or More</app> is a deceptively simple brain workout. The goal is "
+"to place at least five objects of the same <link xref=\"change-theme#images"
+"\">color or shape</link> into a straight line. The line can be horizontal, "
+"vertical or diagonal. Once five or more objects are grouped into a line, "
+"they disappear. The goal is to vanish as many objects as possible. The game "
+"is over when the entire board is full."
+msgstr ""
+"<app>Fem eller flere</app> er gevaldig simpel hjernegymnastik. Målet er at "
+"placere mindst 5 objekter af samme <link xref=\"change-theme#images\">farve "
+"eller form</link> på en lige linje. Linjen kan være vandret, lodret eller "
+"diagonal. Når fem eller flere objekter grupperes på en linje, forsvinder "
+"de. Målet er at få så mange objekter til at forsvinde som muligt. Spillet er "
+"slut når hele brættet er fuldt."
+
+#. (itstool) path: section/title
+#: C/index.page:34
+msgid "Game Play"
+msgstr "Gameplay"
+
+#. (itstool) path: section/title
+#: C/index.page:38
+msgid "Useful Tips"
+msgstr "Nyttige tips"
+
+#. (itstool) path: section/title
+#: C/index.page:42
+msgid "Advanced"
+msgstr "Avanceret"
+
+#. (itstool) path: section/title
+#: C/index.page:46
+msgid "Get Involved"
+msgstr "Vær med"
+
+#. (itstool) path: p/link
+#: C/legal.xml:3
+msgid "Creative Commons Attribution-ShareAlike 3.0 Unported License"
+msgstr ""
+"Creative Commons Kreditering-Deling på samme vilkår 3.0 Ikke porteret-licens"
+
+#. (itstool) path: license/p
+#: C/legal.xml:3
+msgid "This work is licensed under a <_:link-1/>."
+msgstr "Værket er licenseret under en <_:link-1/>."
+
+#. (itstool) path: info/desc
+#: C/license.page:9
+msgid "Legal information."
+msgstr "Juridisk information."
+
+#. (itstool) path: page/title
+#: C/license.page:12
+msgid "License"
+msgstr "Licens"
+
+#. (itstool) path: page/p
+#: C/license.page:13
+msgid ""
+"This work is distributed under a CreativeCommons Attribution-Share Alike 3.0 "
+"Unported license."
+msgstr ""
+"Værket distribueres under en CreativeCommons Kreditering-Deling på samme "
+"vilkår 3.0 Ikke porteret-licens."
+
+#. (itstool) path: page/p
+#: C/license.page:21
+msgid "You are free:"
+msgstr "Du kan frit:"
+
+#. (itstool) path: item/title
+#: C/license.page:26
+msgid "<em>To share</em>"
+msgstr "<em>Dele</em>"
+
+#. (itstool) path: item/p
+#: C/license.page:27
+msgid "To copy, distribute and transmit the work."
+msgstr "Kopiere, videredistribuere og overføre værket."
+
+#. (itstool) path: item/title
+#: C/license.page:30
+msgid "<em>To remix</em>"
+msgstr "<em>Tilpasse</em>"
+
+#. (itstool) path: item/p
+#: C/license.page:31
+msgid "To adapt the work."
+msgstr "Tilpasse værket."
+
+#. (itstool) path: page/p
+#: C/license.page:34
+msgid "Under the following conditions:"
+msgstr "Under følgende vilkår:"
+
+#. (itstool) path: item/title
+#: C/license.page:39
+msgid "<em>Attribution</em>"
+msgstr "<em>Kreditering</em>"
+
+#. (itstool) path: item/p
+#: C/license.page:40
+msgid ""
+"You must attribute the work in the manner specified by the author or "
+"licensor (but not in any way that suggests that they endorse you or your use "
+"of the work)."
+msgstr ""
+"Du skal kreditere værket på den måde, der er angivet af forfatteren eller "
+"licensgiveren (men ikke på en måde der antyder, at de støtter dig eller din "
+"brug af værket)."
+
+#. (itstool) path: item/title
+#: C/license.page:47
+msgid "<em>Share Alike</em>"
+msgstr "<em>Deling på samme vilkår</em>"
+
+#. (itstool) path: item/p
+#: C/license.page:48
+msgid ""
+"If you alter, transform, or build upon this work, you may distribute the "
+"resulting work only under the same, similar or a compatible license."
+msgstr ""
+"Hvis du ændrer, omarbejder eller bygger videre på værket, må du kun "
+"videredistribuere det resulterende værk under en licens, der er identisk, "
+"lignende eller kompatibel."
+
+#. (itstool) path: page/p
+#: C/license.page:54
+msgid ""
+"For the full text of the license, see the <link href=\"http://"
+"creativecommons.org/licenses/by-sa/3.0/legalcode\">CreativeCommons website</"
+"link>, or read the full <link href=\"http://creativecommons.org/licenses/by-"
+"sa/3.0/\">Commons Deed</link>."
+msgstr ""
+"Se licensens fulde tekst på <link href=\"http://creativecommons.org/licenses"
+"/by-sa/3.0/legalcode\">CreativeCommons-webstedet</link> eller læs den fulde "
+"<link href=\"http://creativecommons.org/licenses/by-sa/3.0/\">Commons "
+"Deed</link>."
+
+#. (itstool) path: page/title
+#: C/play.page:22
+msgid "How to Play"
+msgstr "Sådan spilles spillet"
+
+#. (itstool) path: page/p
+#: C/play.page:24
+msgid ""
+"To start a new game, press the menu button in the top-right corner of the "
+"window and select <gui style=\"menuitem\">New Game</gui>."
+msgstr ""
+"Start et nyt spil ved at trykke på menuknappen i øverste højre hjørne af "
+"vinduet og vælge <gui style=\"menuitem\">Nyt spil</gui>."
+
+#. (itstool) path: section/title
+#: C/play.page:29
+msgid "Using the mouse"
+msgstr "Med musen"
+
+#. (itstool) path: item/p
+#: C/play.page:33
+msgid ""
+"Click on the object you want to move. The selected object will begin "
+"spinning."
+msgstr ""
+"Klik på det objekt, du vil flytte. Det valgte objekt begynder at dreje rundt."
+
+#. (itstool) path: item/p
+#: C/play.page:37
+msgid ""
+"Click on the destination cell. The chosen object will move to the "
+"destination cell, if there is any clear path."
+msgstr ""
+"Klik på destinationscellen. Det valgte objekt flytter til "
+"destinationscellen, hvis der er en ryddet sti."
+
+#. (itstool) path: section/title
+#: C/play.page:46
+msgid "Using the keyboard"
+msgstr "Med tastaturet"
+
+#. (itstool) path: item/p
+#: C/play.page:50
+msgid ""
+"Press any of the arrow keys. An outline around a cell will appear on the "
+"board."
+msgstr ""
+"Tryk på en af piletasterne. Der vises et omrids omkring en af cellerne på "
+"brættet."
+
+#. (itstool) path: item/p
+#: C/play.page:54
+msgid ""
+"Using the arrow keys, and the <key>Home</key>, <key>End</key>, <key>PageUp</"
+"key> and <key>PageDown</key> keys navigate to the object you want to move."
+msgstr ""
+"Brug piletasterne og tasterne <key>Home</key>, <key>End</key>, "
+"<key>PageUp</key> og <key>PageDown</key> til at navigere til det objekt, du "
+"vil flytte."
+
+#. (itstool) path: item/p
+#: C/play.page:57
+msgid ""
+"To select the object, press the <key>Enter</key>, <key>Spacebar</key> or "
+"<key>Return</key>. The selected object will begin spinning."
+msgstr ""
+"For at vælge objektet trykkes på <key>Enter</key>, <key>Mellemrum</key> "
+"eller <key>Retur</key>. Det valgte objekt begynder at dreje rundt."
+
+#. (itstool) path: item/p
+#: C/play.page:60
+msgid ""
+"Move to the destination cell, and again press the <key>Enter</key>, "
+"<key>Spacebar</key> or <key>Return</key>. The chosen object will move to the "
+"destination cell, if there is any clear path."
+msgstr ""
+"Flyt til destinationscellen og tryk igen på <key>Enter</key>, "
+"<key>Mellemrum</key> eller <key>Retur</key>. Det valgte objekt flyttes til "
+"destinationscellen, hvis der er en ryddet sti."
+
+#. (itstool) path: section/title
+#: C/play.page:70
+msgid "Video demonstration"
+msgstr "Videodemonstration"
+
+#. (itstool) path: page/title
+#: C/rules.page:18
+msgid "Rules"
+msgstr "Regler"
+
+#. (itstool) path: item/p
+#: C/rules.page:20
+msgid ""
+"At the start of the game there are either 3 or 7 objects placed on your "
+"board, depending on the <link xref=\"change-board-size\">board size</link>."
+msgstr ""
+"I begyndelsen af spillet er der enten 3 eller 7 objekter på dit bræt, "
+"afhængig af <link xref=\"change-board-size\">brætstørrelsen</link>."
+
+#. (itstool) path: item/p
+#: C/rules.page:23
+msgid ""
+"Each time you <link xref=\"play\">move an object</link>, additional objects "
+"are placed randomly on the board. The number of new objects placed each turn "
+"also depends on the board. A preview of the objects to be placed on the "
+"board appears in the upper left corner of the game window."
+msgstr ""
+"Hver gang du <link xref=\"play\">flytter et objekt</link>, placeres der "
+"yderligere objekter tilfældigt på brættet. Antallet af nye objekter, som "
+"placeres i hver tur, afhænger af brættet. En forhåndsvisning af de objekter, "
+"som placeres på brættet, vises i øverste venstre hjørne af spilvinduet."
+
+#. (itstool) path: item/p
+#: C/rules.page:28
+msgid ""
+"There must be a clear path from the original position of the object to the "
+"destination cell (i.e you can not jump over objects)."
+msgstr ""
+"Der skal være en ryddet sti fra objektets oprindelige placering til "
+"destinationscellen (dvs. du kan ikke hoppe over objekter)."
+
+#. (itstool) path: item/p
+#: C/rules.page:31
+msgid ""
+"A straight horizontal, vertical or diagonal line of five or more similar "
+"objects will disappear from the game board. When this happens you will have "
+"an extra move without additional objects being added to the board."
+msgstr ""
+"En lige vandret, lodret eller diagonal linje på fem eller flere "
+"ens objekter vises fra spilbrættet. Når det sker, har du en ekstra flytning "
+"uden at der tilføjes yderligere objekter på brættet."
+
+#. (itstool) path: item/p
+#: C/rules.page:35
+msgid ""
+"The more objects you clear, the longer the game will go on. The longer you "
+"play, the higher your <link xref=\"scores\">score</link>."
+msgstr ""
+"Jo flere objekter du rydder, jo længere fortsætter spillet. Jo længere du "
+"spiller, jo højere bliver dit <link xref=\"scores\">resultat</link>."
+
+#. (itstool) path: item/p
+#: C/rules.page:38
+msgid ""
+"The game is over when the board is full, since no object can be moved at "
+"that point."
+msgstr ""
+"Spillet er slut når brættet er fuldt, eftersom ingen af objekterne kan "
+"flyttes."
+
+#. (itstool) path: media/p
+#: C/rules.page:46
+msgid "Example horizontal alignment"
+msgstr "Eksempel på vandret opstilling"
+
+#. (itstool) path: media/p
+#: C/rules.page:51
+msgid "Example vertical alignment"
+msgstr "Eksempel på lodret opstilling"
+
+#. (itstool) path: media/p
+#: C/rules.page:56
+msgid "Example diagonal alignment"
+msgstr "Eksempel på diagonal opstilling"
+
+#. (itstool) path: media/p
+#: C/rules.page:61
+msgid "<app>Five or More</app> game over position."
+msgstr "Stilling i <app>Fem eller flere</app> hvor spillet er slut."
+
+#. (itstool) path: page/title
+#: C/scores.page:20
+msgid "Scoring"
+msgstr "Scoring"
+
+#. (itstool) path: page/p
+#: C/scores.page:21
+msgid ""
+"You score points by creating lines of 5 or more objects. The number of "
+"points depends on the number of objects that disappear."
+msgstr ""
+"Du scorer point ved at oprette linjer på 5 eller flere "
+"objekter. Antallet af point afhænger af antallet af objekter, som forsvinder."
+
+#. (itstool) path: td/p
+#: C/scores.page:27
+msgid "<em>Number of objects</em>"
+msgstr "<em>Antal objekter</em>"
+
+#. (itstool) path: td/p
+#: C/scores.page:28
+msgid "<em>Number of points</em>"
+msgstr "<em>Antal point</em>"
+
+#. (itstool) path: td/p
+#: C/scores.page:34 C/scores.page:53
+msgid "10"
+msgstr "10"
+
+#. (itstool) path: td/p
+#: C/scores.page:37
+msgid "6"
+msgstr "6"
+
+#. (itstool) path: td/p
+#: C/scores.page:38
+msgid "18"
+msgstr "18"
+
+#. (itstool) path: td/p
+#: C/scores.page:42
+msgid "25"
+msgstr "25"
+
+#. (itstool) path: td/p
+#: C/scores.page:45
+msgid "8"
+msgstr "8"
+
+#. (itstool) path: td/p
+#: C/scores.page:46
+msgid "31"
+msgstr "31"
+
+#. (itstool) path: td/p
+#: C/scores.page:50
+msgid "36"
+msgstr "36"
+
+#. (itstool) path: td/p
+#: C/scores.page:54
+msgid "41"
+msgstr "41"
+
+#. (itstool) path: td/p
+#: C/scores.page:57
+msgid "11"
+msgstr "11"
+
+#. (itstool) path: td/p
+#: C/scores.page:58
+msgid "45"
+msgstr "45"
+
+#. (itstool) path: td/p
+#: C/scores.page:61
+msgid "12"
+msgstr "12"
+
+#. (itstool) path: td/p
+#: C/scores.page:65
+msgid "13"
+msgstr "13"
+
+#. (itstool) path: td/p
+#: C/scores.page:66
+msgid "53"
+msgstr "53"
+
+#. (itstool) path: td/p
+#: C/scores.page:69 C/scores.page:73
+msgid "14"
+msgstr "14"
+
+#. (itstool) path: td/p
+#: C/scores.page:70 C/scores.page:74
+msgid "56"
+msgstr "56"
+
+#. (itstool) path: note/p
+#: C/scores.page:81
+msgid ""
+"You can view the high scores by pressing the menu button in the top-right "
+"corner of the window and selecting <gui style=\"menuitem\">Scores</gui>."
+msgstr ""
+"Du kan vise de bedste resultater ved at trykke på menuknappen i øverste "
+"højre hjørne af vinduet og vælge <gui style=\"menuitem\">Resultater</gui>."
+
+#. (itstool) path: note/p
+#: C/scores.page:83
+msgid ""
+"The <app>Five or More</app> scores are recorded according to the board size. "
+"You can select the <gui>Board Size</gui> of interest using the drop down "
+"menu."
+msgstr ""
+"Resultaterne i <app>Fem eller flere</app> huskes efter brætstørrelsen. Du kan "
+"vælge den ønskede <gui>Brætstørrelse</gui> i rullegardinsmenuen."
+
+#. (itstool) path: page/title
+#: C/shortcuts.page:17
+msgid "Keyboard shortcuts"
+msgstr "Tastaturgenveje"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:20
+msgid "New game"
+msgstr "Nyt spil"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:21
+msgid "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
+msgstr "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:24
+msgid "Help"
+msgstr "Hjælp"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:25
+msgid "<key>F1</key>"
+msgstr "<key>F1</key>"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:28
+msgid "Quit"
+msgstr "Afslut"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:29
+msgid "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
+msgstr "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
+
+#. (itstool) path: page/title
+#: C/strategy.page:17
+msgid "Strategy"
+msgstr "Strategi"
+
+#. (itstool) path: page/p
+#: C/strategy.page:19
+msgid ""
+"There is no universal strategy for <app>Five or More</app>, but some "
+"strategic elements do exist. Here are some things to try and keep in mind as "
+"you play:"
+msgstr ""
+"Der findes ikke nogen universel strategi til <app>Fem eller flere</app>, men "
+"der findes dog visse strategiske elementer. Her er visse ting du kan prøve "
+"og huske på, når du spiller:"
+
+#. (itstool) path: item/p
+#: C/strategy.page:23
+msgid "Try to set at least three same objects with your every move."
+msgstr "Prøv at sætte mindst 3 af de samme objekter hver gang du flytter."
+
+#. (itstool) path: item/p
+#: C/strategy.page:24
+msgid ""
+"The board can quickly become very crowded with objects, so it is best to "
+"think ahead. Pay attention to the collection of <gui>Next</gui> objects, "
+"because knowing these will influence your moves."
+msgstr ""
+"Der kan hurtigt komme til at være mange objekter på brættet, så det er bedst "
+"at tænke fremad. Vær opmærksom på samlingen af <gui>Næste</gui>-objekter, "
+"fordi de vil påvirke dine flytninger."
+
+#. (itstool) path: item/p
+#: C/strategy.page:25
+msgid ""
+"Try to line up more than 5 objects. For example, if you have 6 objects, you "
+"can line up 2 and 3 with a space in between, and then connect them by "
+"placing the sixth object between them."
+msgstr ""
+"Prøv at sætte flere end 5 objekter på linje. Hvis du f.eks. har 6 "
+"objekter, så kan du sætte 2 og 3 på linje med et mellemrum mellem dem, og så "
+"forbinde dem ved at placere det sjette objekt mellem dem."
+
+#. (itstool) path: page/title
+#: C/translate.page:23
+msgid "Help translate"
+msgstr "Hjælp med at oversætte"
+
+#. (itstool) path: page/p
+#: C/translate.page:25
+msgid ""
+"The <app>GNOME Games</app> user interface and documentation is being "
+"translated by a world-wide volunteer community. You are welcome to "
+"participate."
+msgstr ""
+"Brugerfladen og dokumentationen til <app>GNOME Spil</app> oversættes af et "
+"verdensomspændende fællesskab af frivillige. Du er velkommen til at deltage."
+
+#. (itstool) path: page/p
+#: C/translate.page:28
+msgid ""
+"There are <link href=\"http://l10n.gnome.org/module/five-or-more/\">many "
+"languages</link> for which translations are still needed."
+msgstr ""
+"Der er stadigvæk <link href=\"http://l10n.gnome.org/module/five-or-"
+"more/\">mange sprog</link>, som har brug for at blive oversat."
+
+#. (itstool) path: page/p
+#: C/translate.page:30
+msgid ""
+"To start translating you will need to <link href=\"http://l10n.gnome.org"
+"\">create an account</link> and join the <link href=\"http://l10n.gnome.org/"
+"teams/\">translation team</link> for your language. This will give you the "
+"ability to upload new translations."
+msgstr ""
+"For at komme i gang med at oversætte, skal du <link "
+"href=\"http://l10n.gnome.org\">oprette en konto</link> og deltage i <link "
+"href=\"http://l10n.gnome.org/teams/\">oversættelsesholdet</link> for dit "
+"sprog. Det giver dig mulighed for at uploade nye oversættelser."
+
+#. (itstool) path: page/p
+#: C/translate.page:34
+msgid ""
+"You can chat with GNOME translators using <link href=\"https://cbe003.chat."
+"mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fi18n\">irc</link>. People on the "
+"channel are located worldwide, so you may not get an immediate response as a "
+"result of timezone differences."
+msgstr ""
+"Du kan chatte med GNOME-oversættere med <link "
+"href=\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%"
+"2Fi18n\">irc</link>. Kanalen har folk fra hele verden, så det kan være, du "
+"ikke får svar med det samme pga. forskelle i tidszoner."
+
+#. (itstool) path: page/p
+#: C/translate.page:38
+msgid ""
+"Alternatively, you can contact the Internationalization Team using their "
+"<link href=\"http://mail.gnome.org/mailman/listinfo/gnome-i18n\">mailing "
+"list</link>."
+msgstr ""
+"Du kan også kontakte internationaliseringsholdet med deres <link "
+"href=\"http://mail.gnome.org/mailman/listinfo/gnome-"
+"i18n\">mailingliste</link>."
