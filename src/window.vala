@@ -27,13 +27,13 @@ using Gtk;
 private class GameWindow : ApplicationWindow
 {
     [GtkChild]
-    private HeaderBar headerbar;
+    private unowned HeaderBar headerbar;
 
     [GtkChild]
-    private Box preview_hbox;
+    private unowned Box preview_hbox;
 
     [GtkChild]
-    private Games.GridFrame grid_frame;
+    private unowned Games.GridFrame grid_frame;
 
     private GLib.Settings settings = new GLib.Settings ("org.gnome.five-or-more");
     private bool window_tiled;
