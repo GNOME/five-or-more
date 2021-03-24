@@ -8,13 +8,13 @@
 # Claude Paroz <claude@2xlibre.net>, 2007-2009.
 # Bruno Brouard <annoa.b@gmail.com>, 2012.
 # jean-baptiste <jean-baptiste@holcroft.fr>, 2018.
-# Charles Monzat <charles.monzat@free.fr>, 2017-2020.
+# Charles Monzat <charles.monzat@free.fr>, 2017-2021.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: glines documentation\n"
-"POT-Creation-Date: 2020-01-09 02:53+0000\n"
-"PO-Revision-Date: 2020-03-25 22:59+0100\n"
+"POT-Creation-Date: 2021-01-25 14:13+0000\n"
+"PO-Revision-Date: 2021-03-24 17:26+0100\n"
 "Last-Translator: Charles Monzat <charles.monzat@free.fr>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "Language: fr\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Gtranslator 3.34.0\n"
+"X-Generator: Gtranslator 3.38.0\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -33,7 +33,7 @@ msgstr ""
 "Bruno Brouard <annoa.b@gmail.com>, 2008, 2012\n"
 "Alain Lojewski <allomervan@gmail.com>, 2012\n"
 "Jean-Baptiste Holcroft <jean-baptiste@holcroft.fr>, 2018\n"
-"Charles Monzat <charles.monzat@free.fr>, 2020"
+"Charles Monzat <charles.monzat@free.fr>, 2020-2021"
 
 #. (itstool) path: credit/name
 #: C/bug-filing.page:10 C/change-board-size.page:14 C/change-theme.page:14
@@ -168,9 +168,6 @@ msgstr ""
 
 #. (itstool) path: item/p
 #: C/change-board-size.page:27
-#| msgid ""
-#| "Under <gui>Board Size</gui>, select <gui>Small</gui>, <gui>Medium</gui>, "
-#| "or <gui>Large</gui>."
 msgid "Select <gui>Small</gui>, <gui>Medium</gui>, or <gui>Large</gui>."
 msgstr ""
 "Sélectionnez <gui>Petite</gui>, <gui>Moyenne</gui> ou <gui>Grande</gui>."
@@ -278,7 +275,7 @@ msgid "20"
 msgstr "20"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:70
+#: C/change-board-size.page:70 C/scores.page:73
 msgid "15"
 msgstr "15"
 
@@ -333,10 +330,6 @@ msgstr ""
 
 #. (itstool) path: item/p
 #: C/change-theme.page:28
-#| msgid ""
-#| "Select <gui>balls</gui>, <gui>dots</gui>, <gui>gumball</gui> or "
-#| "<gui>shapes</gui> from the <gui>Image</gui> drop down menu to change the "
-#| "playing pieces."
 msgid ""
 "Select <gui>balls</gui>, <gui>shapes</gui>, or <gui>tango</gui> from the "
 "<gui>Theme</gui> drop down menu to change the playing pieces."
@@ -622,9 +615,6 @@ msgstr ""
 
 #. (itstool) path: item/p
 #: C/play.page:37
-#| msgid ""
-#| "Move to the destination cell, and again press the <key>Enter</key> or "
-#| "<key>Spacebar</key>. The chosen object will move to the destination cell."
 msgid ""
 "Click on the destination cell. The chosen object will move to the "
 "destination cell, if there is any clear path."
@@ -658,9 +648,6 @@ msgstr ""
 
 #. (itstool) path: item/p
 #: C/play.page:57
-#| msgid ""
-#| "To select the object, press the <key>Enter</key> or <key>Spacebar</key>. "
-#| "The selected object will begin spinning."
 msgid ""
 "To select the object, press the <key>Enter</key>, <key>Spacebar</key> or "
 "<key>Return</key>. The selected object will begin spinning."
@@ -671,9 +658,6 @@ msgstr ""
 
 #. (itstool) path: item/p
 #: C/play.page:60
-#| msgid ""
-#| "Move to the destination cell, and again press the <key>Enter</key> or "
-#| "<key>Spacebar</key>. The chosen object will move to the destination cell."
 msgid ""
 "Move to the destination cell, and again press the <key>Enter</key>, "
 "<key>Spacebar</key> or <key>Return</key>. The chosen object will move to the "
@@ -818,7 +802,6 @@ msgstr "18"
 
 #. (itstool) path: td/p
 #: C/scores.page:42
-#| msgid "5"
 msgid "25"
 msgstr "25"
 
@@ -829,13 +812,11 @@ msgstr "8"
 
 #. (itstool) path: td/p
 #: C/scores.page:46
-#| msgid "3"
 msgid "31"
 msgstr "31"
 
 #. (itstool) path: td/p
 #: C/scores.page:50
-#| msgid "3"
 msgid "36"
 msgstr "36"
 
@@ -851,7 +832,6 @@ msgstr "11"
 
 #. (itstool) path: td/p
 #: C/scores.page:58
-#| msgid "5"
 msgid "45"
 msgstr "45"
 
@@ -867,20 +847,24 @@ msgstr "13"
 
 #. (itstool) path: td/p
 #: C/scores.page:66
-#| msgid "5"
 msgid "53"
 msgstr "53"
 
 #. (itstool) path: td/p
-#: C/scores.page:69 C/scores.page:73
+#: C/scores.page:69
 msgid "14"
 msgstr "14"
 
 #. (itstool) path: td/p
-#: C/scores.page:70 C/scores.page:74
-#| msgid "5"
+#: C/scores.page:70
 msgid "56"
 msgstr "56"
+
+#. (itstool) path: td/p
+#: C/scores.page:74
+#| msgid "5"
+msgid "59"
+msgstr "59"
 
 #. (itstool) path: note/p
 #: C/scores.page:81
