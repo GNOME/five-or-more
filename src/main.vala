@@ -1,7 +1,7 @@
 /*
  * Color lines for GNOME
  * Copyright © 1999 Free Software Foundation
- * Authors: Robert Szokovacs <szo@appaloosacorp.hu>
+ * Authors: Robert Szokovacs <szo@szo.hu>
  *          Szabolcs Ban <shooby@gnome.hu>
  *          Karuna Grewal <karunagrewal98@gmail.com>
  *          Ruxandra Simion <ruxandra.simion93@gmail.com>
@@ -92,7 +92,7 @@ private class FiveOrMoreApp: Gtk.Application
     {
         string [] authors = {
             /* Translators: About dialog text, name and email of one of the authors */
-            _("Robert Szokovacs <szo@appaloosacorp.hu>"),
+            _("Robert Szokovacs <szo@szo.hu>"),
 
             /* Translators: About dialog text, name and email of one of the authors */
             _("Szabolcs B\xc3\xa1n <shooby@gnome.hu>")
