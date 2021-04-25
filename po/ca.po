@@ -423,7 +423,7 @@ msgstr "Aquí no s'hi pot anar!"
 #. Translators: subtitle of the headerbar, at the end of a game
 #: src/window.vala:56
 msgid "Game Over!"
-msgstr "Fi del joc"
+msgstr "Fi de la partida"
 
 #. Translators: subtitle of the headerbar, during a game; the %d is replaced
 #. by the score
