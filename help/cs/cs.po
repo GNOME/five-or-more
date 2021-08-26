@@ -1,13 +1,14 @@
 # Czech translation of glines help.
 # Copyright (C) 2009 the author(s) of gnome-games.
 # This file is distributed under the same license as the glines help.
-# Marek Černocký <marek@manet.cz>, 2009, 2013, 2017, 2018, 2019, 2020.
+#
+# Marek Černocký <marek@manet.cz>, 2009, 2013, 2017, 2018, 2019, 2020, 2021.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: fire-or-more\n"
-"POT-Creation-Date: 2020-11-28 10:12+0000\n"
-"PO-Revision-Date: 2020-11-28 12:24+0100\n"
+"POT-Creation-Date: 2021-07-28 20:10+0000\n"
+"PO-Revision-Date: 2021-08-26 17:52+0200\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: čeština <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -91,16 +92,16 @@ msgstr ""
 msgid ""
 "Once you have an account, log in, click on <guiseq><gui>Projects</"
 "gui><gui>five-or-more</gui><gui>Issues</gui><gui>New issue</gui></guiseq>. "
-"Before reporting a bug, please read the <link href=\"https://bugzilla.gnome."
-"org/page.cgi?id=bug-writing.html\">bug writing guidelines</link>, and please "
-"<link href=\"https://gitlab.gnome.org/GNOME/five-or-more/issues\">browse</"
-"link> for the bug to see if it already exists."
+"Before reporting a bug, please read the <link href=\"https://wiki.gnome.org/"
+"GettingInTouch/BugReportingGuidelines\">bug writing guidelines</link>, and "
+"please <link href=\"https://gitlab.gnome.org/GNOME/five-or-more/issues"
+"\">browse</link> for the bug to see if it already exists."
 msgstr ""
 "Když už účet máte, přihlaste se a klikněte na <guiseq><gui>Projects</"
 "gui><gui>five-or-more</gui><gui>Issues</gui><gui>New issue</gui></guiseq>. "
-"Před nahlášením chyby si prosím přečtěte <link href=\"https://bugzilla.gnome."
-"org/page.cgi?id=bug-writing.html\">přiručku k hlášení chyb</link> (odkaz je "
-"v angličtině) a <link href=\"https://gitlab.gnome.org/GNOME/five-or-more/"
+"Před nahlášením chyby si prosím přečtěte <link href=\"https://wiki.gnome.org/"
+"GettingInTouch/BugReportingGuidelines\">přiručku k hlášení chyb</link> (odkaz "
+"je v angličtině) a <link href=\"https://gitlab.gnome.org/GNOME/five-or-more/"
 "issues\">podívejte</link> se prosím, jestli stejnou chybu nenahlásil již "
 "někdo jiný."
 
@@ -990,3 +991,4 @@ msgstr ""
 "Případně můžete kontaktovat Internacionalizační tým přes jeho <link href="
 "\"http://mail.gnome.org/mailman/listinfo/gnome-i18n\">poštovní konferenci</"
 "link>."
+
