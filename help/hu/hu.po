@@ -7,8 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: five-or-more master\n"
-"POT-Creation-Date: 2020-11-28 10:12+0000\n"
-"PO-Revision-Date: 2021-02-19 01:48+0100\n"
+"POT-Creation-Date: 2021-07-28 20:10+0000\n"
+"PO-Revision-Date: 2021-09-12 20:31+0200\n"
 "Last-Translator: Balázs Úr <ur.balazs at fsf dot hu>\n"
 "Language-Team: Hungarian <gnome-hu-list at gnome dot org>\n"
 "Language: hu\n"
@@ -91,20 +91,28 @@ msgstr ""
 
 #. (itstool) path: page/p
 #: C/bug-filing.page:30
+#| msgid ""
+#| "Once you have an account, log in, click on <guiseq><gui>Projects</"
+#| "gui><gui>five-or-more</gui><gui>Issues</gui><gui>New issue</gui></"
+#| "guiseq>. Before reporting a bug, please read the <link href=\"https://"
+#| "bugzilla.gnome.org/page.cgi?id=bug-writing.html\">bug writing guidelines</"
+#| "link>, and please <link href=\"https://gitlab.gnome.org/GNOME/five-or-"
+#| "more/issues\">browse</link> for the bug to see if it already exists."
 msgid ""
 "Once you have an account, log in, click on <guiseq><gui>Projects</"
 "gui><gui>five-or-more</gui><gui>Issues</gui><gui>New issue</gui></guiseq>. "
-"Before reporting a bug, please read the <link href=\"https://bugzilla.gnome."
-"org/page.cgi?id=bug-writing.html\">bug writing guidelines</link>, and please "
-"<link href=\"https://gitlab.gnome.org/GNOME/five-or-more/issues\">browse</"
-"link> for the bug to see if it already exists."
+"Before reporting a bug, please read the <link href=\"https://wiki.gnome.org/"
+"GettingInTouch/BugReportingGuidelines\">bug writing guidelines</link>, and "
+"please <link href=\"https://gitlab.gnome.org/GNOME/five-or-more/issues"
+"\">browse</link> for the bug to see if it already exists."
 msgstr ""
-"Ha létrehozta fiókját, jelentkezzen be, kattintson a <guiseq><gui>Projects</"
-"gui><gui>five-or-more</gui><gui>Issues</gui><gui>New issue</gui></guiseq> "
-"hivatkozásokra. Hiba jelentése előtt olvassa el a <link href=\"https://"
-"bugzilla.gnome.org/page.cgi?id=bug-writing.html\">hibajelentés-írási "
-"irányelveket</link>, és <link href=\"https://gitlab.gnome.org/GNOME/five-or-"
-"more/issues\">ellenőrizze</link>, hogy nincs-e már a hiba bejelentve."
+"Ha létrehozta fiókját, jelentkezzen be, kattintson a <guiseq><gui>Projects<"
+"/gui><gui>five-or-more</gui><gui>Issues</gui><gui>New issue</gui></guiseq>"
+" hivatkozásokra. Hiba jelentése előtt olvassa el a <link"
+" href=\"https://wiki.gnome.org/GettingInTouch/BugReportingGuidelines\""
+">hibajelentés-írási irányelveket</link>, és <link"
+" href=\"https://gitlab.gnome.org/GNOME/five-or-more/issues\">ellenőrizze<"
+"/link>, hogy nincs-e már a hiba bejelentve."
 
 #. (itstool) path: page/p
 #: C/bug-filing.page:33
@@ -308,8 +316,8 @@ msgid ""
 "Press the menu button in the top-right corner of the window and select <gui "
 "style=\"menuitem\">Preferences</gui>."
 msgstr ""
-"Nyomja meg az ablak jobb felső sarkában lévő menügombot, és válassza a <gui"
-" style=\"menuitem\">Beállítások</gui> menüpontot."
+"Nyomja meg az ablak jobb felső sarkában lévő menügombot, és válassza a <gui "
+"style=\"menuitem\">Beállítások</gui> menüpontot."
 
 #. (itstool) path: item/p
 #: C/change-theme.page:28
@@ -572,8 +580,8 @@ msgid ""
 "To start a new game, press the menu button in the top-right corner of the "
 "window and select <gui style=\"menuitem\">New Game</gui>."
 msgstr ""
-"Új játék indításához nyomja meg az ablak jobb felső sarkában lévő menü"
-" gombot, és válassza az <gui style=\"menuitem\">Új játék</gui> menüpontot."
+"Új játék indításához nyomja meg az ablak jobb felső sarkában lévő menü "
+"gombot, és válassza az <gui style=\"menuitem\">Új játék</gui> menüpontot."
 
 #. (itstool) path: section/title
 #: C/play.page:29
@@ -833,7 +841,6 @@ msgstr "56"
 
 #. (itstool) path: td/p
 #: C/scores.page:74
-#| msgid "5"
 msgid "59"
 msgstr "59"
 
@@ -854,9 +861,9 @@ msgid ""
 "You can select the <gui>Board Size</gui> of interest using the drop down "
 "menu."
 msgstr ""
-"Az <app>Öt vagy több</app> pontszámok a tábla mérete szerint kerülnek"
-" rögzítésre. Az Önt érdeklő <gui>Táblaméretet</gui> a legördülő menüből"
-" választhatja ki."
+"Az <app>Öt vagy több</app> pontszámok a tábla mérete szerint kerülnek "
+"rögzítésre. Az Önt érdeklő <gui>Táblaméretet</gui> a legördülő menüből "
+"választhatja ki."
 
 #. (itstool) path: page/title
 #: C/shortcuts.page:17
