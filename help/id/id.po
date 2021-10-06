@@ -6,20 +6,22 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: five-or-more master\n"
-"POT-Creation-Date: 2020-06-21 19:22+0000\n"
-"PO-Revision-Date: 2020-06-26 19:22+0700\n"
+"POT-Creation-Date: 2021-07-28 20:10+0000\n"
+"PO-Revision-Date: 2021-10-07 05:19+0700\n"
+"Last-Translator: Andika Triwidada <andika@gmail.com>\n"
 "Language-Team: Indonesian <gnome-l10n-id@googlegroups.com>\n"
+"Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: id\n"
-"Last-Translator: \n"
-"X-Generator: Poedit 2.3.1\n"
+"X-Generator: Poedit 2.4.2\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
 msgid "translator-credits"
-msgstr "Triyan W. Nugroho <triyan.wn@gmail.com>, 2020."
+msgstr ""
+"Triyan W. Nugroho <triyan.wn@gmail.com>, 2020.\n"
+"Andika Triwidada <andika@gmail.com>, 2021."
 
 #. (itstool) path: credit/name
 #: C/bug-filing.page:10 C/change-board-size.page:14 C/change-theme.page:14
@@ -91,18 +93,18 @@ msgstr ""
 msgid ""
 "Once you have an account, log in, click on <guiseq><gui>Projects</"
 "gui><gui>five-or-more</gui><gui>Issues</gui><gui>New issue</gui></guiseq>. "
-"Before reporting a bug, please read the <link href=\"https://bugzilla.gnome."
-"org/page.cgi?id=bug-writing.html\">bug writing guidelines</link>, and please "
-"<link href=\"https://gitlab.gnome.org/GNOME/five-or-more/issues\">browse</"
-"link> for the bug to see if it already exists."
+"Before reporting a bug, please read the <link href=\"https://wiki.gnome.org/"
+"GettingInTouch/BugReportingGuidelines\">bug writing guidelines</link>, and "
+"please <link href=\"https://gitlab.gnome.org/GNOME/five-or-more/issues"
+"\">browse</link> for the bug to see if it already exists."
 msgstr ""
-"Jika Anda sudah memiliki akun, silakan melakukan login, klik pada "
-"<guiseq><gui>Proyek</gui><gui>five-or-more</gui><gui>Masalah</"
-"gui><gui>Masalah baru</gui></guiseq>. Sebelum melaporkan sebuah kutu, "
-"silakan baca <link href=\"https://bugzilla.gnome.org/page.cgi?id=bug-writing."
-"html\">panduan pelaporan kutu</link>, dan silakan <link href=\"https://"
-"gitlab.gnome.org/GNOME/five-or-more/issues\">menjelajah</link> laporan kutu "
-"yang lain untuk melihat apakah sudah ada laporan yang sama."
+"Jika Anda sudah memiliki akun, log masuk, klik pada <guiseq><gui>Proyek</"
+"gui><gui>five-or-more</gui><gui>Masalah</gui><gui>Masalah baru</gui></"
+"guiseq>. Sebelum melaporkan sebuah kutu, silakan baca <link href=\"https://"
+"wiki.gnome.org/GettingInTouch/BugReportingGuidelines\">panduan pelaporan "
+"kutu</link>, dan silakan <link href=\"https://gitlab.gnome.org/GNOME/five-or-"
+"more/issues\">menjelajah</link> laporan kutu yang lain untuk melihat apakah "
+"sudah ada laporan yang sama."
 
 #. (itstool) path: page/p
 #: C/bug-filing.page:33
@@ -252,7 +254,7 @@ msgid "20"
 msgstr "20"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:70
+#: C/change-board-size.page:70 C/scores.page:73
 msgid "15"
 msgstr "15"
 
@@ -822,14 +824,20 @@ msgid "53"
 msgstr "53"
 
 #. (itstool) path: td/p
-#: C/scores.page:69 C/scores.page:73
+#: C/scores.page:69
 msgid "14"
 msgstr "14"
 
 #. (itstool) path: td/p
-#: C/scores.page:70 C/scores.page:74
+#: C/scores.page:70
 msgid "56"
 msgstr "56"
+
+#. (itstool) path: td/p
+#: C/scores.page:74
+#| msgid "5"
+msgid "59"
+msgstr "59"
 
 #. (itstool) path: note/p
 #: C/scores.page:81
