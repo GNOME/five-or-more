@@ -1,0 +1,969 @@
+# Korean translation for five-or-more.
+# Copyright (C) 2021 five-or-more's COPYRIGHT HOLDER
+# This file is distributed under the same license as the five-or-more package.
+# Seong-ho Cho <shcho@gnome.org>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: five-or-more master\n"
+"POT-Creation-Date: 2021-09-12 18:32+0000\n"
+"PO-Revision-Date: 2021-09-30 00:01+0900\n"
+"Language-Team: Korean <gnome-kr@googlegroups.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Last-Translator: Seong-ho Cho <shcho@gnome.org>\n"
+"X-Generator: Poedit 2.3.1\n"
+
+#. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
+msgctxt "_"
+msgid "translator-credits"
+msgstr "조성호 <shcho@gnome.org>, 2021"
+
+#. (itstool) path: credit/name
+#: C/bug-filing.page:10 C/change-board-size.page:14 C/change-theme.page:14
+#: C/develop.page:10 C/documentation.page:8 C/index.page:17 C/scores.page:14
+#: C/shortcuts.page:9 C/strategy.page:9 C/translate.page:10
+msgid "Tiffany Antopolski"
+msgstr "Tiffany Antopolski"
+
+#. (itstool) path: credit/years
+#: C/bug-filing.page:12 C/change-board-size.page:11 C/develop.page:12
+#: C/documentation.page:10 C/play.page:12 C/rules.page:12 C/scores.page:11
+#: C/shortcuts.page:11 C/translate.page:12
+msgid "2011"
+msgstr "2011"
+
+#. (itstool) path: license/p
+#: C/bug-filing.page:15 C/develop.page:15 C/documentation.page:13
+#: C/index.page:21 C/translate.page:19
+msgid "Creative Commons Share Alike 3.0"
+msgstr "크리에이티브 커먼즈 동일조건변경허락 3.0"
+
+#. (itstool) path: page/title
+#: C/bug-filing.page:19
+msgid "Report a Problem"
+msgstr "문제 보고하기"
+
+#. (itstool) path: page/p
+#: C/bug-filing.page:20
+msgid ""
+"<app>Five or More</app> is maintained by a volunteer community. You are "
+"welcome to participate. If you notice a problem you can file a <em>bug "
+"report</em>. To file a bug, go to <link href=\"https://gitlab.gnome.org/"
+"GNOME/five-or-more/issues/new\"/>."
+msgstr ""
+"<app>다섯개</app> 는 전세계 기여자 집단이 번역합니다. 여러분의 참여를 환영합"
+"니다. If you notice a problem you can file a <em>bug report</em>. To file a "
+"bug, go to <link href=\"https://gitlab.gnome.org/GNOME/five-or-more/issues/"
+"new\"/>."
+
+#. (itstool) path: page/p
+#: C/bug-filing.page:23
+msgid ""
+"This is a bug tracking system where users and developers can file details "
+"about bugs, crashes and request enhancements."
+msgstr ""
+"사용자와 개발자가 버그와 치명적인 문제, 개선 제안에 대한 자세한 내용을 제출"
+"할 수 있는 버그 추적 시스템입니다."
+
+#. (itstool) path: page/p
+#: C/bug-filing.page:26
+msgid ""
+"To participate you have to log in, which will give you the ability to gain "
+"access, file bugs, and make comments. Also, you need to log in using one of "
+"your existing accounts or register a new account so you can receive updates "
+"by e-mail about the status of your bug. If you don't already have an account "
+"and don't want to use any of the available log in options, just click on the "
+"<gui>Register</gui> link to create one."
+msgstr ""
+"참여하려면 계정이 필요하며, 계정이 있으면 접근 권한을 가지게 되며 버그를 신고"
+"할 수 있고 의견을 제시할 수 있습니다. 또한, 보고한 버그의 최신 현황을 전자메"
+"일로 받으려면 기존 계정 중 하나로 로그인하거나 새 계정을 등록해야 합니다. 만"
+"약 계정이 없는데 로그인 옵션을 따로 활용하고 싶지 않다면 <gui>Register</gui>"
+"을 눌러 계정을 만들 수 있습니다."
+
+#. (itstool) path: page/p
+#: C/bug-filing.page:30
+msgid ""
+"Once you have an account, log in, click on <guiseq><gui>Projects</"
+"gui><gui>five-or-more</gui><gui>Issues</gui><gui>New issue</gui></guiseq>. "
+"Before reporting a bug, please read the <link href=\"https://wiki.gnome.org/"
+"GettingInTouch/BugReportingGuidelines\">bug writing guidelines</link>, and "
+"please <link href=\"https://gitlab.gnome.org/GNOME/five-or-more/issues"
+"\">browse</link> for the bug to see if it already exists."
+msgstr ""
+"계정을 확보하고 나면 로그인하시고 <guiseq><gui>Projects</gui><gui>five-or-"
+"more</gui><gui>Issues</gui><gui>New issue</gui></guiseq>를 누릅니다. 버그를 "
+"보고하기 전 <link href=\"https://wiki.gnome.org/GettingInTouch/"
+"BugReportingGuidelines\">버그 작성 지침</link>을 확인하시고, 이미 같은 내용으"
+"로 누군가가 버그 보고를 올렸는지 <link href=\"https://gitlab.gnome.org/GNOME/"
+"five-or-more/issues\">찾아보십시오</link>."
+
+#. (itstool) path: page/p
+#: C/bug-filing.page:33
+msgid ""
+"Fill in the Title and Description sections and click <gui>Submit issue</gui>."
+msgstr "제목과 설명 부분을 채워넣고 <gui>Submit issue</gui>를 누릅니다."
+
+#. (itstool) path: page/p
+#: C/bug-filing.page:36
+msgid ""
+"Your report will be given an ID number, and its status will be updated as it "
+"is being dealt with."
+msgstr "보고서에는 ID 번호가 붙으며, 처리하는대로 최신 상태가 바뀝니다."
+
+#. (itstool) path: credit/name
+#: C/change-board-size.page:9 C/change-theme.page:9 C/index.page:13
+#: C/play.page:10 C/scores.page:9
+msgid "Lahiru lanka"
+msgstr "Lahiru lanka"
+
+#. (itstool) path: credit/name
+#: C/change-board-size.page:18 C/play.page:15 C/translate.page:15
+msgid "Michael Hill"
+msgstr "Michael Hill"
+
+#. (itstool) path: page/title
+#: C/change-board-size.page:23
+msgid "Change board size"
+msgstr "게임판 크기 바꾸기"
+
+#. (itstool) path: page/p
+#: C/change-board-size.page:24
+msgid "To change the board size:"
+msgstr "게임판 크기를 바꾸려면:"
+
+#. (itstool) path: item/p
+#: C/change-board-size.page:26
+msgid "Press the menu button in the top-right corner of the window."
+msgstr "창 우측 상단의 메뉴 단추를 누릅니다."
+
+#. (itstool) path: item/p
+#: C/change-board-size.page:27
+msgid "Select <gui>Small</gui>, <gui>Medium</gui>, or <gui>Large</gui>."
+msgstr "Select <gui>Small</gui>, <gui>Medium</gui>, or <gui>Large</gui>."
+
+#. (itstool) path: note/p
+#: C/change-board-size.page:31
+msgid ""
+"While a larger board gives you more space, there are also more objects in "
+"play for each turn."
+msgstr ""
+"더 큰 게임판에서 게임할 공간을 더 많이 주는 만큼, 각 횟수마다 플레이할 객체"
+"가 더 많아집니다."
+
+#. (itstool) path: section/title
+#: C/change-board-size.page:36
+msgid "Board parameters"
+msgstr "게임판 매개변수"
+
+#. (itstool) path: section/p
+#: C/change-board-size.page:37
+msgid "The 3 different board sizes have the following parameters:"
+msgstr "세가지 제각기 다른 게임판 크기는 다음 매개변수 값을 따릅니다:"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:41
+msgid "<em>Size</em>"
+msgstr "<em>크기</em>"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:42
+msgid "<em>Width</em>"
+msgstr "<em>너비</em>"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:43
+msgid "<em>Height</em>"
+msgstr "<em>높이</em>"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:44
+msgid "<em>Number of types</em>"
+msgstr "<em></em>"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:45
+msgid "<em>New objects per turn</em>"
+msgstr "<em>회차당 새 객체</em>"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:46
+msgid "<em>Number of cells</em>"
+msgstr "<em>칸 수</em>"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:50
+msgid "Small"
+msgstr "작게"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:51 C/change-board-size.page:52
+#: C/change-board-size.page:62 C/change-board-size.page:71
+#: C/change-board-size.page:72 C/scores.page:41
+msgid "7"
+msgstr "7"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:53 C/scores.page:33
+msgid "5"
+msgstr "5"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:54 C/change-board-size.page:63
+msgid "3"
+msgstr "3"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:55 C/scores.page:62
+msgid "49"
+msgstr "49"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:59
+msgid "Medium"
+msgstr "중간"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:60 C/change-board-size.page:61 C/scores.page:49
+msgid "9"
+msgstr "9"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:64
+msgid "81"
+msgstr "81"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:68
+msgid "Large"
+msgstr "크게"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:69
+msgid "20"
+msgstr "20"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:70 C/scores.page:73
+msgid "15"
+msgstr "15"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:73
+msgid "300"
+msgstr "300"
+
+#. (itstool) path: section/title
+#: C/change-board-size.page:80
+msgid "The 3 board sizes"
+msgstr "세가지 게임판 크기"
+
+#. (itstool) path: media/p
+#: C/change-board-size.page:86
+msgid "<app>Five or More</app> Small board"
+msgstr "<app>다섯개</app> 작은 게임판"
+
+#. (itstool) path: media/p
+#: C/change-board-size.page:91
+msgid "<app>Five or More</app> medium size board"
+msgstr "<app>다섯개</app> 중간 크기 게임판"
+
+#. (itstool) path: media/p
+#: C/change-board-size.page:96
+msgid "<app>Five or More</app> large size board"
+msgstr "<app>다섯개</app> 큰 크기 게임판"
+
+#. (itstool) path: credit/years
+#: C/change-theme.page:11 C/strategy.page:11
+msgid "2012"
+msgstr "2012"
+
+#. (itstool) path: page/title
+#: C/change-theme.page:20
+msgid "Change the look and feel"
+msgstr "모양새 바꾸기"
+
+#. (itstool) path: page/p
+#: C/change-theme.page:21
+msgid "To change the appearance of the pieces and the board:"
+msgstr "게임말과 게임판의 모양새를 바꾸려면:"
+
+#. (itstool) path: item/p
+#: C/change-theme.page:24
+msgid ""
+"Press the menu button in the top-right corner of the window and select <gui "
+"style=\"menuitem\">Preferences</gui>."
+msgstr ""
+"창 우측 상단의 메뉴 단추를 누른 후 <gui style=\"menuitem\">기본 설정</gui>을 "
+"선택합니다."
+
+#. (itstool) path: item/p
+#: C/change-theme.page:28
+msgid ""
+"Select <gui>balls</gui>, <gui>shapes</gui>, or <gui>tango</gui> from the "
+"<gui>Theme</gui> drop down menu to change the playing pieces."
+msgstr ""
+"게임 말 모양을 바꾸려면 <gui>테마</gui> 드롭다운 메뉴에서 <gui>공</gui>, "
+"<gui>도형</gui>, <gui>탱고</gui> 중 하나를 선택합니다."
+
+#. (itstool) path: item/p
+#: C/change-theme.page:30
+msgid ""
+"Click on the colored box next to <gui>Background color</gui> to access the "
+"color palette."
+msgstr "색상 표를 열어보려면 <gui>배경색</gui> 옆의 색 상자를 누릅니다."
+
+#. (itstool) path: item/p
+#: C/change-theme.page:34
+msgid "Close the <gui>Preferences</gui> dialog."
+msgstr "<gui>기본 설정</gui> 대화 창을 닫습니다."
+
+#. (itstool) path: page/title
+#: C/develop.page:19
+msgid "Help develop"
+msgstr "개발 돕기"
+
+#. (itstool) path: page/p
+#: C/develop.page:20
+msgid ""
+"The <app>GNOME Games</app> are developed and maintained by a volunteer "
+"community. You are welcome to participate."
+msgstr ""
+"<app>그놈 게임</app>은 전세계 기여자가 개발하고 관리합니다. 여러분의 참여를 "
+"환영합니다."
+
+#. (itstool) path: page/p
+#: C/develop.page:23
+msgid ""
+"If you would like to <link href=\"https://wiki.gnome.org/Apps/Games/"
+"Contributing\">help develop <app>GNOME Games</app></link>, you can get in "
+"touch with the developers using <link href=\"https://cbe005.chat.mibbit.com/?"
+"url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, or via our <link "
+"href=\"http://mail.gnome.org/mailman/listinfo/games-list\">mailing list</"
+"link>."
+msgstr ""
+"<link href=\"https://wiki.gnome.org/Apps/Games/Contributing\"><app>그놈 게임"
+"</app> 개발 지원</link>을 원하시면, <link href=\"https://cbe005.chat.mibbit."
+"com/?url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">IRC</link> 또는 <link "
+"href=\"http://mail.gnome.org/mailman/listinfo/games-list\">메일링 리스트</"
+"link>로 개발자에게 연락할 수 있습니다."
+
+#. (itstool) path: page/title
+#: C/documentation.page:17
+msgid "Help write documentation"
+msgstr "문서 작성 돕기"
+
+#. (itstool) path: page/p
+#: C/documentation.page:19
+msgid ""
+"The <app>GNOME Games</app> documentation is maintained by a volunteer "
+"community. You are welcome to participate."
+msgstr ""
+"<app>그놈 게임</app> 문서는 기여자 집단이 관리합니다. 여러분의 참여를 환영합"
+"니다."
+
+#. (itstool) path: page/p
+#: C/documentation.page:22
+msgid ""
+"To contribute to the Documentation Project, feel free to get in touch with "
+"us using <link href=\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc."
+"gnome.org%2Fdocs\">irc</link>, or via our <link href=\"http://mail.gnome.org/"
+"mailman/listinfo/gnome-doc-list\">mailing list</link>."
+msgstr ""
+"문서 프로젝트에 기여하려면, 저희 <link href=\"https://cbe003.chat.mibbit."
+"com/?url=irc%3A%2F%2Firc.gnome.org%2Fdocs\">irc</link>나 <link href=\"http://"
+"mail.gnome.org/mailman/listinfo/gnome-doc-list\">메일링 리스트</link>를 통해 "
+"저희에게 연락하십시오."
+
+#. (itstool) path: page/p
+#: C/documentation.page:26
+msgid ""
+"Our <link href=\"https://wiki.gnome.org/DocumentationProject/Contributing"
+"\">wiki</link> page contains useful information."
+msgstr ""
+"<link href=\"https://live.gnome.org/DocumentationProject/Contributing\">위키"
+"</link> 페이지에 관련 정보가 있습니다."
+
+#. (itstool) path: info/title
+#: C/index.page:8
+msgctxt "link"
+msgid "Five or More"
+msgstr "다섯개"
+
+#. (itstool) path: info/title
+#: C/index.page:9
+msgctxt "text"
+msgid "Five or More"
+msgstr "다섯개"
+
+#. (itstool) path: media/span
+#: C/index.page:27
+msgid "Five or More logo"
+msgstr "다섯개 로고"
+
+#. (itstool) path: page/title
+#: C/index.page:26
+msgid "<_:media-1/> Five or More"
+msgstr "<_:media-1/> 다섯개"
+
+#. (itstool) path: page/p
+#: C/index.page:30
+msgid ""
+"<app>Five or More</app> is a deceptively simple brain workout. The goal is "
+"to place at least five objects of the same <link xref=\"change-theme#images"
+"\">color or shape</link> into a straight line. The line can be horizontal, "
+"vertical or diagonal. Once five or more objects are grouped into a line, "
+"they disappear. The goal is to vanish as many objects as possible. The game "
+"is over when the entire board is full."
+msgstr ""
+"<app>다섯개</app>는 심심풀이용 두뇌 게임입니다. 동일한 <link xref=\"change-"
+"theme#images\">색 또는 모양</link>을 지닌 다섯개 객체를 일렬로 맞추는게 게임"
+"의 목표입니다. 줄은, 수평, 수직, 대각선일 수 있습니다. 다섯개 이상 한 줄에 맞"
+"추면 없어집니다. 가능한한 더 많은 객체를 없애는게 목표입니다. 게임판이 가득차"
+"면 게임이 끝납니다."
+
+#. (itstool) path: section/title
+#: C/index.page:34
+msgid "Game Play"
+msgstr "게임하기"
+
+#. (itstool) path: section/title
+#: C/index.page:38
+msgid "Useful Tips"
+msgstr "유용한 정보"
+
+#. (itstool) path: section/title
+#: C/index.page:42
+msgid "Advanced"
+msgstr "고급"
+
+#. (itstool) path: section/title
+#: C/index.page:46
+msgid "Get Involved"
+msgstr "참여하기"
+
+#. (itstool) path: p/link
+#: C/legal.xml:3
+msgid "Creative Commons Attribution-ShareAlike 3.0 Unported License"
+msgstr "크리에이티브 커먼즈 저작자표시-동일조건변경허락 3.0 Unported 라이선스"
+
+#. (itstool) path: license/p
+#: C/legal.xml:3
+msgid "This work is licensed under a <_:link-1/>."
+msgstr "이 문서는 <_:link-1/>를 따릅니다."
+
+#. (itstool) path: info/desc
+#: C/license.page:9
+msgid "Legal information."
+msgstr "법적 정보."
+
+#. (itstool) path: page/title
+#: C/license.page:12
+msgid "License"
+msgstr "라이선스"
+
+#. (itstool) path: page/p
+#: C/license.page:13
+msgid ""
+"This work is distributed under a CreativeCommons Attribution-Share Alike 3.0 "
+"Unported license."
+msgstr ""
+"이 문서는 크리에이티브 커먼즈 저작자표시-동일조건변경허락 3.0 Unported 라이선"
+"스로 배포됩니다."
+
+#. (itstool) path: page/p
+#: C/license.page:21
+msgid "You are free:"
+msgstr "이용자는 다음 권리가 있습니다:"
+
+#. (itstool) path: item/title
+#: C/license.page:26
+msgid "<em>To share</em>"
+msgstr "<em>공유</em>"
+
+#. (itstool) path: item/p
+#: C/license.page:27
+msgid "To copy, distribute and transmit the work."
+msgstr "저작물을 복제, 배포, 전송합니다."
+
+#. (itstool) path: item/title
+#: C/license.page:30
+msgid "<em>To remix</em>"
+msgstr "<em>변경</em>"
+
+#. (itstool) path: item/p
+#: C/license.page:31
+msgid "To adapt the work."
+msgstr "저작물에 적용합니다."
+
+#. (itstool) path: page/p
+#: C/license.page:34
+msgid "Under the following conditions:"
+msgstr "다음 조건을 따라야 합니다:"
+
+#. (itstool) path: item/title
+#: C/license.page:39
+msgid "<em>Attribution</em>"
+msgstr "<em>저작자 표시</em>"
+
+#. (itstool) path: item/p
+#: C/license.page:40
+msgid ""
+"You must attribute the work in the manner specified by the author or "
+"licensor (but not in any way that suggests that they endorse you or your use "
+"of the work)."
+msgstr ""
+"저작자 또는 저작권자가 지정한 방법으로 표시해야 합니다. 하지만 저작자나 저작"
+"권자가 귀하에게 권리를 부여한다거나 귀하의 사용을 허가한다는 내용을 나타내서"
+"는 안 됩니다."
+
+#. (itstool) path: item/title
+#: C/license.page:47
+msgid "<em>Share Alike</em>"
+msgstr "<em>동일 조건</em>"
+
+#. (itstool) path: item/p
+#: C/license.page:48
+msgid ""
+"If you alter, transform, or build upon this work, you may distribute the "
+"resulting work only under the same, similar or a compatible license."
+msgstr ""
+"이 저작물을 개작, 변형, 이 저작물을 기반으로 또 다른 저작물을 만든다면, 동"
+"일, 유사 또는 호환 라이선스에 따라 저작물을 배포해야 함."
+
+#. (itstool) path: page/p
+#: C/license.page:54
+msgid ""
+"For the full text of the license, see the <link href=\"http://"
+"creativecommons.org/licenses/by-sa/3.0/legalcode\">CreativeCommons website</"
+"link>, or read the full <link href=\"http://creativecommons.org/licenses/by-"
+"sa/3.0/\">Commons Deed</link>."
+msgstr ""
+"라이선스 전문을 보려면, <link href=\"http://creativecommons.org/licenses/by-"
+"sa/3.0/legalcode\">크리에이티브 커먼즈 웹사이트 </link> 또는 <link href="
+"\"http://creativecommons.org/licenses/by-sa/3.0/\">일반 권리 증서</link>를 참"
+"조합니다."
+
+#. (itstool) path: page/title
+#: C/play.page:22
+msgid "How to Play"
+msgstr "플레이 방법"
+
+#. (itstool) path: page/p
+#: C/play.page:24
+msgid ""
+"To start a new game, press the menu button in the top-right corner of the "
+"window and select <gui style=\"menuitem\">New Game</gui>."
+msgstr ""
+"새 게임을 시작하려면, 창 우측 상단의 메뉴 단추를 누른 후 <gui style="
+"\"menuitem\">새 게임</gui>을 선택합니다."
+
+#. (itstool) path: section/title
+#: C/play.page:29
+msgid "Using the mouse"
+msgstr "마우스 사용하기"
+
+#. (itstool) path: item/p
+#: C/play.page:33
+msgid ""
+"Click on the object you want to move. The selected object will begin "
+"spinning."
+msgstr "옮기고자 하는 객체를 누릅니다. 선택한 객체는 빙글빙글 돕니다."
+
+#. (itstool) path: item/p
+#: C/play.page:37
+msgid ""
+"Click on the destination cell. The chosen object will move to the "
+"destination cell, if there is any clear path."
+msgstr ""
+"대상 칸을 누릅니다. 선택한 객체는 지나가는 경로에 다른 장애물이 없다면 대상 "
+"칸으로 움직입니다."
+
+#. (itstool) path: section/title
+#: C/play.page:46
+msgid "Using the keyboard"
+msgstr "키보드 사용하기"
+
+#. (itstool) path: item/p
+#: C/play.page:50
+msgid ""
+"Press any of the arrow keys. An outline around a cell will appear on the "
+"board."
+msgstr "어떤 화살표 키든 사용합니다. 게임판의 칸 주변에 테두리가 나타납니다."
+
+#. (itstool) path: item/p
+#: C/play.page:54
+msgid ""
+"Using the arrow keys, and the <key>Home</key>, <key>End</key>, <key>PageUp</"
+"key> and <key>PageDown</key> keys navigate to the object you want to move."
+msgstr ""
+"화살표 키와 <key>Home</key>, <key>End</key>, <key>PageUp</key>, "
+"<key>PageDown</key> 키로 옮기고자 하는 객체를 고를 수 있습니다."
+
+#. (itstool) path: item/p
+#: C/play.page:57
+msgid ""
+"To select the object, press the <key>Enter</key>, <key>Spacebar</key> or "
+"<key>Return</key>. The selected object will begin spinning."
+msgstr ""
+"객체를 선택하려면 <key>Enter</key>, <key>Spacebar</key>, <key>Return</key> "
+"키 중 하나를 누릅니다. 선택한 객체는 빙글빙글 돕니다."
+
+#. (itstool) path: item/p
+#: C/play.page:60
+msgid ""
+"Move to the destination cell, and again press the <key>Enter</key>, "
+"<key>Spacebar</key> or <key>Return</key>. The chosen object will move to the "
+"destination cell, if there is any clear path."
+msgstr ""
+"대상 칸으로 움직인 후,  <key>Enter</key>, <key>Spacebar</key>, <key>Return</"
+"key>키 중 하나를 누릅니다. 선택한 객체는 지나가는 경로에 다른 장애물이 없다"
+"면 대상 칸으로 움직입니다."
+
+#. (itstool) path: section/title
+#: C/play.page:70
+msgid "Video demonstration"
+msgstr "동영상 예시"
+
+#. (itstool) path: page/title
+#: C/rules.page:18
+msgid "Rules"
+msgstr "규칙"
+
+#. (itstool) path: item/p
+#: C/rules.page:20
+msgid ""
+"At the start of the game there are either 3 or 7 objects placed on your "
+"board, depending on the <link xref=\"change-board-size\">board size</link>."
+msgstr ""
+"게임을 시작할 때 <link xref=\"change-board-size\">게임판 크기</link>에 따라 "
+"게임판에 객체가 3~7개 정도 올라갑니다."
+
+#. (itstool) path: item/p
+#: C/rules.page:23
+msgid ""
+"Each time you <link xref=\"play\">move an object</link>, additional objects "
+"are placed randomly on the board. The number of new objects placed each turn "
+"also depends on the board. A preview of the objects to be placed on the "
+"board appears in the upper left corner of the game window."
+msgstr ""
+"<link xref=\"play\">객체를 움직일 때</link>마다 추가 객체가 게임판에 임의대"
+"로 나타납니다. 게임판에 따라 여러 객체가 올라갑니다. 게임창 좌측 상단 구석에"
+"서 게임판에 올라갈 객체를 미리 볼 수 있습니다."
+
+#. (itstool) path: item/p
+#: C/rules.page:28
+msgid ""
+"There must be a clear path from the original position of the object to the "
+"destination cell (i.e you can not jump over objects)."
+msgstr ""
+"객체의 초기 위치에서 대상 위치로 욺직이려면 움직이는 길이 뚫려있어야 합니다"
+"(예: 다른 객체를 건너뛸 수 없음)."
+
+#. (itstool) path: item/p
+#: C/rules.page:31
+msgid ""
+"A straight horizontal, vertical or diagonal line of five or more similar "
+"objects will disappear from the game board. When this happens you will have "
+"an extra move without additional objects being added to the board."
+msgstr ""
+"비슷한 객체를 게임판에 수평, 수직, 대각선 방향으로 일렬로 두면 객체가 없어집"
+"니다. 이렇게 객체를 없애고 나면 게임판에 다른 객체가 추가로 나타나지 않고 한 "
+"번 더 객체를 움직일 수 있습니다."
+
+#. (itstool) path: item/p
+#: C/rules.page:35
+msgid ""
+"The more objects you clear, the longer the game will go on. The longer you "
+"play, the higher your <link xref=\"scores\">score</link>."
+msgstr ""
+"더 많은 객체를 없앨 수록 게임을 더 오래할 수 있습니다. 게임을 오래할 수록 "
+"<link xref=\"scores\">점수</link>가 더 높게 올라갑니다."
+
+#. (itstool) path: item/p
+#: C/rules.page:38
+msgid ""
+"The game is over when the board is full, since no object can be moved at "
+"that point."
+msgstr "게임판이 객체로 가득차면 어떤 객체도 움직일 수 없어 끝납니다."
+
+#. (itstool) path: media/p
+#: C/rules.page:46
+msgid "Example horizontal alignment"
+msgstr "수평 정렬 예제"
+
+#. (itstool) path: media/p
+#: C/rules.page:51
+msgid "Example vertical alignment"
+msgstr "수직 정렬 예제"
+
+#. (itstool) path: media/p
+#: C/rules.page:56
+msgid "Example diagonal alignment"
+msgstr "대각선 정렬 예제"
+
+#. (itstool) path: media/p
+#: C/rules.page:61
+msgid "<app>Five or More</app> game over position."
+msgstr "<app>다섯개</app> 게임 끝 상태."
+
+#. (itstool) path: page/title
+#: C/scores.page:20
+msgid "Scoring"
+msgstr "득점"
+
+#. (itstool) path: page/p
+#: C/scores.page:21
+msgid ""
+"You score points by creating lines of 5 or more objects. The number of "
+"points depends on the number of objects that disappear."
+msgstr ""
+"객체를 5개 이상 모아 한 줄을 만들어 득점합니다. 사라지는 객체 갯수에 따라 점"
+"수가 달라집니다."
+
+#. (itstool) path: td/p
+#: C/scores.page:27
+msgid "<em>Number of objects</em>"
+msgstr "<em>객체 수</em>"
+
+#. (itstool) path: td/p
+#: C/scores.page:28
+msgid "<em>Number of points</em>"
+msgstr "<em>점수</em>"
+
+#. (itstool) path: td/p
+#: C/scores.page:34 C/scores.page:53
+msgid "10"
+msgstr "10"
+
+#. (itstool) path: td/p
+#: C/scores.page:37
+msgid "6"
+msgstr "6"
+
+#. (itstool) path: td/p
+#: C/scores.page:38
+msgid "18"
+msgstr "18"
+
+#. (itstool) path: td/p
+#: C/scores.page:42
+msgid "25"
+msgstr "25"
+
+#. (itstool) path: td/p
+#: C/scores.page:45
+msgid "8"
+msgstr "8"
+
+#. (itstool) path: td/p
+#: C/scores.page:46
+msgid "31"
+msgstr "31"
+
+#. (itstool) path: td/p
+#: C/scores.page:50
+msgid "36"
+msgstr "36"
+
+#. (itstool) path: td/p
+#: C/scores.page:54
+msgid "41"
+msgstr "41"
+
+#. (itstool) path: td/p
+#: C/scores.page:57
+msgid "11"
+msgstr "11"
+
+#. (itstool) path: td/p
+#: C/scores.page:58
+msgid "45"
+msgstr "45"
+
+#. (itstool) path: td/p
+#: C/scores.page:61
+msgid "12"
+msgstr "12"
+
+#. (itstool) path: td/p
+#: C/scores.page:65
+msgid "13"
+msgstr "13"
+
+#. (itstool) path: td/p
+#: C/scores.page:66
+msgid "53"
+msgstr "53"
+
+#. (itstool) path: td/p
+#: C/scores.page:69
+msgid "14"
+msgstr "14"
+
+#. (itstool) path: td/p
+#: C/scores.page:70
+msgid "56"
+msgstr "56"
+
+#. (itstool) path: td/p
+#: C/scores.page:74
+msgid "59"
+msgstr "59"
+
+#. (itstool) path: note/p
+#: C/scores.page:81
+msgid ""
+"You can view the high scores by pressing the menu button in the top-right "
+"corner of the window and selecting <gui style=\"menuitem\">Scores</gui>."
+msgstr ""
+"창 우측 상단의 메뉴 단추를 누른 후 <gui style=\"menuitem\">점수</gui>를 선택"
+"하면, 고득점 목록을 볼 수 있습니다."
+
+#. (itstool) path: note/p
+#: C/scores.page:83
+msgid ""
+"The <app>Five or More</app> scores are recorded according to the board size. "
+"You can select the <gui>Board Size</gui> of interest using the drop down "
+"menu."
+msgstr ""
+"<app>다섯개</app> 점수는 게임판 크기에 따라 기록합니다. 원하는 게임판 별 점수"
+"를 보려면 <gui>게임판 크기</gui>를 선택하여 볼 수 있습니다."
+
+#. (itstool) path: page/title
+#: C/shortcuts.page:17
+msgid "Keyboard shortcuts"
+msgstr "키보드 바로 가기"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:20
+msgid "New game"
+msgstr "새 게임"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:21
+msgid "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
+msgstr "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:24
+msgid "Help"
+msgstr "도움말"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:25
+msgid "<key>F1</key>"
+msgstr "<key>F1</key>"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:28
+msgid "Quit"
+msgstr "끝내기"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:29
+msgid "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
+msgstr "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
+
+#. (itstool) path: page/title
+#: C/strategy.page:17
+msgid "Strategy"
+msgstr "전략"
+
+#. (itstool) path: page/p
+#: C/strategy.page:19
+msgid ""
+"There is no universal strategy for <app>Five or More</app>, but some "
+"strategic elements do exist. Here are some things to try and keep in mind as "
+"you play:"
+msgstr ""
+"<app>다섯개</app>의 공통 전략은 없지만, 일부 전략 요소는 있습니다. 플레이할 "
+"때 기억해두어야 할 몇가지가 있습니다:"
+
+#. (itstool) path: item/p
+#: C/strategy.page:23
+msgid "Try to set at least three same objects with your every move."
+msgstr "매번 움직일 떄마다 최소한 객체 3개는 모아둡니다."
+
+#. (itstool) path: item/p
+#: C/strategy.page:24
+msgid ""
+"The board can quickly become very crowded with objects, so it is best to "
+"think ahead. Pay attention to the collection of <gui>Next</gui> objects, "
+"because knowing these will influence your moves."
+msgstr ""
+"게임판의 객체가 금방 찰 수 있기에 넘겨 짚어 생각하는게 좋습니다. 객체 움직임"
+"에 영향을 주므로 <gui>다음</gui>에 어떤 객체를 모을 지 주의를 기울이십시오."
+
+#. (itstool) path: item/p
+#: C/strategy.page:25
+msgid ""
+"Try to line up more than 5 objects. For example, if you have 6 objects, you "
+"can line up 2 and 3 with a space in between, and then connect them by "
+"placing the sixth object between them."
+msgstr ""
+"다섯개 이상 한 줄을 만들려 하십시오. 예를 들면, 6개를 일렬로 모을 경우 2~3개"
+"를 일렬로 모아둔 후에 여섯번째 객체를 그 사이에 넣어 연결할 수 있습니다."
+
+#. (itstool) path: page/title
+#: C/translate.page:23
+msgid "Help translate"
+msgstr "번역 돕기"
+
+#. (itstool) path: page/p
+#: C/translate.page:25
+msgid ""
+"The <app>GNOME Games</app> user interface and documentation is being "
+"translated by a world-wide volunteer community. You are welcome to "
+"participate."
+msgstr ""
+"그놈 게임 사용자 인터페이스와 문서는 전세계 기여자 집단이 번역합니다. 여러분"
+"의 참여를 환영합니다."
+
+#. (itstool) path: page/p
+#: C/translate.page:28
+msgid ""
+"There are <link href=\"http://l10n.gnome.org/module/five-or-more/\">many "
+"languages</link> for which translations are still needed."
+msgstr ""
+"여전히 <link href=\"http://l10n.gnome.org/module/five-or-more/\">수많은 언어"
+"</link>로 번역이 필요합니다."
+
+#. (itstool) path: page/p
+#: C/translate.page:30
+msgid ""
+"To start translating you will need to <link href=\"http://l10n.gnome.org"
+"\">create an account</link> and join the <link href=\"http://l10n.gnome.org/"
+"teams/\">translation team</link> for your language. This will give you the "
+"ability to upload new translations."
+msgstr ""
+"번역을 시작하려면 먼저 <link href=\"http://l10n.gnome.org\">계정을 만들고</"
+"link> 사용하는 언어의 <link href=\"http://l10n.gnome.org/teams/\">번역팀</"
+"link>에 가입해야 합니다. 그러면 새 번역을 업로드할 수 있습니다."
+
+#. (itstool) path: page/p
+#: C/translate.page:34
+msgid ""
+"You can chat with GNOME translators using <link href=\"https://cbe003.chat."
+"mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fi18n\">irc</link>. People on the "
+"channel are located worldwide, so you may not get an immediate response as a "
+"result of timezone differences."
+msgstr ""
+"<link href=\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org"
+"%2Fi18n\">IRC</link>에서 그놈 번역자와 이야기를 나눌 수 있습니다. 채널에 있"
+"는 사람은 전 세계에 있기 때문에, 시차로 인해 빠른 답변을 받지 못할 수도 있습"
+"니다."
+
+#. (itstool) path: page/p
+#: C/translate.page:38
+msgid ""
+"Alternatively, you can contact the Internationalization Team using their "
+"<link href=\"http://mail.gnome.org/mailman/listinfo/gnome-i18n\">mailing "
+"list</link>."
+msgstr ""
+"아니면, 국제화 팀에 <link href=\"http://mail.gnome.org/mailman/listinfo/"
+"gnome-i18n\">메일링 리스트</link>를 통해 연락할 수도 있습니다."
