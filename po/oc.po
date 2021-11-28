@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: oc\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/five-or-more/issues\n"
-"POT-Creation-Date: 2020-05-31 06:52+0000\n"
-"PO-Revision-Date: 2021-08-02 18:37+0200\n"
+"POT-Creation-Date: 2021-08-02 16:38+0000\n"
+"PO-Revision-Date: 2021-11-28 14:30+0100\n"
 "Last-Translator: Quentin PAGÈS\n"
 "Language-Team: Tot En Òc\n"
 "Language: oc\n"
@@ -84,7 +84,7 @@ msgstr ""
 "Estil de bilhas. Lo nom de fichièr dels imatges d'utilizar per las bilhas."
 
 #. Translators: title of the ColorChooser dialog that appears from the hamburger menu > "Appearance" submenu > "Background" section > "Select color" entry
-#: data/org.gnome.five-or-more.gschema.xml:16 src/window.vala:221
+#: data/org.gnome.five-or-more.gschema.xml:16 src/window.vala:222
 msgid "Background color"
 msgstr "Color de rèireplan"
 
@@ -176,7 +176,7 @@ msgstr "A_paréncia"
 #. Translators: entry of the Appearance submenu of the hamburger menu; set theme to "balls"; other possible themes are "shapes" and "tango"
 #: data/ui/five-or-more.ui:55
 msgid "balls"
-msgstr ""
+msgstr "balas"
 
 #. Translators: entry of the Appearance submenu of the hamburger menu; set theme to "shapes"; other possible themes are "balls" and "tango"
 #: data/ui/five-or-more.ui:61
@@ -196,7 +196,7 @@ msgstr "Rèireplan"
 #. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); opens a dialog for choosing background color
 #: data/ui/five-or-more.ui:77
 msgid "_Select color"
-msgstr ""
+msgstr "_Seleccionar una color"
 
 #. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); resets background color
 #: data/ui/five-or-more.ui:82
@@ -245,7 +245,7 @@ msgstr "Jogar al clavièr"
 #: data/ui/help-overlay.ui:49
 msgctxt "shortcut window"
 msgid "Move keyboard cursor"
-msgstr ""
+msgstr "Desplaçar lo cursor del clavièr"
 
 #. Translators: in the Keyboard Shortcuts window, section "Play with keyboard"; action of the return or space keys
 #: data/ui/help-overlay.ui:57
@@ -263,7 +263,7 @@ msgstr "Generic"
 #: data/ui/help-overlay.ui:72
 msgctxt "shortcut window"
 msgid "Toggle main menu"
-msgstr ""
+msgstr "Alternar menú principal"
 
 #. Translators: in the Keyboard Shortcuts window, section "Generic"; action of the Ctrl-Shift-? shortcut; opens the Keyboard Shortcuts dialog
 #: data/ui/help-overlay.ui:80
@@ -392,18 +392,18 @@ msgid "Board Size: "
 msgstr "Talha del platèu :"
 
 #. Translators: text of a dialog that appears when the user starts a new game while the score is not null
-#: src/window.vala:278
+#: src/window.vala:279
 #, c-format
 msgid "Are you sure you want to start a new %u × %u game?"
 msgstr "Volètz vertadièrament començar un jòc novèl de %u × %u ?"
 
 #. Translators: button of a dialog that appears when the user starts a new game while the score is not null; the other answer is "_Restart"
-#: src/window.vala:281
+#: src/window.vala:282
 msgid "_Cancel"
 msgstr "_Anullar"
 
 #. Translators: button of a dialog that appears when the user starts a new game while the score is not null; the other answer is "_Cancel"
-#: src/window.vala:284
+#: src/window.vala:285
 msgid "_Restart"
 msgstr "_Reaviar"
 
