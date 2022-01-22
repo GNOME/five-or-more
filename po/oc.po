@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: oc\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/five-or-more/issues\n"
-"POT-Creation-Date: 2021-08-02 16:38+0000\n"
-"PO-Revision-Date: 2021-11-28 14:30+0100\n"
+"POT-Creation-Date: 2021-11-28 13:31+0000\n"
+"PO-Revision-Date: 2022-01-22 19:00+0100\n"
 "Last-Translator: Quentin PAGÈS\n"
 "Language-Team: Tot En Òc\n"
 "Language: oc\n"
@@ -251,7 +251,7 @@ msgstr "Desplaçar lo cursor del clavièr"
 #: data/ui/help-overlay.ui:57
 msgctxt "shortcut window"
 msgid "Select or drop tile"
-msgstr ""
+msgstr "Seleccionar o tombar"
 
 #. Translators: header of the "Toggle main menu," "Keyboard shortcuts," "About," "Quit," etc. shortcuts section
 #: data/ui/help-overlay.ui:67
