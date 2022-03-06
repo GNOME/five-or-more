@@ -1,18 +1,18 @@
 # Basque translation for five-or-more.
 # Copyright (C) 2021 five-or-more's COPYRIGHT HOLDER
 # This file is distributed under the same license as the five-or-more package.
-# Asier Sarasua Garmendia <asiersarasua@ni.eus>, 2021.
+# Asier Sarasua Garmendia <asiersarasua@ni.eus>, 2021, 2022.
 #
 msgid ""
 msgstr "Project-Id-Version: five-or-more master\n"
-"POT-Creation-Date: 2021-03-24 17:20+0000\n"
-"PO-Revision-Date: 2021-04-10 20:06+0000\n"
+"POT-Creation-Date: 2021-07-28 20:10+0000\n"
+"PO-Revision-Date: 2022-03-06 20:06+0000\n"
 "Last-Translator: Asier Sarasua Garmendia <asiersarasua@ni.eus>\n"
 "Language-Team: Basque <librezale@librezale.eus>\n"
+"Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: eu\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -76,11 +76,11 @@ msgstr "Parte hartzeko, kontu bat sortu beharko duzu. Horrela, akatsak bete, iru
 msgid ""
 "Once you have an account, log in, click on <guiseq><gui>Projects</"
 "gui><gui>five-or-more</gui><gui>Issues</gui><gui>New issue</gui></guiseq>. "
-"Before reporting a bug, please read the <link href=\"https://bugzilla.gnome."
-"org/page.cgi?id=bug-writing.html\">bug writing guidelines</link>, and please "
-"<link href=\"https://gitlab.gnome.org/GNOME/five-or-more/issues\">browse</"
-"link> for the bug to see if it already exists."
-msgstr "Kontu bat sortu ondoren, hasi saioa eta egin klik <guiseq><gui>Proiektuak</gui><gui>five-or-more</gui><gui>Issues</gui><gui>Auzi berria</gui></guiseq> aukeran. Akats bat jakinarazi baino lehen, irakurri <link href=\"https://bugzilla.gnome.org/page.cgi?id=bug-writing.html\">akatsak idazteko gidalerroak</link> eta <link href=\"https://gitlab.gnome.org/GNOME/five-or-more/issues\">arakatu</link> lehendik dadudenak, jakiteko ea zure akatsa jadanik badagoen ala ez."
+"Before reporting a bug, please read the <link href=\"https://wiki.gnome.org/"
+"GettingInTouch/BugReportingGuidelines\">bug writing guidelines</link>, and "
+"please <link href=\"https://gitlab.gnome.org/GNOME/five-or-more/issues"
+"\">browse</link> for the bug to see if it already exists."
+msgstr "Kontu bat sortu ondoren, hasi saioa eta egin klik <guiseq><gui>Proiektuak</gui><gui>five-or-more</gui><gui>Issues</gui><gui>Auzi berria</gui></guiseq> aukeran. Akats bat jakinarazi baino lehen, irakurri <link href=\"https://wiki.gnome.org/GettingInTouch/BugReportingGuidelines\">akatsak idazteko gidalerroak</link> eta <link href=\"https://gitlab.gnome.org/GNOME/five-or-more/issues\">arakatu</link> lehendik daudenak, jakiteko ea zure akatsa jadanik badagoen ala ez."
 
 #. (itstool) path: page/p
 #: C/bug-filing.page:33
@@ -378,7 +378,7 @@ msgid ""
 "vertical or diagonal. Once five or more objects are grouped into a line, "
 "they disappear. The goal is to vanish as many objects as possible. The game "
 "is over when the entire board is full."
-msgstr ""
+msgstr "<app>Bost edo gehiago</app> adimenerako joko sinple bat da. Xedea da <link xref=\"change-theme#images\">kolore edo forma</link> bereko bost objektu lerro zuzen batean kokatzea. Lerroa horizontala, bertikala edo zeharkakoa izan daiteke. Bost objektu edo gehiago lerro batean kokatu ondoren, desagertu egiten dira. Ahalik eta objektu gehien desagerrarazi behar dira. Jokoa amaituko da taula osoa beteta dagoenean."
 
 #. (itstool) path: section/title
 #: C/index.page:34
@@ -539,14 +539,14 @@ msgstr "Sakatu gezi-tekletako edozein. Gelaxkaren inguru ingerada bat agertuko d
 msgid ""
 "Using the arrow keys, and the <key>Home</key>, <key>End</key>, <key>PageUp</"
 "key> and <key>PageDown</key> keys navigate to the object you want to move."
-msgstr ""
+msgstr "Erabili gezi-teklak eta <key>Home</key>, <key>End</key>, <key>PageUp</key> eta <key>PageDown</key> teklak lekuz aldatu nahi duzun objektua mugitzeko."
 
 #. (itstool) path: item/p
 #: C/play.page:57
 msgid ""
 "To select the object, press the <key>Enter</key>, <key>Spacebar</key> or "
 "<key>Return</key>. The selected object will begin spinning."
-msgstr ""
+msgstr "Objektua hautatzeko, sakatu <key>Enter</key>, <key>Spacebar</key> edo <key>Return</key> tekla. Hautatutako objektua biraka hasiko da."
 
 #. (itstool) path: item/p
 #: C/play.page:60
@@ -554,7 +554,7 @@ msgid ""
 "Move to the destination cell, and again press the <key>Enter</key>, "
 "<key>Spacebar</key> or <key>Return</key>. The chosen object will move to the "
 "destination cell, if there is any clear path."
-msgstr ""
+msgstr "Joan helburuko gelaxkara eta sakatu berriro <key>Enter</key>, <key>Spacebar</key> edo <key>Return</key>. Hautatutako objektua helburuko gelaxkara eramango da, bidea garbi badago."
 
 #. (itstool) path: section/title
 #: C/play.page:70
@@ -580,14 +580,14 @@ msgid ""
 "are placed randomly on the board. The number of new objects placed each turn "
 "also depends on the board. A preview of the objects to be placed on the "
 "board appears in the upper left corner of the game window."
-msgstr ""
+msgstr "<link xref=\"play\">Objektu bat lekuz aldatzen den</link> bakoitzeko, objektu gehiago kokatzen dira taulan, ausaz. Kokatutako objektu berrien kopurua taularen araberakoa izango da. Joko-leihoaren goiko ezkerreko izkinak taulan kokatuko diren objektuen aurrebista bat agertzen da."
 
 #. (itstool) path: item/p
 #: C/rules.page:28
 msgid ""
 "There must be a clear path from the original position of the object to the "
 "destination cell (i.e you can not jump over objects)."
-msgstr ""
+msgstr "Objektuaren jatorrizko kokalekutik helburuko gelaxkaraino bide garbi bat egon behar da (ezin da objektuen gainetik salto egin)."
 
 #. (itstool) path: item/p
 #: C/rules.page:31
@@ -595,14 +595,14 @@ msgid ""
 "A straight horizontal, vertical or diagonal line of five or more similar "
 "objects will disappear from the game board. When this happens you will have "
 "an extra move without additional objects being added to the board."
-msgstr ""
+msgstr "Antzeko bost objektu edo gehiago lerro horizontal, bertikal edo zeharkako batean kokatzen badira, desagertu egingo dira taulatik. Hori gertatzen denean, taulari objektu gehiago gehituko ez zaizkion mugimendu estra bat izango duzu."
 
 #. (itstool) path: item/p
 #: C/rules.page:35
 msgid ""
 "The more objects you clear, the longer the game will go on. The longer you "
 "play, the higher your <link xref=\"scores\">score</link>."
-msgstr ""
+msgstr "Gero eta objektu gehiago kendu, jokoak gehiago iraungo du. Gero eta denbora luzeagoan jokatu, <link xref=\"scores\">puntuazioa</link> altuagoa izango da."
 
 #. (itstool) path: item/p
 #: C/rules.page:38
@@ -629,7 +629,7 @@ msgstr "Zeharkako lerrokatzearen adibidea"
 #. (itstool) path: media/p
 #: C/rules.page:61
 msgid "<app>Five or More</app> game over position."
-msgstr ""
+msgstr "<app>Bost edo gehiago</app> jokoaren amaierako kokapena."
 
 #. (itstool) path: page/title
 #: C/scores.page:20
@@ -641,7 +641,7 @@ msgstr "Puntuazioa"
 msgid ""
 "You score points by creating lines of 5 or more objects. The number of "
 "points depends on the number of objects that disappear."
-msgstr "Puntuak lortzeko, 5 objektu edo gehiago dituzten lerroak dortu behar dira. Puntu kopurua, desagertzen den objektu kopuruaren araberakoa izango da."
+msgstr "Puntuak lortzeko, 5 objektu edo gehiago dituzten lerroak sortu behar dira. Puntu kopurua, desagertzen den objektu kopuruaren araberakoa izango da."
 
 #. (itstool) path: td/p
 #: C/scores.page:27
@@ -738,7 +738,7 @@ msgstr "59"
 msgid ""
 "You can view the high scores by pressing the menu button in the top-right "
 "corner of the window and selecting <gui style=\"menuitem\">Scores</gui>."
-msgstr ""
+msgstr "Puntuazio altuenak ikusteko, sakatu leihoaren goiko eskuineko menu-botoia eta hautatu <gui style=\"menuitem\">Puntuazioak</gui>."
 
 #. (itstool) path: note/p
 #: C/scores.page:83
@@ -746,7 +746,7 @@ msgid ""
 "The <app>Five or More</app> scores are recorded according to the board size. "
 "You can select the <gui>Board Size</gui> of interest using the drop down "
 "menu."
-msgstr ""
+msgstr "<app>Bost edo gehiago</app> jokoaren puntuazioak taularen tamainaren arabera erregistratzen dira. <gui>Taularen tamaina</gui> aldatzeko, erabili goitibeherako menua."
 
 #. (itstool) path: page/title
 #: C/shortcuts.page:17
@@ -794,12 +794,12 @@ msgid ""
 "There is no universal strategy for <app>Five or More</app>, but some "
 "strategic elements do exist. Here are some things to try and keep in mind as "
 "you play:"
-msgstr ""
+msgstr "Ez dago <app>Bost edo gehiago</app> jokorako estrategia unibertsalik, baina badaude kontuan hartu daitezkeen zenbait elementu estrategiko. Kontuan izan hurrengo ideiak jokoan ari zarenean:"
 
 #. (itstool) path: item/p
 #: C/strategy.page:23
 msgid "Try to set at least three same objects with your every move."
-msgstr ""
+msgstr "Saiatu gutxienez hiru objektu berdin kokatzen mugimendu bakoitzean."
 
 #. (itstool) path: item/p
 #: C/strategy.page:24
@@ -807,7 +807,7 @@ msgid ""
 "The board can quickly become very crowded with objects, so it is best to "
 "think ahead. Pay attention to the collection of <gui>Next</gui> objects, "
 "because knowing these will influence your moves."
-msgstr ""
+msgstr "Taula laster bete daiteke objektuekin, beraz, hobe da aurretiaz ongi pentsatzea. Jarri arreta <gui>Hurrengoa</gui> objektuen bilduman, horiek ezagututa zure mugimenduak hobeto pentsatu baititzakezu."
 
 #. (itstool) path: item/p
 #: C/strategy.page:25
@@ -815,7 +815,7 @@ msgid ""
 "Try to line up more than 5 objects. For example, if you have 6 objects, you "
 "can line up 2 and 3 with a space in between, and then connect them by "
 "placing the sixth object between them."
-msgstr ""
+msgstr "Sakatu bost objektu baino gehiago lerrokatzen. Adibidez, sei objektu badituzu, bi eta hiru objektu lerrokatzen eta tartean zuriune bat uzten saiatu zaitezke, eta ondoren seigarren objektu baten bidez seiko lerro bat sortzen."
 
 #. (itstool) path: page/title
 #: C/translate.page:23
