@@ -294,7 +294,7 @@ struct GameDifficulty
     public int n_next_pieces;
 }
 
-struct KeyValue
+public struct KeyValue
 {
   public string key;
   public string name;
