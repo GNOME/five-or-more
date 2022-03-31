@@ -10,14 +10,14 @@
 # Furkan Ahmet Kara <furkanahmetkara.fk@gmail.com>, 2017.
 # Muhammet Kara <muhammetk@gmail.com>, 2011, 2014, 2015, 2018.
 # Sabri Ünal <libreajans@gmail.com>, 2020.
-# Emin Tufan Çetin <etcetin@gmail.com>, 2017-2020.
+# Emin Tufan Çetin <etcetin@gmail.com>, 2017-2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: five-or-more\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/five-or-more/issues\n"
-"POT-Creation-Date: 2020-08-11 07:00+0000\n"
-"PO-Revision-Date: 2020-08-23 01:18+0300\n"
+"POT-Creation-Date: 2022-03-31 06:05+0000\n"
+"PO-Revision-Date: 2022-03-31 10:55+0300\n"
 "Last-Translator: Emin Tufan Çetin <etcetin@gmail.com>\n"
 "Language-Team: Türkçe <gnome-turk@gnome.org>\n"
 "Language: tr\n"
@@ -25,7 +25,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 2.0.6\n"
+"X-Generator: Poedit 2.4.3\n"
 
 #. Translators: name of the application, as displayed in the window manager
 #. Translators: name of the application, as displayed in the About dialog, some window managers, etc.
@@ -47,10 +47,10 @@ msgid ""
 "score points. Earn many more points by lining up as many objects as possible "
 "before clearing them."
 msgstr ""
-"Beş veya Daha Çoğu, zamanının gözde bilgisayar oyununun GNOME sürümüdür. Aynı "
-"renkteki beş veya daha çok nesneyi kaybolmaları için tek çizgide hizalayın "
-"ve puanları kazanın. Onları temizlemeden önce olabildiğince çok nesneyi "
-"sıralayarak daha çok puan kazanın."
+"Beş veya Daha Çoğu, zamanının gözde bilgisayar oyununun GNOME sürümüdür. "
+"Aynı renkteki beş veya daha çok nesneyi kaybolmaları için tek çizgide "
+"hizalayın ve puanları kazanın. Onları temizlemeden önce olabildiğince çok "
+"nesneyi sıralayarak daha çok puan kazanın."
 
 #: data/org.gnome.five-or-more.appdata.xml.in:16
 msgid ""
@@ -67,7 +67,7 @@ msgstr "GNOME Projesi"
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.five-or-more.desktop.in:6
 msgid "game;strategy;logic;"
-msgstr "oyun;strateji;mantık;"
+msgstr "oyun;strateji;izlem;mantık;"
 
 #: data/org.gnome.five-or-more.gschema.xml:6
 msgid "Playing field size"
@@ -81,11 +81,11 @@ msgstr ""
 
 #: data/org.gnome.five-or-more.gschema.xml:11
 msgid "Ball style"
-msgstr "Top stili"
+msgstr "Top biçimi"
 
 #: data/org.gnome.five-or-more.gschema.xml:12
 msgid "Ball style. The filename of the images to use for the balls."
-msgstr "Top stili. Toplar için kullanılacak resimlerin dosya adı."
+msgstr "Top biçimi. Toplar için kullanılacak resimlerin dosya adı."
 
 #. Translators: title of the ColorChooser dialog that appears from the hamburger menu > "Appearance" submenu > "Background" section > "Select color" entry
 #: data/org.gnome.five-or-more.gschema.xml:16 src/window.vala:222
@@ -138,7 +138,7 @@ msgstr "Piksel olarak pencerenin yüksekliği"
 
 #: data/org.gnome.five-or-more.gschema.xml:49
 msgid "true if the window is maximized"
-msgstr "eğer pencere en büyük hale getirilmişse işaretle"
+msgstr "eğer pencere en büyük hale getirilmişse doğru"
 
 #. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
 #. Translators: entry of the Size submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
@@ -312,8 +312,8 @@ msgstr "Büyük"
 
 #. Translators: About dialog text, name and email of one of the authors
 #: src/main.vala:95
-msgid "Robert Szokovacs <szo@appaloosacorp.hu>"
-msgstr "Robert Szokovacs <szo@appaloosacorp.hu>"
+msgid "Robert Szokovacs <szo@szo.hu>"
+msgstr "Robert Szokovacs <szo@szo.hu>"
 
 #. Translators: About dialog text, name and email of one of the authors
 #: src/main.vala:98
