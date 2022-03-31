@@ -5,19 +5,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games 0\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/five-or-more/issues\n"
-"POT-Creation-Date: 2020-05-31 06:52+0000\n"
-"PO-Revision-Date: 2020-08-23 20:24+0200\n"
-"Last-Translator: Launchpad Translations Administrators <rosetta@launchpad."
-"net>\n"
+"POT-Creation-Date: 2022-03-31 06:05+0000\n"
+"PO-Revision-Date: 2022-03-31 12:31+0200\n"
+"Last-Translator: gogo <trebelnik2@gmail.com>\n"
 "Language-Team: Croatian <lokalizacija@linux.hr>\n"
 "Language: hr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Launchpad-Export-Date: 2008-05-28 02:59+0000\n"
-"X-Generator: Poedit 2.4.1\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #. Translators: name of the application, as displayed in the window manager
 #. Translators: name of the application, as displayed in the About dialog, some window managers, etc.
@@ -80,7 +79,7 @@ msgid "Ball style. The filename of the images to use for the balls."
 msgstr "Izgled lopte. Naziv datoteke slika koje se koriste za lopte."
 
 #. Translators: title of the ColorChooser dialog that appears from the hamburger menu > "Appearance" submenu > "Background" section > "Select color" entry
-#: data/org.gnome.five-or-more.gschema.xml:16 src/window.vala:221
+#: data/org.gnome.five-or-more.gschema.xml:16 src/window.vala:222
 msgid "Background color"
 msgstr "Boja pozadine"
 
@@ -304,8 +303,8 @@ msgstr "Velika"
 
 #. Translators: About dialog text, name and email of one of the authors
 #: src/main.vala:95
-msgid "Robert Szokovacs <szo@appaloosacorp.hu>"
-msgstr "Robert Szokovacs <szo@appaloosacorp.hu>"
+msgid "Robert Szokovacs <szo@szo.hu>"
+msgstr "Robert Szokovacs <szo@szo.hu>"
 
 #. Translators: About dialog text, name and email of one of the authors
 #: src/main.vala:98
@@ -386,18 +385,18 @@ msgid "Board Size: "
 msgstr "Veličina ploče: "
 
 #. Translators: text of a dialog that appears when the user starts a new game while the score is not null
-#: src/window.vala:278
+#: src/window.vala:279
 #, c-format
 msgid "Are you sure you want to start a new %u × %u game?"
 msgstr "Sigurno želite ponovno pokrenuti novu %u × %u igru?"
 
 #. Translators: button of a dialog that appears when the user starts a new game while the score is not null; the other answer is "_Restart"
-#: src/window.vala:281
+#: src/window.vala:282
 msgid "_Cancel"
 msgstr "_Odustani"
 
 #. Translators: button of a dialog that appears when the user starts a new game while the score is not null; the other answer is "_Cancel"
-#: src/window.vala:284
+#: src/window.vala:285
 msgid "_Restart"
 msgstr "_Ponovno pokreni"
 
