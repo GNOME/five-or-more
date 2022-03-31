@@ -1,7 +1,7 @@
 /*
  * Color lines for GNOME
  * Copyright © 1999 Free Software Foundation
- * Authors: Robert Szokovacs <szo@appaloosacorp.hu>
+ * Authors: Robert Szokovacs <szo@szo.hu>
  *          Szabolcs Ban <shooby@gnome.hu>
  *          Karuna Grewal <karunagrewal98@gmail.com>
  *          Ruxandra Simion <ruxandra.simion93@gmail.com>
