@@ -1,3 +1,11 @@
+3.32.3 - 31 March, 2022
+======================
+
+* Updated translations
+* Fixed homepage in doap file (Sam Thursfield)
+* Fixed email of one of the authors (Szokovacs Robert)
+* Fixed minor meson warning (Robert Roth)
+
 3.32.2 - 28 March, 2020
 ======================
 

@@ -62,6 +62,33 @@
     <content_attribute id="money-gambling">none</content_attribute>
   </content_rating>
   <releases>
+    <release version="3.32.3" date="2022-03-31">
+      <description>
+        <p>Overview of changes in five-or-more 3.32.2</p>
+        <ul>
+          <li>Updated translations</li>
+          <li>Fixed homepage in doap file (Sam Thursfield)</li>
+          <li>Fixed email of one of the authors (Szokovacs Robert)</li>
+          <li>Fixed minor meson warning (Robert Roth)</li>
+        </ul>
+      </description>
+    </release>
+    <release version="3.32.2" date="2020-03-28">
+      <description>
+        <p>Overview of changes in five-or-more 3.32.2</p>
+        <ul>
+          <li>Fixed theme switcher working (Arnaud Bonatti)</li>
+        </ul>
+      </description>
+    </release>
+    <release version="3.32.1" date="2020-03-12">
+      <description>
+        <p>Overview of changes in five-or-more 3.32.1</p>
+        <ul>
+          <li>Fixed translations not working (Arnaud Bonatti)</li>
+        </ul>
+      </description>
+    </release>
     <release version="3.32.0" date="2019-03-11">
       <description>
         <p>Overview of changes in five-or-more 3.32.0</p>
