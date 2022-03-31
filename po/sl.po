@@ -5,14 +5,14 @@
 # Matej Erman <matej.erman@guest.arnes.si>, 2002.
 # Tadej Janež <tadej_janez@email.si>, 2003.
 # Matic Žgur <mr.zgur@gmail.com>, 2006–2007.
-# Matej Urbančič <mateju@svn.gnome.org>, + 2007–2020.
+# Matej Urbančič <mateju@svn.gnome.org>, + 2007–2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: five-or-more master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/five-or-more/issues\n"
-"POT-Creation-Date: 2020-08-11 07:00+0000\n"
-"PO-Revision-Date: 2020-08-21 22:01+0200\n"
+"POT-Creation-Date: 2022-03-31 18:53+0000\n"
+"PO-Revision-Date: 2022-03-31 21:28+0200\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: sl_SI\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Poedit 2.3\n"
+"X-Generator: Poedit 3.0\n"
 
 #. Translators: name of the application, as displayed in the window manager
 #. Translators: name of the application, as displayed in the About dialog, some window managers, etc.
@@ -310,8 +310,9 @@ msgstr "Velika"
 
 #. Translators: About dialog text, name and email of one of the authors
 #: src/main.vala:95
-msgid "Robert Szokovacs <szo@appaloosacorp.hu>"
-msgstr "Robert Szokovacs <szo@appaloosacorp.hu>"
+#| msgid "Robert Szokovacs <szo@appaloosacorp.hu>"
+msgid "Robert Szokovacs <szo@szo.hu>"
+msgstr "Robert Szokovacs <szo@szo.hu>"
 
 #. Translators: About dialog text, name and email of one of the authors
 #: src/main.vala:98
