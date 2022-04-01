@@ -2,7 +2,7 @@
 # Copyright (c) 2010 five-or-more's COPYRIGHT HOLDER
 # This file is distributed under the same license as the five-or-more package.
 #
-# Andika Triwidada <andika@gmail.com>, 2010, 2012, 2013, 2014, 2016.
+# Andika Triwidada <andika@gmail.com>, 2010, 2012-2014, 2016, 2022.
 # Vincent Sebastian The <vincent.s.the@gmail.com>, 2011, 2012.
 # Dirgita <dirgitadevina@yahoo.co.id>, 2012.
 # Kukuh Syafaat <kukuhsyafaat@gnome.org>, 2018-2021.
@@ -10,9 +10,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: five-or-more master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/five-or-more/issues\n"
-"POT-Creation-Date: 2021-01-25 14:13+0000\n"
-"PO-Revision-Date: 2021-12-22 15:50+0700\n"
-"Last-Translator: Kukuh Syafaat <kukuhsyafaat@gnome.org>\n"
+"POT-Creation-Date: 2022-03-31 06:05+0000\n"
+"PO-Revision-Date: 2022-04-01 11:20+0700\n"
+"Last-Translator: Andika Triwidada <andika@gmail.com>\n"
 "Language-Team: Indonesian <gnome@i15n.org>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
@@ -307,8 +307,9 @@ msgstr "Besar"
 
 #. Translators: About dialog text, name and email of one of the authors
 #: src/main.vala:95
-msgid "Robert Szokovacs <szo@appaloosacorp.hu>"
-msgstr "Robert Szokovacs <szo@appaloosacorp.hu>"
+#| msgid "Robert Szokovacs <szo@appaloosacorp.hu>"
+msgid "Robert Szokovacs <szo@szo.hu>"
+msgstr "Robert Szokovacs <szo@szo.hu>"
 
 #. Translators: About dialog text, name and email of one of the authors
 #: src/main.vala:98
@@ -361,7 +362,7 @@ msgid "translator-credits"
 msgstr ""
 "Mohammad DAMT <mdamt@bisnisweb.com>\n"
 "Ahmad Riza H Nst  <rizahnst@gnome.org>\n"
-"Andika Triwidada <andika@gmail.com>, 2010, 2012, 2013, 2014, 2016.\n"
+"Andika Triwidada <andika@gmail.com>, 2010, 2012-2014, 2016, 2022.\n"
 "Vincent Sebastian The <vincent.s.the@gmail.com>, 2011, 2012.\n"
 "Dirgita <dirgitadevina@yahoo.co.id>, 2012.\n"
 "Kukuh Syafaat <kukuhsyafaat@gnome.org>, 2018-2021."
@@ -408,93 +409,3 @@ msgstr "_Batal"
 #: src/window.vala:285
 msgid "_Restart"
 msgstr "_Ulangi"
-
-#~ msgid "Preferences"
-#~ msgstr "Preferensi"
-
-#~ msgid "_Theme:"
-#~ msgstr "_Tema:"
-
-#~ msgid "B_ackground color:"
-#~ msgstr "W_arna latar belakang:"
-
-#~ msgid "_Preferences"
-#~ msgstr "_Preferensi"
-
-#~ msgid "org.gnome.five-or-more"
-#~ msgstr "org.gnome.five-or-more"
-
-#~ msgid "_Image:"
-#~ msgstr "_Gambar:"
-
-#~ msgid "Board Size"
-#~ msgstr "Ukuran Papan"
-
-#~ msgid "_Use fast moves"
-#~ msgstr "G_unakan langkah cepat"
-
-#~ msgctxt "themes"
-#~ msgid "dots"
-#~ msgstr "titik"
-
-#~ msgctxt "themes"
-#~ msgid "gumball"
-#~ msgstr "gumball"
-
-#~ msgid ""
-#~ "Unable to locate file:\n"
-#~ "%s\n"
-#~ "\n"
-#~ "The default theme will be loaded instead."
-#~ msgstr ""
-#~ "Tidak bisa menemukan berkas:\n"
-#~ "%s\n"
-#~ "\n"
-#~ "Tema baku akan dimuat."
-
-#~ msgid ""
-#~ "Unable to locate file:\n"
-#~ "%s\n"
-#~ "\n"
-#~ "Please check that Five or More is installed correctly."
-#~ msgstr ""
-#~ "Tidak dapat memuat berkas:\n"
-#~ "%s\n"
-#~ "\n"
-#~ "Silakan periksa apakah Five or More telah terinstal dengan benar"
-
-#~ msgid "Could not load theme"
-#~ msgstr "Tak bisa memuat tema"
-
-#~ msgid "0"
-#~ msgstr "0"
-
-#~ msgid "Five or More Scores"
-#~ msgstr "Skor Five or More"
-
-#~ msgid "_Board size:"
-#~ msgstr "Ukuran _papan:"
-
-#~ msgctxt "score-dialog"
-#~ msgid "Time"
-#~ msgstr "Waktu"
-
-#~ msgctxt "score-dialog"
-#~ msgid "Score"
-#~ msgstr "Nilai"
-
-#~ msgctxt "score-dialog"
-#~ msgid "%1$dm %2$ds"
-#~ msgstr "%1$dm %2$ds"
-
-#~ msgid "_Quit"
-#~ msgstr "_Keluar"
-
-#~ msgid "_Undo"
-#~ msgstr "_Tak Jadi"
-
-#~ msgid "_Close"
-#~ msgstr "_Tutup"
-
-#~ msgid "Date"
-#~ msgstr "Tanggal"
