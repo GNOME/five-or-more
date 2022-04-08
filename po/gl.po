@@ -11,22 +11,28 @@
 # Antón Méixome <meixome@mancomun.org>, 2009.
 # Fran Diéguez <frandieguez@gnome.org>, 2009, 2010, 2011.
 # Leandro Regueiro <leandro.regueiro@gmail.com>, 2012.
-# Fran Dieguez <frandieguez@gnome.gl>, 2011-2020, 2021.
+# Fran Dieguez <frandieguez@gnome.org>, 2011-2022.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games-master-po-gl-54590\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/five-or-more/issues\n"
-"POT-Creation-Date: 2021-01-25 14:13+0000\n"
-"PO-Revision-Date: 2021-02-23 23:32+0100\n"
+"POT-Creation-Date: 2022-03-31 06:05+0000\n"
+"PO-Revision-Date: 2022-04-07 12:06+0200\n"
 "Last-Translator: Fran Dieguez <frandieguez@gnome.org>\n"
-"Language-Team: Proxecto Trasno <proxecto@trasno.gal>\n"
+"Language-Team: Galician <Proxecto Trasno <proxecto@trasno.gal>>\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"X-Generator: Gtranslator 3.38.0\n"
+"X-Generator: Gtranslator 40.0\n"
 "X-Project-Style: gnome\n"
+"X-DL-Team: gl\n"
+"X-DL-Module: five-or-more\n"
+"X-DL-Branch: master\n"
+"X-DL-Domain: po\n"
+"X-DL-State: Translating\n"
 
 #. Translators: name of the application, as displayed in the window manager
 #. Translators: name of the application, as displayed in the About dialog, some window managers, etc.
@@ -315,8 +321,9 @@ msgstr "Grande"
 
 #. Translators: About dialog text, name and email of one of the authors
 #: src/main.vala:95
-msgid "Robert Szokovacs <szo@appaloosacorp.hu>"
-msgstr "Robert Szokovacs <szo@appaloosacorp.hu>"
+#| msgid "Robert Szokovacs <szo@appaloosacorp.hu>"
+msgid "Robert Szokovacs <szo@szo.hu>"
+msgstr "Robert Szokovacs <szo@szo.hu>"
 
 #. Translators: About dialog text, name and email of one of the authors
 #: src/main.vala:98
