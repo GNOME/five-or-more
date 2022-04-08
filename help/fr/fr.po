@@ -8,13 +8,13 @@
 # Claude Paroz <claude@2xlibre.net>, 2007-2009.
 # Bruno Brouard <annoa.b@gmail.com>, 2012.
 # jean-baptiste <jean-baptiste@holcroft.fr>, 2018.
-# Charles Monzat <charles.monzat@free.fr>, 2017-2021.
+# Charles Monzat <charles.monzat@free.fr>, 2017-2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: glines documentation\n"
-"POT-Creation-Date: 2021-01-25 14:13+0000\n"
-"PO-Revision-Date: 2021-03-24 17:26+0100\n"
+"POT-Creation-Date: 2021-07-28 20:10+0000\n"
+"PO-Revision-Date: 2022-01-28 10:13+0100\n"
 "Last-Translator: Charles Monzat <charles.monzat@free.fr>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "Language: fr\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Gtranslator 3.38.0\n"
+"X-Generator: Gtranslator 40.0\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -33,7 +33,7 @@ msgstr ""
 "Bruno Brouard <annoa.b@gmail.com>, 2008, 2012\n"
 "Alain Lojewski <allomervan@gmail.com>, 2012\n"
 "Jean-Baptiste Holcroft <jean-baptiste@holcroft.fr>, 2018\n"
-"Charles Monzat <charles.monzat@free.fr>, 2020-2021"
+"Charles Monzat <charles.monzat@free.fr>, 2020-2022"
 
 #. (itstool) path: credit/name
 #: C/bug-filing.page:10 C/change-board-size.page:14 C/change-theme.page:14
@@ -104,22 +104,29 @@ msgstr ""
 
 #. (itstool) path: page/p
 #: C/bug-filing.page:30
+#| msgid ""
+#| "Once you have an account, log in, click on <guiseq><gui>Projects</"
+#| "gui><gui>five-or-more</gui><gui>Issues</gui><gui>New issue</gui></"
+#| "guiseq>. Before reporting a bug, please read the <link href=\"https://"
+#| "bugzilla.gnome.org/page.cgi?id=bug-writing.html\">bug writing guidelines</"
+#| "link>, and please <link href=\"https://gitlab.gnome.org/GNOME/five-or-"
+#| "more/issues\">browse</link> for the bug to see if it already exists."
 msgid ""
 "Once you have an account, log in, click on <guiseq><gui>Projects</"
 "gui><gui>five-or-more</gui><gui>Issues</gui><gui>New issue</gui></guiseq>. "
-"Before reporting a bug, please read the <link href=\"https://bugzilla.gnome."
-"org/page.cgi?id=bug-writing.html\">bug writing guidelines</link>, and please "
-"<link href=\"https://gitlab.gnome.org/GNOME/five-or-more/issues\">browse</"
-"link> for the bug to see if it already exists."
+"Before reporting a bug, please read the <link href=\"https://wiki.gnome.org/"
+"GettingInTouch/BugReportingGuidelines\">bug writing guidelines</link>, and "
+"please <link href=\"https://gitlab.gnome.org/GNOME/five-or-more/issues"
+"\">browse</link> for the bug to see if it already exists."
 msgstr ""
 "Une fois en possession de votre compte, connectez-vous, cliquez alors "
 "successivement sur <guiseq><gui>Projects</gui><gui>five-or-more</"
 "gui><gui>Issues</gui><gui>New issue</gui></guiseq>. Avant de signaler une "
-"anomalie, lisez le <link href=\"https://bugzilla.gnome.org/page.cgi?id=bug-"
-"writing.html\">guide de rédaction des rapport de bogues</link> et faites une "
-"<link href=\"https://gitlab.gnome.org/GNOME/five-or-more/issues\">recherche</"
-"link> au sujet de l’anomalie au cas où quelque chose de similaire existerait "
-"déjà."
+"anomalie, lisez le <link href=\"https://wiki.gnome.org/GettingInTouch/"
+"BugReportingGuidelines\">guide de rédaction des rapport de bogues</link> et "
+"faites une <link href=\"https://gitlab.gnome.org/GNOME/five-or-more/issues"
+"\">recherche</link> au sujet de l’anomalie au cas où quelque chose de "
+"similaire existerait déjà."
 
 #. (itstool) path: page/p
 #: C/bug-filing.page:33
@@ -862,7 +869,6 @@ msgstr "56"
 
 #. (itstool) path: td/p
 #: C/scores.page:74
-#| msgid "5"
 msgid "59"
 msgstr "59"
 
