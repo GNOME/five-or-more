@@ -19,20 +19,22 @@
 # Tobias Endrigkeit <tobiasendrigkeit@googlemail.com>, 2012.
 # Bernd Homuth <dev@hmt.im>, 2015.
 # Tim Sabsch <tim@sabsch.com>, 2018-2019.
+#
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: five-or-more master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/five-or-more/issues\n"
-"POT-Creation-Date: 2020-05-31 06:52+0000\n"
-"PO-Revision-Date: 2020-08-31 19:41+0200\n"
-"Last-Translator: Mario Blättermann <mario.blaettermann@gmail.com>\n"
+"POT-Creation-Date: 2022-03-31 06:05+0000\n"
+"PO-Revision-Date: 2022-04-22 15:05+0200\n"
+"Last-Translator: Philipp Kiemle <philipp.kiemle@gmail.com>\n"
 "Language-Team: Deutsch <gnome-de@gnome.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 20.08.0\n"
+"X-Generator: Poedit 3.0\n"
 
 #. Translators: name of the application, as displayed in the window manager
 #. Translators: name of the application, as displayed in the About dialog, some window managers, etc.
@@ -49,8 +51,8 @@ msgstr "Farbige Kugeln durch Formieren von Linien aus dem Spielbrett entfernen"
 
 #: data/org.gnome.five-or-more.appdata.xml.in:10
 msgid ""
-"Five or More is the GNOME port of a once-popular computer game. Align five or "
-"more objects of the same color into a line to cause them to disappear and "
+"Five or More is the GNOME port of a once-popular computer game. Align five "
+"or more objects of the same color into a line to cause them to disappear and "
 "score points. Earn many more points by lining up as many objects as possible "
 "before clearing them."
 msgstr ""
@@ -61,11 +63,11 @@ msgstr ""
 
 #: data/org.gnome.five-or-more.appdata.xml.in:16
 msgid ""
-"More objects appear after every turn. Play for as long as possible, until the "
-"board is completely full!"
+"More objects appear after every turn. Play for as long as possible, until "
+"the board is completely full!"
 msgstr ""
-"Nach jedem Spielzug erscheinen weitere Objekte. Spielen Sie so lange, bis das "
-"Spielfeld vollständig ausgefüllt ist!"
+"Nach jedem Spielzug erscheinen weitere Objekte. Spielen Sie so lange, bis "
+"das Spielfeld vollständig ausgefüllt ist!"
 
 #: data/org.gnome.five-or-more.appdata.xml.in:40
 msgid "The GNOME Project"
@@ -95,7 +97,7 @@ msgid "Ball style. The filename of the images to use for the balls."
 msgstr "Kugelstil. Der Dateiname der für die Kugeln zu verwendenden Bilder."
 
 #. Translators: title of the ColorChooser dialog that appears from the hamburger menu > "Appearance" submenu > "Background" section > "Select color" entry
-#: data/org.gnome.five-or-more.gschema.xml:16 src/window.vala:221
+#: data/org.gnome.five-or-more.gschema.xml:16 src/window.vala:222
 msgid "Background color"
 msgstr "Hintergrundfarbe"
 
@@ -180,7 +182,6 @@ msgstr "_Punkte"
 
 #. Translators: submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); allows to change the theme
 #: data/ui/five-or-more.ui:51
-#| msgid "Appearance"
 msgid "A_ppearance"
 msgstr "_Erscheinungsbild"
 
@@ -201,7 +202,6 @@ msgstr "Tango"
 
 #. Translators: title of a section in the Appearance submenu of the hamburger menu; contains "Select color" and "Default color"
 #: data/ui/five-or-more.ui:74
-#| msgid "Background color"
 msgid "Background"
 msgstr "_Hintergrundfarbe"
 
@@ -237,14 +237,12 @@ msgstr "Nächste Kugeln:"
 
 #. Translators: header of the "Start a new game" (only) shortcut section
 #: data/ui/help-overlay.ui:29
-#| msgid "_New Game"
 msgctxt "shortcut window"
 msgid "New game"
 msgstr "Neues Spiel"
 
 #. Translators: in the Keyboard Shortcuts window, section "New game"; action of the Ctrl-N shortcut
 #: data/ui/help-overlay.ui:34
-#| msgid "Start a new puzzle"
 msgctxt "shortcut window"
 msgid "Start a new game"
 msgstr "Ein neues Spiel beginnen"
@@ -269,7 +267,6 @@ msgstr "Spielstein auswählen oder ablegen"
 
 #. Translators: header of the "Toggle main menu," "Keyboard shortcuts," "About," "Quit," etc. shortcuts section
 #: data/ui/help-overlay.ui:67
-#| msgid "General"
 msgctxt "shortcut window"
 msgid "Generic"
 msgstr "Allgemein"
@@ -288,21 +285,18 @@ msgstr "Tastenkombinationen"
 
 #. Translators: in the Keyboard Shortcuts window, section "Generic"; action of the F1 shortcut; opens the help of the application
 #: data/ui/help-overlay.ui:88
-#| msgid "_Help"
 msgctxt "shortcut window"
 msgid "Help"
 msgstr "Hilfe"
 
 #. Translators: future keyboard shortcut; action of the Shift-F1 shortcut; opens the About dialog
 #: data/ui/help-overlay.ui:96
-#| msgid "About"
 msgctxt "shortcut window"
 msgid "About"
 msgstr "Info"
 
 #. Translators: in the Keyboard Shortcuts window, section "Generic"; action of the Ctrl-Q shortcut; quits the application
 #: data/ui/help-overlay.ui:104
-#| msgid "Quit"
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Beenden"
@@ -327,8 +321,9 @@ msgstr "Groß"
 
 #. Translators: About dialog text, name and email of one of the authors
 #: src/main.vala:95
-msgid "Robert Szokovacs <szo@appaloosacorp.hu>"
-msgstr "Robert Szokovacs <szo@appaloosacorp.hu>"
+#| msgid "Robert Szokovacs <szo@appaloosacorp.hu>"
+msgid "Robert Szokovacs <szo@szo.hu>"
+msgstr "Robert Szokovacs <szo@szo.hu>"
 
 #. Translators: About dialog text, name and email of one of the authors
 #: src/main.vala:98
@@ -401,7 +396,8 @@ msgstr ""
 #: src/window.vala:49
 msgid "Match five objects of the same type in a row to score!"
 msgstr ""
-"Ordnen Sie fünf gleichartige Objekte in einer Reihe an, um Punkte zu erzielen!"
+"Ordnen Sie fünf gleichartige Objekte in einer Reihe an, um Punkte zu "
+"erzielen!"
 
 #. Translators: subtitle of the headerbar, when the user clicked on a tile where the selected marble cannot move
 #: src/window.vala:52
@@ -425,19 +421,18 @@ msgid "Board Size: "
 msgstr "Spielflächengröße: "
 
 #. Translators: text of a dialog that appears when the user starts a new game while the score is not null
-#: src/window.vala:278
+#: src/window.vala:279
 #, c-format
-#| msgid "Are you sure you want to restart the game?"
 msgid "Are you sure you want to start a new %u × %u game?"
 msgstr "Wollen Sie wirklich eine neues Spiel der Größe %u × %u starten?"
 
 #. Translators: button of a dialog that appears when the user starts a new game while the score is not null; the other answer is "_Restart"
-#: src/window.vala:281
+#: src/window.vala:282
 msgid "_Cancel"
 msgstr "A_bbrechen"
 
 #. Translators: button of a dialog that appears when the user starts a new game while the score is not null; the other answer is "_Cancel"
-#: src/window.vala:284
+#: src/window.vala:285
 msgid "_Restart"
 msgstr "Neu sta_rten"
 
