@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.HEAD.ro\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/five-or-more/issues\n"
-"POT-Creation-Date: 2020-05-08 17:19+0000\n"
+"POT-Creation-Date: 2022-03-31 06:05+0000\n"
 "PO-Revision-Date: 2020-05-17 16:24+0300\n"
 "Last-Translator: Florentina Mușat <emryslokadottir [at] gmail [dot] com>\n"
 "Language-Team: Romanian Gnome Team <gnomero-list@lists.sourceforge.net>\n"
@@ -87,7 +87,7 @@ msgid "Ball style. The filename of the images to use for the balls."
 msgstr "Stilul bilei. Numele fișierului ce conține imaginile pentru bile."
 
 #. Translators: title of the ColorChooser dialog that appears from the hamburger menu > "Appearance" submenu > "Background" section > "Select color" entry
-#: data/org.gnome.five-or-more.gschema.xml:16 src/window.vala:193
+#: data/org.gnome.five-or-more.gschema.xml:16 src/window.vala:222
 msgid "Background color"
 msgstr "Culoarea de fundal"
 
@@ -170,7 +170,7 @@ msgstr "Ma_re"
 msgid "S_cores"
 msgstr "S_coruri"
 
-#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); displays allows to change the theme
+#. Translators: submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); allows to change the theme
 #: data/ui/five-or-more.ui:51
 msgid "A_ppearance"
 msgstr "As_pect"
@@ -190,7 +190,7 @@ msgstr "forme"
 msgid "tango"
 msgstr "tango"
 
-#. Translators: title of a section in the Appearance submenu of the hamburger menu; containes "Select color" and "Reset color"
+#. Translators: title of a section in the Appearance submenu of the hamburger menu; contains "Select color" and "Default color"
 #: data/ui/five-or-more.ui:74
 msgid "Background"
 msgstr "Fundal"
@@ -310,57 +310,57 @@ msgid "Large"
 msgstr "Mare"
 
 #. Translators: About dialog text, name and email of one of the authors
-#: src/main.vala:97
-msgid "Robert Szokovacs <szo@appaloosacorp.hu>"
-msgstr "Robert Szokovacs <szo@appaloosacorp.hu>"
+#: src/main.vala:95
+msgid "Robert Szokovacs <szo@szo.hu>"
+msgstr "Robert Szokovacs <szo@szo.hu>"
 
 #. Translators: About dialog text, name and email of one of the authors
-#: src/main.vala:100
+#: src/main.vala:98
 msgid "Szabolcs Bán <shooby@gnome.hu>"
 msgstr "Szabolcs Bán <shooby@gnome.hu>"
 
 #. Translators: About dialog text, name of one of the artists
-#: src/main.vala:105
+#: src/main.vala:103
 msgid "Callum McKenzie"
 msgstr "Callum McKenzie"
 
 #. Translators: About dialog text, name of a website that provided some artworks
-#: src/main.vala:108
+#: src/main.vala:106
 msgid "kenney.nl"
 msgstr "kenney.nl"
 
 #. Translators: About dialog text, name of one of the artists
-#: src/main.vala:111
+#: src/main.vala:109
 msgid "Robert Roth"
 msgstr "Robert Roth"
 
 #. Translators: About dialog text, name of one of the documenters
-#: src/main.vala:116
+#: src/main.vala:114
 msgid "Tiffany Antopolski"
 msgstr "Tiffany Antopolski"
 
 #. Translators: About dialog text, name of one of the documenters
-#: src/main.vala:119
+#: src/main.vala:117
 msgid "Lanka Rathnayaka"
 msgstr "Lanka Rathnayaka"
 
 #. Translators: About dialog text, first line of the copyright notice
-#: src/main.vala:123
+#: src/main.vala:121
 msgid "Copyright © 1997–2008 Free Software Foundation, Inc."
 msgstr "Drepturi de autor © 1997–2008 Free Software Foundation, Inc."
 
 #. Translators: About dialog text, second line of the copyright notice
-#: src/main.vala:126
+#: src/main.vala:124
 msgid "Copyright © 2013–2014 Michael Catanzaro"
 msgstr "Drepturi de autor © 2013–2014 Michael Catanzaro"
 
 #. Translators: About dialog text, describing the application
-#: src/main.vala:133
+#: src/main.vala:131
 msgid "GNOME port of the once-popular Color Lines game"
 msgstr "Portare GNOME al jocului odinioară popular Colorează liniile"
 
 #. Translators: about dialog text; this string should be replaced by a text crediting yourselves and your translation team, or should be left empty. Do not translate literally!
-#: src/main.vala:140
+#: src/main.vala:138
 msgid "translator-credits"
 msgstr ""
 "Mugurel Tudor <mugurelu@gnome.ro>\n"
@@ -384,133 +384,44 @@ msgstr ""
 "  leandrud https://launchpad.net/~leandrud"
 
 #. Translators: subtitle of the headerbar, at the application start
-#: src/window.vala:50
+#: src/window.vala:49
 msgid "Match five objects of the same type in a row to score!"
 msgstr "Potriviți cinci obiecte de același tip într-o linie pentru a puncta!"
 
 #. Translators: subtitle of the headerbar, when the user clicked on a tile where the selected marble cannot move
-#: src/window.vala:53
+#: src/window.vala:52
 msgid "You can’t move there!"
 msgstr "Nu se poate muta acolo!"
 
 #. Translators: subtitle of the headerbar, at the end of a game
-#: src/window.vala:56
+#: src/window.vala:55
 msgid "Game Over!"
 msgstr "Jocul s-a terminat!"
 
 #. Translators: subtitle of the headerbar, during a game; the %d is replaced by the score
-#: src/window.vala:59
+#: src/window.vala:58
 #, c-format
 msgid "Score: %d"
 msgstr "Scor: %d"
 
 #. Translators: text in the Scores dialog, introducing the combobox
-#: src/window.vala:124
+#: src/window.vala:175
 msgid "Board Size: "
 msgstr "Mărime tablă: "
 
 #. Translators: text of a dialog that appears when the user starts a new game while the score is not null
-#: src/window.vala:246
+#: src/window.vala:279
 #, c-format
 msgid "Are you sure you want to start a new %u × %u game?"
 msgstr "Sigur doriți să începeți un joc %u × %u nou?"
 
 #. Translators: button of a dialog that appears when the user starts a new game while the score is not null; the other answer is "_Restart"
-#: src/window.vala:249
+#: src/window.vala:282
 msgid "_Cancel"
 msgstr "_Anulează"
 
 #. Translators: button of a dialog that appears when the user starts a new game while the score is not null; the other answer is "_Cancel"
-#: src/window.vala:252
+#: src/window.vala:285
 msgid "_Restart"
 msgstr "_Reîncepe"
 
-#~ msgid "Preferences"
-#~ msgstr "Preferințe"
-
-#~ msgid "_Theme:"
-#~ msgstr "_Temă:"
-
-#~ msgid "B_ackground color:"
-#~ msgstr "Culo_area de fond:"
-
-#~ msgid "_Preferences"
-#~ msgstr "_Preferințe"
-
-#~ msgid "org.gnome.five-or-more"
-#~ msgstr "org.gnome.five-or-more"
-
-#~ msgid "_Image:"
-#~ msgstr "_Imagine:"
-
-#~ msgid "Board Size"
-#~ msgstr "Mărime tablă"
-
-#~ msgid "_Use fast moves"
-#~ msgstr "_Folosește mutări rapide"
-
-#~ msgctxt "themes"
-#~ msgid "dots"
-#~ msgstr "puncte"
-
-#~ msgctxt "themes"
-#~ msgid "gumball"
-#~ msgstr "bilă de gumă"
-
-#~ msgid ""
-#~ "Unable to locate file:\n"
-#~ "%s\n"
-#~ "\n"
-#~ "The default theme will be loaded instead."
-#~ msgstr ""
-#~ "Nu s-a putut localiza fișierul:\n"
-#~ "%s\n"
-#~ "\n"
-#~ "Tema implicită va fi încărcată în schimb."
-
-#~ msgid ""
-#~ "Unable to locate file:\n"
-#~ "%s\n"
-#~ "\n"
-#~ "Please check that Five or More is installed correctly."
-#~ msgstr ""
-#~ "Nu s-a putut localiza fișierul:\n"
-#~ "%s\n"
-#~ "\n"
-#~ "Verificați dacă jocul „Cinci sau mai multe” este instalat corect."
-
-#~ msgid "Could not load theme"
-#~ msgstr "Nu s-a putut încărca tema"
-
-#~ msgid "0"
-#~ msgstr "0"
-
-#~ msgid "Five or More Scores"
-#~ msgstr "Scoruri cinci sau mai multe"
-
-#~ msgid "_Board size:"
-#~ msgstr "_Dimensiunea tablei:"
-
-#~ msgctxt "score-dialog"
-#~ msgid "Time"
-#~ msgstr "Timp"
-
-#~ msgctxt "score-dialog"
-#~ msgid "Score"
-#~ msgstr "Scor"
-
-#~ msgctxt "score-dialog"
-#~ msgid "%1$dm %2$ds"
-#~ msgstr "%1$dm %2$ds"
-
-#~ msgid "_Quit"
-#~ msgstr "_Ieșire"
-
-#~ msgid "_Undo"
-#~ msgstr "An_ulează"
-
-#~ msgid "_Close"
-#~ msgstr "În_chide"
-
-#~ msgid "Date"
-#~ msgstr "Dată"
