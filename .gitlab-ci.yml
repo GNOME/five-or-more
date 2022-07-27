@@ -4,7 +4,6 @@ variables:
     BUNDLE: "five-or-more-dev.flatpak"
 
 flatpak:
-    image: 'registry.gitlab.gnome.org/gnome/gnome-runtime-images/gnome:master'
     variables:
         MANIFEST_PATH: " org.gnome.five-or-more.json"
         FLATPAK_MODULE: "five-or-more"
