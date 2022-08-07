@@ -2,14 +2,14 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
-#
 # Iñaki Larrañaga Murgoitio <dooteo@zundan.com>, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2016.
-# Asier Sarasua Garmendia <asiersarasua@ni.eus>, 2019, 2020
+# Asier Sarasua Garmendia <asiersarasua@ni.eus>, 2019, 2020, 2020.
+#
 msgid ""
 msgstr "Project-Id-Version: gnome-todo master\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-todo/issues\n"
-"POT-Creation-Date: 2020-05-30 11:25+0000\n"
-"PO-Revision-Date: 2020-05-30 10:00+0100\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/five-or-more/issues\n"
+"POT-Creation-Date: 2022-07-07 20:11+0000\n"
+"PO-Revision-Date: 2022-08-07 10:00+0100\n"
 "Last-Translator: Asier Sarasua Garmendia <asiersarasua@ni.eus>\n"
 "Language-Team: Basque <librezale@librezale.eus>\n"
 "Language: eu\n"
@@ -72,7 +72,7 @@ msgid "Ball style. The filename of the images to use for the balls."
 msgstr "Puxtarrien estiloa. Puxtarrietan erabiliko den irudien fitxategi-izena."
 
 #. Translators: title of the ColorChooser dialog that appears from the hamburger menu > "Appearance" submenu > "Background" section > "Select color" entry
-#: data/org.gnome.five-or-more.gschema.xml:16 src/window.vala:221
+#: data/org.gnome.five-or-more.gschema.xml:16 src/window.vala:222
 msgid "Background color"
 msgstr "Atzeko planoaren kolorea"
 
@@ -296,8 +296,8 @@ msgstr "Handia"
 
 #. Translators: About dialog text, name and email of one of the authors
 #: src/main.vala:95
-msgid "Robert Szokovacs <szo@appaloosacorp.hu>"
-msgstr "Robert Szokovacs <szo@appaloosacorp.hu>"
+msgid "Robert Szokovacs <szo@szo.hu>"
+msgstr "Robert Szokovacs <szo@szo.hu>"
 
 #. Translators: About dialog text, name and email of one of the authors
 #: src/main.vala:98
@@ -376,18 +376,18 @@ msgid "Board Size: "
 msgstr "Taularen tamaina: "
 
 #. Translators: text of a dialog that appears when the user starts a new game while the score is not null
-#: src/window.vala:278
+#: src/window.vala:279
 #, c-format
 msgid "Are you sure you want to start a new %u × %u game?"
 msgstr "Ziur zaude %u × %u joko berria hasi nahi duzula?"
 
 #. Translators: button of a dialog that appears when the user starts a new game while the score is not null; the other answer is "_Restart"
-#: src/window.vala:281
+#: src/window.vala:282
 msgid "_Cancel"
 msgstr "_Utzi"
 
 #. Translators: button of a dialog that appears when the user starts a new game while the score is not null; the other answer is "_Cancel"
-#: src/window.vala:284
+#: src/window.vala:285
 msgid "_Restart"
 msgstr "_Berrabiarazi"
 
