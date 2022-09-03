@@ -5,14 +5,14 @@
 # Peteris Krisjanis <peteris.krisjanis@os.lv>, 2002.
 # Raivis Dejus <orvils@gmail.com>, 2006, 2007.
 # Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>, 2010, 2011.
-# Rūdofls Mazurs <rudolfs.mazurs@gmail.com>, 2011, 2012, 2013, 2014, 2015, 2016, 2018, 2019, 2020.
+# Rūdofls Mazurs <rudolfs.mazurs@gmail.com>, 2011, 2012, 2013, 2014, 2015, 2016, 2018, 2019, 2020, 2022.
 # Vika Leimane <vika.leimane@gmail.com>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: lv\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/five-or-more/issues\n"
-"POT-Creation-Date: 2020-09-06 17:41+0000\n"
-"PO-Revision-Date: 2020-09-12 22:02+0300\n"
+"POT-Creation-Date: 2022-07-07 20:11+0000\n"
+"PO-Revision-Date: 2022-09-03 20:26+0300\n"
 "Last-Translator: Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>\n"
 "Language-Team: Latvian <lata-l10n@googlegroups.com>\n"
 "Language: lv\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 :"
 " 2);\n"
-"X-Generator: Lokalize 19.12.3\n"
+"X-Generator: Lokalize 21.12.3\n"
 "X-Poedit-Language: Latvian\n"
 "X-Poedit-Country: LATVIA\n"
 
@@ -171,7 +171,6 @@ msgstr "_Rezultāti"
 
 #. Translators: submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); allows to change the theme
 #: data/ui/five-or-more.ui:51
-#| msgid "Appearance"
 msgid "A_ppearance"
 msgstr "_Izskats"
 
@@ -192,7 +191,6 @@ msgstr "tango"
 
 #. Translators: title of a section in the Appearance submenu of the hamburger menu; contains "Select color" and "Default color"
 #: data/ui/five-or-more.ui:74
-#| msgid "Background color"
 msgid "Background"
 msgstr "Fons"
 
@@ -228,14 +226,12 @@ msgstr "Nākamais:"
 
 #. Translators: header of the "Start a new game" (only) shortcut section
 #: data/ui/help-overlay.ui:29
-#| msgid "_New Game"
 msgctxt "shortcut window"
 msgid "New game"
 msgstr "Jauna spēle"
 
 #. Translators: in the Keyboard Shortcuts window, section "New game"; action of the Ctrl-N shortcut
 #: data/ui/help-overlay.ui:34
-#| msgid "Start a new puzzle"
 msgctxt "shortcut window"
 msgid "Start a new game"
 msgstr "Sākt jaunu spēli"
@@ -260,7 +256,6 @@ msgstr "Izvēlieties vai nomest kauliņu"
 
 #. Translators: header of the "Toggle main menu," "Keyboard shortcuts," "About," "Quit," etc. shortcuts section
 #: data/ui/help-overlay.ui:67
-#| msgid "General"
 msgctxt "shortcut window"
 msgid "Generic"
 msgstr "Vispārīgi"
@@ -279,21 +274,18 @@ msgstr "Tastatūras īsinājumtaustiņi"
 
 #. Translators: in the Keyboard Shortcuts window, section "Generic"; action of the F1 shortcut; opens the help of the application
 #: data/ui/help-overlay.ui:88
-#| msgid "_Help"
 msgctxt "shortcut window"
 msgid "Help"
 msgstr "Palīdzība"
 
 #. Translators: future keyboard shortcut; action of the Shift-F1 shortcut; opens the About dialog
 #: data/ui/help-overlay.ui:96
-#| msgid "About"
 msgctxt "shortcut window"
 msgid "About"
 msgstr "Par"
 
 #. Translators: in the Keyboard Shortcuts window, section "Generic"; action of the Ctrl-Q shortcut; quits the application
 #: data/ui/help-overlay.ui:104
-#| msgid "Quit"
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Iziet"
@@ -318,8 +310,9 @@ msgstr "Liels"
 
 #. Translators: About dialog text, name and email of one of the authors
 #: src/main.vala:95
-msgid "Robert Szokovacs <szo@appaloosacorp.hu>"
-msgstr "Robert Szokovacs <szo@appaloosacorp.hu>"
+#| msgid "Robert Szokovacs <szo@appaloosacorp.hu>"
+msgid "Robert Szokovacs <szo@szo.hu>"
+msgstr "Robert Szokovacs <szo@szo.hu>"
 
 #. Translators: About dialog text, name and email of one of the authors
 #: src/main.vala:98
@@ -404,7 +397,6 @@ msgstr "Galdiņa izmērs: "
 #. Translators: text of a dialog that appears when the user starts a new game while the score is not null
 #: src/window.vala:279
 #, c-format
-#| msgid "Are you sure you want to restart the game?"
 msgid "Are you sure you want to start a new %u × %u game?"
 msgstr "Vai tiešām vēlies sākt jaunu %u × %u spēli?"
 
