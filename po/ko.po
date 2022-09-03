@@ -5,7 +5,7 @@
 # ChiHyeon Kim <pipi910327@gmail.com>, 2017.
 # Hyunwoo Park <ez.amiryo@gmail.com>, 2018.
 # Changwoo Ryu <cwryu@debian.org>, 1998, 2002-2015, 2017, 2019.
-# Seong-ho Cho <shcho@gnome.org>, 2019-2020.
+# Seong-ho Cho <shcho@gnome.org>, 2019-2020, 2022.
 #
 #
 # 새로 번역하신 분은 아래 "translator-credits"에 추가하세요.
@@ -27,8 +27,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/five-or-more/issues\n"
-"POT-Creation-Date: 2020-07-19 06:57+0000\n"
-"PO-Revision-Date: 2020-09-07 22:35+0900\n"
+"POT-Creation-Date: 2022-07-07 20:11+0000\n"
+"PO-Revision-Date: 2022-08-28 22:15+0900\n"
 "Last-Translator: Seong-ho Cho <shcho@gnome.org>\n"
 "Language-Team: GNOME Korea <gnome-kr@googlegroups.com>\n"
 "Language: ko\n"
@@ -321,8 +321,9 @@ msgstr "크게"
 
 #. Translators: About dialog text, name and email of one of the authors
 #: src/main.vala:95
-msgid "Robert Szokovacs <szo@appaloosacorp.hu>"
-msgstr "Robert Szokovacs <szo@appaloosacorp.hu>"
+#| msgid "Robert Szokovacs <szo@appaloosacorp.hu>"
+msgid "Robert Szokovacs <szo@szo.hu>"
+msgstr "Robert Szokovacs <szo@szo.hu>"
 
 #. Translators: About dialog text, name and email of one of the authors
 #: src/main.vala:98
