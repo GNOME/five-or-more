@@ -13,8 +13,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: glines documentation\n"
-"POT-Creation-Date: 2021-07-28 20:10+0000\n"
-"PO-Revision-Date: 2022-01-28 10:13+0100\n"
+"POT-Creation-Date: 2022-04-08 10:42+0000\n"
+"PO-Revision-Date: 2022-04-10 22:35+0200\n"
 "Last-Translator: Charles Monzat <charles.monzat@free.fr>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "Language: fr\n"
@@ -53,8 +53,7 @@ msgstr "2011"
 #: C/bug-filing.page:15 C/develop.page:15 C/documentation.page:13
 #: C/index.page:21 C/translate.page:19
 msgid "Creative Commons Share Alike 3.0"
-msgstr ""
-"Creative Commons Paternité-Partage des Conditions Initiales à l’Identique 3.0"
+msgstr "Creative Commons Paternité - Partage dans les Mêmes Conditions 3.0"
 
 #. (itstool) path: page/title
 #: C/bug-filing.page:19
@@ -104,13 +103,6 @@ msgstr ""
 
 #. (itstool) path: page/p
 #: C/bug-filing.page:30
-#| msgid ""
-#| "Once you have an account, log in, click on <guiseq><gui>Projects</"
-#| "gui><gui>five-or-more</gui><gui>Issues</gui><gui>New issue</gui></"
-#| "guiseq>. Before reporting a bug, please read the <link href=\"https://"
-#| "bugzilla.gnome.org/page.cgi?id=bug-writing.html\">bug writing guidelines</"
-#| "link>, and please <link href=\"https://gitlab.gnome.org/GNOME/five-or-"
-#| "more/issues\">browse</link> for the bug to see if it already exists."
 msgid ""
 "Once you have an account, log in, click on <guiseq><gui>Projects</"
 "gui><gui>five-or-more</gui><gui>Issues</gui><gui>New issue</gui></guiseq>. "
@@ -489,8 +481,8 @@ msgstr "Comment s’impliquer"
 #: C/legal.xml:3
 msgid "Creative Commons Attribution-ShareAlike 3.0 Unported License"
 msgstr ""
-"licence Creative Commons Paternité-Partage des Conditions Initiales à "
-"l’Identique 3.0 non transposé"
+"licence Creative Commons Attribution - Partage dans les Mêmes Conditions 3.0 "
+"non transposé"
 
 #. (itstool) path: license/p
 #: C/legal.xml:3
@@ -513,8 +505,8 @@ msgid ""
 "This work is distributed under a CreativeCommons Attribution-Share Alike 3.0 "
 "Unported license."
 msgstr ""
-"Cette œuvre est distribuée sous licence Creative Commons Paternité-Partage "
-"des Conditions Initiales à l’Identique 3.0 non transposé."
+"Cette œuvre est distribuée sous licence Creative Commons Attribution - "
+"Partage dans les Mêmes Conditions 3.0 non transposé."
 
 #. (itstool) path: page/p
 #: C/license.page:21
@@ -587,7 +579,7 @@ msgid ""
 "sa/3.0/\">Commons Deed</link>."
 msgstr ""
 "Pour prendre connaissance du texte complet de la licence, consultez le <link "
-"href=\"http://creativecommons.org/licenses/by-sa/3.0/legalcode\">site Web "
+"href=\"http://creativecommons.org/licenses/by-sa/3.0/legalcode\">site web "
 "CreativeCommons</link> ou lisez in extenso le <link href=\"http://"
 "creativecommons.org/licenses/by-sa/3.0/\">contrat Commons</link>."
 
