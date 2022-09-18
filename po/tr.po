@@ -1,6 +1,6 @@
 # Turkish translation of five-or-more.
-# Copyright (C) 2009-2020 five-or-more's COPYRIGHT HOLDER
 # Copyright (C) 2000-2002, 2004, 2005, 2008 Free Software Foundation, Inc.
+# Copyright (C) 2009-2022 five-or-more's COPYRIGHT HOLDER
 # This file is distributed under the same license as the five-or-more package.
 #
 # Onur Kucuk, <okucuk@yahoo.com>, 2000.
@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: five-or-more\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/five-or-more/issues\n"
-"POT-Creation-Date: 2022-03-31 06:05+0000\n"
+"POT-Creation-Date: 2022-07-07 20:11+0000\n"
 "PO-Revision-Date: 2022-03-31 10:55+0300\n"
 "Last-Translator: Emin Tufan Çetin <etcetin@gmail.com>\n"
 "Language-Team: Türkçe <gnome-turk@gnome.org>\n"
@@ -410,93 +410,3 @@ msgstr "İptal _Et"
 #: src/window.vala:285
 msgid "_Restart"
 msgstr "_Yeniden Başla"
-
-#~ msgid "Preferences"
-#~ msgstr "Tercihler"
-
-#~ msgid "_Theme:"
-#~ msgstr "_Gövde:"
-
-#~ msgid "B_ackground color:"
-#~ msgstr "_Arka plan rengi:"
-
-#~ msgid "_Preferences"
-#~ msgstr "_Tercihler"
-
-#~ msgid "org.gnome.five-or-more"
-#~ msgstr "org.gnome.five-or-more"
-
-#~ msgid "_Image:"
-#~ msgstr "_Resim:"
-
-#~ msgid "Board Size"
-#~ msgstr "Tablo Boyutu"
-
-#~ msgid "_Use fast moves"
-#~ msgstr "_Hızlı hareketleri kullan"
-
-#~ msgctxt "themes"
-#~ msgid "dots"
-#~ msgstr "noktalar"
-
-#~ msgctxt "themes"
-#~ msgid "gumball"
-#~ msgstr "sakız"
-
-#~ msgid ""
-#~ "Unable to locate file:\n"
-#~ "%s\n"
-#~ "\n"
-#~ "The default theme will be loaded instead."
-#~ msgstr ""
-#~ "Dosya konumlandırılamadı:\n"
-#~ "%s\n"
-#~ "\n"
-#~ "Bunun yerine öntanımlı tema yüklenecek."
-
-#~ msgid ""
-#~ "Unable to locate file:\n"
-#~ "%s\n"
-#~ "\n"
-#~ "Please check that Five or More is installed correctly."
-#~ msgstr ""
-#~ "Dosya yeri saptanamadı:\n"
-#~ "%s\n"
-#~ "\n"
-#~ "Lütfen Beş veya Fazlası’nın doğru kurulup kurulmadığını denetleyin."
-
-#~ msgid "Could not load theme"
-#~ msgstr "Tema yüklenemedi"
-
-#~ msgid "0"
-#~ msgstr "0"
-
-#~ msgid "Five or More Scores"
-#~ msgstr "Beş veya Fazlası Puanları"
-
-#~ msgid "_Board size:"
-#~ msgstr "Tahta _boyutu:"
-
-#~ msgctxt "score-dialog"
-#~ msgid "Time"
-#~ msgstr "Süre"
-
-#~ msgctxt "score-dialog"
-#~ msgid "Score"
-#~ msgstr "Puan"
-
-#~ msgctxt "score-dialog"
-#~ msgid "%1$dm %2$ds"
-#~ msgstr "%1$dm %2$ds"
-
-#~ msgid "_Quit"
-#~ msgstr "_Çıkış"
-
-#~ msgid "_Undo"
-#~ msgstr "_Geri al"
-
-#~ msgid "_Close"
-#~ msgstr "_Kapat"
-
-#~ msgid "Date"
-#~ msgstr "Tarih"
