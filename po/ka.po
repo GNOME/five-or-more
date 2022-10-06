@@ -9,28 +9,93 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-31 22:30+0100\n"
-"PO-Revision-Date: 2006-04-10 12:30+0200\n"
-"Last-Translator: Alexander Didebulidze <didebuli@in.tum.de>\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/five-or-more/issues\n"
+"POT-Creation-Date: 2020-06-26 08:58+0000\n"
+"PO-Revision-Date: 2022-10-06 23:25+0200\n"
+"Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <gnome@inet.ge>\n"
 "Language: ka\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.1.1\n"
 
-#: ../data/five-or-more.appdata.xml.in.h:1 ../data/five-or-more.desktop.in.h:1
-#: ../data/five-or-more.ui.h:1 ../src/five-or-more.c:1173
-#: ../src/five-or-more.c:1724
+#: data/five-or-more-preferences.ui:13
+msgid "Preferences"
+msgstr "პარამეტრები"
+
+#: data/five-or-more-preferences.ui:36
+msgid "Appearance"
+msgstr "შესახედაობა"
+
+#: data/five-or-more-preferences.ui:60
+msgid "_Theme:"
+msgstr "_თემა:"
+
+#: data/five-or-more-preferences.ui:76
+msgid "balls"
+msgstr "ბურთები"
+
+#: data/five-or-more-preferences.ui:77
+msgid "shapes"
+msgstr "მოყვანილობები"
+
+#: data/five-or-more-preferences.ui:78
+msgid "tango"
+msgstr "ტანგო"
+
+#: data/five-or-more-preferences.ui:87
+msgid "B_ackground color:"
+msgstr "_ფონის ფერი:"
+
+#: data/five-or-more.ui:7
+msgid "_New Game"
+msgstr "_ახალი თამაში"
+
+#: data/five-or-more.ui:13
+msgid "S_cores"
+msgstr "_ქულები"
+
+#: data/five-or-more.ui:19
+msgid "_Small"
+msgstr "_პატარა"
+
+#: data/five-or-more.ui:24
+msgid "_Medium"
+msgstr "_საშუალო"
+
+#: data/five-or-more.ui:29
+msgid "_Large"
+msgstr "_დიდი"
+
+#: data/five-or-more.ui:36
+msgid "_Preferences"
+msgstr "_გამართვა"
+
+#: data/five-or-more.ui:40
+msgid "_Help"
+msgstr "და_ხმარება"
+
+#: data/five-or-more.ui:45
+msgid "_About Five or More"
+msgstr "ხუთი ან მეტის შესახებ"
+
+#: data/five-or-more.ui:65 data/org.gnome.five-or-more.appdata.xml.in:7
+#: data/org.gnome.five-or-more.desktop.in:3 src/main.vala:53 src/main.vala:173
 msgid "Five or More"
 msgstr "ხუთი ან მეტი"
 
-#: ../data/five-or-more.appdata.xml.in.h:2 ../data/five-or-more.desktop.in.h:2
-msgid "Remove colored balls from the board by forming lines"
-msgstr "ა"
+#: data/five-or-more.ui:77
+msgid "Next:"
+msgstr "შემდეგი:"
 
-#: ../data/five-or-more.appdata.xml.in.h:3
+#: data/org.gnome.five-or-more.appdata.xml.in:8
+#: data/org.gnome.five-or-more.desktop.in:4
+msgid "Remove colored balls from the board by forming lines"
+msgstr ""
+
+#: data/org.gnome.five-or-more.appdata.xml.in:10
 msgid ""
 "Five or More is the GNOME port of a once-popular computer game. Align five "
 "or more objects of the same color into a line to cause them to disappear and "
@@ -38,308 +103,192 @@ msgid ""
 "before clearing them."
 msgstr ""
 
-#: ../data/five-or-more.appdata.xml.in.h:4
+#: data/org.gnome.five-or-more.appdata.xml.in:16
 msgid ""
 "More objects appear after every turn. Play for as long as possible, until "
 "the board is completely full!"
 msgstr ""
 
-#: ../data/five-or-more.appdata.xml.in.h:5
+#: data/org.gnome.five-or-more.appdata.xml.in:40
 msgid "The GNOME Project"
-msgstr ""
+msgstr "პროექტი \"GNOME\""
 
-#: ../data/five-or-more.desktop.in.h:3
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/org.gnome.five-or-more.desktop.in:6
 msgid "game;strategy;logic;"
-msgstr ""
+msgstr "game;strategy;logic;"
 
-#: ../data/five-or-more-preferences.ui.h:1 ../data/menu.ui.h:2
-#: ../src/five-or-more.c:169
-msgid "Preferences"
-msgstr "პარამეტრები"
-
-#: ../data/five-or-more-preferences.ui.h:2
-msgid "Appearance"
-msgstr "შესახედაობა"
-
-#: ../data/five-or-more-preferences.ui.h:3
-msgid "_Image:"
-msgstr "_სურათი:"
-
-#: ../data/five-or-more-preferences.ui.h:4
-msgid "B_ackground color:"
-msgstr "_ფონის ფერი:"
-
-#: ../data/five-or-more-preferences.ui.h:5
-msgid "Board Size"
-msgstr "დაფის ზომა"
-
-#: ../data/five-or-more-preferences.ui.h:6
-msgid "_Small"
-msgstr "_პატარა"
-
-#: ../data/five-or-more-preferences.ui.h:7
-msgid "_Medium"
-msgstr "_საშუალო"
-
-#: ../data/five-or-more-preferences.ui.h:8
-msgid "_Large"
-msgstr "_დიდი"
-
-#: ../data/five-or-more-preferences.ui.h:9
-msgid "General"
-msgstr "საერთო"
-
-#: ../data/five-or-more-preferences.ui.h:10
-#, fuzzy
-msgid "_Use fast moves"
-msgstr "გამოყენება"
-
-#: ../data/five-or-more.ui.h:2
-msgid "Next:"
-msgstr "შემდეგი:"
-
-#: ../data/five-or-more.ui.h:3
-msgid "0"
-msgstr "0"
-
-#: ../data/five-or-more.ui.h:4
-msgid "Score:"
-msgstr ""
-
-#: ../data/five-or-more.ui.h:5 ../src/games-scores-dialog.c:384
-msgid "_New Game"
-msgstr "_ახალი თამაში"
-
-#: ../data/five-or-more.ui.h:6
-#, fuzzy
-msgid "Start a new puzzle"
-msgstr "ახალი თამაშის დაწყება"
-
-#: ../data/menu.ui.h:1
-msgid "Scores"
-msgstr ""
-
-#: ../data/menu.ui.h:3
-#, fuzzy
-msgid "Help"
-msgstr "_დახმარება"
-
-#: ../data/menu.ui.h:4
-msgid "About"
-msgstr ""
-
-#: ../data/menu.ui.h:5
-msgid "Quit"
-msgstr ""
-
-#: ../data/org.gnome.five-or-more.gschema.xml.h:1
-#, fuzzy
+#: data/org.gnome.five-or-more.gschema.xml:5
 msgid "Playing field size"
-msgstr "ვუკრავ სიდიდე"
+msgstr "სათამაშო ველის ზომა"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:2
-#, fuzzy
+#: data/org.gnome.five-or-more.gschema.xml:6
 msgid ""
 "Playing field size. 1=Small, 2=Medium, 3=Large. Any other value is invalid."
 msgstr "ვუკრავ სიდიდე პატარა საშუალო დიდი სხვა."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:3
+#: data/org.gnome.five-or-more.gschema.xml:10
 msgid "Ball style"
-msgstr ""
+msgstr "ბურთის სტილი"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:4
-#, fuzzy
+#: data/org.gnome.five-or-more.gschema.xml:11
 msgid "Ball style. The filename of the images to use for the balls."
 msgstr "ის -სკენ."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:5
+#: data/org.gnome.five-or-more.gschema.xml:15
 msgid "Background color"
 msgstr "ფონის ფერი"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:6
-#, fuzzy
+#: data/org.gnome.five-or-more.gschema.xml:16
 msgid "Background color. The hex specification of the background color."
 msgstr "ფონი hex ის."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:7
-#, fuzzy
+#: data/org.gnome.five-or-more.gschema.xml:20
 msgid "Time between moves"
-msgstr "დრო"
+msgstr "დრო სვლებს შორის"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:8
-#, fuzzy
+#: data/org.gnome.five-or-more.gschema.xml:21
 msgid "Time between moves in milliseconds."
-msgstr "დრო დუიმი მილიწამები."
+msgstr "დრო სვლებს შორის, მილიწამებში."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:9
-#, fuzzy
+#: data/org.gnome.five-or-more.gschema.xml:25
 msgid "Game score"
-msgstr "თამაში"
+msgstr "თამაშის ქულები"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:10
-#, fuzzy
+#: data/org.gnome.five-or-more.gschema.xml:26
 msgid "Game score from last saved session."
-msgstr "თამაში სესია."
+msgstr "თამაშის ქულები ბოლო შენახული სესიიდან."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:11
-#, fuzzy
+#: data/org.gnome.five-or-more.gschema.xml:30
 msgid "Game field"
-msgstr "თამაში"
+msgstr "თამაშის ველი"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:12
-#, fuzzy
+#: data/org.gnome.five-or-more.gschema.xml:31
 msgid "Game field from last saved session."
-msgstr "თამაში სესია."
+msgstr "თამაშის ველი ბოლო შენახული სესიიდან."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:13
-#, fuzzy
+#: data/org.gnome.five-or-more.gschema.xml:35
 msgid "Game preview"
-msgstr "თამაში"
+msgstr "თამაშის გადახედვა"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:14
-#, fuzzy
+#: data/org.gnome.five-or-more.gschema.xml:36
 msgid "Game preview from last saved session."
-msgstr "თამაში სესია."
+msgstr "თამაშის გადახედვა ბოლო შენახული სესიიდან."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:15
-#, fuzzy
+#: data/org.gnome.five-or-more.gschema.xml:40
 msgid "Width of the window in pixels"
-msgstr "ის დუიმი პიქსელი."
+msgstr "ფანჯრის სიგანე, პიქსელებში"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:16
-#, fuzzy
+#: data/org.gnome.five-or-more.gschema.xml:44
 msgid "Height of the window in pixels"
-msgstr "ის დუიმი პიქსელი."
+msgstr "ფანჯრის სიმაღლე, პიქსელებში"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:17
+#: data/org.gnome.five-or-more.gschema.xml:48
 msgid "true if the window is maximized"
-msgstr ""
+msgstr "თუ ჩართულია, ფანჯარა გაშლილი გაიხსნება"
 
-#: ../src/five-or-more.c:78
-#, fuzzy
+#: src/game.vala:94
 msgctxt "board size"
 msgid "Small"
 msgstr "პატარა"
 
-#: ../src/five-or-more.c:79
-#, fuzzy
+#: src/game.vala:95
 msgctxt "board size"
 msgid "Medium"
 msgstr "საშუალო"
 
-#: ../src/five-or-more.c:80
-#, fuzzy
+#: src/game.vala:96
 msgctxt "board size"
 msgid "Large"
 msgstr "დიდი"
 
-#: ../src/five-or-more.c:163
-msgid "Could not load theme"
-msgstr ""
-
-#: ../src/five-or-more.c:189
-#, fuzzy, c-format
-msgid ""
-"Unable to locate file:\n"
-"%s\n"
-"\n"
-"The default theme will be loaded instead."
-msgstr "-სკენ n n ნაგულისხმევი."
-
-#: ../src/five-or-more.c:196
-#, fuzzy, c-format
-msgid ""
-"Unable to locate file:\n"
-"%s\n"
-"\n"
-"Please check that Five or More is installed correctly."
-msgstr "-სკენ n n მეტი."
-
-#: ../src/five-or-more.c:408
-#, fuzzy
-msgid "Match five objects of the same type in a row to score!"
-msgstr "ხუთი ის ტიპი დუიმი a -სკენ!"
-
-#: ../src/five-or-more.c:469
-#, fuzzy
-msgid "Five or More Scores"
-msgstr "ხუთი ან მეტი"
-
-#: ../src/five-or-more.c:471
-#, fuzzy
-msgid "_Board size:"
-msgstr "დაფის ზომა"
-
-#: ../src/five-or-more.c:488
-#, fuzzy
-msgid "Game Over!"
-msgstr "თამაში!"
-
-#. Can't move there!
-#: ../src/five-or-more.c:645
-#, fuzzy
-msgid "You can’t move there!"
-msgstr "თქვენ!"
-
-#: ../src/five-or-more.c:1175
-#, fuzzy
+#: src/main.vala:176
 msgid "GNOME port of the once-popular Color Lines game"
 msgstr "GNOME ის ფერი ხაზები"
 
-#: ../src/five-or-more.c:1181
-#, fuzzy
+#: src/main.vala:182
 msgid "translator-credits"
 msgstr "თარგმანი-შესრულებულია"
 
-#: ../src/five-or-more.c:1305
-#, fuzzy
+#: src/window.vala:50
+msgid "Match five objects of the same type in a row to score!"
+msgstr "ხუთი ის ტიპი დუიმი a -სკენ!"
+
+#: src/window.vala:51
+msgid "You can’t move there!"
+msgstr "თქვენ!"
+
+#: src/window.vala:52
+msgid "Game Over!"
+msgstr "თამაში დასრულდა!"
+
+#: src/window.vala:53
+#, c-format
+msgid "Score: %d"
+msgstr "ქულები: %d"
+
+#: src/window.vala:87
+msgid "Board Size: "
+msgstr "სათამაშო დაფის ზომა: "
+
+#: src/window.vala:159
 msgid "Are you sure you want to restart the game?"
-msgstr "-სკენ?"
+msgstr "დარწმუნებული ბრძნდებით, რომ გნებავთ, გადატვირთოთ მიმდინარე თამაში?"
 
-#: ../src/five-or-more.c:1308
+#: src/window.vala:161
 msgid "_Cancel"
-msgstr ""
+msgstr "_შეწყვეტა"
 
-#: ../src/five-or-more.c:1309
-#, fuzzy
+#: src/window.vala:162
 msgid "_Restart"
 msgstr "_გადატვირთვა"
 
-#. Score dialog column header for the score time (e.g. 1 minute)
-#: ../src/games-scores-dialog.c:131
+#~ msgid "_Image:"
+#~ msgstr "_სურათი:"
+
+#~ msgid "General"
+#~ msgstr "საერთო"
+
 #, fuzzy
-msgctxt "score-dialog"
-msgid "Time"
-msgstr "დრო"
+#~ msgid "_Use fast moves"
+#~ msgstr "გამოყენება"
 
-#. Score dialog column header for the score value (e.g. 30 moves)
-#: ../src/games-scores-dialog.c:137
+#~ msgid "0"
+#~ msgstr "0"
+
 #, fuzzy
-msgctxt "score-dialog"
-msgid "Score"
-msgstr "მაღალი კონტრასტი"
+#~ msgid "Start a new puzzle"
+#~ msgstr "ახალი თამაშის დაწყება"
 
-#. Score format for time based scores.  %1$d is the time in minutes, %2$d is the time in seconds
-#: ../src/games-scores-dialog.c:224
-#, c-format
-msgctxt "score-dialog"
-msgid "%1$dm %2$ds"
-msgstr ""
-
-#: ../src/games-scores-dialog.c:370
-msgid "_Quit"
-msgstr ""
-
-#: ../src/games-scores-dialog.c:377
 #, fuzzy
-msgid "_Undo"
-msgstr "დაბრუნება გადატანა"
+#~ msgid ""
+#~ "Unable to locate file:\n"
+#~ "%s\n"
+#~ "\n"
+#~ "The default theme will be loaded instead."
+#~ msgstr "-სკენ n n ნაგულისხმევი."
 
-#: ../src/games-scores-dialog.c:391
-msgid "_Close"
-msgstr ""
+#, fuzzy
+#~ msgid ""
+#~ "Unable to locate file:\n"
+#~ "%s\n"
+#~ "\n"
+#~ "Please check that Five or More is installed correctly."
+#~ msgstr "-სკენ n n მეტი."
 
-#. Score dialog column header for the date the score was recorded
-#: ../src/games-scores-dialog.c:477
-msgid "Date"
-msgstr ""
+#, fuzzy
+#~ msgid "Five or More Scores"
+#~ msgstr "ხუთი ან მეტი"
+
+#, fuzzy
+#~ msgid "_Board size:"
+#~ msgstr "დაფის ზომა"
+
+#, fuzzy
+#~ msgctxt "score-dialog"
+#~ msgid "Time"
+#~ msgstr "დრო"
+
+#, fuzzy
+#~ msgid "_Undo"
+#~ msgstr "დაბრუნება გადატანა"
