@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games HEAD\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/five-or-more/issues\n"
-"POT-Creation-Date: 2022-03-31 06:05+0000\n"
-"PO-Revision-Date: 2022-04-03 11:33+0430\n"
+"POT-Creation-Date: 2022-10-16 12:44+0000\n"
+"PO-Revision-Date: 2022-12-14 15:54+0330\n"
 "Last-Translator: Danial Behzadi <dani.behzi@ubuntu.com>\n"
 "Language-Team: Persian\n"
 "Language: fa\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #. Translators: name of the application, as displayed in the window manager
 #. Translators: name of the application, as displayed in the About dialog, some window managers, etc.
@@ -44,17 +44,17 @@ msgid ""
 "score points. Earn many more points by lining up as many objects as possible "
 "before clearing them."
 msgstr ""
-"پنج یا بیشتر نسخهٔ گنوم از یک بازی محبوب کامپیوتری است. پنج شیء از یک رنگ را "
-"در یک مرتب کنید تا حذف بشوند و امتیاز بگیرید. با مرتب کردن بیشتر شیءها قبل از "
-"حذف آنها امتیازهای بیشتری بگیرید."
+"پنج یا بیش‌تر نگارش گنومی بازی رایانه‌ای است که زمانی محبوب بود. پنج شی از یک "
+"رنگ را در یک خط بچینید تا حذف شده و امتیاز بگیرید. با چیدن شی‌های بیش‌تری پیش "
+"از پاک‌سازیشان، امتیاز بیش‌تری بگیرید."
 
 #: data/org.gnome.five-or-more.appdata.xml.in:16
 msgid ""
 "More objects appear after every turn. Play for as long as possible, until the "
 "board is completely full!"
 msgstr ""
-"شیءهای بیشتری پس از هر نوبت پدیدار خواهند شد. تا هر زمان که می‌توانید بازی "
-"کنید، تا اینکه تخته کاملا خالی شود!"
+"پس از هر نوبت، شی‌هایی بیش‌تر ظاهر می‌شوند. تا زمان پر شدن کامل تخته، هرچه می "
+"توانید بیش‌تر بازی کنید!"
 
 #: data/org.gnome.five-or-more.appdata.xml.in:40
 msgid "The GNOME Project"
@@ -97,7 +97,7 @@ msgstr "زمان بین حرکت‌ها"
 
 #: data/org.gnome.five-or-more.gschema.xml:22
 msgid "Time between moves in milliseconds."
-msgstr "زمان بین جابه‌جایی به میلی ثانیه."
+msgstr "زمان بین حرکت‌ها به میلی ثانیه."
 
 #: data/org.gnome.five-or-more.gschema.xml:26
 msgid "Game score"
@@ -214,7 +214,7 @@ msgstr "_راهنما"
 #. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); opens the About dialog
 #: data/ui/five-or-more.ui:102
 msgid "_About Five or More"
-msgstr "دربارهٔ پنج یا بیش‌تر"
+msgstr "_دربارهٔ پنج یا بیش‌تر"
 
 #. Translators: label displayed in the headerbar, introducing the next balls to be added to the board
 #: data/ui/five-or-more.ui:136
@@ -353,7 +353,7 @@ msgstr "حق رونوشت © ۲۰۱۳-۲۰۱۴ – مایکل کاتانزارو
 #. Translators: About dialog text, describing the application
 #: src/main.vala:131
 msgid "GNOME port of the once-popular Color Lines game"
-msgstr "نگارش گنوم از بازی محبوب خطوط رنگی"
+msgstr "نگارش گنومی بازی زمانی محبوب خط‌های رنگی"
 
 #. Translators: about dialog text; this string should be replaced by a text crediting yourselves and your translation team, or should be left empty. Do not translate literally!
 #: src/main.vala:138
@@ -365,12 +365,12 @@ msgstr ""
 #. Translators: subtitle of the headerbar, at the application start
 #: src/window.vala:49
 msgid "Match five objects of the same type in a row to score!"
-msgstr "برای گرفتن امتیاز، پنج شی از یک نوع را کنار هم ردیف کنید!"
+msgstr "برای گرفتن امتیاز، پنج شی از یک گونه را در کنار هم ردیف کنید!"
 
 #. Translators: subtitle of the headerbar, when the user clicked on a tile where the selected marble cannot move
 #: src/window.vala:52
 msgid "You can’t move there!"
-msgstr "نمی‌توانید به آنجا جابه‌جا شوید!"
+msgstr "نمی‌توانید به آن‌جا بروید!"
 
 #. Translators: subtitle of the headerbar, at the end of a game
 #: src/window.vala:55
@@ -402,7 +402,7 @@ msgstr "_لغو"
 #. Translators: button of a dialog that appears when the user starts a new game while the score is not null; the other answer is "_Cancel"
 #: src/window.vala:285
 msgid "_Restart"
-msgstr "_شروع دوباره"
+msgstr "_آغاز دوباره"
 
 #~ msgid "Preferences"
 #~ msgstr "ترجیحات"
