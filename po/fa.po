@@ -11,11 +11,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games HEAD\n"
-"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=five-"
-"or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2017-02-28 06:48+0000\n"
-"PO-Revision-Date: 2017-09-30 19:10+0330\n"
-"Last-Translator: Arash Mousavi <mousavi.arash@gmail.com>\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/five-or-more/issues\n"
+"POT-Creation-Date: 2022-10-23 21:25+0000\n"
+"PO-Revision-Date: 2022-12-14 15:51+0330\n"
+"Last-Translator: Danial Behzadi <dani.behzi@ubuntu.com>\n"
 "Language-Team: Persian\n"
 "Language: fa\n"
 "MIME-Version: 1.0\n"
@@ -23,312 +22,312 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Poedit 2.0.4\n"
+"X-Generator: Poedit 3.2.2\n"
 
-#: ../data/five-or-more.appdata.xml.in.h:1 ../data/five-or-more.desktop.in.h:1
-#: ../data/five-or-more.ui.h:1 ../src/five-or-more.c:1175
-#: ../src/five-or-more.c:1726
+#: data/five-or-more-preferences.ui:13
+msgid "Preferences"
+msgstr "ترجیحات"
+
+#: data/five-or-more-preferences.ui:36
+msgid "Appearance"
+msgstr "ظاهر"
+
+#: data/five-or-more-preferences.ui:60
+msgid "_Theme:"
+msgstr "_زمینه:"
+
+#: data/five-or-more-preferences.ui:76
+msgid "balls"
+msgstr "توپ‌ها"
+
+#: data/five-or-more-preferences.ui:77
+msgid "shapes"
+msgstr "شکل‌ها"
+
+#: data/five-or-more-preferences.ui:78
+msgid "tango"
+msgstr "تانگو"
+
+#: data/five-or-more-preferences.ui:87
+msgid "B_ackground color:"
+msgstr "رنگ _پس‌زمینه:"
+
+#: data/five-or-more.ui:7
+msgid "_New Game"
+msgstr "بازی _جدید"
+
+#: data/five-or-more.ui:13
+msgid "S_cores"
+msgstr "_امتیازها"
+
+#: data/five-or-more.ui:19
+msgid "_Small"
+msgstr "_کوچک"
+
+#: data/five-or-more.ui:24
+msgid "_Medium"
+msgstr "_متوسط"
+
+#: data/five-or-more.ui:29
+msgid "_Large"
+msgstr "_بزرگ"
+
+#: data/five-or-more.ui:36
+msgid "_Preferences"
+msgstr "_ترجیحات"
+
+#: data/five-or-more.ui:40
+msgid "_Help"
+msgstr "_راهنما"
+
+#: data/five-or-more.ui:45
+msgid "_About Five or More"
+msgstr "_دربارهٔ پنج یا بیش‌تر"
+
+#: data/five-or-more.ui:65 data/org.gnome.five-or-more.appdata.xml.in:7
+#: data/org.gnome.five-or-more.desktop.in:3 src/main.vala:53 src/main.vala:173
 msgid "Five or More"
 msgstr "پنج یا بیش‌تر"
 
-#: ../data/five-or-more.appdata.xml.in.h:2 ../data/five-or-more.desktop.in.h:2
+#: data/five-or-more.ui:77
+msgid "Next:"
+msgstr "بعدی:"
+
+#: data/org.gnome.five-or-more.appdata.xml.in:8
+#: data/org.gnome.five-or-more.desktop.in:4
 msgid "Remove colored balls from the board by forming lines"
 msgstr "حذف توپ‌های رنگی از صفحه با تشکیل خط"
 
-#: ../data/five-or-more.appdata.xml.in.h:3
+#: data/org.gnome.five-or-more.appdata.xml.in:10
 msgid ""
 "Five or More is the GNOME port of a once-popular computer game. Align five "
 "or more objects of the same color into a line to cause them to disappear and "
 "score points. Earn many more points by lining up as many objects as possible "
 "before clearing them."
 msgstr ""
-"پنج یا بیشتر نسخهٔ گنوم از یک بازی محبوب کامپیوتری است. پنج شیء از یک رنگ را "
-"در یک مرتب کنید تا حذف بشوند و امتیاز بگیرید. با مرتب کردن بیشتر شیءها قبل "
-"از حذف آنها امتیازهای بیشتری بگیرید."
+"پنج یا بیش‌تر نگارش گنومی بازی رایانه‌ای است که زمانی محبوب بود. پنج شی از یک "
+"رنگ را در یک خط بچینید تا حذف شده و امتیاز بگیرید. با چیدن شی‌های بیش‌تری پیش "
+"از پاک‌سازیشان، امتیاز بیش‌تری بگیرید."
 
-#: ../data/five-or-more.appdata.xml.in.h:4
+#: data/org.gnome.five-or-more.appdata.xml.in:16
 msgid ""
 "More objects appear after every turn. Play for as long as possible, until "
 "the board is completely full!"
 msgstr ""
-"شیءهای بیشتری پس از هر نوبت پدیدار خواهند شد. تا هر زمان که می‌توانید بازی "
-"کنید، تا اینکه تخته کاملا خالی شود!"
+"پس از هر نوبت، شی‌هایی بیش‌تر ظاهر می‌شوند. تا زمان پر شدن کامل تخته، هرچه می "
+"توانید بیش‌تر بازی کنید!"
 
-#: ../data/five-or-more.appdata.xml.in.h:5
+#: data/org.gnome.five-or-more.appdata.xml.in:40
 msgid "The GNOME Project"
-msgstr "پروژه گنوم"
+msgstr "پروژهٔ گنوم"
 
-#: ../data/five-or-more.desktop.in.h:3
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/org.gnome.five-or-more.desktop.in:6
 msgid "game;strategy;logic;"
-msgstr "بازی;استراتژی;منطق;"
+msgstr "game;strategy;logic;بازی;استراتژی;منطق;"
 
-#: ../data/five-or-more-preferences.ui.h:1 ../data/menu.ui.h:2
-#: ../src/five-or-more.c:171
-msgid "Preferences"
-msgstr "ترجیحات"
-
-#: ../data/five-or-more-preferences.ui.h:2
-msgid "Appearance"
-msgstr "ظاهر"
-
-#: ../data/five-or-more-preferences.ui.h:3
-msgid "_Image:"
-msgstr "_تصویر:"
-
-#: ../data/five-or-more-preferences.ui.h:4
-msgid "B_ackground color:"
-msgstr "رنگ پ_س‌زمینه:"
-
-#: ../data/five-or-more-preferences.ui.h:5
-msgid "Board Size"
-msgstr "اندازه‌ی صفحه"
-
-#: ../data/five-or-more-preferences.ui.h:6
-msgid "_Small"
-msgstr "_کوچک"
-
-#: ../data/five-or-more-preferences.ui.h:7
-msgid "_Medium"
-msgstr "_متوسط"
-
-#: ../data/five-or-more-preferences.ui.h:8
-msgid "_Large"
-msgstr "_بزرگ"
-
-#: ../data/five-or-more-preferences.ui.h:9
-msgid "General"
-msgstr "کلی"
-
-#: ../data/five-or-more-preferences.ui.h:10
-msgid "_Use fast moves"
-msgstr "_استفاده از حرکت‌های سریع"
-
-#: ../data/five-or-more.ui.h:2
-msgid "Next:"
-msgstr "بعدی:"
-
-#: ../data/five-or-more.ui.h:3
-msgid "0"
-msgstr "۰"
-
-#: ../data/five-or-more.ui.h:4
-msgid "Score:"
-msgstr "امتیاز:"
-
-#: ../data/five-or-more.ui.h:5 ../src/games-scores-dialog.c:385
-msgid "_New Game"
-msgstr "بازی _جدید"
-
-#: ../data/five-or-more.ui.h:6
-msgid "Start a new puzzle"
-msgstr "شروع پازل جدید"
-
-#: ../data/menu.ui.h:1
-msgid "Scores"
-msgstr "امتیازها"
-
-#: ../data/menu.ui.h:3
-msgid "Help"
-msgstr "راهنما"
-
-#: ../data/menu.ui.h:4
-msgid "About"
-msgstr "درباره"
-
-#: ../data/menu.ui.h:5
-msgid "Quit"
-msgstr "خروج"
-
-#: ../data/org.gnome.five-or-more.gschema.xml.h:1
+#: data/org.gnome.five-or-more.gschema.xml:5
 msgid "Playing field size"
-msgstr "اندازه زمین بازی"
+msgstr "اندازهٔ زمین بازی"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:2
+#: data/org.gnome.five-or-more.gschema.xml:6
 msgid ""
 "Playing field size. 1=Small, 2=Medium, 3=Large. Any other value is invalid."
-msgstr ""
-"اندازه‌ی زمین بازی. ۱=کوچک، ۲=متوسط، ۳=بزرگ. هر مقدار دیگری نامعتبر است."
+msgstr "اندازهٔ زمین بازی. ۱=کوچک، ۲=متوسط، ۳=بزرگ. هر مقدار دیگری نامعتبر است."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:3
+#: data/org.gnome.five-or-more.gschema.xml:10
 msgid "Ball style"
 msgstr "طرح توپ"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:4
+#: data/org.gnome.five-or-more.gschema.xml:11
 msgid "Ball style. The filename of the images to use for the balls."
-msgstr "طرح توپ. نام پرونده‌ی تصاویر استفاده شونده برای توپ‌ها."
+msgstr "طرح توپ. نام پروندهٔ تصاویر استفاده شونده برای توپ‌ها."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:5
+#: data/org.gnome.five-or-more.gschema.xml:15
 msgid "Background color"
 msgstr "رنگ پس‌زمینه"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:6
+#: data/org.gnome.five-or-more.gschema.xml:16
 msgid "Background color. The hex specification of the background color."
 msgstr "رنگ پس‌زمینه. نمایش شانزده شانزدهی رنگ پس‌زمینه."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:7
+#: data/org.gnome.five-or-more.gschema.xml:20
 msgid "Time between moves"
 msgstr "زمان بین حرکات"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:8
+#: data/org.gnome.five-or-more.gschema.xml:21
 msgid "Time between moves in milliseconds."
-msgstr "زمان بین جابه‌جایی به میلی ثانیه."
+msgstr "زمان بین حرکت‌ها به میلی ثانیه."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:9
+#: data/org.gnome.five-or-more.gschema.xml:25
 msgid "Game score"
 msgstr "امتیاز بازی"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:10
+#: data/org.gnome.five-or-more.gschema.xml:26
 msgid "Game score from last saved session."
 msgstr "امتیاز بازی در آخرین نشست ذخیره شده."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:11
+#: data/org.gnome.five-or-more.gschema.xml:30
 msgid "Game field"
 msgstr "زمین بازی"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:12
+#: data/org.gnome.five-or-more.gschema.xml:31
 msgid "Game field from last saved session."
 msgstr "زمین بازی آخرین نشست ذخیره شده."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:13
+#: data/org.gnome.five-or-more.gschema.xml:35
 msgid "Game preview"
 msgstr "پیش‌نمایش بازی"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:14
+#: data/org.gnome.five-or-more.gschema.xml:36
 msgid "Game preview from last saved session."
 msgstr "پیش‌نمایش بازی آخرین نشست ذخیره شده."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:15
+#: data/org.gnome.five-or-more.gschema.xml:40
 msgid "Width of the window in pixels"
 msgstr "عرض پنجره به پیکسل"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:16
+#: data/org.gnome.five-or-more.gschema.xml:44
 msgid "Height of the window in pixels"
 msgstr "ارتفاع پنجره به پیکسل"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:17
+#: data/org.gnome.five-or-more.gschema.xml:48
 msgid "true if the window is maximized"
 msgstr "درست اگر پنجره بیشینه باشد"
 
-#: ../src/five-or-more.c:80
+#: src/game.vala:94
 msgctxt "board size"
 msgid "Small"
 msgstr "کوچک"
 
-#: ../src/five-or-more.c:81
+#: src/game.vala:95
 msgctxt "board size"
 msgid "Medium"
 msgstr "متوسط"
 
-#: ../src/five-or-more.c:82
+#: src/game.vala:96
 msgctxt "board size"
 msgid "Large"
 msgstr "بزرگ"
 
-#: ../src/five-or-more.c:165
-msgid "Could not load theme"
-msgstr "بارگیری تم ممکن نیست"
-
-#: ../src/five-or-more.c:191
-#, c-format
-msgid ""
-"Unable to locate file:\n"
-"%s\n"
-"\n"
-"The default theme will be loaded instead."
-msgstr ""
-"جای پرونده پیدا نشد:\n"
-"%s\n"
-"\n"
-"به جای آن تم پیش‌فرض بار خواهد شد."
-
-#: ../src/five-or-more.c:198
-#, c-format
-msgid ""
-"Unable to locate file:\n"
-"%s\n"
-"\n"
-"Please check that Five or More is installed correctly."
-msgstr ""
-"جای پرونده پیدا نشد:\n"
-"%s\n"
-"\n"
-"لطفاً بررسی کنید که پنج یا بیشتر درست نصب شده باشد."
-
-#: ../src/five-or-more.c:410
-msgid "Match five objects of the same type in a row to score!"
-msgstr "برای گرفتن امتیاز، پنج شیء از یک نوع را در کنار هم ردیف کنید!"
-
-#: ../src/five-or-more.c:471
-msgid "Five or More Scores"
-msgstr "امتیازهای پنج یا بیش‌تر"
-
-#: ../src/five-or-more.c:473
-msgid "_Board size:"
-msgstr "اندازه‌ی ص_فحه:"
-
-#: ../src/five-or-more.c:490
-msgid "Game Over!"
-msgstr "بازی تمام شد!"
-
-#. Can't move there!
-#: ../src/five-or-more.c:647
-msgid "You can’t move there!"
-msgstr "نمی‌توانید به آنجا جابه‌جا شوید!"
-
-#: ../src/five-or-more.c:1177
+#: src/main.vala:176
 msgid "GNOME port of the once-popular Color Lines game"
-msgstr "نسخهٔ گنوم از بازی محبوب خطوط رنگی"
+msgstr "نگارش گنومی بازی زمانی محبوب خط‌های رنگی"
 
-#: ../src/five-or-more.c:1183
+#: src/main.vala:182
 msgid "translator-credits"
 msgstr ""
 "دانیال بهزادی <dani.behzi@gmail.com>\n"
 "آرش موسوی <mousavi.arash@gmail.com>"
 
-#: ../src/five-or-more.c:1307
-msgid "Are you sure you want to restart the game?"
-msgstr "آیا مطمئنید که می‌خواهید بازی را دوباره شروع کنید؟"
+#: src/window.vala:50
+msgid "Match five objects of the same type in a row to score!"
+msgstr "برای گرفتن امتیاز، پنج شی از یک گونه را در کنار هم ردیف کنید!"
 
-#: ../src/five-or-more.c:1310
+#: src/window.vala:51
+msgid "You can’t move there!"
+msgstr "نمی‌توانید به آن‌جا بروید!"
+
+#: src/window.vala:52
+msgid "Game Over!"
+msgstr "بازی تمام شد!"
+
+#: src/window.vala:53
+#, c-format
+msgid "Score: %d"
+msgstr "امتیاز: %Id"
+
+#: src/window.vala:87
+msgid "Board Size: "
+msgstr "اندازهٔ صفحه: "
+
+#: src/window.vala:159
+msgid "Are you sure you want to restart the game?"
+msgstr "مطمئنید که می‌خواهید بازی را دوباره آغاز کنید؟"
+
+#: src/window.vala:161
 msgid "_Cancel"
 msgstr "_لغو"
 
-#: ../src/five-or-more.c:1311
+#: src/window.vala:162
 msgid "_Restart"
-msgstr "_شروع مجدد"
+msgstr "_آغاز دوباره"
 
-#. Score dialog column header for the score time (e.g. 1 minute)
-#: ../src/games-scores-dialog.c:132
-msgctxt "score-dialog"
-msgid "Time"
-msgstr "زمان"
+#~ msgid "_Image:"
+#~ msgstr "_تصویر:"
 
-#. Score dialog column header for the score value (e.g. 30 moves)
-#: ../src/games-scores-dialog.c:138
-msgctxt "score-dialog"
-msgid "Score"
-msgstr "امتیاز"
+#~ msgid "General"
+#~ msgstr "کلی"
 
-#. Score format for time based scores.  %1$d is the time in minutes, %2$d is the time in seconds
-#: ../src/games-scores-dialog.c:225
+#~ msgid "_Use fast moves"
+#~ msgstr "_استفاده از حرکت‌های سریع"
+
+#~ msgid "0"
+#~ msgstr "۰"
+
+#~ msgid "Start a new puzzle"
+#~ msgstr "شروع پازل جدید"
+
+#~ msgid "About"
+#~ msgstr "درباره"
+
+#~ msgid "Quit"
+#~ msgstr "خروج"
+
+#~ msgid "Could not load theme"
+#~ msgstr "بارگیری تم ممکن نیست"
+
 #, c-format
-msgctxt "score-dialog"
-msgid "%1$dm %2$ds"
-msgstr "%1$d دقیقه %2$d ثانیه"
+#~ msgid ""
+#~ "Unable to locate file:\n"
+#~ "%s\n"
+#~ "\n"
+#~ "The default theme will be loaded instead."
+#~ msgstr ""
+#~ "جای پرونده پیدا نشد:\n"
+#~ "%s\n"
+#~ "\n"
+#~ "به جای آن تم پیش‌فرض بار خواهد شد."
 
-#: ../src/games-scores-dialog.c:371
-msgid "_Quit"
-msgstr "_خروج"
+#, c-format
+#~ msgid ""
+#~ "Unable to locate file:\n"
+#~ "%s\n"
+#~ "\n"
+#~ "Please check that Five or More is installed correctly."
+#~ msgstr ""
+#~ "جای پرونده پیدا نشد:\n"
+#~ "%s\n"
+#~ "\n"
+#~ "لطفاً بررسی کنید که پنج یا بیشتر درست نصب شده باشد."
 
-#: ../src/games-scores-dialog.c:378
-msgid "_Undo"
-msgstr "_برگردان"
+#~ msgid "Five or More Scores"
+#~ msgstr "امتیازهای پنج یا بیش‌تر"
 
-#: ../src/games-scores-dialog.c:392
-msgid "_Close"
-msgstr "_بستن"
+#~ msgid "_Board size:"
+#~ msgstr "اندازه‌ی ص_فحه:"
 
-#. Score dialog column header for the date the score was recorded
-#: ../src/games-scores-dialog.c:478
-msgid "Date"
-msgstr "تاریخ"
+#~ msgctxt "score-dialog"
+#~ msgid "Time"
+#~ msgstr "زمان"
+
+#~ msgctxt "score-dialog"
+#~ msgid "Score"
+#~ msgstr "امتیاز"
+
+#, c-format
+#~ msgctxt "score-dialog"
+#~ msgid "%1$dm %2$ds"
+#~ msgstr "%1$d دقیقه %2$d ثانیه"
+
+#~ msgid "_Quit"
+#~ msgstr "_خروج"
+
+#~ msgid "_Undo"
+#~ msgstr "_برگردان"
+
+#~ msgid "_Close"
+#~ msgstr "_بستن"
+
+#~ msgid "Date"
+#~ msgstr "تاریخ"
