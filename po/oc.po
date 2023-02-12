@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: oc\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/five-or-more/issues\n"
-"POT-Creation-Date: 2021-11-28 13:31+0000\n"
-"PO-Revision-Date: 2022-01-22 19:00+0100\n"
+"POT-Creation-Date: 2023-01-25 17:18+0000\n"
+"PO-Revision-Date: 2023-02-12 21:10+0100\n"
 "Last-Translator: Quentin PAGÈS\n"
 "Language-Team: Tot En Òc\n"
 "Language: oc\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 3.2.2\n"
 "X-Project-Style: gnome\n"
 
 #. Translators: name of the application, as displayed in the window manager
@@ -310,8 +310,8 @@ msgstr "Grand"
 
 #. Translators: About dialog text, name and email of one of the authors
 #: src/main.vala:95
-msgid "Robert Szokovacs <szo@appaloosacorp.hu>"
-msgstr "Robert Szokovacs <szo@appaloosacorp.hu>"
+msgid "Robert Szokovacs <szo@szo.hu>"
+msgstr "Robert Szokovacs <szo@szo.hu>"
 
 #. Translators: About dialog text, name and email of one of the authors
 #: src/main.vala:98
@@ -363,7 +363,8 @@ msgstr "Portatge GNOME del jòc autrescòps celèbre Linhas Coloradas"
 msgid "translator-credits"
 msgstr ""
 "Yannig Marchegay (Kokoyaya) <yannig@marchegay.org>\n"
-"Cédric Valmary (totenoc.eu) <cvalmary@yahoo.fr>"
+"Cédric Valmary (totenoc.eu) <cvalmary@yahoo.fr>\n"
+"Quentin PAGÈS"
 
 #. Translators: subtitle of the headerbar, at the application start
 #: src/window.vala:49
@@ -389,7 +390,7 @@ msgstr "Marca : %d"
 #. Translators: text in the Scores dialog, introducing the combobox
 #: src/window.vala:175
 msgid "Board Size: "
-msgstr "Talha del platèu :"
+msgstr "Talha del platèu : "
 
 #. Translators: text of a dialog that appears when the user starts a new game while the score is not null
 #: src/window.vala:279
