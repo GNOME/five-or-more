@@ -35,7 +35,5 @@
  <link href="https://cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fi18n">irc</link>.
  People on the channel are located worldwide, so you may not get an immediate
  response as a result of timezone differences.</p>
-<p>Alternatively, you can contact the Internationalization Team using their
- <link href="http://mail.gnome.org/mailman/listinfo/gnome-i18n">mailing
- list</link>.</p>
+<p>Alternatively, you can contact the Internationalization Team using <link href="https://discourse.gnome.org/tag/i18n">GNOME Discourse</link>.</p>
 </page>
