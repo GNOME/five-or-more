@@ -11,22 +11,22 @@
 # Hein-Jan Leliveld <h.j.leliveld@student.tn.tudelft.nl>
 # Brent De Weerdt <deweerdt.brent@gmail.com>, 2013
 # Justin van Steijn <jvs@fsfe.org>, 2015
-# Nathan Follens <nthn@unseen.is>, 2017, 2019-2020
+# Nathan Follens <nfollens@gnome.org>, 2017, 2019-2020, 2023
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/five-or-more/issues\n"
-"POT-Creation-Date: 2020-05-31 06:52+0000\n"
-"PO-Revision-Date: 2020-08-25 15:13+0200\n"
-"Last-Translator: Nathan Follens <nthn@unseen.is>\n"
-"Language-Team: Gnome-NL <gnome-nl-list@gnome.org>\n"
+"POT-Creation-Date: 2023-01-25 17:18+0000\n"
+"PO-Revision-Date: 2023-03-26 17:55+0200\n"
+"Last-Translator: Nathan Follens <nfollens@gnome.org>\n"
+"Language-Team: Dutch <https://matrix.to/#/#nl:gnome.org>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Launchpad-Export-Date: 2011-09-18 07:04+0000\n"
-"X-Generator: Poedit 2.4.1\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #. Translators: name of the application, as displayed in the window manager
 #. Translators: name of the application, as displayed in the About dialog, some window managers, etc.
@@ -48,7 +48,7 @@ msgid ""
 "score points. Earn many more points by lining up as many objects as possible "
 "before clearing them."
 msgstr ""
-"Vijf of meer is de Gnome-variant van een computerspel dat eens populair was. "
+"Vijf of meer is de GNOME-variant van een computerspel dat eens populair was. "
 "Plaats vijf of meer objecten van dezelfde kleur op één lijn om ze te laten "
 "verdwijnen en punten te scoren. Verdien nog meer punten door zo veel "
 "mogelijk objecten op één lijn te zetten voordat ze verdwijnen."
@@ -63,7 +63,7 @@ msgstr ""
 
 #: data/org.gnome.five-or-more.appdata.xml.in:40
 msgid "The GNOME Project"
-msgstr "Het Gnome-project"
+msgstr "Het GNOME-project"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.five-or-more.desktop.in:6
@@ -90,7 +90,7 @@ msgid "Ball style. The filename of the images to use for the balls."
 msgstr "Knikkerstijl. De bestandsnaam van de plaatjes van de knikkers."
 
 #. Translators: title of the ColorChooser dialog that appears from the hamburger menu > "Appearance" submenu > "Background" section > "Select color" entry
-#: data/org.gnome.five-or-more.gschema.xml:16 src/window.vala:221
+#: data/org.gnome.five-or-more.gschema.xml:16 src/window.vala:222
 msgid "Background color"
 msgstr "Achtergrondkleur"
 
@@ -317,8 +317,9 @@ msgstr "Groot"
 
 #. Translators: About dialog text, name and email of one of the authors
 #: src/main.vala:95
-msgid "Robert Szokovacs <szo@appaloosacorp.hu>"
-msgstr "Robert Szokovacs <szo@appaloosacorp.hu>"
+#| msgid "Robert Szokovacs <szo@appaloosacorp.hu>"
+msgid "Robert Szokovacs <szo@szo.hu>"
+msgstr "Robert Szokovacs <szo@szo.hu>"
 
 #. Translators: About dialog text, name and email of one of the authors
 #: src/main.vala:98
@@ -363,7 +364,7 @@ msgstr "Copyright © 2013–2014 Michael Catanzaro"
 #. Translators: About dialog text, describing the application
 #: src/main.vala:131
 msgid "GNOME port of the once-popular Color Lines game"
-msgstr "Gnome-versie van het eens zo populaire kleurlijnenspel"
+msgstr "GNOME-versie van het eens zo populaire kleurlijnenspel"
 
 #. Translators: about dialog text; this string should be replaced by a text crediting yourselves and your translation team, or should be left empty. Do not translate literally!
 #: src/main.vala:138
@@ -376,8 +377,7 @@ msgstr ""
 "Erik Kruijswijk\n"
 "Justin van Steijn\n"
 "Nathan Follens\n"
-"\n"
-"Meer info over Gnome-NL http://nl.gnome.org/\n"
+"Meer info over GNOME-NL https://nl.gnome.org/\n"
 "\n"
 "Launchpad Contributions:\n"
 "  Balaam’s Miracle https://launchpad.net/~balaam-balaamsmiracle\n"
@@ -427,18 +427,18 @@ msgstr "Bordgrootte: "
 
 # ingevuld?/neergezet
 #. Translators: text of a dialog that appears when the user starts a new game while the score is not null
-#: src/window.vala:278
+#: src/window.vala:279
 #, c-format
 msgid "Are you sure you want to start a new %u × %u game?"
 msgstr "Weet u zeker dat u een nieuw  %u × %u-spel wilt beginnen?"
 
 #. Translators: button of a dialog that appears when the user starts a new game while the score is not null; the other answer is "_Restart"
-#: src/window.vala:281
+#: src/window.vala:282
 msgid "_Cancel"
 msgstr "_Annuleren"
 
 #. Translators: button of a dialog that appears when the user starts a new game while the score is not null; the other answer is "_Cancel"
-#: src/window.vala:284
+#: src/window.vala:285
 msgid "_Restart"
 msgstr "_Herstarten"
 
