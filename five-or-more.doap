@@ -8,7 +8,7 @@
   <shortdesc xml:lang="en">Remove colored balls from the board by forming lines</shortdesc>
   <description xml:lang="en">Remove colored balls from the board by forming lines</description>
   <homepage rdf:resource="https://wiki.gnome.org/Apps/Five%20or%20more" />
-  <mailing-list rdf:resource="http://mail.gnome.org/mailman/listinfo/games-list" />
+  <support-forum rdf:resource="https://discourse.gnome.org/tag/games" />
   <download-page rdf:resource="http://download.gnome.org/sources/five-or-more/" />
   <bug-database rdf:resource="https://gitlab.gnome.org/GNOME/five-or-more/issues" />
   <category rdf:resource="http://api.gnome.org/doap-extensions#apps" />
