@@ -16,16 +16,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: five-or-more\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/five-or-more/issues\n"
-"POT-Creation-Date: 2022-07-07 20:11+0000\n"
-"PO-Revision-Date: 2022-03-31 10:55+0300\n"
-"Last-Translator: Emin Tufan Çetin <etcetin@gmail.com>\n"
+"POT-Creation-Date: 2023-10-03 04:13+0000\n"
+"PO-Revision-Date: 2023-10-16 00:39+0300\n"
+"Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
 "Language-Team: Türkçe <gnome-turk@gnome.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 2.4.3\n"
+"X-Generator: Poedit 3.4\n"
 
 #. Translators: name of the application, as displayed in the window manager
 #. Translators: name of the application, as displayed in the About dialog, some window managers, etc.
@@ -60,9 +60,10 @@ msgstr ""
 "Her turdan sonra daha çok öge ortaya çıkar. Pano tümüyle doluncaya dek "
 "olabildiğince uzun süre oyna!"
 
-#: data/org.gnome.five-or-more.appdata.xml.in:40
-msgid "The GNOME Project"
-msgstr "GNOME Projesi"
+#. Translators: About dialog text, name of one of the artists
+#: data/org.gnome.five-or-more.appdata.xml.in:40 src/main.vala:109
+msgid "Robert Roth"
+msgstr "Robert Roth"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.five-or-more.desktop.in:6
@@ -330,11 +331,6 @@ msgstr "Callum McKenzie"
 msgid "kenney.nl"
 msgstr "kenney.nl"
 
-#. Translators: About dialog text, name of one of the artists
-#: src/main.vala:109
-msgid "Robert Roth"
-msgstr "Robert Roth"
-
 #. Translators: About dialog text, name of one of the documenters
 #: src/main.vala:114
 msgid "Tiffany Antopolski"
@@ -404,9 +400,12 @@ msgstr "Yeni %u × %u oyun başlatmak istediğinizden emin misiniz?"
 #. Translators: button of a dialog that appears when the user starts a new game while the score is not null; the other answer is "_Restart"
 #: src/window.vala:282
 msgid "_Cancel"
-msgstr "İptal _Et"
+msgstr "İ_ptal"
 
 #. Translators: button of a dialog that appears when the user starts a new game while the score is not null; the other answer is "_Cancel"
 #: src/window.vala:285
 msgid "_Restart"
 msgstr "_Yeniden Başla"
+
+#~ msgid "The GNOME Project"
+#~ msgstr "GNOME Projesi"
