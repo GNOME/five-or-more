@@ -16,8 +16,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: five-or-more\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/five-or-more/issues\n"
-"POT-Creation-Date: 2023-10-03 04:13+0000\n"
-"PO-Revision-Date: 2023-10-16 00:39+0300\n"
+"POT-Creation-Date: 2023-10-16 13:24+0000\n"
+"PO-Revision-Date: 2023-10-26 16:38+0300\n"
 "Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
 "Language-Team: Türkçe <gnome-turk@gnome.org>\n"
 "Language: tr\n"
@@ -127,7 +127,7 @@ msgstr "Oyun ön izleme"
 
 #: data/org.gnome.five-or-more.gschema.xml:37
 msgid "Game preview from last saved session."
-msgstr "Son kaydedilen oturumdan oyun önizlemesi."
+msgstr "Son kaydedilen oturumdan oyun ön izlemesi."
 
 #: data/org.gnome.five-or-more.gschema.xml:41
 msgid "Width of the window in pixels"
