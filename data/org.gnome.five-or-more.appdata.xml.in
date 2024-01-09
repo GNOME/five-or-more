@@ -26,9 +26,10 @@
   <launchable type="desktop-id">org.gnome.five-or-more.desktop</launchable>
   <url type="homepage">https://wiki.gnome.org/Apps/Five%20or%20more</url>
   <url type="bugtracker">https://gitlab.gnome.org/GNOME/five-or-more/issues</url>
-  <url type="donation">http://www.gnome.org/friends/</url>
+  <url type="donation">https://www.gnome.org/donate/</url>
   <url type="help">https://help.gnome.org/users/five-or-more/stable/</url>
   <url type="translate">https://wiki.gnome.org/TranslationProject</url>
+  <url type="vcs-browser">https://gitlab.gnome.org/GNOME/five-or-more</url>
   <update_contact>mcatanzaro_at_gnome.org</update_contact>
   <project_group>GNOME</project_group>
   <kudos>
