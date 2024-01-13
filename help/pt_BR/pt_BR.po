@@ -3,41 +3,50 @@
 # This file is distributed under the same license as the five-or-more package.
 # Enrico Nicoletto <liverig@gmail.com>, 2013.
 # Rafael Fontenelle <rafaelff@gnome.org>, 2018.
+# Leônidas Araújo <leorusvellt@hotmail.com>, 2022.
+# Juliano de Souza Camargo <julianosc@pm.me>, 2024.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: five-or-more help\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=five-"
 "or-more&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2018-09-13 15:19+0000\n"
-"PO-Revision-Date: 2018-09-25 07:28-0200\n"
-"Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
-"Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
+"POT-Creation-Date: 2023-10-29 11:23+0000\n"
+"PO-Revision-Date: 2024-01-13 10:14-0300\n"
+"Last-Translator: Juliano de Souza Camargo <julianosc@pm.me>\n"
+"Language-Team: Brazilian Portuguese <https://br.gnome.org/traducao>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Virtaal 1.0.0-beta1\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+"X-Generator: Gtranslator 45.3\n"
 "X-Project-Style: gnome\n"
+"X-DL-Team: pt_BR\n"
+"X-DL-Module: five-or-more\n"
+"X-DL-Branch: master\n"
+"X-DL-Domain: help\n"
+"X-DL-State: Translating\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
 msgid "translator-credits"
 msgstr ""
 "Enrico Nicoletto <liverig@gmail.com>, 2013\n"
-"Rafael Fontenelle <rafaelff@gnome.org>, 2018"
+"Rafael Fontenelle <rafaelff@gnome.org>, 2018\n"
+"Leônidas Araújo <lerousvellt@hotmail.com>, 2022"
 
 #. (itstool) path: credit/name
 #: C/bug-filing.page:10 C/change-board-size.page:14 C/change-theme.page:14
-#: C/develop.page:10 C/documentation.page:8 C/fast-moves.page:14 C/index.page:17
-#: C/scores.page:14 C/shortcuts.page:9 C/strategy.page:9 C/translate.page:10
+#: C/develop.page:10 C/documentation.page:8 C/index.page:17 C/scores.page:14
+#: C/shortcuts.page:9 C/strategy.page:9 C/translate.page:10
 msgid "Tiffany Antopolski"
 msgstr "Tiffany Antopolski"
 
 #. (itstool) path: credit/years
 #: C/bug-filing.page:12 C/change-board-size.page:11 C/develop.page:12
-#: C/documentation.page:10 C/fast-moves.page:11 C/play.page:12 C/rules.page:12
-#: C/scores.page:11 C/shortcuts.page:11 C/translate.page:12
+#: C/documentation.page:10 C/play.page:12 C/rules.page:12 C/scores.page:11
+#: C/shortcuts.page:11 C/translate.page:12
 msgid "2011"
 msgstr "2011"
 
@@ -57,8 +66,8 @@ msgstr "Relatando um problema"
 msgid ""
 "<app>Five or More</app> is maintained by a volunteer community. You are "
 "welcome to participate. If you notice a problem you can file a <em>bug "
-"report</em>. To file a bug, go to <link href=\"https://gitlab.gnome.org/GNOME/"
-"five-or-more/issues/new\"/>."
+"report</em>. To file a bug, go to <link href=\"https://gitlab.gnome.org/"
+"GNOME/five-or-more/issues/new\"/>."
 msgstr ""
 "<app>Cinco ou Mais</app> é mantido pelos voluntários da comunidade. Você é "
 "bem-vindo para participar. Se você tiver algum problema, você pode "
@@ -95,43 +104,42 @@ msgstr ""
 msgid ""
 "Once you have an account, log in, click on <guiseq><gui>Projects</"
 "gui><gui>five-or-more</gui><gui>Issues</gui><gui>New issue</gui></guiseq>. "
-"Before reporting a bug, please read the <link href=\"https://bugzilla.gnome."
-"org/page.cgi?id=bug-writing.html\">bug writing guidelines</link>, and please "
-"<link href=\"https://gitlab.gnome.org/GNOME/five-or-more/issues\">browse</"
-"link> for the bug to see if it already exists."
+"Before reporting a bug, please read the <link href=\"https://wiki.gnome.org/"
+"GettingInTouch/BugReportingGuidelines\">bug writing guidelines</link>, and "
+"please <link href=\"https://gitlab.gnome.org/GNOME/five-or-more/"
+"issues\">browse</link> for the bug to see if it already exists."
 msgstr ""
-"Assim que você tiver uma conta, autentique-se, clique em "
-"<guiseq><gui>Projetos</gui><gui>five-or-more</gui><gui>Issues</gui><gui>New "
-"issue</gui></guiseq>. Antes de relatar um erro, por favor leia as <link href="
-"\"https://bugzilla.gnome.org/page.cgi?id=bug-writing.html\">diretrizes de "
-"relatório de erro</link>, e por favor <link href=\"https://gitlab.gnome.org/"
-"GNOME/five-or-more/issues\">pesquise</link> por erros relatados para ver se "
-"já foi relatado."
+"Depois de ter uma conta, faça o login. Clique em <guiseq><gui>Projetos</"
+"gui><gui>cinco ou mais</gui><gui >Problemas</gui><gui >Novo problema</gui ></"
+"guiseq>. Antes de relatar um bug, leia as <link href=\"https://wiki.gnome."
+"org/GettingInTouch/BugReportingGuidelines\">diretrizes para escrever bugs</"
+"link> e <link href=\"https://gitlab.gnome .org/GNOME/five-or-more/"
+"issues\">procure</link> pelo bug para ver se ele já existe."
 
 #. (itstool) path: page/p
-#: C/bug-filing.page:37
+#: C/bug-filing.page:33
 msgid ""
 "Fill in the Title and Description sections and click <gui>Submit issue</gui>."
-msgstr "Preencha as seções Título e Descrição e clique <gui>Enviar issue</gui>."
+msgstr ""
+"Preencha as seções Título e Descrição e clique <gui>Enviar issue</gui>."
 
 #. (itstool) path: page/p
-#: C/bug-filing.page:40
+#: C/bug-filing.page:36
 msgid ""
 "Your report will be given an ID number, and its status will be updated as it "
 "is being dealt with."
 msgstr ""
-"Seu relatório receberá um número de ID e seu status será atualizado na medida "
-"em que é tratado."
+"Seu relatório receberá um número de ID e seu status será atualizado na "
+"medida em que é tratado."
 
 #. (itstool) path: credit/name
-#: C/change-board-size.page:9 C/change-theme.page:9 C/fast-moves.page:9
-#: C/index.page:13 C/play.page:10 C/scores.page:9
+#: C/change-board-size.page:9 C/change-theme.page:9 C/index.page:13
+#: C/play.page:10 C/scores.page:9
 msgid "Lahiru lanka"
 msgstr "Lahiru lanka"
 
 #. (itstool) path: credit/name
-#: C/change-board-size.page:18 C/fast-moves.page:18 C/play.page:15
-#: C/translate.page:15
+#: C/change-board-size.page:18 C/play.page:15 C/translate.page:15
 msgid "Michael Hill"
 msgstr "Michael Hill"
 
@@ -147,21 +155,16 @@ msgstr "Para alterar o tamanho do tabuleiro:"
 
 #. (itstool) path: item/p
 #: C/change-board-size.page:26
-msgid "Click <guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq>"
-msgstr ""
-"Clique em <guiseq><gui>Configurações</gui><gui>Preferências</gui></guiseq>"
+msgid "Press the menu button in the top-right corner of the window."
+msgstr "Pressione o botão de menu no canto superior direito da janela."
 
 #. (itstool) path: item/p
 #: C/change-board-size.page:27
-msgid ""
-"Under <gui>Board Size</gui>, select <gui>Small</gui>, <gui>Medium</gui>, or "
-"<gui>Large</gui>."
-msgstr ""
-"Sob <gui>Tamanho do tabuleiro</gui>, selecione <gui>Pequeno</gui>, "
-"<gui>Médio</gui> ou <gui>Grande</gui>."
+msgid "Select <gui>Small</gui>, <gui>Medium</gui>, or <gui>Large</gui>."
+msgstr "Selecione <gui>Pequeno</gui>, <gui>Médio</gui> ou <gui>Grande</gui>."
 
 #. (itstool) path: note/p
-#: C/change-board-size.page:32
+#: C/change-board-size.page:31
 msgid ""
 "While a larger board gives you more space, there are also more objects in "
 "play for each turn."
@@ -170,123 +173,124 @@ msgstr ""
 "jogar em cada turno."
 
 #. (itstool) path: section/title
-#: C/change-board-size.page:37
+#: C/change-board-size.page:36
 msgid "Board parameters"
 msgstr "Parâmetros do tabuleiro"
 
 #. (itstool) path: section/p
-#: C/change-board-size.page:38
+#: C/change-board-size.page:37
 msgid "The 3 different board sizes have the following parameters:"
 msgstr "Os três tamanhos diferentes do tabuleiro têm os seguintes parâmetros:"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:42
+#: C/change-board-size.page:41
 msgid "<em>Size</em>"
 msgstr "<em>Tamanho</em>"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:43
+#: C/change-board-size.page:42
 msgid "<em>Width</em>"
 msgstr "<em>Largura</em>"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:44
+#: C/change-board-size.page:43
 msgid "<em>Height</em>"
 msgstr "<em>Altura</em>"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:45
+#: C/change-board-size.page:44
 msgid "<em>Number of types</em>"
 msgstr "<em>Número de tipos</em>"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:46
+#: C/change-board-size.page:45
 msgid "<em>New objects per turn</em>"
 msgstr "<em>Novos objetos por turno</em>"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:47
+#: C/change-board-size.page:46
 msgid "<em>Number of cells</em>"
 msgstr "<em>Número de células</em>"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:51
+#: C/change-board-size.page:50
 msgid "Small"
 msgstr "Pequeno"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:52 C/change-board-size.page:53
-#: C/change-board-size.page:61 C/change-board-size.page:66 C/scores.page:41
+#: C/change-board-size.page:51 C/change-board-size.page:52
+#: C/change-board-size.page:62 C/change-board-size.page:71
+#: C/change-board-size.page:72 C/scores.page:41
 msgid "7"
 msgstr "7"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:54 C/scores.page:33
+#: C/change-board-size.page:53 C/scores.page:33
 msgid "5"
 msgstr "5"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:55 C/change-board-size.page:61
+#: C/change-board-size.page:54 C/change-board-size.page:63
 msgid "3"
 msgstr "3"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:56
+#: C/change-board-size.page:55 C/scores.page:62
 msgid "49"
 msgstr "49"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:60
+#: C/change-board-size.page:59
 msgid "Medium"
 msgstr "Médio"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:60 C/scores.page:49
+#: C/change-board-size.page:60 C/change-board-size.page:61 C/scores.page:49
 msgid "9"
 msgstr "9"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:61
+#: C/change-board-size.page:64
 msgid "81"
 msgstr "81"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:65
+#: C/change-board-size.page:68
 msgid "Large"
 msgstr "Grande"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:65
+#: C/change-board-size.page:69
 msgid "20"
 msgstr "20"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:65
+#: C/change-board-size.page:70 C/scores.page:73
 msgid "15"
 msgstr "15"
 
 #. (itstool) path: td/p
-#: C/change-board-size.page:66
+#: C/change-board-size.page:73
 msgid "300"
 msgstr "300"
 
 #. (itstool) path: section/title
-#: C/change-board-size.page:74
+#: C/change-board-size.page:80
 msgid "The 3 board sizes"
 msgstr "Os três tamanhos de tabuleiro"
 
 #. (itstool) path: media/p
-#: C/change-board-size.page:80
+#: C/change-board-size.page:86
 msgid "<app>Five or More</app> Small board"
 msgstr "Tabuleiro pequeno do <app>Cinco ou Mais</app>"
 
 #. (itstool) path: media/p
-#: C/change-board-size.page:85
+#: C/change-board-size.page:91
 msgid "<app>Five or More</app> medium size board"
 msgstr "Tabuleiro médio do <app>Cinco ou Mais</app>"
 
 #. (itstool) path: media/p
-#: C/change-board-size.page:90
+#: C/change-board-size.page:96
 msgid "<app>Five or More</app> large size board"
 msgstr "Tabuleiro grande do <app>Cinco ou Mais</app>"
 
@@ -306,23 +310,25 @@ msgid "To change the appearance of the pieces and the board:"
 msgstr "Para alterar a aparência das peças e do tabuleiro:"
 
 #. (itstool) path: item/p
-#: C/change-theme.page:24 C/fast-moves.page:28
-msgid "Click <guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq>."
-msgstr ""
-"Clique em <guiseq><gui>Configurações</gui><gui>Preferências</gui></guiseq>."
-
-#. (itstool) path: item/p
-#: C/change-theme.page:27
+#: C/change-theme.page:24
 msgid ""
-"Select <gui>balls</gui>, <gui>dots</gui>, <gui>gumball</gui> or <gui>shapes</"
-"gui> from the <gui>Image</gui> drop down menu to change the playing pieces."
+"Press the menu button in the top-right corner of the window and select <gui "
+"style=\"menuitem\">Preferences</gui>."
 msgstr ""
-"Selecione <gui>bolas</gui>, <gui>pontos</gui>, <gui>bola de chiclete</gui> ou "
-"<gui>formas</gui> a partir do menu suspenso <gui>Imagem</gui> para alterar as "
-"peças em jogo."
+"Pressione o botão de menu no canto superior direito da janela e selecione "
+"<gui style=\"menuitem\">Preferências</gui>."
 
 #. (itstool) path: item/p
-#: C/change-theme.page:29
+#: C/change-theme.page:28
+msgid ""
+"Select <gui>balls</gui>, <gui>shapes</gui>, or <gui>tango</gui> from the "
+"<gui>Theme</gui> drop down menu to change the playing pieces."
+msgstr ""
+"Selecione <gui>bolas</gui>, <gui>formas</gui> ou <gui>tango</gui> no menu "
+"suspenso <gui>Tema</gui> para alterar as peças do jogo."
+
+#. (itstool) path: item/p
+#: C/change-theme.page:30
 msgid ""
 "Click on the colored box next to <gui>Background color</gui> to access the "
 "color palette."
@@ -331,44 +337,9 @@ msgstr ""
 "paleta de cores."
 
 #. (itstool) path: item/p
-#: C/change-theme.page:33 C/fast-moves.page:30
-msgid "Click <gui>Close</gui>."
-msgstr "Clique em <gui>Fechar</gui>."
-
-#. (itstool) path: section/title
-#: C/change-theme.page:37
-msgid "Images available"
-msgstr "Imagens disponíveis"
-
-#. (itstool) path: media/p
-#: C/change-theme.page:39
-msgid "Five or More with different balls"
-msgstr "Cinco ou Mais com bolas diferentes"
-
-#. (itstool) path: media/p
-#: C/change-theme.page:43
-msgid "<app>Five or More</app> with different dots"
-msgstr "<app>Cinco ou Mais</app> com pontos diferentes"
-
-#. (itstool) path: media/p
-#: C/change-theme.page:47
-msgid "<app>Five or More</app> with different gumballs"
-msgstr "<app>Cinco ou Mais</app> com bolas de chiclete diferentes"
-
-#. (itstool) path: media/p
-#: C/change-theme.page:51
-msgid "<app>Five or More</app> with different shapes"
-msgstr "<app>Cinco ou Mais</app> com formas diferentes"
-
-#. (itstool) path: section/title
-#: C/change-theme.page:56
-msgid "Background colors available"
-msgstr "Cores de fundo disponíveis"
-
-#. (itstool) path: media/p
-#: C/change-theme.page:58
-msgid "Five or More color palette"
-msgstr "Paletas de cores do Cinco ou Mais"
+#: C/change-theme.page:34
+msgid "Close the <gui>Preferences</gui> dialog."
+msgstr "Feche a caixa de diálogo <gui>Preferências</gui>."
 
 #. (itstool) path: page/title
 #: C/develop.page:19
@@ -388,18 +359,21 @@ msgstr ""
 #: C/develop.page:23
 msgid ""
 "If you would like to <link href=\"https://wiki.gnome.org/Apps/Games/"
-"Contributing\">help develop <app>GNOME Games</app></link>, you can get in "
-"touch with the developers using <link href=\"https://cbe005.chat.mibbit.com/?"
-"url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, or via our <link "
-"href=\"http://mail.gnome.org/mailman/listinfo/games-list\">mailing list</"
-"link>."
+"Contribute\">help develop <app>GNOME Games</app></link>, you can get in "
+"touch with the developers at <link href=\"https://matrix.to/#/#gnome-games:"
+"gnome.org\">#gnome-games:gnome.org</link> on <link xref=\"help:gnome-help/"
+"help-matrix\">Matrix</link> or <link href=\"https://web.libera.chat/#gnome-"
+"games\">#gnome-games</link> on irc.libera.chat, or via <link href=\"https://"
+"discourse.gnome.org/tag/games\">GNOME Discourse</link>."
 msgstr ""
-"Se você quiser <link href=\"https://wiki.gnome.org/Apps/Games/Contributing"
-"\">ajudar a desenvolver <app>GNOME Games</app></link>, você pode entrar em "
-"contato com os desenvolvedores usando o <link href=\"https://cbe005.chat."
-"mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link> ou por "
-"meio de nossa <link href=\"http://mail.gnome.org/mailman/listinfo/games-list"
-"\">lista de discussão</link>."
+"Se você quiser <link href=\"https://wiki.gnome.org/Apps/Games/"
+"Contributing\">ajudar a desenvolver <app>GNOME Games</app></link>, você pode "
+"entrar em contato com os desenvolvedores usando o <link href=\"https://"
+"matrix.to/#/#gnome-games:gnome.org\">#gnome-games:gnome.org</link> no <link "
+"xref=\"help:gnome-help/help-matrix\">Matrix</link> ou <link href=\"https://"
+"web.libera.chat/#gnome-games\">#gnome-games</link> no irc.libera.chat, ou "
+"via <link href=\"https://discourse.gnome.org/tag/games\">GNOME Discourse</"
+"link>."
 
 #. (itstool) path: page/title
 #: C/documentation.page:17
@@ -418,49 +392,28 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/documentation.page:22
 msgid ""
-"To contribute to the Documentation Project, feel free to get in touch with us "
-"using <link href=\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome."
-"org%2Fdocs\">irc</link>, or via our <link href=\"http://mail.gnome.org/"
-"mailman/listinfo/gnome-doc-list\">mailing list</link>."
+"To contribute to the Documentation Project, feel free to get in touch with "
+"us in <link href=\"https://matrix.to/#/#docs:gnome.org\">#docs:gnome.org</"
+"link> on <link xref=\"help:gnome-help/help-matrix\">Matrix</link> or <link "
+"href=\"https://web.libera.chat/#gnome-docs\">#gnome-docs</link> on irc."
+"libera.chat, or via <link href=\"https://discourse.gnome.org/tag/"
+"documentation\">GNOME Discourse</link>."
 msgstr ""
-"Para contribuir para o Projeto de Documentação, sinta-se à vontade para "
-"entrar em contato com a gente usando o <link href=\"https://cbe003.chat."
-"mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fdocs\">irc</link> ou por nossa "
-"<link href=\"http://mail.gnome.org/mailman/listinfo/gnome-doc-list\">lista de "
-"discussão</link>."
+"Para contribuir com a Documentação do Projeto, sinta-se livre para entrar em "
+"contato conosco em <link href=\"https://matrix.to/#/#docs:gnome.org\">#docs:"
+"gnome.org</link> no <link xref=\"help:gnome-help/help-matrix\">Matrix</link> "
+"ou <link href=\"https://web.libera.chat/#gnome-docs\">#gnome-docs</link> no "
+"irc.libera.chat, ou via <link href=\"https://discourse.gnome.org/tag/"
+"documentation\">GNOME Discourse</link>."
 
 #. (itstool) path: page/p
-#: C/documentation.page:26
+#: C/documentation.page:29
 msgid ""
-"Our <link href=\"https://wiki.gnome.org/DocumentationProject/Contributing"
-"\">wiki</link> page contains useful information."
+"Our <link href=\"https://wiki.gnome.org/DocumentationProject/"
+"Contributing\">wiki</link> page contains useful information."
 msgstr ""
 "Nossa página <link href=\"https://wiki.gnome.org/DocumentationProject/"
 "Contributing\">wiki</link> contém informações úteis."
-
-#. (itstool) path: page/title
-#: C/fast-moves.page:25
-msgid "Change speed"
-msgstr "Velocidade do jogo"
-
-#. (itstool) path: page/p
-#: C/fast-moves.page:26
-msgid "To speed up object movements:"
-msgstr "Para acelerar o movimento dos objetos:"
-
-#. (itstool) path: item/p
-#: C/fast-moves.page:29
-msgid "Under <gui>General</gui>, select <gui>Use fast moves</gui>."
-msgstr "Sob <gui>Geral</gui>, selecione <gui>Usar movimentos rápidos</gui>."
-
-#. (itstool) path: note/p
-#: C/fast-moves.page:33
-msgid ""
-"Any changes you make are instantly applied and remembered for the next time "
-"you run <app>Five or More</app>."
-msgstr ""
-"Quaisquer alterações que você fizer serão aplicadas instantaneamente para a "
-"próxima vez que você executar <app>Cinco ou Mais</app>."
 
 #. (itstool) path: info/title
 #: C/index.page:8
@@ -476,27 +429,23 @@ msgstr "Cinco ou Mais"
 
 #. (itstool) path: media/span
 #: C/index.page:27
-#| msgctxt "link"
-#| msgid "Five or More"
 msgid "Five or More logo"
 msgstr "Logo do Cinco ou Mais"
 
 #. (itstool) path: page/title
 #: C/index.page:26
-#| msgctxt "link"
-#| msgid "Five or More"
 msgid "<_:media-1/> Five or More"
 msgstr "<_:media-1/> Cinco ou Mais"
 
 #. (itstool) path: page/p
-#: C/index.page:29
+#: C/index.page:30
 msgid ""
-"<app>Five or More</app> is a deceptively simple brain workout. The goal is to "
-"place at least five objects of the same <link xref=\"change-theme#images"
-"\">color or shape</link> into a straight line. The line can be horizontal, "
-"vertical or diagonal. Once five or more objects are grouped into a line, they "
-"disappear. The goal is to vanish as many objects as possible. The game is "
-"over when the entire board is full."
+"<app>Five or More</app> is a deceptively simple brain workout. The goal is "
+"to place at least five objects of the same <link xref=\"change-"
+"theme#images\">color or shape</link> into a straight line. The line can be "
+"horizontal, vertical or diagonal. Once five or more objects are grouped into "
+"a line, they disappear. The goal is to vanish as many objects as possible. "
+"The game is over when the entire board is full."
 msgstr ""
 "<app>Cinco ou Mais</app> é um exercício cerebral enganadoramente simples. O "
 "objetivo é colocar pelo menos cinco objetos da mesma <link xref=\"change-"
@@ -593,9 +542,9 @@ msgstr "<em>Atribuição</em>"
 #. (itstool) path: item/p
 #: C/license.page:40
 msgid ""
-"You must attribute the work in the manner specified by the author or licensor "
-"(but not in any way that suggests that they endorse you or your use of the "
-"work)."
+"You must attribute the work in the manner specified by the author or "
+"licensor (but not in any way that suggests that they endorse you or your use "
+"of the work)."
 msgstr ""
 "Você deve atribuir esta obra da forma especificada pelo autor ou licenciante "
 "(mas não de forma a sugerir que eles endossam você ou o sua forma de uso)."
@@ -617,16 +566,16 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/license.page:54
 msgid ""
-"For the full text of the license, see the <link href=\"http://creativecommons."
-"org/licenses/by-sa/3.0/legalcode\">CreativeCommons website</link>, or read "
-"the full <link href=\"http://creativecommons.org/licenses/by-sa/3.0/"
-"\">Commons Deed</link>."
+"For the full text of the license, see the <link href=\"http://"
+"creativecommons.org/licenses/by-sa/3.0/legalcode\">CreativeCommons website</"
+"link>, or read the full <link href=\"http://creativecommons.org/licenses/by-"
+"sa/3.0/\">Commons Deed</link>."
 msgstr ""
-"Para o texto integral da licença, veja o <link href=\""
-"https://creativecommons.org/licenses/by-sa/3.0/legalcode.pt\">site da "
-"CreativeCommons</link> ou leia o texto completo em <link href=\""
-"https://creativecommons.org/licenses/by-sa/3.0/deed.pt_BR\">Licença para "
-"leigos</link>."
+"Para o texto integral da licença, veja o <link href=\"https://"
+"creativecommons.org/licenses/by-sa/3.0/legalcode.pt\">site da "
+"CreativeCommons</link> ou leia o texto completo em <link href=\"https://"
+"creativecommons.org/licenses/by-sa/3.0/deed.pt_BR\">Licença para leigos</"
+"link>."
 
 #. (itstool) path: page/title
 #: C/play.page:22
@@ -636,36 +585,42 @@ msgstr "Como jogar"
 #. (itstool) path: page/p
 #: C/play.page:24
 msgid ""
-"To start a new game click <guiseq><gui>Game</gui><gui>New</gui></guiseq>."
+"To start a new game, press the menu button in the top-right corner of the "
+"window and select <gui style=\"menuitem\">New Game</gui>."
 msgstr ""
-"Para iniciar um novo jogo, clique em "
-"<guiseq><gui>Jogo</gui><gui>Novo</gui></guiseq>."
+"Para iniciar um novo jogo, pressione o botão de menu no canto superior "
+"direito da janela e selecione <gui style=\"menuitem\">Novo jogo</gui>."
 
 #. (itstool) path: section/title
-#: C/play.page:28
+#: C/play.page:29
 msgid "Using the mouse"
 msgstr "Usando o mouse"
 
 #. (itstool) path: item/p
-#: C/play.page:32
+#: C/play.page:33
 msgid ""
-"Click on the object you want to move. The selected object will begin spinning."
+"Click on the object you want to move. The selected object will begin "
+"spinning."
 msgstr ""
 "Clique no objeto que você deseja mover. O objeto selecionado vai começar a "
 "girar."
 
 #. (itstool) path: item/p
-#: C/play.page:36
-msgid "Click on the destination cell."
-msgstr "Clique na célula de destino."
+#: C/play.page:37
+msgid ""
+"Click on the destination cell. The chosen object will move to the "
+"destination cell, if there is any clear path."
+msgstr ""
+"Clique na célula de destino. O objeto escolhido se moverá para a célula de "
+"destino, se houver algum caminho livre."
 
 #. (itstool) path: section/title
-#: C/play.page:44
+#: C/play.page:46
 msgid "Using the keyboard"
 msgstr "Usando o teclado"
 
 #. (itstool) path: item/p
-#: C/play.page:47
+#: C/play.page:50
 msgid ""
 "Press any of the arrow keys. An outline around a cell will appear on the "
 "board."
@@ -674,30 +629,37 @@ msgstr ""
 "célula aparecerá no tabuleiro."
 
 #. (itstool) path: item/p
-#: C/play.page:49
-msgid "Using the arrow keys, navigate to the object you want to move."
-msgstr "Usando as teclas de setas, navegue para o objeto que você deseja mover."
+#: C/play.page:54
+msgid ""
+"Using the arrow keys, and the <key>Home</key>, <key>End</key>, <key>PageUp</"
+"key> and <key>PageDown</key> keys navigate to the object you want to move."
+msgstr ""
+"Usando as teclas de seta e as teclas <key>Home</key>, <key>End</key>, "
+"<key>PageUp</key> e <key>PageDown</key> navegue até o objeto que deseja "
+"mover."
 
 #. (itstool) path: item/p
-#: C/play.page:51
+#: C/play.page:57
 msgid ""
-"To select the object, press the <key>Enter</key> or <key>Spacebar</key>. The "
-"selected object will begin spinning."
+"To select the object, press the <key>Enter</key>, <key>Spacebar</key> or "
+"<key>Return</key>. The selected object will begin spinning."
 msgstr ""
-"Para selecione o objeto, pressione o <key>Enter</key> ou <key>Espaço</key>. "
-"O objeto selecionado vai começar a girar."
+"Para selecionar o objeto, pressione <key>Enter</key>, <key>Barra de espaço</"
+"key> ou <key>Return</key>. O objeto selecionado começará a girar."
 
 #. (itstool) path: item/p
-#: C/play.page:53
+#: C/play.page:60
 msgid ""
-"Move to the destination cell, and again press the <key>Enter</key> or "
-"<key>Spacebar</key>. The chosen object will move to the destination cell."
+"Move to the destination cell, and again press the <key>Enter</key>, "
+"<key>Spacebar</key> or <key>Return</key>. The chosen object will move to the "
+"destination cell, if there is any clear path."
 msgstr ""
-"Mova a célula de destino e pressione novamente o <key>Enter</key> ou "
-"<key>Espaço</key>. O objeto escolhido vai mover para a célula de destino."
+"Mova para a célula de destino e pressione novamente <key>Enter</key>, "
+"<key>Barra de espaço</key> ou <key>Return</key>. O objeto escolhido se "
+"moverá para a célula de destino, se houver algum caminho livre."
 
 #. (itstool) path: section/title
-#: C/play.page:62
+#: C/play.page:70
 msgid "Video demonstration"
 msgstr "Demonstração em vídeo"
 
@@ -720,8 +682,8 @@ msgstr ""
 msgid ""
 "Each time you <link xref=\"play\">move an object</link>, additional objects "
 "are placed randomly on the board. The number of new objects placed each turn "
-"also depends on the board. A preview of the objects to be placed on the board "
-"appears in the upper left corner of the game window."
+"also depends on the board. A preview of the objects to be placed on the "
+"board appears in the upper left corner of the game window."
 msgstr ""
 "Cada vez que você <link xref=\"play\">move um objeto</link>, objetos "
 "adicionais são colocados aleatoriamente no tabuleiro. O número de novos "
@@ -762,8 +724,8 @@ msgstr ""
 #. (itstool) path: item/p
 #: C/rules.page:38
 msgid ""
-"The game is over when the board is full, since no object can be moved at that "
-"point."
+"The game is over when the board is full, since no object can be moved at "
+"that point."
 msgstr ""
 "O jogo acaba quando o tabuleiro está cheio, já que nenhum objeto pode ser "
 "movido naquele ponto."
@@ -796,8 +758,8 @@ msgstr "Pontuando"
 #. (itstool) path: page/p
 #: C/scores.page:21
 msgid ""
-"You score points by creating lines of 5 or more objects. The number of points "
-"depends on the number of objects that disappear."
+"You score points by creating lines of 5 or more objects. The number of "
+"points depends on the number of objects that disappear."
 msgstr ""
 "Você ganha pontos criando linhas de 5 ou mais objetos. O número de pontos "
 "depende do número de objetos que desaparecem."
@@ -823,14 +785,14 @@ msgid "6"
 msgstr "6"
 
 #. (itstool) path: td/p
-#: C/scores.page:38 C/scores.page:61
-msgid "12"
-msgstr "12"
+#: C/scores.page:38
+msgid "18"
+msgstr "18"
 
 #. (itstool) path: td/p
 #: C/scores.page:42
-msgid "18"
-msgstr "18"
+msgid "25"
+msgstr "25"
 
 #. (itstool) path: td/p
 #: C/scores.page:45
@@ -839,18 +801,18 @@ msgstr "8"
 
 #. (itstool) path: td/p
 #: C/scores.page:46
-msgid "28"
-msgstr "28"
+msgid "31"
+msgstr "31"
 
 #. (itstool) path: td/p
 #: C/scores.page:50
-msgid "42"
-msgstr "42"
+msgid "36"
+msgstr "36"
 
 #. (itstool) path: td/p
 #: C/scores.page:54
-msgid "82"
-msgstr "82"
+msgid "41"
+msgstr "41"
 
 #. (itstool) path: td/p
 #: C/scores.page:57
@@ -859,13 +821,13 @@ msgstr "11"
 
 #. (itstool) path: td/p
 #: C/scores.page:58
-msgid "108"
-msgstr "108"
+msgid "45"
+msgstr "45"
 
 #. (itstool) path: td/p
-#: C/scores.page:62
-msgid "138"
-msgstr "138"
+#: C/scores.page:61
+msgid "12"
+msgstr "12"
 
 #. (itstool) path: td/p
 #: C/scores.page:65
@@ -874,8 +836,8 @@ msgstr "13"
 
 #. (itstool) path: td/p
 #: C/scores.page:66
-msgid "172"
-msgstr "172"
+msgid "53"
+msgstr "53"
 
 #. (itstool) path: td/p
 #: C/scores.page:69
@@ -884,23 +846,30 @@ msgstr "14"
 
 #. (itstool) path: td/p
 #: C/scores.page:70
-msgid "210"
-msgstr "210"
+msgid "56"
+msgstr "56"
+
+#. (itstool) path: td/p
+#: C/scores.page:74
+msgid "59"
+msgstr "59"
 
 #. (itstool) path: note/p
-#: C/scores.page:76
+#: C/scores.page:81
 msgid ""
-"You can view the high scores by clicking <guiseq><gui>Game</gui><gui>Scores</"
-"gui></guiseq>."
+"You can view the high scores by pressing the menu button in the top-right "
+"corner of the window and selecting <gui style=\"menuitem\">Scores</gui>."
 msgstr ""
-"Você pode ver as pontuações mais altas clicando em "
-"<guiseq><gui>Jogo</gui><gui>Pontuações</gui></guiseq>."
+"Você pode ver as pontuações mais altas pressionando o botão de menu no canto "
+"superior direito da janela e selecionando <gui "
+"style=\"menuitem\">Pontuações</gui>."
 
 #. (itstool) path: note/p
-#: C/scores.page:78
+#: C/scores.page:83
 msgid ""
 "The <app>Five or More</app> scores are recorded according to the board size. "
-"You can select the <gui>Board Size</gui> of interest using the drop down menu."
+"You can select the <gui>Board Size</gui> of interest using the drop down "
+"menu."
 msgstr ""
 "As pontuações do <app>Cinco ou Mais</app> são registradas de acordo com o "
 "tamanho do tabuleiro. Você pode selecionar o <gui>Tamanho do tabuleir</gui> "
@@ -958,28 +927,28 @@ msgstr ""
 "mente enquanto joga:"
 
 #. (itstool) path: item/p
-#: C/strategy.page:22
+#: C/strategy.page:23
 msgid "Try to set at least three same objects with your every move."
 msgstr ""
 "Tente definir pelo menos três objetos iguais com todos os seus movimentos."
 
 #. (itstool) path: item/p
-#: C/strategy.page:23
+#: C/strategy.page:24
 msgid ""
 "The board can quickly become very crowded with objects, so it is best to "
 "think ahead. Pay attention to the collection of <gui>Next</gui> objects, "
 "because knowing these will influence your moves."
 msgstr ""
 "O tabuleiro pode rapidamente ficar muito cheio de objetos, então é melhor "
-"planejar antencipadamente. Preste atenção na coleção de objetos <gui>próximos</gui>, "
-"porque saber disso influenciará seus movimentos."
+"planejar antencipadamente. Preste atenção na coleção de objetos "
+"<gui>próximos</gui>, porque saber disso influenciará seus movimentos."
 
 #. (itstool) path: item/p
-#: C/strategy.page:24
+#: C/strategy.page:25
 msgid ""
 "Try to line up more than 5 objects. For example, if you have 6 objects, you "
-"can line up 2 and 3 with a space in between, and then connect them by placing "
-"the sixth object between them."
+"can line up 2 and 3 with a space in between, and then connect them by "
+"placing the sixth object between them."
 msgstr ""
 "Tente alinhar mais de 5 objetos. Por exemplo, se você tiver 6 objetos, "
 "poderá alinhar 2 e 3 com um espaço intermediário e, em seguida, conectá-los, "
@@ -1004,45 +973,152 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/translate.page:28
 msgid ""
-"There are <link href=\"http://l10n.gnome.org/module/five-or-more/\">many "
+"There are <link href=\"https://l10n.gnome.org/module/five-or-more/\">many "
 "languages</link> for which translations are still needed."
 msgstr ""
-"Há <link href=\"http://l10n.gnome.org/module/five-or-more/\">muitos idiomas</"
-"link> para os quais traduções ainda são necessárias."
+"Há <link href=\"https://l10n.gnome.org/module/five-or-more/\">muitos "
+"idiomas</link> para os quais traduções ainda são necessárias."
 
 #. (itstool) path: page/p
 #: C/translate.page:30
 msgid ""
-"To start translating you will need to <link href=\"http://l10n.gnome.org"
-"\">create an account</link> and join the <link href=\"http://l10n.gnome.org/"
-"teams/\">translation team</link> for your language. This will give you the "
-"ability to upload new translations."
+"To start translating you will need to <link href=\"https://l10n.gnome."
+"org\">create an account</link> and join the <link href=\"https://l10n.gnome."
+"org/teams/\">translation team</link> for your language. This will give you "
+"the ability to upload new translations."
 msgstr ""
-"Para começar a traduzir você precisará <link href=\"http://l10n.gnome.org\">"
-"criar uma conta</link> e ingressar na <link href=\"http://l10n.gnome.org/"
-"teams/\">equipe de tradução</link> para o seu idioma (Português do Brasil, "
-"Brazilian Portuguese). Isto lhe dará a capacidade de enviar novas traduções."
+"Para começar a traduzir você precisará <link href=\"https://l10n.gnome."
+"org\">criar uma conta</link> e ingressar na <link href=\"http://l10n.gnome."
+"org/teams/\">equipe de tradução</link> para o seu idioma (Português do "
+"Brasil, Brazilian Portuguese). Isto lhe dará a capacidade de enviar novas "
+"traduções."
 
 #. (itstool) path: page/p
 #: C/translate.page:34
 msgid ""
-"You can chat with GNOME translators using <link href=\"https://cbe003.chat."
-"mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fi18n\">irc</link>. People on the "
-"channel are located worldwide, so you may not get an immediate response as a "
-"result of timezone differences."
+"You can chat with GNOME translators in <link href=\"https://matrix.to/#/"
+"#i18n:gnome.org\">#i18n:gnome.org</link> on <link xref=\"help:gnome-help/"
+"help-matrix\">Matrix</link> or <link href=\"https://web.libera.chat/#gnome-"
+"i18n\">#gnome-i18n</link> on irc.libera.chat. People on the channel are "
+"located worldwide, so you may not get an immediate response as a result of "
+"timezone differences."
 msgstr ""
 "Você pode conversar com tradutores do GNOME usando <link href=\"https://"
-"cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fi18n\">irc</link>. "
-"Pessoas no canal estão espalhadas por todo o mundo, então você pode não obter "
-"uma resposta imediata como um resultado de diferenças de fuso horário."
+"matrix.to/#/#i18n:gnome.org\">#i18n:gnome.org</link> no <link xref=\"help:"
+"gnome-help/help-matrix\">Matrix</link> ou <link href=\"https://web.libera."
+"chat/#gnome-i18n\">#gnome-i18n</link> no irc.libera.chat. Pessoas no canal "
+"estão espalhadas por todo o mundo, então você pode não obter uma resposta "
+"imediata como um resultado de diferenças de fuso horário."
 
 #. (itstool) path: page/p
-#: C/translate.page:38
+#: C/translate.page:40
 msgid ""
-"Alternatively, you can contact the Internationalization Team using their "
-"<link href=\"http://mail.gnome.org/mailman/listinfo/gnome-i18n\">mailing "
-"list</link>."
+"Alternatively, you can contact the Internationalization Team using <link "
+"href=\"https://discourse.gnome.org/tag/i18n\">GNOME Discourse</link>."
 msgstr ""
 "De forma alternativa, você pode contactar a equipe de internacionalização "
-"usando <link href=\"http://mail.gnome.org/mailman/listinfo/gnome-i18n\">a "
-"lista de discussão</link>."
+"usando o <link href=\"https://discourse.gnome.org/tag/i18n\">GNOME "
+"Discourse</link>."
+
+#~ msgid ""
+#~ "To contribute to the Documentation Project, feel free to get in touch "
+#~ "with us using <link href=\"https://cbe003.chat.mibbit.com/?"
+#~ "url=irc%3A%2F%2Firc.gnome.org%2Fdocs\">irc</link>, or via our <link "
+#~ "href=\"http://mail.gnome.org/mailman/listinfo/gnome-doc-list\">mailing "
+#~ "list</link>."
+#~ msgstr ""
+#~ "Para contribuir para o Projeto de Documentação, sinta-se à vontade para "
+#~ "entrar em contato com a gente usando o <link href=\"https://cbe003.chat."
+#~ "mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fdocs\">irc</link> ou por "
+#~ "nossa <link href=\"http://mail.gnome.org/mailman/listinfo/gnome-doc-"
+#~ "list\">lista de discussão</link>."
+
+#~ msgid "Click <guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq>"
+#~ msgstr ""
+#~ "Clique em <guiseq><gui>Configurações</gui><gui>Preferências</gui></guiseq>"
+
+#~ msgid "Click <guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq>."
+#~ msgstr ""
+#~ "Clique em <guiseq><gui>Configurações</gui><gui>Preferências</gui></"
+#~ "guiseq>."
+
+#~ msgid "Click <gui>Close</gui>."
+#~ msgstr "Clique em <gui>Fechar</gui>."
+
+#~ msgid "Images available"
+#~ msgstr "Imagens disponíveis"
+
+#~ msgid "Five or More with different balls"
+#~ msgstr "Cinco ou Mais com bolas diferentes"
+
+#~ msgid "<app>Five or More</app> with different dots"
+#~ msgstr "<app>Cinco ou Mais</app> com pontos diferentes"
+
+#~ msgid "<app>Five or More</app> with different gumballs"
+#~ msgstr "<app>Cinco ou Mais</app> com bolas de chiclete diferentes"
+
+#~ msgid "<app>Five or More</app> with different shapes"
+#~ msgstr "<app>Cinco ou Mais</app> com formas diferentes"
+
+#~ msgid "Background colors available"
+#~ msgstr "Cores de fundo disponíveis"
+
+#~ msgid "Five or More color palette"
+#~ msgstr "Paletas de cores do Cinco ou Mais"
+
+#~ msgid "Change speed"
+#~ msgstr "Velocidade do jogo"
+
+#~ msgid "To speed up object movements:"
+#~ msgstr "Para acelerar o movimento dos objetos:"
+
+#~ msgid "Under <gui>General</gui>, select <gui>Use fast moves</gui>."
+#~ msgstr "Sob <gui>Geral</gui>, selecione <gui>Usar movimentos rápidos</gui>."
+
+#~ msgid ""
+#~ "Any changes you make are instantly applied and remembered for the next "
+#~ "time you run <app>Five or More</app>."
+#~ msgstr ""
+#~ "Quaisquer alterações que você fizer serão aplicadas instantaneamente para "
+#~ "a próxima vez que você executar <app>Cinco ou Mais</app>."
+
+#~ msgid ""
+#~ "To start a new game click <guiseq><gui>Game</gui><gui>New</gui></guiseq>."
+#~ msgstr ""
+#~ "Para iniciar um novo jogo, clique em <guiseq><gui>Jogo</gui><gui>Novo</"
+#~ "gui></guiseq>."
+
+#~ msgid "Click on the destination cell."
+#~ msgstr "Clique na célula de destino."
+
+#~ msgid "Using the arrow keys, navigate to the object you want to move."
+#~ msgstr ""
+#~ "Usando as teclas de setas, navegue para o objeto que você deseja mover."
+
+#~ msgid "28"
+#~ msgstr "28"
+
+#~ msgid "42"
+#~ msgstr "42"
+
+#~ msgid "82"
+#~ msgstr "82"
+
+#~ msgid "108"
+#~ msgstr "108"
+
+#~ msgid "138"
+#~ msgstr "138"
+
+#~ msgid "172"
+#~ msgstr "172"
+
+#~ msgid "210"
+#~ msgstr "210"
+
+#~ msgid ""
+#~ "You can view the high scores by clicking <guiseq><gui>Game</"
+#~ "gui><gui>Scores</gui></guiseq>."
+#~ msgstr ""
+#~ "Você pode ver as pontuações mais altas clicando em <guiseq><gui>Jogo</"
+#~ "gui><gui>Pontuações</gui></guiseq>."
