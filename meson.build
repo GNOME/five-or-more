@@ -1,5 +1,5 @@
 project('five-or-more', ['c', 'vala'],
-  version: '3.32.0',
+  version: '46.beta',
   meson_version: '>= 0.57.0',
   license: 'GPLv2'
 )
@@ -8,7 +8,7 @@ gnome = import('gnome')
 i18n = import('i18n')
 
 locale_dir  = join_paths (get_option ('prefix'), get_option ('localedir'))
-po_dir      = join_paths (meson.source_root (), 'po')
+po_dir      = join_paths (meson.project_source_root (), 'po')
 data_dir    = join_paths (get_option ('prefix'), get_option ('datadir'))
 pkgdata_dir = join_paths (data_dir, 'five-or-more')
 bindir      = join_paths (get_option ('prefix'), get_option ('bindir'))

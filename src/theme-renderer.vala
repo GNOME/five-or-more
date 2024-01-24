@@ -27,9 +27,9 @@ private class ThemeRenderer
 
     internal const int DEFAULT_SPRITE_SIZE = 20;
     private int sprite_size = DEFAULT_SPRITE_SIZE;
-    private float sprite_sheet_width;
-    private float sprite_sheet_height;
-    private float theme_sprite_size;
+    private double sprite_sheet_width;
+    private double sprite_sheet_height;
+    private double theme_sprite_size;
 
     private string theme_name;
     private Rsvg.Handle? theme = null;
@@ -85,9 +85,7 @@ private class ThemeRenderer
     private void load_theme (string theme_file) throws Error
     {
         theme = new Rsvg.Handle.from_file (theme_file);
-        var dimensions = theme.get_dimensions ();
-        sprite_sheet_width = dimensions.width;
-        sprite_sheet_height = dimensions.height;
+        theme.get_intrinsic_size_in_pixels (out sprite_sheet_width, out sprite_sheet_height);
         theme_sprite_size = sprite_sheet_height/Game.N_TYPES;
 
         theme_changed ();
