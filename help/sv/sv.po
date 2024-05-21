@@ -1,13 +1,13 @@
 # translation of five-or-more to Swedish
 # Daniel Nylander <po@danielnylander.se>, 2007, 2008.
 # Erik Sköldås <erik.skoldas@tele2.se>, 2015.
-# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2016, 2017, 2018, 2019, 2021, 2023.
+# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2016, 2017, 2018, 2019, 2021, 2023, 2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: five-or-more doc\n"
-"POT-Creation-Date: 2023-09-15 00:58+0000\n"
-"PO-Revision-Date: 2023-09-15 21:56+0200\n"
+"POT-Creation-Date: 2024-05-20 15:27+0000\n"
+"PO-Revision-Date: 2024-05-20 18:22+0200\n"
 "Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -55,12 +55,12 @@ msgid ""
 "<app>Five or More</app> is maintained by a volunteer community. You are "
 "welcome to participate. If you notice a problem you can file a <em>bug "
 "report</em>. To file a bug, go to <link href=\"https://gitlab.gnome.org/"
-"GNOME/five-or-more/issues/new\"/>."
+"GNOME/five-or-more/-/issues/\"/>."
 msgstr ""
 "<app>Fem eller mer</app> underhålls av en frivillig gemenskap. Du är "
 "välkommen att delta. Om du upptäcker ett problem kan du skicka in en "
 "<em>felrapport</em>. För att skicka in en felrapport, gå till <link "
-"href=\"https://gitlab.gnome.org/GNOME/five-or-more/issues/new\"/>."
+"href=\"https://gitlab.gnome.org/GNOME/five-or-more/-/issues/\"/>."
 
 #. (itstool) path: page/p
 #: C/bug-filing.page:23
