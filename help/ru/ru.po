@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: five-or-more master\n"
-"POT-Creation-Date: 2023-09-15 00:58+0000\n"
-"PO-Revision-Date: 2023-09-16 20:41+1000\n"
+"POT-Creation-Date: 2024-05-20 15:27+0000\n"
+"PO-Revision-Date: 2024-05-31 23:45+1000\n"
 "Last-Translator: Ser82-png <asvmail.as@gmail.com>\n"
 "Language-Team: Russian <gnome-cyr@gnome.org>\n"
 "Language: ru\n"
@@ -21,7 +21,7 @@ msgstr ""
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
 msgid "translator-credits"
-msgstr "Ser82-png <asvmail.as@gmail.com>, 2022-2023"
+msgstr "Ser82-png <asvmail.as@gmail.com>, 2022-2024"
 
 #. (itstool) path: credit/name
 #: C/bug-filing.page:10 C/change-board-size.page:14 C/change-theme.page:14
@@ -54,13 +54,13 @@ msgid ""
 "<app>Five or More</app> is maintained by a volunteer community. You are "
 "welcome to participate. If you notice a problem you can file a <em>bug "
 "report</em>. To file a bug, go to <link href=\"https://gitlab.gnome.org/"
-"GNOME/five-or-more/issues/new\"/>."
+"GNOME/five-or-more/-/issues/\"/>."
 msgstr ""
 "Приложение <app>Пять или более</app> поддерживается сообществом "
 "добровольцев. Вы можете принять в этом участие. Если заметили проблему, то "
 "можете отправить <em>отчет об ошибке</em>. Чтобы сообщить об ошибке, "
-"перейдите на <link href=\"https://gitlab.gnome.org/GNOME/five-or-more/issues/"
-"new\"/>."
+"перейдите на <link href=\"https://gitlab.gnome.org/GNOME/five-or-more/-/"
+"issues/\"/>."
 
 #. (itstool) path: page/p
 #: C/bug-filing.page:23
