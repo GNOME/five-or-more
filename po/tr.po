@@ -16,16 +16,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: five-or-more\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/five-or-more/issues\n"
-"POT-Creation-Date: 2023-10-16 13:24+0000\n"
-"PO-Revision-Date: 2023-10-26 16:38+0300\n"
-"Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
+"POT-Creation-Date: 2024-01-24 18:34+0000\n"
+"PO-Revision-Date: 2024-05-10 22:33+0300\n"
+"Last-Translator: Sabri Ünal <yakushabb@gmail.com>\n"
 "Language-Team: Türkçe <gnome-turk@gnome.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.4\n"
+"X-Generator: Poedit 3.4.3\n"
 
 #. Translators: name of the application, as displayed in the window manager
 #. Translators: name of the application, as displayed in the About dialog, some window managers, etc.
@@ -61,14 +61,14 @@ msgstr ""
 "olabildiğince uzun süre oyna!"
 
 #. Translators: About dialog text, name of one of the artists
-#: data/org.gnome.five-or-more.appdata.xml.in:40 src/main.vala:109
+#: data/org.gnome.five-or-more.appdata.xml.in:41 src/main.vala:109
 msgid "Robert Roth"
 msgstr "Robert Roth"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.five-or-more.desktop.in:6
 msgid "game;strategy;logic;"
-msgstr "oyun;strateji;izlem;mantık;"
+msgstr "game;strategy;logic;oyun;strateji;izlem;mantık;"
 
 #: data/org.gnome.five-or-more.gschema.xml:6
 msgid "Playing field size"
