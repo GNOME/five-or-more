@@ -47,6 +47,7 @@ private class FiveOrMoreApp: Gtk.Application
         Intl.textdomain (GETTEXT_PACKAGE);
 
         Environment.set_application_name (PROGRAM_NAME);
+        Environment.set_prgname ("org.gnome.five-or-more");
         Gtk.Window.set_default_icon_name ("org.gnome.five-or-more");
 
         FiveOrMoreApp app = new FiveOrMoreApp ();
