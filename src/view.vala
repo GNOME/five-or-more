@@ -98,6 +98,11 @@ private class View : DrawingArea
         board_rectangle.x = board_rectangle.y = 0;
         update_sizes (MINIMUM_BOARD_SIZE, MINIMUM_BOARD_SIZE);
         game.board.board_changed.connect (() => {
+            start_x = -1;
+            start_y = -1;
+            end_x = -1;
+            end_y = -1;
+
             show_cursor = false;
             keyboard_cursor_x = -1;
             keyboard_cursor_y = -1;
