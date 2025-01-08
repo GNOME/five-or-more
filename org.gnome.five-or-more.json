@@ -19,10 +19,9 @@
     ],
     "modules": [{
             "name": "libgee",
-            "buildsystem": "meson",
             "sources": [{
                 "type": "git",
-                "branch": "meson",
+                "branch": "main",
                 "url": "https://gitlab.gnome.org/GNOME/libgee.git"
             }]
         },
