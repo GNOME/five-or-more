@@ -1,3 +1,23 @@
+48.alpha - 10 January, 2025
+======================
+
+* Updated translations
+* Fixed deprecations (Robert Roth, Rico Tzschichholz)
+* Snap updates (Ken VanDine)
+* Add keyboard shortcuts Dialog (Arnaud B.)
+* Code cleanup (Arnaud B.)
+* Removed preferences dialog (Arnaud B.)
+* Menu improvements (Arnaud B.)
+* Fix icon in Scores Dialog (Arnaud B.)
+* Migrated to GTK4 (Arnaud B.)
+* Fix duplicated line in Scores (Andre Klapper)
+* Fix deprecated links (Andre Klapper)
+* Updated application screenshot (Andre Klapper)
+* Remove GNOME branding (Sabri Ünal)
+* Update metainfo (Sabri Ünal)
+* Use correct icon (Balló György)
+* Reset positions when board is changed #25 (Balló György)
+
 3.32.0 - 11 March, 2019
 ======================
 
