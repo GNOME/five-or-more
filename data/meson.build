@@ -51,22 +51,22 @@ configure_file (
   configuration: service_conf
 )
 
-# Appdata
-appdata = 'org.gnome.five-or-more.appdata.xml'
-appdata_file = i18n.merge_file (
-  input: appdata + '.in',
-  output: appdata,
+# metainfo
+metainfo = 'org.gnome.five-or-more.metainfo.xml'
+metainfo_file = i18n.merge_file (
+  input: metainfo + '.in',
+  output: metainfo,
   type: 'xml',
   po_dir: po_dir,
   install: true,
   install_dir: join_paths (data_dir, 'metainfo'),
 )
-appstream_util = find_program('appstream-util', required: false)
-if appstream_util.found()
+appstreamcli = find_program('appstreamcli', required: false)
+if appstreamcli.found()
   test(
-    'validate-appdata', appstream_util,
+    'validate-metainfo', appstreamcli,
     args: [
-      'validate-relax', '--nonet', appdata_file.full_path()
+      'validate', '--no-net', '--explain', metainfo_file.full_path()
     ]
   )
 endif

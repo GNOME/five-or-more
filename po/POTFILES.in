@@ -1,6 +1,6 @@
 # List of source files containing translatable strings.
 # Please keep this file in alphabetical order.
-data/org.gnome.five-or-more.appdata.xml.in
+data/org.gnome.five-or-more.metainfo.xml.in
 data/org.gnome.five-or-more.desktop.in
 data/org.gnome.five-or-more.gschema.xml
 data/ui/five-or-more.ui
