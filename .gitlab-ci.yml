@@ -17,7 +17,7 @@ flatpak:
         MANIFEST_PATH: "org.gnome.five-or-more.json"
         FLATPAK_MODULE: "five-or-more"
         RUNTIME_REPO: "https://sdk.gnome.org/gnome-nightly.flatpakrepo"
-        APP_ID: " org.gnome.five-or-more"
+        APP_ID: "org.gnome.five-or-more"
     extends: .flatpak
 
 nightly:
