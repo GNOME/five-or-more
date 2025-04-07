@@ -63,9 +63,6 @@ private class FiveOrMoreApp: Gtk.Application
     {
         base.startup ();
 
-        window = new GameWindow ();
-        add_window (window);
-
         add_action_entries (action_entries, this);
         set_accels_for_action ("win.new-game",  { "<Primary>n"  });
         set_accels_for_action ("app.quit",      { "<Primary>q"  });
@@ -74,6 +71,12 @@ private class FiveOrMoreApp: Gtk.Application
 
     protected override void activate ()
     {
+        if (window == null)
+        {
+            window = new GameWindow ();
+            add_window (window);
+        }
+
         window.present ();
     }
 
@@ -142,7 +145,9 @@ private class FiveOrMoreApp: Gtk.Application
 
     protected override void shutdown ()
     {
-        window.on_shutdown ();
+        if (window != null)
+            window.on_shutdown ();
+
         base.shutdown ();
     }
 }
