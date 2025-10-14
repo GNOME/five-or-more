@@ -127,6 +127,8 @@ private class GameWindow : ApplicationWindow
 
     protected override bool window_state_event (Gdk.EventWindowState event)
     {
+        base.window_state_event (event);
+
         if ((event.changed_mask & Gdk.WindowState.MAXIMIZED) != 0)
             window_maximized = (event.new_window_state & Gdk.WindowState.MAXIMIZED) != 0;
 
