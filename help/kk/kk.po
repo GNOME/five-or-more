@@ -1,0 +1,1007 @@
+# Kazakh translation for five-or-more.
+# Copyright (C) 2026 five-or-more's COPYRIGHT HOLDER
+# This file is distributed under the same license as the five-or-more package.
+# Baurzhan Muftakhidinov <baurthefirst@gmail.com>,  2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: five-or-more main\n"
+"POT-Creation-Date: 2026-03-10 13:37+0000\n"
+"PO-Revision-Date: 2026-03-17 23:25+0500\n"
+"Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
+"Language-Team: Kazakh <Kazakh>\n"
+"Language: kk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.9\n"
+
+#. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
+msgctxt "_"
+msgid "translator-credits"
+msgstr "Baurzhan Muftakhidinov <baurthefirst@gmail.com>"
+
+#. (itstool) path: credit/name
+#: C/bug-filing.page:10 C/change-board-size.page:14 C/change-theme.page:14
+#: C/develop.page:10 C/documentation.page:8 C/index.page:17 C/scores.page:14
+#: C/shortcuts.page:9 C/strategy.page:9 C/translate.page:10
+msgid "Tiffany Antopolski"
+msgstr "Tiffany Antopolski"
+
+#. (itstool) path: credit/years
+#: C/bug-filing.page:12 C/change-board-size.page:11 C/develop.page:12
+#: C/documentation.page:10 C/play.page:12 C/rules.page:12 C/scores.page:11
+#: C/shortcuts.page:11 C/translate.page:12
+msgid "2011"
+msgstr "2011"
+
+#. (itstool) path: license/p
+#: C/bug-filing.page:15 C/develop.page:15 C/documentation.page:13
+#: C/index.page:21 C/translate.page:19
+msgid "Creative Commons Share Alike 3.0"
+msgstr "Creative Commons Share Alike 3.0"
+
+#. (itstool) path: page/title
+#: C/bug-filing.page:19
+msgid "Report a Problem"
+msgstr "Мәселе туралы хабарлау"
+
+#. (itstool) path: page/p
+#: C/bug-filing.page:20
+msgid ""
+"<app>Five or More</app> is maintained by a volunteer community. You are "
+"welcome to participate. If you notice a problem you can file a <em>bug "
+"report</em>. To file a bug, go to <link href=\"https://gitlab.gnome.org/"
+"GNOME/five-or-more/-/issues/\"/>."
+msgstr ""
+"<app>Five or More</app> бағдарламасын еріктілер қауымдастығы қолдайды. Сіз "
+"де қатыса аласыз. Егер мәселе байқасаңыз, <em>қате туралы есеп</em> жібере "
+"аласыз. Қате жіберу үшін <link href=\"https://gitlab.gnome.org/GNOME/five-"
+"or-more/-/issues/\"/> адресіне өтіңіз."
+
+#. (itstool) path: page/p
+#: C/bug-filing.page:23
+msgid ""
+"This is a bug tracking system where users and developers can file details "
+"about bugs, crashes and request enhancements."
+msgstr ""
+"Бұл — пайдаланушылар мен әзірлеушілер қателер, ақаулар туралы ақпарат бере "
+"алатын және жақсартуларды сұрай алатын қателерді қадағалау жүйесі."
+
+#. (itstool) path: page/p
+#: C/bug-filing.page:26
+msgid ""
+"To participate you have to log in, which will give you the ability to gain "
+"access, file bugs, and make comments. Also, you need to log in using one of "
+"your existing accounts or register a new account so you can receive updates "
+"by e-mail about the status of your bug. If you don't already have an "
+"account and don't want to use any of the available log in options, just "
+"click on the <gui>Register</gui> link to create one."
+msgstr ""
+"Қатысу үшін жүйеге кіруіңіз керек, бұл сізге қол жеткізуге, қателерді "
+"тіркеуге және пікір қалдыруға мүмкіндік береді. Сондай-ақ, қатеңіздің күйі "
+"туралы электрондық пошта арқылы жаңартуларды алу үшін қолданыстағы "
+"тіркелгілердің бірін пайдаланып кіруіңіз немесе жаңа тіркелгі жасауыңыз "
+"керек. Егер сізде әлі тіркелгі болмаса және қолжетімді кіру опцияларын "
+"пайдаланғыңыз келмесе, жай ғана <gui>Тіркелу</gui> сілтемесін шертіп, "
+"жаңасын жасаңыз."
+
+#. (itstool) path: page/p
+#: C/bug-filing.page:30
+msgid ""
+"Once you have an account, log in, click on <guiseq><gui>Projects</"
+"gui><gui>five-or-more</gui><gui>Issues</gui><gui>New issue</gui></guiseq>. "
+"Before reporting a bug, please read the <link href=\"https://wiki.gnome.org/"
+"GettingInTouch/BugReportingGuidelines\">bug writing guidelines</link>, and "
+"please <link href=\"https://gitlab.gnome.org/GNOME/five-or-more/"
+"issues\">browse</link> for the bug to see if it already exists."
+msgstr ""
+"Тіркелгіңіз болған соң, жүйеге кіріп, <guiseq><gui>Жобалар</gui><gui>five-"
+"or-more</gui><gui>Мәселелер</gui><gui>Жаңа мәселе</gui></guiseq> тармағын "
+"шертіңіз. Қате туралы хабарламас бұрын, <link href=\"https://wiki.gnome.org/"
+"GettingInTouch/BugReportingGuidelines\">қате жазу бойынша нұсқаулықтарды</"
+"link> оқып шығыңыз және қате бұрыннан бар-жоғын білу үшін оны <link "
+"href=\"https://gitlab.gnome.org/GNOME/five-or-more/issues\">шолу</link> "
+"арқылы тексеріңіз."
+
+#. (itstool) path: page/p
+#: C/bug-filing.page:33
+msgid ""
+"Fill in the Title and Description sections and click <gui>Submit issue</"
+"gui>."
+msgstr ""
+"Тақырып пен Сипаттама бөлімдерін толтырып, <gui>Мәселені жіберу</gui> "
+"батырмасын шертіңіз."
+
+#. (itstool) path: page/p
+#: C/bug-filing.page:36
+msgid ""
+"Your report will be given an ID number, and its status will be updated as "
+"it is being dealt with."
+msgstr ""
+"Есебіңізге ID нөмірі беріледі және оның күйі өңделу барысында жаңартылып "
+"отырады."
+
+#. (itstool) path: credit/name
+#: C/change-board-size.page:9 C/change-theme.page:9 C/index.page:13
+#: C/play.page:10 C/scores.page:9
+msgid "Lahiru lanka"
+msgstr "Lahiru lanka"
+
+#. (itstool) path: credit/name
+#: C/change-board-size.page:18 C/play.page:15 C/translate.page:15
+msgid "Michael Hill"
+msgstr "Michael Hill"
+
+#. (itstool) path: page/title
+#: C/change-board-size.page:23
+msgid "Change board size"
+msgstr "Тақта өлшемін өзгерту"
+
+#. (itstool) path: page/p
+#: C/change-board-size.page:24
+msgid "To change the board size:"
+msgstr "Тақта өлшемін өзгерту үшін:"
+
+#. (itstool) path: item/p
+#: C/change-board-size.page:26
+msgid "Press the menu button in the top-right corner of the window."
+msgstr "Терезенің жоғарғы оң жақ бұрышындағы мәзір батырмасын басыңыз."
+
+#. (itstool) path: item/p
+#: C/change-board-size.page:27
+msgid "Select <gui>Small</gui>, <gui>Medium</gui>, or <gui>Large</gui>."
+msgstr "<gui>Кіші</gui>, <gui>Орташа</gui> немесе <gui>Үлкен</gui> таңдаңыз."
+
+#. (itstool) path: note/p
+#: C/change-board-size.page:31
+msgid ""
+"While a larger board gives you more space, there are also more objects in "
+"play for each turn."
+msgstr ""
+"Үлкенірек тақта көбірек орын бергенімен, әр айналымда ойындағы объектілер "
+"саны да артады."
+
+#. (itstool) path: section/title
+#: C/change-board-size.page:36
+msgid "Board parameters"
+msgstr "Тақта параметрлері"
+
+#. (itstool) path: section/p
+#: C/change-board-size.page:37
+msgid "The 3 different board sizes have the following parameters:"
+msgstr "Тақтаның 3 түрлі өлшемінің келесідей параметрлері бар:"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:41
+msgid "<em>Size</em>"
+msgstr "<em>Өлшемі</em>"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:42
+msgid "<em>Width</em>"
+msgstr "<em>Ені</em>"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:43
+msgid "<em>Height</em>"
+msgstr "<em>Биіктігі</em>"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:44
+msgid "<em>Number of types</em>"
+msgstr "<em>Түрлер саны</em>"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:45
+msgid "<em>New objects per turn</em>"
+msgstr "<em>Әр айналымдағы жаңа объектілер</em>"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:46
+msgid "<em>Number of cells</em>"
+msgstr "<em>Ұяшықтар саны</em>"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:50
+msgid "Small"
+msgstr "Кіші"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:51 C/change-board-size.page:52
+#: C/change-board-size.page:62 C/change-board-size.page:71
+#: C/change-board-size.page:72 C/scores.page:41
+msgid "7"
+msgstr "7"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:53 C/scores.page:33
+msgid "5"
+msgstr "5"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:54 C/change-board-size.page:63
+msgid "3"
+msgstr "3"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:55 C/scores.page:62
+msgid "49"
+msgstr "49"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:59
+msgid "Medium"
+msgstr "Орташа"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:60 C/change-board-size.page:61 C/scores.page:49
+msgid "9"
+msgstr "9"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:64
+msgid "81"
+msgstr "81"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:68
+msgid "Large"
+msgstr "Үлкен"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:69
+msgid "20"
+msgstr "20"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:70 C/scores.page:73
+msgid "15"
+msgstr "15"
+
+#. (itstool) path: td/p
+#: C/change-board-size.page:73
+msgid "300"
+msgstr "300"
+
+#. (itstool) path: section/title
+#: C/change-board-size.page:80
+msgid "The 3 board sizes"
+msgstr "3 тақта өлшемі"
+
+#. (itstool) path: media/p
+#: C/change-board-size.page:86
+msgid "<app>Five or More</app> Small board"
+msgstr "<app>Five or More</app> кіші тақтасы"
+
+#. (itstool) path: media/p
+#: C/change-board-size.page:91
+msgid "<app>Five or More</app> medium size board"
+msgstr "<app>Five or More</app> орташа тақтасы"
+
+#. (itstool) path: media/p
+#: C/change-board-size.page:96
+msgid "<app>Five or More</app> large size board"
+msgstr "<app>Five or More</app> үлкен тақтасы"
+
+#. (itstool) path: credit/years
+#: C/change-theme.page:11 C/strategy.page:11
+msgid "2012"
+msgstr "2012"
+
+#. (itstool) path: page/title
+#: C/change-theme.page:20
+msgid "Change the look and feel"
+msgstr "Сыртқы түрін өзгерту"
+
+#. (itstool) path: page/p
+#: C/change-theme.page:21
+msgid "To change the appearance of the pieces and the board:"
+msgstr "Фигуралар мен тақтаның сыртқы түрін өзгерту үшін:"
+
+#. (itstool) path: item/p
+#: C/change-theme.page:24
+msgid ""
+"Press the menu button in the top-right corner of the window and select <gui "
+"style=\"menuitem\">Preferences</gui>."
+msgstr ""
+"Терезенің жоғарғы оң жақ бұрышындағы мәзір батырмасын басып, <gui "
+"style=\"menuitem\">Баптаулар</gui> тармағын таңдаңыз."
+
+#. (itstool) path: item/p
+#: C/change-theme.page:28
+msgid ""
+"Select <gui>balls</gui>, <gui>shapes</gui>, or <gui>tango</gui> from the "
+"<gui>Theme</gui> drop down menu to change the playing pieces."
+msgstr ""
+"Ойын фигураларын өзгерту үшін <gui>Тема</gui> ашылмалы мәзірінен "
+"<gui>шарлар</gui>, <gui>пішіндер</gui> немесе <gui>tango</gui> таңдаңыз."
+
+#. (itstool) path: item/p
+#: C/change-theme.page:30
+msgid ""
+"Click on the colored box next to <gui>Background color</gui> to access the "
+"color palette."
+msgstr ""
+"Түстер палитрасына қол жеткізу үшін <gui>Фон түсі</gui> қасындағы түрлі-"
+"түсті шаршыны шертіңіз."
+
+#. (itstool) path: item/p
+#: C/change-theme.page:34
+msgid "Close the <gui>Preferences</gui> dialog."
+msgstr "<gui>Баптаулар</gui> сұхбат терезесін жабыңыз."
+
+#. (itstool) path: page/title
+#: C/develop.page:19
+msgid "Help develop"
+msgstr "Әзірлеуге көмектесу"
+
+#. (itstool) path: page/p
+#: C/develop.page:20
+msgid ""
+"The <app>GNOME Games</app> are developed and maintained by a volunteer "
+"community. You are welcome to participate."
+msgstr ""
+"<app>GNOME Games</app> бағдарламаларын еріктілер қауымдастығы әзірлейді "
+"және қолдайды. Сіз де қатыса аласыз."
+
+#. (itstool) path: page/p
+#: C/develop.page:23
+msgid ""
+"If you would like to <link href=\"https://wiki.gnome.org/Apps/Games/"
+"Contribute\">help develop <app>GNOME Games</app></link>, you can get in "
+"touch with the developers at <link href=\"https://matrix.to/#/#gnome-"
+"games:gnome.org\">#gnome-games:gnome.org</link> on <link xref=\"help:gnome-"
+"help/help-matrix\">Matrix</link> or <link href=\"https://web.libera.chat/"
+"#gnome-games\">#gnome-games</link> on irc.libera.chat, or via <link "
+"href=\"https://discourse.gnome.org/tag/games\">GNOME Discourse</link>."
+msgstr ""
+"Егер сіз <link href=\"https://wiki.gnome.org/Apps/Games/"
+"Contribute\"><app>GNOME Games</app> әзірлеуге көмектескіңіз</link> келсе, "
+"әзірлеушілермен <link xref=\"help:gnome-help/help-matrix\">Matrix</link> "
+"желісіндегі <link href=\"https://matrix.to/#/#gnome-"
+"games:gnome.org\">#gnome-games:gnome.org</link>, irc.libera.chat "
+"желісіндегі <link href=\"https://web.libera.chat/#gnome-games\">#gnome-"
+"games</link> арнасы немесе <link href=\"https://discourse.gnome.org/tag/"
+"games\">GNOME Discourse</link> арқылы байланыса аласыз."
+
+#. (itstool) path: page/title
+#: C/documentation.page:17
+msgid "Help write documentation"
+msgstr "Құжаттама жазуға көмектесу"
+
+#. (itstool) path: page/p
+#: C/documentation.page:19
+msgid ""
+"The <app>GNOME Games</app> documentation is maintained by a volunteer "
+"community. You are welcome to participate."
+msgstr ""
+"<app>GNOME Games</app> құжаттамасын еріктілер қауымдастығы қолдайды. Сіз де "
+"қатыса аласыз."
+
+#. (itstool) path: page/p
+#: C/documentation.page:22
+msgid ""
+"To contribute to the Documentation Project, feel free to get in touch with "
+"us in <link href=\"https://matrix.to/#/#docs:gnome.org\">#docs:gnome.org</"
+"link> on <link xref=\"help:gnome-help/help-matrix\">Matrix</link> or <link "
+"href=\"https://web.libera.chat/#gnome-docs\">#gnome-docs</link> on "
+"irc.libera.chat, or via <link href=\"https://discourse.gnome.org/tag/"
+"documentation\">GNOME Discourse</link>."
+msgstr ""
+"Құжаттама жобасына үлес қосу үшін <link xref=\"help:gnome-help/help-"
+"matrix\">Matrix</link> желісіндегі <link href=\"https://matrix.to/#/"
+"#docs:gnome.org\">#docs:gnome.org</link>, irc.libera.chat желісіндегі <link "
+"href=\"https://web.libera.chat/#gnome-docs\">#gnome-docs</link> арнасы "
+"немесе <link href=\"https://discourse.gnome.org/tag/documentation\">GNOME "
+"Discourse</link> арқылы бізбен байланысуға болады."
+
+#. (itstool) path: page/p
+#: C/documentation.page:29
+msgid ""
+"Our <link href=\"https://wiki.gnome.org/DocumentationProject/"
+"Contributing\">wiki</link> page contains useful information."
+msgstr ""
+"Біздің <link href=\"https://wiki.gnome.org/DocumentationProject/"
+"Contributing\">вики</link> бетімізде пайдалы ақпарат бар."
+
+#. (itstool) path: info/title
+#: C/index.page:8
+msgctxt "link"
+msgid "Five or More"
+msgstr "Five or More"
+
+#. (itstool) path: info/title
+#: C/index.page:9
+msgctxt "text"
+msgid "Five or More"
+msgstr "Five or More"
+
+#. (itstool) path: media/span
+#: C/index.page:27
+msgid "Five or More logo"
+msgstr "Five or More логотипі"
+
+#. (itstool) path: page/title
+#: C/index.page:26
+msgid "<_:media-1/> Five or More"
+msgstr "<_:media-1/> Five or More"
+
+#. (itstool) path: page/p
+#: C/index.page:30
+msgid ""
+"<app>Five or More</app> is a deceptively simple brain workout. The goal is "
+"to place at least five objects of the same <link xref=\"change-"
+"theme#images\">color or shape</link> into a straight line. The line can be "
+"horizontal, vertical or diagonal. Once five or more objects are grouped "
+"into a line, they disappear. The goal is to vanish as many objects as "
+"possible. The game is over when the entire board is full."
+msgstr ""
+"<app>Five or More</app> — бұл қарапайым көрінгенімен, миға жақсы жаттығу "
+"болатын ойын. Мақсат — бірдей <link xref=\"change-theme#images\">түсті "
+"немесе пішінді</link> кем дегенде бес объектіні бір түзу сызыққа "
+"орналастыру. Сызық горизонталды, вертикалды немесе диагоналды болуы мүмкін. "
+"Бес немесе одан да көп объекті бір сызыққа топтастырылғаннан кейін, олар "
+"жоғалады. Мақсат — мүмкіндігінше көп объектіні жою. Тақта толығымен толған "
+"кезде ойын аяқталады."
+
+#. (itstool) path: section/title
+#: C/index.page:34
+msgid "Game Play"
+msgstr "Ойын барысы"
+
+#. (itstool) path: section/title
+#: C/index.page:38
+msgid "Useful Tips"
+msgstr "Пайдалы кеңестер"
+
+#. (itstool) path: section/title
+#: C/index.page:42
+msgid "Advanced"
+msgstr "Кеңейтілген"
+
+#. (itstool) path: section/title
+#: C/index.page:46
+msgid "Get Involved"
+msgstr "Қатысу"
+
+#. (itstool) path: p/link
+#: C/legal.xml:3
+msgid "Creative Commons Attribution-ShareAlike 3.0 Unported License"
+msgstr "Creative Commons Attribution-ShareAlike 3.0 Unported лицензиясы"
+
+#. (itstool) path: license/p
+#: C/legal.xml:3
+msgid "This work is licensed under a <_:link-1/>."
+msgstr "Бұл жұмыс <_:link-1/> аясында лицензияланған."
+
+#. (itstool) path: info/desc
+#: C/license.page:9
+msgid "Legal information."
+msgstr "Құқықтық ақпарат."
+
+#. (itstool) path: page/title
+#: C/license.page:12
+msgid "License"
+msgstr "Лицензия"
+
+#. (itstool) path: page/p
+#: C/license.page:13
+msgid ""
+"This work is distributed under a CreativeCommons Attribution-Share Alike "
+"3.0 Unported license."
+msgstr ""
+"Бұл жұмыс CreativeCommons Attribution-Share Alike 3.0 Unported лицензиясы "
+"бойынша таратылады."
+
+#. (itstool) path: page/p
+#: C/license.page:21
+msgid "You are free:"
+msgstr "Сіз еріктісіз:"
+
+#. (itstool) path: item/title
+#: C/license.page:26
+msgid "<em>To share</em>"
+msgstr "<em>Бөлісуге</em>"
+
+#. (itstool) path: item/p
+#: C/license.page:27
+msgid "To copy, distribute and transmit the work."
+msgstr "Жұмысты көшіруге, таратуға және беруге."
+
+#. (itstool) path: item/title
+#: C/license.page:30
+msgid "<em>To remix</em>"
+msgstr "<em>Өзгертуге</em>"
+
+#. (itstool) path: item/p
+#: C/license.page:31
+msgid "To adapt the work."
+msgstr "Жұмысты бейімдеуге."
+
+#. (itstool) path: page/p
+#: C/license.page:34
+msgid "Under the following conditions:"
+msgstr "Келесі шарттар орындалғанда:"
+
+#. (itstool) path: item/title
+#: C/license.page:39
+msgid "<em>Attribution</em>"
+msgstr "<em>Авторлықты көрсету</em>"
+
+#. (itstool) path: item/p
+#: C/license.page:40
+msgid ""
+"You must attribute the work in the manner specified by the author or "
+"licensor (but not in any way that suggests that they endorse you or your "
+"use of the work)."
+msgstr ""
+"Сіз автор немесе лицензиар көрсеткен тәсілмен авторлықты көрсетуіңіз керек "
+"(бірақ олар сізді немесе жұмысты пайдалануыңызды мақұлдайтындай етіп емес)."
+
+#. (itstool) path: item/title
+#: C/license.page:47
+msgid "<em>Share Alike</em>"
+msgstr "<em>Ұқсас шарттармен бөлісу</em>"
+
+#. (itstool) path: item/p
+#: C/license.page:48
+msgid ""
+"If you alter, transform, or build upon this work, you may distribute the "
+"resulting work only under the same, similar or a compatible license."
+msgstr ""
+"Егер сіз осы жұмысты өзгертсеңіз, түрлендірсеңіз немесе оның негізінде жаңа "
+"жұмыс жасасаңыз, алынған жұмысты тек дәл осындай немесе ұқсас лицензия "
+"бойынша тарата аласыз."
+
+#. (itstool) path: page/p
+#: C/license.page:54
+msgid ""
+"For the full text of the license, see the <link href=\"http://"
+"creativecommons.org/licenses/by-sa/3.0/legalcode\">CreativeCommons website</"
+"link>, or read the full <link href=\"http://creativecommons.org/licenses/by-"
+"sa/3.0/\">Commons Deed</link>."
+msgstr ""
+"Лицензияның толық мәтінін <link href=\"http://creativecommons.org/licenses/"
+"by-sa/3.0/legalcode\">CreativeCommons веб-сайтынан</link> көріңіз немесе "
+"толық <link href=\"http://creativecommons.org/licenses/by-sa/3.0/\">Commons "
+"Deed</link> құжатын оқыңыз."
+
+#. (itstool) path: page/title
+#: C/play.page:22
+msgid "How to Play"
+msgstr "Қалай ойнау керек"
+
+#. (itstool) path: page/p
+#: C/play.page:24
+msgid ""
+"To start a new game, press the menu button in the top-right corner of the "
+"window and select <gui style=\"menuitem\">New Game</gui>."
+msgstr ""
+"Жаңа ойынды бастау үшін терезенің жоғарғы оң жақ бұрышындағы мәзір "
+"батырмасын басып, <gui style=\"menuitem\">Жаңа ойын</gui> тармағын таңдаңыз."
+
+#. (itstool) path: section/title
+#: C/play.page:29
+msgid "Using the mouse"
+msgstr "Тышқанды пайдалану"
+
+#. (itstool) path: item/p
+#: C/play.page:33
+msgid ""
+"Click on the object you want to move. The selected object will begin "
+"spinning."
+msgstr ""
+"Жылжытқыңыз келетін объектіні шертіңіз. Таңдалған объект айнала бастайды."
+
+#. (itstool) path: item/p
+#: C/play.page:37
+msgid ""
+"Click on the destination cell. The chosen object will move to the "
+"destination cell, if there is any clear path."
+msgstr ""
+"Мақсатты ұяшықты шертіңіз. Егер ашық жол болса, таңдалған объект мақсатты "
+"ұяшыққа ауысады."
+
+#. (itstool) path: section/title
+#: C/play.page:46
+msgid "Using the keyboard"
+msgstr "Пернетақтаны пайдалану"
+
+#. (itstool) path: item/p
+#: C/play.page:50
+msgid ""
+"Press any of the arrow keys. An outline around a cell will appear on the "
+"board."
+msgstr ""
+"Кез келген бағдарша пернесін басыңыз. Тақтада ұяшықтың айналасында жиек "
+"пайда болады."
+
+#. (itstool) path: item/p
+#: C/play.page:54
+msgid ""
+"Using the arrow keys, and the <key>Home</key>, <key>End</key>, <key>PageUp</"
+"key> and <key>PageDown</key> keys navigate to the object you want to move."
+msgstr ""
+"Бағдарша пернелерін және <key>Home</key>, <key>End</key>, <key>PageUp</key> "
+"және <key>PageDown</key> пернелерін пайдаланып, жылжытқыңыз келетін "
+"объектіге өтіңіз."
+
+#. (itstool) path: item/p
+#: C/play.page:57
+msgid ""
+"To select the object, press the <key>Enter</key>, <key>Spacebar</key> or "
+"<key>Return</key>. The selected object will begin spinning."
+msgstr ""
+"Объектіні таңдау үшін <key>Enter</key>, <key>Бос орын</key> немесе "
+"<key>Return</key> пернесін басыңыз. Таңдалған объект айнала бастайды."
+
+#. (itstool) path: item/p
+#: C/play.page:60
+msgid ""
+"Move to the destination cell, and again press the <key>Enter</key>, "
+"<key>Spacebar</key> or <key>Return</key>. The chosen object will move to "
+"the destination cell, if there is any clear path."
+msgstr ""
+"Мақсатты ұяшыққа өтіп, <key>Enter</key>, <key>Бос орын</key> немесе "
+"<key>Return</key> пернесін қайтадан басыңыз. Егер ашық жол болса, таңдалған "
+"объект мақсатты ұяшыққа ауысады."
+
+#. (itstool) path: section/title
+#: C/play.page:70
+msgid "Video demonstration"
+msgstr "Видео демонстрация"
+
+#. (itstool) path: page/title
+#: C/rules.page:18
+msgid "Rules"
+msgstr "Ережелер"
+
+#. (itstool) path: item/p
+#: C/rules.page:20
+msgid ""
+"At the start of the game there are either 3 or 7 objects placed on your "
+"board, depending on the <link xref=\"change-board-size\">board size</link>."
+msgstr ""
+"Ойын басында <link xref=\"change-board-size\">тақта өлшеміне</link> "
+"байланысты тақтада 3 немесе 7 объект орналасады."
+
+#. (itstool) path: item/p
+#: C/rules.page:23
+msgid ""
+"Each time you <link xref=\"play\">move an object</link>, additional objects "
+"are placed randomly on the board. The number of new objects placed each "
+"turn also depends on the board. A preview of the objects to be placed on "
+"the board appears in the upper left corner of the game window."
+msgstr ""
+"Әр жолы сіз <link xref=\"play\">объектіні жылжытқанда</link>, тақтаға "
+"кездейсоқ түрде қосымша объектілер қойылады. Әр айналымда қосылатын жаңа "
+"объектілер саны да тақтаға байланысты. Тақтаға қосылатын объектілерді алдын "
+"ала қарау ойын терезесінің жоғарғы сол жақ бұрышында көрсетіледі."
+
+#. (itstool) path: item/p
+#: C/rules.page:28
+msgid ""
+"There must be a clear path from the original position of the object to the "
+"destination cell (i.e you can not jump over objects)."
+msgstr ""
+"Объектінің бастапқы орнынан мақсатты ұяшыққа дейін ашық жол болуы керек "
+"(яғни, объектілер арқылы секіруге болмайды)."
+
+#. (itstool) path: item/p
+#: C/rules.page:31
+msgid ""
+"A straight horizontal, vertical or diagonal line of five or more similar "
+"objects will disappear from the game board. When this happens you will have "
+"an extra move without additional objects being added to the board."
+msgstr ""
+"Бес немесе одан да көп ұқсас объектіден тұратын түзу горизонталды, "
+"вертикалды немесе диагоналды сызық ойын тақтасынан жоғалады. Бұл орын алған "
+"кезде, тақтаға қосымша объектілер қосылмастан, сізге қосымша жүріс беріледі."
+
+#. (itstool) path: item/p
+#: C/rules.page:35
+msgid ""
+"The more objects you clear, the longer the game will go on. The longer you "
+"play, the higher your <link xref=\"scores\">score</link>."
+msgstr ""
+"Неғұрлым көп объектіні тазартсаңыз, ойын соғұрлым ұзаққа созылады. Неғұрлым "
+"ұзақ ойнасаңыз, <link xref=\"scores\">ұпайыңыз</link> соғұрлым жоғары "
+"болады."
+
+#. (itstool) path: item/p
+#: C/rules.page:38
+msgid ""
+"The game is over when the board is full, since no object can be moved at "
+"that point."
+msgstr ""
+"Тақта толған кезде ойын аяқталады, өйткені бұл кезде ешбір объектіні "
+"жылжыту мүмкін болмайды."
+
+#. (itstool) path: media/p
+#: C/rules.page:46
+msgid "Example horizontal alignment"
+msgstr "Горизонталды туралау мысалы"
+
+#. (itstool) path: media/p
+#: C/rules.page:51
+msgid "Example vertical alignment"
+msgstr "Вертикалды туралау мысалы"
+
+#. (itstool) path: media/p
+#: C/rules.page:56
+msgid "Example diagonal alignment"
+msgstr "Диагоналды туралау мысалы"
+
+#. (itstool) path: media/p
+#: C/rules.page:61
+msgid "<app>Five or More</app> game over position."
+msgstr "<app>Five or More</app> ойынның аяқталу күйі."
+
+#. (itstool) path: page/title
+#: C/scores.page:20
+msgid "Scoring"
+msgstr "Ұпай жинау"
+
+#. (itstool) path: page/p
+#: C/scores.page:21
+msgid ""
+"You score points by creating lines of 5 or more objects. The number of "
+"points depends on the number of objects that disappear."
+msgstr ""
+"Сіз 5 немесе одан да көп объектіден сызықтар жасау арқылы ұпай жинайсыз. "
+"Ұпай саны жоғалған объектілер санына байланысты."
+
+#. (itstool) path: td/p
+#: C/scores.page:27
+msgid "<em>Number of objects</em>"
+msgstr "<em>Объектілер саны</em>"
+
+#. (itstool) path: td/p
+#: C/scores.page:28
+msgid "<em>Number of points</em>"
+msgstr "<em>Ұпай саны</em>"
+
+#. (itstool) path: td/p
+#: C/scores.page:34 C/scores.page:53
+msgid "10"
+msgstr "10"
+
+#. (itstool) path: td/p
+#: C/scores.page:37
+msgid "6"
+msgstr "6"
+
+#. (itstool) path: td/p
+#: C/scores.page:38
+msgid "18"
+msgstr "18"
+
+#. (itstool) path: td/p
+#: C/scores.page:42
+msgid "25"
+msgstr "25"
+
+#. (itstool) path: td/p
+#: C/scores.page:45
+msgid "8"
+msgstr "8"
+
+#. (itstool) path: td/p
+#: C/scores.page:46
+msgid "31"
+msgstr "31"
+
+#. (itstool) path: td/p
+#: C/scores.page:50
+msgid "36"
+msgstr "36"
+
+#. (itstool) path: td/p
+#: C/scores.page:54
+msgid "41"
+msgstr "41"
+
+#. (itstool) path: td/p
+#: C/scores.page:57
+msgid "11"
+msgstr "11"
+
+#. (itstool) path: td/p
+#: C/scores.page:58
+msgid "45"
+msgstr "45"
+
+#. (itstool) path: td/p
+#: C/scores.page:61
+msgid "12"
+msgstr "12"
+
+#. (itstool) path: td/p
+#: C/scores.page:65
+msgid "13"
+msgstr "13"
+
+#. (itstool) path: td/p
+#: C/scores.page:66
+msgid "53"
+msgstr "53"
+
+#. (itstool) path: td/p
+#: C/scores.page:69
+msgid "14"
+msgstr "14"
+
+#. (itstool) path: td/p
+#: C/scores.page:70
+msgid "56"
+msgstr "56"
+
+#. (itstool) path: td/p
+#: C/scores.page:74
+msgid "59"
+msgstr "59"
+
+#. (itstool) path: note/p
+#: C/scores.page:81
+msgid ""
+"You can view the high scores by pressing the menu button in the top-right "
+"corner of the window and selecting <gui style=\"menuitem\">Scores</gui>."
+msgstr ""
+"Терезенің жоғарғы оң жақ бұрышындағы мәзір батырмасын басып, <gui "
+"style=\"menuitem\">Нәтижелер</gui> тармағын таңдау арқылы үздік нәтижелерді "
+"көре аласыз."
+
+#. (itstool) path: note/p
+#: C/scores.page:83
+msgid ""
+"The <app>Five or More</app> scores are recorded according to the board "
+"size. You can select the <gui>Board Size</gui> of interest using the drop "
+"down menu."
+msgstr ""
+"<app>Five or More</app> ұпайлары тақта өлшеміне сәйкес жазылады. Ашылмалы "
+"мәзір арқылы сізді қызықтыратын <gui>Тақта өлшемін</gui> таңдай аласыз."
+
+#. (itstool) path: page/title
+#: C/shortcuts.page:17
+msgid "Keyboard shortcuts"
+msgstr "Пернетақта жарлықтары"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:20
+msgid "New game"
+msgstr "Жаңа ойын"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:21
+msgid "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
+msgstr "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:24
+msgid "Help"
+msgstr "Көмек"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:25
+msgid "<key>F1</key>"
+msgstr "<key>F1</key>"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:28
+msgid "Quit"
+msgstr "Шығу"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:29
+msgid "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
+msgstr "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
+
+#. (itstool) path: page/title
+#: C/strategy.page:17
+msgid "Strategy"
+msgstr "Стратегия"
+
+#. (itstool) path: page/p
+#: C/strategy.page:19
+msgid ""
+"There is no universal strategy for <app>Five or More</app>, but some "
+"strategic elements do exist. Here are some things to try and keep in mind "
+"as you play:"
+msgstr ""
+"<app>Five or More</app> үшін әмбебап стратегия жоқ, бірақ кейбір "
+"стратегиялық элементтер бар. Ойнау барысында келесі жайттарды ескеруге "
+"тырысыңыз:"
+
+#. (itstool) path: item/p
+#: C/strategy.page:23
+msgid "Try to set at least three same objects with your every move."
+msgstr ""
+"Әрбір жүріс сайын кем дегенде үш бірдей объектіні орналастыруға тырысыңыз."
+
+#. (itstool) path: item/p
+#: C/strategy.page:24
+msgid ""
+"The board can quickly become very crowded with objects, so it is best to "
+"think ahead. Pay attention to the collection of <gui>Next</gui> objects, "
+"because knowing these will influence your moves."
+msgstr ""
+"Тақта объектілерге тез толып кетуі мүмкін, сондықтан алдын ала ойлаған "
+"дұрыс. <gui>Келесі</gui> объектілер жинағына назар аударыңыз, өйткені "
+"оларды білу жүрістеріңізге әсер етеді."
+
+#. (itstool) path: item/p
+#: C/strategy.page:25
+msgid ""
+"Try to line up more than 5 objects. For example, if you have 6 objects, you "
+"can line up 2 and 3 with a space in between, and then connect them by "
+"placing the sixth object between them."
+msgstr ""
+"5-тен көп объектіні бір сызыққа қоюға тырысыңыз. Мысалы, егер сізде 6 "
+"объект болса, 2 және 3 объектіні арасына бос орын қалдырып тізіп, содан "
+"кейін алтыншы объектіні олардың арасына қою арқылы біріктіре аласыз."
+
+#. (itstool) path: page/title
+#: C/translate.page:23
+msgid "Help translate"
+msgstr "Аударуға көмектесу"
+
+#. (itstool) path: page/p
+#: C/translate.page:25
+msgid ""
+"The <app>GNOME Games</app> user interface and documentation is being "
+"translated by a world-wide volunteer community. You are welcome to "
+"participate."
+msgstr ""
+"<app>GNOME Games</app> интерфейсі мен құжаттамасын бүкіл әлемдегі еріктілер "
+"қауымдастығы аударады. Сіз де қатыса аласыз."
+
+#. (itstool) path: page/p
+#: C/translate.page:28
+msgid ""
+"There are <link href=\"https://l10n.gnome.org/module/five-or-more/\">many "
+"languages</link> for which translations are still needed."
+msgstr ""
+"Аударманы қажет ететін <link href=\"https://l10n.gnome.org/module/five-or-"
+"more/\">көптеген тілдер</link> бар."
+
+#. (itstool) path: page/p
+#: C/translate.page:30
+msgid ""
+"To start translating you will need to <link href=\"https://"
+"l10n.gnome.org\">create an account</link> and join the <link href=\"https://"
+"l10n.gnome.org/teams/\">translation team</link> for your language. This "
+"will give you the ability to upload new translations."
+msgstr ""
+"Аударуды бастау үшін сізге <link href=\"https://l10n.gnome.org\">тіркелгі "
+"жасау</link> және өз тіліңіздің <link href=\"https://l10n.gnome.org/teams/"
+"\">аудару тобына</link> қосылу қажет. Бұл сізге жаңа аудармаларды жүктеп "
+"салу мүмкіндігін береді."
+
+#. (itstool) path: page/p
+#: C/translate.page:34
+msgid ""
+"You can chat with GNOME translators in <link href=\"https://matrix.to/#/"
+"#i18n:gnome.org\">#i18n:gnome.org</link> on <link xref=\"help:gnome-help/"
+"help-matrix\">Matrix</link> or <link href=\"https://web.libera.chat/#gnome-"
+"i18n\">#gnome-i18n</link> on irc.libera.chat. People on the channel are "
+"located worldwide, so you may not get an immediate response as a result of "
+"timezone differences."
+msgstr ""
+"GNOME аудармашыларымен <link xref=\"help:gnome-help/help-matrix\">Matrix</"
+"link> желісіндегі <link href=\"https://matrix.to/#/"
+"#i18n:gnome.org\">#i18n:gnome.org</link> немесе irc.libera.chat желісіндегі "
+"<link href=\"https://web.libera.chat/#gnome-i18n\">#gnome-i18n</link> "
+"арнасында сөйлесе аласыз. Арнадағы адамдар бүкіл әлемде орналасқан, "
+"сондықтан уақыт белдеулеріндегі айырмашылықтарға байланысты жауап бірден "
+"келмеуі мүмкін."
+
+#. (itstool) path: page/p
+#: C/translate.page:40
+msgid ""
+"Alternatively, you can contact the Internationalization Team using <link "
+"href=\"https://discourse.gnome.org/tag/i18n\">GNOME Discourse</link>."
+msgstr ""
+"Сонымен қатар, Интернационализация тобымен <link href=\"https://"
+"discourse.gnome.org/tag/i18n\">GNOME Discourse</link> арқылы байланысуға "
+"болады."
