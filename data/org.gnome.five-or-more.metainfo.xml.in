@@ -25,7 +25,7 @@
   </screenshots>
   <launchable type="desktop-id">org.gnome.five-or-more.desktop</launchable>
   <url type="homepage">https://wiki.gnome.org/Apps/Five%20or%20more</url>
-  <url type="bugtracker">https://gitlab.gnome.org/GNOME/five-or-more/issues</url>
+  <url type="bugtracker">https://gitlab.gnome.org/GNOME/five-or-more/-/work_items</url>
   <url type="donation">https://www.gnome.org/donate/</url>
   <url type="help">https://help.gnome.org/five-or-more/index.html</url>
   <url type="translate">https://wiki.gnome.org/TranslationProject</url>
