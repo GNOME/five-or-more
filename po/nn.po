@@ -9,10 +9,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: nn\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-31 22:31+0100\n"
-"PO-Revision-Date: 2010-02-24 15:40+0000\n"
-"Last-Translator: Torstein Adolf Winterseth <kvikende@yahoo.no>\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/five-or-more/issues\n"
+"POT-Creation-Date: 2026-10-07 05:57+0000\n"
+"PO-Revision-Date: 2026-10-11 12:00+0200\n"
+"Last-Translator: Roy-Magne Mo <rmo@sunnmore.net>\n"
 "Language-Team: Norwegian Nynorsk <i18n-nn@lister.ping.uio.no>\n"
 "Language: nn\n"
 "MIME-Version: 1.0\n"
@@ -21,288 +21,351 @@ msgstr ""
 "X-Generator: Lokalize 1.0\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
-#: ../data/five-or-more.appdata.xml.in.h:1 ../data/five-or-more.desktop.in.h:1
-#: ../data/five-or-more.ui.h:1 ../src/five-or-more.c:1173
-#: ../src/five-or-more.c:1724
+#. Translators: name of the application, as displayed in the window manager
+#. Translators: name of the application, as displayed in the About dialog, some window managers, etc.
+#: data/org.gnome.five-or-more.metainfo.xml.in:7
+#: data/org.gnome.five-or-more.desktop.in:2 data/ui/five-or-more.ui:123
+#: src/main.vala:27
 msgid "Five or More"
 msgstr "Fem eller meir"
 
-#: ../data/five-or-more.appdata.xml.in.h:2 ../data/five-or-more.desktop.in.h:2
+#: data/org.gnome.five-or-more.metainfo.xml.in:8
+#: data/org.gnome.five-or-more.desktop.in:3
 msgid "Remove colored balls from the board by forming lines"
 msgstr "Fjern farga ballar frå brettet ved å laga linjer"
 
-#: ../data/five-or-more.appdata.xml.in.h:3
+#: data/org.gnome.five-or-more.metainfo.xml.in:10
 msgid ""
 "Five or More is the GNOME port of a once-popular computer game. Align five "
 "or more objects of the same color into a line to cause them to disappear and "
 "score points. Earn many more points by lining up as many objects as possible "
 "before clearing them."
 msgstr ""
+"Five or More er GNOME-versjonen av eit tidlegare populært dataspel. Still "
+"opp fem eller fleire objekt med same farge på ei linje, så forsvinn dei og "
+"du får poeng. Du får mykje meir poeng ved å stille opp så mange objekt som "
+"mogleg før du fjernar dei."
 
-#: ../data/five-or-more.appdata.xml.in.h:4
+#: data/org.gnome.five-or-more.metainfo.xml.in:16
 msgid ""
 "More objects appear after every turn. Play for as long as possible, until "
 "the board is completely full!"
 msgstr ""
+"Fleire objekt dukkar opp etter kvart trekk. Spel så lenge som mogleg, til "
+"brettet er heilt fullt!"
 
-#: ../data/five-or-more.appdata.xml.in.h:5
-msgid "The GNOME Project"
-msgstr ""
+#. Translators: About dialog text, name of one of the artists
+#: data/org.gnome.five-or-more.metainfo.xml.in:42 src/main.vala:113
+msgid "Robert Roth"
+msgstr "Robert Roth"
 
-#: ../data/five-or-more.desktop.in.h:3
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/org.gnome.five-or-more.desktop.in:5
 msgid "game;strategy;logic;"
-msgstr ""
-
-#: ../data/five-or-more-preferences.ui.h:1 ../data/menu.ui.h:2
-#: ../src/five-or-more.c:169
-msgid "Preferences"
-msgstr "Oppsett"
-
-#: ../data/five-or-more-preferences.ui.h:2
-msgid "Appearance"
-msgstr "Utsjånad"
+msgstr "spel;strategi;logikk;"
 
 #
-#: ../data/five-or-more-preferences.ui.h:3
-msgid "_Image:"
-msgstr "B_ilet:"
-
-#
-#: ../data/five-or-more-preferences.ui.h:4
-msgid "B_ackground color:"
-msgstr "B_akgrunnsfarge:"
-
-#
-#: ../data/five-or-more-preferences.ui.h:5
-msgid "Board Size"
-msgstr "Storleik på brett"
-
-#
-#: ../data/five-or-more-preferences.ui.h:6
-msgid "_Small"
-msgstr "_Liten"
-
-#: ../data/five-or-more-preferences.ui.h:7
-msgid "_Medium"
-msgstr "_Middels"
-
-#
-#: ../data/five-or-more-preferences.ui.h:8
-msgid "_Large"
-msgstr "_Stor"
-
-#: ../data/five-or-more-preferences.ui.h:9
-#, fuzzy
-msgid "General"
-msgstr "Generellt"
-
-#
-#: ../data/five-or-more-preferences.ui.h:10
-msgid "_Use fast moves"
-msgstr "Br_uk raske trekk"
-
-#
-#: ../data/five-or-more.ui.h:2
-msgid "Next:"
-msgstr "Neste:"
-
-#: ../data/five-or-more.ui.h:3
-#, fuzzy
-msgid "0"
-msgstr "0"
-
-#: ../data/five-or-more.ui.h:4
-msgid "Score:"
-msgstr "Poeng:"
-
-#: ../data/five-or-more.ui.h:5 ../src/games-scores-dialog.c:384
-msgid "_New Game"
-msgstr "_Nytt spel"
-
-#: ../data/five-or-more.ui.h:6
-#, fuzzy
-msgid "Start a new puzzle"
-msgstr "Start eit nytt spel"
-
-#: ../data/menu.ui.h:1
-msgid "Scores"
-msgstr "Poeng"
-
-#
-#: ../data/menu.ui.h:3
-msgid "Help"
-msgstr "Hjelp"
-
-#
-#: ../data/menu.ui.h:4
-msgid "About"
-msgstr "Om"
-
-#
-#: ../data/menu.ui.h:5
-msgid "Quit"
-msgstr "Avslutt"
-
-#
-#: ../data/org.gnome.five-or-more.gschema.xml.h:1
+#: data/org.gnome.five-or-more.gschema.xml:6
 msgid "Playing field size"
 msgstr "Storleik på spelefeltet"
 
 #
-#: ../data/org.gnome.five-or-more.gschema.xml.h:2
+#: data/org.gnome.five-or-more.gschema.xml:7
 msgid ""
 "Playing field size. 1=Small, 2=Medium, 3=Large. Any other value is invalid."
 msgstr ""
 "Storleik på spelbrett. 1=Liten, 2=Middels, 3=Stor. Alle andre verdiar er "
 "ugyldige."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:3
+#: data/org.gnome.five-or-more.gschema.xml:11
 msgid "Ball style"
 msgstr "Ballstil"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:4
+#: data/org.gnome.five-or-more.gschema.xml:12
 msgid "Ball style. The filename of the images to use for the balls."
 msgstr ""
 "Ballstil. Namn på fila som inneheld bileta som skal brukast til ballane."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:5
+#. Translators: title of the ColorChooser dialog that appears from the hamburger menu > "Appearance" submenu > "Background" section > "Select color" entry
+#: data/org.gnome.five-or-more.gschema.xml:16 src/window.vala:224
 msgid "Background color"
 msgstr "Bakgrunnsfarge"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:6
+#: data/org.gnome.five-or-more.gschema.xml:17
 msgid "Background color. The hex specification of the background color."
 msgstr "Bakgrunnsfarge. Heksadesimal spesifikasjon av bakgrunnsfargen."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:7
+#: data/org.gnome.five-or-more.gschema.xml:21
 msgid "Time between moves"
 msgstr "Tid mellom trekk"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:8
+#: data/org.gnome.five-or-more.gschema.xml:22
 msgid "Time between moves in milliseconds."
 msgstr "Tid mellom trekk, i millisekund."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:9
+#: data/org.gnome.five-or-more.gschema.xml:26
 msgid "Game score"
 msgstr "Poengsum"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:10
+#: data/org.gnome.five-or-more.gschema.xml:27
 msgid "Game score from last saved session."
 msgstr "Poengsum frå sist lagra økt."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:11
+#: data/org.gnome.five-or-more.gschema.xml:31
 msgid "Game field"
 msgstr "Spelefelt"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:12
+#: data/org.gnome.five-or-more.gschema.xml:32
 msgid "Game field from last saved session."
 msgstr "Spelefelt frå sist lagra økt."
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:13
+#: data/org.gnome.five-or-more.gschema.xml:36
 msgid "Game preview"
 msgstr "Førehandsvising av spel"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:14
+#: data/org.gnome.five-or-more.gschema.xml:37
 msgid "Game preview from last saved session."
 msgstr "Førehandsvising av spel frå sist lagra økt"
 
 #
-#: ../data/org.gnome.five-or-more.gschema.xml.h:15
-#, fuzzy
+#: data/org.gnome.five-or-more.gschema.xml:41
 msgid "Width of the window in pixels"
-msgstr "Breidda på hovudvindauget i pikslar"
+msgstr "Breidda på vindauget i pikslar"
 
 #
-#: ../data/org.gnome.five-or-more.gschema.xml.h:16
-#, fuzzy
+#: data/org.gnome.five-or-more.gschema.xml:45
 msgid "Height of the window in pixels"
-msgstr "Høgda på hovudvindauget i pikslar"
+msgstr "Høgda på vindauget i pikslar"
 
-#: ../data/org.gnome.five-or-more.gschema.xml.h:17
+#: data/org.gnome.five-or-more.gschema.xml:49
 msgid "true if the window is maximized"
-msgstr ""
+msgstr "Sann viss vindauget er maksimert"
 
-#: ../src/five-or-more.c:78
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
+#. Translators: entry of the Size submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game
+#: data/ui/five-or-more.ui:8 data/ui/five-or-more.ui:37
+msgid "_New Game"
+msgstr "_Nytt spel"
+
+#. Translators: submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); allows to change the size of the board
+#: data/ui/five-or-more.ui:13
+msgid "Si_ze"
+msgstr "_Storleik"
+
+#
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game of small size
+#: data/ui/five-or-more.ui:17
+msgid "_Small"
+msgstr "_Liten"
+
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game of medium size
+#: data/ui/five-or-more.ui:23
+msgid "_Medium"
+msgstr "_Middels"
+
+#
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); starts a new game of large size
+#: data/ui/five-or-more.ui:29
+msgid "_Large"
+msgstr "_Stor"
+
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); opens the Scores dialog
+#: data/ui/five-or-more.ui:46
+msgid "S_cores"
+msgstr "_Poengsum"
+
+#. Translators: submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); allows to change the theme
+#: data/ui/five-or-more.ui:51
+msgid "A_ppearance"
+msgstr "_Utsjånad"
+
+#. Translators: entry of the Appearance submenu of the hamburger menu; set theme to "balls"; other possible themes are "shapes" and "tango"
+#: data/ui/five-or-more.ui:55
+msgid "balls"
+msgstr "kuler"
+
+#. Translators: entry of the Appearance submenu of the hamburger menu; set theme to "shapes"; other possible themes are "balls" and "tango"
+#: data/ui/five-or-more.ui:61
+msgid "shapes"
+msgstr "former"
+
+#. Translators: entry of the Appearance submenu of the hamburger menu; set theme to "tango"; other possible themes are "balls" and "shapes"
+#: data/ui/five-or-more.ui:67
+msgid "tango"
+msgstr "tango"
+
+#. Translators: title of a section in the Appearance submenu of the hamburger menu; contains "Select color" and "Default color"
+#: data/ui/five-or-more.ui:74
+msgid "Background"
+msgstr "Bakgrunn"
+
+#. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); opens a dialog for choosing background color
+#: data/ui/five-or-more.ui:77
+msgid "_Select color"
+msgstr "_Vel farge"
+
+#. Translators: entry of the Appearance submenu of the hamburger menu (with a mnemonic that appears when pressing Alt); resets background color
+#: data/ui/five-or-more.ui:82
+msgid "_Default color"
+msgstr "_Standardfarge"
+
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); displays Keyboard Shortcuts dialog
+#: data/ui/five-or-more.ui:91
+msgid "_Keyboard Shortcuts"
+msgstr "_Tastatursnarvegar"
+
+#
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); opens the help of the application
+#: data/ui/five-or-more.ui:96
+msgid "_Help"
+msgstr "_Hjelp"
+
+#. Translators: entry of the hamburger menu (with a mnemonic that appears when pressing Alt); opens the About dialog
+#: data/ui/five-or-more.ui:102
+msgid "_About Five or More"
+msgstr "_Om Five or More"
+
+#
+#. Translators: label displayed in the headerbar, introducing the next balls to be added to the board
+#: data/ui/five-or-more.ui:136
+msgid "Next:"
+msgstr "Neste:"
+
+#. Translators: header of the "Start a new game" (only) shortcut section
+#: data/ui/help-overlay.ui:29
+msgctxt "shortcut window"
+msgid "New game"
+msgstr "Nytt spel"
+
+#. Translators: in the Keyboard Shortcuts window, section "New game"; action of the Ctrl-N shortcut
+#: data/ui/help-overlay.ui:34
+msgctxt "shortcut window"
+msgid "Start a new game"
+msgstr "Start eit nytt spel"
+
+#. Translators: header of the "Play with keyboard" shortcut section
+#: data/ui/help-overlay.ui:44
+msgctxt "shortcut window"
+msgid "Play with keyboard"
+msgstr "Spel med tastatur"
+
+#. Translators: in the Keyboard Shortcuts window, section "Play with keyboard"; action of the arrows
+#: data/ui/help-overlay.ui:49
+msgctxt "shortcut window"
+msgid "Move keyboard cursor"
+msgstr "Flytt tastaturmarkøren"
+
+#. Translators: in the Keyboard Shortcuts window, section "Play with keyboard"; action of the return or space keys
+#: data/ui/help-overlay.ui:57
+msgctxt "shortcut window"
+msgid "Select or drop tile"
+msgstr "Vel eller slepp brikke"
+
+#. Translators: header of the "Toggle main menu," "Keyboard shortcuts," "About," "Quit," etc. shortcuts section
+#: data/ui/help-overlay.ui:67
+msgctxt "shortcut window"
+msgid "Generic"
+msgstr "Generisk"
+
+#. Translators: in the Keyboard Shortcuts window, section "Generic"; action of the F10 shortcut; toggles the hamburger menu
+#: data/ui/help-overlay.ui:72
+msgctxt "shortcut window"
+msgid "Toggle main menu"
+msgstr "Vis/gøym hovudmenyen"
+
+#. Translators: in the Keyboard Shortcuts window, section "Generic"; action of the Ctrl-Shift-? shortcut; opens the Keyboard Shortcuts dialog
+#: data/ui/help-overlay.ui:80
+msgctxt "shortcut window"
+msgid "Keyboard shortcuts"
+msgstr "Tastatursnarvegar"
+
+#
+#. Translators: in the Keyboard Shortcuts window, section "Generic"; action of the F1 shortcut; opens the help of the application
+#: data/ui/help-overlay.ui:88
+msgctxt "shortcut window"
+msgid "Help"
+msgstr "Hjelp"
+
+#
+#. Translators: future keyboard shortcut; action of the Shift-F1 shortcut; opens the About dialog
+#: data/ui/help-overlay.ui:96
+msgctxt "shortcut window"
+msgid "About"
+msgstr "Om"
+
+#
+#. Translators: in the Keyboard Shortcuts window, section "Generic"; action of the Ctrl-Q shortcut; quits the application
+#: data/ui/help-overlay.ui:104
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Avslutt"
+
+#. Translators: board size, as displayed in the Scores dialog
+#: src/game.vala:93
 msgctxt "board size"
 msgid "Small"
 msgstr "Lite"
 
-#: ../src/five-or-more.c:79
+#. Translators: board size, as displayed in the Scores dialog
+#: src/game.vala:96
 msgctxt "board size"
 msgid "Medium"
 msgstr "Middels"
 
-#: ../src/five-or-more.c:80
+#. Translators: board size, as displayed in the Scores dialog
+#: src/game.vala:99
 msgctxt "board size"
 msgid "Large"
 msgstr "Stort"
 
-#
-#: ../src/five-or-more.c:163
-msgid "Could not load theme"
-msgstr "Klarte ikkje lasta drakt"
+#. Translators: About dialog text, name and email of one of the authors
+#: src/main.vala:99
+msgid "Robert Szokovacs <szo@szo.hu>"
+msgstr "Robert Szokovacs <szo@szo.hu>"
 
-#: ../src/five-or-more.c:189
-#, c-format
-msgid ""
-"Unable to locate file:\n"
-"%s\n"
-"\n"
-"The default theme will be loaded instead."
-msgstr ""
-"Klarte ikkje finna fila:\n"
-"%s\n"
-"\n"
-"Forvald drakt vil verta lasta i staden."
+#. Translators: About dialog text, name and email of one of the authors
+#: src/main.vala:102
+msgid "Szabolcs Bán <shooby@gnome.hu>"
+msgstr "Szabolcs Bán <shooby@gnome.hu>"
 
-#: ../src/five-or-more.c:196
-#, c-format
-msgid ""
-"Unable to locate file:\n"
-"%s\n"
-"\n"
-"Please check that Five or More is installed correctly."
-msgstr ""
-"Klarte ikkje finna fila:\n"
-"%s\n"
-"\n"
-"Sjekk at Fem eller fleire er rett installert."
+#. Translators: About dialog text, name of one of the artists
+#: src/main.vala:107
+msgid "Callum McKenzie"
+msgstr "Callum McKenzie"
 
-#
-#: ../src/five-or-more.c:408
-msgid "Match five objects of the same type in a row to score!"
-msgstr "Få fem objekt med same farge på rad for å vinne!"
+#. Translators: About dialog text, name of a website that provided some artworks
+#: src/main.vala:110
+msgid "kenney.nl"
+msgstr "kenney.nl"
 
-#: ../src/five-or-more.c:469
-#, fuzzy
-msgid "Five or More Scores"
-msgstr "Fem eller meir"
+#. Translators: About dialog text, name of one of the documenters
+#: src/main.vala:118
+msgid "Tiffany Antopolski"
+msgstr "Tiffany Antopolski"
 
-#
-#: ../src/five-or-more.c:471
-msgid "_Board size:"
-msgstr "Storleik på _brett"
+#. Translators: About dialog text, name of one of the documenters
+#: src/main.vala:121
+msgid "Lanka Rathnayaka"
+msgstr "Lanka Rathnayaka"
 
-#: ../src/five-or-more.c:488
-msgid "Game Over!"
-msgstr "Spelet er slutt!"
+#. Translators: About dialog text, first line of the copyright notice
+#: src/main.vala:125
+msgid "Copyright © 1997–2008 Free Software Foundation, Inc."
+msgstr "Copyright © 1997–2008 Free Software Foundation, Inc."
+
+#. Translators: About dialog text, second line of the copyright notice
+#: src/main.vala:128
+msgid "Copyright © 2013–2014 Michael Catanzaro"
+msgstr "Copyright © 2013–2014 Michael Catanzaro"
 
 #
-#. Can't move there!
-#: ../src/five-or-more.c:645
-#, fuzzy
-msgid "You can’t move there!"
-msgstr "Kan ikkje gå dit!"
-
-#
-#: ../src/five-or-more.c:1175
-#, fuzzy
+#. Translators: About dialog text, describing the application
+#: src/main.vala:135
 msgid "GNOME port of the once-popular Color Lines game"
-msgstr ""
-"GNOME port av det tidlegare populære Color Lines-spelet.\n"
-"\n"
-"Fem eller fleire er ein del av GNOMEs spelpakke."
+msgstr "GNOME-versjon av det tidlegare populære spelet Color Lines"
 
-#: ../src/five-or-more.c:1181
+#. Translators: about dialog text; this string should be replaced by a text crediting yourselves and your translation team, or should be left empty. Do not translate literally!
+#: src/main.vala:142
 msgid "translator-credits"
 msgstr ""
 "Åsmund Skjæveland <aasmunds@fys.uio.no>\n"
@@ -312,61 +375,137 @@ msgstr ""
 "Torstein Adolf Winterseth <kvikende@fsfe.org>"
 
 #
-#: ../src/five-or-more.c:1305
-#, fuzzy
-msgid "Are you sure you want to restart the game?"
-msgstr "Er du sikker på at du vil avslutte?"
+#. Translators: subtitle of the headerbar, at the application start
+#: src/window.vala:49
+msgid "Match five objects of the same type in a row to score!"
+msgstr "Få fem objekt med same farge på rad for å vinne!"
 
 #
-#: ../src/five-or-more.c:1308
+#. Translators: subtitle of the headerbar, when the user clicked on a tile where the selected marble cannot move
+#: src/window.vala:52
+msgid "You can’t move there!"
+msgstr "Du kan ikkje flytte dit!"
+
+#. Translators: subtitle of the headerbar, at the end of a game
+#: src/window.vala:55
+msgid "Game Over!"
+msgstr "Spelet er slutt!"
+
+#. Translators: subtitle of the headerbar, during a game; the %d is replaced by the score
+#: src/window.vala:58
+#, c-format
+msgid "Score: %d"
+msgstr "Poeng: %d"
+
+#
+#. Translators: text in the Scores dialog, introducing the combobox
+#: src/window.vala:177
+msgid "Board Size: "
+msgstr "Brettstorleik: "
+
+#
+#. Translators: text of a dialog that appears when the user starts a new game while the score is not null
+#: src/window.vala:281
+#, c-format
+msgid "Are you sure you want to start a new %u × %u game?"
+msgstr "Vil du verkeleg starte eit nytt spel på %u × %u?"
+
+#
+#. Translators: button of a dialog that appears when the user starts a new game while the score is not null; the other answer is "_Restart"
+#: src/window.vala:284
 msgid "_Cancel"
 msgstr "A_vbryt"
 
 #
-#: ../src/five-or-more.c:1309
+#. Translators: button of a dialog that appears when the user starts a new game while the score is not null; the other answer is "_Cancel"
+#: src/window.vala:287
 msgid "_Restart"
 msgstr "Sta_rt på nytt"
 
-#. Score dialog column header for the score time (e.g. 1 minute)
-#: ../src/games-scores-dialog.c:131
-#, fuzzy
-msgctxt "score-dialog"
-msgid "Time"
-msgstr "Tid"
+#~ msgid "Preferences"
+#~ msgstr "Oppsett"
 
 #
-#. Score dialog column header for the score value (e.g. 30 moves)
-#: ../src/games-scores-dialog.c:137
-#, fuzzy
-msgctxt "score-dialog"
-msgid "Score"
-msgstr "Poeng"
+#~ msgid "_Image:"
+#~ msgstr "B_ilet:"
 
-#. Score format for time based scores.  %1$d is the time in minutes, %2$d is the time in seconds
-#: ../src/games-scores-dialog.c:224
+#
+#~ msgid "B_ackground color:"
+#~ msgstr "B_akgrunnsfarge:"
+
+#
+#~ msgid "_Use fast moves"
+#~ msgstr "Br_uk raske trekk"
+
+#, fuzzy
+#~ msgid "0"
+#~ msgstr "0"
+
+#
+#~ msgid "Could not load theme"
+#~ msgstr "Klarte ikkje lasta drakt"
+
+#, c-format
+#~ msgid ""
+#~ "Unable to locate file:\n"
+#~ "%s\n"
+#~ "\n"
+#~ "The default theme will be loaded instead."
+#~ msgstr ""
+#~ "Klarte ikkje finna fila:\n"
+#~ "%s\n"
+#~ "\n"
+#~ "Forvald drakt vil verta lasta i staden."
+
+#, c-format
+#~ msgid ""
+#~ "Unable to locate file:\n"
+#~ "%s\n"
+#~ "\n"
+#~ "Please check that Five or More is installed correctly."
+#~ msgstr ""
+#~ "Klarte ikkje finna fila:\n"
+#~ "%s\n"
+#~ "\n"
+#~ "Sjekk at Fem eller fleire er rett installert."
+
+#, fuzzy
+#~ msgid "Five or More Scores"
+#~ msgstr "Fem eller meir"
+
+#
+#~ msgid "_Board size:"
+#~ msgstr "Storleik på _brett"
+
+#, fuzzy
+#~ msgctxt "score-dialog"
+#~ msgid "Time"
+#~ msgstr "Tid"
+
+#
+#, fuzzy
+#~ msgctxt "score-dialog"
+#~ msgid "Score"
+#~ msgstr "Poeng"
+
 #, fuzzy, c-format
-msgctxt "score-dialog"
-msgid "%1$dm %2$ds"
-msgstr "%d:%02d"
+#~ msgctxt "score-dialog"
+#~ msgid "%1$dm %2$ds"
+#~ msgstr "%d:%02d"
 
 #
-#: ../src/games-scores-dialog.c:370
 #, fuzzy
-msgid "_Quit"
-msgstr "Avslutt"
+#~ msgid "_Quit"
+#~ msgstr "Avslutt"
 
 #
-#: ../src/games-scores-dialog.c:377
-msgid "_Undo"
-msgstr "_Angra"
+#~ msgid "_Undo"
+#~ msgstr "_Angra"
 
 #
-#: ../src/games-scores-dialog.c:391
-msgid "_Close"
-msgstr "_Lukk"
+#~ msgid "_Close"
+#~ msgstr "_Lukk"
 
-#. Score dialog column header for the date the score was recorded
-#: ../src/games-scores-dialog.c:477
 #, fuzzy
-msgid "Date"
-msgstr "Roter"
+#~ msgid "Date"
+#~ msgstr "Roter"
